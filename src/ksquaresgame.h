@@ -27,7 +27,7 @@ class KSquaresGame : public QObject
 		
 		int currentPlayer() const {return currentPlayerId;}
 		
-		int nextPlayer();
+		int nextPlayer();	// moves play control to the next player, looping round when necessary 
 		
 	public slots:
 		void startGame();

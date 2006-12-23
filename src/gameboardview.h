@@ -28,7 +28,7 @@ class GameBoardView : public QGraphicsView
 		void mouseMoveEvent(QMouseEvent* e);
 		GameBoardScene* gameScene;
 	signals:
-		void gameStarted();
+		//void gameStarted();
 };
 
 #endif // GAMEBOARDVIEW_H

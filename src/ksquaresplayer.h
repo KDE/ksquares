@@ -10,11 +10,16 @@
 #ifndef KSQUARESPLAYER_H
 #define KSQUARESPLAYER_H
 
+#include <QString>
+
 class KSquaresPlayer
 {
 	public:
-		KSquaresPlayer(bool isPlayerHuman = true) {human = isPlayerHuman; playerScore = 0;}	//defaults to human player
+		KSquaresPlayer(QString newName = "Player", bool isPlayerHuman = true) {human = isPlayerHuman; playerScore = 0; playerName = newName;}	//defaults to human player
+		//KSquaresPlayer(QString newName, bool isPlayerHuman = true) {human = isPlayerHuman; playerScore = 0; playerName = newName;}
 		KSquaresPlayer(const KSquaresPlayer& ksp) {human = ksp.isHuman(); playerScore = ksp.score();}	//copy constructor
+		void setName(QString newName) {playerName = newName;}
+		QString name() {return playerName;}
 		void setScore(int newScore) {playerScore = newScore;}
 		int score() const {return playerScore;}
 		void incScore() {playerScore++;}
@@ -23,6 +28,7 @@ class KSquaresPlayer
 	private:
 		bool human;	//is the player a human?
 		int playerScore;
+		QString playerName;
 };
 
 #endif // KSQUARESPLAYER_H

@@ -13,6 +13,8 @@
 #include <kcmdlineargs.h>
 #include <klocale.h>
 
+#include <kdebug.h>
+
 static const char description[] =
     I18N_NOOP("Draw lines to make squares");
 
@@ -26,12 +28,15 @@ static KCmdLineOptions options[] =
 
 int main(int argc, char **argv)
 {
-    KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
+	kdDebug() << "1" << endl;
+	KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
                      KAboutData::License_GPL, "(C) 2006 Matt Williams}", 0, 0, "matt@milliams.com");
-    about.addAuthor( "Matt Williams", 0, "matt@milliams.com" );
-    KCmdLineArgs::init(argc, argv, &about);
-    KCmdLineArgs::addCmdLineOptions(options);
-    KApplication app;
+	about.addAuthor( "Matt Williams", 0, "matt@milliams.com" );
+	KCmdLineArgs::init(argc, argv, &about);
+	KCmdLineArgs::addCmdLineOptions(options);
+	kdDebug() << "2" << endl;
+	KApplication app;
+	kdDebug() << "3" << endl;
 
     KSquares *widget = new KSquares;
 

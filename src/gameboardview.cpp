@@ -26,7 +26,7 @@ void GameBoardView::createBoard(int height, int width)
 		return;
 	gameScene = new GameBoardScene(height, width, this);
 	setScene(gameScene);
-	emit gameStarted();
+	//emit gameStarted();
 }
 
 void GameBoardView::mouseMoveEvent(QMouseEvent* e)

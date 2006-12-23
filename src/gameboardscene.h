@@ -35,7 +35,7 @@ class GameBoardScene : public QGraphicsScene
 		int spacing;
 		
 		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair);
-		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);
+		bool addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);	//returns true if line is new and was added
 		void checkForNewSquares();
 		
 		Qt::MouseButtons buttonPress;

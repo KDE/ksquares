@@ -17,7 +17,7 @@ using std::endl;
 #include "gameboardscene.h"
 //#include "lineitem.h"
 
-GameBoardScene::GameBoardScene(int newWidth, int newHeight, QWidget *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2.0*newWidth*newHeight + newWidth + newHeight), false)
+GameBoardScene::GameBoardScene(int newWidth, int newHeight, QWidget *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2*newWidth*newHeight + newWidth + newHeight), false)
 {
 	//setObjectName("GameBoardScene");
 	
@@ -46,7 +46,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QWidget *parent) : Q
 	addItem(indicatorLine);
 	
 	//lineDrawn.resize(2*width*height + width + height);	//now done in constructor
-	squareOwnerTable.fill(0, (width*height));
+	squareOwnerTable.fill(-1, (width*height));
 	
 	QGraphicsEllipseItem tempItem;
 	QGraphicsEllipseItemType = tempItem.type();
@@ -101,7 +101,7 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 	return lineDrawn.at(index);
 }
 
-void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
+bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 {
 	int index = -1;
 	if (pointPair.size() == 2)	// if it really is a pair
@@ -144,18 +144,26 @@ void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 			index = refY * ((2*width)+1) + refX + width;
 		}
 	}
-	if (index == -1)
-		return;
+	if (index == -1)	//not a valid line since no two unique ends
+		return false;
 	
-	lineDrawn[index] = true;
-	checkForNewSquares();
+	if (lineDrawn[index] == false)	//if there's not a line there yet, do checks
+	{
+		lineDrawn[index] = true;
+		checkForNewSquares();
+		return true;
+	}
+	else	//else wait for another line to be drawn
+	{
+		return false;
+	}
 }
 
 void GameBoardScene::checkForNewSquares()
 {	
 	for(int i=0; i < (width*height); i++)	//cycle through every box..
 	{
-		if (squareOwnerTable.at(i) == 0)	//..checking it if there is no current owner
+		if (squareOwnerTable.at(i) == -1)	//..checking it if there is no current owner
 		{
 			//indices of the lines surrounding the box; Correlates to "QVector<bool> lineDrawn"
 			int index1 = (i/width) * ((2*width) + 1) + (i%width);
@@ -233,13 +241,13 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 		if (connectList.size() == 2)
 		{
-			indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,0), Qt::SolidPattern), 2.0));	//just make the pen invisible
-			QGraphicsLineItem* newLine = new QGraphicsLineItem(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
-			newLine->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
-			addItem(newLine);
-			
-			//actually add the line to the index
-			addLineToIndex(connectList);
+			if (addLineToIndex(connectList) == true)	//try to add the line to the index
+			{
+				indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,0), Qt::SolidPattern), 2.0));	//just make the pen invisible
+				QGraphicsLineItem* newLine = new QGraphicsLineItem(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
+				newLine->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
+				addItem(newLine);
+			}
 		}
 	}
 	

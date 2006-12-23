@@ -30,8 +30,9 @@ using std::endl;
 
 KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 {	
+	kdDebug() << "4" << endl;
 	sGame = new KSquaresGame();
-	connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
+	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
 	connect(sGame, SIGNAL(playerChangedSig(int)), this, SLOT(playerChanged(int)));
 	setCentralWidget(m_view);
 	setupActions();
@@ -84,14 +85,17 @@ void KSquares::fileNew()
 	Settings::writeConfig();
 	
 	QVector<KSquaresPlayer> playerList;
-	playerList.append(KSquaresPlayer(true));
-	playerList.append(KSquaresPlayer(true));
+	playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
+	playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
+	
+	m_view->createBoard(Settings::boardWidth(), Settings::boardHeight());
 	
 	//start game etc.
 	//sGame->createGame(dialog.spinNumOfPlayers->value(), Settings::boardWidth(), Settings::boardHeight());
 	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
+	sGame->startGame();
 	
-	m_view->createBoard(Settings::boardWidth(), Settings::boardHeight());
+	// From here on out, the game is 'controlled' by GameBoardScene and the clicks therein
 	//cout << "Connecting stuff" << endl;	
 	connect(m_view->scene(), SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
 	connect(m_view->scene(), SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));

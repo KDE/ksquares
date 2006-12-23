@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+	<kcfgfile name="ksquaresrc"/>
+	<group name="Game Settings">
+		<entry name="NumOfPlayers" type="Int">
+			<label>Number of Players</label>
+			<default>2</default>
+		</entry>
+		<entry name="PlayerNames" type="StringList">
+			<label>Player Names</label>
+			<default>Player 1,Player 2</default>
+		</entry>
+		<entry name="BoardWidth" type="Int">
+			<label>Width of board</label>
+			<default>10</default>
+		</entry>
+		<entry name="BoardHeight" type="Int">
+			<label>Height of board</label>
+			<default>7</default>
+		</entry>
+	</group>
+</kcfg>

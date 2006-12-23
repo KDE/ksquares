@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KSquares
+Exec=ksquares %i -caption "%c"
+Icon=ksquares
+Type=Application
+DocPath=ksquares/ksquares.html
+GenericName=Connect the dots to create squares
+Terminal=0
+Categories=Qt;KDE;Game;

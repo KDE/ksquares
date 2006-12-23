@@ -1,0 +1,10 @@
+2006-12-23 Matt Williams <matt@milliams.com>
+	* Imported into the KDE SVN at websvn.kde.org/trunk/playground/games/ksquares
+
+2006-09-26 Matt Williams <matt@milliams.com>
+
+	* version 0.1
+	
+	* Features
+	* - Can play a two player game of squares with proper scoring, game control etc.
+	* - Lots of bugs

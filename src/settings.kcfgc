@@ -2,4 +2,4 @@
 File=ksquares.kcfg
 ClassName=Settings
 Singleton=true
-Mutators=PlayerNames,BoardWidth,BoardHeight,NumOfPlayers
+Mutators=PlayerNames,BoardWidth,BoardHeight,NumOfPlayers, Difficulty, HumanList

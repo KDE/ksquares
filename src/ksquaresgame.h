@@ -37,7 +37,7 @@ class KSquaresGame : public QObject
 
 	protected:
 		int numOfPlayers;
-		int currentPlayerId;	// from 0 to n; -1 is null player
+		int currentPlayerId;	// from 0 to (n-1); -1 is null player
 		QVector<int> points;
 		bool anotherGo;
 		int width;

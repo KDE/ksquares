@@ -3,7 +3,8 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-	<kcfgfile name="ksquaresrc"/>
+
+<kcfgfile name="ksquaresrc"/>
 	<group name="Game Settings">
 		<entry name="NumOfPlayers" type="Int">
 			<label>Number of Players</label>
@@ -13,6 +14,10 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 			<label>Player Names</label>
 			<default>Player 1,Player 2</default>
 		</entry>
+		<entry name="HumanList" type="IntList">
+			<label>Human or AI</label>
+			<default>1,1</default>
+		</entry>
 		<entry name="BoardWidth" type="Int">
 			<label>Width of board</label>
 			<default>10</default>
@@ -20,6 +25,13 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 		<entry name="BoardHeight" type="Int">
 			<label>Height of board</label>
 			<default>7</default>
+		</entry>
+	</group>
+	<group name="AI">
+		<entry name="Difficulty" type="Int">
+			<label>Difficulty</label>
+			<whatsthis>How difficult the AI should be</whatsthis>
+			<default>0</default>
 		</entry>
 	</group>
 </kcfg>

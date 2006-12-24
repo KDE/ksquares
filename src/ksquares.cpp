@@ -68,6 +68,14 @@ void KSquares::fileNew()
 	dialog.playerTwoName->setText(Settings::playerNames().at(1));
 	dialog.spinHeight->setValue(Settings::boardHeight());
 	dialog.spinWidth->setValue(Settings::boardWidth());
+	if (Settings::humanList().at(0) == 2)
+		dialog.playerOneHuman->setCheckState(Qt::Checked);
+	else
+		dialog.playerOneHuman->setCheckState(Qt::Unchecked);
+	if (Settings::humanList().at(1) == 2)
+		dialog.playerTwoHuman->setCheckState(Qt::Checked);
+	else
+		dialog.playerTwoHuman->setCheckState(Qt::Unchecked);
 	
 	//run dialog
 	dialog.exec();
@@ -80,14 +88,35 @@ void KSquares::fileNew()
 	tempNames.append(dialog.playerTwoName->text());
 	Settings::setPlayerNames(tempNames);
 	
+	QList<int> tempHuman;
+	tempHuman.append(dialog.playerOneHuman->checkState());
+	tempHuman.append(dialog.playerTwoHuman->checkState());
+	Settings::setHumanList(tempHuman);
+	
 	Settings::setBoardHeight(dialog.spinHeight->value());
 	Settings::setBoardWidth(dialog.spinWidth->value());
 	Settings::writeConfig();
 	
 	//create players
 	QVector<KSquaresPlayer> playerList;
-	playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
-	playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
+	switch(dialog.playerOneHuman->checkState())
+	{
+		case 0:
+			playerList.append(KSquaresPlayer(dialog.playerOneName->text(), false));
+			break;
+		case 2:
+			playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
+			break;
+	}
+	switch(dialog.playerTwoHuman->checkState())
+	{
+		case 0:
+			playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), false));
+			break;
+		case 2:
+			playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
+			break;
+	}
 	
 	//create phsical board
 	m_view->createBoard(Settings::boardWidth(), Settings::boardHeight());
@@ -114,7 +143,7 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 	
 	for(int i = 0; i <  playerList.size(); i++)
 	{
-		scoreTableModel->setItem(i, 0, new QStandardItem(Settings::playerNames().at(i)));
+		scoreTableModel->setItem(i, 0, new QStandardItem(playerList.at(i).name()));
 		
 		QString temp;
 		temp.setNum(playerList.at(i).score());
@@ -129,9 +158,9 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 void KSquares::optionsPreferences()
 {
 	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
-	QWidget *generalSettingsDlg = new QWidget;
-	ui_prefs_base.setupUi(generalSettingsDlg);
-	//dialog->addPage(generalSettingsDlg, i18n("General"), "prefs_base");
+	QWidget *aiSettingsDlg = new QWidget;
+	ui_prefs_ai.setupUi(aiSettingsDlg);
+	dialog->addPage(aiSettingsDlg, i18n("AI"), "ksquares_ai");
 	
 	//connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(settingsChanged()));
 	dialog->show();

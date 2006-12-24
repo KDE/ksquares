@@ -173,7 +173,7 @@ void GameBoardScene::checkForNewSquares()
 			//cout << index1 << ", " << index2 << ", " << index3 << ", " << index4 << " - " << lineDrawn.size() << endl;
 			if (lineDrawn.at(index1) and lineDrawn.at(index2) and lineDrawn.at(index3) and lineDrawn.at(index4))
 			{
-				kdDebug() << "Square " << i << " completed." << endl;
+				//kdDebug() << "Square " << i << " completed." << endl;
 				emit squareComplete(i);
 			}
 		}
@@ -183,7 +183,7 @@ void GameBoardScene::checkForNewSquares()
 
 void GameBoardScene::setSquareOwner(int squareIndex, int owner)
 {
-	kdDebug() << "Square " << squareIndex << " owned by player " << owner << "." << endl;
+	//kdDebug() << "Square " << squareIndex << " owned by player " << owner << "." << endl;
 	squareOwnerTable[squareIndex] = owner;
 	drawSquare(squareIndex);
 }

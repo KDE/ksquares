@@ -20,8 +20,11 @@ GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)
 
 void GameBoardView::createBoard(int height, int width)
 {
-	/*if (gameScene)
-		delete gameScene;*/
+	if (gameScene)
+	{
+		//delete gameScene;
+		gameScene = 0;
+	}
 	if ((height == 1) and (width == 1))
 		return;
 	gameScene = new GameBoardScene(height, width, this);

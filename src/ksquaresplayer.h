@@ -15,14 +15,16 @@
 class KSquaresPlayer
 {
 	public:
-		KSquaresPlayer(QString newName = "Player", bool isPlayerHuman = true) {human = isPlayerHuman; playerScore = 0; playerName = newName;}	//defaults to human player
-		//KSquaresPlayer(QString newName, bool isPlayerHuman = true) {human = isPlayerHuman; playerScore = 0; playerName = newName;}
-		KSquaresPlayer(const KSquaresPlayer& ksp) {human = ksp.isHuman(); playerScore = ksp.score();}	//copy constructor
+		KSquaresPlayer(QString newName = "Player", bool isPlayerHuman = true) {setName(newName); human = isPlayerHuman; playerScore = 0;}	//defaults to human player
+		KSquaresPlayer(const KSquaresPlayer& ksp) {human = ksp.isHuman(); playerScore = ksp.score(); setName(ksp.name());}	//copy constructor
+		
 		void setName(QString newName) {playerName = newName;}
-		QString name() {return playerName;}
+		QString name() const {return playerName;}
+		
 		void setScore(int newScore) {playerScore = newScore;}
 		int score() const {return playerScore;}
 		void incScore() {playerScore++;}
+		
 		bool isHuman() const {return human;}
 	
 	private:

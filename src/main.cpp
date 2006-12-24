@@ -18,54 +18,50 @@
 static const char description[] =
     I18N_NOOP("Draw lines to make squares");
 
-static const char version[] = "0.0.1";
+static const char version[] = "0.1.1";
 
 static KCmdLineOptions options[] =
 {
-    { "+[URL]", I18N_NOOP( "Document to open" ), 0 },
-    KCmdLineLastOption
+	{ "+[URL]", I18N_NOOP( "Document to open" ), 0 },
+	KCmdLineLastOption
 };
 
 int main(int argc, char **argv)
 {
-	kdDebug() << "1" << endl;
 	KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
                      KAboutData::License_GPL, "(C) 2006 Matt Williams}", 0, 0, "matt@milliams.com");
 	about.addAuthor( "Matt Williams", 0, "matt@milliams.com" );
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions(options);
-	kdDebug() << "2" << endl;
 	KApplication app;
-	kdDebug() << "3" << endl;
 
-    KSquares *widget = new KSquares;
-
-    // see if we are starting with session management
-    if (app.isSessionRestored())
-    {
-        RESTORE(KSquares);
-    }
-    else
-    {
-        // no session.. just start up normally
-        KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-        if (args->count() == 0)
-        {
-            //ksquares *widget = new ksquares;
-            widget->show();
-        }
-        else
-        {
-            int i = 0;
-            for (; i < args->count(); i++)
-            {
-                //ksquares *widget = new ksquares;
-                widget->show();
-            }
-        }
-        args->clear();
-    }
-
-    return app.exec();
+	KSquares *widget = new KSquares;
+	
+	// see if we are starting with session management
+	if (app.isSessionRestored())
+	{
+		RESTORE(KSquares);
+	}
+	else
+	{
+		// no session.. just start up normally
+		KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+		if (args->count() == 0)
+		{
+		//ksquares *widget = new ksquares;
+		widget->show();
+		}
+		else
+		{
+		int i = 0;
+		for (; i < args->count(); i++)
+		{
+			//ksquares *widget = new ksquares;
+			widget->show();
+		}
+		}
+		args->clear();
+	}
+	
+	return app.exec();
 }
-

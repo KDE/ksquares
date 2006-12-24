@@ -23,22 +23,24 @@ using std::endl;
 #include <kstdaccel.h>
 #include <kaction.h>
 #include <kstandardaction.h>
-#include "gameboardscene.h"
+#include <kdebug.h>
 
+#include "gameboardscene.h"
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
 KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 {	
-	kdDebug() << "4" << endl;
 	sGame = new KSquaresGame();
 	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
 	connect(sGame, SIGNAL(playerChangedSig(int)), this, SLOT(playerChanged(int)));
 	setCentralWidget(m_view);
 	setupActions();
-	statusBar()->insertPermanentItem("Player: ", 0);
+	statusBar()->insertPermanentItem("Current Player", 0);
 	statusBar()->show();
 	setAutoSaveSettings();
+	
+	//fileNew();	//uncomment to start a new game on startup
 }
 
 KSquares::~KSquares()
@@ -52,8 +54,8 @@ void KSquares::setupActions()
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	
 	// custom menu and menu item - the slot is in the class KSquaresView
-	KAction *custom = new KAction(i18n("Swi&tch Colors"), actionCollection(), "switch_action");
-	custom->setIcon(KIcon("colorize"));
+	//KAction *custom = new KAction(i18n("Swi&tch Colors"), actionCollection(), "switch_action");
+	//custom->setIcon(KIcon("colorize"));
 	setupGUI();
 }
 
@@ -78,20 +80,19 @@ void KSquares::fileNew()
 	tempNames.append(dialog.playerTwoName->text());
 	Settings::setPlayerNames(tempNames);
 	
-	//Settings::setPlayerOneName(dialog.playerOneName->text());
-	//Settings::setPlayerTwoName(dialog.playerTwoName->text());
 	Settings::setBoardHeight(dialog.spinHeight->value());
 	Settings::setBoardWidth(dialog.spinWidth->value());
 	Settings::writeConfig();
 	
+	//create players
 	QVector<KSquaresPlayer> playerList;
 	playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
 	playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
 	
+	//create phsical board
 	m_view->createBoard(Settings::boardWidth(), Settings::boardHeight());
 	
 	//start game etc.
-	//sGame->createGame(dialog.spinNumOfPlayers->value(), Settings::boardWidth(), Settings::boardHeight());
 	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
 	sGame->startGame();
 	
@@ -130,15 +131,14 @@ void KSquares::optionsPreferences()
 	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
 	QWidget *generalSettingsDlg = new QWidget;
 	ui_prefs_base.setupUi(generalSettingsDlg);
-	dialog->addPage(generalSettingsDlg, i18n("General"), "package_setting");
+	//dialog->addPage(generalSettingsDlg, i18n("General"), "prefs_base");
+	
 	//connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(settingsChanged()));
 	dialog->show();
 }
 
 void KSquares::playerChanged(int playerNumber)
 {	
-	//QString temp;
-	//temp.setNum(playerNumber);
 	statusBar()->changeItem(Settings::playerNames().at(playerNumber), 0);
 }
 

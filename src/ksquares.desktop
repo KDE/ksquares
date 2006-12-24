@@ -6,5 +6,5 @@ Icon=ksquares
 Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
-Terminal=0
-Categories=Qt;KDE;Game;
+Terminal=false
+Categories=Qt;KDE;Game;ArcadeGame;

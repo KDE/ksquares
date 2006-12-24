@@ -25,18 +25,9 @@ KSquaresGame::~KSquaresGame()
 	kdDebug() << "Destroying game" << endl;
 }
 
-/*void KSquaresGame::createGame(uint players, int startWidth, int startHeight)
-{
-	kdDebug() << "Creating Game with " << players << " player(s)" << endl;
-	width = startWidth;
-	height = startHeight;
-	currentPlayerId = 0;
-	points.resize(0);
-	points.fill(0, players);
-}*/
-
 void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight)
 {
+	endGame();	//reset everything
 	kdDebug() << "Creating Game with " << startPlayers.size() << " player(s)" << endl;
 	width = startWidth;
 	height = startHeight;
@@ -57,9 +48,9 @@ void KSquaresGame::startGame()
 
 int KSquaresGame::nextPlayer()
 {
-	anotherGo = false;	//just ro reset the variable
+	anotherGo = false;	//just to reset the variable
 	currentPlayerId >= (players.size()-1) ? currentPlayerId = 0 : currentPlayerId++;
-	kdDebug() << "- Moving to next player: player " << currentPlayer() << endl;
+	kdDebug() << "- Moving to next player: " << players.at(currentPlayer()).name() << "(" << currentPlayer() << ")" << endl;
 	emit playerChangedSig(currentPlayer());
 	
 	return currentPlayer();
@@ -67,7 +58,7 @@ int KSquaresGame::nextPlayer()
 
 void KSquaresGame::playerSquareComplete(int index)
 {
-	kdDebug() << "- - Player " << currentPlayer() << " has completed a square" << endl;
+	kdDebug() << "- - " << players[currentPlayer()].name() << "(" << currentPlayer() << ") has completed a square" << endl;
 	anotherGo = true;
 	emit setSquareOwnerSig(index, currentPlayer());
 	//points[currentPlayer()-1]++;
@@ -83,7 +74,7 @@ void KSquaresGame::playerSquareComplete(int index)
 	{
 		kdDebug() << "Game Over" << endl;
 		emit gameOverSig(players);
-		endGame();
+		//endGame();
 	}
 }
 
@@ -107,10 +98,10 @@ void KSquaresGame::endGame()
 {
 	kdDebug() << "Game Values Resetting" << endl;
 	numOfPlayers = 0;
+	players.resize(0);
 	width = 0;
 	height = 0;
 	currentPlayerId = -1;
-	//points.resize(0);
 	anotherGo = false;
 }
 

@@ -24,8 +24,10 @@ class GameBoardView : public QGraphicsView
 		QSize sizeHint() {return scene()->sizeHint();}
 	public slots:
 		void createBoard(int height, int width);
+		void setBoardSize();
 	protected:
-		void mouseMoveEvent(QMouseEvent* e);
+		void mouseMoveEvent(QMouseEvent* event);
+		void resizeEvent(QResizeEvent* event);
 		GameBoardScene* gameScene;
 	signals:
 		//void gameStarted();

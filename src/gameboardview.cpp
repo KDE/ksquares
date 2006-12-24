@@ -11,6 +11,7 @@
 using std::cout;
 using std::endl;
 
+#include "settings.h"
 #include "gameboardview.h"
 
 GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)
@@ -29,13 +30,32 @@ void GameBoardView::createBoard(int height, int width)
 		return;
 	gameScene = new GameBoardScene(height, width, this);
 	setScene(gameScene);
-	//emit gameStarted();
+	setBoardSize();
 }
 
-void GameBoardView::mouseMoveEvent(QMouseEvent* e)
+void GameBoardView::mouseMoveEvent(QMouseEvent* event)
 {
 	//cout << "GameBoardView::mouseMoveEvent" << endl;
-	QGraphicsView::mouseMoveEvent(e);
+	QGraphicsView::mouseMoveEvent(event);
+}
+
+void GameBoardView::resizeEvent(QResizeEvent* event)
+{
+	QGraphicsView::resizeEvent(event);
+	setBoardSize();
+}
+
+void GameBoardView::setBoardSize()
+{
+	if(Settings::resizeBoard() == true)
+	{
+		if (scene() != 0)
+			fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);
+	}
+	else
+	{
+		resetMatrix();
+	}
 }
 
 #include "gameboardview.moc"

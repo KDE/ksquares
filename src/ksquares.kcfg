@@ -34,4 +34,11 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 			<default>0</default>
 		</entry>
 	</group>
+	<group name="Display">
+		<entry name="ResizeBoard" type="Bool">
+			<label>Fit board to view</label>
+			<whatsthis>Maximise the board so it fills the whole screen</whatsthis>
+			<default>0</default>
+		</entry>
+	</group>
 </kcfg>

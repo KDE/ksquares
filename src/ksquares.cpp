@@ -158,12 +158,18 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 void KSquares::optionsPreferences()
 {
 	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
+	
+	QWidget *displaySettingsDlg = new QWidget;
+	ui_prefs_display.setupUi(displaySettingsDlg);
+	dialog->addPage(displaySettingsDlg, i18n("Display"), "ksquares_display");
+	
 	QWidget *aiSettingsDlg = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDlg);
 	dialog->addPage(aiSettingsDlg, i18n("AI"), "ksquares_ai");
 	
-	//connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(settingsChanged()));
+	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();
+	
 }
 
 void KSquares::playerChanged(int playerNumber)

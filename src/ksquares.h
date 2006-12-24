@@ -19,8 +19,9 @@
 
 #include "gameboardview.h"
 #include "ksquaresgame.h"
-#include "ui_prefs_base.h"
+//#include "ui_prefs_base.h"
 #include "ui_prefs_ai.h"
+#include "ui_prefs_display.h"
 
 class KToggleAction;
 
@@ -41,8 +42,9 @@ class KSquares : public KMainWindow
 	private:
 		void setupAccel();
 		void setupActions();
-		Ui::prefs_base ui_prefs_base;
+		//Ui::prefs_base ui_prefs_base;
 		Ui::prefs_ai ui_prefs_ai;
+		Ui::prefs_display ui_prefs_display;
 		GameBoardView *m_view;
 		KSquaresGame* sGame;
 		

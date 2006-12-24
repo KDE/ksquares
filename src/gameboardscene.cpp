@@ -28,7 +28,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QWidget *parent) : Q
 		{
 			int x = iWidth*spacing;
 			int y = iHeight*spacing;
-			addEllipse(QRectF(-1,-1,2,2))->setPos(x,y);
+			addEllipse(QRectF(-1,-1,2,2), QPen(Qt::SolidLine), QBrush(Qt::SolidPattern))->setPos(x,y);
 		}
 	}
 	QPen feintPen(Qt::DotLine);
@@ -183,7 +183,6 @@ void GameBoardScene::checkForNewSquares()
 
 void GameBoardScene::setSquareOwner(int squareIndex, int owner)
 {
-	//kdDebug() << "Square " << squareIndex << " owned by player " << owner << "." << endl;
 	squareOwnerTable[squareIndex] = owner;
 	drawSquare(squareIndex);
 }

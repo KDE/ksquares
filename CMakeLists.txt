@@ -1,4 +1,4 @@
-#PROJECT(ksquares)
+PROJECT(ksquares)
 
 #find_package(KDE4 REQUIRED)
 #include (KDE4Defaults)
@@ -11,3 +11,4 @@
 #   add_subdirectory(src)
 #endif (KDEGAMES_LIB)
 add_subdirectory(src)
+#add_subdirectory(doc)

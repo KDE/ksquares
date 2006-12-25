@@ -1,5 +1,5 @@
-PROJECT(ksquares)
 FIND_PACKAGE(KDE4 REQUIRED)
+
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
 set(ksquares_SRCS
@@ -20,7 +20,7 @@ kde4_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is 
 
 kde4_add_executable(ksquares ${ksquares_SRCS})
 
-target_link_libraries(ksquares ${KDE4_KDEUI_LIBS})
+target_link_libraries(ksquares ${KDE4_KDEUI_LIBS} kdegames)
 
 install(TARGETS ksquares DESTINATION ${BIN_INSTALL_DIR})
 

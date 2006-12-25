@@ -18,18 +18,18 @@
 static const char description[] =
     I18N_NOOP("Draw lines to make squares");
 
-static const char version[] = "0.1.1";
+static const char version[] = "0.2.0";
 
 static KCmdLineOptions options[] =
 {
-	{ "+[URL]", I18N_NOOP( "Document to open" ), 0 },
-	KCmdLineLastOption
+	/*{ "+[URL]", I18N_NOOP( "Document to open" ), 0 },
+	KCmdLineLastOption*/
 };
 
 int main(int argc, char **argv)
 {
 	KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
-                     KAboutData::License_GPL, "(C) 2006 Matt Williams}", 0, 0, "matt@milliams.com");
+                     KAboutData::License_GPL, "(C) 2006 Matt Williams", 0, 0, "matt@milliams.com");
 	about.addAuthor( "Matt Williams", 0, "matt@milliams.com" );
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions(options);

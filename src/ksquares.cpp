@@ -23,6 +23,7 @@ using std::endl;
 #include <kstdaccel.h>
 #include <kaction.h>
 #include <kstandardaction.h>
+#include <kstdgameaction.h>
 #include <kdebug.h>
 
 #include "gameboardscene.h"
@@ -36,11 +37,11 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 	connect(sGame, SIGNAL(playerChangedSig(int)), this, SLOT(playerChanged(int)));
 	setCentralWidget(m_view);
 	setupActions();
-	statusBar()->insertPermanentItem("Current Player", 0);
+	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
 	statusBar()->show();
 	setAutoSaveSettings();
 	
-	//fileNew();	//uncomment to start a new game on startup
+	//gameNew();	//uncomment to start a new game on startup
 }
 
 KSquares::~KSquares()
@@ -49,7 +50,9 @@ KSquares::~KSquares()
 
 void KSquares::setupActions()
 {	
-	KStandardAction::openNew(this, SLOT(fileNew()), actionCollection());
+	//KStdGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	//KStdGameAction::quit(kapp, SLOT(quit()), actionCollection());
+	KStandardAction::openNew(this, SLOT(gameNew()), actionCollection());
 	KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	
@@ -59,7 +62,7 @@ void KSquares::setupActions()
 	setupGUI();
 }
 
-void KSquares::fileNew()
+void KSquares::gameNew()
 {
 	//load settings
 	NewGameDialog dialog(this);
@@ -169,7 +172,6 @@ void KSquares::optionsPreferences()
 	
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();
-	
 }
 
 void KSquares::playerChanged(int playerNumber)

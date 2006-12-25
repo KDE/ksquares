@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kmyapplication "<application>KSquares</application>">
+  <!ENTITY kappname "&ksquares;"><!-- replace kmyapplication here
+                                            do *not* replace kappname-->
+  <!ENTITY package "kde-module"><!-- kdebase, kdeadmin, etc.  Leave
+                                     this unchanged if your
+                                     application is not maintained in KDE CVS -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"> <!-- ONLY If you are writing non-English
+                                     original documentation, change
+                                     the language here -->
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book lang="&language;">
+
+
+<bookinfo>
+  <title>The &ksquares; Handbook</title>
+
+  <authorgroup>
+    <author>
+    <!-- This is just put in as an example.  For real documentation, please
+        define a general entity in entities/contributor.entities, e.g.
+    <!ENTITY George.N.Ugnacious "<personname><firstname>George</firstname><othername>N.</othername><surname>Ugnacious</surname></personname>">
+    <!ENTITY George.N.Ugnacious.mail "<email>gnu@kde.org</email>">
+    and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
+    -->
+      <personname>
+        <firstname>Matt</firstname>
+        <surname>Williams</surname>
+      </personname>
+      <email>matt@milliams.com</email>
+    </author>
+  </authorgroup>
+
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
+  <copyright>
+    <year>2006</year>
+    <holder>Matt Williams</holder>
+  </copyright>
+  <!-- Translators: put here the copyright notice of the translation -->
+  <!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
+      and in the FDL itself on how to use it. -->
+  <legalnotice>&FDLNotice;</legalnotice>
+  
+  <date>2006-12-25</date>
+  <releaseinfo>0.2.0</releaseinfo>
+  
+  <abstract>
+    <para>&ksquares; is a game where you complete squares by drawing lines.</para>
+  </abstract>
+  
+  <keywordset>
+    <keyword>KDE</keyword>
+    <keyword>ksqaures</keyword>
+    <keyword>kdegames</keyword>
+    <keyword>game</keyword>
+    <keyword>squares</keyword>
+  </keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+  <title>Introduction</title>
+  
+  <para>
+  &ksquares; is a game of "squares" (http://en.wikipedia.org/wiki/Dots_and_Boxes). The purpose of the game is to complete more squares than your opponent.
+  </para>
+
+</chapter>
+
+<chapter id="playing-ksquares">
+  <title>Using &ksquares;</title>
+  
+  <para>
+  Each player takes it in turns to draw a line between two ajacent dots on the board.
+  If a player completes a square by placing the fourth of the four lines around the square, they must take another go.
+  </para>
+
+</chapter>
+
+<chapter id="menu-reference">
+  <title>The menu referance</title>
+  
+  <sect1 id="file/game-menu-reference">
+    <title>The File/Game Menu</title>
+    
+    <para>
+    <variablelist>
+    <varlistentry>
+    <term><menuchoice>
+    <shortcut>
+    <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
+    </shortcut>
+    <guimenu>File</guimenu>
+    <guimenuitem>New</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Start a new game</action></para></listitem>
+    </varlistentry>
+    <varlistentry>
+    <term><menuchoice>
+    <shortcut>
+    <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
+    </shortcut>
+    <guimenu>File</guimenu>
+    <guimenuitem>Quit</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Quits</action> &ksquares;</para></listitem>
+    </varlistentry>
+    </variablelist>
+    </para>
+  </sect1>
+
+  <sect1 id="settings-menu-reference">
+    <title>The <guimenu>Setings</guimenu> Menu</title>
+    <para>
+    <!--Settings-->
+    <para>
+  </sect1>
+
+  <sect1 id="help-menu-reference">
+    <title>The <guimenu>Help</guimenu> Menu</title>
+    &help.menu.documentation;
+  </sect1>
+</chapter>
+
+<chapter id="faq">
+  <title>Questions and Answers</title>
+  
+  &reporting.bugs;
+  &updating.documentation;
+  
+  <qandaset id="faqlist">
+    <qandaentry>
+      <question>
+        <para>How do I win the game?</para>
+      </question>
+      <answer>
+        <para>You must complete more squares than your opponent</para>
+      </answer>
+    </qandaentry>
+  </qandaset>
+
+</chapter>
+
+<chapter id="credits">
+
+  <!-- Include credits for the programmers, documentation writers, and
+  contributors here. The license for your software should then be included below
+  the credits with a reference to the appropriate license file included in the KDE
+  distribution. -->
+  
+  <title>Credits and License</title>
+  
+  <para>&ksquares;</para>
+  <para>
+  Program copyright 2006 Matt Williams <email>matt@milliams.com</email>
+  </para>
+  <para>
+  Contributors:
+  <itemizedlist>
+    <listitem>
+      <para>Konqui the KDE Dragon <email>konqui@kde.org</email></para>
+    </listitem>
+  </itemizedlist>
+  </para>
+  
+  <para>Documentation Copyright &copy; 2006 Matt Williams <email>matt@milliams.com</email></para>
+
+  <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+
+  &underFDL;               <!-- FDL: do not remove -->
+
+  <!-- Determine which license your application is licensed under,
+      and delete all the remaining licenses below:
+
+      (NOTE:  All documentation are licensed under the FDL,
+      regardless of what license the application uses) -->
+
+  &underGPL;        	 <!-- GPL License -->
+</chapter>
+
+<appendix id="installation">
+<title>Installation</title>
+
+<sect1 id="requirements">
+  <title>Requirements</title>
+  
+  <!--
+  List any special requirements for your application here. This should include:
+  .Libraries or other software that is not included in kdesupport,
+  kdelibs, or kdebase.
+  .Hardware requirements like amount of RAM, disk space, graphics card
+  capabilities, screen resolution, special expansion cards, etc.
+  .Operating systems the app will run on. If your app is designed only for a
+  specific OS, (you wrote a graphical LILO configurator for example) put this
+  information here.
+  -->
+  
+  <para>
+  kdelibs 4 from SVN is required as well as libkdegames
+  </para>
+  
+  <!-- For a list of updates, you may refer to the application web site
+  or the ChangeLog file, or ... -->
+  <para>
+  </para>
+</sect1>
+
+</sect1>
+
+</appendix>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

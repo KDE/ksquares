@@ -12,7 +12,7 @@ using std::cout;
 using std::endl;
 
 #include "ksquares.h"
-#include "settings.h"
+
 #include <kconfigdialog.h>
 #include <kglobal.h>
 #include <klocale.h>
@@ -26,6 +26,9 @@ using std::endl;
 #include <kstdgameaction.h>
 #include <kdebug.h>
 
+#include "settings.h"
+#include "aicontroller.h"
+
 #include "gameboardscene.h"
 #include "newgamedialog.h"
 #include "scoresdialog.h"
@@ -34,7 +37,7 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 {	
 	sGame = new KSquaresGame();
 	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
-	connect(sGame, SIGNAL(playerChangedSig(int)), this, SLOT(playerChanged(int)));
+	connect(sGame, SIGNAL(playerChangedSig(KSquaresPlayer)), this, SLOT(playerChanged(KSquaresPlayer)));
 	setCentralWidget(m_view);
 	setupActions();
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
@@ -174,9 +177,25 @@ void KSquares::optionsPreferences()
 	dialog->show();
 }
 
-void KSquares::playerChanged(int playerNumber)
+void KSquares::playerChanged(KSquaresPlayer currentPlayer)
 {	
-	statusBar()->changeItem(Settings::playerNames().at(playerNumber), 0);
+	statusBar()->changeItem(currentPlayer.name(), 0);
+	if(currentPlayer.isHuman())
+	{
+		//kdDebug() << "Humans's Turn" << endl;
+		//Let the human player interact with the board through the GameBoardView
+		if(!m_view->isEnabled())
+			m_view->setEnabled(true);
+	}
+	else	//AI
+	{
+		//kdDebug() << "AI's Turn" << endl;
+		//lock the view to let the AI do it's magic
+		if(m_view->isEnabled())
+			m_view->setEnabled(false);
+		
+		
+	}
 }
 
 #include "ksquares.moc"

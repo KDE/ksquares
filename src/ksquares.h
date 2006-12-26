@@ -36,7 +36,7 @@ class KSquares : public KMainWindow
 	private slots:
 		void gameNew();
 		void optionsPreferences();
-		void playerChanged(int playerNumber);	//for updating the statusbar
+		void playerChanged(KSquaresPlayer currentPlayer);
 		void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board
 	
 	private:

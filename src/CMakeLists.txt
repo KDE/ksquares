@@ -10,6 +10,7 @@ set(ksquares_SRCS
 	ksquaresgame.cpp
 	newgamedialog.cpp
 	scoresdialog.cpp
+	aicontroller.cpp
 )
 
 kde4_automoc(${ksquares_SRCS})

@@ -25,7 +25,8 @@ class KSquaresGame : public QObject
 		void createGame(uint players, int startWidth, int startHeight);
 		void createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight);
 		
-		int currentPlayer() const {return currentPlayerId;}
+		int currentPlayerId() const {return i_currentPlayerId;}
+		KSquaresPlayer currentPlayer() {return players.at(currentPlayerId());}
 		
 		int nextPlayer();	// moves play control to the next player, looping round when necessary 
 		
@@ -37,7 +38,7 @@ class KSquaresGame : public QObject
 
 	protected:
 		int numOfPlayers;
-		int currentPlayerId;	// from 0 to (n-1); -1 is null player
+		int i_currentPlayerId;	// from 0 to (n-1); -1 is null player
 		QVector<int> points;
 		bool anotherGo;
 		int width;
@@ -46,8 +47,10 @@ class KSquaresGame : public QObject
 		
 	signals:
 		void setSquareOwnerSig(int,int);
-		void playerChangedSig(int);
+		void playerChangedSig(KSquaresPlayer);	//emit the new curent player
 		void gameOverSig(QVector<KSquaresPlayer>);
+		void aiStartGo(int);	//int = player ID
+		void aiEndGo(int);
 };
 
 #endif // KSQUARESGAME_H

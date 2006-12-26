@@ -110,7 +110,7 @@ p, li { white-space: pre-wrap; }
      <item row="1" column="2" >
       <widget class="QCheckBox" name="playerOneHuman" >
        <property name="enabled" >
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="text" >
         <string>Human?</string>
@@ -123,7 +123,7 @@ p, li { white-space: pre-wrap; }
      <item row="2" column="2" >
       <widget class="QCheckBox" name="playerTwoHuman" >
        <property name="enabled" >
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="text" >
         <string>Human?</string>

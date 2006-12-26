@@ -1,13 +1,17 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=KSquares
+Name[sv]=Fyrkanter
 Exec=ksquares %i -caption "%c"
 Icon=ksquares
 Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
 GenericName[da]=Forbind prikkerne for at lave firkanter
+GenericName[et]=Punktide ühendamine ruutude loomiseks
+GenericName[nl]=Verbindt de stippen om vierkanten te creëren
 GenericName[pt]=Ligue os pontos para criar quadrados
 GenericName[pt_BR]=Ligue os pontos para criar quadrados
+GenericName[sv]=Koppla ihop punkterna för att skapa fyrkanter
 Terminal=false
 Categories=Qt;KDE;Game;ArcadeGame;

@@ -20,7 +20,7 @@ using std::endl;
 #include <kstatusbar.h>
 #include <kkeydialog.h>
 #include <kedittoolbar.h>
-#include <kstdaccel.h>
+#include <kstandardshortcut.h>
 #include <kaction.h>
 #include <kstandardaction.h>
 #include <kstdgameaction.h>

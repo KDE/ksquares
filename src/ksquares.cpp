@@ -37,7 +37,7 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 {	
 	sGame = new KSquaresGame();
 	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
-	connect(sGame, SIGNAL(playerChangedSig(KSquaresPlayer)), this, SLOT(playerChanged(KSquaresPlayer)));
+	connect(sGame, SIGNAL(playerChangedSig(KSquaresPlayer*)), this, SLOT(playerChanged(KSquaresPlayer*)));
 	setCentralWidget(m_view);
 	setupActions();
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
@@ -178,7 +178,7 @@ void KSquares::optionsPreferences()
 }
 
 void KSquares::playerChanged(KSquaresPlayer* currentPlayer)
-{	
+{
 	statusBar()->changeItem(currentPlayer->name(), 0);
 	if(currentPlayer->isHuman())
 	{

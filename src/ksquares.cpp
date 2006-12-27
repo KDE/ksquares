@@ -146,6 +146,8 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 	QStandardItemModel* scoreTableModel = new QStandardItemModel();
 	scoreTableModel->setRowCount(playerList.size());
 	scoreTableModel->setColumnCount(2);
+	scoreTableModel->setHeaderData(0, Qt::Horizontal, "Player Name");
+	scoreTableModel->setHeaderData(1, Qt::Horizontal, "Score");
 	
 	for(int i = 0; i <  playerList.size(); i++)
 	{

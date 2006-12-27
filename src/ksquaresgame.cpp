@@ -70,7 +70,7 @@ void KSquaresGame::playerSquareComplete(int index)
 	}
 	//kDebug() << "total points: " << totalPoints << endl;
 	//kDebug() << "width*height: " << width*height << endl;
-	kDebug() << "- - totalPoints: " << totalPoints << " / " << width*height << endl;
+	kDebug() << "- - totalPoints: " << totalPoints << " (/" << width*height << ")" << endl;
 	if (totalPoints >= width*height)	//if the board is full
 	{
 		kDebug() << "Game Over" << endl;

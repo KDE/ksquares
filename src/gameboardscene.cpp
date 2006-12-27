@@ -158,7 +158,7 @@ bool GameBoardScene::addLineToIndex(int index)
 		lineDrawn[index] = true;
 		
 		QGraphicsLineItem* line = lineFromIndex(index);
-		line->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
+		line->setPen(QPen(QBrush(Settings::lineColor(), Qt::SolidPattern), 2.5));
 		addItem(line);
 		
 		checkForNewSquares();
@@ -280,13 +280,14 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 		if (connectList.size() == 2)
 		{
-			if (addLineToIndex(connectList) == true)	//try to add the line to the index
+			addLineToIndex(connectList);
+			/*if (addLineToIndex(connectList) == true)	//try to add the line to the index
 			{
 				indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,0), Qt::SolidPattern), 2.0));	//just make the pen invisible
-				/*QGraphicsLineItem* newLine = new QGraphicsLineItem(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
-				newLine->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
-				addItem(newLine);*/
-			}
+				//QGraphicsLineItem* newLine = new QGraphicsLineItem(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
+				//newLine->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
+				//addItem(newLine);
+			}*/
 		}
 	}
 	
@@ -307,17 +308,17 @@ void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		if (not isLineAlready(connectList))	// if there is not already a line there
 		{
 			indicatorLine->setLine(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
-			indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,160), Qt::SolidPattern), 2.0));
+			indicatorLine->setPen(QPen(QBrush(Settings::indicatorLineColor(), Qt::SolidPattern), 2.0));
 		}
 		else
 		{
-			indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,0), Qt::SolidPattern), 2.0));
+			indicatorLine->setPen(QPen(QBrush(Settings::indicatorLineColor(), Qt::SolidPattern), 2.0));
 		}
 		
 	}
 	else
 	{
-		indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,0), Qt::SolidPattern), 2.0));
+		indicatorLine->setPen(QPen(QBrush(Settings::indicatorLineColor(), Qt::SolidPattern), 2.0));
 	}
 	
 	QGraphicsScene::mouseMoveEvent(mouseEvent);

@@ -23,7 +23,7 @@ using std::endl;
 #include <kstandardshortcut.h>
 #include <kaction.h>
 #include <kstandardaction.h>
-#include <kstdgameaction.h>
+#include <kstandardgameaction.h>
 #include <kdebug.h>
 
 #include "settings.h"
@@ -53,8 +53,8 @@ KSquares::~KSquares()
 
 void KSquares::setupActions()
 {	
-	//KStdGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	//KStdGameAction::quit(kapp, SLOT(quit()), actionCollection());
+	//KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	//KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::openNew(this, SLOT(gameNew()), actionCollection());
 	KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());

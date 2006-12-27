@@ -124,7 +124,7 @@ void KSquares::gameNew()
 			break;
 	}
 	
-	//create phsical board
+	//create physical board
 	m_view->createBoard(Settings::boardWidth(), Settings::boardHeight());
 	
 	//start game etc.
@@ -177,24 +177,27 @@ void KSquares::optionsPreferences()
 	dialog->show();
 }
 
-void KSquares::playerChanged(KSquaresPlayer currentPlayer)
+void KSquares::playerChanged(KSquaresPlayer* currentPlayer)
 {	
-	statusBar()->changeItem(currentPlayer.name(), 0);
-	if(currentPlayer.isHuman())
+	statusBar()->changeItem(currentPlayer->name(), 0);
+	if(currentPlayer->isHuman())
 	{
-		//kdDebug() << "Humans's Turn" << endl;
+		//kDebug() << "Humans's Turn" << endl;
 		//Let the human player interact with the board through the GameBoardView
 		if(!m_view->isEnabled())
 			m_view->setEnabled(true);
 	}
 	else	//AI
 	{
-		//kdDebug() << "AI's Turn" << endl;
+		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
 		if(m_view->isEnabled())
 			m_view->setEnabled(false);
 		
-		
+		aiController ai(sGame->currentPlayerId());
+		ai.setLines(m_view->scene()->lines());
+		ai.setSquareOwners(m_view->scene()->squareOwners());
+		m_view->scene()->addLineToIndex(ai.drawLine());
 	}
 }
 

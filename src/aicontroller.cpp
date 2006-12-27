@@ -9,10 +9,41 @@
 
 #include "aicontroller.h"
 
+#include <ctime>
 #include <kdebug.h>
 
-aiController::aiController()
+aiController::aiController(int newPlayerId)
 {
+	kDebug() << "AI: Starting AI..." << endl;
+	playerId = newPlayerId;
+}
+
+void aiController::setLines(QVector<bool> newLines)
+{
+	kDebug() << "AI: Reading lines" << endl;
+	lines = newLines;
+	//kdDebug() << "AI: - lines.size(): " << lines.size() << endl;
+}
+
+void aiController::setSquareOwners(QVector<int> newSquareOwners)
+{
+	kDebug() << "AI: Reading square ownerships" << endl;
+	squareOwners = newSquareOwners;
+	//kdDebug() << "AI: - newSquareOwners.size(): " << newSquareOwners.size() << endl;
+}
+
+int aiController::drawLine()
+{
+	int indexChoice;
+	srand( (unsigned)time( NULL ) );
+	do
+	{
+		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(lines.size()-1);
+		indexChoice = (short)(randomFloat)/1;
+	}while(lines.at(indexChoice));	//continue while 'that' square is taken
+		
+	kDebug() << "AI: Drawing line at index: " << indexChoice << endl;
+	return indexChoice;
 }
 
 #include "aicontroller.moc"

@@ -147,9 +147,20 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 	if (index == -1)	//not a valid line since no two unique ends
 		return false;
 	
+	return addLineToIndex(index);
+}
+
+bool GameBoardScene::addLineToIndex(int index)
+{
+	//kDebug() << "Adding line at index " << index << endl;
 	if (lineDrawn[index] == false)	//if there's not a line there yet, do checks
 	{
 		lineDrawn[index] = true;
+		
+		QGraphicsLineItem* line = lineFromIndex(index);
+		line->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
+		addItem(line);
+		
 		checkForNewSquares();
 		return true;
 	}
@@ -157,6 +168,35 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 	{
 		return false;
 	}
+}
+
+QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
+{
+	int index2 = index % ((2*width) + 1);
+	enum{HORZONTAL, VERTICAL} dir;
+	if(index2 < width)
+		dir = HORZONTAL;
+	else
+		dir = VERTICAL;
+	
+	int yCoordStart = (index / ((2*width) + 1)) * spacing;
+	int xCoordStart = 0;
+	int yCoordEnd = 0;
+	int xCoordEnd = 0;
+	switch(dir)
+	{
+		case HORZONTAL:
+			xCoordStart = index2 * spacing;
+			yCoordEnd = yCoordStart;
+			xCoordEnd = xCoordStart + spacing;
+			break;
+		case VERTICAL:
+			xCoordStart = (index2 - width) * spacing;
+			yCoordEnd = yCoordStart + spacing;
+			xCoordEnd = xCoordStart;
+			break;
+	}
+	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
 }
 
 void GameBoardScene::checkForNewSquares()
@@ -243,9 +283,9 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 			if (addLineToIndex(connectList) == true)	//try to add the line to the index
 			{
 				indicatorLine->setPen(QPen(QBrush(QColor(255,255,0,0), Qt::SolidPattern), 2.0));	//just make the pen invisible
-				QGraphicsLineItem* newLine = new QGraphicsLineItem(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
+				/*QGraphicsLineItem* newLine = new QGraphicsLineItem(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));
 				newLine->setPen(QPen(QBrush(QColor(0,0,0), Qt::SolidPattern), 2.5));
-				addItem(newLine);
+				addItem(newLine);*/
 			}
 		}
 	}

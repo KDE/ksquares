@@ -20,9 +20,13 @@ class GameBoardScene : public QGraphicsScene
 		GameBoardScene(int newWidth, int newHeight, QWidget *parent = 0);
 		QSize sizeHint();
 		QVector<int> board() const {return squareOwnerTable;}
+		QVector<int> squareOwners() const {return squareOwnerTable;}
+		QVector<bool> lines() const {return lineDrawn;}
+		bool addLineToIndex(int index);
 	public slots:
 		void setSquareOwner(int squareIndex, int owner);
 		void drawSquare(int index);
+		
 	protected:
 		QList<QGraphicsEllipseItem*> getTwoNearestPoints(QPointF pos) const;
 		
@@ -49,6 +53,8 @@ class GameBoardScene : public QGraphicsScene
 		QVector<bool> lineDrawn;
 		
 		int QGraphicsEllipseItemType;
+		
+		QGraphicsLineItem* lineFromIndex(int index);
 		
 	signals:
 		void squareComplete(int);	// int is the index associated with 'QVector<int> squareOwnerTable'

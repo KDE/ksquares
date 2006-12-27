@@ -17,18 +17,18 @@ using std::endl;
 
 KSquaresGame::KSquaresGame()
 {
-	kdDebug() << "Constructing Game" << endl;
+	kDebug() << "Constructing Game" << endl;
 }
 
 KSquaresGame::~KSquaresGame()
 {
-	kdDebug() << "Destroying game" << endl;
+	kDebug() << "Destroying game" << endl;
 }
 
 void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight)
 {
 	endGame();	//reset everything
-	kdDebug() << "Creating Game with " << startPlayers.size() << " player(s)" << endl;
+	kDebug() << "Creating Game with " << startPlayers.size() << " player(s)" << endl;
 	width = startWidth;
 	height = startHeight;
 	i_currentPlayerId = -1;
@@ -42,7 +42,7 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 
 void KSquaresGame::startGame()
 {
-	kdDebug() << "Game Starting" << endl;
+	kDebug() << "Game Starting" << endl;
 	nextPlayer();
 }
 
@@ -50,7 +50,7 @@ int KSquaresGame::nextPlayer()
 {
 	anotherGo = false;	//just to reset the variable
 	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
-	kdDebug() << "- Moving to next player: " << currentPlayer().name() << "(" << currentPlayerId() << ")" << endl;
+	kDebug() << "- Moving to next player: " << currentPlayer()->name() << "(" << currentPlayerId() << ")" << endl;
 	emit playerChangedSig(currentPlayer());
 	
 	return currentPlayerId();
@@ -58,21 +58,22 @@ int KSquaresGame::nextPlayer()
 
 void KSquaresGame::playerSquareComplete(int index)
 {
-	kdDebug() << "- - " << currentPlayer().name() << "(" << currentPlayerId() << ") has completed a square" << endl;
+	kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square" << endl;
 	anotherGo = true;
 	emit setSquareOwnerSig(index, currentPlayerId());
 	//points[currentPlayer()-1]++;
-	currentPlayer().incScore();
+	currentPlayer()->incScore();
 	int totalPoints=0;
 	for (int i=0; i < players.size(); i++)
 	{
 		totalPoints += players.at(i).score();
 	}
-	//kdDebug() << "total points: " << totalPoints << endl;
-	//kdDebug() << "width*height: " << width*height << endl;
+	//kDebug() << "total points: " << totalPoints << endl;
+	//kDebug() << "width*height: " << width*height << endl;
+	kDebug() << "- - totalPoints: " << totalPoints << " / " << width*height << endl;
 	if (totalPoints >= width*height)	//if the board is full
 	{
-		kdDebug() << "Game Over" << endl;
+		kDebug() << "Game Over" << endl;
 		emit gameOverSig(players);
 		//endGame();
 	}
@@ -80,23 +81,23 @@ void KSquaresGame::playerSquareComplete(int index)
 
 void KSquaresGame::tryEndGo()
 {
-	kdDebug() << "- - Line placed, trying to end go" << endl;
+	kDebug() << "- - Line placed, trying to end go" << endl;
 	if (not anotherGo)
 	{
-		kdDebug() << "- - - Go ending" << endl;
+		kDebug() << "- - - Go ending" << endl;
 		nextPlayer();
 		return;
 	}
 	else
 	{
-		kdDebug() << "- - - Having another go" << endl;
+		kDebug() << "- - - Having another go" << endl;
 		anotherGo = false;
 	}
 }
 
 void KSquaresGame::endGame()
 {
-	kdDebug() << "Game Values Resetting" << endl;
+	kDebug() << "Game Values Resetting" << endl;
 	numOfPlayers = 0;
 	players.resize(0);
 	width = 0;

@@ -7,17 +7,11 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "settings.h"
-#include "newgamedialog.h"
+/*#include "newgamedialog.h"
 
 NewGameDialog::NewGameDialog(QWidget* parent) : QDialog(parent)
 {
 	setupUi(this);
 }
 
-/*void NewGameDialog::accept()
-{
-	QDialog::accept();
-}*/
-
-#include "newgamedialog.moc"
+#include "newgamedialog.moc"*/

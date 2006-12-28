@@ -10,7 +10,7 @@
 #ifndef KSQUARESGAME_H
 #define KSQUARESGAME_H
 
-#include <QtCore>
+#include <QObject>
 
 #include "ksquaresplayer.h"
 

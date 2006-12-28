@@ -15,7 +15,7 @@
 class LineItem : public QGraphicsLineItem
 {
 	public:
-		LineItem(const QLineF & line, int ownerId, QGraphicsItem* parent = 0, QGraphicsScene* scene = 0);
+		LineItem(const QLineF & line, int ownerId, QGraphicsItem* parent = 0, QGraphicsScene* scene = 0) : QGraphicsLineItem(line, parent, scene), playerOwnerId(ownerId);
 		
 		enum { Type = UserType + 1 };
 		int type() const {return Type;}

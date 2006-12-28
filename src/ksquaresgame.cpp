@@ -7,10 +7,6 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include <iostream>
-using std::cout;
-using std::endl;
-
 #include <kdebug.h>
 
 #include "ksquaresgame.h"

@@ -10,7 +10,8 @@
 #ifndef AICONTROLLER_H
 #define AICONTROLLER_H
 
-#include <QtCore>
+#include <QObject>
+#include <QVector>
 
 /**
  * @short AI Controller for KSquares

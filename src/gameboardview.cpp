@@ -7,10 +7,6 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include <iostream>
-using std::cout;
-using std::endl;
-
 #include "settings.h"
 #include "gameboardview.h"
 

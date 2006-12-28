@@ -8,16 +8,16 @@
  ***************************************************************************/
 
 #include <math.h>
-#include <iostream>
-using std::cout;
-using std::endl;
+
+#include <QGraphicsSceneMouseEvent>
+
 #include <kdebug.h>
 
 #include "settings.h"
 #include "gameboardscene.h"
 //#include "lineitem.h"
 
-GameBoardScene::GameBoardScene(int newWidth, int newHeight, QWidget *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2*newWidth*newHeight + newWidth + newHeight), false)
+GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2*newWidth*newHeight + newWidth + newHeight), false)
 {
 	//setObjectName("GameBoardScene");
 	
@@ -223,7 +223,7 @@ void GameBoardScene::checkForNewSquares()
 
 void GameBoardScene::setSquareOwner(int squareIndex, int owner)
 {
-	squareOwnerTable[squareIndex] = owner;
+	squareOwnerTable[squareIndex] = owner;	//TODO out of bounds crash (squareIndex=4)
 	drawSquare(squareIndex);
 }
 

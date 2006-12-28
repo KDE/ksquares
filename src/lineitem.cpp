@@ -6,13 +6,3 @@
  *   the Free Software Foundation; either version 2 of the License, or     *
  *   (at your option) any later version.                                   *
  ***************************************************************************/
-
-#include <iostream>
-using std::cout;
-using std::endl;
-
-#include "lineitem.h"
-
-LineItem::LineItem(const QLineF &line, int ownerId, QGraphicsItem* parent, QGraphicsScene* scene) : QGraphicsLineItem(line, parent, scene), playerOwnerId(ownerId)
-{
-}

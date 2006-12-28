@@ -14,7 +14,6 @@
 #include <config.h>
 #endif
 
-#include <kapplication.h>
 #include <kmainwindow.h>
 
 #include "gameboardview.h"

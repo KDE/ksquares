@@ -14,12 +14,8 @@
 
 class NewGameDialog : public QDialog, public Ui::NewGameDialog
 {
-	Q_OBJECT
-	
 	public:
-		NewGameDialog(QWidget* parent = 0);
-	/*public slots:
-		void accept();*/
+		NewGameDialog(QWidget* parent = 0) : QDialog(parent) {setupUi(this);}
 };
 
 #endif // NEWGAMEDIALOG_H

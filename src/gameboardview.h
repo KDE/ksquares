@@ -10,7 +10,7 @@
 #ifndef GAMEBOARDVIEW_H
 #define GAMEBOARDVIEW_H
 
-#include <QtGui>
+#include <QGraphicsView>
 
 #include "gameboardscene.h"
 

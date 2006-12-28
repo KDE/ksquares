@@ -10,14 +10,15 @@
 #ifndef GAMEBOARDSCENE_H
 #define GAMEBOARDSCENE_H
 
-#include <QtGui>
+#include <QGraphicsScene>
+#include <QGraphicsEllipseItem>
 
 class GameBoardScene : public QGraphicsScene
 {
 	Q_OBJECT
 	
 	public:
-		GameBoardScene(int newWidth, int newHeight, QWidget *parent = 0);
+		GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
 		QSize sizeHint();
 		QVector<int> board() const {return squareOwnerTable;}
 		QVector<int> squareOwners() const {return squareOwnerTable;}

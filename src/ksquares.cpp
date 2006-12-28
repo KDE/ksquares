@@ -7,21 +7,13 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include <iostream>
-using std::cout;
-using std::endl;
-
 #include "ksquares.h"
 
+#include <QStandardItemModel>
+
+#include <kapplication.h>
 #include <kconfigdialog.h>
-#include <kglobal.h>
-#include <klocale.h>
-#include <kicon.h>
 #include <kstatusbar.h>
-#include <kkeydialog.h>
-#include <kedittoolbar.h>
-#include <kstandardshortcut.h>
-#include <kaction.h>
 #include <kstandardaction.h>
 #include <kstandardgameaction.h>
 #include <kdebug.h>
@@ -86,57 +78,60 @@ void KSquares::gameNew()
 	//run dialog
 	dialog.exec();
 	
-	//save settings
-	Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
-	
-	QStringList tempNames;
-	tempNames.append(dialog.playerOneName->text());
-	tempNames.append(dialog.playerTwoName->text());
-	Settings::setPlayerNames(tempNames);
-	
-	QList<int> tempHuman;
-	tempHuman.append(dialog.playerOneHuman->checkState());
-	tempHuman.append(dialog.playerTwoHuman->checkState());
-	Settings::setHumanList(tempHuman);
-	
-	Settings::setBoardHeight(dialog.spinHeight->value());
-	Settings::setBoardWidth(dialog.spinWidth->value());
-	Settings::writeConfig();
-	
-	//create players
-	QVector<KSquaresPlayer> playerList;
-	switch(dialog.playerOneHuman->checkState())
+	if (dialog.result() == QDialog::Accepted)
 	{
-		case 0:
-			playerList.append(KSquaresPlayer(dialog.playerOneName->text(), false));
-			break;
-		case 2:
-			playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
-			break;
+		//save settings
+		Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
+		
+		QStringList tempNames;
+		tempNames.append(dialog.playerOneName->text());
+		tempNames.append(dialog.playerTwoName->text());
+		Settings::setPlayerNames(tempNames);
+		
+		QList<int> tempHuman;
+		tempHuman.append(dialog.playerOneHuman->checkState());
+		tempHuman.append(dialog.playerTwoHuman->checkState());
+		Settings::setHumanList(tempHuman);
+		
+		Settings::setBoardHeight(dialog.spinHeight->value());
+		Settings::setBoardWidth(dialog.spinWidth->value());
+		Settings::writeConfig();
+		
+		//create players
+		QVector<KSquaresPlayer> playerList;
+		switch(dialog.playerOneHuman->checkState())
+		{
+			case 0:
+				playerList.append(KSquaresPlayer(dialog.playerOneName->text(), false));
+				break;
+			case 2:
+				playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
+				break;
+		}
+		switch(dialog.playerTwoHuman->checkState())
+		{
+			case 0:
+				playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), false));
+				break;
+			case 2:
+				playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
+				break;
+		}
+		
+		//create physical board
+		m_view->createBoard(dialog.spinWidth->value(), dialog.spinHeight->value());
+		
+		//start game etc.
+		sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
+		sGame->startGame();
+		
+		// From here on out, the game is 'controlled' by GameBoardScene and the clicks therein
+		//cout << "Connecting stuff" << endl;	
+		connect(m_view->scene(), SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
+		connect(m_view->scene(), SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
+		connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_view->scene(), SLOT(setSquareOwner(int,int)));
+		connect(sGame, SIGNAL(gameOverSig(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	}
-	switch(dialog.playerTwoHuman->checkState())
-	{
-		case 0:
-			playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), false));
-			break;
-		case 2:
-			playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
-			break;
-	}
-	
-	//create physical board
-	m_view->createBoard(Settings::boardWidth(), Settings::boardHeight());
-	
-	//start game etc.
-	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
-	sGame->startGame();
-	
-	// From here on out, the game is 'controlled' by GameBoardScene and the clicks therein
-	//cout << "Connecting stuff" << endl;	
-	connect(m_view->scene(), SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
-	connect(m_view->scene(), SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
-	connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_view->scene(), SLOT(setSquareOwner(int,int)));
-	connect(sGame, SIGNAL(gameOverSig(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 }
 
 void KSquares::gameOver(QVector<KSquaresPlayer> playerList)

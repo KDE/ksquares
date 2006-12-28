@@ -3,13 +3,11 @@ FIND_PACKAGE(KDE4 REQUIRED)
 INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
 set(ksquares_SRCS
-	ksquares.cpp
 	main.cpp
+	ksquares.cpp
 	gameboardview.cpp
 	gameboardscene.cpp
 	ksquaresgame.cpp
-	newgamedialog.cpp
-	scoresdialog.cpp
 	aicontroller.cpp
 )
 

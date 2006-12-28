@@ -7,11 +7,11 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "scoresdialog.h"
+/*#include "scoresdialog.h"
 
 ScoresDialog::ScoresDialog(QWidget* parent) : QDialog(parent)
 {
 	setupUi(this);
 }
 
-#include "scoresdialog.moc"
+#include "scoresdialog.moc"*/

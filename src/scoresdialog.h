@@ -14,11 +14,8 @@
 
 class ScoresDialog : public QDialog, public Ui::ScoresDialog
 {
-	Q_OBJECT
-	
 	public:
-		ScoresDialog(QWidget* parent = 0);
-	public slots:
+		ScoresDialog(QWidget* parent = 0) : QDialog(parent) {setupUi(this);};
 };
 
 #endif // SCORESDIALOG_H

@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>368</width>
-    <height>273</height>
+    <height>333</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -22,6 +22,19 @@
    <property name="spacing" >
     <number>6</number>
    </property>
+   <item row="2" column="0" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>350</width>
+       <height>51</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
    <item row="1" column="0" >
     <widget class="QGroupBox" name="groupBox_2" >
      <property name="whatsThis" >
@@ -129,8 +142,24 @@ p, li { white-space: pre-wrap; }
       <property name="spacing" >
        <number>6</number>
       </property>
-      <item row="2" column="2" >
-       <widget class="QCheckBox" name="playerTwoHuman" >
+      <item row="4" column="0" >
+       <widget class="QLabel" name="labelPlayer4Name" >
+        <property name="whatsThis" >
+         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The name of the second player&lt;/p>&lt;/body>&lt;/html></string>
+        </property>
+        <property name="text" >
+         <string>Player 4:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>playerFourName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2" >
+       <widget class="QCheckBox" name="playerFourHuman" >
         <property name="enabled" >
          <bool>true</bool>
         </property>
@@ -142,11 +171,21 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </item>
-      <item row="2" column="1" >
-       <widget class="QLineEdit" name="playerTwoName" />
+      <item row="3" column="2" >
+       <widget class="QCheckBox" name="playerThreeHuman" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="text" >
+         <string>Human?</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
-      <item row="1" column="0" >
-       <widget class="QLabel" name="labelPLayer1Name" >
+      <item row="3" column="0" >
+       <widget class="QLabel" name="labelPlayer3Name" >
         <property name="whatsThis" >
          <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
@@ -154,15 +193,71 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The name of the first player&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Player 1:</string>
+         <string>Player 3:</string>
         </property>
         <property name="buddy" >
-         <cstring>playerOneName</cstring>
+         <cstring>playerThreeName</cstring>
         </property>
        </widget>
       </item>
-      <item row="1" column="1" >
-       <widget class="QLineEdit" name="playerOneName" />
+      <item row="4" column="1" >
+       <widget class="QLineEdit" name="playerFourName" />
+      </item>
+      <item row="3" column="1" >
+       <widget class="QLineEdit" name="playerThreeName" />
+      </item>
+      <item row="2" column="1" >
+       <widget class="QLineEdit" name="playerTwoName" />
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="labelPlayer2Name" >
+        <property name="whatsThis" >
+         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The name of the second player&lt;/p>&lt;/body>&lt;/html></string>
+        </property>
+        <property name="text" >
+         <string>Player 2:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>playerTwoName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2" >
+       <widget class="QSpinBox" name="spinNumOfPlayers" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy" >
+         <sizepolicy>
+          <hsizetype>7</hsizetype>
+          <vsizetype>0</vsizetype>
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximum" >
+         <number>4</number>
+        </property>
+        <property name="minimum" >
+         <number>2</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" >
+       <widget class="QCheckBox" name="playerOneHuman" >
+        <property name="enabled" >
+         <bool>true</bool>
+        </property>
+        <property name="text" >
+         <string>Human?</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item row="0" column="0" >
        <widget class="QLabel" name="numOfPlayersLabel" >
@@ -180,24 +275,27 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </item>
-      <item row="2" column="0" >
-       <widget class="QLabel" name="labelPLayer2Name" >
+      <item row="1" column="1" >
+       <widget class="QLineEdit" name="playerOneName" />
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="labelPlayer1Name" >
         <property name="whatsThis" >
          <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The name of the second player&lt;/p>&lt;/body>&lt;/html></string>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The name of the first player&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Player 2:</string>
+         <string>Player 1:</string>
         </property>
         <property name="buddy" >
-         <cstring>playerTwoName</cstring>
+         <cstring>playerOneName</cstring>
         </property>
        </widget>
       </item>
-      <item row="1" column="2" >
-       <widget class="QCheckBox" name="playerOneHuman" >
+      <item row="2" column="2" >
+       <widget class="QCheckBox" name="playerTwoHuman" >
         <property name="enabled" >
          <bool>true</bool>
         </property>
@@ -209,42 +307,8 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </item>
-      <item row="0" column="1" colspan="2" >
-       <widget class="QSpinBox" name="spinNumOfPlayers" >
-        <property name="enabled" >
-         <bool>false</bool>
-        </property>
-        <property name="sizePolicy" >
-         <sizepolicy>
-          <hsizetype>7</hsizetype>
-          <vsizetype>0</vsizetype>
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="maximum" >
-         <number>5</number>
-        </property>
-        <property name="minimum" >
-         <number>2</number>
-        </property>
-       </widget>
-      </item>
      </layout>
     </widget>
-   </item>
-   <item row="2" column="0" >
-    <spacer>
-     <property name="orientation" >
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" >
-      <size>
-       <width>350</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item row="3" column="0" >
     <widget class="QDialogButtonBox" name="buttonBox" >
@@ -264,6 +328,10 @@ p, li { white-space: pre-wrap; }
   <tabstop>playerOneHuman</tabstop>
   <tabstop>playerTwoName</tabstop>
   <tabstop>playerTwoHuman</tabstop>
+  <tabstop>playerThreeName</tabstop>
+  <tabstop>playerThreeHuman</tabstop>
+  <tabstop>playerFourName</tabstop>
+  <tabstop>playerFourHuman</tabstop>
   <tabstop>spinWidth</tabstop>
   <tabstop>spinHeight</tabstop>
   <tabstop>buttonBox</tabstop>
@@ -277,8 +345,8 @@ p, li { white-space: pre-wrap; }
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>236</x>
-     <y>263</y>
+     <x>245</x>
+     <y>398</y>
     </hint>
     <hint type="destinationlabel" >
      <x>157</x>
@@ -293,8 +361,8 @@ p, li { white-space: pre-wrap; }
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>304</x>
-     <y>263</y>
+     <x>313</x>
+     <y>398</y>
     </hint>
     <hint type="destinationlabel" >
      <x>286</x>

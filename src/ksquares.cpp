@@ -20,6 +20,7 @@
 #include <kstandardaction.h>
 #include <kstandardgameaction.h>
 #include <kdebug.h>
+#include <klocale.h>
 
 //generated
 #include "settings.h"
@@ -36,7 +37,7 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 {	
 	sGame = new KSquaresGame();
 	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
-	connect(sGame, SIGNAL(playerChangedSig(KSquaresPlayer*)), this, SLOT(playerChanged(KSquaresPlayer*)));
+	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
 	setCentralWidget(m_view);
 	setupActions();
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
@@ -68,19 +69,34 @@ void KSquares::gameNew()
 {
 	//load settings
 	NewGameDialog dialog(this);
+	
+	//create indexed arrays of the widgets
+	QList<QLineEdit*> nameLineEditList;
+	nameLineEditList.append(dialog.playerOneName);
+	nameLineEditList.append(dialog.playerTwoName);
+	nameLineEditList.append(dialog.playerThreeName);
+	nameLineEditList.append(dialog.playerFourName);
+	QList<QCheckBox*> humanCheckBoxList;
+	humanCheckBoxList.append(dialog.playerOneHuman);
+	humanCheckBoxList.append(dialog.playerTwoHuman);
+	humanCheckBoxList.append(dialog.playerThreeHuman);
+	humanCheckBoxList.append(dialog.playerFourHuman);
+	
+	//get settings from file
+	for(int i=0; i<=3; i++)
+	{
+		nameLineEditList.at(i)->setText(Settings::playerNames().at(i));
+	}
+	for(int i=0; i<=3; i++)
+	{
+		if (Settings::humanList().at(i) == 2)
+			humanCheckBoxList.at(i)->setCheckState(Qt::Checked);
+		else
+			humanCheckBoxList.at(i)->setCheckState(Qt::Unchecked);
+	}
 	dialog.spinNumOfPlayers->setValue(Settings::numOfPlayers());
-	dialog.playerOneName->setText(Settings::playerNames().at(0));
-	dialog.playerTwoName->setText(Settings::playerNames().at(1));
 	dialog.spinHeight->setValue(Settings::boardHeight());
 	dialog.spinWidth->setValue(Settings::boardWidth());
-	if (Settings::humanList().at(0) == 2)
-		dialog.playerOneHuman->setCheckState(Qt::Checked);
-	else
-		dialog.playerOneHuman->setCheckState(Qt::Unchecked);
-	if (Settings::humanList().at(1) == 2)
-		dialog.playerTwoHuman->setCheckState(Qt::Checked);
-	else
-		dialog.playerTwoHuman->setCheckState(Qt::Unchecked);
 	
 	//run dialog
 	dialog.exec();
@@ -91,13 +107,17 @@ void KSquares::gameNew()
 		Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
 		
 		QStringList tempNames;
-		tempNames.append(dialog.playerOneName->text());
-		tempNames.append(dialog.playerTwoName->text());
+		for(int i=0; i<=3; i++)
+		{
+			tempNames.append(nameLineEditList.at(i)->text());
+		}
 		Settings::setPlayerNames(tempNames);
 		
 		QList<int> tempHuman;
-		tempHuman.append(dialog.playerOneHuman->checkState());
-		tempHuman.append(dialog.playerTwoHuman->checkState());
+		for(int i=0; i<=3; i++)
+		{
+			tempHuman.append(humanCheckBoxList.at(i)->checkState());
+		}
 		Settings::setHumanList(tempHuman);
 		
 		Settings::setBoardHeight(dialog.spinHeight->value());
@@ -106,27 +126,9 @@ void KSquares::gameNew()
 		
 		//create players
 		QVector<KSquaresPlayer> playerList;
-		switch(dialog.playerOneHuman->checkState())
+		for(int i=0; i<dialog.spinNumOfPlayers->value(); i++)
 		{
-			case 0:
-				playerList.append(KSquaresPlayer(dialog.playerOneName->text(), false));
-				break;
-			case 2:
-				playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
-				break;
-			default:
-				break;
-		}
-		switch(dialog.playerTwoHuman->checkState())
-		{
-			case 0:
-				playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), false));
-				break;
-			case 2:
-				playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
-				break;
-			default:
-				break;
+			playerList.append(KSquaresPlayer(nameLineEditList.at(i)->text(), humanCheckBoxList.at(i)->isChecked()));
 		}
 		
 		//create physical board
@@ -152,8 +154,8 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 	QStandardItemModel* scoreTableModel = new QStandardItemModel();
 	scoreTableModel->setRowCount(playerList.size());
 	scoreTableModel->setColumnCount(2);
-	scoreTableModel->setHeaderData(0, Qt::Horizontal, "Player Name");
-	scoreTableModel->setHeaderData(1, Qt::Horizontal, "Score");
+	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
+	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Score"));
 	
 	for(int i = 0; i <  playerList.size(); i++)
 	{
@@ -185,8 +187,9 @@ void KSquares::optionsPreferences()
 	dialog->show();
 }
 
-void KSquares::playerChanged(KSquaresPlayer* currentPlayer)
+void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
+	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)" << endl;
 	statusBar()->changeItem(currentPlayer->name(), 0);
 	if(currentPlayer->isHuman())
 	{
@@ -202,9 +205,9 @@ void KSquares::playerChanged(KSquaresPlayer* currentPlayer)
 		if(m_view->isEnabled())
 			m_view->setEnabled(false);
 		
-		aiController ai(sGame->currentPlayerId());
-		ai.setLines(m_view->scene()->lines());
-		ai.setSquareOwners(m_view->scene()->squareOwners());
+		aiController ai(sGame->currentPlayerId(), m_view->scene()->lines(), m_view->scene()->squareOwners(), m_view->scene()->boardWidth(), m_view->scene()->boardHeight());
+		/*ai.setLines(m_view->scene()->lines());
+		ai.setSquareOwners(m_view->scene()->squareOwners());*/
 		m_view->scene()->addLineToIndex(ai.drawLine());
 	}
 }

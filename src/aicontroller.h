@@ -13,6 +13,11 @@
 #include <QObject>
 #include <QVector>
 
+namespace KS
+{
+	enum Direction {HORIZONTAL, VERTICAL};
+}
+
 /**
  * @short AI Controller for KSquares
  *
@@ -31,9 +36,7 @@ class aiController : public QObject
 	Q_OBJECT
 	
 	public:
-		aiController(int newPlayerId);
-		void setLines(QVector<bool> newLines);
-		void setSquareOwners(QVector<int> newSquareOwners);
+		aiController(int newPlayerId, QVector<bool> newLines, QVector<int> newSquareOwners, int newWidth, int newHeight);
 		/**
 		 * Choses where to draw the line
 		 * Currently only choses randomly :S
@@ -45,9 +48,21 @@ class aiController : public QObject
 	public slots:
 
 	protected:
+		/**
+		 * @param squareIndex the index of the square (relates to @ref squareOwners ) 
+		 *
+		 * @return The number of lines currently drawn around a specific square
+		 */
+		int countBorderLines(int squareIndex);
+		QVector<int> squaresFromLine(int lineIndex);
+		QVector<int> linesFromSquare(int squareIndex);
+		KS::Direction lineDirection(int lineIndex);
+		
 		QVector<int> squareOwners;
 		QVector<bool> lines;
 		int playerId;
+		int width;
+		int height;
 		
 	signals:
 		

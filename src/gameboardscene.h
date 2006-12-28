@@ -24,6 +24,9 @@ class GameBoardScene : public QGraphicsScene
 		QVector<int> squareOwners() const {return squareOwnerTable;}
 		QVector<bool> lines() const {return lineDrawn;}
 		bool addLineToIndex(int index);
+		int boardWidth() const {return width;}
+		int boardHeight() const {return height;}
+		
 	public slots:
 		void setSquareOwner(int squareIndex, int owner);
 		void drawSquare(int index);

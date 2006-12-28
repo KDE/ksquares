@@ -44,10 +44,11 @@ class KSquaresGame : public QObject
 		int width;
 		int height;
 		QVector<KSquaresPlayer> players;
+		bool gameInProgress;
 		
 	signals:
 		void setSquareOwnerSig(int,int);
-		void playerChangedSig(KSquaresPlayer*);	//emit the new curent player
+		void takeTurnSig(KSquaresPlayer*);	//emit the new curent player
 		void gameOverSig(QVector<KSquaresPlayer>);
 		void aiStartGo(int);	//int = player ID
 		void aiEndGo(int);

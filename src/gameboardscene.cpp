@@ -65,7 +65,7 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 		qreal refX;	// these two will be the grid-coord of the
 		qreal refY;	// to and left most point of the two
 		
-		enum{HORZONTAL, VERTICAL} dir;
+		enum{HORIZONTAL, VERTICAL} dir;
 		if (pointOneX == pointTwoX)
 		{
 			dir = VERTICAL;
@@ -77,7 +77,7 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 		}
 		else if (pointOneY == pointTwoY)
 		{
-			dir = HORZONTAL;
+			dir = HORIZONTAL;
 			refY = pointOneY;
 			if (pointOneX < pointTwoX)	//want the leftmost point as reference
 				refX = pointOneX;
@@ -85,7 +85,7 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 				refX = pointTwoX;
 		}
 		
-		if (dir == HORZONTAL)
+		if (dir == HORIZONTAL)
 		{
 			index = refY * ((2*width)+1) + refX;
 		}
@@ -114,7 +114,7 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 		qreal refX;	// these two will be the grid-coord of the
 		qreal refY;	// to and left most point of the two
 		
-		enum{HORZONTAL, VERTICAL} dir;
+		enum{HORIZONTAL, VERTICAL} dir;
 		if (pointOneX == pointTwoX)
 		{
 			dir = VERTICAL;
@@ -126,7 +126,7 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 		}
 		else if (pointOneY == pointTwoY)
 		{
-			dir = HORZONTAL;
+			dir = HORIZONTAL;
 			refY = pointOneY;
 			if (pointOneX < pointTwoX)	//want the leftmost point as reference
 				refX = pointOneX;
@@ -134,7 +134,7 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 				refX = pointTwoX;
 		}
 		
-		if (dir == HORZONTAL)
+		if (dir == HORIZONTAL)
 		{
 			index = refY * ((2*width)+1) + refX;
 		}
@@ -151,6 +151,7 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 
 bool GameBoardScene::addLineToIndex(int index)
 {
+	//kDebug() << "bool GameBoardScene::addLineToIndex(int index)" << endl;
 	//kDebug() << "Adding line at index " << index << endl;
 	if (lineDrawn[index] == false)	//if there's not a line there yet, do checks
 	{
@@ -172,9 +173,9 @@ bool GameBoardScene::addLineToIndex(int index)
 QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 {
 	int index2 = index % ((2*width) + 1);
-	enum{HORZONTAL, VERTICAL} dir;
+	enum{HORIZONTAL, VERTICAL} dir;
 	if(index2 < width)
-		dir = HORZONTAL;
+		dir = HORIZONTAL;
 	else
 		dir = VERTICAL;
 	
@@ -184,7 +185,7 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 	int xCoordEnd = 0;
 	switch(dir)
 	{
-		case HORZONTAL:
+		case HORIZONTAL:
 			xCoordStart = index2 * spacing;
 			yCoordEnd = yCoordStart;
 			xCoordEnd = xCoordStart + spacing;
@@ -200,6 +201,7 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 
 void GameBoardScene::checkForNewSquares()
 {	
+	//kDebug() << "void GameBoardScene::checkForNewSquares()" << endl;
 	for(int i=0; i < (width*height); i++)	//cycle through every box..
 	{
 		if (squareOwnerTable.at(i) == -1)	//..checking it if there is no current owner

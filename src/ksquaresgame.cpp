@@ -14,11 +14,13 @@
 KSquaresGame::KSquaresGame()
 {
 	kDebug() << "Constructing Game" << endl;
+	gameInProgress = false;
 }
 
 KSquaresGame::~KSquaresGame()
 {
 	kDebug() << "Destroying game" << endl;
+	gameInProgress = false;
 }
 
 void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight)
@@ -32,6 +34,7 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 	{
 		players.append(startPlayers[i]);	//???
 	}
+	gameInProgress = false;
 	//points.resize(0);
 	//points.fill(0, players.size());
 }
@@ -39,6 +42,7 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 void KSquaresGame::startGame()
 {
 	kDebug() << "Game Starting" << endl;
+	gameInProgress = true;
 	nextPlayer();
 }
 
@@ -46,15 +50,15 @@ int KSquaresGame::nextPlayer()
 {
 	anotherGo = false;	//just to reset the variable
 	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
-	kDebug() << "- Moving to next player: " << currentPlayer()->name() << "(" << currentPlayerId() << ")" << endl;
-	emit playerChangedSig(currentPlayer());
+	kDebug() << endl << "- Moving to next player: " << currentPlayer()->name() << "(" << currentPlayerId() << ")" << endl;
+	emit takeTurnSig(currentPlayer());
 	
 	return currentPlayerId();
 }
 
 void KSquaresGame::playerSquareComplete(int index)
 {
-	kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square" << endl;
+	//kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square" << endl;
 	anotherGo = true;
 	emit setSquareOwnerSig(index, currentPlayerId());
 	//points[currentPlayer()-1]++;
@@ -70,6 +74,7 @@ void KSquaresGame::playerSquareComplete(int index)
 	if (totalPoints >= width*height)	//if the board is full
 	{
 		kDebug() << "Game Over" << endl;
+		gameInProgress = false;
 		emit gameOverSig(players);
 		//endGame();
 	}
@@ -78,16 +83,19 @@ void KSquaresGame::playerSquareComplete(int index)
 void KSquaresGame::tryEndGo()
 {
 	kDebug() << "- - Line placed, trying to end go" << endl;
-	if (not anotherGo)
+	if (anotherGo)
 	{
-		kDebug() << "- - - Go ending" << endl;
-		nextPlayer();
-		return;
+		if(gameInProgress)
+		{
+			kDebug() << "- - - Having another go" << endl;
+			anotherGo = false;
+			emit takeTurnSig(currentPlayer());
+		}
 	}
 	else
 	{
-		kDebug() << "- - - Having another go" << endl;
-		anotherGo = false;
+		kDebug() << "- - - Go ending" << endl;
+		nextPlayer();
 	}
 }
 
@@ -100,6 +108,7 @@ void KSquaresGame::endGame()
 	height = 0;
 	i_currentPlayerId = -1;
 	anotherGo = false;
+	gameInProgress = false;
 }
 
 #include "ksquaresgame.moc"

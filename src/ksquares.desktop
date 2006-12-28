@@ -8,6 +8,7 @@ Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
 GenericName[da]=Forbind prikkerne for at lave firkanter
+GenericName[de]=Die Punkte verbinden um Vierecke zu formen
 GenericName[et]=Punktide ühendamine ruutude loomiseks
 GenericName[nl]=Verbindt de stippen om vierkanten te creëren
 GenericName[pt]=Ligue os pontos para criar quadrados

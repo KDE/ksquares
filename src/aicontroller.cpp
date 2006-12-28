@@ -15,21 +15,59 @@
 aiController::aiController(int newPlayerId, QVector<bool> newLines, QVector<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
 {
 	kDebug() << "AI: Starting AI..." << endl;
+	
+	//squaresFromLine(0);
 }
 
 int aiController::drawLine()
 {
-	int indexChoice;
-	srand( (unsigned)time( NULL ) );
 	//kDebug() << "int aiController::drawLine()" << endl;
-	do
+	
+	for(int i=0; i<lines.size(); i++)	//trying to get points. looking for squares with 3 lines
 	{
-		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(lines.size()-1);
-		indexChoice = (short)(randomFloat)/1;
-	}while(lines.at(indexChoice));	//continue while 'that' square is taken
-		
-	kDebug() << "AI: Drawing line at index: " << indexChoice << endl;
-	return indexChoice;
+		if(!lines.at(i))
+		{
+			QVector<int> adjacentSquares = squaresFromLine(i);
+			for(int j=0; j<adjacentSquares.size(); j++)
+			{
+				
+				if(countBorderLines(adjacentSquares.at(j)) == 3)	//if 3 lines, draw there to get points!
+				{
+					kDebug() << "AI: Drawing line at index: " << i << endl;
+					return i;
+				}
+			}
+		}
+	}
+	for(int i=0; i<lines.size(); i++)	//finding totally safe moves. avoiding squares with 2 lines
+	{
+		if(!lines.at(i))
+		{
+			QVector<int> adjacentSquares = squaresFromLine(i);
+			int badCount = 0;
+			for(int j=0; j<adjacentSquares.size(); j++)
+			{
+				
+				if(countBorderLines(adjacentSquares.at(j)) == 2)	//don't want to make 3 lines around a square
+				{
+					badCount++;
+				}
+			}
+			if(badCount == 0)
+			{
+				kDebug() << "AI: Drawing line at index: " << i << endl;
+				return i;
+			}
+		}
+	}
+	for(int i=0; i<lines.size(); i++)	//have to take what's left
+	{
+		if(!lines.at(i))
+		{
+			kDebug() << "AI: Drawing line at index: " << i << endl;
+			return i;
+		}
+	}
 }
 
 int aiController::countBorderLines(int squareIndex)
@@ -46,28 +84,35 @@ int aiController::countBorderLines(int squareIndex)
 		count++;
 	if(lines.at(lineList.at(3)) == true)
 		count++;
-	
+	kDebug() << "AI: Square " << squareIndex << " is bordered by " << count << " lines" << endl;
 	return count;
 }
 
 QVector<int> aiController::squaresFromLine(int lineIndex)
 {
+	//kDebug() << "Line: " << lineIndex << endl;
 	QVector<int> squareList;
 	if (lineDirection(lineIndex) == KS::HORIZONTAL)
 	{
 		squareList.append(lineIndex - ( (width+1) * (lineIndex/((width*2)+1)) ));
 		squareList.append(squareList.at(0) - width);
-		if(squareList.at(0) < 0)
-			squareList.remove(0);
-		if(squareList.at(1) >= (width*height))
+		if(squareList.at(1) < 0)
 			squareList.remove(1);
+		if(squareList.at(0) >= (width*height))
+			squareList.remove(0);
 			
 	}
-	else if (lineDirection(lineIndex) == KS::VERTICAL)	//TODO: fix wrap-around
+	else if (lineDirection(lineIndex) == KS::VERTICAL)
 	{
 		squareList.append(lineIndex - ( (lineIndex/((width*2)+1))*width + (lineIndex/((width*2)+1)) + width ));
 		squareList.append(squareList.at(0) - 1);
+		if(lineIndex%((2*width)+1) == width)
+			squareList.remove(1);
+		if(lineIndex%((2*width)+1) == 2*width)
+			squareList.remove(0);
 	}
+	//kDebug() << "Size: " << squareList.size() << endl;
+	//kDebug() << "squares: " << squareList.at(0) << " " << squareList.at(1) << endl;
 	return squareList;
 }
 

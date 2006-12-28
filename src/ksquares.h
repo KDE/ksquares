@@ -18,7 +18,6 @@
 
 #include "gameboardview.h"
 #include "ksquaresgame.h"
-//#include "ui_prefs_base.h"
 #include "ui_prefs_ai.h"
 #include "ui_prefs_display.h"
 

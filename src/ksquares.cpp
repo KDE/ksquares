@@ -7,10 +7,13 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
+//header
 #include "ksquares.h"
 
+//qt
 #include <QStandardItemModel>
 
+//kde
 #include <kapplication.h>
 #include <kconfigdialog.h>
 #include <kstatusbar.h>
@@ -18,10 +21,14 @@
 #include <kstandardgameaction.h>
 #include <kdebug.h>
 
+//generated
 #include "settings.h"
-#include "aicontroller.h"
 
+//classes
+#include "aicontroller.h"
 #include "gameboardscene.h"
+
+//ui
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
@@ -107,6 +114,8 @@ void KSquares::gameNew()
 			case 2:
 				playerList.append(KSquaresPlayer(dialog.playerOneName->text(), true));
 				break;
+			default:
+				break;
 		}
 		switch(dialog.playerTwoHuman->checkState())
 		{
@@ -115,6 +124,8 @@ void KSquares::gameNew()
 				break;
 			case 2:
 				playerList.append(KSquaresPlayer(dialog.playerTwoName->text(), true));
+				break;
+			default:
 				break;
 		}
 		

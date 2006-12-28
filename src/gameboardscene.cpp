@@ -15,7 +15,6 @@
 
 #include "settings.h"
 #include "gameboardscene.h"
-//#include "lineitem.h"
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2*newWidth*newHeight + newWidth + newHeight), false)
 {
@@ -63,8 +62,8 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 		qreal pointTwoY = pointPair.at(1)->scenePos().y()/spacing;
 		
 		//this int conversion could go bad but SHOULD be safe
-		int refX;	// these two will be the grid-coord of the
-		int refY;	// to and left most point of the two
+		qreal refX;	// these two will be the grid-coord of the
+		qreal refY;	// to and left most point of the two
 		
 		enum{HORZONTAL, VERTICAL} dir;
 		if (pointOneX == pointTwoX)
@@ -112,8 +111,8 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 		qreal pointTwoY = pointPair.at(1)->scenePos().y()/spacing;
 		
 		//this int conversion could go bad but SHOULD be safe
-		int refX;	// these two will be the grid-coord of the
-		int refY;	// to and left most point of the two
+		qreal refX;	// these two will be the grid-coord of the
+		qreal refY;	// to and left most point of the two
 		
 		enum{HORZONTAL, VERTICAL} dir;
 		if (pointOneX == pointTwoX)

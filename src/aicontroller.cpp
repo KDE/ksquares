@@ -21,8 +21,7 @@ aiController::aiController(int newPlayerId, QVector<bool> newLines, QVector<int>
 
 int aiController::drawLine()
 {
-	//kDebug() << "int aiController::drawLine()" << endl;
-	
+	QVector<int> choiceList;
 	for(int i=0; i<lines.size(); i++)	//trying to get points. looking for squares with 3 lines
 	{
 		if(!lines.at(i))
@@ -33,12 +32,22 @@ int aiController::drawLine()
 				
 				if(countBorderLines(adjacentSquares.at(j)) == 3)	//if 3 lines, draw there to get points!
 				{
-					kDebug() << "AI: Drawing line at index: " << i << endl;
-					return i;
+					choiceList.append(i);
+					//kDebug() << "AI: 1. Adding " << i << " to choices" << endl;
 				}
 			}
 		}
 	}
+	if(choiceList.size() != 0)
+	{
+		srand( (unsigned)time( NULL ) );
+		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
+		int randChoice = (short)(randomFloat)/1;
+		kDebug() << "AI: 1. Drawing line at index: " << choiceList.at(randChoice) << endl;
+		return choiceList.at(randChoice);
+	}
+	
+	choiceList.resize(0);
 	for(int i=0; i<lines.size(); i++)	//finding totally safe moves. avoiding squares with 2 lines
 	{
 		if(!lines.at(i))
@@ -55,18 +64,36 @@ int aiController::drawLine()
 			}
 			if(badCount == 0)
 			{
-				kDebug() << "AI: Drawing line at index: " << i << endl;
-				return i;
+				choiceList.append(i);
+				//kDebug() << "AI: 2. Adding " << i << " to choices" << endl;
 			}
 		}
 	}
+	if(choiceList.size() != 0)
+	{
+		srand( (unsigned)time( NULL ) );
+		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
+		int randChoice = (short)(randomFloat)/1;
+		kDebug() << "AI: 2. Drawing line at index: " << choiceList.at(randChoice) << endl;
+		return choiceList.at(randChoice);
+	}
+	
+	choiceList.resize(0);
 	for(int i=0; i<lines.size(); i++)	//have to take what's left
 	{
 		if(!lines.at(i))
 		{
-			kDebug() << "AI: Drawing line at index: " << i << endl;
-			return i;
+			choiceList.append(i);
+			//kDebug() << "AI: 3. Adding " << i << " to choices" << endl;
 		}
+	}
+	if(choiceList.size() != 0)
+	{
+		srand( (unsigned)time( NULL ) );
+		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
+		int randChoice = (short)(randomFloat)/1;
+		kDebug() << "AI: 3. Drawing line at index: " << choiceList.at(randChoice) << endl;
+		return choiceList.at(randChoice);
 	}
 }
 
@@ -84,7 +111,7 @@ int aiController::countBorderLines(int squareIndex)
 		count++;
 	if(lines.at(lineList.at(3)) == true)
 		count++;
-	kDebug() << "AI: Square " << squareIndex << " is bordered by " << count << " lines" << endl;
+	//kDebug() << "AI: Square " << squareIndex << " is bordered by " << count << " lines" << endl;
 	return count;
 }
 

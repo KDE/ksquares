@@ -10,9 +10,8 @@
 #include "settings.h"
 #include "gameboardview.h"
 
-GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)
+GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent), gameScene(0)
 {
-	gameScene = 0;
 }
 
 void GameBoardView::createBoard(int height, int width)
@@ -26,6 +25,7 @@ void GameBoardView::createBoard(int height, int width)
 		return;
 	gameScene = new GameBoardScene(height, width, this);
 	setScene(gameScene);
+	setEnabled(true);
 	setBoardSize();
 }
 

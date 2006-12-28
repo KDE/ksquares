@@ -38,6 +38,8 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
 	sGame = new KSquaresGame();
 	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
 	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
+	connect(sGame, SIGNAL(gameOverSig(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+	
 	setCentralWidget(m_view);
 	setupActions();
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
@@ -133,17 +135,15 @@ void KSquares::gameNew()
 		
 		//create physical board
 		m_view->createBoard(dialog.spinWidth->value(), dialog.spinHeight->value());
+		//m_view->setEnabled(true);
 		
 		//start game etc.
 		sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
 		sGame->startGame();
 		
-		// From here on out, the game is 'controlled' by GameBoardScene and the clicks therein
-		//cout << "Connecting stuff" << endl;	
-		connect(m_view->scene(), SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
 		connect(m_view->scene(), SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
+		connect(m_view->scene(), SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
 		connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_view->scene(), SLOT(setSquareOwner(int,int)));
-		connect(sGame, SIGNAL(gameOverSig(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	}
 }
 
@@ -195,19 +195,15 @@ void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	{
 		//kDebug() << "Humans's Turn" << endl;
 		//Let the human player interact with the board through the GameBoardView
-		if(!m_view->isEnabled())
-			m_view->setEnabled(true);
+		m_view->setEnabled(true);
 	}
 	else	//AI
 	{
 		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
-		if(m_view->isEnabled())
-			m_view->setEnabled(false);
+		m_view->setEnabled(false);
 		
 		aiController ai(sGame->currentPlayerId(), m_view->scene()->lines(), m_view->scene()->squareOwners(), m_view->scene()->boardWidth(), m_view->scene()->boardHeight());
-		/*ai.setLines(m_view->scene()->lines());
-		ai.setSquareOwners(m_view->scene()->squareOwners());*/
 		m_view->scene()->addLineToIndex(ai.drawLine());
 	}
 }

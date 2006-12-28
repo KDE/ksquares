@@ -18,7 +18,7 @@
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2*newWidth*newHeight + newWidth + newHeight), false)
 {
-	//setObjectName("GameBoardScene");
+	//kDebug() << "GameBoardScene::GameBoardScene()" << endl;
 	
 	spacing = 40;
 	for(int iWidth = 0; iWidth <= width; iWidth++)
@@ -44,11 +44,15 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	indicatorLine = new QGraphicsLineItem(spacing, spacing, spacing, spacing);
 	addItem(indicatorLine);
 	
-	//lineDrawn.resize(2*width*height + width + height);	//now done in constructor
 	squareOwnerTable.fill(-1, (width*height));
 	
 	QGraphicsEllipseItem tempItem;
 	QGraphicsEllipseItemType = tempItem.type();
+}
+
+GameBoardScene::~GameBoardScene()
+{
+	//kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
 }
 
 bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)

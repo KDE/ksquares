@@ -19,6 +19,7 @@ class GameBoardScene : public QGraphicsScene
 	
 	public:
 		GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
+		~GameBoardScene();
 		QSize sizeHint();
 		QVector<int> board() const {return squareOwnerTable;}
 		QVector<int> squareOwners() const {return squareOwnerTable;}

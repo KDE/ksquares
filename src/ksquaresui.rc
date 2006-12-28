@@ -1,8 +1,8 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
 <kpartgui name="KSquares" version="1">
-<ToolBar noMerge="1" name="mainToolBar" >
-	<text>Main Toolbar</text>
-	<Action name="file_new" />
-	<Action name="file_quit" />
- </ToolBar>
+	<ToolBar noMerge="1" name="mainToolBar" >
+		<text>Main Toolbar</text>
+		<Action name="game_new" />
+		<Action name="game_quit" />
+	</ToolBar>
 </kpartgui>

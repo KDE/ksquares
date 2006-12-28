@@ -55,10 +55,10 @@ KSquares::~KSquares()
 
 void KSquares::setupActions()
 {	
-	//KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	//KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
-	KStandardAction::openNew(this, SLOT(gameNew()), actionCollection());
-	KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
+	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
+	//KStandardAction::openNew(this, SLOT(gameNew()), actionCollection());
+	//KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	
 	// custom menu and menu item - the slot is in the class KSquaresView

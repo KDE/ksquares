@@ -23,7 +23,8 @@
 #include <kdebug.h>
 #include <KDE/KLocale>
 #include <KDE/KCursor>
-#include <khighscore.h>
+/*#include <khighscore.h>
+#include <kexthighscore.h>*/
 #include <kstandardgameaction.h>
 
 //generated
@@ -61,8 +62,15 @@ void KSquares::setupActions()
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+	
+	/*KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
+	KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());*/
+	
 	setupGUI();
 }
+
+/*void KSquares::configureHighscores() {KExtHighscore::configure(this);}
+void KSquares::showHighscores() {KExtHighscore::show(this);}*/
 
 void KSquares::gameNew()
 {
@@ -179,15 +187,17 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 		scoreTableModel->setItem(i, 2, new QStandardItem(temp));
 	}
 	
-	if(playerList.at(0).isHuman())
-	{
-		//display a "<name> won! box and add to high scores"
-	}
-	
 	scoresDialog.scoreTable->setModel(scoreTableModel);
 	//scoresDialog.scoreTable->adjustSize();
 	
 	scoresDialog.exec();
+	
+	if(playerList.at(0).isHuman())
+	{
+		/*KExtHighscore::Score score(KExtHighscore::Won);
+		score.setScore(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size())));
+		KExtHighscore::submitScore(score, this);*/
+	}
 }
 
 void KSquares::optionsPreferences()

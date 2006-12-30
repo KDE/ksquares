@@ -21,9 +21,9 @@ class GameBoardScene : public QGraphicsScene
 		GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
 		~GameBoardScene();
 		QSize sizeHint();
-		QVector<int> board() const {return squareOwnerTable;}
-		QVector<int> squareOwners() const {return squareOwnerTable;}
-		QVector<bool> lines() const {return lineDrawn;}
+		QList<int> board() const {return squareOwnerTable;}
+		QList<int> squareOwners() const {return squareOwnerTable;}
+		QList<bool> lines() const {return lineDrawn;}
 		bool addLineToIndex(int index);
 		int boardWidth() const {return width;}
 		int boardHeight() const {return height;}
@@ -37,7 +37,7 @@ class GameBoardScene : public QGraphicsScene
 		
 		void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent);
-		void mouseDoubleClickEvent (QGraphicsSceneMouseEvent* mouseEvent);
+		//void mouseDoubleClickEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		int width;
 		int height;
@@ -53,11 +53,11 @@ class GameBoardScene : public QGraphicsScene
 		
 		QGraphicsLineItem* indicatorLine;
 		
-		QVector<int> squareOwnerTable;	// Along top row, then 2nd row et cetera.
+		QList<int> squareOwnerTable;	// Along top row, then 2nd row et cetera.
 		
 		// In this order: top row of horizontal lines, first row of vertical lines, 2nd row of horizontal lines etc...
 		// Size: 2*width*height + width + height
-		QVector<bool> lineDrawn;
+		QList<bool> lineDrawn;
 		
 		int QGraphicsEllipseItemType;
 		

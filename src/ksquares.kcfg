@@ -40,6 +40,11 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 			<whatsthis>Maximise the board so it fills the whole screen</whatsthis>
 			<default>0</default>
 		</entry>
+		<entry name="DrawLinePlayerColor" type="Bool">
+			<label>Draw the lines in the player's color</label>
+			<whatsthis>Draw the lines in the player's color</whatsthis>
+			<default>0</default>
+		</entry>
 		<entry name="LineColor" type="Color">
 			<label>Line Color</label>
 			<whatsthis></whatsthis>

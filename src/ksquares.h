@@ -31,8 +31,12 @@ class KSquares : public KMainWindow
 		KSquares();
 		virtual ~KSquares();
 	
-	private slots:
+	public slots:
+		/*void  showHighscores();
+		void  configureHighscores();*/
 		void gameNew();
+	
+	private slots:
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board
@@ -46,8 +50,8 @@ class KSquares : public KMainWindow
 		GameBoardScene *m_scene;
 		KSquaresGame* sGame;
 		
-		KToggleAction *m_toolbarAction;
-		KToggleAction *m_statusbarAction;
+		//KToggleAction *m_toolbarAction;
+		//KToggleAction *m_statusbarAction;
 };
 
 #endif // KSQUARES_H

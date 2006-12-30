@@ -16,9 +16,18 @@
 #include "settings.h"
 #include "gameboardscene.h"
 
-GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), lineDrawn((2*newWidth*newHeight + newWidth + newHeight), false)
+GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight)
 {
 	kDebug() << "GameBoardScene::GameBoardScene()" << endl;
+	
+	for(int i = 0; i < (2*width*height + width + height); i++)
+	{
+		lineDrawn.append(false);
+	}
+	for(int i = 0; i < (width*height); i++)
+	{
+		squareOwnerTable.append(-1);
+	}
 	
 	spacing = 40;
 	for(int iWidth = 0; iWidth <= width; iWidth++)
@@ -43,8 +52,6 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	
 	indicatorLine = new QGraphicsLineItem(spacing, spacing, spacing, spacing);
 	addItem(indicatorLine);
-	
-	squareOwnerTable.fill(-1, (width*height));
 	
 	QGraphicsEllipseItem tempItem;
 	QGraphicsEllipseItemType = tempItem.type();
@@ -120,9 +127,16 @@ bool GameBoardScene::addLineToIndex(int index)
 		lineDrawn[index] = true;
 		
 		QGraphicsLineItem* line = lineFromIndex(index);
-		line->setPen(QPen(QBrush(Settings::lineColor()), 2.5));	//draw new line
+		if(Settings::drawLinePlayerColor() == true)
+		{
+			line->setPen(QPen(QBrush(Settings::lineColor()), 2.5));	//this needs to change!
+		}
+		else
+		{
+			line->setPen(QPen(QBrush(Settings::lineColor()), 2.5));
+		}
 		//kDebug() << "addItem(line);" << endl;
-		addItem(line);
+		addItem(line);	//draw new line
 		indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
 		update(sceneRect());
 		
@@ -179,7 +193,7 @@ void GameBoardScene::checkForNewSquares()
 			//cout << index1 << ", " << index2 << ", " << index3 << ", " << index4 << " - " << lineDrawn.size() << endl;
 			if (lineDrawn.at(index1) and lineDrawn.at(index2) and lineDrawn.at(index3) and lineDrawn.at(index4))
 			{
-				//kdDebug() << "Square " << i << " completed." << endl;
+				kdDebug() << "Square " << i << " completed." << endl;
 				emit squareComplete(i);
 			}
 		}
@@ -191,7 +205,7 @@ void GameBoardScene::setSquareOwner(int squareIndex, int owner)
 {
 	//kDebug() << "squareOwnerTable.size(): " << squareOwnerTable.size() << endl;
 	//kDebug() << "squareIndex: " << squareIndex << endl;
-	squareOwnerTable[squareIndex] = owner;	//TODO out of bounds crash (squareIndex=4) FIXED I THINK
+	squareOwnerTable[squareIndex] = owner;
 	drawSquare(squareIndex);
 }
 
@@ -222,20 +236,39 @@ void GameBoardScene::drawSquare(int index)
 	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
 
+QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const
+{
+	QList<QGraphicsItem*> itemList = items();
+	QList<QGraphicsEllipseItem*> connectList;
+	for (int i = 0; i < itemList.size(); ++i) 
+	{
+		if (itemList.at(i)->type() == QGraphicsEllipseItemType)
+		{
+			//cout << "itemList.at(i)->scenePos(): " << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().x() << ", " << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().y() << endl;
+			QPointF dist(pos - itemList.at(i)->scenePos());
+			qreal distMod = sqrt(dist.x()*dist.x() + dist.y()*dist.y());
+			//if (distMod < (spacing*0.7071))	//there will only ever be either 1 or 2 items that fulfil this [0.7071 ~ 2^(-0.5)]
+			if (distMod < spacing-5)
+			{
+				connectList << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i));
+			}
+		}
+	}
+	return connectList;
+}
+
 QSize GameBoardScene::sizeHint()
 {
 	return QSize(width*spacing, height*spacing);
 }
 
-void GameBoardScene::mouseDoubleClickEvent (QGraphicsSceneMouseEvent* mouseEvent)
+/*void GameBoardScene::mouseDoubleClickEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
-	//cout << "GameBoardScene::mouseDoubleClickEvent" << endl;
 	QGraphicsScene::mouseDoubleClickEvent(mouseEvent);
-}
+}*/
 
 void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
-	//cout << "GameBoardScene::mousePressEvent" << endl;
 	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()
 	QGraphicsScene::mousePressEvent(mouseEvent);
 }
@@ -283,27 +316,6 @@ void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	}
 	
 	QGraphicsScene::mouseMoveEvent(mouseEvent);
-}
-
-QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const
-{
-	QList<QGraphicsItem*> itemList = items();
-	QList<QGraphicsEllipseItem*> connectList;
-	for (int i = 0; i < itemList.size(); ++i) 
-	{
-		if (itemList.at(i)->type() == QGraphicsEllipseItemType)
-		{
-			//cout << "itemList.at(i)->scenePos(): " << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().x() << ", " << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().y() << endl;
-			QPointF dist(pos - itemList.at(i)->scenePos());
-			qreal distMod = sqrt(dist.x()*dist.x() + dist.y()*dist.y());
-			//if (distMod < (spacing*0.7071))	//there will only ever be either 1 or 2 items that fulfil this [0.7071 ~ 2^(-0.5)]
-			if (distMod < spacing-5)
-			{
-				connectList << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i));
-			}
-		}
-	}
-	return connectList;
 }
 
 #include "gameboardscene.moc"

@@ -59,7 +59,7 @@ int KSquaresGame::nextPlayer()
 
 void KSquaresGame::playerSquareComplete(int index)
 {
-	//kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square" << endl;
+	kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square" << endl;
 	anotherGo = true;
 	emit setSquareOwnerSig(index, currentPlayerId());
 	//points[currentPlayer()-1]++;

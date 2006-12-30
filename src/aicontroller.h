@@ -30,7 +30,7 @@ namespace KS {enum Direction {HORIZONTAL, VERTICAL};}
 class aiController
 {
 	public:
-		aiController(int newPlayerId, QVector<bool> newLines, QVector<int> newSquareOwners, int newWidth, int newHeight);
+		aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight);
 		/**
 		 * Choses where to draw the line
 		 * Currently only choses randomly :S
@@ -51,13 +51,13 @@ class aiController
 		 *
 		 * @return the (one or two) squares abutting a line
 		 */
-		QVector<int> squaresFromLine(int lineIndex);
+		QList<int> squaresFromLine(int lineIndex);
 		/**
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
 		 *
 		 * @return the indices of the four lines surrounding the square
 		 */
-		QVector<int> linesFromSquare(int squareIndex);
+		QList<int> linesFromSquare(int squareIndex);
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *
@@ -65,8 +65,8 @@ class aiController
 		 */
 		KS::Direction lineDirection(int lineIndex);
 		
-		QVector<int> squareOwners;
-		QVector<bool> lines;
+		QList<int> squareOwners;
+		QList<bool> lines;
 		int playerId;
 		int width;
 		int height;

@@ -12,6 +12,8 @@
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
+/*#include <khighscore.h>
+#include <kexthighscore.h>*/
 
 #include <kdebug.h>
 
@@ -33,9 +35,13 @@ int main(int argc, char **argv)
 	about.addAuthor( "Matt Williams", 0, "matt@milliams.com" );
 	KCmdLineArgs::init(argc, argv, &about);
 	KCmdLineArgs::addCmdLineOptions(options);
+	
 	KApplication app;
-
-	KSquares *widget = new KSquares;
+	
+	/*KHighscore::init("ksquares");
+	KExtHighscore::Manager highscoresManager;*/
+	
+	KSquares *mainWindow = new KSquares;
 	
 	// see if we are starting with session management
 	if (app.isSessionRestored())
@@ -48,20 +54,22 @@ int main(int argc, char **argv)
 		KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 		if (args->count() == 0)
 		{
-		//ksquares *widget = new ksquares;
-		widget->show();
+			//ksquares *widget = new ksquares;
+			mainWindow->show();
 		}
 		else
 		{
-		int i = 0;
-		for (; i < args->count(); i++)
-		{
-			//ksquares *widget = new ksquares;
-			widget->show();
-		}
+			int i = 0;
+			for (; i < args->count(); i++)
+			{
+				//ksquares *widget = new ksquares;
+				mainWindow->show();
+			}
 		}
 		args->clear();
 	}
+	
+	mainWindow->gameNew();
 	
 	return app.exec();
 }

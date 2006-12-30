@@ -20,7 +20,6 @@ class GameBoardView : public QGraphicsView
 	
 	public:
 		GameBoardView(QWidget *parent = 0);
-		//GameBoardScene* ksScene() {return qobject_cast<GameBoardScene*>(QGraphicsView::scene());}
 		QSize sizeHint() {return qobject_cast<GameBoardScene*>(scene())->sizeHint();}
 	public slots:
 		void setBoardSize();

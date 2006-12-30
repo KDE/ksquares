@@ -12,7 +12,7 @@
 #include <ctime>
 #include <kdebug.h>
 
-aiController::aiController(int newPlayerId, QVector<bool> newLines, QVector<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
+aiController::aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
 {
 	kDebug() << "AI: Starting AI..." << endl;
 	
@@ -21,12 +21,12 @@ aiController::aiController(int newPlayerId, QVector<bool> newLines, QVector<int>
 
 int aiController::drawLine()
 {
-	QVector<int> choiceList;
+	QList<int> choiceList;
 	for(int i=0; i<lines.size(); i++)	//trying to get points. looking for squares with 3 lines
 	{
 		if(!lines.at(i))
 		{
-			QVector<int> adjacentSquares = squaresFromLine(i);
+			QList<int> adjacentSquares = squaresFromLine(i);
 			for(int j=0; j<adjacentSquares.size(); j++)
 			{
 				
@@ -47,12 +47,12 @@ int aiController::drawLine()
 		return choiceList.at(randChoice);
 	}
 	
-	choiceList.resize(0);
+	choiceList.clear();
 	for(int i=0; i<lines.size(); i++)	//finding totally safe moves. avoiding squares with 2 lines
 	{
 		if(!lines.at(i))
 		{
-			QVector<int> adjacentSquares = squaresFromLine(i);
+			QList<int> adjacentSquares = squaresFromLine(i);
 			int badCount = 0;
 			for(int j=0; j<adjacentSquares.size(); j++)
 			{
@@ -78,7 +78,7 @@ int aiController::drawLine()
 		return choiceList.at(randChoice);
 	}
 	
-	choiceList.resize(0);
+	choiceList.clear();
 	for(int i=0; i<lines.size(); i++)	//have to take what's left
 	{
 		if(!lines.at(i))
@@ -101,7 +101,7 @@ int aiController::countBorderLines(int squareIndex)
 {
 	int count = 0;
 	
-	QVector<int> lineList = linesFromSquare(squareIndex);
+	QList<int> lineList = linesFromSquare(squareIndex);
 	
 	if(lines.at(lineList.at(0)) == true)
 		count++;
@@ -115,18 +115,18 @@ int aiController::countBorderLines(int squareIndex)
 	return count;
 }
 
-QVector<int> aiController::squaresFromLine(int lineIndex)
+QList<int> aiController::squaresFromLine(int lineIndex)
 {
 	//kDebug() << "Line: " << lineIndex << endl;
-	QVector<int> squareList;
+	QList<int> squareList;
 	if (lineDirection(lineIndex) == KS::HORIZONTAL)
 	{
 		squareList.append(lineIndex - ( (width+1) * (lineIndex/((width*2)+1)) ));
 		squareList.append(squareList.at(0) - width);
 		if(squareList.at(1) < 0)
-			squareList.remove(1);
+			squareList.removeAt(1);
 		if(squareList.at(0) >= (width*height))
-			squareList.remove(0);
+			squareList.removeAt(0);
 			
 	}
 	else if (lineDirection(lineIndex) == KS::VERTICAL)
@@ -134,18 +134,18 @@ QVector<int> aiController::squaresFromLine(int lineIndex)
 		squareList.append(lineIndex - ( (lineIndex/((width*2)+1))*width + (lineIndex/((width*2)+1)) + width ));
 		squareList.append(squareList.at(0) - 1);
 		if(lineIndex%((2*width)+1) == width)
-			squareList.remove(1);
+			squareList.removeAt(1);
 		if(lineIndex%((2*width)+1) == 2*width)
-			squareList.remove(0);
+			squareList.removeAt(0);
 	}
 	//kDebug() << "Size: " << squareList.size() << endl;
 	//kDebug() << "squares: " << squareList.at(0) << " " << squareList.at(1) << endl;
 	return squareList;
 }
 
-QVector<int> aiController::linesFromSquare(int squareIndex)
+QList<int> aiController::linesFromSquare(int squareIndex)
 {
-	QVector<int> lineList;
+	QList<int> lineList;
 	int index1 = (squareIndex/width) * ((2*width) + 1) + (squareIndex%width);
 	int index2 = index1 + width;
 	int index3 = index2 + 1;

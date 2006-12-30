@@ -168,5 +168,3 @@ KS::Direction aiController::lineDirection(int lineIndex)
 	
 	return dir;
 }
-
-#include "aicontroller.moc"

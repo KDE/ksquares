@@ -47,6 +47,8 @@ class GameBoardScene : public QGraphicsScene
 		bool addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);	//returns true if line is new and was added
 		void checkForNewSquares();
 		
+		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair);	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
+		
 		Qt::MouseButtons buttonPress;
 		
 		QGraphicsLineItem* indicatorLine;

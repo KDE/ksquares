@@ -10,35 +10,8 @@
 #include "settings.h"
 #include "gameboardview.h"
 
-GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent), gameScene(0)
+GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)
 {
-}
-
-void GameBoardView::createBoard(int height, int width)
-{
-	if (gameScene)
-	{
-		//delete gameScene;
-		gameScene = 0;
-	}
-	if ((height == 1) and (width == 1))
-		return;
-	gameScene = new GameBoardScene(height, width, this);
-	setScene(gameScene);
-	setEnabled(true);
-	setBoardSize();
-}
-
-void GameBoardView::mouseMoveEvent(QMouseEvent* event)
-{
-	//cout << "GameBoardView::mouseMoveEvent" << endl;
-	QGraphicsView::mouseMoveEvent(event);
-}
-
-void GameBoardView::resizeEvent(QResizeEvent* event)
-{
-	QGraphicsView::resizeEvent(event);
-	setBoardSize();
 }
 
 void GameBoardView::setBoardSize()

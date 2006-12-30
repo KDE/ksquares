@@ -14,7 +14,7 @@
 #include <config.h>
 #endif
 
-#include <kmainwindow.h>
+#include <KDE/KMainWindow>
 
 #include "gameboardview.h"
 #include "ksquaresgame.h"
@@ -40,13 +40,12 @@ class KSquares : public KMainWindow
 	private:
 		void setupAccel();
 		void setupActions();
-		//Ui::prefs_base ui_prefs_base;
 		Ui::prefs_ai ui_prefs_ai;
 		Ui::prefs_display ui_prefs_display;
 		GameBoardView *m_view;
+		GameBoardScene *m_scene;
 		KSquaresGame* sGame;
 		
-		//KPrinter   *m_printer;
 		KToggleAction *m_toolbarAction;
 		KToggleAction *m_statusbarAction;
 };

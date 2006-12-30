@@ -12,15 +12,19 @@
 
 //qt
 #include <QStandardItemModel>
+#include <QList>
+#include <QRectF>
 
 //kde
-#include <kapplication.h>
-#include <kconfigdialog.h>
-#include <kstatusbar.h>
-#include <kstandardaction.h>
-#include <kstandardgameaction.h>
+#include <KDE/KApplication>
+#include <KDE/KConfigDialog>
+#include <KDE/KStatusBar>
+#include <KDE/KStandardAction>
 #include <kdebug.h>
-#include <klocale.h>
+#include <KDE/KLocale>
+#include <KDE/KCursor>
+#include <khighscore.h>
+#include <kstandardgameaction.h>
 
 //generated
 #include "settings.h"
@@ -33,10 +37,9 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this))
+KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {	
 	sGame = new KSquaresGame();
-	//connect(m_view, SIGNAL(gameStarted()), sGame, SLOT(startGame()));
 	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
 	connect(sGame, SIGNAL(gameOverSig(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	
@@ -57,13 +60,7 @@ void KSquares::setupActions()
 {	
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
-	//KStandardAction::openNew(this, SLOT(gameNew()), actionCollection());
-	//KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
-	
-	// custom menu and menu item - the slot is in the class KSquaresView
-	//KAction *custom = new KAction(i18n("Swi&tch Colors"), actionCollection(), "switch_action");
-	//custom->setIcon(KIcon("colorize"));
 	setupGUI();
 }
 
@@ -134,16 +131,26 @@ void KSquares::gameNew()
 		}
 		
 		//create physical board
-		m_view->createBoard(dialog.spinWidth->value(), dialog.spinHeight->value());
-		//m_view->setEnabled(true);
+		if (!((dialog.spinWidth->value() == 1) and (dialog.spinHeight->value() == 1)))
+		{
+			GameBoardScene* temp = m_scene;
+			m_scene = new GameBoardScene(dialog.spinWidth->value(), dialog.spinHeight->value());
+			m_scene->update();
+			
+			m_view->setScene(m_scene);
+			delete temp;
+			//m_view->setEnabled(true);
+			
+			m_view->setBoardSize();	//refresh board zooming
+		}
 		
 		//start game etc.
 		sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
 		sGame->startGame();
 		
-		connect(m_view->scene(), SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
-		connect(m_view->scene(), SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
-		connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_view->scene(), SLOT(setSquareOwner(int,int)));
+		connect(m_scene, SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
+		connect(m_scene, SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
+		connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_scene, SLOT(setSquareOwner(int,int)));
 	}
 }
 
@@ -153,10 +160,12 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 	
 	QStandardItemModel* scoreTableModel = new QStandardItemModel();
 	scoreTableModel->setRowCount(playerList.size());
-	scoreTableModel->setColumnCount(2);
+	scoreTableModel->setColumnCount(3);
 	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
 	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Score"));
+	scoreTableModel->setHeaderData(2, Qt::Horizontal, i18n("Score"));
 	
+	qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
 	for(int i = 0; i <  playerList.size(); i++)
 	{
 		scoreTableModel->setItem(i, 0, new QStandardItem(playerList.at(i).name()));
@@ -164,9 +173,19 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 		QString temp;
 		temp.setNum(playerList.at(i).score());
 		scoreTableModel->setItem(i, 1, new QStandardItem(temp));
+		
+		qreal score = qreal(playerList.at(i).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size()));
+		temp.setNum(score);
+		scoreTableModel->setItem(i, 2, new QStandardItem(temp));
+	}
+	
+	if(playerList.at(0).isHuman())
+	{
+		//display a "<name> won! box and add to high scores"
 	}
 	
 	scoresDialog.scoreTable->setModel(scoreTableModel);
+	//scoresDialog.scoreTable->adjustSize();
 	
 	scoresDialog.exec();
 }
@@ -195,16 +214,19 @@ void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	{
 		//kDebug() << "Humans's Turn" << endl;
 		//Let the human player interact with the board through the GameBoardView
-		m_view->setEnabled(true);
+		
+		setCursor(KCursor::arrowCursor());
+		//m_view->setEnabled(true);
 	}
 	else	//AI
 	{
 		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
-		m_view->setEnabled(false);
+		setCursor(KCursor::waitCursor());
+		//m_view->setEnabled(false);
 		
-		aiController ai(sGame->currentPlayerId(), m_view->scene()->lines(), m_view->scene()->squareOwners(), m_view->scene()->boardWidth(), m_view->scene()->boardHeight());
-		m_view->scene()->addLineToIndex(ai.drawLine());
+		aiController ai(sGame->currentPlayerId(), m_scene->lines(), m_scene->squareOwners(), m_scene->boardWidth(), m_scene->boardHeight());
+		m_scene->addLineToIndex(ai.drawLine());
 	}
 }
 

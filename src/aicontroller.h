@@ -10,13 +10,9 @@
 #ifndef AICONTROLLER_H
 #define AICONTROLLER_H
 
-#include <QObject>
 #include <QVector>
 
-namespace KS
-{
-	enum Direction {HORIZONTAL, VERTICAL};
-}
+namespace KS {enum Direction {HORIZONTAL, VERTICAL};}
 
 /**
  * @short AI Controller for KSquares
@@ -31,10 +27,8 @@ namespace KS
  * @author Matt Williams <matt@milliams.com>
  */
 
-class aiController : public QObject
+class aiController
 {
-	Q_OBJECT
-	
 	public:
 		aiController(int newPlayerId, QVector<bool> newLines, QVector<int> newSquareOwners, int newWidth, int newHeight);
 		/**
@@ -44,18 +38,31 @@ class aiController : public QObject
 		 * @return The index of the line from "QVector<bool> lines"
 		 */
 		int drawLine();
-		
-	public slots:
 
 	protected:
 		/**
-		 * @param squareIndex the index of the square (relates to @ref squareOwners ) 
+		 * @param squareIndex the index of the square (relates to @ref squareOwners )
 		 *
-		 * @return The number of lines currently drawn around a specific square
+		 * @return the number of lines currently drawn around a specific square
 		 */
 		int countBorderLines(int squareIndex);
+		/**
+		 * @param lineIndex the index of the line (relates to @ref lines )
+		 *
+		 * @return the (one or two) squares abutting a line
+		 */
 		QVector<int> squaresFromLine(int lineIndex);
+		/**
+		 * @param squareIndex the index of the square (relates to @ref squareOwners )
+		 *
+		 * @return the indices of the four lines surrounding the square
+		 */
 		QVector<int> linesFromSquare(int squareIndex);
+		/**
+		 * @param lineIndex the index of the line (relates to @ref lines )
+		 *
+		 * @return the direction of the line
+		 */
 		KS::Direction lineDirection(int lineIndex);
 		
 		QVector<int> squareOwners;
@@ -63,9 +70,6 @@ class aiController : public QObject
 		int playerId;
 		int width;
 		int height;
-		
-	signals:
-		
 };
 
 #endif // KSQUARES_H

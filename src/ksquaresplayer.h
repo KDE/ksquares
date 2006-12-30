@@ -26,6 +26,8 @@ class KSquaresPlayer
 		void incScore() {playerScore++;}
 		
 		bool isHuman() const {return human;}
+		
+		bool operator<(const KSquaresPlayer& player) const {return score() < player.score();}
 	
 	private:
 		bool human;	//is the player a human?

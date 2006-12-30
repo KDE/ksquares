@@ -50,8 +50,6 @@ class KSquaresGame : public QObject
 		void setSquareOwnerSig(int,int);
 		void takeTurnSig(KSquaresPlayer*);	//emit the new curent player
 		void gameOverSig(QVector<KSquaresPlayer>);
-		void aiStartGo(int);	//int = player ID
-		void aiEndGo(int);
 };
 
 #endif // KSQUARESGAME_H

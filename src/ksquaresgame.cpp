@@ -51,6 +51,7 @@ int KSquaresGame::nextPlayer()
 	anotherGo = false;	//just to reset the variable
 	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
 	kDebug() << endl << "- Moving to next player: " << currentPlayer()->name() << "(" << currentPlayerId() << ")" << endl;
+	kDebug() << "-" << endl;
 	emit takeTurnSig(currentPlayer());
 	
 	return currentPlayerId();
@@ -70,7 +71,8 @@ void KSquaresGame::playerSquareComplete(int index)
 	}
 	//kDebug() << "total points: " << totalPoints << endl;
 	//kDebug() << "width*height: " << width*height << endl;
-	kDebug() << "- - totalPoints: " << totalPoints << " (/" << width*height << ")" << endl;
+	kDebug() << "- - Square Completed" << endl;
+	//kDebug() << "- - totalPoints: " << totalPoints << " (/" << width*height << ")" << endl;
 	if (totalPoints >= width*height)	//if the board is full
 	{
 		kDebug() << "Game Over" << endl;
@@ -82,12 +84,13 @@ void KSquaresGame::playerSquareComplete(int index)
 
 void KSquaresGame::tryEndGo()
 {
-	kDebug() << "- - Line placed, trying to end go" << endl;
+	kDebug() << "- - Trying to end go" << endl;
 	if (anotherGo)
 	{
 		if(gameInProgress)
 		{
 			kDebug() << "- - - Having another go" << endl;
+			kDebug() << "-" << endl;
 			anotherGo = false;
 			emit takeTurnSig(currentPlayer());
 		}

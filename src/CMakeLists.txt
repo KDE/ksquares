@@ -13,7 +13,7 @@ set(ksquares_SRCS
 
 kde4_automoc(${ksquares_SRCS})
 
-kde4_add_ui_files(ksquares_SRCS newgamedialog.ui scoresdialog.ui prefs_base.ui prefs_ai.ui prefs_display.ui)
+kde4_add_ui_files(ksquares_SRCS newgamedialog.ui scoresdialog.ui prefs_ai.ui prefs_display.ui)
 
 kde4_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
 

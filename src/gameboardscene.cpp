@@ -262,11 +262,6 @@ QSize GameBoardScene::sizeHint()
 	return QSize(width*spacing, height*spacing);
 }
 
-/*void GameBoardScene::mouseDoubleClickEvent (QGraphicsSceneMouseEvent* mouseEvent)
-{
-	QGraphicsScene::mouseDoubleClickEvent(mouseEvent);
-}*/
-
 void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()

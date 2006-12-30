@@ -37,7 +37,6 @@ class GameBoardScene : public QGraphicsScene
 		
 		void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent);
-		//void mouseDoubleClickEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		int width;
 		int height;
@@ -53,7 +52,7 @@ class GameBoardScene : public QGraphicsScene
 		
 		QGraphicsLineItem* indicatorLine;
 		
-		QList<int> squareOwnerTable;	// Along top row, then 2nd row et cetera.
+		QList<int> squareOwnerTable;	// Along top row, then 2nd row et cetera. Size = width*height
 		
 		// In this order: top row of horizontal lines, first row of vertical lines, 2nd row of horizontal lines etc...
 		// Size: 2*width*height + width + height

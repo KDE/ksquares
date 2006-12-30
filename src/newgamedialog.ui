@@ -345,8 +345,8 @@ p, li { white-space: pre-wrap; }
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>245</x>
-     <y>398</y>
+     <x>254</x>
+     <y>323</y>
     </hint>
     <hint type="destinationlabel" >
      <x>157</x>
@@ -361,8 +361,8 @@ p, li { white-space: pre-wrap; }
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>313</x>
-     <y>398</y>
+     <x>322</x>
+     <y>323</y>
     </hint>
     <hint type="destinationlabel" >
      <x>286</x>

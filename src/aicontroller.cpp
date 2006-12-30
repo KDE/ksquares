@@ -19,7 +19,7 @@ aiController::aiController(int newPlayerId, QList<bool> newLines, QList<int> new
 	//squaresFromLine(0);
 }
 
-int aiController::drawLine()
+int aiController::chooseLine()
 {
 	QList<int> choiceList;
 	for(int i=0; i<lines.size(); i++)	//trying to get points. looking for squares with 3 lines

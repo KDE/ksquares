@@ -32,12 +32,14 @@ class aiController
 	public:
 		aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight);
 		/**
-		 * Choses where to draw the line
-		 * Currently only choses randomly :S
+		 * Choses where to draw the line:
+		 * Creates a list of all the squares which are surrounded by 3 lines and if the list isn't empty, randomly picks one of them.
+		 * Otherwise, creates a list of all the squares which are surrounded by 1 or 2 lines and if the list isn't empty, randomly chooses one of them.
+		 * Otherwise, randomly chooses a square which is surrounded by three lines.
 		 *
 		 * @return The index of the line from "QVector<bool> lines"
 		 */
-		int drawLine();
+		int chooseLine();
 
 	protected:
 		/**

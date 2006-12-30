@@ -146,8 +146,8 @@ void KSquares::gameNew()
 			m_scene->update();
 			
 			m_view->setScene(m_scene);
+			m_view->setEnabled(true);
 			delete temp;
-			//m_view->setEnabled(true);
 			
 			m_view->setBoardSize();	//refresh board zooming
 		}
@@ -226,17 +226,17 @@ void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//Let the human player interact with the board through the GameBoardView
 		
 		setCursor(KCursor::arrowCursor());
-		//m_view->setEnabled(true);
+		m_view->setEnabled(true);
 	}
 	else	//AI
 	{
 		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
 		setCursor(KCursor::waitCursor());
-		//m_view->setEnabled(false);
+		m_view->setEnabled(false);
 		
 		aiController ai(sGame->currentPlayerId(), m_scene->lines(), m_scene->squareOwners(), m_scene->boardWidth(), m_scene->boardHeight());
-		m_scene->addLineToIndex(ai.drawLine());
+		m_scene->addLineToIndex(ai.chooseLine());
 	}
 }
 

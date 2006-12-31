@@ -12,6 +12,8 @@
 #include <ctime>
 #include <kdebug.h>
 
+#include "settings.h"
+
 aiController::aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
 {
 	kDebug() << "AI: Starting AI..." << endl;
@@ -30,7 +32,7 @@ int aiController::chooseLine()
 			for(int j=0; j<adjacentSquares.size(); j++)
 			{
 				
-				if(countBorderLines(adjacentSquares.at(j)) == 3)	//if 3 lines, draw there to get points!
+				if(countBorderLines(adjacentSquares.at(j), lines) == 3)	//if 3 lines, draw there to get points!
 				{
 					choiceList.append(i);
 					//kDebug() << "AI: 1. Adding " << i << " to choices" << endl;
@@ -57,7 +59,7 @@ int aiController::chooseLine()
 			for(int j=0; j<adjacentSquares.size(); j++)
 			{
 				
-				if(countBorderLines(adjacentSquares.at(j)) == 2)	//don't want to make 3 lines around a square
+				if(countBorderLines(adjacentSquares.at(j), lines) == 2)	//don't want to make 3 lines around a square
 				{
 					badCount++;
 				}
@@ -83,10 +85,31 @@ int aiController::chooseLine()
 	{
 		if(!lines.at(i))
 		{
-			choiceList.append(i);
-			//kDebug() << "AI: 3. Adding " << i << " to choices" << endl;
+			QList<int> adjacentSquares = squaresFromLine(i);
+			for(int j=0; j<adjacentSquares.size(); j++)
+			{
+				
+				if(countBorderLines(adjacentSquares.at(j), lines) == 2)	//if 2 lines (they're all that's left!)
+				{
+					choiceList.append(i);
+					//kDebug() << "AI: 3. Adding " << i << " to choices" << endl;
+				}
+			}
 		}
 	}
+	if(Settings::difficulty() == 1) //Hard(2/3)	//do some damage control :)
+	{
+		QList<int> goodChoiceList = chooseLeastDamaging(choiceList);
+		if(goodChoiceList.size() != 0)
+		{
+			srand( (unsigned)time( NULL ) );
+			float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(goodChoiceList.size()-1);
+			int randChoice = (short)(randomFloat)/1;
+			kDebug() << "AI: 3. Drawing line at index: " << goodChoiceList.at(randChoice) << endl;
+			return goodChoiceList.at(randChoice);
+		}
+	}
+	QList<int> goodcChoiceList = chooseLeastDamaging(choiceList);
 	if(choiceList.size() != 0)
 	{
 		srand( (unsigned)time( NULL ) );
@@ -97,19 +120,63 @@ int aiController::chooseLine()
 	}
 }
 
-int aiController::countBorderLines(int squareIndex)
+QList<int> aiController::chooseLeastDamaging(QList<int> choiceList)
+{
+	//kDebug() << "AI: Checking " << choiceList.size() << " possible moves" << endl;
+	QMap<int,int> linePointDamage;	//this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line
+	for(int i=0; i<choiceList.size(); i++)	//cycle through all the possible moves
+	{
+		QList<int> squaresCopy = squareOwners;	//make temporary local copies of lists
+		QList<bool> linesCopy = lines;		//make temporary local copies of lists
+		linesCopy[choiceList.at(i)] = true;	//we're going to try drawing a line here
+		
+		//now it would be the next player's turn so we're going to count how many squares they would be able to get.
+		int count = 0;	//this is how many points the next player will ge if you draw a line at choiceList.at(i)
+		bool squareFound = false;
+		do
+		{
+			for(int currentSquare=0; currentSquare<squaresCopy.size(); currentSquare++)	//cycle through the grid (by squares):
+			{
+				if(countBorderLines(currentSquare, linesCopy) == 3)	//if we've found a square with three sides drawn:
+				{
+					count++;
+					squareFound = true;	//we found a square so we will look again for the next
+					
+					QList<int> sidesOfSquare = linesFromSquare(currentSquare);
+					for(int sideOfSquare=0; sideOfSquare<=3; sideOfSquare++)	//make the square complete in linesCopy
+					{
+						linesCopy[sidesOfSquare.at(sideOfSquare)] = true;	//draw at this squares
+						
+					}	//now this square is completed by the second player.
+					break;	//since we found a square with 3 sides completed (now = 4), we break the 'for(currentSquare)' loop
+				}
+				else
+				{
+					squareFound = false;	//we couldn't find a square this time round so we'll try the next 'i'
+				}
+			}
+		} while(squareFound == true);	//while we're still finding squares
+		linePointDamage.insertMulti(count, choiceList.at(i));	//insert a pair with Key=count, Value=i
+	}
+	
+	QList<int> bestMoves = linePointDamage.values(linePointDamage.begin().key());	//this is a list of the indices of the lines that are the least damaging. linePointDamage.begin() returns the 1st pair in the QMap, sorted in ascending order by Key (damage of move)
+	return bestMoves;
+}
+
+int aiController::countBorderLines(int squareIndex, QList<bool> linesList)
 {
 	int count = 0;
 	
-	QList<int> lineList = linesFromSquare(squareIndex);
+	QList<int> tempLineList = linesFromSquare(squareIndex);
 	
-	if(lines.at(lineList.at(0)) == true)
+	//TODO: replace this with a QList 'count' type function?
+	if(linesList.at(tempLineList.at(0)) == true)
 		count++;
-	if(lines.at(lineList.at(1)) == true)
+	if(linesList.at(tempLineList.at(1)) == true)
 		count++;
-	if(lines.at(lineList.at(2)) == true)
+	if(linesList.at(tempLineList.at(2)) == true)
 		count++;
-	if(lines.at(lineList.at(3)) == true)
+	if(linesList.at(tempLineList.at(3)) == true)
 		count++;
 	//kDebug() << "AI: Square " << squareIndex << " is bordered by " << count << " lines" << endl;
 	return count;
@@ -145,16 +212,16 @@ QList<int> aiController::squaresFromLine(int lineIndex)
 
 QList<int> aiController::linesFromSquare(int squareIndex)
 {
-	QList<int> lineList;
+	QList<int> tempLineList;
 	int index1 = (squareIndex/width) * ((2*width) + 1) + (squareIndex%width);
 	int index2 = index1 + width;
 	int index3 = index2 + 1;
 	int index4 = index3 + width;
-	lineList.append(index1);
-	lineList.append(index2);
-	lineList.append(index3);
-	lineList.append(index4);
-	return lineList;
+	tempLineList.append(index1);
+	tempLineList.append(index2);
+	tempLineList.append(index3);
+	tempLineList.append(index4);
+	return tempLineList;
 }
 
 KS::Direction aiController::lineDirection(int lineIndex)

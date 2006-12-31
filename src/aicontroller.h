@@ -21,8 +21,6 @@ namespace KS {enum Direction {HORIZONTAL, VERTICAL};}
  * @li The random line placement stage. Where players are just placing lines while trying to not complete the third side of any squares
  * @li Next players will try to only draw the third side of a square if it will only give the opponent the minimum amount of points
  * @li Finally, the more advanced player will, at the end of a large run of squares leave a small area at the end, forcing the opponent to take only that small section, leaving another large area open to him.
- *
- * @todo Write proper AI
  * 
  * @author Matt Williams <matt@milliams.com>
  */
@@ -43,11 +41,17 @@ class aiController
 
 	protected:
 		/**
+		 * @param choiceList list of indices (of lines) which have squares next to them with two lines drawn (relates to @ref lines )
+		 *
+		 * @return list of indices (of lines) which would be the least damaging
+		 */
+		QList<int> chooseLeastDamaging(QList<int> choiceList);
+		/**
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
 		 *
 		 * @return the number of lines currently drawn around a specific square
 		 */
-		int countBorderLines(int squareIndex);
+		int countBorderLines(int squareIndex, QList<bool> linesList);
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *

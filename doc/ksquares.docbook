@@ -37,9 +37,10 @@
       </personname>
       <email>matt@milliams.com</email>
     </author>
+    <!-- TRANS:ROLES_OF_TRANSLATORS -->
   </authorgroup>
 
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
+
 
   <copyright>
     <year>2006</year>
@@ -163,19 +164,18 @@
   <para>
   Program copyright 2006 Matt Williams <email>matt@milliams.com</email>
   </para>
-  <para>
+  <!--<para>
   Contributors:
   <itemizedlist>
     <listitem>
       <para>Konqui the KDE Dragon <email>konqui@kde.org</email></para>
     </listitem>
   </itemizedlist>
-  </para>
+  </para>-->
   
   <para>Documentation Copyright &copy; 2006 Matt Williams <email>matt@milliams.com</email></para>
 
   <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-
   &underFDL;               <!-- FDL: do not remove -->
 
   <!-- Determine which license your application is licensed under,
@@ -211,6 +211,7 @@
   <!-- For a list of updates, you may refer to the application web site
   or the ChangeLog file, or ... -->
   <para>
+  Changelog stuff..
   </para>
 </sect1>
 

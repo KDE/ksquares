@@ -22,28 +22,30 @@ class KSquaresGame : public QObject
 		KSquaresGame();
 		~KSquaresGame();
 		
-		void createGame(uint players, int startWidth, int startHeight);
 		void createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight);
 		
 		int currentPlayerId() const {return i_currentPlayerId;}
 		KSquaresPlayer* currentPlayer() {return &players[currentPlayerId()];}
 		
-		int nextPlayer();	// moves play control to the next player, looping round when necessary 
-		
 	public slots:
-		void startGame();
 		void playerSquareComplete(int index);
 		void tryEndGo();
-		void endGame();
 
 	protected:
+		int nextPlayer();	// moves play control to the next player, looping round when necessary
+		void endGame();
+		
+		// Static throughout each game
 		int numOfPlayers;
-		int i_currentPlayerId;	// from 0 to (n-1); -1 is null player
-		QVector<int> points;
-		bool anotherGo;
 		int width;
 		int height;
+		
+		// Updated as the game progresses
 		QVector<KSquaresPlayer> players;
+		
+		// Probably changes every go
+		int i_currentPlayerId;	// from 0 to (n-1); -1 is null player
+		bool anotherGo;
 		bool gameInProgress;
 		
 	signals:

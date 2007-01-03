@@ -17,8 +17,6 @@
 aiController::aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
 {
 	kDebug() << "AI: Starting AI..." << endl;
-	
-	//squaresFromLine(0);
 }
 
 int aiController::chooseLine()

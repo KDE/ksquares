@@ -150,15 +150,15 @@ void KSquares::gameNew()
 			delete temp;
 			
 			m_view->setBoardSize();	//refresh board zooming
+			
+			//start game etc.
+			sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
+			//sGame->startGame();
+			
+			connect(m_scene, SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
+			connect(m_scene, SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
+			connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_scene, SLOT(setSquareOwner(int,int)));
 		}
-		
-		//start game etc.
-		sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
-		sGame->startGame();
-		
-		connect(m_scene, SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
-		connect(m_scene, SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
-		connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_scene, SLOT(setSquareOwner(int,int)));
 	}
 }
 

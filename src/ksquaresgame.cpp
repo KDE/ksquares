@@ -34,13 +34,7 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 	{
 		players.append(startPlayers[i]);	//???
 	}
-	gameInProgress = false;
-	//points.resize(0);
-	//points.fill(0, players.size());
-}
-
-void KSquaresGame::startGame()
-{
+	
 	kDebug() << "Game Starting" << endl;
 	gameInProgress = true;
 	nextPlayer();

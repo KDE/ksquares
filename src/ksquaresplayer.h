@@ -60,9 +60,7 @@ class KSquaresPlayer
 		 * @return The players current score
 		 */
 		int score() const {return playerScore;}
-		/**
-		 * Increase the players score by 1
-		 */
+		///Increase the players score by 1
 		void incScore() {playerScore++;}
 		
 		/**

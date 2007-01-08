@@ -36,12 +36,14 @@ class KSquares : public KMainWindow
 	Q_OBJECT
 			
 	public:
+		///Constructor
 		KSquares();
 		//virtual ~KSquares();
 	
 	public slots:
 		/*void  showHighscores();
 		void  configureHighscores();*/
+		///Launch the new game dialog and create a new game
 		void gameNew();
 	
 	private slots:
@@ -54,8 +56,11 @@ class KSquares : public KMainWindow
 		void setupActions();
 		Ui::prefs_ai ui_prefs_ai;
 		Ui::prefs_display ui_prefs_display;
+		///The game board view
 		GameBoardView *m_view;
+		///The game scene
 		GameBoardScene *m_scene;
+		///The game controller
 		KSquaresGame* sGame;
 		
 		//KToggleAction *m_toolbarAction;

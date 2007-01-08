@@ -38,14 +38,10 @@ class GameBoardView : public QGraphicsView
 		 */
 		QSize minimumSizeHint() const {if(scene()==0) return QSize(); else return qobject_cast<GameBoardScene*>(scene())->minimumSizeHint();}
 	public slots:
-		/**
-		 * Automatically resizes the board according to the users preferences.
-		 */
+		///Automatically resizes the board according to the users preferences.
 		void setBoardSize();
 	protected:
-		/**
-		 * Subclassed to provide capability to resize board as the user wants.
-		 */
+		///Overloaded to provide capability to resize board as the user wants.
 		void resizeEvent(QResizeEvent* event) {setBoardSize(); QGraphicsView::resizeEvent(event);}
 };
 

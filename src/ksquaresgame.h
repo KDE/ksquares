@@ -34,7 +34,7 @@ class QColor;
  * 
  * - If the player gets another go, @ref takeTurnSig() will be emitted again. If now, play will pass to the next player and @ref takeTurnSig() will be emitted for them.
  * 
- * - If a player completes the scoreboard, @ref gameOver will be emitted with the full list of players to allow you to construct a score board.
+ * - If a player completes the scoreboard, @ref gameOver() will be emitted with the full list of players to allow you to construct a score board.
  * 
  * - All variables will remain in the state they were at the end of the game until @ref createGame() is called again.
  * 
@@ -46,6 +46,7 @@ class KSquaresGame : public QObject
 	Q_OBJECT
 	
 	public:
+		///Constructor
 		KSquaresGame();
 		~KSquaresGame();
 		
@@ -94,37 +95,42 @@ class KSquaresGame : public QObject
 	protected:
 		/**
 		 * Moves play control to the next player, looping round when necessary
+		 * 
+		 * @return the Id of the player who's turn just started
 		 */
 		int nextPlayer();
-		/**
-		 * Sets lots of things to zero, clears lists etc.
-		 */
+		///Sets lots of things to zero, clears lists etc.
 		void resetEverything();
 		
-		/**
-		 * A line was drawn, see if the player gets another go
-		 */
+		///A line was drawn, see if the player gets another go
 		void tryEndGo();
-		/**
-		 * Scans the board to see if any new squares were completed
-		 */
+		///Scans the board to see if any new squares were completed
 		void checkForNewSquares();
 		/**
 		 * A player completed a square. Emits the lineDrawn() signal. Checks to see if the game is over.
+		 *
+		 * @param index the index of the square which was completed
 		 */
 		void playerSquareComplete(int index);
 		
 		// Static throughout each game
+		///Number of players in this game
 		int numOfPlayers;
+		///Width of the game board
 		int width;
+		/// Height of the game board
 		int height;
+		///List of the squares and their owners
 		QList<int> squareOwnerTable;
+		///List of the lines and whether they're drawn
 		QList<bool> lineList;
 		
 		// Updated as the game progresses
+		///List of all the players in the game
 		QVector<KSquaresPlayer> players;
 		
 		// Probably changes every go
+		///Id of the current player
 		int i_currentPlayerId;
 		/// Should the current player have another go
 		bool anotherGo;
@@ -132,21 +138,13 @@ class KSquaresGame : public QObject
 		bool gameInProgress;
 		
 	signals:
-		/**
-		 * A player's turn has started. This allows you to use AI/networking etc.
-		 */
+		///A player's turn has started. This allows you to use AI/networking etc.
 		void takeTurnSig(KSquaresPlayer*);	//emit the new curent player
-		/**
-		 * emitted when the game board is completed. Allows you to construct a scoreboard
-		 */
+		///emitted when the game board is completed. Allows you to construct a scoreboard
 		void gameOver(QVector<KSquaresPlayer>);	//for scoreboard purposes
-		/**
-		 * Emits the index and colour of the line
-		 */
+		///Emits the index and colour of the line
 		void drawLine(int,QColor);	//int == lineList index
-		/**
-		 * Emits the index and colour of the square
-		 */
+		///Emits the index and colour of the square
 		void drawSquare(int,QColor);	//int == squareOwnerTable index
 };
 

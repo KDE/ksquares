@@ -42,7 +42,7 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0
 {	
 	sGame = new KSquaresGame();
 	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
-	connect(sGame, SIGNAL(gameOverSig(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	
 	setCentralWidget(m_view);
 	setupActions();
@@ -51,9 +51,9 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0
 	setAutoSaveSettings();
 }
 
-KSquares::~KSquares()
+/*KSquares::~KSquares()
 {
-}
+}*/
 
 void KSquares::setupActions()
 {	

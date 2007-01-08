@@ -3,6 +3,16 @@
 	\section intro_sec Introduction
 	
 	KSquares is a KDE implementation of the game "squares"
+	
+	\section index_sec Layout of indices
+	
+	In @ref KSquaresGame, @ref GameBoardScene and @ref aiController there is a consistent indexing rule for accesing the tables.
+	
+	For the list of squares and their owners, the indices simply count from left to right along the top row of the board, then along the second row etc.
+	
+	For the list of lines and whether they're drawn, the indices count from left to right along the top row of horizontal lines, then (left to right) along the first row of vertical lines etc.
+	
+	\image html ksquaresindex.png
 */
 
 /*!

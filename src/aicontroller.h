@@ -62,25 +62,25 @@ class aiController
 		 *
 		 * @return the number of lines currently drawn around a specific square
 		 */
-		int countBorderLines(int squareIndex, QList<bool> linesList);
+		int countBorderLines(int squareIndex, QList<bool> linesList) const;
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *
 		 * @return the (one or two) squares abutting a line
 		 */
-		QList<int> squaresFromLine(int lineIndex);
+		QList<int> squaresFromLine(int lineIndex) const;
 		/**
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
 		 *
 		 * @return the indices of the four lines surrounding the square
 		 */
-		QList<int> linesFromSquare(int squareIndex);
+		QList<int> linesFromSquare(int squareIndex) const;
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *
 		 * @return the direction of the line
 		 */
-		KS::Direction lineDirection(int lineIndex);
+		KS::Direction lineDirection(int lineIndex) const;
 		
 		/// List of the owners of each square
 		QList<int> squareOwners;

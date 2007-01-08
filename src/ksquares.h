@@ -37,7 +37,7 @@ class KSquares : public KMainWindow
 			
 	public:
 		KSquares();
-		virtual ~KSquares();
+		//virtual ~KSquares();
 	
 	public slots:
 		/*void  showHighscores();

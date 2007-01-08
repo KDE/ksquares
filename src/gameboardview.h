@@ -27,11 +27,25 @@ class GameBoardView : public QGraphicsView
 	Q_OBJECT
 	
 	public:
-		GameBoardView(QWidget *parent = 0);
-		QSize sizeHint() {return qobject_cast<GameBoardScene*>(scene())->sizeHint();}
+		/**
+		 * Constructor
+		 * 
+		 * @param parent the parent of the widget
+		 */
+		GameBoardView(QWidget* parent = 0);
+		/**
+		 * Asks the scene through ( qobject_cast<GameBoardScene*>(scene()) ) for the smallest size it should be
+		 */
+		QSize minimumSizeHint() const {if(scene()==0) return QSize(); else return qobject_cast<GameBoardScene*>(scene())->minimumSizeHint();}
 	public slots:
+		/**
+		 * Automatically resizes the board according to the users preferences.
+		 */
 		void setBoardSize();
 	protected:
+		/**
+		 * Subclassed to provide capability to resize board as the user wants.
+		 */
 		void resizeEvent(QResizeEvent* event) {setBoardSize(); QGraphicsView::resizeEvent(event);}
 };
 

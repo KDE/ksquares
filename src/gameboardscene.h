@@ -29,11 +29,7 @@ class GameBoardScene : public QGraphicsScene
 	public:
 		GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
 		~GameBoardScene();
-		QSize sizeHint();
-		
-		//QList<bool> lines() const {return lineList;}
-		//int boardWidth() const {return width;}
-		//int boardHeight() const {return height;}
+		const QSize minimumSizeHint() const;	//I'm not sure if this is even used?
 		
 	public slots:
 		void drawLine(int index, QColor colour);
@@ -42,12 +38,12 @@ class GameBoardScene : public QGraphicsScene
 	protected:
 		QList<QGraphicsEllipseItem*> getTwoNearestPoints(QPointF pos) const;
 		
-		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair);
-		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);	//returns true if line is new and was added
+		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const;
+		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);
 		
 		//conversion functions
-		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair);	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
-		QGraphicsLineItem* lineFromIndex(int index);	//all external calls will need to be passed through this to convert to local coords
+		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
+		QGraphicsLineItem* lineFromIndex(int index) const;	//all external calls will need to be passed through this to convert to local coords
 		
 		Qt::MouseButtons buttonPress;	//just a temporary store - needed since buttons() in mouseReleaseEvent() will be zero since there are no buttons currently pressed (they've just been released :S)
 		
@@ -67,7 +63,7 @@ class GameBoardScene : public QGraphicsScene
 		
 	signals:
 		/**
-		 * emitted when a click is encountered that related to an as-yet undrawn line
+		 * Emitted when a click is encountered that relates to an as-yet undrawn line
 		 */
 		void lineDrawn(int);
 };

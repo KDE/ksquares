@@ -161,7 +161,7 @@ QList<int> aiController::chooseLeastDamaging(QList<int> choiceList)
 	return bestMoves;
 }
 
-int aiController::countBorderLines(int squareIndex, QList<bool> linesList)
+int aiController::countBorderLines(int squareIndex, QList<bool> linesList) const
 {
 	int count = 0;
 	
@@ -180,7 +180,7 @@ int aiController::countBorderLines(int squareIndex, QList<bool> linesList)
 	return count;
 }
 
-QList<int> aiController::squaresFromLine(int lineIndex)
+QList<int> aiController::squaresFromLine(int lineIndex) const
 {
 	//kDebug() << "Line: " << lineIndex << endl;
 	QList<int> squareList;
@@ -208,7 +208,7 @@ QList<int> aiController::squaresFromLine(int lineIndex)
 	return squareList;
 }
 
-QList<int> aiController::linesFromSquare(int squareIndex)
+QList<int> aiController::linesFromSquare(int squareIndex) const
 {
 	QList<int> tempLineList;
 	int index1 = (squareIndex/width) * ((2*width) + 1) + (squareIndex%width);
@@ -222,7 +222,7 @@ QList<int> aiController::linesFromSquare(int squareIndex)
 	return tempLineList;
 }
 
-KS::Direction aiController::lineDirection(int lineIndex)
+KS::Direction aiController::lineDirection(int lineIndex) const
 {
 	int index2 = lineIndex % ((2*width) + 1);
 	KS::Direction dir;

@@ -86,7 +86,7 @@ void KSquaresGame::playerSquareComplete(int index)
 		default:
 			kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
 	}
-	emit drawSquare(index, color);	//TODO set square colour accordingly
+	emit drawSquare(index, color);
 	currentPlayer()->incScore();
 	
 	int totalPoints=0;
@@ -99,7 +99,7 @@ void KSquaresGame::playerSquareComplete(int index)
 	{
 		kDebug() << "Game Over" << endl;
 		gameInProgress = false;
-		emit gameOverSig(players);
+		emit gameOver(players);
 	}
 }
 

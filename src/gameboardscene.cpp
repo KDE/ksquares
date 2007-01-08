@@ -75,7 +75,7 @@ void GameBoardScene::drawSquare(int index, QColor colour)
 	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
 
-int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair)
+int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const
 {
 	int index = -1;
 	if (pointPair.size() == 2)	// if it really is a pair
@@ -113,7 +113,7 @@ int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair)
 	return index;
 }
 
-QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
+QGraphicsLineItem* GameBoardScene::lineFromIndex(int index) const
 {
 	int index2 = index % ((2*width) + 1);
 	enum{HORIZONTAL, VERTICAL} dir;
@@ -142,13 +142,13 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
 }
 
-bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
+bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const
 {
 	int index = indexFromPointPair(pointPair);
 	if (index == -1)
 		return true;
 	
-	return lineList.at(index);	//this will be a signal picked up by KSquaresGame
+	return lineList.at(index);
 }
 
 void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
@@ -180,18 +180,18 @@ QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) co
 	}
 	return connectList;
 }
-//DONE
-QSize GameBoardScene::sizeHint()
+
+const QSize GameBoardScene::minimumSizeHint() const
 {
-	return QSize(width*spacing, height*spacing);
+	return QSize((width*spacing)+10, (height*spacing)+10);	// the +10 is to provide padding and to avoid scrollbars
 }
-//DONE
+
 void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()
 	QGraphicsScene::mousePressEvent(mouseEvent);
 }
-//keep
+
 void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	//cout << "GameBoardScene::mouseReleaseEvent" << endl;
@@ -206,7 +206,7 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	
 	QGraphicsScene::mouseReleaseEvent(mouseEvent);
 }
-//DONE
+
 void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	//indicatorLine = 0;

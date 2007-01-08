@@ -22,14 +22,10 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	
 	for(int i = 0; i < (2*width*height + width + height); i++)
 	{
-		lineDrawn.append(false);
-	}
-	for(int i = 0; i < (width*height); i++)
-	{
-		squareOwnerTable.append(-1);
+		lineList.append(false);
 	}
 	
-	spacing = 40;
+	spacing = 40;	//this hard coding doesn't matter since auto-resizing exists :)
 	for(int iWidth = 0; iWidth <= width; iWidth++)
 	{
 		for(int iHeight = 0; iHeight <= height; iHeight++)
@@ -99,56 +95,7 @@ int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair)
 	}
 	return index;
 }
-//keep for internal simplicity
-bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
-{
-	int index = indexFromPointPair(pointPair);
-	if (index == -1)
-		return true;
-	
-	return lineDrawn.at(index);
-}
-//keep
-bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
-{
-	int index = indexFromPointPair(pointPair);
-	if (index == -1)	//not a valid line since no two unique ends
-		return false;
-	
-	return addLineToIndex(index);
-}
-//keep
-bool GameBoardScene::addLineToIndex(int index)
-{
-	//kDebug() << "bool GameBoardScene::addLineToIndex(int index)" << endl;
-	//kDebug() << "Adding line at index " << index << endl;
-	if (lineDrawn[index] == false)	//if there's not a line there yet, do checks
-	{
-		lineDrawn[index] = true;
-		
-		QGraphicsLineItem* line = lineFromIndex(index);
-		if(Settings::drawLinePlayerColor() == true)
-		{
-			line->setPen(QPen(QBrush(Settings::lineColor()), 2.5));	//this needs to change!
-		}
-		else
-		{
-			line->setPen(QPen(QBrush(Settings::lineColor()), 2.5));
-		}
-		//kDebug() << "addItem(line);" << endl;
-		addItem(line);	//draw new line
-		indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
-		update(sceneRect());
-		
-		checkForNewSquares();
-		return true;
-	}
-	else	//else wait for another line to be drawn
-	{
-		return false;
-	}
-}
-//keep
+
 QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 {
 	int index2 = index % ((2*width) + 1);
@@ -177,65 +124,42 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 	}
 	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
 }
-//move
-void GameBoardScene::checkForNewSquares()
-{	
-	//kDebug() << "void GameBoardScene::checkForNewSquares()" << endl;
-	for(int i=0; i < (width*height); i++)	//cycle through every box..
-	{
-		if (squareOwnerTable.at(i) == -1)	//..checking it if there is no current owner
-		{
-			//indices of the lines surrounding the box; Correlates to "QVector<bool> lineDrawn"
-			int index1 = (i/width) * ((2*width) + 1) + (i%width);
-			int index2 = index1 + width;
-			int index3 = index2 + 1;
-			int index4 = index3 + width;
-			//cout << index1 << ", " << index2 << ", " << index3 << ", " << index4 << " - " << lineDrawn.size() << endl;
-			if (lineDrawn.at(index1) and lineDrawn.at(index2) and lineDrawn.at(index3) and lineDrawn.at(index4))
-			{
-				kdDebug() << "Square " << i << " completed." << endl;
-				emit squareComplete(i);
-			}
-		}
-	}
-	emit lineDrawnSig();
-}
-//move I think
-void GameBoardScene::setSquareOwner(int squareIndex, int owner)
+
+bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 {
-	//kDebug() << "squareOwnerTable.size(): " << squareOwnerTable.size() << endl;
-	//kDebug() << "squareIndex: " << squareIndex << endl;
-	squareOwnerTable[squareIndex] = owner;
-	drawSquare(squareIndex);
+	int index = indexFromPointPair(pointPair);
+	if (index == -1)
+		return true;
+	
+	return lineList.at(index);	//this will be a signal picked up by KSquaresGame
 }
-//keep
-void GameBoardScene::drawSquare(int index)
+
+void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 {
-	QBrush brush(Qt::SolidPattern);
-	switch(squareOwnerTable[index])
-	{
-		case -1:
-			brush.setColor(Qt::white);	//owner -1 is not a valid player
-			break;
-		case 0:
-			brush.setColor(Qt::red);	
-			break;
-		case 1:
-			brush.setColor(Qt::blue);
-			break;
-		case 2:
-			brush.setColor(Qt::green);
-			break;
-		case 3:
-			brush.setColor(Qt::yellow);
-			break;
-		default:
-			brush.setColor(Qt::black);	//this probably means there is something wrong (or more than 4 player :S)
-	}
+	int index = indexFromPointPair(pointPair);
+	if (index == -1)	//not a valid line since no two unique ends
+		return;
+	
+	emit lineDrawn(index);	//addLineToIndex(index);
+}
+
+void GameBoardScene::drawLine(int index, QColor colour)
+{
+	QGraphicsLineItem* line = lineFromIndex(index);
+	line->setPen(QPen(QBrush(colour), 2.5));
+	addItem(line);	//draw new line
+	lineList[index] = true;	//keep this table in sync
+	indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
+	update(sceneRect());
+}
+
+void GameBoardScene::drawSquare(int index, QColor colour)
+{
+	QBrush brush(colour, Qt::SolidPattern);
 	
 	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
-//keep
+
 QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const
 {
 	QList<QGraphicsItem*> itemList = items();
@@ -256,12 +180,12 @@ QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) co
 	}
 	return connectList;
 }
-//keep
+//DONE
 QSize GameBoardScene::sizeHint()
 {
 	return QSize(width*spacing, height*spacing);
 }
-//keep
+//DONE
 void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()
@@ -282,7 +206,7 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	
 	QGraphicsScene::mouseReleaseEvent(mouseEvent);
 }
-//keep
+//DONE
 void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	//indicatorLine = 0;

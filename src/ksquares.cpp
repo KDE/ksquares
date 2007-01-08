@@ -49,8 +49,6 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
 	statusBar()->show();
 	setAutoSaveSettings();
-	
-	//gameNew();	//uncomment to start a new game on startup
 }
 
 KSquares::~KSquares()
@@ -153,11 +151,9 @@ void KSquares::gameNew()
 			
 			//start game etc.
 			sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
-			//sGame->startGame();
-			
-			connect(m_scene, SIGNAL(lineDrawnSig()), sGame, SLOT(tryEndGo()));
-			connect(m_scene, SIGNAL(squareComplete(int)), sGame, SLOT(playerSquareComplete(int)));
-			connect(sGame, SIGNAL(setSquareOwnerSig(int,int)), m_scene, SLOT(setSquareOwner(int,int)));
+			connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
+			connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
+			connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
 		}
 	}
 }
@@ -235,8 +231,9 @@ void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		setCursor(KCursor::waitCursor());
 		m_view->setEnabled(false);
 		
-		aiController ai(sGame->currentPlayerId(), m_scene->lines(), m_scene->squareOwners(), m_scene->boardWidth(), m_scene->boardHeight());
-		m_scene->addLineToIndex(ai.chooseLine());
+		aiController ai(sGame->currentPlayerId(), sGame->lines(), sGame->squares(), sGame->boardWidth(), sGame->boardHeight());
+		//m_scene->addLineToIndex(ai.chooseLine());
+		sGame->addLineToIndex(ai.chooseLine());
 	}
 }
 

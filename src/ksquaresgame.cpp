@@ -7,9 +7,12 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
+#include "ksquaresgame.h"
+
 #include <kdebug.h>
 
-#include "ksquaresgame.h"
+//generated
+#include "settings.h"
 
 KSquaresGame::KSquaresGame()
 {
@@ -25,7 +28,7 @@ KSquaresGame::~KSquaresGame()
 
 void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight)
 {
-	endGame();	//reset everything
+	resetEverything();	//reset everything
 	kDebug() << "Creating Game with " << startPlayers.size() << " player(s)" << endl;
 	width = startWidth;
 	height = startHeight;
@@ -36,7 +39,7 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 	}
 	for(int i = 0; i < (2*width*height + width + height); i++)
 	{
-		lineDrawn.append(false);
+		lineList.append(false);
 	}
 	for(int i = 0; i < (width*height); i++)
 	{
@@ -63,24 +66,40 @@ void KSquaresGame::playerSquareComplete(int index)
 {
 	kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square" << endl;
 	anotherGo = true;
-	emit setSquareOwnerSig(index, currentPlayerId());
-	//points[currentPlayer()-1]++;
+	
+	squareOwnerTable[index] = currentPlayerId();	//add square to index
+	QColor color;
+	switch(currentPlayerId())
+	{
+		case 0:
+			color = Qt::red;	
+			break;
+		case 1:
+			color = Qt::blue;
+			break;
+		case 2:
+			color = Qt::green;
+			break;
+		case 3:
+			color = Qt::yellow;
+			break;
+		default:
+			kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
+	}
+	emit drawSquare(index, color);	//TODO set square colour accordingly
 	currentPlayer()->incScore();
+	
 	int totalPoints=0;
 	for (int i=0; i < players.size(); i++)
 	{
 		totalPoints += players.at(i).score();
 	}
-	//kDebug() << "total points: " << totalPoints << endl;
-	//kDebug() << "width*height: " << width*height << endl;
 	kDebug() << "- - Square Completed" << endl;
-	//kDebug() << "- - totalPoints: " << totalPoints << " (/" << width*height << ")" << endl;
 	if (totalPoints >= width*height)	//if the board is full
 	{
 		kDebug() << "Game Over" << endl;
 		gameInProgress = false;
 		emit gameOverSig(players);
-		//endGame();
 	}
 }
 
@@ -104,16 +123,59 @@ void KSquaresGame::tryEndGo()
 	}
 }
 
-void KSquaresGame::endGame()
+void KSquaresGame::resetEverything()
 {
 	kDebug() << "Game Values Resetting" << endl;
 	numOfPlayers = 0;
 	players.resize(0);
+	lineList.clear();
+	squareOwnerTable.clear();
 	width = 0;
 	height = 0;
 	i_currentPlayerId = -1;
 	anotherGo = false;
 	gameInProgress = false;
+}
+
+void KSquaresGame::addLineToIndex(int index)
+{
+	if (lineList[index] == false)	//if there's not a line there yet, do checks
+	{
+		lineList[index] = true;
+		
+		if(Settings::drawLinePlayerColor() == true)
+		{
+			emit drawLine(index, Settings::lineColor());	//this needs to change! Player's custom colour
+		}
+		else
+		{
+			emit drawLine(index, Settings::lineColor());
+		}
+		checkForNewSquares();
+	}
+}
+
+void KSquaresGame::checkForNewSquares()
+{
+	for(int i=0; i < (width*height); i++)	//cycle through every box..
+	{
+		if (squareOwnerTable.at(i) == -1)	//..checking it if there is no current owner
+		{
+			//indices of the lines surrounding the box; Correlates to "QVector<bool> lineList"
+			int index1 = (i/width) * ((2*width) + 1) + (i%width);
+			int index2 = index1 + width;
+			int index3 = index2 + 1;
+			int index4 = index3 + width;
+			//cout << index1 << ", " << index2 << ", " << index3 << ", " << index4 << " - " << lineList.size() << endl;
+			if (lineList.at(index1) and lineList.at(index2) and lineList.at(index3) and lineList.at(index4))
+			{
+				kdDebug() << " - - Square " << i << " completed." << endl;
+				playerSquareComplete(i);
+			}
+		}
+	}
+	//emit lineDrawnSig();
+	tryEndGo();
 }
 
 #include "ksquaresgame.moc"

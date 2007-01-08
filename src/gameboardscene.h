@@ -24,51 +24,44 @@ class GameBoardScene : public QGraphicsScene
 		GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
 		~GameBoardScene();
 		QSize sizeHint();
-		QList<int> squareOwners() const {return squareOwnerTable;}	//should be in game class
-		QList<bool> lines() const {return lineDrawn;}	//should be in game class
-		bool addLineToIndex(int index);	//should be in game class and replaced with an addLineToScene() fn
-		int boardWidth() const {return width;}	//should be in game class
-		int boardHeight() const {return height;}	//should be in game class
+		
+		//getters
+		QList<bool> lines() const {return lineList;}
+		int boardWidth() const {return width;}
+		int boardHeight() const {return height;}
 		
 	public slots:
-		void setSquareOwner(int squareIndex, int owner);
+		void drawLine(int index, QColor colour);
+		void drawSquare(int index, QColor colour);
 		
 	protected:
 		QList<QGraphicsEllipseItem*> getTwoNearestPoints(QPointF pos) const;
 		
+		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair);
+		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);	//returns true if line is new and was added
+		
+		//conversion functions
+		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair);	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
+		QGraphicsLineItem* lineFromIndex(int index);	//all external calls will need to be passed through this to convert to local coords
+		
+		Qt::MouseButtons buttonPress;	//just a temporary store - needed since buttons() in mouseReleaseEvent() will be zero since there are no buttons currently pressed (they've just been released :S)
+		
+		QGraphicsLineItem* indicatorLine;
+		
+		QList<bool> lineList;	//non-canon. Just kept in sync with the KSquaresGame one
+		
+		int QGraphicsEllipseItemType;
+		int width;
+		int height;
+		int spacing;
+		
+		//event handlers
 		void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		
-		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair);
-		bool addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);	//returns true if line is new and was added
-		void checkForNewSquares();
-		
-		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair);	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
-		
-		QGraphicsLineItem* lineFromIndex(int index);
-		
-		Qt::MouseButtons buttonPress;
-		
-		QGraphicsLineItem* indicatorLine;
-		
-		QList<int> squareOwnerTable;	// Along top row, then 2nd row et cetera. Size = width*height
-		
-		// In this order: top row of horizontal lines, first row of vertical lines, 2nd row of horizontal lines etc...
-		// Size: 2*width*height + width + height
-		QList<bool> lineDrawn;
-		
-		int QGraphicsEllipseItemType;	//keep
-		int width;	//move
-		int height;	//move
-		int spacing;	//move
-		
-	protected slots:
-		void drawSquare(int index);
-		
 	signals:
-		void squareComplete(int);	// int is the index associated with 'QVector<int> squareOwnerTable'
-		void lineDrawnSig();
+		void lineDrawn(int);
 };
 
 #endif // GAMEBOARDSCENE_H

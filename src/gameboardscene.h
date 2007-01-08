@@ -58,10 +58,10 @@ class GameBoardScene : public QGraphicsScene
 		// Size: 2*width*height + width + height
 		QList<bool> lineDrawn;
 		
-		int QGraphicsEllipseItemType;
-		int width;
-		int height;
-		int spacing;
+		int QGraphicsEllipseItemType;	//keep
+		int width;	//move
+		int height;	//move
+		int spacing;	//move
 		
 	protected slots:
 		void drawSquare(int index);

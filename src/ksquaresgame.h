@@ -39,6 +39,8 @@ class KSquaresGame : public QObject
 		int numOfPlayers;
 		int width;
 		int height;
+		QList<int> squareOwnerTable;	// Along top row, then 2nd row et cetera. Size = width*height
+		QList<bool> lineDrawn;	// In this order: top row of horizontal lines, first row of vertical lines, 2nd row of horizontal lines etc... Size: 2*width*height + width + height
 		
 		// Updated as the game progresses
 		QVector<KSquaresPlayer> players;

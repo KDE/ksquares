@@ -61,7 +61,7 @@ GameBoardScene::~GameBoardScene()
 {
 	kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
 }
-
+//keep
 int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair)
 {
 	int index = -1;
@@ -99,7 +99,7 @@ int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair)
 	}
 	return index;
 }
-
+//keep for internal simplicity
 bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 {
 	int index = indexFromPointPair(pointPair);
@@ -108,7 +108,7 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair)
 	
 	return lineDrawn.at(index);
 }
-
+//keep
 bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 {
 	int index = indexFromPointPair(pointPair);
@@ -117,7 +117,7 @@ bool GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 	
 	return addLineToIndex(index);
 }
-
+//keep
 bool GameBoardScene::addLineToIndex(int index)
 {
 	//kDebug() << "bool GameBoardScene::addLineToIndex(int index)" << endl;
@@ -148,7 +148,7 @@ bool GameBoardScene::addLineToIndex(int index)
 		return false;
 	}
 }
-
+//keep
 QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 {
 	int index2 = index % ((2*width) + 1);
@@ -177,7 +177,7 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index)
 	}
 	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
 }
-
+//move
 void GameBoardScene::checkForNewSquares()
 {	
 	//kDebug() << "void GameBoardScene::checkForNewSquares()" << endl;
@@ -200,7 +200,7 @@ void GameBoardScene::checkForNewSquares()
 	}
 	emit lineDrawnSig();
 }
-
+//move I think
 void GameBoardScene::setSquareOwner(int squareIndex, int owner)
 {
 	//kDebug() << "squareOwnerTable.size(): " << squareOwnerTable.size() << endl;
@@ -208,7 +208,7 @@ void GameBoardScene::setSquareOwner(int squareIndex, int owner)
 	squareOwnerTable[squareIndex] = owner;
 	drawSquare(squareIndex);
 }
-
+//keep
 void GameBoardScene::drawSquare(int index)
 {
 	QBrush brush(Qt::SolidPattern);
@@ -235,7 +235,7 @@ void GameBoardScene::drawSquare(int index)
 	
 	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
-
+//keep
 QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const
 {
 	QList<QGraphicsItem*> itemList = items();
@@ -256,18 +256,18 @@ QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) co
 	}
 	return connectList;
 }
-
+//keep
 QSize GameBoardScene::sizeHint()
 {
 	return QSize(width*spacing, height*spacing);
 }
-
+//keep
 void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()
 	QGraphicsScene::mousePressEvent(mouseEvent);
 }
-
+//keep
 void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	//cout << "GameBoardScene::mouseReleaseEvent" << endl;
@@ -282,7 +282,7 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	
 	QGraphicsScene::mouseReleaseEvent(mouseEvent);
 }
-
+//keep
 void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	//indicatorLine = 0;

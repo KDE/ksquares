@@ -30,9 +30,17 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 	width = startWidth;
 	height = startHeight;
 	i_currentPlayerId = -1;
-	for(int i=0; i < startPlayers.size(); i++)	//???
+	for(int i=0; i < startPlayers.size(); i++)
 	{
-		players.append(startPlayers[i]);	//???
+		players.append(startPlayers[i]);
+	}
+	for(int i = 0; i < (2*width*height + width + height); i++)
+	{
+		lineDrawn.append(false);
+	}
+	for(int i = 0; i < (width*height); i++)
+	{
+		squareOwnerTable.append(-1);
 	}
 	
 	kDebug() << "Game Starting" << endl;

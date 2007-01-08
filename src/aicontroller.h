@@ -29,6 +29,15 @@ namespace KS {enum Direction {HORIZONTAL, VERTICAL};}
 class aiController
 {
 	public:
+		/**
+		 * Create a new AI controller
+		 *
+		 * @param newPlayerId ID of the player
+		 * @param newLines list of the lines which are drawn
+		 * @param newSquareOwners list of squares and their owners
+		 * @param newWidth height of the current gameboard
+		 * @param newHeight width of the current gameboard
+		 */
 		aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight);
 		/**
 		 * Choses where to draw the line:
@@ -44,7 +53,7 @@ class aiController
 		/**
 		 * @param choiceList list of indices (of lines) which have squares next to them with two lines drawn (relates to @ref lines )
 		 *
-		 * @return list of indices (of lines) which would be the least damaging
+		 * @return list of indices (of lines) which would be the least damaging in the short term
 		 */
 		QList<int> chooseLeastDamaging(QList<int> choiceList);
 		/**
@@ -73,10 +82,15 @@ class aiController
 		 */
 		KS::Direction lineDirection(int lineIndex);
 		
+		/// List of the owners of each square
 		QList<int> squareOwners;
+		/// List of which lines are complete
 		QList<bool> lines;
+		/// The ID of the player this AI belongs to
 		int playerId;
+		/// Width of the game board
 		int width;
+		/// Height of the game board
 		int height;
 };
 

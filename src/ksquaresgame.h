@@ -17,6 +17,14 @@
 
 class QColor;
 
+/**
+ * @short The game controller
+ *
+ * Keeps charge of the game. Everything you'd expect really.
+ * 
+ * @author Matt Williams <matt@milliams.com>
+ */
+
 class KSquaresGame : public QObject
 {
 	Q_OBJECT

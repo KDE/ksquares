@@ -57,7 +57,24 @@ GameBoardScene::~GameBoardScene()
 {
 	kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
 }
-//keep
+
+void GameBoardScene::drawLine(int index, QColor colour)
+{
+	QGraphicsLineItem* line = lineFromIndex(index);
+	line->setPen(QPen(QBrush(colour), 2.5));
+	addItem(line);	//draw new line
+	lineList[index] = true;	//keep this table in sync
+	indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
+	update(sceneRect());
+}
+
+void GameBoardScene::drawSquare(int index, QColor colour)
+{
+	QBrush brush(colour, Qt::SolidPattern);
+	
+	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
+}
+
 int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair)
 {
 	int index = -1;
@@ -141,23 +158,6 @@ void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 		return;
 	
 	emit lineDrawn(index);	//addLineToIndex(index);
-}
-
-void GameBoardScene::drawLine(int index, QColor colour)
-{
-	QGraphicsLineItem* line = lineFromIndex(index);
-	line->setPen(QPen(QBrush(colour), 2.5));
-	addItem(line);	//draw new line
-	lineList[index] = true;	//keep this table in sync
-	indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
-	update(sceneRect());
-}
-
-void GameBoardScene::drawSquare(int index, QColor colour)
-{
-	QBrush brush(colour, Qt::SolidPattern);
-	
-	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
 
 QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const

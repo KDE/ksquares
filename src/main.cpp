@@ -20,7 +20,7 @@
 static const char description[] =
     I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
-static const char version[] = "0.2.0";
+static const char version[] = "0.3";
 
 static KCmdLineOptions options[] =
 {

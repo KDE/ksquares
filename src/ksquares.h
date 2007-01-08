@@ -23,6 +23,14 @@
 
 class KToggleAction;
 
+/**
+ * @short Mainwindow class
+ *
+ * Sets actions, controls the creation of the game class and the GameBoardScene
+ * 
+ * @author Matt Williams <matt@milliams.com>
+ */
+
 class KSquares : public KMainWindow
 {
 	Q_OBJECT

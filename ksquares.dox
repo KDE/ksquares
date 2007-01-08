@@ -1,0 +1,13 @@
+ /*! \mainpage KSquares
+	
+	\section intro_sec Introduction
+	
+	KSquares is a KDE implementation of the game "squares"
+*/
+
+/*!
+	\namespace KS 
+	\brief Namespace for KSquares only stuff
+	
+	Blah
+*/

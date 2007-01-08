@@ -13,8 +13,14 @@
 #include <QGraphicsScene>
 #include <QGraphicsEllipseItem>
 
-//This class' public API should be reduced to simply 'add a line at index i' and 'colour square i <red>'
-//It shouldnt store the game board (except maybe for convenience) as the canon game board should be in the KSquaresGame class
+/**
+ * @short Scene for displaying the game board
+ *
+ * Created anew at the beginning of each game.
+ * Contains QGraphicsLineItems for lines, QGraphicsEllipseItems for the dots and QGraphicsRectItem for when a square is complete.
+ * 
+ * @author Matt Williams <matt@milliams.com>
+ */
 
 class GameBoardScene : public QGraphicsScene
 {
@@ -25,10 +31,9 @@ class GameBoardScene : public QGraphicsScene
 		~GameBoardScene();
 		QSize sizeHint();
 		
-		//getters
-		QList<bool> lines() const {return lineList;}
-		int boardWidth() const {return width;}
-		int boardHeight() const {return height;}
+		//QList<bool> lines() const {return lineList;}
+		//int boardWidth() const {return width;}
+		//int boardHeight() const {return height;}
 		
 	public slots:
 		void drawLine(int index, QColor colour);
@@ -61,6 +66,9 @@ class GameBoardScene : public QGraphicsScene
 		void mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		
 	signals:
+		/**
+		 * emitted when a click is encountered that related to an as-yet undrawn line
+		 */
 		void lineDrawn(int);
 };
 

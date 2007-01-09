@@ -1,4 +1,4 @@
-# Doxyfile 1.5.1-KDevelop
+# Doxyfile 1.5.0
 
 #---------------------------------------------------------------------------
 # Project related configuration options
@@ -131,8 +131,8 @@ FILE_PATTERNS          = *.c \
                          *.xpm \
                          *.dox
 RECURSIVE              = YES
-EXCLUDE                = /home/kde-devel/src/playground/games/ksquares/.svn \
-                         /home/kde-devel/src/playground/games/ksquares/src/.svn
+EXCLUDE                = /home/kde-devel/src/playground/games/ksquares/.svn/ \
+                         /home/kde-devel/src/playground/games/ksquares/src/.svn/
 EXCLUDE_SYMLINKS       = NO
 EXCLUDE_PATTERNS       = 
 EXAMPLE_PATH           = 
@@ -156,7 +156,7 @@ VERBATIM_HEADERS       = YES
 #---------------------------------------------------------------------------
 # configuration options related to the alphabetical class index
 #---------------------------------------------------------------------------
-ALPHABETICAL_INDEX     = YES
+ALPHABETICAL_INDEX     = NO
 COLS_IN_ALPHA_INDEX    = 1
 IGNORE_PREFIX          = 
 #---------------------------------------------------------------------------

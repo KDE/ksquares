@@ -69,7 +69,7 @@ class KSquaresPlayer
 		bool isHuman() const {return human;}
 		
 		/**
-		 * Used in sort algorithm
+		 * Used in sort algorithm. Compares the player's score (not their height or age or anything :D)
 		 */
 		bool operator<(const KSquaresPlayer& player) const {return score() < player.score();}
 	

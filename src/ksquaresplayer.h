@@ -15,7 +15,7 @@
 /**
  * @short Player class for KSquares
  *
- * Class containg All the information about a player.
+ * Class containing All the information about a player.
  * 
  * @author Matt Williams <matt@milliams.com>
  */

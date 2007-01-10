@@ -57,8 +57,6 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0
 
 void KSquares::setupActions()
 {	
-	//KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	//KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), this);
 	KStandardGameAction::quit(kapp, SLOT(quit()), this);
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), this);

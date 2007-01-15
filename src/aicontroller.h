@@ -10,7 +10,7 @@
 #ifndef AICONTROLLER_H
 #define AICONTROLLER_H
 
-#include <QVector>
+#include <QList>
 
 namespace KS {enum Direction {HORIZONTAL, VERTICAL};}
 

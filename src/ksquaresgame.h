@@ -32,7 +32,7 @@ class QColor;
  * 
  * - If the player completed a square, @ref drawSquare() will then be emitted to allow you to draw the completed square with the correct colour.
  * 
- * - If the player gets another go, @ref takeTurnSig() will be emitted again. If now, play will pass to the next player and @ref takeTurnSig() will be emitted for them.
+ * - If the player gets another go, @ref takeTurnSig() will be emitted again. If not, play will pass to the next player and @ref takeTurnSig() will be emitted for them.
  * 
  * - If a player completes the scoreboard, @ref gameOver() will be emitted with the full list of players to allow you to construct a score board.
  * 

@@ -70,6 +70,8 @@ class KSquaresPlayer
 		
 		/**
 		 * Used in sort algorithm. Compares the player's score (not their height or age or anything :D)
+		 * @param player the player to compare wth this one
+		 * @return true if player is bigger than this
 		 */
 		bool operator<(const KSquaresPlayer& player) const {return score() < player.score();}
 	

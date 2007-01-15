@@ -16,12 +16,13 @@
 
 #include <KDE/KMainWindow>
 
-#include "gameboardview.h"
 #include "ksquaresgame.h"
 #include "ui_prefs_ai.h"
 #include "ui_prefs_display.h"
 
 class KToggleAction;
+class GameBoardView;
+class GameBoardScene;
 
 /**
  * @short Mainwindow class

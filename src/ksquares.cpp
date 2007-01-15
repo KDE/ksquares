@@ -32,7 +32,7 @@
 
 //classes
 #include "aicontroller.h"
-#include "gameboardscene.h"
+#include "gameboardview.h"
 
 //ui
 #include "newgamedialog.h"

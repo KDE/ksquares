@@ -10,6 +10,7 @@
 #include <math.h>
 
 #include <QGraphicsSceneMouseEvent>
+#include <QGraphicsEllipseItem>
 
 #include <kdebug.h>
 
@@ -51,6 +52,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	
 	QGraphicsEllipseItem tempItem;
 	QGraphicsEllipseItemType = tempItem.type();
+	//QGraphicsEllipseItemType = QGraphicsEllipseItem::type();
 }
 
 GameBoardScene::~GameBoardScene()

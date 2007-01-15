@@ -11,49 +11,102 @@
 #define GAMEBOARDSCENE_H
 
 #include <QGraphicsScene>
-#include <QGraphicsEllipseItem>
+
+class QGraphicsEllipseItem;
 
 /**
  * @short Scene for displaying the game board
  *
  * Created anew at the beginning of each game.
+ * Contains the visual representation of the board. Is used to interperet mouse clicks from the user (if the view is unlocked)
  * Contains QGraphicsLineItems for lines, QGraphicsEllipseItems for the dots and QGraphicsRectItem for when a square is complete.
  * 
  * @author Matt Williams <matt@milliams.com>
  */
-
 class GameBoardScene : public QGraphicsScene
 {
 	Q_OBJECT
 	
 	public:
+		/**
+		 * Create a new gameboard scene with the appropriate size.
+		 * @param newWidth the number of squares wide the board is
+		 * @param newHeight the number of squares tall the board is
+		 * @param parent passed to QGraphicsScene's constructor
+		 */
 		GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
+		///Destructor
 		~GameBoardScene();
-		const QSize minimumSizeHint() const;	//I'm not sure if this is even used?
+		/**
+		 * The smallest the view can be when 'auto-zoom' is off
+		 * @return the minimum size the view should be
+		 */
+		const QSize minimumSizeHint() const;
 		
 	public slots:
+		/**
+		 * Add the line to the scene so it shows up in the view
+		 * @param index the line-index of the line
+		 * @param colour the colour of the line
+		 */
 		void drawLine(int index, QColor colour);
+		/**
+		 * Fill a box to show it is owned be a particular player.
+		 * @param index the square-index of the square
+		 * @param colour the colour fill of the square
+		 */
 		void drawSquare(int index, QColor colour);
 		
 	protected:
+		/**
+		 * Given a single location in the scene, gives the two nearest QGraphicsEllipseItem
+		 * @param pos the point in question
+		 * @return QList of (hopefully 2) QGraphicsEllipseItem*s
+		 */
 		QList<QGraphicsEllipseItem*> getTwoNearestPoints(QPointF pos) const;
 		
+		/**
+		 * Given a pair of points, returns whether there is already a line there.
+		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
+		 * @return trur if there is a line there
+		 */
 		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const;
+		/**
+		 * Adds the line to the index for a specified pair of points.
+		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
+		 */
 		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);
 		
 		//conversion functions
+		/**
+		 * Takes a pair of QGraphicsEllipseItems and finds the index that relates to the line that's between them
+		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
+		 * @return the line-index
+		 */
 		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
+		/**
+		 * Takes a line-index and returns a QGraphicsLineItem located at that position
+		 * @param index the line-index
+		 * @return line located at the correct position
+		 */
 		QGraphicsLineItem* lineFromIndex(int index) const;	//all external calls will need to be passed through this to convert to local coords
 		
+		///The last button that was pressed
 		Qt::MouseButtons buttonPress;	//just a temporary store - needed since buttons() in mouseReleaseEvent() will be zero since there are no buttons currently pressed (they've just been released :S)
 		
+		///Moves to show where the next line will be drawn
 		QGraphicsLineItem* indicatorLine;
 		
-		QList<bool> lineList;	//non-canon. Just kept in sync with the KSquaresGame one
+		///A local list of lines (non-canon)
+		QList<bool> lineList;	//Just kept in sync with the KSquaresGame one
 		
+		///QGraphicsEllipseItem::type()
 		int QGraphicsEllipseItemType;
+		///Width of the board
 		int width;
+		///Height of the board
 		int height;
+		///Pixel spacing for standard zoom
 		int spacing;
 		
 		//event handlers
@@ -62,9 +115,7 @@ class GameBoardScene : public QGraphicsScene
 		void mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		
 	signals:
-		/**
-		 * Emitted when a click is encountered that relates to an as-yet undrawn line
-		 */
+		///Emits the index of the closet (undrawn) line when a click is detected
 		void lineDrawn(int);
 };
 

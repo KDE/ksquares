@@ -15,7 +15,7 @@
 #include "gameboardscene.h"
 
 /**
- * @short Displays the game board
+ * @short Actual game board widget
  *
  * A simple subclass of QGraphicsView simply to be able to resize the board according to user preferences.
  * 

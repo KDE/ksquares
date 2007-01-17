@@ -167,7 +167,7 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 	scoreTableModel->setColumnCount(3);
 	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
 	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Score"));
-	scoreTableModel->setHeaderData(2, Qt::Horizontal, i18n("Score"));
+	scoreTableModel->setHeaderData(2, Qt::Horizontal, i18n("Global Score"));
 	
 	qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
 	for(int i = 0; i <  playerList.size(); i++)

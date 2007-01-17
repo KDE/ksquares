@@ -8,7 +8,7 @@
  ***************************************************************************/
 
 //header
-#include "ksquares.h"
+#include "ksquareswindow.h"
 
 //qt
 #include <QStandardItemModel>
@@ -237,4 +237,4 @@ void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	}
 }
 
-#include "ksquares.moc"
+#include "ksquareswindow.moc"

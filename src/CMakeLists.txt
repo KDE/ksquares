@@ -4,7 +4,7 @@ INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR} ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CM
 
 set(ksquares_SRCS
 	main.cpp
-	ksquares.cpp
+	ksquareswindow.cpp
 	gameboardview.cpp
 	gameboardscene.cpp
 	ksquaresgame.cpp

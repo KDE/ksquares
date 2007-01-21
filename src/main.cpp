@@ -42,12 +42,12 @@ int main(int argc, char **argv)
 	/*KHighscore::init("ksquares");
 	KExtHighscore::Manager highscoresManager;*/
 	
-	KSquares *mainWindow = new KSquares;
+	KSquaresWindow *mainWindow = new KSquaresWindow;
 	
 	// see if we are starting with session management
 	if (app.isSessionRestored())
 	{
-		RESTORE(KSquares);
+		RESTORE(KSquaresWindow);
 	}
 	else
 	{

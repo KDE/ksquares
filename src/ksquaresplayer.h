@@ -11,6 +11,7 @@
 #define KSQUARESPLAYER_H
 
 #include <QString>
+#include <KDE/KColor>
 
 /**
  * @short Player class for KSquares
@@ -69,6 +70,11 @@ class KSquaresPlayer
 		bool isHuman() const {return human;}
 		
 		/**
+		 * @return the player's chosen display colour
+		 */
+		KColor colour() const {return playerColour;}
+		
+		/**
 		 * Used in sort algorithm. Compares the player's score (not their height or age or anything :D)
 		 * @param player the player to compare wth this one
 		 * @return true if player is bigger than this
@@ -82,6 +88,10 @@ class KSquaresPlayer
 		int playerScore;
 		/// The player's displayable name
 		QString playerName;
+		///Player's display colour
+		KColor playerColour;
+		///Letter (or two) to display on the board
+		QString displayName;
 };
 
 #endif // KSQUARESPLAYER_H

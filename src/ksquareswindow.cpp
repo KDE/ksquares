@@ -38,7 +38,7 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
+KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {	
 	sGame = new KSquaresGame();
 	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
@@ -51,11 +51,11 @@ KSquares::KSquares() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0
 	setAutoSaveSettings();
 }
 
-/*KSquares::~KSquares()
+/*KSquaresWindow::~KSquares()
 {
 }*/
 
-void KSquares::setupActions()
+void KSquaresWindow::setupActions()
 {	
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), this);
 	KStandardGameAction::quit(kapp, SLOT(quit()), this);
@@ -67,10 +67,10 @@ void KSquares::setupActions()
 	setupGUI();
 }
 
-/*void KSquares::configureHighscores() {KExtHighscore::configure(this);}
-void KSquares::showHighscores() {KExtHighscore::show(this);}*/
+/*void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
+void KSquaresWindow::showHighscores() {KExtHighscore::show(this);}*/
 
-void KSquares::gameNew()
+void KSquaresWindow::gameNew()
 {
 	//load settings
 	NewGameDialog dialog(this);
@@ -158,7 +158,7 @@ void KSquares::gameNew()
 	}
 }
 
-void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
+void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 {
 	ScoresDialog scoresDialog(this);
 	
@@ -196,7 +196,7 @@ void KSquares::gameOver(QVector<KSquaresPlayer> playerList)
 	}
 }
 
-void KSquares::optionsPreferences()
+void KSquaresWindow::optionsPreferences()
 {
 	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
 	
@@ -212,7 +212,7 @@ void KSquares::optionsPreferences()
 	dialog->show();
 }
 
-void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)
+void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)" << endl;
 	statusBar()->changeItem(currentPlayer->name(), 0);

@@ -32,14 +32,14 @@ class GameBoardScene;
  * @author Matt Williams <matt@milliams.com>
  */
 
-class KSquares : public KMainWindow
+class KSquaresWindow : public KMainWindow
 {
 	Q_OBJECT
 			
 	public:
 		///Constructor
-		KSquares();
-		//virtual ~KSquares();
+		KSquaresWindow();
+		//virtual ~KSquaresWindow();
 	
 	public slots:
 		/*void  showHighscores();

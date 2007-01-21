@@ -2,10 +2,10 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!-- Define an entity for your application if it is not part of KDE
        CVS -->
-  <!ENTITY kmyapplication "<application>KSquares</application>">
+  <!ENTITY ksquares "<application>KSquares</application>">
   <!ENTITY kappname "&ksquares;"><!-- replace kmyapplication here
                                             do *not* replace kappname-->
-  <!ENTITY package "kde-module"><!-- kdebase, kdeadmin, etc.  Leave
+  <!ENTITY package "playground-games"><!-- kdebase, kdeadmin, etc.  Leave
                                      this unchanged if your
                                      application is not maintained in KDE CVS -->
   <!ENTITY % addindex "IGNORE">
@@ -90,7 +90,7 @@
 <chapter id="menu-reference">
   <title>The menu referance</title>
   
-  <sect1 id="file/game-menu-reference">
+  <sect1 id="file-game-menu-reference">
     <title>The File/Game Menu</title>
     
     <para>
@@ -123,7 +123,7 @@
     <title>The <guimenu>Setings</guimenu> Menu</title>
     <para>
     <!--Settings-->
-    <para>
+    </para>
   </sect1>
 
   <sect1 id="help-menu-reference">
@@ -213,8 +213,6 @@
   <para>
   Changelog stuff..
   </para>
-</sect1>
-
 </sect1>
 
 </appendix>

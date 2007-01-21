@@ -87,6 +87,7 @@ void KSquaresGame::playerSquareComplete(int index)
 			kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
 	}
 	emit drawSquare(index, color);
+	//emit drawSquare(index, currentPlayer()->colour());	///\todo
 	currentPlayer()->incScore();
 	
 	int totalPoints=0;
@@ -169,7 +170,7 @@ void KSquaresGame::checkForNewSquares()
 			//cout << index1 << ", " << index2 << ", " << index3 << ", " << index4 << " - " << lineList.size() << endl;
 			if (lineList.at(index1) and lineList.at(index2) and lineList.at(index3) and lineList.at(index4))
 			{
-				kdDebug() << " - - Square " << i << " completed." << endl;
+				kDebug() << " - - Square " << i << " completed." << endl;
 				playerSquareComplete(i);
 			}
 		}

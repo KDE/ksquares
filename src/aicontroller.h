@@ -12,7 +12,7 @@
 
 #include <QList>
 
-namespace KS {enum Direction {HORIZONTAL, VERTICAL};}
+namespace KSquares {enum Direction {HORIZONTAL, VERTICAL};}
 
 /**
  * @short AI Controller for KSquares
@@ -80,7 +80,7 @@ class aiController
 		 *
 		 * @return the direction of the line
 		 */
-		KS::Direction lineDirection(int lineIndex) const;
+		KSquares::Direction lineDirection(int lineIndex) const;
 		
 		/// List of the owners of each square
 		QList<int> squareOwners;

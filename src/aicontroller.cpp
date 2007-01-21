@@ -184,7 +184,7 @@ QList<int> aiController::squaresFromLine(int lineIndex) const
 {
 	//kDebug() << "Line: " << lineIndex << endl;
 	QList<int> squareList;
-	if (lineDirection(lineIndex) == KS::HORIZONTAL)
+	if (lineDirection(lineIndex) == KSquares::HORIZONTAL)
 	{
 		squareList.append(lineIndex - ( (width+1) * (lineIndex/((width*2)+1)) ));
 		squareList.append(squareList.at(0) - width);
@@ -194,7 +194,7 @@ QList<int> aiController::squaresFromLine(int lineIndex) const
 			squareList.removeAt(0);
 			
 	}
-	else if (lineDirection(lineIndex) == KS::VERTICAL)
+	else if (lineDirection(lineIndex) == KSquares::VERTICAL)
 	{
 		squareList.append(lineIndex - ( (lineIndex/((width*2)+1))*width + (lineIndex/((width*2)+1)) + width ));
 		squareList.append(squareList.at(0) - 1);
@@ -222,14 +222,14 @@ QList<int> aiController::linesFromSquare(int squareIndex) const
 	return tempLineList;
 }
 
-KS::Direction aiController::lineDirection(int lineIndex) const
+KSquares::Direction aiController::lineDirection(int lineIndex) const
 {
 	int index2 = lineIndex % ((2*width) + 1);
-	KS::Direction dir;
+	KSquares::Direction dir;
 	if(index2 < width)
-		dir = KS::HORIZONTAL;
+		dir = KSquares::HORIZONTAL;
 	else
-		dir = KS::VERTICAL;
+		dir = KSquares::VERTICAL;
 	
 	return dir;
 }

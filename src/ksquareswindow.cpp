@@ -20,6 +20,7 @@
 #include <KDE/KConfigDialog>
 #include <KDE/KStatusBar>
 #include <KDE/KStandardAction>
+#include <KDE/KActionCollection>
 #include <kdebug.h>
 #include <KDE/KLocale>
 #include <KDE/KCursor>
@@ -57,9 +58,9 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 
 void KSquaresWindow::setupActions()
 {	
-	KStandardGameAction::gameNew(this, SLOT(gameNew()), this);
-	KStandardGameAction::quit(kapp, SLOT(quit()), this);
-	KStandardAction::preferences(this, SLOT(optionsPreferences()), this);
+	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
+	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	
 	/*KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
 	KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());*/

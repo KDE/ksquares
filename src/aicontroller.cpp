@@ -116,6 +116,7 @@ int aiController::chooseLine()
 		kDebug() << "AI: 3. Drawing line at index: " << choiceList.at(randChoice) << endl;
 		return choiceList.at(randChoice);
 	}
+        return 0;
 }
 
 QList<int> aiController::chooseLeastDamaging(QList<int> choiceList)

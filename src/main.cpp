@@ -22,12 +22,6 @@ static const char description[] =
 
 static const char version[] = "0.3";
 
-static KCmdLineOptions options[] =
-{
-	/*{ "+[URL]", I18N_NOOP( "Document to open" ), 0 },
-	KCmdLineLastOption*/
-};
-
 int main(int argc, char **argv)
 {
 	KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
@@ -35,7 +29,6 @@ int main(int argc, char **argv)
 			 "http://milliams.com/content/view/18/42/", "matt@milliams.com");
 	about.addAuthor( "Matt Williams", I18N_NOOP("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
 	KCmdLineArgs::init(argc, argv, &about);
-	KCmdLineArgs::addCmdLineOptions(options);
 	
 	KApplication app;
 	

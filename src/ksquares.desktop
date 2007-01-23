@@ -7,6 +7,7 @@ Icon=ksquares
 Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
+GenericName[bg]=Свържете точките и създайте четириъгълници
 GenericName[da]=Forbind prikkerne for at lave firkanter
 GenericName[de]=Die Punkte verbinden um Vierecke zu formen
 GenericName[el]=Στνδέστε τις τελείες για να σχηματίσετε τετράγωνα

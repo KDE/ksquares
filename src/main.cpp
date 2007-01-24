@@ -36,33 +36,7 @@ int main(int argc, char **argv)
 	KExtHighscore::Manager highscoresManager;*/
 	
 	KSquaresWindow *mainWindow = new KSquaresWindow;
-	
-	// see if we are starting with session management
-	if (app.isSessionRestored())
-	{
-		RESTORE(KSquaresWindow);
-	}
-	else
-	{
-		// no session.. just start up normally
-		KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-		if (args->count() == 0)
-		{
-			//ksquares *widget = new ksquares;
-			mainWindow->show();
-		}
-		else
-		{
-			int i = 0;
-			for (; i < args->count(); i++)
-			{
-				//ksquares *widget = new ksquares;
-				mainWindow->show();
-			}
-		}
-		args->clear();
-	}
-	
+	mainWindow->show();
 	mainWindow->gameNew();
 	
 	return app.exec();

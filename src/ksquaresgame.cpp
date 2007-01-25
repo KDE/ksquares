@@ -30,9 +30,10 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 {
 	resetEverything();	//reset everything
 	kDebug() << "Creating Game with " << startPlayers.size() << " player(s)" << endl;
+	
+	//BEGIN Initialisation
 	width = startWidth;
 	height = startHeight;
-	i_currentPlayerId = -1;
 	for(int i=0; i < startPlayers.size(); i++)
 	{
 		players.append(startPlayers[i]);
@@ -45,6 +46,7 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 	{
 		squareOwnerTable.append(-1);
 	}
+	//END Initialisation
 	
 	kDebug() << "Game Starting" << endl;
 	gameInProgress = true;

@@ -207,7 +207,7 @@ void KSquaresWindow::optionsPreferences()
 	
 	QWidget *aiSettingsDlg = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDlg);
-	dialog->addPage(aiSettingsDlg, i18n("AI"), "ksquares_ai");
+	dialog->addPage(aiSettingsDlg, i18n("Computer Player"), "ksquares_ai");
 	
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();

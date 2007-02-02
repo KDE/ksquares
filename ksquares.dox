@@ -1,6 +1,7 @@
- /*! \mainpage KSquares
-	
-	\section intro_sec Introduction
+/**
+\mainpage KSquares
+
+\section intro_sec Introduction
 	
 	KSquares is a KDE implementation of the game "squares"
 	
@@ -13,6 +14,28 @@
 	For the list of lines and whether they're drawn, the indices count from left to right along the top row of horizontal lines, then (left to right) along the first row of vertical lines etc.
 	
 	\image html ksquaresindex.png
+	
+	\todo "New" starts a new game with the same settings as the current one. A different entry required for different settings
+
+	\todo Hints
+	
+        \todo Artificial delay for computer controlled moves
+	
+        \todo "Global Score" renaming
+	
+        \todo Highscore
+	
+        \todo Network play
+	
+        \todo Remove "Fit board to view"
+	
+        \todo Logo/initials/colour/etc. for players squares
+	
+        \todo foreach for QLists in AI class
+	
+	\todo valgrind
+	
+	\todo 'greying out' of disabled players in NewGameDialog
 */
 
 /*!

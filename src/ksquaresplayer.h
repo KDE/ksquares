@@ -30,7 +30,7 @@ class KSquaresPlayer
 		 * @param newName The displayable name of the player
 		 * @param isPlayerHuman is the player human (or AI)
 		 */
-		KSquaresPlayer(QString newName = "Player", bool isPlayerHuman = true) {setName(newName); human = isPlayerHuman; playerScore = 0;}	//defaults to human player
+		explicit KSquaresPlayer(QString newName = "Player", bool isPlayerHuman = true) {setName(newName); human = isPlayerHuman; playerScore = 0;}	//defaults to human player
 		/**
 		 * Copy constructor
 		 * 
@@ -44,6 +44,7 @@ class KSquaresPlayer
 		 * @param newName The displayable name of the player
 		 */
 		void setName(QString newName) {playerName = newName;}
+		
 		/**
 		 * Sets the players name
 		 * 
@@ -75,6 +76,11 @@ class KSquaresPlayer
 		KColor colour() const {return playerColour;}
 		
 		/**
+		 * @return the player's signature (1 or 2 letters)
+		 */
+		QString sig() const {return displaySig;}
+		
+		/**
 		 * Used in sort algorithm. Compares the player's score (not their height or age or anything :D)
 		 * @param player the player to compare wth this one
 		 * @return true if player is bigger than this
@@ -91,7 +97,7 @@ class KSquaresPlayer
 		///Player's display colour
 		KColor playerColour;
 		///Letter (or two) to display on the board
-		QString displayName;
+		QString displaySig;
 };
 
 #endif // KSQUARESPLAYER_H

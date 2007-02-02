@@ -32,7 +32,7 @@ class GameBoardView : public QGraphicsView
 		 * 
 		 * @param parent the parent of the widget
 		 */
-		GameBoardView(QWidget* parent = 0);
+		explicit GameBoardView(QWidget* parent = 0);
 		/**
 		 * Asks the scene through ( qobject_cast<GameBoardScene*>(scene()) ) for the smallest size it should be
 		 */

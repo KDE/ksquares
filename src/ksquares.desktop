@@ -18,4 +18,4 @@ GenericName[pt]=Ligue os pontos para criar quadrados
 GenericName[pt_BR]=Ligue os pontos para criar quadrados
 GenericName[sv]=Koppla ihop punkterna för att skapa fyrkanter
 Terminal=false
-Categories=Qt;KDE;Game;ArcadeGame;
+Categories=Qt;KDE;Game;PuzzleGame;

@@ -11,7 +11,7 @@
 #define KSQUARESPLAYER_H
 
 #include <QString>
-#include <KDE/KColor>
+#include <QColor>
 
 /**
  * @short Player class for KSquares
@@ -73,7 +73,7 @@ class KSquaresPlayer
 		/**
 		 * @return the player's chosen display colour
 		 */
-		KColor colour() const {return playerColour;}
+		QColor colour() const {return playerColour;}
 		
 		/**
 		 * @return the player's signature (1 or 2 letters)
@@ -95,7 +95,7 @@ class KSquaresPlayer
 		/// The player's displayable name
 		QString playerName;
 		///Player's display colour
-		KColor playerColour;
+		QColor playerColour;
 		///Letter (or two) to display on the board
 		QString displaySig;
 };

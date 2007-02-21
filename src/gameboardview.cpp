@@ -18,10 +18,6 @@ void GameBoardView::setBoardSize()
 {
 	if (scene() != 0)
 		fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);
-	else
-	{
-		resetMatrix();
-	}
 }
 
 #include "gameboardview.moc"

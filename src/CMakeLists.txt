@@ -1,4 +1,3 @@
-
 set(ksquares_SRCS
 	main.cpp
 	ksquareswindow.cpp

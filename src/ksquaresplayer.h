@@ -28,15 +28,17 @@ class KSquaresPlayer
 		 * Creates a player
 		 * 
 		 * @param newName The displayable name of the player
+		 * @param newColor the colour used to fill the player's boxes
 		 * @param isPlayerHuman is the player human (or AI)
 		 */
-		explicit KSquaresPlayer(QString newName = "Player", bool isPlayerHuman = true) {setName(newName); human = isPlayerHuman; playerScore = 0;}	//defaults to human player
+		explicit KSquaresPlayer(QString newName, QColor newColor, bool isPlayerHuman = true) {setName(newName); playerColour = newColor; human = isPlayerHuman; playerScore = 0;}	//defaults to human player
 		/**
 		 * Copy constructor
 		 * 
 		 * @param ksp the KSquaresPlayer you want to copy
 		 */
 		KSquaresPlayer(const KSquaresPlayer& ksp) {human = ksp.isHuman(); playerScore = ksp.score(); setName(ksp.name());}	//copy constructor
+		KSquaresPlayer() {}	//create a null player. Needed to do QVector<KSquaresPlayer>::operator[int i] since it has to allocate memory i think
 		
 		/**
 		 * Sets the players name

@@ -35,11 +35,6 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 		</entry>
 	</group>
 	<group name="Display">
-		<entry name="ResizeBoard" type="Bool">
-			<label>Fit board to view</label>
-			<whatsthis>Maximise the board so it fills the whole screen</whatsthis>
-			<default>0</default>
-		</entry>
 		<entry name="DrawLinePlayerColor" type="Bool">
 			<label>Draw the lines in the player's color</label>
 			<whatsthis>Draw the lines in the player's color</whatsthis>

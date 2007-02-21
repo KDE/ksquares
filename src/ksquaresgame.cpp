@@ -70,7 +70,7 @@ void KSquaresGame::playerSquareComplete(int index)
 	anotherGo = true;
 	
 	squareOwnerTable[index] = currentPlayerId();	//add square to index
-	QColor color;
+	/*QColor color;
 	switch(currentPlayerId())
 	{
 		case 0:
@@ -88,8 +88,8 @@ void KSquaresGame::playerSquareComplete(int index)
 		default:
 			kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
 	}
-	emit drawSquare(index, color);
-	//emit drawSquare(index, currentPlayer()->colour());	///\todo
+	emit drawSquare(index, currentPlayer()->colour());*/
+	emit drawSquare(index, currentPlayer()->colour());
 	currentPlayer()->incScore();
 	
 	int totalPoints=0;

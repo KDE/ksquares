@@ -56,18 +56,6 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 {
 }*/
 
-void KSquaresWindow::setupActions()
-{	
-	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
-	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
-	
-	/*KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
-	KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());*/
-	
-	setupGUI();
-}
-
 /*void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
 void KSquaresWindow::showHighscores() {KExtHighscore::show(this);}*/
 
@@ -197,22 +185,6 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	}
 }
 
-void KSquaresWindow::optionsPreferences()
-{
-	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
-	
-	QWidget *displaySettingsDlg = new QWidget;
-	ui_prefs_display.setupUi(displaySettingsDlg);
-	dialog->addPage(displaySettingsDlg, i18n("Display"), "ksquares_display");
-	
-	QWidget *aiSettingsDlg = new QWidget;
-	ui_prefs_ai.setupUi(aiSettingsDlg);
-	dialog->addPage(aiSettingsDlg, i18n("Computer Player"), "ksquares_ai");
-	
-	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
-	dialog->show();
-}
-
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)" << endl;
@@ -236,6 +208,34 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//m_scene->addLineToIndex(ai.chooseLine());
 		sGame->addLineToIndex(ai.chooseLine());
 	}
+}
+
+void KSquaresWindow::setupActions()
+{	
+	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
+	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+	
+	/*KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
+	KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());*/
+	
+	setupGUI();
+}
+
+void KSquaresWindow::optionsPreferences()
+{
+	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
+	
+	QWidget *displaySettingsDlg = new QWidget;
+	ui_prefs_display.setupUi(displaySettingsDlg);
+	dialog->addPage(displaySettingsDlg, i18n("Display"), "ksquares_display");
+	
+	QWidget *aiSettingsDlg = new QWidget;
+	ui_prefs_ai.setupUi(aiSettingsDlg);
+	dialog->addPage(aiSettingsDlg, i18n("Computer Player"), "ksquares_ai");
+	
+	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
+	dialog->show();
 }
 
 #include "ksquareswindow.moc"

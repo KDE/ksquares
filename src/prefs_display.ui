@@ -6,54 +6,20 @@
     <x>0</x>
     <y>0</y>
     <width>250</width>
-    <height>210</height>
+    <height>172</height>
    </rect>
   </property>
   <property name="windowTitle" >
    <string>Display Settings</string>
   </property>
-  <layout class="QGridLayout" >
+  <layout class="QVBoxLayout" >
    <property name="margin" >
     <number>9</number>
    </property>
    <property name="spacing" >
     <number>6</number>
    </property>
-   <item row="0" column="0" >
-    <widget class="QGroupBox" name="groupBox" >
-     <property name="whatsThis" >
-      <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">General Settings&lt;/p>&lt;/body>&lt;/html></string>
-     </property>
-     <property name="title" >
-      <string>General</string>
-     </property>
-     <layout class="QGridLayout" >
-      <property name="margin" >
-       <number>9</number>
-      </property>
-      <property name="spacing" >
-       <number>6</number>
-      </property>
-      <item row="0" column="0" >
-       <widget class="QCheckBox" name="kcfg_ResizeBoard" >
-        <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should the game board make itself as large as possible?&lt;/p>&lt;/body>&lt;/html></string>
-        </property>
-        <property name="text" >
-         <string>Fit board to view</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="0" >
+   <item>
     <widget class="QGroupBox" name="groupBox_2" >
      <property name="whatsThis" >
       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
@@ -119,15 +85,15 @@ p, li { white-space: pre-wrap; }
      </layout>
     </widget>
    </item>
-   <item row="2" column="0" >
+   <item>
     <spacer>
      <property name="orientation" >
       <enum>Qt::Vertical</enum>
      </property>
      <property name="sizeHint" >
       <size>
-       <width>20</width>
-       <height>40</height>
+       <width>232</width>
+       <height>16</height>
       </size>
      </property>
     </spacer>
@@ -142,7 +108,6 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>kcfg_ResizeBoard</tabstop>
   <tabstop>kcfg_DrawLinePlayerColor</tabstop>
   <tabstop>kcfg_LineColor</tabstop>
   <tabstop>kcfg_IndicatorLineColor</tabstop>

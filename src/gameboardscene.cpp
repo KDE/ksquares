@@ -53,6 +53,14 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	QGraphicsEllipseItem tempItem;
 	QGraphicsEllipseItemType = tempItem.type();
 	//QGraphicsEllipseItemType = QGraphicsEllipseItem::type();
+	
+	qreal border = 10;
+	QRectF rect = sceneRect();
+	rect.setLeft(rect.left() - border);
+	rect.setRight(rect.right() + border);
+	rect.setTop(rect.top() - border);
+	rect.setBottom(rect.bottom() + border);
+	setSceneRect(rect);
 }
 
 GameBoardScene::~GameBoardScene()
@@ -67,7 +75,7 @@ void GameBoardScene::drawLine(int index, QColor colour)
 	addItem(line);	//draw new line
 	lineList[index] = true;	//keep this table in sync
 	indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
-	update(sceneRect());
+	update(line->boundingRect());
 }
 
 void GameBoardScene::drawSquare(int index, QColor colour)

@@ -130,7 +130,6 @@ void KSquaresWindow::gameNew()
 		{
 			GameBoardScene* temp = m_scene;
 			m_scene = new GameBoardScene(dialog.spinWidth->value(), dialog.spinHeight->value());
-			m_scene->update();
 			
 			m_view->setScene(m_scene);
 			m_view->setEnabled(true);
@@ -202,7 +201,8 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
 		setCursor(KCursor::waitCursor());
-		m_view->setEnabled(false);
+		// FIXME: use another way to ensure no mouse evends are received
+		//m_view->setEnabled(false);
 		
 		aiController ai(sGame->currentPlayerId(), sGame->lines(), sGame->squares(), sGame->boardWidth(), sGame->boardHeight());
 		//m_scene->addLineToIndex(ai.chooseLine());

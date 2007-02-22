@@ -17,17 +17,13 @@
 	
 	\todo "New" starts a new game with the same settings as the current one. A different entry required for different settings
 
-	\todo Hints
-	
-        \todo Artificial delay for computer controlled moves
+	\todo *Not yet* Hints
 	
         \todo "Global Score" renaming
 	
         \todo Highscore
 	
-        \todo Network play
-	
-        \todo Remove "Fit board to view"
+        \todo *Not yet* Network play
 	
         \todo Logo/initials/colour/etc. for players squares
 	

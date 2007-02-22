@@ -56,6 +56,10 @@ class GameBoardScene : public QGraphicsScene
 		 * @param colour the colour fill of the square
 		 */
 		void drawSquare(int index, QColor colour);
+		/// disables mouse events
+		void enableEvents() {acceptEvents = true;}
+		/// enables mouse events
+		void disableEvents() {acceptEvents = false;}
 		
 	protected:
 		/**
@@ -108,6 +112,8 @@ class GameBoardScene : public QGraphicsScene
 		int height;
 		///Pixel spacing for standard zoom
 		int spacing;
+		///This property holds whether mouse events are enabled for this widget.
+		bool acceptEvents;
 		
 		//event handlers
 		void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);

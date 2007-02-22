@@ -48,6 +48,7 @@ class KSquaresWindow : public KMainWindow
 		void gameNew();
 	
 	private slots:
+		void aiChooseLine(); // testing only
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board

@@ -37,7 +37,7 @@ class KSquaresPlayer
 		 * 
 		 * @param ksp the KSquaresPlayer you want to copy
 		 */
-		KSquaresPlayer(const KSquaresPlayer& ksp) {human = ksp.isHuman(); playerScore = ksp.score(); setName(ksp.name());}	//copy constructor
+		//KSquaresPlayer(const KSquaresPlayer& ksp) {human = ksp.isHuman(); playerScore = ksp.score(); setName(ksp.name());}	//copy constructor
 		KSquaresPlayer() {}	//create a null player. Needed to do QVector<KSquaresPlayer>::operator[int i] since it has to allocate memory i think
 		
 		/**

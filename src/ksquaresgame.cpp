@@ -70,25 +70,6 @@ void KSquaresGame::playerSquareComplete(int index)
 	anotherGo = true;
 	
 	squareOwnerTable[index] = currentPlayerId();	//add square to index
-	/*QColor color;
-	switch(currentPlayerId())
-	{
-		case 0:
-			color = Qt::red;	
-			break;
-		case 1:
-			color = Qt::blue;
-			break;
-		case 2:
-			color = Qt::green;
-			break;
-		case 3:
-			color = Qt::yellow;
-			break;
-		default:
-			kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
-	}
-	emit drawSquare(index, currentPlayer()->colour());*/
 	emit drawSquare(index, currentPlayer()->colour());
 	currentPlayer()->incScore();
 	

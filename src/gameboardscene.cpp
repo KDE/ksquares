@@ -17,7 +17,7 @@
 #include "settings.h"
 #include "gameboardscene.h"
 
-GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight)
+GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
 	kDebug() << "GameBoardScene::GameBoardScene()" << endl;
 	
@@ -33,7 +33,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 		{
 			int x = iWidth*spacing;
 			int y = iHeight*spacing;
-			addEllipse(QRectF(-1,-1,2,2), QPen(Qt::SolidLine), QBrush(Qt::SolidPattern))->setPos(x,y);
+			addEllipse(QRectF(-2,-2,4,4), QPen(Qt::SolidLine), QBrush(Qt::SolidPattern))->setPos(x,y);
 		}
 	}
 	QPen feintPen(Qt::DotLine);
@@ -198,12 +198,14 @@ const QSize GameBoardScene::minimumSizeHint() const
 
 void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
+	if (!acceptEvents) return;
 	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()
 	QGraphicsScene::mousePressEvent(mouseEvent);
 }
 
 void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
+	if (!acceptEvents) return;
 	//cout << "GameBoardScene::mouseReleaseEvent" << endl;
 	if (buttonPress == Qt::LeftButton)
 	{
@@ -219,6 +221,7 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 
 void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
+	if (!acceptEvents) return;
 	//indicatorLine = 0;
 	
 	//kDebug() << "GameBoardScene::mouseMoveEvent" << endl;

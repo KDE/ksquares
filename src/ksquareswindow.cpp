@@ -14,6 +14,7 @@
 #include <QStandardItemModel>
 #include <QList>
 #include <QRectF>
+#include <QTimer> // testing only
 
 //kde
 #include <KDE/KApplication>
@@ -45,6 +46,7 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
 	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	
+    m_view->setRenderHints(QPainter::Antialiasing);
 	setCentralWidget(m_view);
 	setupActions();
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
@@ -122,7 +124,25 @@ void KSquaresWindow::gameNew()
 		QVector<KSquaresPlayer> playerList;
 		for(int i=0; i<dialog.spinNumOfPlayers->value(); i++)
 		{
-			playerList.append(KSquaresPlayer(nameLineEditList.at(i)->text(), humanCheckBoxList.at(i)->isChecked()));
+		QColor color;
+		switch(i)
+			{
+				case 0:
+					color = Qt::red;	
+					break;
+				case 1:
+					color = Qt::blue;
+					break;
+				case 2:
+					color = Qt::green;
+					break;
+				case 3:
+					color = Qt::yellow;
+					break;
+				default:
+					kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
+			}
+			playerList.append(KSquaresPlayer(nameLineEditList.at(i)->text(), color, humanCheckBoxList.at(i)->isChecked()));
 		}
 		
 		//create physical board
@@ -132,7 +152,6 @@ void KSquaresWindow::gameNew()
 			m_scene = new GameBoardScene(dialog.spinWidth->value(), dialog.spinHeight->value());
 			
 			m_view->setScene(m_scene);
-			m_view->setEnabled(true);
 			delete temp;
 			
 			m_view->setBoardSize();	//refresh board zooming
@@ -194,20 +213,25 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//Let the human player interact with the board through the GameBoardView
 		
 		setCursor(KCursor::arrowCursor());
-		m_view->setEnabled(true);
+		m_scene->enableEvents();
 	}
 	else	//AI
 	{
 		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
 		setCursor(KCursor::waitCursor());
-		// FIXME: use another way to ensure no mouse evends are received
-		//m_view->setEnabled(false);
+		m_scene->disableEvents();
 		
-		aiController ai(sGame->currentPlayerId(), sGame->lines(), sGame->squares(), sGame->boardWidth(), sGame->boardHeight());
-		//m_scene->addLineToIndex(ai.chooseLine());
-		sGame->addLineToIndex(ai.chooseLine());
+		// testing only
+		QTimer::singleShot(500, this, SLOT(aiChooseLine()));
 	}
+}
+
+// testing only
+void KSquaresWindow::aiChooseLine()
+{
+	aiController ai(sGame->currentPlayerId(), sGame->lines(), sGame->squares(), sGame->boardWidth(), sGame->boardHeight());
+	sGame->addLineToIndex(ai.chooseLine());
 }
 
 void KSquaresWindow::setupActions()

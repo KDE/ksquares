@@ -19,11 +19,11 @@
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
-	kDebug() << "GameBoardScene::GameBoardScene()" << endl;
+	//kDebug() << "GameBoardScene::GameBoardScene()" << endl;
 	
 	for(int i = 0; i < (2*width*height + width + height); i++)
 	{
-		lineList.append(false);
+		lineList.append(false);	//simply fill array with 'false's
 	}
 	
 	spacing = 40;	//this hard coding doesn't matter since auto-resizing exists :)
@@ -33,11 +33,16 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 		{
 			int x = iWidth*spacing;
 			int y = iHeight*spacing;
-			addEllipse(QRectF(-2,-2,4,4), QPen(Qt::SolidLine), QBrush(Qt::SolidPattern))->setPos(x,y);
+			QGraphicsEllipseItem *dot = new QGraphicsEllipseItem(QRectF(-2,-2,4,4));
+			dot->moveBy(x,y);
+			dot->setBrush(Qt::SolidPattern);
+			dot->setZValue(20);	// set the elevation, the dot's are on top
+			addItem(dot);
 		}
 	}
-	QPen feintPen(Qt::DotLine);
-	feintPen.setColor(QColor(0,0,0,31));
+	QPen feintPen(Qt::DotLine);	//for the guidelines between dots
+	feintPen.setWidth(1);
+	feintPen.setColor(Qt::lightGray);
 	for(int iWidth = 0; iWidth <= width; iWidth++)
 	{
 		addLine(QLineF(spacing*iWidth, 0, spacing*iWidth, spacing*height), feintPen);
@@ -47,12 +52,16 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 		addLine(QLineF(0, spacing*iHeight, spacing*width, spacing*iHeight), feintPen);
 	}
 	
-	indicatorLine = new QGraphicsLineItem(spacing, spacing, spacing, spacing);
+	setBackgroundBrush(QBrush(Qt::white));
+	
+	indicatorLine = new QGraphicsLineItem(1,1,1,1);
+	indicatorLine->setZValue(10);
+	indicatorLine->setPen(QPen(Qt::yellow, 2.5));
+	indicatorLine->hide();
 	addItem(indicatorLine);
 	
 	QGraphicsEllipseItem tempItem;
 	QGraphicsEllipseItemType = tempItem.type();
-	//QGraphicsEllipseItemType = QGraphicsEllipseItem::type();
 	
 	qreal border = 10;
 	QRectF rect = sceneRect();
@@ -71,10 +80,11 @@ GameBoardScene::~GameBoardScene()
 void GameBoardScene::drawLine(int index, QColor colour)
 {
 	QGraphicsLineItem* line = lineFromIndex(index);
+	line->setZValue(10);
 	line->setPen(QPen(QBrush(colour), 2.5));
 	addItem(line);	//draw new line
 	lineList[index] = true;	//keep this table in sync
-	indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//make indicator transparrent
+	indicatorLine->hide();
 	update(line->boundingRect());
 }
 
@@ -87,38 +97,40 @@ void GameBoardScene::drawSquare(int index, QColor colour)
 
 int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const
 {
+
+	if (pointPair.size() != 2)
+		return -1; // if it isn't a pair
+	
+	qreal pointOneX = pointPair.at(0)->scenePos().x()/spacing;
+	qreal pointOneY = pointPair.at(0)->scenePos().y()/spacing;
+	qreal pointTwoX = pointPair.at(1)->scenePos().x()/spacing;
+	qreal pointTwoY = pointPair.at(1)->scenePos().y()/spacing;
+	
+	//this int conversion could go bad but SHOULD be safe
+	qreal refX;	// these two will be the grid-coord of the
+	qreal refY;	// to and left most point of the two
+	
 	int index = -1;
-	if (pointPair.size() == 2)	// if it really is a pair
+	if (pointOneX == pointTwoX)
 	{
-		qreal pointOneX = pointPair.at(0)->scenePos().x()/spacing;
-		qreal pointOneY = pointPair.at(0)->scenePos().y()/spacing;
-		qreal pointTwoX = pointPair.at(1)->scenePos().x()/spacing;
-		qreal pointTwoY = pointPair.at(1)->scenePos().y()/spacing;
-		
-		//this int conversion could go bad but SHOULD be safe
-		qreal refX;	// these two will be the grid-coord of the
-		qreal refY;	// to and left most point of the two
-		
-		if (pointOneX == pointTwoX)
-		{
-			//dir = VERTICAL;
-			refX = pointOneX;
-			if (pointTwoY < pointOneY)	//want the topmost point as reference
-				refY = pointTwoY;
-			else
-				refY = pointOneY;
-			index = refY * ((2*width)+1) + refX + width;
-		}
-		else if (pointOneY == pointTwoY)
-		{
-			//dir = HORIZONTAL;
+		//dir = VERTICAL;
+		refX = pointOneX;
+		if (pointTwoY < pointOneY)	//want the topmost point as reference
+			refY = pointTwoY;
+		else
 			refY = pointOneY;
-			if (pointOneX < pointTwoX)	//want the leftmost point as reference
-				refX = pointOneX;
-			else
-				refX = pointTwoX;
-			index = refY * ((2*width)+1) + refX;
-		}
+		index = static_cast<int>(refY * ((2*width)+1) + refX + width);
+	}
+
+	else if (pointOneY == pointTwoY)
+	{
+		//dir = HORIZONTAL;
+		refY = pointOneY;
+		if (pointOneX < pointTwoX)	//want the leftmost point as reference
+			refX = pointOneX;
+		else
+			refX = pointTwoX;
+		index = static_cast<int>(refY * ((2*width)+1) + refX);
 	}
 	return index;
 }
@@ -196,18 +208,22 @@ const QSize GameBoardScene::minimumSizeHint() const
 	return QSize((width*spacing)+10, (height*spacing)+10);	// the +10 is to provide padding and to avoid scrollbars
 }
 
-void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
+/*void GameBoardScene::mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
 	if (!acceptEvents) return;
-	buttonPress = mouseEvent->buttons();	//store the buttton press for mouseReleaseEvent()
 	QGraphicsScene::mousePressEvent(mouseEvent);
-}
+}*/
 
 void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 {
-	if (!acceptEvents) return;
+	if (!acceptEvents) 
+	{
+		QGraphicsScene::mouseReleaseEvent(mouseEvent);
+		return;
+	}
+
 	//cout << "GameBoardScene::mouseReleaseEvent" << endl;
-	if (buttonPress == Qt::LeftButton)
+	if (mouseEvent->button() == Qt::LeftButton)
 	{
 		QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 		if (connectList.size() == 2)
@@ -229,22 +245,14 @@ void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	
 	QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 	
-	if (connectList.size() == 2)	//if there are two nearest points
-	{
-		if (not isLineAlready(connectList))	//only two nearest points && no line there yet
-		{
-			indicatorLine->setLine(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));	//where
-			indicatorLine->setPen(QPen(QBrush(Settings::indicatorLineColor()), 2.5));	//draw visible
-		}
-		else	//only two nearest points && already a line there
-		{
-			indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//draw invisible
-		}
-		
+	if (connectList.size() == 2 && !isLineAlready(connectList))
+	{   //if there are two nearest points and there isn't already a line
+		indicatorLine->setLine(QLineF(connectList.at(0)->scenePos(), connectList.at(1)->scenePos()));	//where
+		indicatorLine->show();
 	}
 	else
 	{
-		indicatorLine->setPen(QPen(QBrush(Qt::transparent), 2.5));	//draw invisible
+		indicatorLine->hide();
 	}
 	
 	QGraphicsScene::mouseMoveEvent(mouseEvent);

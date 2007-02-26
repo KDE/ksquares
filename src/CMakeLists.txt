@@ -5,6 +5,7 @@ set(ksquares_SRCS
 	gameboardscene.cpp
 	ksquaresgame.cpp
 	aicontroller.cpp
+	newgamedialog.cpp
 )
 
 kde4_automoc(${ksquares_SRCS})

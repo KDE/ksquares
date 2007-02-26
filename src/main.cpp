@@ -28,6 +28,7 @@ int main(int argc, char **argv)
 			 KAboutData::License_GPL, "(C) 2006-2007 Matt Williams", 0, 
 			 "http://milliams.com/content/view/18/42/", "matt@milliams.com");
 	about.addAuthor( "Matt Williams", I18N_NOOP("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
+	about.addCredit("Fela Winkelmolen");
 	KCmdLineArgs::init(argc, argv, &about);
 	
 	KApplication app;

@@ -95,9 +95,6 @@ class GameBoardScene : public QGraphicsScene
 		 */
 		QGraphicsLineItem* lineFromIndex(int index) const;	//all external calls will need to be passed through this to convert to local coords
 		
-		///The last button that was pressed
-		Qt::MouseButtons buttonPress;	//just a temporary store - needed since buttons() in mouseReleaseEvent() will be zero since there are no buttons currently pressed (they've just been released :S)
-		
 		///Moves to show where the next line will be drawn
 		QGraphicsLineItem* indicatorLine;
 		
@@ -116,7 +113,7 @@ class GameBoardScene : public QGraphicsScene
 		bool acceptEvents;
 		
 		//event handlers
-		void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
+		//void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		void mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent);
 		

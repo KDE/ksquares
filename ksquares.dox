@@ -31,7 +31,7 @@
 	
 	\todo valgrind
 	
-	\todo 'greying out' of disabled players in NewGameDialog
+	\todo Fix board resizing on first game start
 */
 
 /*!

@@ -47,6 +47,7 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	
     m_view->setRenderHints(QPainter::Antialiasing);
+	m_view->setFrameStyle(QFrame::NoFrame);
 	setCentralWidget(m_view);
 	setupActions();
 	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
@@ -96,73 +97,69 @@ void KSquaresWindow::gameNew()
 	
 	//run dialog
 	dialog.exec();
+	// FIXME: will not work on the first dialog
+	//if (dialog.result() == QDialog::Rejected) kapp->quit();	//not sure we want to quit from 'New Game' dialog
 	
-	if (dialog.result() == QDialog::Accepted)
+	//save settings
+	Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
+	
+	QStringList tempNames;
+	for(int i=0; i<=3; i++)
 	{
-		//save settings
-		Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
-		
-		QStringList tempNames;
-		for(int i=0; i<=3; i++)
-		{
-			tempNames.append(nameLineEditList.at(i)->text());
-		}
-		Settings::setPlayerNames(tempNames);
-		
-		QList<int> tempHuman;
-		for(int i=0; i<=3; i++)
-		{
-			tempHuman.append(humanCheckBoxList.at(i)->checkState());
-		}
-		Settings::setHumanList(tempHuman);
-		
-		Settings::setBoardHeight(dialog.spinHeight->value());
-		Settings::setBoardWidth(dialog.spinWidth->value());
-		Settings::writeConfig();
-		
-		//create players
-		QVector<KSquaresPlayer> playerList;
-		for(int i=0; i<dialog.spinNumOfPlayers->value(); i++)
-		{
+		tempNames.append(nameLineEditList.at(i)->text());
+	}
+	Settings::setPlayerNames(tempNames);
+	
+	QList<int> tempHuman;
+	for(int i=0; i<=3; i++)
+	{
+		tempHuman.append(humanCheckBoxList.at(i)->checkState());
+	}
+	Settings::setHumanList(tempHuman);
+	
+	Settings::setBoardHeight(dialog.spinHeight->value());
+	Settings::setBoardWidth(dialog.spinWidth->value());
+	Settings::writeConfig();
+	
+	//create players
+	QVector<KSquaresPlayer> playerList;
+	for(int i=0; i<dialog.spinNumOfPlayers->value(); i++)
+	{
 		QColor color;
 		switch(i)
-			{
-				case 0:
-					color = Qt::red;	
-					break;
-				case 1:
-					color = Qt::blue;
-					break;
-				case 2:
-					color = Qt::green;
-					break;
-				case 3:
-					color = Qt::yellow;
-					break;
-				default:
-					kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
-			}
-			playerList.append(KSquaresPlayer(nameLineEditList.at(i)->text(), color, humanCheckBoxList.at(i)->isChecked()));
-		}
-		
-		//create physical board
-		if (!((dialog.spinWidth->value() == 1) and (dialog.spinHeight->value() == 1)))
 		{
-			GameBoardScene* temp = m_scene;
-			m_scene = new GameBoardScene(dialog.spinWidth->value(), dialog.spinHeight->value());
-			
-			m_view->setScene(m_scene);
-			delete temp;
-			
-			m_view->setBoardSize();	//refresh board zooming
-			
-			//start game etc.
-			sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
-			connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
-			connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
-			connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
+			case 0:
+				color = Qt::red;	
+				break;
+			case 1:
+				color = Qt::blue;
+				break;
+			case 2:
+				color = Qt::green;
+				break;
+			case 3:
+				color = Qt::yellow;
+				break;
+			default:
+				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
 		}
+		playerList.append(KSquaresPlayer(nameLineEditList.at(i)->text(), color, humanCheckBoxList.at(i)->isChecked()));
 	}
+	
+	//create physical board
+	GameBoardScene* temp = m_scene;
+	m_scene = new GameBoardScene(dialog.spinWidth->value(), dialog.spinHeight->value());
+	
+	m_view->setScene(m_scene);
+	delete temp;
+	
+	//m_view->setBoardSize();	//refresh board zooming
+	
+	//start game etc.
+	sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
+	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
+	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
+	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
 }
 
 void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
@@ -223,7 +220,7 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		m_scene->disableEvents();
 		
 		// testing only
-		QTimer::singleShot(500, this, SLOT(aiChooseLine()));
+		QTimer::singleShot(200, this, SLOT(aiChooseLine()));
 	}
 }
 

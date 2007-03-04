@@ -130,7 +130,7 @@ void KSquaresGame::addLineToIndex(int index)
 	}
 	lineList[index] = true;
 		
-	QColor color;
+	/*QColor color;
 	if (Settings::drawLinePlayerColor() == true)
 	{
 		color = Settings::lineColor();	//this needs to change! Player's custom colour
@@ -138,9 +138,9 @@ void KSquaresGame::addLineToIndex(int index)
 	else
 	{
 		color = Settings::lineColor();
-	}
+	}*/
 	
-	emit drawLine(index, color);
+	emit drawLine(index, Settings::lineColor());
 	
 	if (gameInProgress)
 		checkForNewSquares();

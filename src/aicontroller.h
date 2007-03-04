@@ -50,7 +50,7 @@ class aiController
 		int chooseLine() const;
 		/**
 		 * Finds lines that can be filled without causing squares to be surrounded by 3 lines as a result.
-		 * @param safeMovesLeft number of safe moves that can be performed after those returned be the function are drawn (note: the number is valid only for a certain sequence, for other sequences they could either be more or less)
+		 * @param safeMovesLeft number of safe moves that can be performed after those returned by the function are drawn (note: the number is valid only for a certain sequence, for other sequences they could either be more or less)
 		 * 
 		 * @return the list of lines that can be safely drawn
 		 */
@@ -58,7 +58,7 @@ class aiController
 
 	protected:
 		/**
-		 * @return list of moves that are safe (squares surraounded by 2 lines are avoided)
+		 * @return list of moves that are safe (squares surrounded by 2 lines are avoided)
 		 */
 		QList<int> safeMoves() const;
 		/**

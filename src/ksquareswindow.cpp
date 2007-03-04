@@ -94,11 +94,14 @@ void KSquaresWindow::gameNew()
 	dialog.spinNumOfPlayers->setValue(Settings::numOfPlayers());
 	dialog.spinHeight->setValue(Settings::boardHeight());
 	dialog.spinWidth->setValue(Settings::boardWidth());
+	if (Settings::quickStart() == 2)
+		dialog.quickStartCheck->setCheckState(Qt::Checked);
+	else
+		dialog.quickStartCheck->setCheckState(Qt::Unchecked);
 	
 	//run dialog
 	dialog.exec();
-	// FIXME: will not work on the first dialog
-	//if (dialog.result() == QDialog::Rejected) kapp->quit();	//not sure we want to quit from 'New Game' dialog
+	if (dialog.result() == QDialog::Rejected) return;
 	
 	//save settings
 	Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
@@ -119,6 +122,8 @@ void KSquaresWindow::gameNew()
 	
 	Settings::setBoardHeight(dialog.spinHeight->value());
 	Settings::setBoardWidth(dialog.spinWidth->value());
+	Settings::setQuickStart(dialog.quickStartCheck->checkState());
+	kDebug() << "pah: " << dialog.quickStartCheck->checkState() << endl;
 	Settings::writeConfig();
 	
 	//create players
@@ -161,14 +166,17 @@ void KSquaresWindow::gameNew()
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
 	
-	aiController ai(-1, sGame->lines(), QList<int>(), sGame->boardWidth(), sGame->boardHeight());
-	QList<int> lines = ai.autoFill(8);
-	QListIterator<int> i(lines);
- 	while (i.hasNext())
+	if (Settings::quickStart() == 2)
 	{
-		sGame->addLineToIndex(i.next());
+		//This is being done before sGame->start(); to avoid the players cycling
+		aiController ai(-1, sGame->lines(), QList<int>(), sGame->boardWidth(), sGame->boardHeight());
+		QList<int> lines = ai.autoFill(8);	//There will be 8 possible safe move for the players
+		QListIterator<int> i(lines);
+		while (i.hasNext())
+		{
+			sGame->addLineToIndex(i.next());
+		}
 	}
-		
 	sGame->start();
 }
 

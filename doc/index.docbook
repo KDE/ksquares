@@ -81,14 +81,15 @@
   <title>Using &ksquares;</title>
   
   <para>
-  Each player takes it in turns to draw a line between two ajacent dots on the board.
+  Each player takes it in turns to draw a line between two adjacent dots on the board. The yellow indicator line shows you where your line will be placed when you click.
   If a player completes a square by placing the fourth of the four lines around the square, they must take another go.
+  The game continues until every square on the board is completed.
   </para>
 
 </chapter>
 
 <chapter id="menu-reference">
-  <title>The menu referance</title>
+  <title>The menu reference</title>
   
   <sect1 id="file-game-menu-reference">
     <title>The File/Game Menu</title>

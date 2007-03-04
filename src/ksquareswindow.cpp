@@ -261,6 +261,8 @@ void KSquaresWindow::setupActions()
 	resetGame->setText(i18n("Reset"));
 	resetGame->setIcon(KIcon("view-refresh"));
 	resetGame->setShortcut(Qt::ControlModifier + Qt::Key_R);
+	resetGame->setToolTip("Start a new game with the current settings");
+	resetGame->setStatusTip("Start a new game with the current settings");
 	actionCollection() -> addAction("game_reset", resetGame);
 	connect(resetGame, SIGNAL(triggered()), this, SLOT(gameReset()));
 	

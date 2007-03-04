@@ -1,3 +1,6 @@
+#macro_optional_find_package(LibKDEGames)
+#macro_log_feature(KDEGAMES_FOUND "LibKDEGames" "KDE Games Library" "games.kde.org" FALSE "" "")
+
 set(ksquares_SRCS
 	main.cpp
 	ksquareswindow.cpp

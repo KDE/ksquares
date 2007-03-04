@@ -26,12 +26,12 @@ QList<int> aiController::autoFill(int safeMovesLeft)
 	
 	// add a random safe moves while there are safe moves left
 	QList<int> next;
-	kDebug() << safeMoves().isEmpty() << endl;
+	//kDebug() << safeMoves().isEmpty() << endl;
 	while( !( (next = safeMoves()).isEmpty() ) )
 	{
 		int nextLine = next[rand() % next.size()];
 		lines[nextLine] = true;
-		kDebug() << nextLine << endl;
+		//kDebug() << nextLine << endl;
 		fillLines << nextLine;
 	}
 	

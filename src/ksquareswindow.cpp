@@ -41,12 +41,12 @@
 #include "scoresdialog.h"
 
 KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
-{	
+{
 	sGame = new KSquaresGame();
 	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
 	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
 	
-    m_view->setRenderHints(QPainter::Antialiasing);
+	m_view->setRenderHints(QPainter::Antialiasing);
 	m_view->setFrameStyle(QFrame::NoFrame);
 	setCentralWidget(m_view);
 	setupActions();
@@ -123,12 +123,16 @@ void KSquaresWindow::gameNew()
 	Settings::setBoardHeight(dialog.spinHeight->value());
 	Settings::setBoardWidth(dialog.spinWidth->value());
 	Settings::setQuickStart(dialog.quickStartCheck->checkState());
-	kDebug() << "pah: " << dialog.quickStartCheck->checkState() << endl;
 	Settings::writeConfig();
 	
+	gameReset();
+}
+
+void KSquaresWindow::gameReset()
+{
 	//create players
 	QVector<KSquaresPlayer> playerList;
-	for(int i=0; i<dialog.spinNumOfPlayers->value(); i++)
+	for(int i=0; i<Settings::numOfPlayers(); i++)
 	{
 		QColor color;
 		switch(i)
@@ -148,12 +152,12 @@ void KSquaresWindow::gameNew()
 			default:
 				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
 		}
-		playerList.append(KSquaresPlayer(nameLineEditList.at(i)->text(), color, humanCheckBoxList.at(i)->isChecked()));
+		playerList.append(KSquaresPlayer(Settings::playerNames().at(i), color, Settings::humanList().at(i)));
 	}
 	
 	//create physical board
 	GameBoardScene* temp = m_scene;
-	m_scene = new GameBoardScene(dialog.spinWidth->value(), dialog.spinHeight->value());
+	m_scene = new GameBoardScene(Settings::boardWidth(), Settings::boardHeight());
 	
 	m_view->setScene(m_scene);
 	delete temp;
@@ -161,7 +165,7 @@ void KSquaresWindow::gameNew()
 	m_view->setBoardSize();	//refresh board zooming
 	
 	//start game etc.
-	sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
+	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
 	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
@@ -252,6 +256,14 @@ void KSquaresWindow::aiChooseLine()
 void KSquaresWindow::setupActions()
 {	
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	
+	KAction *resetGame = new KAction(this);
+	resetGame->setText(i18n("Reset"));
+	resetGame->setIcon(KIcon("view-refresh"));
+	resetGame->setShortcut(Qt::ControlModifier + Qt::Key_R);
+	actionCollection() -> addAction("game_reset", resetGame);
+	connect(resetGame, SIGNAL(triggered()), this, SLOT(gameReset()));
+	
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	

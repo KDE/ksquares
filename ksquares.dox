@@ -30,8 +30,6 @@
         \todo foreach for QLists in AI class
 	
 	\todo valgrind
-	
-	\todo Fix board resizing on first game start
 */
 
 /*!

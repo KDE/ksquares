@@ -153,13 +153,23 @@ void KSquaresWindow::gameNew()
 	m_view->setScene(m_scene);
 	delete temp;
 	
-	//m_view->setBoardSize();	//refresh board zooming
+	m_view->setBoardSize();	//refresh board zooming
 	
 	//start game etc.
 	sGame->createGame(playerList, dialog.spinWidth->value(), dialog.spinHeight->value());
 	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
+	
+	aiController ai(-1, sGame->lines(), QList<int>(), sGame->boardWidth(), sGame->boardHeight());
+	QList<int> lines = ai.autoFill(8);
+	QListIterator<int> i(lines);
+ 	while (i.hasNext())
+	{
+		sGame->addLineToIndex(i.next());
+	}
+		
+	sGame->start();
 }
 
 void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)

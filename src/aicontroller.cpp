@@ -16,10 +16,37 @@
 
 aiController::aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
 {
+	srand( (unsigned)time( NULL ) );
 	kDebug() << "AI: Starting AI..." << endl;
 }
 
-int aiController::chooseLine()
+QList<int> aiController::autoFill(int safeMovesLeft)
+{
+	QList<int> fillLines;
+	
+	// add a random safe moves while there are safe moves left
+	QList<int> next;
+	kDebug() << safeMoves().isEmpty() << endl;
+	while( !( (next = safeMoves()).isEmpty() ) )
+	{
+		int nextLine = next[rand() % next.size()];
+		lines[nextLine] = true;
+		kDebug() << nextLine << endl;
+		fillLines << nextLine;
+	}
+	
+	// safeMovesLeft times delete a line from fillLines
+	for (int i = 0; i<safeMovesLeft; ++i)
+	{
+		if (fillLines.isEmpty()) break;
+		int index = rand() % fillLines.size();
+		fillLines.removeAt(index);
+	}
+	
+	return fillLines;
+}
+
+int aiController::chooseLine() const
 {
 	QList<int> choiceList;
 	for(int i=0; i<lines.size(); i++)	//trying to get points. looking for squares with 3 lines
@@ -40,38 +67,16 @@ int aiController::chooseLine()
 	}
 	if(choiceList.size() != 0)
 	{
-		srand( (unsigned)time( NULL ) );
 		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
 		int randChoice = (short)(randomFloat)/1;
 		kDebug() << "AI: 1. Drawing line at index: " << choiceList.at(randChoice) << endl;
 		return choiceList.at(randChoice);
 	}
 	
-	choiceList.clear();
-	for(int i=0; i<lines.size(); i++)	//finding totally safe moves. avoiding squares with 2 lines
-	{
-		if(!lines.at(i))
-		{
-			QList<int> adjacentSquares = squaresFromLine(i);
-			int badCount = 0;
-			for(int j=0; j<adjacentSquares.size(); j++)
-			{
-				
-				if(countBorderLines(adjacentSquares.at(j), lines) == 2)	//don't want to make 3 lines around a square
-				{
-					badCount++;
-				}
-			}
-			if(badCount == 0)
-			{
-				choiceList.append(i);
-				//kDebug() << "AI: 2. Adding " << i << " to choices" << endl;
-			}
-		}
-	}
+	choiceList = safeMoves();
+	
 	if(choiceList.size() != 0)
 	{
-		srand( (unsigned)time( NULL ) );
 		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
 		int randChoice = (short)(randomFloat)/1;
 		kDebug() << "AI: 2. Drawing line at index: " << choiceList.at(randChoice) << endl;
@@ -100,7 +105,6 @@ int aiController::chooseLine()
 		QList<int> goodChoiceList = chooseLeastDamaging(choiceList);
 		if(goodChoiceList.size() != 0)
 		{
-			srand( (unsigned)time( NULL ) );
 			float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(goodChoiceList.size()-1);
 			int randChoice = (short)(randomFloat)/1;
 			kDebug() << "AI: 3. Drawing line at index: " << goodChoiceList.at(randChoice) << endl;
@@ -110,7 +114,6 @@ int aiController::chooseLine()
 	QList<int> goodcChoiceList = chooseLeastDamaging(choiceList);
 	if(choiceList.size() != 0)
 	{
-		srand( (unsigned)time( NULL ) );
 		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
 		int randChoice = (short)(randomFloat)/1;
 		kDebug() << "AI: 3. Drawing line at index: " << choiceList.at(randChoice) << endl;
@@ -119,7 +122,33 @@ int aiController::chooseLine()
         return 0;
 }
 
-QList<int> aiController::chooseLeastDamaging(QList<int> choiceList)
+QList<int> aiController::safeMoves() const
+{
+	QList<int> safeLines;
+	for(int i=0; i<lines.size(); i++)	//finding totally safe moves. avoiding squares with 2 lines
+	{
+		if(!lines.at(i))
+		{
+			QList<int> adjacentSquares = squaresFromLine(i);
+			int badCount = 0;
+			for(int j=0; j<adjacentSquares.size(); j++)
+			{
+				if(countBorderLines(adjacentSquares.at(j), lines) == 2)	//don't want to make 3 lines around a square
+				{
+					badCount++;
+				}
+			}
+			if(badCount == 0)
+			{
+				safeLines.append(i);
+				//kDebug() << "AI: 2. Adding " << i << " to choices" << endl;
+			}
+		}
+	}
+	return safeLines;
+}
+
+QList<int> aiController::chooseLeastDamaging(QList<int> choiceList) const
 {
 	//kDebug() << "AI: Checking " << choiceList.size() << " possible moves" << endl;
 	QMap<int,int> linePointDamage;	//this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line

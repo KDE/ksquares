@@ -49,7 +49,6 @@ void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWid
 	//END Initialisation
 	
 	kDebug() << "Game Starting" << endl;
-	gameInProgress = true;
 	nextPlayer();
 }
 
@@ -123,20 +122,28 @@ void KSquaresGame::resetEverything()
 
 void KSquaresGame::addLineToIndex(int index)
 {
-	if (lineList[index] == false)	//if there's not a line there yet, do checks
+	if (lineList[index] == true)	//if there is already a line
 	{
-		lineList[index] = true;
-		
-		if(Settings::drawLinePlayerColor() == true)
-		{
-			emit drawLine(index, Settings::lineColor());	//this needs to change! Player's custom colour
-		}
-		else
-		{
-			emit drawLine(index, Settings::lineColor());
-		}
-		checkForNewSquares();
+		kWarning() << "KSquaresGame::addLineToIndex():" 
+				   << "trying to add line already there!" << endl;
+		return;
 	}
+	lineList[index] = true;
+		
+	QColor color;
+	if (Settings::drawLinePlayerColor() == true)
+	{
+		color = Settings::lineColor();	//this needs to change! Player's custom colour
+	}
+	else
+	{
+		color = Settings::lineColor();
+	}
+	
+	emit drawLine(index, color);
+	
+	if (gameInProgress)
+		checkForNewSquares();
 }
 
 void KSquaresGame::checkForNewSquares()

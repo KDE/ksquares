@@ -47,15 +47,26 @@ class aiController
 		 *
 		 * @return The index of the line from "QVector<bool> lines"
 		 */
-		int chooseLine();
+		int chooseLine() const;
+		/**
+		 * Finds lines that can be filled without causing squares to be surrounded by 3 lines as a result.
+		 * @param safeMovesLeft number of safe moves that can be performed after those returned be the function are drawn (note: the number is valid only for a certain sequence, for other sequences they could either be more or less)
+		 * 
+		 * @return the list of lines that can be safely drawn
+		 */
+		QList<int> autoFill(int safeMovesLeft);
 
 	protected:
+		/**
+		 * @return list of moves that are safe (squares surraounded by 2 lines are avoided)
+		 */
+		QList<int> safeMoves() const;
 		/**
 		 * @param choiceList list of indices (of lines) which have squares next to them with two lines drawn (relates to @ref lines )
 		 *
 		 * @return list of indices (of lines) which would be the least damaging in the short term
 		 */
-		QList<int> chooseLeastDamaging(QList<int> choiceList);
+		QList<int> chooseLeastDamaging(QList<int> choiceList) const;
 		/**
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
 		 * @param linesList the linesList you want to work from

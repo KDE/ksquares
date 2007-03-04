@@ -58,7 +58,14 @@ class KSquaresGame : public QObject
 		 * @param startHeight the height of the game board
 		 */
 		void createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight);
-		
+		/**
+		 * Starts the game
+		 */
+		void start() {gameInProgress = true;}
+		/**
+		 * Stops the game
+		 */
+		void stop() {gameInProgress = false;}
 		/**
 		 * @return the id of the current player. 0 >= id \< number of players
 		 */

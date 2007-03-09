@@ -6,5 +6,6 @@ Icon=ksquares
 Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
+GenericName[el]=Συνδέστε τις τελείες για να σχηματίσετε τετράγωνα
 Terminal=false
 Categories=Qt;KDE;Game;PuzzleGame;

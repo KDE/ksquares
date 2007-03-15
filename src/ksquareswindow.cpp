@@ -279,13 +279,13 @@ void KSquaresWindow::optionsPreferences()
 {
 	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
 	
-	QWidget *displaySettingsDlg = new QWidget;
-	ui_prefs_display.setupUi(displaySettingsDlg);
-	dialog->addPage(displaySettingsDlg, i18n("Display"), "ksquares_display");
+	QWidget *displaySettingsDialog = new QWidget;
+	ui_prefs_display.setupUi(displaySettingsDialog);
+	dialog->addPage(displaySettingsDialog, i18n("Display"), "ksquares_display");
 	
-	QWidget *aiSettingsDlg = new QWidget;
-	ui_prefs_ai.setupUi(aiSettingsDlg);
-	dialog->addPage(aiSettingsDlg, i18n("Computer Player"), "ksquares_ai");
+	QWidget *aiSettingsDialog = new QWidget;
+	ui_prefs_ai.setupUi(aiSettingsDialog);
+	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "ksquares_ai");
 	
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();

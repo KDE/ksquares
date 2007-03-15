@@ -68,7 +68,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Human?</string>
+         <string>Hum&amp;an?</string>
         </property>
         <property name="checked" >
          <bool>true</bool>
@@ -87,7 +87,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Human?</string>
+         <string>Hu&amp;man?</string>
         </property>
         <property name="checked" >
          <bool>true</bool>
@@ -168,7 +168,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Human?</string>
+         <string>&amp;Human?</string>
         </property>
         <property name="checked" >
          <bool>true</bool>
@@ -222,7 +222,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Human?</string>
+         <string>H&amp;uman?</string>
         </property>
         <property name="checked" >
          <bool>true</bool>

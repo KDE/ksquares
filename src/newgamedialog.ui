@@ -6,7 +6,7 @@
     <x>0</x>
     <y>0</y>
     <width>368</width>
-    <height>400</height>
+    <height>397</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -16,11 +16,20 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <layout class="QVBoxLayout" >
-   <property name="margin" >
-    <number>9</number>
-   </property>
    <property name="spacing" >
     <number>6</number>
+   </property>
+   <property name="leftMargin" >
+    <number>9</number>
+   </property>
+   <property name="topMargin" >
+    <number>9</number>
+   </property>
+   <property name="rightMargin" >
+    <number>9</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>9</number>
    </property>
    <item>
     <widget class="QGroupBox" name="groupBox" >
@@ -34,10 +43,22 @@ p, li { white-space: pre-wrap; }
       <string>Players</string>
      </property>
      <layout class="QGridLayout" >
-      <property name="margin" >
+      <property name="leftMargin" >
        <number>9</number>
       </property>
-      <property name="spacing" >
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing" >
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing" >
        <number>6</number>
       </property>
       <item row="4" column="0" >
@@ -45,8 +66,8 @@ p, li { white-space: pre-wrap; }
         <property name="whatsThis" >
          <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The name of the second player&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans';">The name of the fourth player&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
          <string>Player 4:</string>
@@ -99,8 +120,8 @@ p, li { white-space: pre-wrap; }
         <property name="whatsThis" >
          <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The name of the first player&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The name of the third player&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
          <string>Player 3:</string>
@@ -141,18 +162,16 @@ p, li { white-space: pre-wrap; }
          <bool>true</bool>
         </property>
         <property name="sizePolicy" >
-         <sizepolicy>
-          <hsizetype>7</hsizetype>
-          <vsizetype>0</vsizetype>
+         <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="maximum" >
-         <number>4</number>
-        </property>
         <property name="minimum" >
          <number>2</number>
+        </property>
+        <property name="maximum" >
+         <number>4</number>
         </property>
        </widget>
       </item>
@@ -244,10 +263,22 @@ p, li { white-space: pre-wrap; }
       <string>Game Board</string>
      </property>
      <layout class="QGridLayout" >
-      <property name="margin" >
+      <property name="leftMargin" >
        <number>9</number>
       </property>
-      <property name="spacing" >
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing" >
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing" >
        <number>6</number>
       </property>
       <item row="0" column="0" >
@@ -269,18 +300,16 @@ p, li { white-space: pre-wrap; }
       <item row="1" column="1" >
        <widget class="QSpinBox" name="spinHeight" >
         <property name="sizePolicy" >
-         <sizepolicy>
-          <hsizetype>7</hsizetype>
-          <vsizetype>0</vsizetype>
+         <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="maximum" >
-         <number>30</number>
-        </property>
         <property name="minimum" >
          <number>1</number>
+        </property>
+        <property name="maximum" >
+         <number>30</number>
         </property>
         <property name="value" >
          <number>10</number>
@@ -306,18 +335,16 @@ p, li { white-space: pre-wrap; }
       <item row="0" column="1" >
        <widget class="QSpinBox" name="spinWidth" >
         <property name="sizePolicy" >
-         <sizepolicy>
-          <hsizetype>7</hsizetype>
-          <vsizetype>0</vsizetype>
+         <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="maximum" >
-         <number>50</number>
-        </property>
         <property name="minimum" >
          <number>2</number>
+        </property>
+        <property name="maximum" >
+         <number>50</number>
         </property>
         <property name="value" >
          <number>10</number>
@@ -339,10 +366,22 @@ p, li { white-space: pre-wrap; }
       <string>Game Settings</string>
      </property>
      <layout class="QGridLayout" >
-      <property name="margin" >
+      <property name="leftMargin" >
        <number>9</number>
       </property>
-      <property name="spacing" >
+      <property name="topMargin" >
+       <number>9</number>
+      </property>
+      <property name="rightMargin" >
+       <number>9</number>
+      </property>
+      <property name="bottomMargin" >
+       <number>9</number>
+      </property>
+      <property name="horizontalSpacing" >
+       <number>6</number>
+      </property>
+      <property name="verticalSpacing" >
        <number>6</number>
       </property>
       <item row="0" column="0" >
@@ -375,41 +414,11 @@ p, li { white-space: pre-wrap; }
     </spacer>
    </item>
    <item>
-    <layout class="QHBoxLayout" >
-     <property name="margin" >
-      <number>0</number>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
-     <property name="spacing" >
-      <number>6</number>
-     </property>
-     <item>
-      <spacer>
-       <property name="orientation" >
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" >
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QPushButton" name="cancelButton" >
-       <property name="text" >
-        <string>Ok</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="quitButton" >
-       <property name="text" >
-        <string>Cancel</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -429,34 +438,34 @@ p, li { white-space: pre-wrap; }
  <resources/>
  <connections>
   <connection>
-   <sender>cancelButton</sender>
-   <signal>clicked()</signal>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
    <receiver>NewGameDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>218</x>
-     <y>330</y>
+     <x>217</x>
+     <y>370</y>
     </hint>
     <hint type="destinationlabel" >
-     <x>164</x>
-     <y>324</y>
+     <x>38</x>
+     <y>395</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>quitButton</sender>
-   <signal>clicked()</signal>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
    <receiver>NewGameDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel" >
-     <x>316</x>
-     <y>335</y>
+     <x>307</x>
+     <y>368</y>
     </hint>
     <hint type="destinationlabel" >
-     <x>54</x>
-     <y>314</y>
+     <x>366</x>
+     <y>379</y>
     </hint>
    </hints>
   </connection>

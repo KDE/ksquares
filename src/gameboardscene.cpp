@@ -14,7 +14,6 @@
 
 #include <kdebug.h>
 
-#include "settings.h"
 #include "gameboardscene.h"
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)

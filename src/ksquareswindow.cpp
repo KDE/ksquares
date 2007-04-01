@@ -13,18 +13,16 @@
 //qt
 #include <QStandardItemModel>
 #include <QList>
-#include <QRectF>
 #include <QTimer> // testing only
 
 //kde
-#include <KDE/KApplication>
-#include <KDE/KConfigDialog>
-#include <KDE/KStatusBar>
-#include <KDE/KStandardAction>
-#include <KDE/KActionCollection>
+#include <KApplication>
+#include <KConfigDialog>
+#include <KStatusBar>
+#include <KActionCollection>
 #include <kdebug.h>
-#include <KDE/KLocale>
-#include <KDE/KCursor>
+#include <KLocale>
+#include <KCursor>
 #include <khighscore.h>
 #include <kexthighscore.h>
 #include <kstandardgameaction.h>
@@ -55,7 +53,7 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 	setAutoSaveSettings();
 }
 
-/*KSquaresWindow::~KSquares()
+/*KSquaresWindow::~KSquaresWindow()
 {
 }*/
 

@@ -7,7 +7,6 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include "settings.h"
 #include "gameboardview.h"
 
 GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)

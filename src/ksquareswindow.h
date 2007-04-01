@@ -42,8 +42,8 @@ class KSquaresWindow : public KMainWindow
 		//virtual ~KSquaresWindow();
 	
 	public slots:
-		/*void  showHighscores();
-		void  configureHighscores();*/
+		void  showHighscores();
+		void  configureHighscores();
 		///Launch the new game dialog and create a new game
 		void gameNew();
 		///Start a new game with the same settings (read from KConfig Settings)

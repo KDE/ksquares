@@ -11,6 +11,8 @@ set(ksquares_SRCS
 	newgamedialog.cpp
 )
 
+include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)
+
 kde4_automoc(${ksquares_SRCS})
 
 kde4_add_ui_files(ksquares_SRCS newgamedialog.ui scoresdialog.ui prefs_ai.ui prefs_display.ui)

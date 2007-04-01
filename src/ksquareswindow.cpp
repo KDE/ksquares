@@ -25,8 +25,8 @@
 #include <kdebug.h>
 #include <KDE/KLocale>
 #include <KDE/KCursor>
-/*#include <khighscore.h>
-#include <kexthighscore.h>*/
+#include <khighscore.h>
+#include <kexthighscore.h>
 #include <kstandardgameaction.h>
 
 //generated
@@ -59,8 +59,8 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 {
 }*/
 
-/*void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
-void KSquaresWindow::showHighscores() {KExtHighscore::show(this);}*/
+void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
+void KSquaresWindow::showHighscores() {KExtHighscore::show(this);}
 
 void KSquaresWindow::gameNew()
 {
@@ -190,10 +190,10 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	
 	QStandardItemModel* scoreTableModel = new QStandardItemModel();
 	scoreTableModel->setRowCount(playerList.size());
-	scoreTableModel->setColumnCount(3);
+	scoreTableModel->setColumnCount(2);
 	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
-	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Score"));
-	scoreTableModel->setHeaderData(2, Qt::Horizontal, i18n("Global Score"));
+	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Completed Squares"));
+	//scoreTableModel->setHeaderData(2, Qt::Horizontal, i18n("Global Score"));
 	
 	qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
 	for(int i = 0; i <  playerList.size(); i++)
@@ -204,9 +204,9 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 		temp.setNum(playerList.at(i).score());
 		scoreTableModel->setItem(i, 1, new QStandardItem(temp));
 		
-		qreal score = qreal(playerList.at(i).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size()));
+		/*qreal score = qreal(playerList.at(i).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size()));
 		temp.setNum(score);
-		scoreTableModel->setItem(i, 2, new QStandardItem(temp));
+		scoreTableModel->setItem(i, 2, new QStandardItem(temp));*/
 	}
 	
 	scoresDialog.scoreTable->setModel(scoreTableModel);
@@ -216,9 +216,13 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	
 	if(playerList.at(0).isHuman())
 	{
-		/*KExtHighscore::Score score(KExtHighscore::Won);
+		KExtHighscore::Score score(KExtHighscore::Won);
 		score.setScore(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size())));
-		KExtHighscore::submitScore(score, this);*/
+		KExtHighscore::submitScore(score, this);
+		/*KHighscore table;
+		table.setHighscoreGroup("Easy");
+		table.writeEntry(1, "name", playerList.at(0).name());
+		table.writeEntry(1, "score", playerList.at(0).score());*/
 	}
 }
 
@@ -269,8 +273,8 @@ void KSquaresWindow::setupActions()
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 	
-	/*KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
-	KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());*/
+	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
+	//KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());
 	
 	setupGUI();
 }

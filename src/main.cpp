@@ -12,8 +12,8 @@
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
 #include <klocale.h>
-/*#include <khighscore.h>
-#include <kexthighscore.h>*/
+#include <khighscore.h>
+#include <kexthighscore.h>
 
 #include <kdebug.h>
 
@@ -33,8 +33,8 @@ int main(int argc, char **argv)
 	
 	KApplication app;
 	
-	/*KHighscore::init("ksquares");
-	KExtHighscore::Manager highscoresManager;*/
+	KHighscore::init("ksquares");
+	KExtHighscore::Manager highscoresManager;
 	
 	KSquaresWindow *mainWindow = new KSquaresWindow;
 	mainWindow->show();

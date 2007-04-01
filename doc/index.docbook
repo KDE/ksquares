@@ -78,12 +78,15 @@
 </chapter>
 
 <chapter id="playing-ksquares">
-  <title>Using &ksquares;</title>
+  <title>Playing &ksquares;</title>
   
   <para>
   Each player takes it in turns to draw a line between two adjacent dots on the board. The yellow indicator line shows you where your line will be placed when you click.
   If a player completes a square by placing the fourth of the four lines around the square, they must take another go.
   The game continues until every square on the board is completed.
+  </para>
+  <para>
+  To start a new game with custom settings (number of players, player names, board size) click on the "New" toolbar item or go to File→New. To start a new game with the same settings as the current game, click on "Reset in the toolbar."
   </para>
 
 </chapter>
@@ -97,23 +100,39 @@
     <para>
     <variablelist>
     <varlistentry>
-    <term><menuchoice>
+    <term>
+    <menuchoice>
     <shortcut>
     <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
     </shortcut>
     <guimenu>File</guimenu>
     <guimenuitem>New</guimenuitem>
-    </menuchoice></term>
+    </menuchoice>
+    </term>
     <listitem><para><action>Start a new game</action></para></listitem>
     </varlistentry>
     <varlistentry>
-    <term><menuchoice>
+    <term>
+    <menuchoice>
+    <shortcut>
+    <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
+    </shortcut>
+    <guimenu>File</guimenu>
+    <guimenuitem>Show Highscores</guimenuitem>
+    </menuchoice>
+    </term>
+    <listitem><para><action>Displays</action> the highscore table</para></listitem>
+    </varlistentry>
+    <varlistentry>
+    <term>
+    <menuchoice>
     <shortcut>
     <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
     </shortcut>
     <guimenu>File</guimenu>
     <guimenuitem>Quit</guimenuitem>
-    </menuchoice></term>
+    </menuchoice>
+    </term>
     <listitem><para><action>Quits</action> &ksquares;</para></listitem>
     </varlistentry>
     </variablelist>

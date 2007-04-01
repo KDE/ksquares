@@ -17,23 +17,21 @@
 	
 	\todo A more obvious sign of where the computer player has moved
 	
-	\todo *Not yet* Hints
-	
-        \todo "Global Score" renaming
-	
         \todo Highscore
-	
-        \todo *Not yet* Network play
 	
         \todo Logo/initials/colour/etc. for players squares
 	
         \todo foreach for QLists in AI class
 	
 	\todo valgrind
+	
+	\todo *Not yet* Hints
+	
+        \todo *Not yet* Network play
 */
 
 /*!
-	\namespace KS 
+	\namespace KSquares 
 	\brief Namespace for KSquares only stuff
 	
 	Blah

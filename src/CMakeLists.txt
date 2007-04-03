@@ -10,6 +10,7 @@ set(ksquares_SRCS
 	aicontroller.cpp
 	newgamedialog.cpp
 	ksquaresdemowindow.cpp
+	themegraphicsitems.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)

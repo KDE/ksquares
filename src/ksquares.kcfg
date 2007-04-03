@@ -49,6 +49,5 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 			<whatsthis></whatsthis>
 			<default>255,255,0</default>
 		</entry>
-		
 	</group>
 </kcfg>

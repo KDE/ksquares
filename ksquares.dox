@@ -2,32 +2,45 @@
 \mainpage KSquares
 
 \section intro_sec Introduction
+
+KSquares is a KDE implementation of the game "squares"
+
+\section overview_sec Overview
+
+The overall game is masterminded from @ref KSquaresWindow.
+That class creates a @ref KSquaresGame object which handles the game logic such as moving from player to player and tracking when points are scored.
+The information for each player is stored in @ref KSquaresPlayer of which KSquaresGame has an array.
+When a KSquaresGame event occurs it emits a signal which is picked up by the KSquaresWindow and passed onto the @ref GameBoardScene which is responsible for holding the information about the game board.
+The GameBoardScene emits signal when a line is drawn which passes via the KSquaresWindow back to KSquaresGame.
+
+\section index_sec Layout of indices
+
+In @ref KSquaresGame, @ref GameBoardScene and @ref aiController there is a consistent indexing rule for accesing the tables.
+
+For the list of squares and their owners, the indices simply count from left to right along the top row of the board, then along the second row etc.
+
+For the list of lines and whether they're drawn, the indices count from left to right along the top row of horizontal lines, then (left to right) along the first row of vertical lines etc.
+
+\image html ksquaresindex.png
+
+\section todo_sec TODO
+
+\todo A more obvious sign of where the computer player has moved
+
+\todo Highscore
+
+\todo Logo/initials/colour/etc. for players squares
+
+\todo Themeable game board. Subclass all the QGraphicsItems and handle the theming there :D
+QGraphicsLineItem (feint lines, completed lines), QGraphicsEllipseItem (dots), QGraphicsRectItem(completed squares)
+
+\todo foreach for QLists in AI class
+
+\todo valgrind
+
+\todo *Not yet* Hints
 	
-	KSquares is a KDE implementation of the game "squares"
-	
-	\section index_sec Layout of indices
-	
-	In @ref KSquaresGame, @ref GameBoardScene and @ref aiController there is a consistent indexing rule for accesing the tables.
-	
-	For the list of squares and their owners, the indices simply count from left to right along the top row of the board, then along the second row etc.
-	
-	For the list of lines and whether they're drawn, the indices count from left to right along the top row of horizontal lines, then (left to right) along the first row of vertical lines etc.
-	
-	\image html ksquaresindex.png
-	
-	\todo A more obvious sign of where the computer player has moved
-	
-        \todo Highscore
-	
-        \todo Logo/initials/colour/etc. for players squares
-	
-        \todo foreach for QLists in AI class
-	
-	\todo valgrind
-	
-	\todo *Not yet* Hints
-	
-        \todo *Not yet* Network play
+\todo *Not yet* Network play
 */
 
 /*!

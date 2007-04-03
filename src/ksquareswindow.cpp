@@ -12,7 +12,6 @@
 
 //qt
 #include <QStandardItemModel>
-#include <QList>
 #include <QTimer> // testing only
 
 //kde
@@ -23,7 +22,7 @@
 #include <kdebug.h>
 #include <KLocale>
 #include <KCursor>
-#include <khighscore.h>
+#include <KScoreDialog>
 #include <kexthighscore.h>
 #include <kstandardgameaction.h>
 
@@ -214,13 +213,9 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	
 	if(playerList.at(0).isHuman())
 	{
-		KExtHighscore::Score score(KExtHighscore::Won);
-		score.setScore(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size())));
-		KExtHighscore::submitScore(score, this);
-		/*KHighscore table;
-		table.setHighscoreGroup("Easy");
-		table.writeEntry(1, "name", playerList.at(0).name());
-		table.writeEntry(1, "score", playerList.at(0).score());*/
+		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+		ksdialog.addScore(playerList.at(0).score(), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name());
+		ksdialog.exec();
 	}
 }
 

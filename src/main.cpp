@@ -60,6 +60,7 @@ int main(int argc, char **argv)
 		mainWindow->show();
 		mainWindow->gameNew();
 	}
+	args->clear();
 	
 	return app.exec();
 }

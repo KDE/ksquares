@@ -11,7 +11,6 @@
 #include "ksquaresdemowindow.h"
 
 //qt
-#include <QList>
 #include <QTimer>
 
 //kde

@@ -233,14 +233,14 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//kDebug() << "Humans's Turn" << endl;
 		//Let the human player interact with the board through the GameBoardView
 		
-		setCursor(KCursor::arrowCursor());
+		setCursor(Qt::ArrowCursor);
 		m_scene->enableEvents();
 	}
 	else	//AI
 	{
 		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
-		setCursor(KCursor::waitCursor());
+		setCursor(Qt::WaitCursor);
 		m_scene->disableEvents();
 		
 		// testing only

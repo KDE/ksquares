@@ -51,19 +51,19 @@ class GameBoardScene : public QGraphicsScene
 		 * @param index the line-index of the line
 		 * @param colour the colour of the line
 		 */
-		void drawLine(int index, QColor colour);
+		void drawLine(int index, const QColor& colour);
 		/**
 		 * Fill a box to show it is owned be a particular player.
 		 * @param index the square-index of the square
 		 * @param colour the colour fill of the square
 		 */
-		void drawSquare(int index, QColor colour);
+                void drawSquare(int index, const QColor& colour);
 		/// disables mouse events
 		void enableEvents() {acceptEvents = true;}
 		/// enables mouse events
                 void disableEvents() {acceptEvents = false;}
 		/// Displays the scores of the finished game
-                void displayScoreTable(QVector<KSquaresPlayer> playerList);
+                void displayScoreTable(const QVector<KSquaresPlayer>& playerList);
 		
 	protected:
 		/**
@@ -71,19 +71,19 @@ class GameBoardScene : public QGraphicsScene
 		 * @param pos the point in question
 		 * @return QList of (hopefully 2) QGraphicsEllipseItem*s
 		 */
-		QList<QGraphicsEllipseItem*> getTwoNearestPoints(QPointF pos) const;
+		QList<QGraphicsEllipseItem*> getTwoNearestPoints(const QPointF& pos) const;
 		
 		/**
 		 * Given a pair of points, returns whether there is already a line there.
 		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
 		 * @return trur if there is a line there
 		 */
-		bool isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const;
+		bool isLineAlready(const QList<QGraphicsEllipseItem*>& pointPair) const;
 		/**
 		 * Adds the line to the index for a specified pair of points.
 		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
 		 */
-		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);
+		void addLineToIndex(const QList<QGraphicsEllipseItem*>& pointPair);
 		
 		//conversion functions
 		/**
@@ -91,7 +91,7 @@ class GameBoardScene : public QGraphicsScene
 		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
 		 * @return the line-index
 		 */
-		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
+		int indexFromPointPair(const QList<QGraphicsEllipseItem*>& pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
 		/**
 		 * Takes a line-index and returns a QGraphicsLineItem located at that position
 		 * @param index the line-index

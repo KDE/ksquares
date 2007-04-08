@@ -57,7 +57,7 @@ class KSquaresGame : public QObject
 		 * @param startWidth the width of the game board
 		 * @param startHeight the height of the game board
 		 */
-		void createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight);
+		void createGame(const QVector<KSquaresPlayer>& startPlayers, int startWidth, int startHeight);
 		/**
 		 * Starts the game
 		 */

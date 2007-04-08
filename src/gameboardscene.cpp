@@ -76,7 +76,7 @@ GameBoardScene::~GameBoardScene()
 	kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
 }
 
-void GameBoardScene::drawLine(int index, QColor colour)
+void GameBoardScene::drawLine(int index, const QColor& colour)
 {
 	QGraphicsLineItem* line = lineFromIndex(index);
 	line->setZValue(10);
@@ -87,14 +87,14 @@ void GameBoardScene::drawLine(int index, QColor colour)
 	update(line->boundingRect());
 }
 
-void GameBoardScene::drawSquare(int index, QColor colour)
+void GameBoardScene::drawSquare(int index, const QColor& colour)
 {
 	QBrush brush(colour, Qt::SolidPattern);
 	
 	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
 
-int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const
+int GameBoardScene::indexFromPointPair(const QList<QGraphicsEllipseItem*>& pointPair) const
 {
 
 	if (pointPair.size() != 2)
@@ -163,7 +163,7 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index) const
 	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
 }
 
-bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const
+bool GameBoardScene::isLineAlready(const QList<QGraphicsEllipseItem*>& pointPair) const
 {
 	int index = indexFromPointPair(pointPair);
 	if (index == -1)
@@ -172,7 +172,7 @@ bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const
 	return lineList.at(index);
 }
 
-void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
+void GameBoardScene::addLineToIndex(const QList<QGraphicsEllipseItem*>& pointPair)
 {
 	int index = indexFromPointPair(pointPair);
 	if (index == -1)	//not a valid line since no two unique ends
@@ -181,7 +181,7 @@ void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 	emit lineDrawn(index);	//addLineToIndex(index);
 }
 
-QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const
+QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(const QPointF& pos) const
 {
 	QList<QGraphicsItem*> itemList = items();
 	QList<QGraphicsEllipseItem*> connectList;
@@ -202,7 +202,7 @@ QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) co
 	return connectList;
 }
 
-void GameBoardScene::displayScoreTable(QVector<KSquaresPlayer> playerList)
+void GameBoardScene::displayScoreTable(const QVector<KSquaresPlayer>& playerList)
 {
         
 }

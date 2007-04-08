@@ -49,7 +49,9 @@ class KSquaresWindow : public KMainWindow
 		void aiChooseLine(); // testing only
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
-		void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board
+                void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board
+                ///Put things that take a while to start in here to make application appear quicker
+                void initObject();
 	
 	private:
 		//void setupAccel();

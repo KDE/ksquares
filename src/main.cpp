@@ -55,7 +55,6 @@ int main(int argc, char **argv)
 	{
 		KSquaresWindow *mainWindow = new KSquaresWindow;
 		mainWindow->show();
-		mainWindow->gameNew();
 	}
 	args->clear();
 	

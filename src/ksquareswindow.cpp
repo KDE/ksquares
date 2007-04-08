@@ -40,22 +40,28 @@
 
 KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
-	sGame = new KSquaresGame();
-	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
-	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
-	
-	m_view->setRenderHints(QPainter::Antialiasing);
-	m_view->setFrameStyle(QFrame::NoFrame);
 	setCentralWidget(m_view);
-	setupActions();
-	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
-	statusBar()->show();
-	setAutoSaveSettings();
+        QTimer::singleShot(0, this, SLOT(initObject()));
 }
 
 /*KSquaresWindow::~KSquaresWindow()
 {
 }*/
+
+void KSquaresWindow::initObject()
+{
+        sGame = new KSquaresGame();
+        connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
+        connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+        m_view->setRenderHints(QPainter::Antialiasing);
+        m_view->setFrameStyle(QFrame::NoFrame);
+        setupActions();
+        statusBar()->insertPermanentItem(i18n("Current Player"), 0);
+        statusBar()->show();
+        setAutoSaveSettings();
+        
+        gameNew();
+}
 
 //void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
 void KSquaresWindow::showHighscores()

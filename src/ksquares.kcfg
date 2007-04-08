@@ -16,7 +16,7 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 		</entry>
 		<entry name="HumanList" type="IntList">
 			<label>Human or AI</label>
-			<default>2,2,2,2</default>
+			<default>2,0,0,0</default>
 		</entry>
 		<entry name="BoardWidth" type="Int">
 			<label>Width of board</label>

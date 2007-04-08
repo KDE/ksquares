@@ -202,6 +202,11 @@ QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) co
 	return connectList;
 }
 
+void GameBoardScene::displayScoreTable(QVector<KSquaresPlayer> playerList)
+{
+        
+}
+
 const QSize GameBoardScene::minimumSizeHint() const
 {
 	return QSize((width*spacing)+10, (height*spacing)+10);	// the +10 is to provide padding and to avoid scrollbars

@@ -12,6 +12,8 @@
 
 #include <QGraphicsScene>
 
+#include "ksquaresplayer.h"
+
 class QGraphicsEllipseItem;
 
 /**
@@ -59,7 +61,9 @@ class GameBoardScene : public QGraphicsScene
 		/// disables mouse events
 		void enableEvents() {acceptEvents = true;}
 		/// enables mouse events
-		void disableEvents() {acceptEvents = false;}
+                void disableEvents() {acceptEvents = false;}
+		/// Displays the scores of the finished game
+                void displayScoreTable(QVector<KSquaresPlayer> playerList);
 		
 	protected:
 		/**
@@ -98,7 +102,7 @@ class GameBoardScene : public QGraphicsScene
 		///Moves to show where the next line will be drawn
 		QGraphicsLineItem* indicatorLine;
 		
-		///A local list of lines (non-canon)
+		///A local list of lines (non-canonical)
 		QList<bool> lineList;	//Just kept in sync with the KSquaresGame one
 		
 		///QGraphicsEllipseItem::type()

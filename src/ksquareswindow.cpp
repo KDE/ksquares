@@ -24,6 +24,7 @@
 #include <KCursor>
 #include <KScoreDialog>
 #include <kexthighscore.h>
+#include <khighscore.h>
 #include <kstandardgameaction.h>
 
 //generated
@@ -56,8 +57,12 @@ KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)
 {
 }*/
 
-void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
-void KSquaresWindow::showHighscores() {KExtHighscore::show(this);}
+//void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
+void KSquaresWindow::showHighscores()
+{
+        KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+        ksdialog.exec();
+}
 
 void KSquaresWindow::gameNew()
 {
@@ -214,8 +219,8 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	if(playerList.at(0).isHuman())
 	{
 		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
-		ksdialog.addScore(playerList.at(0).score(), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name());
-		ksdialog.exec();
+		if(ksdialog.addScore(playerList.at(0).score(), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
+                        ksdialog.exec();
 	}
 }
 

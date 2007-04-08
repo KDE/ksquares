@@ -53,9 +53,6 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		KHighscore::init("ksquares");
-		KExtHighscore::Manager highscoresManager;
-		
 		KSquaresWindow *mainWindow = new KSquaresWindow;
 		mainWindow->show();
 		mainWindow->gameNew();

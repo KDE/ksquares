@@ -12,7 +12,6 @@
 #include <kcmdlineargs.h>
 #include <klocale.h>
 #include <khighscore.h>
-#include <kexthighscore.h>
 
 #include <kdebug.h>
 
@@ -53,12 +52,8 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		KHighscore::init("ksquares");
-		KExtHighscore::Manager highscoresManager;
-		
 		KSquaresWindow *mainWindow = new KSquaresWindow;
 		mainWindow->show();
-		mainWindow->gameNew();
 	}
 	args->clear();
 	

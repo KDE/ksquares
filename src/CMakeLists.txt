@@ -13,7 +13,7 @@ set(ksquares_SRCS
 	themegraphicsitems.cpp
 )
 
-include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)
+include_directories(${CMAKE_SOURCE_DIR}/libkdegames ${CMAKE_SOURCE_DIR}/libkdegames/highscore)
 
 kde4_automoc(${ksquares_SRCS})
 

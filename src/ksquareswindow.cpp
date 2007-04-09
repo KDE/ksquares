@@ -22,8 +22,8 @@
 #include <kdebug.h>
 #include <KLocale>
 #include <KCursor>
-#include <KScoreDialog>
-#include <kexthighscore.h>
+#include <kscoredialog.h>
+#include <khighscore.h>
 #include <kstandardgameaction.h>
 
 //generated
@@ -39,25 +39,35 @@
 
 KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
-	sGame = new KSquaresGame();
-	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
-	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
-	
-	m_view->setRenderHints(QPainter::Antialiasing);
-	m_view->setFrameStyle(QFrame::NoFrame);
 	setCentralWidget(m_view);
-	setupActions();
-	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
-	statusBar()->show();
-	setAutoSaveSettings();
+        QTimer::singleShot(0, this, SLOT(initObject()));
 }
 
 /*KSquaresWindow::~KSquaresWindow()
 {
 }*/
 
-void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
-void KSquaresWindow::showHighscores() {KExtHighscore::show(this);}
+void KSquaresWindow::initObject()
+{
+        sGame = new KSquaresGame();
+        connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
+        connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+        m_view->setRenderHints(QPainter::Antialiasing);
+        m_view->setFrameStyle(QFrame::NoFrame);
+        setupActions();
+        statusBar()->insertPermanentItem(i18n("Current Player"), 0);
+        statusBar()->show();
+        setAutoSaveSettings();
+        
+        gameNew();
+}
+
+//void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
+void KSquaresWindow::showHighscores()
+{
+        KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+        ksdialog.exec();
+}
 
 void KSquaresWindow::gameNew()
 {
@@ -183,16 +193,17 @@ void KSquaresWindow::gameReset()
 
 void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 {
-	ScoresDialog scoresDialog(this);
+        qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
+        //m_scene->displayScoreTable(playerList);
+        
+        ScoresDialog scoresDialog(this);
 	
 	QStandardItemModel* scoreTableModel = new QStandardItemModel();
 	scoreTableModel->setRowCount(playerList.size());
 	scoreTableModel->setColumnCount(2);
 	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
 	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Completed Squares"));
-	//scoreTableModel->setHeaderData(2, Qt::Horizontal, i18n("Global Score"));
 	
-	qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
 	for(int i = 0; i <  playerList.size(); i++)
 	{
 		scoreTableModel->setItem(i, 0, new QStandardItem(playerList.at(i).name()));
@@ -200,22 +211,17 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 		QString temp;
 		temp.setNum(playerList.at(i).score());
 		scoreTableModel->setItem(i, 1, new QStandardItem(temp));
-		
-		/*qreal score = qreal(playerList.at(i).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight())) / (playerList.size()));
-		temp.setNum(score);
-		scoreTableModel->setItem(i, 2, new QStandardItem(temp));*/
 	}
 	
 	scoresDialog.scoreTable->setModel(scoreTableModel);
-	//scoresDialog.scoreTable->adjustSize();
-	
+        scoresDialog.scoreTable->resizeColumnsToContents();
 	scoresDialog.exec();
 	
 	if(playerList.at(0).isHuman())
 	{
 		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
-		ksdialog.addScore(playerList.at(0).score(), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name());
-		ksdialog.exec();
+                if(ksdialog.addScore(int(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight()))) / (playerList.size())), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
+                        ksdialog.exec();
 	}
 }
 

@@ -39,7 +39,7 @@ class KSquaresWindow : public KMainWindow
 	
 	public slots:
 		void  showHighscores();
-		void  configureHighscores();
+		//void  configureHighscores();
 		///Launch the new game dialog and create a new game
 		void gameNew();
 		///Start a new game with the same settings (read from KConfig Settings)
@@ -47,6 +47,7 @@ class KSquaresWindow : public KMainWindow
 	
 	private slots:
 		void aiChooseLine(); // testing only
+                void initObject();
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board

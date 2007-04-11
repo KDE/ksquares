@@ -220,6 +220,7 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	if(playerList.at(0).isHuman())
 	{
 		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+                
                 if(ksdialog.addScore(int(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight()))) / (playerList.size())), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
                         ksdialog.exec();
 	}

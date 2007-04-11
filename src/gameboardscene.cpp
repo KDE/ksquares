@@ -7,14 +7,14 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
+#include "gameboardscene.h"
+
 #include <math.h>
 
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsEllipseItem>
 
 #include <kdebug.h>
-
-#include "gameboardscene.h"
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {

@@ -118,10 +118,10 @@
     <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
     </shortcut>
     <guimenu>File</guimenu>
-    <guimenuitem>Show Highscores</guimenuitem>
+    <guimenuitem>Show High scores</guimenuitem>
     </menuchoice>
     </term>
-    <listitem><para><action>Displays</action> the highscore table</para></listitem>
+    <listitem><para><action>Displays</action> the high score table</para></listitem>
     </varlistentry>
     <varlistentry>
     <term>

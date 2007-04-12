@@ -11,20 +11,20 @@
 #include "ksquareswindow.h"
 
 //qt
-#include <QStandardItemModel>
-#include <QTimer> // testing only
+#include <QtGui/QStandardItemModel>
+#include <QtCore/QTimer>
 
 //kde
 #include <KApplication>
 #include <KConfigDialog>
 #include <KStatusBar>
 #include <KActionCollection>
-#include <kdebug.h>
+#include <KDebug>
 #include <KLocale>
 #include <KCursor>
-#include <kscoredialog.h>
-#include <khighscore.h>
-#include <kstandardgameaction.h>
+#include <KScoreDialog>
+#include <KHighscore>
+#include <KStandardGameAction>
 
 //generated
 #include "settings.h"
@@ -220,9 +220,20 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	if(playerList.at(0).isHuman())
 	{
 		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
-                
+                QString difficulty;
+                switch(Settings::difficulty())
+                {
+                    case 0:
+                        difficulty = "Easy";
+                        break;
+                    case 1:
+                        difficulty = "Medium";
+                        break;
+                }
+                ksdialog.setConfigGroup(difficulty);
                 if(ksdialog.addScore(int(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight()))) / (playerList.size())), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
                         ksdialog.exec();
+                //ksdialog.exec();
 	}
 }
 

@@ -10,7 +10,7 @@
 #ifndef KSQUARESWINDOW_H
 #define KSQUARESWINDOW_H
 
-#include <KMainWindow>
+#include <KXmlGuiWindow>
 
 #include "ksquaresgame.h"
 #include "ui_prefs_ai.h"
@@ -24,19 +24,19 @@ class GameBoardScene;
  * @short Mainwindow class
  *
  * Sets actions, controls the creation of the game class and the GameBoardScene
- * 
+ *
  * @author Matt Williams <matt@milliams.com>
  */
 
-class KSquaresWindow : public KMainWindow
+class KSquaresWindow : public KXmlGuiWindow
 {
 	Q_OBJECT
-			
+
 	public:
 		///Constructor
 		KSquaresWindow();
 		//virtual ~KSquaresWindow();
-	
+
 	public slots:
 		void  showHighscores();
 		//void  configureHighscores();
@@ -44,14 +44,14 @@ class KSquaresWindow : public KMainWindow
 		void gameNew();
 		///Start a new game with the same settings (read from KConfig Settings)
 		void gameReset();
-	
+
 	private slots:
 		void aiChooseLine(); // testing only
                 void initObject();
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(QVector<KSquaresPlayer> playerList);	//when KSquaresGame says the game is over. Display score board
-	
+
 	private:
 		//void setupAccel();
 		void setupActions();
@@ -63,7 +63,7 @@ class KSquaresWindow : public KMainWindow
 		GameBoardScene *m_scene;
 		///The game controller
 		KSquaresGame* sGame;
-		
+
 		//KToggleAction *m_toolbarAction;
 		//KToggleAction *m_statusbarAction;
 };

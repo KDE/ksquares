@@ -220,20 +220,18 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	if(playerList.at(0).isHuman())
 	{
 		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
-                QString difficulty;
                 switch(Settings::difficulty())
                 {
                     case 0:
-                        difficulty = "Easy";
+                        ksdialog.setConfigGroup("Easy");
                         break;
                     case 1:
-                        difficulty = "Medium";
+                        ksdialog.setConfigGroup("Medium");
                         break;
                 }
-                ksdialog.setConfigGroup(difficulty);
-                if(ksdialog.addScore(int(qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight()))) / (playerList.size())), KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
+                int score = qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight()))) / (playerList.size());
+                if(ksdialog.addScore(score, KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
                         ksdialog.exec();
-                //ksdialog.exec();
 	}
 }
 

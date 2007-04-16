@@ -37,7 +37,7 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquaresWindow::KSquaresWindow() : KMainWindow(), m_view(new GameBoardView(this)), m_scene(0)
+KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
 	setCentralWidget(m_view);
         QTimer::singleShot(0, this, SLOT(initObject()));
@@ -58,7 +58,7 @@ void KSquaresWindow::initObject()
         statusBar()->insertPermanentItem(i18n("Current Player"), 0);
         statusBar()->show();
         setAutoSaveSettings();
-        
+
         gameNew();
 }
 
@@ -73,7 +73,7 @@ void KSquaresWindow::gameNew()
 {
 	//load settings
 	NewGameDialog dialog(this);
-	
+
 	//create indexed arrays of the widgets
 	QList<QLineEdit*> nameLineEditList;
 	nameLineEditList.append(dialog.playerOneName);
@@ -85,7 +85,7 @@ void KSquaresWindow::gameNew()
 	humanCheckBoxList.append(dialog.playerTwoHuman);
 	humanCheckBoxList.append(dialog.playerThreeHuman);
 	humanCheckBoxList.append(dialog.playerFourHuman);
-	
+
 	//get settings from file
 	for(int i=0; i<=3; i++)
 	{
@@ -105,33 +105,33 @@ void KSquaresWindow::gameNew()
 		dialog.quickStartCheck->setCheckState(Qt::Checked);
 	else
 		dialog.quickStartCheck->setCheckState(Qt::Unchecked);
-	
+
 	//run dialog
 	dialog.exec();
 	if (dialog.result() == QDialog::Rejected) return;
-	
+
 	//save settings
 	Settings::setNumOfPlayers(dialog.spinNumOfPlayers->value());
-	
+
 	QStringList tempNames;
 	for(int i=0; i<=3; i++)
 	{
 		tempNames.append(nameLineEditList.at(i)->text());
 	}
 	Settings::setPlayerNames(tempNames);
-	
+
 	QList<int> tempHuman;
 	for(int i=0; i<=3; i++)
 	{
 		tempHuman.append(humanCheckBoxList.at(i)->checkState());
 	}
 	Settings::setHumanList(tempHuman);
-	
+
 	Settings::setBoardHeight(dialog.spinHeight->value());
 	Settings::setBoardWidth(dialog.spinWidth->value());
 	Settings::setQuickStart(dialog.quickStartCheck->checkState());
 	Settings::writeConfig();
-	
+
 	gameReset();
 }
 
@@ -145,7 +145,7 @@ void KSquaresWindow::gameReset()
 		switch(i)
 		{
 			case 0:
-				color = Qt::red;	
+				color = Qt::red;
 				break;
 			case 1:
 				color = Qt::blue;
@@ -161,22 +161,22 @@ void KSquaresWindow::gameReset()
 		}
 		playerList.append(KSquaresPlayer(Settings::playerNames().at(i), color, Settings::humanList().at(i)));
 	}
-	
+
 	//create physical board
 	GameBoardScene* temp = m_scene;
 	m_scene = new GameBoardScene(Settings::boardWidth(), Settings::boardHeight());
-	
+
 	m_view->setScene(m_scene);
 	delete temp;
-	
+
 	m_view->setBoardSize();	//refresh board zooming
-	
+
 	//start game etc.
 	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
 	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
-	
+
 	if (Settings::quickStart() == 2)
 	{
 		//This is being done before sGame->start(); to avoid the players cycling
@@ -195,28 +195,28 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 {
         qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
         //m_scene->displayScoreTable(playerList);
-        
+
         ScoresDialog scoresDialog(this);
-	
+
 	QStandardItemModel* scoreTableModel = new QStandardItemModel();
 	scoreTableModel->setRowCount(playerList.size());
 	scoreTableModel->setColumnCount(2);
 	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
 	scoreTableModel->setHeaderData(1, Qt::Horizontal, i18n("Completed Squares"));
-	
+
 	for(int i = 0; i <  playerList.size(); i++)
 	{
 		scoreTableModel->setItem(i, 0, new QStandardItem(playerList.at(i).name()));
-		
+
 		QString temp;
 		temp.setNum(playerList.at(i).score());
 		scoreTableModel->setItem(i, 1, new QStandardItem(temp));
 	}
-	
+
 	scoresDialog.scoreTable->setModel(scoreTableModel);
         scoresDialog.scoreTable->resizeColumnsToContents();
 	scoresDialog.exec();
-	
+
 	if(playerList.at(0).isHuman())
 	{
 		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
@@ -245,7 +245,7 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	{
 		//kDebug() << "Humans's Turn" << endl;
 		//Let the human player interact with the board through the GameBoardView
-		
+
 		setCursor(Qt::ArrowCursor);
 		m_scene->enableEvents();
 	}
@@ -255,7 +255,7 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//lock the view to let the AI do it's magic
 		setCursor(Qt::WaitCursor);
 		m_scene->disableEvents();
-		
+
 		// testing only
 		QTimer::singleShot(200, this, SLOT(aiChooseLine()));
 	}
@@ -269,9 +269,9 @@ void KSquaresWindow::aiChooseLine()
 }
 
 void KSquaresWindow::setupActions()
-{	
+{
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	
+
 	KAction *resetGame = new KAction(this);
 	resetGame->setText(i18n("Reset"));
 	resetGame->setIcon(KIcon("view-refresh"));
@@ -280,28 +280,28 @@ void KSquaresWindow::setupActions()
 	resetGame->setStatusTip("Start a new game with the current settings");
 	actionCollection() -> addAction("game_reset", resetGame);
 	connect(resetGame, SIGNAL(triggered()), this, SLOT(gameReset()));
-	
+
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
-	
+
 	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
 	//KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());
-	
+
 	setupGUI();
 }
 
 void KSquaresWindow::optionsPreferences()
 {
 	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
-	
+
 	QWidget *displaySettingsDialog = new QWidget;
 	ui_prefs_display.setupUi(displaySettingsDialog);
 	dialog->addPage(displaySettingsDialog, i18n("Display"), "ksquares_display");
-	
+
 	QWidget *aiSettingsDialog = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDialog);
 	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "ksquares_ai");
-	
+
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();
 }

@@ -10,7 +10,7 @@
 #ifndef KSQUARESDEMOWINDOW_H
 #define KSQUARESDEMOWINDOW_H
 
-#include <KMainWindow>
+#include <KXmlGuiWindow>
 
 #include "ksquaresgame.h"
 
@@ -21,26 +21,26 @@ class GameBoardScene;
  * @short Mainwindow class for demonstration mode
  *
  * Creates a very simple mainwindow and continuously plays 4 computer players against eachother.
- * 
+ *
  * @author Matt Williams <matt@milliams.com>
  */
 
-class KSquaresDemoWindow : public KMainWindow
+class KSquaresDemoWindow : public KXmlGuiWindow
 {
 	Q_OBJECT
-			
+
 	public:
 		///Constructor
 		KSquaresDemoWindow();
-	
+
 	public slots:
 		void gameNew();
-	
+
 	private slots:
 		void aiChooseLine();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(QVector<KSquaresPlayer> /*playerList*/);
-	
+
 	private:
 		///The game board view
 		GameBoardView *m_view;

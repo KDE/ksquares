@@ -219,7 +219,9 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 
 	if(playerList.at(0).isHuman())
 	{
-		KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+                int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
+                
+                KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
                 switch(Settings::difficulty())
                 {
                     case 0:
@@ -232,9 +234,9 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
                 //ksdialog.addField(KScoreDialog::Custom1, "Num of Moves", "moves");
                 KScoreDialog::FieldInfo scoreInfo;
                 scoreInfo[KScoreDialog::Name]=playerList.at(0).name();
+                scoreInfo[KScoreDialog::Score]=score;
                 //fi[KScoreDialog::Custom1]="42";
-                int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
-                if(ksdialog.addScore(score, scoreInfo))
+                if(ksdialog.addScore(scoreInfo, KScoreDialog::AskName))
                         ksdialog.exec();
 	}
 }
@@ -245,7 +247,6 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	statusBar()->changeItem(currentPlayer->name(), 0);
 	if(currentPlayer->isHuman())
 	{
-		//kDebug() << "Humans's Turn" << endl;
 		//Let the human player interact with the board through the GameBoardView
 
 		setCursor(Qt::ArrowCursor);
@@ -253,12 +254,10 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	}
 	else	//AI
 	{
-		//kDebug() << "AI's Turn" << endl;
 		//lock the view to let the AI do it's magic
 		setCursor(Qt::WaitCursor);
 		m_scene->disableEvents();
 
-		// testing only
 		QTimer::singleShot(200, this, SLOT(aiChooseLine()));
 	}
 }

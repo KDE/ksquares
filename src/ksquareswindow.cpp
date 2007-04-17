@@ -231,11 +231,10 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
                         ksdialog.setConfigGroup("Medium");
                         break;
                 }
-                //ksdialog.addField(KScoreDialog::Custom1, "Num of Moves", "moves");
                 KScoreDialog::FieldInfo scoreInfo;
                 scoreInfo[KScoreDialog::Name]=playerList.at(0).name();
-                scoreInfo[KScoreDialog::Score]=score;
-                //fi[KScoreDialog::Custom1]="42";
+                scoreInfo[KScoreDialog::Score].setNum(score);
+                
                 if(ksdialog.addScore(scoreInfo, KScoreDialog::AskName))
                         ksdialog.exec();
 	}

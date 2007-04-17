@@ -225,10 +225,10 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
                 switch(Settings::difficulty())
                 {
                     case 0:
-                        ksdialog.setConfigGroup("Easy");
+                        ksdialog.setConfigGroup(i18n("Easy"));
                         break;
                     case 1:
-                        ksdialog.setConfigGroup("Medium");
+                        ksdialog.setConfigGroup(i18n("Medium"));
                         break;
                 }
                 KScoreDialog::FieldInfo scoreInfo;

@@ -229,8 +229,12 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
                         ksdialog.setConfigGroup("Medium");
                         break;
                 }
-                int score = qreal(playerList.at(0).score()) - ((qreal(Settings::boardWidth())*qreal(Settings::boardHeight()))) / (playerList.size());
-                if(ksdialog.addScore(score, KScoreDialog::FieldInfo(), KScoreDialog::AskName, playerList.at(0).name()))
+                //ksdialog.addField(KScoreDialog::Custom1, "Num of Moves", "moves");
+                KScoreDialog::FieldInfo scoreInfo;
+                scoreInfo[KScoreDialog::Name]=playerList.at(0).name();
+                //fi[KScoreDialog::Custom1]="42";
+                int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
+                if(ksdialog.addScore(score, scoreInfo))
                         ksdialog.exec();
 	}
 }

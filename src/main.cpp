@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 {
 	KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
 			 KAboutData::License_GPL, "(C) 2006-2007 Matt Williams", 0, 
-			 "http://milliams.com/content/view/18/42/", "matt@milliams.com");
+			 "http://milliams.com/content/view/18/42/");
 	about.addAuthor( "Matt Williams", I18N_NOOP("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
 	about.addCredit("Fela Winkelmolen", I18N_NOOP("Many patches and bugfixes"));
 	
@@ -41,11 +41,11 @@ int main(int argc, char **argv)
 	KCmdLineArgs::addCmdLineOptions( options );
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 	
-	KApplication app;
+        KApplication app;
+        KGlobal::locale()->insertCatalog("libkdegames");
 	
 	if (args->isSet("demo"))
 	{
-		kDebug() << "Running in demo mode. Not implememnted yet..." << endl;
 		KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
 		demoWindow->show();
 		demoWindow->gameNew();

@@ -58,7 +58,7 @@ void KSquaresWindow::initObject()
         statusBar()->insertPermanentItem(i18n("Current Player"), 0);
         statusBar()->show();
         setAutoSaveSettings();
-
+    
         gameNew();
 }
 

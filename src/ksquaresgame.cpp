@@ -148,7 +148,7 @@ void KSquaresGame::checkForNewSquares()
 			int index3 = index2 + 1;
 			int index4 = index3 + width;
 			//cout << index1 << ", " << index2 << ", " << index3 << ", " << index4 << " - " << lineList.size() << endl;
-			if (lineList.at(index1) and lineList.at(index2) and lineList.at(index3) and lineList.at(index4))
+			if (lineList.at(index1) && lineList.at(index2) && lineList.at(index3) && lineList.at(index4))
 			{
 				kDebug() << " - - Square " << i << " completed." << endl;
 				playerSquareComplete(i);

@@ -25,6 +25,7 @@
 #include <KScoreDialog>
 #include <KHighscore>
 #include <KStandardGameAction>
+#include <KSelectAction>
 
 //generated
 #include "settings.h"

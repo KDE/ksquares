@@ -10,7 +10,7 @@
 #ifndef KSQUARESPLAYER_H
 #define KSQUARESPLAYER_H
 
-#include <QString>
+
 #include <QColor>
 
 /**

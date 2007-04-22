@@ -10,7 +10,7 @@
 #ifndef THEMEGRAPHICSITEMS_H
 #define THEMEGRAPHICSITEMS_H
 
-#include <QString>
+
 #include <QGraphicsRectItem>
 
 /**

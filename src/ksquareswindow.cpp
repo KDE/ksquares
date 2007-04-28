@@ -66,7 +66,7 @@ void KSquaresWindow::initObject()
 //void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
 void KSquaresWindow::showHighscores()
 {
-        KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+        KScoreDialog ksdialog(KScoreDialog::Name, this);
         ksdialog.exec();
 }
 
@@ -222,7 +222,7 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 	{
                 int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
                 
-                KScoreDialog ksdialog(KScoreDialog::Name | KScoreDialog::Score, this);
+                KScoreDialog ksdialog(KScoreDialog::Name, this);
                 switch(Settings::difficulty())
                 {
                     case 0:
@@ -244,7 +244,7 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)" << endl;
-	statusBar()->changeItem(currentPlayer->name(), 0);
+	statusBar()->changeItem(currentPlayer->name(), 0); //TODO Add player's colour
 	if(currentPlayer->isHuman())
 	{
 		//Let the human player interact with the board through the GameBoardView
@@ -286,7 +286,6 @@ void KSquaresWindow::setupActions()
 	KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
 	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
-	//KStandardGameAction::configureHighscores(this, SLOT(configureHighscores()), actionCollection());
 
 	setupGUI();
 }
@@ -297,11 +296,11 @@ void KSquaresWindow::optionsPreferences()
 
 	QWidget *displaySettingsDialog = new QWidget;
 	ui_prefs_display.setupUi(displaySettingsDialog);
-	dialog->addPage(displaySettingsDialog, i18n("Display"), "ksquares_display");
+        dialog->addPage(displaySettingsDialog, i18n("Display"), "screen");
 
 	QWidget *aiSettingsDialog = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDialog);
-	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "ksquares_ai");
+	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "user");
 
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();

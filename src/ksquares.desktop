@@ -2,11 +2,13 @@
 Encoding=UTF-8
 Name=KSquares
 Name[sv]=Kfyrkanter
+Name[x-test]=xxKSquaresxx
 Exec=ksquares %i -caption "%c"
 Icon=ksquares
 Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
 GenericName[sv]=Sammanbind punkterna för att skapa fyrkanter
+GenericName[x-test]=xxConnect the dots to create squaresxx
 Terminal=false
 Categories=Qt;KDE;Game;BoardGame;

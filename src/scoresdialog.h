@@ -15,7 +15,7 @@
 class ScoresDialog : public QDialog, public Ui::ScoresDialog
 {
 	public:
-		explicit ScoresDialog(QWidget* parent = 0) : QDialog(parent) {setupUi(this);};
+		explicit ScoresDialog(QWidget* parent = 0) : QDialog(parent) {setupUi(this);}
 };
 
 #endif // SCORESDIALOG_H

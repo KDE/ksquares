@@ -35,7 +35,7 @@ class KSquaresWindow : public KXmlGuiWindow
 	public:
 		///Constructor
 		KSquaresWindow();
-		//virtual ~KSquaresWindow();
+		~KSquaresWindow();
 
 	public slots:
 		void  showHighscores();

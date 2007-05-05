@@ -32,7 +32,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 		{
 			int x = iWidth*spacing;
 			int y = iHeight*spacing;
-			QGraphicsEllipseItem *dot = new QGraphicsEllipseItem(QRectF(-2,-2,4,4));
+                        QGraphicsEllipseItem *dot = new QGraphicsEllipseItem(QRectF(-2,-2,4,4));
 			dot->moveBy(x,y);
 			dot->setBrush(Qt::SolidPattern);
 			dot->setZValue(20);	// set the elevation, the dot's are on top
@@ -53,7 +53,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	
 	setBackgroundBrush(QBrush(Qt::white));
 	
-	indicatorLine = new QGraphicsLineItem(1,1,1,1);
+        indicatorLine = new QGraphicsLineItem(1,1,1,1);
 	indicatorLine->setZValue(10);
 	indicatorLine->setPen(QPen(Qt::yellow, 2.5));
 	indicatorLine->hide();
@@ -74,9 +74,10 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 GameBoardScene::~GameBoardScene()
 {
 	kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
+        delete indicatorLine;
 }
 
-void GameBoardScene::drawLine(int index, QColor colour)
+void GameBoardScene::drawLine(int index, const QColor &colour)
 {
 	QGraphicsLineItem* line = lineFromIndex(index);
 	line->setZValue(10);
@@ -87,7 +88,7 @@ void GameBoardScene::drawLine(int index, QColor colour)
 	update(line->boundingRect());
 }
 
-void GameBoardScene::drawSquare(int index, QColor colour)
+void GameBoardScene::drawSquare(int index, const QColor &colour)
 {
 	QBrush brush(colour, Qt::SolidPattern);
 	
@@ -163,7 +164,7 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index) const
 	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
 }
 
-bool GameBoardScene::isLineAlready(QList<QGraphicsEllipseItem*> pointPair) const
+bool GameBoardScene::isLineAlready(const QList<QGraphicsEllipseItem*> &pointPair) const //TODO does this work?
 {
 	int index = indexFromPointPair(pointPair);
 	if (index == -1)
@@ -181,7 +182,7 @@ void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
 	emit lineDrawn(index);	//addLineToIndex(index);
 }
 
-QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(QPointF pos) const
+QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(const QPointF &pos) const
 {
 	QList<QGraphicsItem*> itemList = items();
 	QList<QGraphicsEllipseItem*> connectList;

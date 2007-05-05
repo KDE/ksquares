@@ -31,7 +31,7 @@ class KSquaresPlayer
 		 * @param newColor the colour used to fill the player's boxes
 		 * @param isPlayerHuman is the player human (or AI)
 		 */
-		explicit KSquaresPlayer(QString newName, QColor newColor, bool isPlayerHuman = true) {setName(newName); playerColour = newColor; human = isPlayerHuman; playerScore = 0;}	//defaults to human player
+		explicit KSquaresPlayer(const QString &newName, const QColor &newColor, bool isPlayerHuman = true) {setName(newName); playerColour = newColor; human = isPlayerHuman; playerScore = 0;}	//defaults to human player
 		
                 ///Create a null player
 		KSquaresPlayer() {}	//Needed to do QVector<KSquaresPlayer>::operator[int i] since it has to allocate memory i think
@@ -41,7 +41,7 @@ class KSquaresPlayer
 		 * 
 		 * @param newName The displayable name of the player
 		 */
-		void setName(QString newName) {playerName = newName;}
+		void setName(const QString &newName) {playerName = newName;}
 		
 		/**
 		 * Sets the players name

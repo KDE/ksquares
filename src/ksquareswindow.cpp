@@ -44,9 +44,12 @@ KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(thi
         QTimer::singleShot(0, this, SLOT(initObject()));
 }
 
-/*KSquaresWindow::~KSquaresWindow()
+KSquaresWindow::~KSquaresWindow()
 {
-}*/
+    delete m_view;
+    delete m_scene;
+    delete sGame;
+}
 
 void KSquaresWindow::initObject()
 {
@@ -199,7 +202,7 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
 
         ScoresDialog scoresDialog(this);
 
-	QStandardItemModel* scoreTableModel = new QStandardItemModel();
+	QStandardItemModel* scoreTableModel = new QStandardItemModel(this);
 	scoreTableModel->setRowCount(playerList.size());
 	scoreTableModel->setColumnCount(2);
 	scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
@@ -239,6 +242,7 @@ void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
                 if(ksdialog.addScore(scoreInfo, KScoreDialog::AskName))
                         ksdialog.exec();
 	}
+        delete scoreTableModel;
 }
 
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)

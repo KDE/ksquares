@@ -79,7 +79,7 @@ class GameBoardScene : public QGraphicsScene
 		 * Adds the line to the index for a specified pair of points.
 		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
 		 */
-		void addLineToIndex(QList<QGraphicsEllipseItem*> pointPair);
+		void addLineToIndex(const QList<QGraphicsEllipseItem*> &pointPair);
 		
 		//conversion functions
 		/**
@@ -87,7 +87,7 @@ class GameBoardScene : public QGraphicsScene
 		 * @param pointPair QList of (hopefully 2) QGraphicsEllipseItem*s
 		 * @return the line-index
 		 */
-		int indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
+		int indexFromPointPair(const QList<QGraphicsEllipseItem*> &pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
 		/**
 		 * Takes a line-index and returns a QGraphicsLineItem located at that position
 		 * @param index the line-index

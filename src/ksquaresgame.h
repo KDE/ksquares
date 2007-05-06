@@ -57,7 +57,7 @@ class KSquaresGame : public QObject
 		 * @param startWidth the width of the game board
 		 * @param startHeight the height of the game board
 		 */
-		void createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight);
+		void createGame(const QVector<KSquaresPlayer> &startPlayers, int startWidth, int startHeight);
 		/**
 		 * Starts the game
 		 */
@@ -148,7 +148,7 @@ class KSquaresGame : public QObject
 		///A player's turn has started. This allows you to use AI/networking etc.
 		void takeTurnSig(KSquaresPlayer*);	//emit the new curent player
 		///emitted when the game board is completed. Allows you to construct a scoreboard
-		void gameOver(QVector<KSquaresPlayer>);	//for scoreboard purposes
+		void gameOver(const QVector<KSquaresPlayer> &);	//for scoreboard purposes
 		///Emits the index and colour of the line
 		void drawLine(int,QColor);	//int == lineList index
 		///Emits the index and colour of the square

@@ -95,7 +95,7 @@ void GameBoardScene::drawSquare(int index, const QColor &colour)
 	addRect(QRectF(qreal((index%width)*spacing), qreal((index/width)*spacing), qreal(spacing), qreal(spacing)), QPen(), brush)->setZValue(-1);
 }
 
-int GameBoardScene::indexFromPointPair(QList<QGraphicsEllipseItem*> pointPair) const
+int GameBoardScene::indexFromPointPair(const QList<QGraphicsEllipseItem*> &pointPair) const
 {
 
 	if (pointPair.size() != 2)
@@ -173,7 +173,7 @@ bool GameBoardScene::isLineAlready(const QList<QGraphicsEllipseItem*> &pointPair
 	return lineList.at(index);
 }
 
-void GameBoardScene::addLineToIndex(QList<QGraphicsEllipseItem*> pointPair)
+void GameBoardScene::addLineToIndex(const QList<QGraphicsEllipseItem*> &pointPair)
 {
 	int index = indexFromPointPair(pointPair);
 	if (index == -1)	//not a valid line since no two unique ends

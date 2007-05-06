@@ -26,7 +26,7 @@ KSquaresGame::~KSquaresGame()
 	gameInProgress = false;
 }
 
-void KSquaresGame::createGame(QVector<KSquaresPlayer> startPlayers, int startWidth, int startHeight)
+void KSquaresGame::createGame(const QVector<KSquaresPlayer> &startPlayers, int startWidth, int startHeight)
 {
 	resetEverything();	//reset everything
 	kDebug() << "Creating Game with " << startPlayers.size() << " player(s)" << endl;

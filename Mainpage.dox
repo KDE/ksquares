@@ -27,8 +27,6 @@ For the list of lines and whether they're drawn, the indices count from left to 
 
 \todo A more obvious sign of where the computer player has moved
 
-\todo Highscore
-
 \todo Logo/initials/colour/etc. for players squares
 
 \todo Themeable game board. Subclass all the QGraphicsItems and handle the theming there :D

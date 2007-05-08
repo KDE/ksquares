@@ -195,8 +195,9 @@ void KSquaresWindow::gameReset()
 	sGame->start();
 }
 
-void KSquaresWindow::gameOver(QVector<KSquaresPlayer> playerList)
+void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 {
+	QVector<KSquaresPlayer> playerList = _playerList;
         qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
         //m_scene->displayScoreTable(playerList);
 

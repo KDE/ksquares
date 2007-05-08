@@ -38,7 +38,7 @@ class aiController
 		 * @param newWidth height of the current gameboard
 		 * @param newHeight width of the current gameboard
 		 */
-		aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight);
+		aiController(int newPlayerId, const QList<bool> &newLines, const QList<int> &newSquareOwners, int newWidth, int newHeight);
 		/**
 		 * Choses where to draw the line:
 		 * Creates a list of all the squares which are surrounded by 3 lines and if the list isn't empty, randomly picks one of them.
@@ -66,14 +66,14 @@ class aiController
 		 *
 		 * @return list of indices (of lines) which would be the least damaging in the short term
 		 */
-		QList<int> chooseLeastDamaging(QList<int> choiceList) const;
+		QList<int> chooseLeastDamaging(const QList<int> &choiceList) const;
 		/**
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
 		 * @param linesList the linesList you want to work from
 		 *
 		 * @return the number of lines currently drawn around a specific square
 		 */
-		int countBorderLines(int squareIndex, QList<bool> linesList) const;
+		int countBorderLines(int squareIndex, const QList<bool> &linesList) const;
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *

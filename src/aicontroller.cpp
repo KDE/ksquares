@@ -14,7 +14,7 @@
 
 #include "settings.h"
 
-aiController::aiController(int newPlayerId, QList<bool> newLines, QList<int> newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
+aiController::aiController(int newPlayerId, const QList<bool> &newLines, const QList<int> &newSquareOwners, int newWidth, int newHeight) : squareOwners(newSquareOwners), lines(newLines), playerId(newPlayerId), width(newWidth), height(newHeight)
 {
 	srand( (unsigned)time( NULL ) );
 	kDebug() << "AI: Starting AI..." << endl;
@@ -148,7 +148,7 @@ QList<int> aiController::safeMoves() const
 	return safeLines;
 }
 
-QList<int> aiController::chooseLeastDamaging(QList<int> choiceList) const
+QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 {
 	//kDebug() << "AI: Checking " << choiceList.size() << " possible moves" << endl;
 	QMap<int,int> linePointDamage;	//this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line
@@ -191,7 +191,7 @@ QList<int> aiController::chooseLeastDamaging(QList<int> choiceList) const
 	return bestMoves;
 }
 
-int aiController::countBorderLines(int squareIndex, QList<bool> linesList) const
+int aiController::countBorderLines(int squareIndex, const QList<bool> &linesList) const
 {
 	int count = 0;
 	

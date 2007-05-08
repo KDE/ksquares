@@ -100,7 +100,7 @@ void KSquaresDemoWindow::aiChooseLine()
 	sGame->addLineToIndex(ai.chooseLine());
 }
 
-void KSquaresDemoWindow::gameOver(QVector<KSquaresPlayer> /*playerList*/)
+void KSquaresDemoWindow::gameOver(const QVector<KSquaresPlayer> & /*playerList*/)
 {
 	kDebug() << "Game Over" << endl;
 	QTimer::singleShot(1000, this, SLOT(gameNew()));

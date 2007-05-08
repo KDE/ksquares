@@ -39,7 +39,7 @@ class KSquaresDemoWindow : public KXmlGuiWindow
 	private slots:
 		void aiChooseLine();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
-		void gameOver(QVector<KSquaresPlayer> /*playerList*/);
+		void gameOver(const QVector<KSquaresPlayer> & /*playerList*/);
 
 	private:
 		///The game board view

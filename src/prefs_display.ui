@@ -46,7 +46,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Color of the indicator lines&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Indicator Line Color:</string>
+         <string>Indicator line color:</string>
         </property>
         <property name="buddy" >
          <cstring>kcfg_IndicatorLineColor</cstring>
@@ -68,7 +68,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Color of the drawn lines&lt;/p>&lt;/body>&lt;/html></string>
         </property>
         <property name="text" >
-         <string>Standard Line Color:</string>
+         <string>Standard line color:</string>
         </property>
         <property name="buddy" >
          <cstring>kcfg_LineColor</cstring>

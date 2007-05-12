@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2006 by Matthew Williams    <matt@milliams.com>         *
+ *   Copyright (C) 2006 by Matthew Williams <matt@milliams.com>            *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -41,36 +41,36 @@
 KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
 	setCentralWidget(m_view);
-        QTimer::singleShot(0, this, SLOT(initObject()));
+	QTimer::singleShot(0, this, SLOT(initObject()));
 }
 
 KSquaresWindow::~KSquaresWindow()
 {
-    delete m_view;
-    delete m_scene;
-    delete sGame;
+	delete m_view;
+	delete m_scene;
+	delete sGame;
 }
 
 void KSquaresWindow::initObject()
 {
-        sGame = new KSquaresGame();
-        connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
-        connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
-        m_view->setRenderHints(QPainter::Antialiasing);
-        m_view->setFrameStyle(QFrame::NoFrame);
-        setupActions();
-        statusBar()->insertPermanentItem(i18n("Current Player"), 0);
-        statusBar()->show();
-        setAutoSaveSettings();
-        
-        gameNew();
+	sGame = new KSquaresGame();
+	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
+	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+	m_view->setRenderHints(QPainter::Antialiasing);
+	m_view->setFrameStyle(QFrame::NoFrame);
+	setupActions();
+	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
+	statusBar()->show();
+	setAutoSaveSettings();
+
+	gameNew();
 }
 
 //void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
 void KSquaresWindow::showHighscores()
 {
-        KScoreDialog ksdialog(KScoreDialog::Name, this);
-        ksdialog.exec();
+	KScoreDialog ksdialog(KScoreDialog::Name, this);
+	ksdialog.exec();
 }
 
 void KSquaresWindow::gameNew()
@@ -198,10 +198,10 @@ void KSquaresWindow::gameReset()
 void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 {
 	QVector<KSquaresPlayer> playerList = _playerList;
-        qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
-        //m_scene->displayScoreTable(playerList);
+	qSort(playerList.begin(), playerList.end(), qGreater<KSquaresPlayer>());
+	//m_scene->displayScoreTable(playerList);
 
-        ScoresDialog scoresDialog(this);
+	ScoresDialog scoresDialog(this);
 
 	QStandardItemModel* scoreTableModel = new QStandardItemModel(this);
 	scoreTableModel->setRowCount(playerList.size());
@@ -224,26 +224,26 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 
 	if(playerList.at(0).isHuman())
 	{
-                int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
-                
-                KScoreDialog ksdialog(KScoreDialog::Name, this);
-                switch(Settings::difficulty())
-                {
-                    case 0:
-                        ksdialog.setConfigGroup(i18n("Easy"));
-                        break;
-                    case 1:
-                        ksdialog.setConfigGroup(i18n("Medium"));
-                        break;
-                }
-                KScoreDialog::FieldInfo scoreInfo;
-                scoreInfo[KScoreDialog::Name]=playerList.at(0).name();
-                scoreInfo[KScoreDialog::Score].setNum(score);
-                
-                if(ksdialog.addScore(scoreInfo, KScoreDialog::AskName))
-                        ksdialog.exec();
+		int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
+		
+		KScoreDialog ksdialog(KScoreDialog::Name, this);
+		switch(Settings::difficulty())
+		{
+			case 0:
+				ksdialog.setConfigGroup(i18n("Easy"));
+				break;
+			case 1:
+				ksdialog.setConfigGroup(i18n("Medium"));
+				break;
+		}
+		KScoreDialog::FieldInfo scoreInfo;
+		scoreInfo[KScoreDialog::Name]=playerList.at(0).name();
+		scoreInfo[KScoreDialog::Score].setNum(score);
+		
+		if(ksdialog.addScore(scoreInfo, KScoreDialog::AskName))
+			ksdialog.exec();
 	}
-        delete scoreTableModel;
+	delete scoreTableModel;
 }
 
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
@@ -296,7 +296,7 @@ void KSquaresWindow::optionsPreferences()
 
 	QWidget *displaySettingsDialog = new QWidget;
 	ui_prefs_display.setupUi(displaySettingsDialog);
-        dialog->addPage(displaySettingsDialog, i18n("Display"), "screen");
+	dialog->addPage(displaySettingsDialog, i18n("Display"), "screen");
 
 	QWidget *aiSettingsDialog = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDialog);

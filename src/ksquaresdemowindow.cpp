@@ -67,7 +67,7 @@ void KSquaresDemoWindow::gameNew()
 			default:
 				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
 		}
-		playerList.append(KSquaresPlayer(QString("Player %1").arg(i+1), color, false));
+		playerList.append(KSquaresPlayer(i18n("Player %1", i+1), color, false));
 	}
 
 	//create physical board

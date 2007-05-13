@@ -281,8 +281,8 @@ void KSquaresWindow::setupActions()
 	// Game
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
 	KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
-	resetGame->setToolTip("Start a new game with the current settings");
-	resetGame->setStatusTip("Start a new game with the current settings");
+	resetGame->setToolTip(i18n("Start a new game with the current settings"));
+	resetGame->setStatusTip(i18n("Start a new game with the current settings"));
 	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	

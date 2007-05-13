@@ -10,12 +10,14 @@
 #ifndef SCORESDIALOG_H
 #define SCORESDIALOG_H
 
-#include "ui_scoresdialog.h"
+#include "ui_scoreswidget.h"
 
-class ScoresDialog : public QDialog, public Ui::ScoresDialog
+#include <kdialog.h>
+
+class ScoresDialog : public KDialog, public Ui::ScoresWidget
 {
 	public:
-		explicit ScoresDialog(QWidget* parent = 0) : QDialog(parent) {setupUi(this);}
+		explicit ScoresDialog(QWidget* parent = 0) : KDialog(parent) {setupUi(mainWidget());}
 };
 
 #endif // SCORESDIALOG_H

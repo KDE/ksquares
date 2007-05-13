@@ -9,9 +9,11 @@
 
 #include "newgamedialog.h"
 
-NewGameDialog::NewGameDialog(QWidget* parent) : QDialog(parent) 
+NewGameDialog::NewGameDialog(QWidget* parent) : KDialog(parent)
 {
-	setupUi(this);
+	setupUi(mainWidget());
+	setButtons(Cancel|Ok);
+	setCaption(i18n("New Game"));
 	connect(spinNumOfPlayers, SIGNAL(valueChanged(int)), SLOT(adjustEnabledUsers(int)));
 	
 	adjustEnabledUsers(spinNumOfPlayers->value());

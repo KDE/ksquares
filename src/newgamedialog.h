@@ -10,9 +10,11 @@
 #ifndef NEWGAMEDIALOG_H
 #define NEWGAMEDIALOG_H
 
-#include "ui_newgamedialog.h"
+#include "ui_newgamewidget.h"
 
-class NewGameDialog : public QDialog, public Ui::NewGameDialog
+#include <kdialog.h>
+
+class NewGameDialog : public KDialog, public Ui::NewGameWidget
 {
 	Q_OBJECT
 	public:

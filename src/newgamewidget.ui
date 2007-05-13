@@ -1,12 +1,12 @@
 <ui version="4.0" >
- <class>NewGameDialog</class>
- <widget class="QDialog" name="NewGameDialog" >
+ <class>NewGameWidget</class>
+ <widget class="QWidget" name="NewGameWidget" >
   <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
     <width>368</width>
-    <height>397</height>
+    <height>370</height>
    </rect>
   </property>
   <property name="windowTitle" >
@@ -413,13 +413,6 @@ p, li { white-space: pre-wrap; }
      </property>
     </spacer>
    </item>
-   <item>
-    <widget class="QDialogButtonBox" name="buttonBox" >
-     <property name="standardButtons" >
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <tabstops>
@@ -436,38 +429,5 @@ p, li { white-space: pre-wrap; }
   <tabstop>spinHeight</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>NewGameDialog</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>217</x>
-     <y>370</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>38</x>
-     <y>395</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>NewGameDialog</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel" >
-     <x>307</x>
-     <y>368</y>
-    </hint>
-    <hint type="destinationlabel" >
-     <x>366</x>
-     <y>379</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

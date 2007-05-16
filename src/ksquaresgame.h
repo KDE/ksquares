@@ -93,7 +93,7 @@ class KSquaresGame : public QObject
 		 */
 		int boardHeight() const {return height;}
 		
-	public slots:
+	public Q_SLOTS:
 		/**
 		 * @param index the index of the line to add
 		 */

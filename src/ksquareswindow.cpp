@@ -148,17 +148,17 @@ void KSquaresWindow::gameReset()
 		QColor color;
 		switch(i)
 		{
-			case 0:
-				color = Qt::red;
+			case 0: //Red
+				color = QColor(191,3,3); //or darker: (156,15,15);
 				break;
-			case 1:
-				color = Qt::blue;
+			case 1: //Blue
+				color = QColor(0,67,138); //or darker: (0,49,110);
 				break;
-			case 2:
-				color = Qt::green;
+			case 2: //Green
+				color = QColor(0,137,44); //or darker: (0,110,41);
 				break;
-			case 3:
-				color = Qt::yellow;
+			case 3: //Yellow
+				color = QColor(243,195,0); //or darker: (227,173,0);
 				break;
 			default:
 				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;

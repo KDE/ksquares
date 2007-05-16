@@ -25,15 +25,15 @@ static const KCmdLineOptions options[] =
 };
 
 static const char description[] =
-    I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
+	I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
 static const char version[] = "0.3";
 
 int main(int argc, char **argv)
 {
 	KAboutData about("ksquares", I18N_NOOP("KSquares"), version, description,
-			 KAboutData::License_GPL, "(C) 2006-2007 Matt Williams", 0, 
-			 "http://milliams.com/content/view/18/42/");
+		KAboutData::License_GPL, "(C) 2006-2007 Matt Williams", 0, 
+		"http://milliams.com/content/view/18/42/");
 	about.addAuthor( "Matt Williams", I18N_NOOP("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
 	about.addCredit("Fela Winkelmolen", I18N_NOOP("Many patches and bugfixes"));
 	
@@ -41,8 +41,8 @@ int main(int argc, char **argv)
 	KCmdLineArgs::addCmdLineOptions( options );
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 	
-        KApplication app;
-        KGlobal::locale()->insertCatalog("libkdegames");
+	KApplication app;
+	KGlobal::locale()->insertCatalog("libkdegames");
 	
 	if (args->isSet("demo"))
 	{

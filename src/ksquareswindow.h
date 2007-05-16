@@ -47,7 +47,7 @@ class KSquaresWindow : public KXmlGuiWindow
 
 	private slots:
 		void aiChooseLine(); // testing only
-                void initObject();
+		void initObject();
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(const QVector<KSquaresPlayer> &_playerList);	//when KSquaresGame says the game is over. Display score board

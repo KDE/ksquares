@@ -32,7 +32,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 		{
 			int x = iWidth*spacing;
 			int y = iHeight*spacing;
-                        QGraphicsEllipseItem *dot = new QGraphicsEllipseItem(QRectF(-2,-2,4,4));
+			QGraphicsEllipseItem *dot = new QGraphicsEllipseItem(QRectF(-2,-2,4,4));
 			dot->moveBy(x,y);
 			dot->setBrush(Qt::SolidPattern);
 			dot->setZValue(20);	// set the elevation, the dot's are on top
@@ -53,7 +53,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 	
 	setBackgroundBrush(QBrush(Qt::white));
 	
-        indicatorLine = new QGraphicsLineItem(1,1,1,1);
+	indicatorLine = new QGraphicsLineItem(1,1,1,1);
 	indicatorLine->setZValue(10);
 	indicatorLine->setPen(QPen(Qt::yellow, 2.5));
 	indicatorLine->hide();
@@ -74,7 +74,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 GameBoardScene::~GameBoardScene()
 {
 	kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
-        delete indicatorLine;
+	delete indicatorLine;
 }
 
 void GameBoardScene::drawLine(int index, const QColor &colour)

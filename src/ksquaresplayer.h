@@ -32,7 +32,7 @@ class KSquaresPlayer
 		 */
 		explicit KSquaresPlayer(const QString &newName, const QColor &newColor, bool isPlayerHuman = true) {setName(newName); playerColour = newColor; human = isPlayerHuman; playerScore = 0;}	//defaults to human player
 		
-                ///Create a null player
+		///Create a null player
 		KSquaresPlayer() {}	//Needed to do QVector<KSquaresPlayer>::operator[int i] since it has to allocate memory i think
 		
 		/**

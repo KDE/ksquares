@@ -255,7 +255,7 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 	if(currentPlayer->isHuman())
 	{
 		//Let the human player interact with the board through the GameBoardView
-
+		
 		setCursor(Qt::ArrowCursor);
 		m_scene->enableEvents();
 	}
@@ -264,8 +264,9 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 		//lock the view to let the AI do it's magic
 		setCursor(Qt::WaitCursor);
 		m_scene->disableEvents();
-
+		
 		QTimer::singleShot(200, this, SLOT(aiChooseLine()));
+		setCursor(Qt::ArrowCursor);
 	}
 }
 

@@ -7,13 +7,13 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include <kapplication.h>
-#include <kaboutdata.h>
-#include <kcmdlineargs.h>
-#include <klocale.h>
-#include <khighscore.h>
+#include <KApplication>
+#include <KAboutData>
+#include <KCmdLineArgs>
+#include <KLocale>
+#include <KHighScore>
 
-#include <kdebug.h>
+#include <KDebug>
 
 #include "ksquareswindow.h"
 #include "ksquaresdemowindow.h"

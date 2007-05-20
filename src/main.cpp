@@ -11,7 +11,6 @@
 #include <KAboutData>
 #include <KCmdLineArgs>
 #include <KLocale>
-#include <KHighScore>
 
 #include <KDebug>
 

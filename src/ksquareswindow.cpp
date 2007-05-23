@@ -134,7 +134,7 @@ void KSquaresWindow::gameNew()
 	Settings::setBoardHeight(dialog.spinHeight->value());
 	Settings::setBoardWidth(dialog.spinWidth->value());
 	Settings::setQuickStart(dialog.quickStartCheck->checkState());
-	Settings::writeConfig();
+	Settings::self()->writeConfig();
 
 	gameReset();
 }

@@ -9,6 +9,7 @@ Type=Application
 DocPath=ksquares/ksquares.html
 GenericName=Connect the dots to create squares
 GenericName[el]=Συνδέστε τις τελείες για να σχηματίσετε τετράγωνα
+GenericName[ja]=点を結んで正方形を作るゲーム
 GenericName[sv]=Sammanbind punkterna för att skapa fyrkanter
 GenericName[x-test]=xxConnect the dots to create squaresxx
 Terminal=false

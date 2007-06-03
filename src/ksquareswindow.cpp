@@ -215,10 +215,12 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 	for(int i = 0; i <  playerList.size(); i++)
 	{
 		scoreTableModel->setItem(i, 0, new QStandardItem(playerList.at(i).name()));
+		scoreTableModel->item(i, 0)->setEditable(false);
 
 		QString temp;
 		temp.setNum(playerList.at(i).score());
 		scoreTableModel->setItem(i, 1, new QStandardItem(temp));
+		scoreTableModel->item(i, 1)->setEditable(false);
 	}
 
 	scoresDialog.scoreTable->setModel(scoreTableModel);

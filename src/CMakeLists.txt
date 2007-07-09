@@ -13,8 +13,6 @@ set(ksquares_SRCS
 
 include_directories(${CMAKE_SOURCE_DIR}/libkdegames ${CMAKE_SOURCE_DIR}/libkdegames/highscore)
 
-kde4_automoc(${ksquares_SRCS})
-
 kde4_add_ui_files(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_display.ui)
 
 kde4_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S

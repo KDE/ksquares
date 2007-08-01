@@ -161,7 +161,7 @@ void KSquaresWindow::gameReset()
 				color = QColor(243,195,0); //or darker: (227,173,0);
 				break;
 			default:
-				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3" << endl;
+				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3";
 		}
 		playerList.append(KSquaresPlayer(Settings::playerNames().at(i), color, Settings::humanList().at(i)));
 	}
@@ -252,7 +252,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
-	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)" << endl;
+	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
 	statusBar()->changeItem(currentPlayer->name(), 0); //TODO Add player's colour
 	if(currentPlayer->isHuman())
 	{

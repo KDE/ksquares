@@ -18,7 +18,7 @@
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
-	//kDebug() << "GameBoardScene::GameBoardScene()" << endl;
+	//kDebug() << "GameBoardScene::GameBoardScene()";
 	
 	for(int i = 0; i < (2*width*height + width + height); i++)
 	{
@@ -73,7 +73,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 
 GameBoardScene::~GameBoardScene()
 {
-	kDebug() << "GameBoardScene::~GameBoardScene()" << endl;
+	kDebug() << "GameBoardScene::~GameBoardScene()";
 	delete indicatorLine;
 }
 
@@ -190,7 +190,7 @@ QList<QGraphicsEllipseItem*> GameBoardScene::getTwoNearestPoints(const QPointF &
 	{
 		if (itemList.at(i)->type() == QGraphicsEllipseItemType)
 		{
-			//cout << "itemList.at(i)->scenePos(): " << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().x() << ", " << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().y() << endl;
+			//cout << "itemList.at(i)->scenePos():" << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().x() << "," << qgraphicsitem_cast<QGraphicsEllipseItem*>(itemList.at(i))->scenePos().y() << endl;
 			QPointF dist(pos - itemList.at(i)->scenePos());
 			qreal distMod = sqrt(dist.x()*dist.x() + dist.y()*dist.y());
 			//if (distMod < (spacing*0.7071))	//there will only ever be either 1 or 2 items that fulfil this [0.7071 ~ 2^(-0.5)]
@@ -240,8 +240,8 @@ void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	if (!acceptEvents) return;
 	//indicatorLine = 0;
 	
-	//kDebug() << "GameBoardScene::mouseMoveEvent" << endl;
-	//kDebug() << "mouseEvent->scenePos(): " << mouseEvent->scenePos().x() << ", " << mouseEvent->scenePos().y() << endl;
+	//kDebug() << "GameBoardScene::mouseMoveEvent";
+	//kDebug() << "mouseEvent->scenePos():" << mouseEvent->scenePos().x() << "," << mouseEvent->scenePos().y();
 	
 	QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 	

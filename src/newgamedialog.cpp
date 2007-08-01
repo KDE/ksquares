@@ -35,7 +35,7 @@ void NewGameDialog::adjustEnabledUsers(int numOfPlayers)
 		case 4:
 			break;
 		default:
-			kError() << "NewGameDialog::adjustEnabledUsers(): numOfPlayers out of range!!" << endl;
+			kError() << "NewGameDialog::adjustEnabledUsers(): numOfPlayers out of range!!";
 	}
 	
 	switch(numOfPlayers)

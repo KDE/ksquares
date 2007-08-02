@@ -56,7 +56,7 @@ int KSquaresGame::nextPlayer()
 {
 	anotherGo = false;	//just to reset the variable
 	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
-	kDebug() << endl << "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
+	kDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
 	kDebug() << "-";
 	emit takeTurnSig(currentPlayer());
 	

@@ -11,7 +11,7 @@ set(ksquares_SRCS
 	themegraphicsitems.cpp
 )
 
-include_directories(${CMAKE_SOURCE_DIR}/libkdegames ${CMAKE_SOURCE_DIR}/libkdegames/highscore)
+include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)
 
 kde4_add_ui_files(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_display.ui)
 

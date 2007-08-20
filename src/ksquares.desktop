@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=KSquares
+Name[ne]=केडीई बर्ग
 Name[sv]=Kfyrkanter
 Name[x-test]=xxKSquaresxx
 Name[zh_TW]=KSquares 連方塊
@@ -13,6 +14,7 @@ GenericName[el]=Συνδέστε τις τελείες για να σχηματ�
 GenericName[es]=Conecta los puntos para crear cuadrados
 GenericName[fa]=اتصال نقطه‌ها برای ایجاد مربعها
 GenericName[ja]=点を結んで正方形を作るゲーム
+GenericName[ne]=बर्ग सिर्जना गर्न बिन्दुहरू जोड्नुहोस्
 GenericName[pt]=Ligue os pontos para criar quadrados
 GenericName[pt_BR]=Ligue os pontos para criar quadrados
 GenericName[sv]=Sammanbind punkterna för att skapa fyrkanter

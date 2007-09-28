@@ -16,6 +16,7 @@
 
 #include "ksquareswindow.h"
 #include "ksquaresdemowindow.h"
+#include "settings.h"
 
 static const char description[] =
 	I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
@@ -39,6 +40,18 @@ int main(int argc, char **argv)
 	
 	KApplication app;
 	KGlobal::locale()->insertCatalog("libkdegames");
+	
+	// default names for players
+	KConfigGroup cg(KGlobal::config(), "General");
+	if (cg.readEntry<bool>("initializeNames", true)) {
+		QStringList playerNames;
+		playerNames << i18nc("default name of first player", "Player 1");
+		playerNames << i18nc("default name of second player", "Player 2");
+		playerNames << i18nc("default name of third player", "Player 3");
+		playerNames << i18nc("default name of fourth player", "Player 4");
+		Settings::setPlayerNames(playerNames);
+		cg.writeEntry("initializeNames", false);
+	}
 	
 	if (args->isSet("demo"))
 	{

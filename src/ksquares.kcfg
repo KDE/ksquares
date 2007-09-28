@@ -12,7 +12,6 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 		</entry>
 		<entry name="PlayerNames" type="StringList">
 			<label>Player Names</label>
-			<default>Player 1,Player 2,Player 3,Player 4</default>
 		</entry>
 		<entry name="HumanList" type="IntList">
 			<label>Human or AI</label>

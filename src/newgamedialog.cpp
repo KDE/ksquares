@@ -8,6 +8,7 @@
  ***************************************************************************/
 
 #include "newgamedialog.h"
+#include <kdebug.h>
 
 NewGameDialog::NewGameDialog(QWidget* parent) : KDialog(parent)
 {

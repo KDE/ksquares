@@ -34,10 +34,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox" >
      <property name="whatsThis" >
-      <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Settings for the players in the game&lt;/p>&lt;/body>&lt;/html></string>
+      <string>Settings for the players in the game</string>
      </property>
      <property name="title" >
       <string>Players</string>
@@ -64,10 +61,7 @@ p, li { white-space: pre-wrap; }
       <item row="4" column="0" >
        <widget class="QLabel" name="labelPlayer4Name" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans';">The name of the fourth player&lt;/p>&lt;/body>&lt;/html></string>
+         <string>The name of the fourth player</string>
         </property>
         <property name="text" >
          <string>Player 4:</string>
@@ -83,10 +77,7 @@ p, li { white-space: pre-wrap; }
          <bool>true</bool>
         </property>
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
+         <string>Should this player be controlled by a human</string>
         </property>
         <property name="text" >
          <string>Hum&amp;an?</string>
@@ -102,10 +93,7 @@ p, li { white-space: pre-wrap; }
          <bool>true</bool>
         </property>
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
+         <string>Should this player be controlled by a human</string>
         </property>
         <property name="text" >
          <string>Hu&amp;man?</string>
@@ -118,10 +106,7 @@ p, li { white-space: pre-wrap; }
       <item row="3" column="0" >
        <widget class="QLabel" name="labelPlayer3Name" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The name of the third player&lt;/p>&lt;/body>&lt;/html></string>
+         <string>The name of the third player</string>
         </property>
         <property name="text" >
          <string>Player 3:</string>
@@ -143,10 +128,7 @@ p, li { white-space: pre-wrap; }
       <item row="2" column="0" >
        <widget class="QLabel" name="labelPlayer2Name" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The name of the second player&lt;/p>&lt;/body>&lt;/html></string>
+         <string>The name of the second player</string>
         </property>
         <property name="text" >
          <string>Player 2:</string>
@@ -181,10 +163,7 @@ p, li { white-space: pre-wrap; }
          <bool>true</bool>
         </property>
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
+         <string>Should this player be controlled by a human</string>
         </property>
         <property name="text" >
          <string>&amp;Human?</string>
@@ -216,10 +195,7 @@ p, li { white-space: pre-wrap; }
       <item row="1" column="0" >
        <widget class="QLabel" name="labelPlayer1Name" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">The name of the first player&lt;/p>&lt;/body>&lt;/html></string>
+         <string>The name of the first player</string>
         </property>
         <property name="text" >
          <string>Player 1:</string>
@@ -235,10 +211,7 @@ p, li { white-space: pre-wrap; }
          <bool>true</bool>
         </property>
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Should this player be controlled by a human&lt;/p>&lt;/body>&lt;/html></string>
+         <string>Should this player be controlled by a human</string>
         </property>
         <property name="text" >
          <string>H&amp;uman?</string>
@@ -254,10 +227,7 @@ p, li { white-space: pre-wrap; }
    <item>
     <widget class="QGroupBox" name="groupBox_2" >
      <property name="whatsThis" >
-      <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Settings for the game board&lt;/p>&lt;/body>&lt;/html></string>
+      <string>Settings for the game board</string>
      </property>
      <property name="title" >
       <string>Game Board</string>
@@ -284,10 +254,7 @@ p, li { white-space: pre-wrap; }
       <item row="0" column="0" >
        <widget class="QLabel" name="labelWidth" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The number of squares the area is wide&lt;/p>&lt;/body>&lt;/html></string>
+         <string>The number of squares the area is wide</string>
         </property>
         <property name="text" >
          <string>Width:</string>
@@ -319,10 +286,7 @@ p, li { white-space: pre-wrap; }
       <item row="1" column="0" >
        <widget class="QLabel" name="labelHeight" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:Sans Serif; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Sans;">The number of squares the area is high&lt;/p>&lt;/body>&lt;/html></string>
+         <string>The number of squares the area is high</string>
         </property>
         <property name="text" >
          <string>Height:</string>
@@ -357,10 +321,7 @@ p, li { white-space: pre-wrap; }
    <item>
     <widget class="QGroupBox" name="groupBox_3" >
      <property name="whatsThis" >
-      <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Settings for the game&lt;/p>&lt;/body>&lt;/html></string>
+      <string>Settings for the game</string>
      </property>
      <property name="title" >
       <string>Game Settings</string>
@@ -387,10 +348,7 @@ p, li { white-space: pre-wrap; }
       <item row="0" column="0" >
        <widget class="QCheckBox" name="quickStartCheck" >
         <property name="whatsThis" >
-         <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
-p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal; text-decoration:none;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Partially fill in the board automatically before the game starts&lt;/p>&lt;/body>&lt;/html></string>
+         <string>Partially fill in the board automatically before the game starts</string>
         </property>
         <property name="text" >
          <string>Quick start</string>

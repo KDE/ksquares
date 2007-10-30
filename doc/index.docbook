@@ -81,9 +81,11 @@
   <title>Playing &ksquares;</title>
   
   <para>
-  Each player takes it in turns to draw a line between two adjacent dots on the board. The yellow indicator line shows you where your line will be placed when you click.
-  If a player completes a square by placing the fourth of the four lines around the square, they must take another go.
-  The game continues until every square on the board is completed.
+  At the start of the game, the game board is empty. There is simply a grid of dots showing where lines can be drawn.
+  Each player takes it in turns to draw a line between two adjacent dots on the board. By hovering the mouse over the game board, a yellow indicator line will show you where your line will be placed when you click.
+  Once you havedecided where you want to draw your line, click and the line will be drawn.
+  If by drawing a line, you completed a square then this square now belongs to you and earns you a point. Each time complete a square you may draw another line. If your line did not complete a square then the next player takes their turn.
+  The game will continue until every square on the board owned by one of the players
   </para>
   <para>
   To start a new game with custom settings (number of players, player names, board size) click on the "New" toolbar item or go to File→New. To start a new game with the same settings as the current game, click on "Reset in the toolbar."

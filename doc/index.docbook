@@ -1,7 +1,6 @@
-<?xml version="1.0" ?>
+﻿<?xml version="1.0" ?>
 <!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
-<!ENTITY ksquares "Ksquares">
   <!ENTITY kappname "&ksquares;">
   <!ENTITY kappversion "0.3"><!--Applicaion version. Use this variable everywhere it's needed.-->
   <!ENTITY docversion "0.2.0"><!--Document version. Use this variable everywhere it's needed.-->
@@ -118,8 +117,7 @@
     </itemizedlist>
 </sect1>
 </chapter>
- 
- 
+  
 <chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
 <!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
   <sect1 id="file-game-menu-reference">
@@ -180,7 +178,7 @@
     <term><menuchoice>
       <guimenu>Settings</guimenu><guimenuitem>Show Statusbar</guimenuitem>
     </menuchoice></term>
-    <listitem><para><action>Toggle</action> the statusbar on and off.</para></listitem>
+    <listitem><para><action>Toggle</action> the status bar on and off.</para></listitem>
   </varlistentry>
 			<varlistentry id="settings-menu-shortcuts">
 				<term><menuchoice>
@@ -211,19 +209,18 @@
 &help.menu.documentation;
 </sect1>
 </chapter>
- 
- 
+  
 <chapter id="faq"><title>Frequently asked questions</title> <!-- do not change this! -->
 <!--This chapter is for frequently asked questions. Please use <qandaset> <qandaentry> only!-->
 <qandaset>
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
 <question><para>Who made this game?</para></question>
- <answer><para>The kdegames team. You can find their website here.</para></answer>
+ <answer><para>The kdegames team. You can find their website <ulink url="http://games.kde.org">here</ulink>.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>Where can I get cheatcodes? </para></question>
- <answer><para>You can't get cheatcodes for KDE games.</para></answer>
+ <answer><para>You cannot get cheatcodes for &kde; games.</para></answer>
 </qandaentry>
     <qandaentry>
       <question>
@@ -262,8 +259,8 @@
   <answer><para>&kappname; doesn't have a saving feature.</para></answer>
 </qandaentry>
 <qandaentry>
- <question><para>Where are the highscores?</para></question>
- <answer><para>To access the highscore board please use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>Show High scores</guimenuitem></menuchoice> on the menubar.</para></answer>
+ <question><para>Where are the high scores?</para></question>
+ <answer><para>To access the high score board please use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>Show High scores</guimenuitem></menuchoice> on the menubar.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I want to change the game configuration. Where do I go? </para></question>
@@ -281,7 +278,7 @@
 <variablelist>
   <varlistentry>
     <term><guilabel>Players</guilabel></term>
-    <listitem><para>Here you can change the number of participating players,a s well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the <guibutton>checkbox</guibutton> to specify the player.</para></listitem>
+    <listitem><para>Here you can change the number of participating players,a s well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the <guibutton>check box</guibutton> to specify the player.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Board</guilabel></term>
@@ -329,8 +326,7 @@
 &underGPL;
  
 </chapter>
- 
- 
+  
 <appendix id="installation">
 <title>Installation</title>
  

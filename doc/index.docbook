@@ -1,103 +1,129 @@
 <?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
-  <!-- Define an entity for your application if it is not part of KDE
-       CVS -->
-  <!ENTITY ksquares "<application>KSquares</application>">
-  <!ENTITY kappname "&ksquares;"><!-- replace kmyapplication here
-                                            do *not* replace kappname-->
-  <!ENTITY package "playground-games"><!-- kdebase, kdeadmin, etc.  Leave
-                                     this unchanged if your
-                                     application is not maintained in KDE CVS -->
-  <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE"> <!-- ONLY If you are writing non-English
-                                     original documentation, change
-                                     the language here -->
-
-  <!-- Do not define any other entities; instead, use the entities
-       from entities/general.entities and $LANG/user.entities. -->
+<!ENTITY ksquares "Ksquares">
+  <!ENTITY kappname "&ksquares;">
+  <!ENTITY kappversion "0.3"><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY docversion "0.2.0"><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY docupdate "2006-12-25"><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY package "kdegames">  <!-- do not change this! -->
+  <!ENTITY % English "INCLUDE" > <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"> <!-- do not change this! -->
 ]>
-
-<book lang="&language;">
-
-
+ 
+<book lang="&language;"> <!-- do not change this! -->
 <bookinfo>
-  <title>The &ksquares; Handbook</title>
-
-  <authorgroup>
+	<title>The &kappname; Handbook</title> <!-- This is the title of the docbook. Live as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
     <author>
-    <!-- This is just put in as an example.  For real documentation, please
-        define a general entity in entities/contributor.entities, e.g.
-    <!ENTITY George.N.Ugnacious "<personname><firstname>George</firstname><othername>N.</othername><surname>Ugnacious</surname></personname>">
-    <!ENTITY George.N.Ugnacious.mail "<email>gnu@kde.org</email>">
-    and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
-    -->
+
       <personname>
         <firstname>Matt</firstname>
         <surname>Williams</surname>
       </personname>
       <email>matt@milliams.com</email>
     </author>
+<othercredit role="reviewer">
+<firstname>Eugene</firstname><surname>Trounev</surname>
+<contrib>Reviewer</contrib>
+<affiliation><address>eugene.trounev@gmail.com</address></affiliation>
+</othercredit>
     <!-- TRANS:ROLES_OF_TRANSLATORS -->
   </authorgroup>
-
-
 
   <copyright>
     <year>2006</year>
     <holder>Matt Williams</holder>
   </copyright>
-  <!-- Translators: put here the copyright notice of the translation -->
-  <!-- Put here the FDL notice.  Read the explanation in fdl-notice.docbook
-      and in the FDL itself on how to use it. -->
-  <legalnotice>&FDLNotice;</legalnotice>
-  
-  <date>2006-12-25</date>
-  <releaseinfo>0.2.0</releaseinfo>
-  
-  <abstract>
-    <para>&ksquares; is a game where you complete squares by drawing lines.</para>
-  </abstract>
-  
-  <keywordset>
-    <keyword>KDE</keyword>
-    <keyword>ksqaures</keyword>
-    <keyword>kdegames</keyword>
-    <keyword>game</keyword>
-    <keyword>squares</keyword>
-  </keywordset>
-
+ 
+<date>&docupdate;</date><!-- Date of (re)writing, ro update. Use the variable definitions within header to change this value.-->
+<releaseinfo>&docversion;</releaseinfo><!-- Application version number. Use the variable definitions within header to change this value.-->
+ 
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para>This documentation describes the game of &kappname; version &kappversion;</para>
+</abstract>
+ 
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword>KDE</keyword> <!-- do not change this! -->
+	<keyword>kdegames</keyword> <!-- do not change this! -->
+	<keyword>game</keyword> <!-- do not change this! -->
+	<keyword>Ksquares</keyword><!--Application name goes here-->
+<!-- Game genre. use as many as necessary.Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword>board</keyword>
+	<keyword>Dots and Boxes</keyword>
+	<keyword>Boxes</keyword>
+	<keyword>Squares</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword>four players</keyword>
+<!--All other relevant keywords-->
+	<keyword>Paddocks</keyword>
+	<keyword>Square-it</keyword>
+	<keyword>Dots and Dashes</keyword>
+	<keyword>Dot Game</keyword>
+</keywordset>
 </bookinfo>
-
-<chapter id="introduction">
-  <title>Introduction</title>
-  
-  <para>
-  &ksquares; is a game of "squares" (http://en.wikipedia.org/wiki/Dots_and_Boxes). The purpose of the game is to complete more squares than your opponent.
-  </para>
-
+<!--Content begins here: -->
+<chapter id="introduction"><title>Introduction</title> <!-- do not change this! -->
+	<note><title>Gametype:</title><para>Board</para></note><!-- Game genre. use as many as necessary.Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note><title>Number of possible players:</title><para>Four</para></note>
+	<para>&kappname; is a fun and exciting game for &kde; desktop environment. &kappname; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
+<para>The idea behind &kappname; is to construct squares by interconnecting the dots on the greed. Up to four players can play this game together, taking turns. The trick is – regardlessly of who has constructed the most of the square, it is the player who completes the square that gets the point for it.</para>
+<para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>
-
-<chapter id="playing-ksquares">
-  <title>Playing &ksquares;</title>
-  
-  <para>
+ 
+<chapter id="howto"><title>How to play</title> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note><title>Objective:</title><para>Complete more squares than any of your opponents.</para></note><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para>
   At the start of the game, the game board is empty. There is simply a grid of dots showing where lines can be drawn.
-  Each player takes it in turns to draw a line between two adjacent dots on the board. By hovering the mouse over the game board, a yellow indicator line will show you where your line will be placed when you click.
-  Once you havedecided where you want to draw your line, click and the line will be drawn.
-  If by drawing a line, you completed a square then this square now belongs to you and earns you a point. Each time complete a square you may draw another line. If your line did not complete a square then the next player takes their turn.
-  The game will continue until every square on the board owned by one of the players
+</para>
+<note><title>Note:</title><para>Depending on the game difficulty chosen, the game field may already contain lines at the beginning of the game round.</para></note>
+  <para>Each player takes it in turns to draw a line between two adjacent dots on the board. By hovering the mouse over the game board, a yellow indicator line will show you where your line will be placed when you click.
+  Once you have decided where you want to draw your line, click - and the line will be drawn.
+  If by drawing a line, you completed a square then this square now belongs to you and earns you a point. Each time you complete a square, you may draw another line. If your line did not complete a square then the next player(s) take their turn.
+  The game will continue until every square on the board owned by one of the players.
   </para>
   <para>
-  To start a new game with custom settings (number of players, player names, board size) click on the "New" toolbar item or go to File→New. To start a new game with the same settings as the current game, click on "Reset in the toolbar."
+  To start a new game with custom settings (number of players, player names, board size) click on the "New" toolbar item or go to <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice>. To start a new game with the same settings as the current game, click on <guibutton>Reset</guibutton> on the toolbar.
   </para>
-
 </chapter>
-
-<chapter id="menu-reference">
-  <title>The menu reference</title>
-  
+ 
+<chapter id="rules_and_tips"><title>Game Rules, Strategies and Tips</title> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title>Game Rules</title>
+    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Never the less, here are the game regulations you, as a player will defiantly face while playing &kappname;:</para>
+    <itemizedlist>
+	<listitem><para>You may only connect the dots on the greed if they are not previously connected by you, your opponent, or the computer.</para></listitem>
+	<listitem><para>To gain the points you have to connect the dots to shape a square.</para></listitem>
+	<listitem><para>The square can be no larger then the four adjacent dots on the greed allow for.</para></listitem>
+	<listitem><para>Once a square is complete the player who draws the last line of that square is granted the right of possession over it. The square then is colored and the player is given a point.</para></listitem>
+	<listitem><para>The player who completes the square is given an extra turn which the player can not forfeit.</para></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title>Strategies and Tips</title>
+  <itemizedlist>
+	<listitem><para>Try not to play at random. Such game practice will most certainly result in loss.</para></listitem>
+	<listitem><para>Construct long chains of lines over the gameboard. Once one such chain is complete start to build another one going parallel to the first.</para></listitem>
+	<listitem><para>Try no to build contraptions where only one line remains undone. Your opponent will almost certainly take an advantage of it.</para></listitem>
+	<listitem><para>If you are to let the opponent get a square or more, try to select the combination resulting in the least damage.</para></listitem>
+	<listitem><para>Try to pus your opponent into the situation where he/she(it) will have no choice but to let you get the square.</para></listitem>
+	<listitem><para>If you are to get a chance to start completing the whole chain of squares, remember that by living two squares at the end of such chain incomplete you are pushing your opponent into completing them, thus giving you the opportunity to continue onto yet another chain. Such a situation is called T\the double-cross.</para></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+ 
+ 
+<chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
   <sect1 id="file-game-menu-reference">
-    <title>The File/Game Menu</title>
+    <title>The Game Menu</title>
     
     <para>
     <variablelist>
@@ -143,24 +169,62 @@
 
   <sect1 id="settings-menu-reference">
     <title>The <guimenu>Settings</guimenu> Menu</title>
-    <para>
-    TODO: Settings info
-    </para>
+ <variablelist>
+  <varlistentry>
+    <term><menuchoice>
+      <guimenu>Settings</guimenu><guimenuitem>Show Toolbar</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Toggle</action> the toolbar on and off.</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><menuchoice>
+      <guimenu>Settings</guimenu><guimenuitem>Show Statusbar</guimenuitem>
+    </menuchoice></term>
+    <listitem><para><action>Toggle</action> the statusbar on and off.</para></listitem>
+  </varlistentry>
+			<varlistentry id="settings-menu-shortcuts">
+				<term><menuchoice>
+					<guimenu>Settings</guimenu>
+					<guimenuitem>Configure Shortcuts...</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Displays a standard &kde; shortcut configuration dialog</action> to change the keyboard shortcuts for &kappname;.</para></listitem>
+			</varlistentry>
+			<varlistentry id="settings-menu-toolbars">
+				<term><menuchoice>
+					<guimenu>Settings</guimenu>
+					<guimenuitem>Configure Toolbar...</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Displays a standard &kde; toolbar configuration dialog</action> to change the keyboard shortcuts for &kappname;.</para></listitem>
+			</varlistentry>
+			<varlistentry id="settings-menu-settings">
+				<term><menuchoice>
+					<guimenu>Settings</guimenu>
+					<guimenuitem>Configure &kappname;...</guimenuitem>
+				</menuchoice></term>
+				<listitem><para><action>Opens a dialog to configure &kappname;.</action>See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
+			</varlistentry>
+    </variablelist>
   </sect1>
 
-  <sect1 id="help-menu-reference">
-    <title>The <guimenu>Help</guimenu> Menu</title>
-    &help.menu.documentation;
-  </sect1>
+<sect1 id="help"><!--This is a standard Help menubar entry. Only change if needed.-->
+<title>The <guimenuitem>Help</guimenuitem> Menu</title>
+&help.menu.documentation;
+</sect1>
 </chapter>
-
-<chapter id="faq">
-  <title>Questions and Answers</title>
-  
-  &reporting.bugs;
-  &updating.documentation;
-  
-  <qandaset id="faqlist">
+ 
+ 
+<chapter id="faq"><title>Frequently asked questions</title> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset> <qandaentry> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question><para>Who made this game?</para></question>
+ <answer><para>The kdegames team. You can find their website here.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>Where can I get cheatcodes? </para></question>
+ <answer><para>You can't get cheatcodes for KDE games.</para></answer>
+</qandaentry>
     <qandaentry>
       <question>
         <para>How do I win the game?</para>
@@ -169,88 +233,134 @@
         <para>You must complete more squares than your opponent</para>
       </answer>
     </qandaentry>
-  </qandaset>
-
+<qandaentry>
+ <question><para>How do I start a new game? </para></question>
+ <answer><para>To start a new game use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice> on the menubar.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>How do I pause the game? </para></question>
+ <answer><para>&kappname; does not have a pause feature, as it does not requre one.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>I want to change the way this game looks. Can I? </para></question>
+ <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &kappname;...</guimenuitem></menuchoice> on the menubar. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>I have made a mistake. Can I undo? </para></question>
+ <answer><para>No. &kappname; doesn't currently have an undo feature.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>Can I use keyboard? </para></question>
+ <answer><para>No. &kappname; can not be played using keyboard.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>I can't figure out what to do here! Are there hints? </para></question>
+ <answer><para>No hint feature is implemented yet.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>I have to quit the game now, but I'm not finished yet. Can I save my progress?</para></question>
+  <answer><para>&kappname; doesn't have a saving feature.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>Where are the highscores?</para></question>
+ <answer><para>To access the highscore board please use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>Show High scores</guimenuitem></menuchoice> on the menubar.</para></answer>
+</qandaentry>
+<qandaentry>
+ <question><para>I want to change the game configuration. Where do I go? </para></question>
+ <answer><para>There are two configuration dialogs that set the game environment up. Refer to the <link linkend="configuration">Game Configuration</link> section of this docbook for details on the both.</para></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+ 
+</qandaset>
 </chapter>
+ 
+<chapter id="configuration"><title>Game Configuration</title> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title>New Game Dialog</title>
+<para>The New Game Dialog dialog consistes of the following groupboxes:</para>
+<variablelist>
+  <varlistentry>
+    <term><guilabel>Players</guilabel></term>
+    <listitem><para>Here you can change the number of participating players,a s well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the <guibutton>checkbox</guibutton> to specify the player.</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><guilabel>Game Board</guilabel></term>
+    <listitem><para>Here you can regulate the size of the game board. Use the <guilabel>Width</guilabel> and <guilabel>Height</guilabel> selection boxes to change the width and height of the game board.</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><guilabel>Game Settings</guilabel></term>
+    <listitem><para>This part of the configuration dialog regulates the difficulty of the game. If you live the <guilabel>Quick start</guilabel> checkbox unchecked - the game will begin with the empty greed. Otherwise the game will start with the game board partially filled.</para></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title>Configuration Dialog</title>
+<para>The Configure &kappname; dialog consistes of the following tabs:</para>
+<variablelist>
+  <varlistentry>
+    <term><guilabel>Display</guilabel></term>
+    <listitem><para>Here you can change &kappname; color settings.</para></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term><guilabel>Computer Player</guilabel></term>
+    <listitem><para>Use this tab to regulate the game difficulty.</para></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+ 
+<chapter id="credits"><title>Credits and License</title> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+ 
+<para>
+&kappname;  <!-- do not change this! -->
+</para>
 
-<chapter id="credits">
-
-  <!-- Include credits for the programmers, documentation writers, and
-  contributors here. The license for your software should then be included below
-  the credits with a reference to the appropriate license file included in the KDE
-  distribution. -->
-  
-  <title>Credits and License</title>
-  
-  <para>&ksquares;</para>
-  <para>
+<para>
   Program copyright 2006 Matt Williams <email>matt@milliams.com</email>
   </para>
-  <!--<para>
-  Contributors:
-  <itemizedlist>
-    <listitem>
-      <para>Konqui the KDE Dragon <email>konqui@kde.org</email></para>
-    </listitem>
-  </itemizedlist>
-  </para>-->
-  
+ 
   <para>Documentation Copyright &copy; 2006 Matt Williams <email>matt@milliams.com</email></para>
 
-  <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
-  &underFDL;               <!-- FDL: do not remove -->
+<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
-  <!-- Determine which license your application is licensed under,
-      and delete all the remaining licenses below:
 
-      (NOTE:  All documentation are licensed under the FDL,
-      regardless of what license the application uses) -->
-
-  &underGPL;        	 <!-- GPL License -->
+&underFDL;
+&underGPL;
+ 
 </chapter>
-
+ 
+ 
 <appendix id="installation">
 <title>Installation</title>
-
-<sect1 id="requirements">
-  <title>Requirements</title>
-  
-  <!--
-  List any special requirements for your application here. This should include:
-  .Libraries or other software that is not included in kdesupport,
-  kdelibs, or kdebase.
-  .Hardware requirements like amount of RAM, disk space, graphics card
-  capabilities, screen resolution, special expansion cards, etc.
-  .Operating systems the app will run on. If your app is designed only for a
-  specific OS, (you wrote a graphical LILO configurator for example) put this
-  information here.
-  -->
-  
-  <para>
-  kdelibs 4 from SVN is required as well as libkdegames
-  </para>
-  
-  <!-- For a list of updates, you may refer to the application web site
-  or the ChangeLog file, or ... -->
-  <para>
-  Changelog stuff..
-  </para>
+ 
+&install.intro.documentation;
+ 
+ 
+<sect1 id="Compilation">
+<title>Compilation and Installation</title>
+ 
+&install.compile.documentation;
+ 
 </sect1>
-
 </appendix>
-
-&documentation.index;
+ 
+&documentation.index; 
 </book>
-
 <!--
 Local Variables:
-mode: xml
+mode: sgml
 sgml-minimize-attributes:nil
 sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
 sgml-indent-step:0
 sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
 End:
-
-vim:tabstop=2:shiftwidth=2:expandtab
-kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
 -->

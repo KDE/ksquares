@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+<?xml version="1.0" ?>
 <!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
   <!ENTITY kappname "&ksquares;">
@@ -70,7 +70,7 @@
 	<note><title>Gametype:</title><para>Board</para></note><!-- Game genre. use as many as necessary.Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
 	<note><title>Number of possible players:</title><para>Four</para></note>
 	<para>&kappname; is a fun and exciting game for &kde; desktop environment. &kappname; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
-<para>The idea behind &kappname; is to construct squares by interconnecting the dots on the greed. Up to four players can play this game together, taking turns. The trick is – regardlessly of who has constructed the most of the square, it is the player who completes the square that gets the point for it.</para>
+<para>The idea behind &kappname; is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
 <para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>
  
@@ -84,8 +84,8 @@
 <note><title>Note:</title><para>Depending on the game difficulty chosen, the game field may already contain lines at the beginning of the game round.</para></note>
   <para>Each player takes it in turns to draw a line between two adjacent dots on the board. By hovering the mouse over the game board, a yellow indicator line will show you where your line will be placed when you click.
   Once you have decided where you want to draw your line, click - and the line will be drawn.
-  If by drawing a line, you completed a square then this square now belongs to you and earns you a point. Each time you complete a square, you may draw another line. If your line did not complete a square then the next player(s) take their turn.
-  The game will continue until every square on the board owned by one of the players.
+  If by drawing a line, you completed a square then this square now belongs to you and earns you a point. Each time you complete a square, you must draw another line. If your line did not complete a square then the next player(s) take their turn.
+  The game will continue until every square on the board is owned by one of the players.
   </para>
   <para>
   To start a new game with custom settings (number of players, player names, board size) click on the "New" toolbar item or go to <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice>. To start a new game with the same settings as the current game, click on <guibutton>Reset</guibutton> on the toolbar.
@@ -96,11 +96,11 @@
 	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
 <sect1 id="rules">
   <title>Game Rules</title>
-    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Never the less, here are the game regulations you, as a player will defiantly face while playing &kappname;:</para>
+    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Nevertheless, here are the game regulations you, as a player will defiantly face while playing &kappname;:</para>
     <itemizedlist>
-	<listitem><para>You may only connect the dots on the greed if they are not previously connected by you, your opponent, or the computer.</para></listitem>
-	<listitem><para>To gain the points you have to connect the dots to shape a square.</para></listitem>
-	<listitem><para>The square can be no larger then the four adjacent dots on the greed allow for.</para></listitem>
+	<listitem><para>You may only connect the dots on the grid if they are not previously connected by you, your opponent, or the computer.</para></listitem>
+	<listitem><para>To gain the points you have to connect the dots to form a square.</para></listitem>
+	<listitem><para>The square can be no larger than the four adjacent dots on the grid allow for.</para></listitem>
 	<listitem><para>Once a square is complete the player who draws the last line of that square is granted the right of possession over it. The square then is colored and the player is given a point.</para></listitem>
 	<listitem><para>The player who completes the square is given an extra turn which the player can not forfeit.</para></listitem>
     </itemizedlist>
@@ -112,8 +112,8 @@
 	<listitem><para>Construct long chains of lines over the gameboard. Once one such chain is complete start to build another one going parallel to the first.</para></listitem>
 	<listitem><para>Try no to build contraptions where only one line remains undone. Your opponent will almost certainly take an advantage of it.</para></listitem>
 	<listitem><para>If you are to let the opponent get a square or more, try to select the combination resulting in the least damage.</para></listitem>
-	<listitem><para>Try to pus your opponent into the situation where he/she(it) will have no choice but to let you get the square.</para></listitem>
-	<listitem><para>If you are to get a chance to start completing the whole chain of squares, remember that by living two squares at the end of such chain incomplete you are pushing your opponent into completing them, thus giving you the opportunity to continue onto yet another chain. Such a situation is called T\the double-cross.</para></listitem>
+	<listitem><para>Try to push your opponent into the situation where he/she(it) will have no choice but to let you get the square.</para></listitem>
+	<listitem><para>If you are to get a chance to start completing a whole chain of squares, remember that by leaving two squares at the end of such chain incomplete you are pushing your opponent into completing them, thus giving you the opportunity to continue onto yet another chain. Such a situation is called the double-cross.</para></listitem>
     </itemizedlist>
 </sect1>
 </chapter>
@@ -236,7 +236,7 @@
 </qandaentry>
 <qandaentry>
  <question><para>How do I pause the game? </para></question>
- <answer><para>&kappname; does not have a pause feature, as it does not requre one.</para></answer>
+ <answer><para>&kappname; does not have a pause feature, as it does not require one.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I want to change the way this game looks. Can I? </para></question>
@@ -278,7 +278,7 @@
 <variablelist>
   <varlistentry>
     <term><guilabel>Players</guilabel></term>
-    <listitem><para>Here you can change the number of participating players,a s well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the <guibutton>check box</guibutton> to specify the player.</para></listitem>
+    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the <guibutton>check box</guibutton> to specify the player type.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Board</guilabel></term>
@@ -286,7 +286,7 @@
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Settings</guilabel></term>
-    <listitem><para>This part of the configuration dialog regulates the difficulty of the game. If you live the <guilabel>Quick start</guilabel> checkbox unchecked - the game will begin with the empty greed. Otherwise the game will start with the game board partially filled.</para></listitem>
+    <listitem><para>This part of the configuration dialog regulates the difficulty of the game. If you leave the <guilabel>Quick start</guilabel> checkbox unchecked - the game will begin with the empty grid. Otherwise the game will start with the game board partially filled.</para></listitem>
   </varlistentry>
 </variablelist>
 </sect1>

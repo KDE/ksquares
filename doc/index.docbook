@@ -4,7 +4,7 @@
   <!ENTITY kappname "&ksquares;">
   <!ENTITY kappversion "0.3"><!--Applicaion version. Use this variable everywhere it's needed.-->
   <!ENTITY docversion "0.2.0"><!--Document version. Use this variable everywhere it's needed.-->
-  <!ENTITY docupdate "2006-12-25"><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY docupdate "2007-11-14"><!--Document version. Use this variable everywhere it's needed.-->
   <!ENTITY package "kdegames">  <!-- do not change this! -->
   <!ENTITY % English "INCLUDE" > <!-- change language only here -->
   <!ENTITY % addindex "IGNORE"> <!-- do not change this! -->
@@ -74,7 +74,7 @@
 <para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>
  
-<chapter id="howto"><title>How to play</title> <!-- do not change this! -->
+<chapter id="howto"><title>How to Play</title> <!-- do not change this! -->
 <!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
 	<note><title>Objective:</title><para>Complete more squares than any of your opponents.</para></note><!--Describe the objective of the game.-->
 <!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
@@ -88,7 +88,7 @@
   The game will continue until every square on the board is owned by one of the players.
   </para>
   <para>
-  To start a new game with custom settings (number of players, player names, board size) click on the "New" toolbar item or go to <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice>. To start a new game with the same settings as the current game, click on <guibutton>Reset</guibutton> on the toolbar.
+  To start a new game with custom settings (number of players, player names, board size) click on the <guibutton>New</guibutton> toolbar button or go to <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>Game</guimenu><guimenuitem>New</guimenuitem></menuchoice>. To start a new game with the same settings as the current game, click on <guibutton>Restart Game</guibutton> on the toolbar.
   </para>
 </chapter>
  
@@ -102,7 +102,7 @@
 	<listitem><para>To gain the points you have to connect the dots to form a square.</para></listitem>
 	<listitem><para>The square can be no larger than the four adjacent dots on the grid allow for.</para></listitem>
 	<listitem><para>Once a square is complete the player who draws the last line of that square is granted the right of possession over it. The square then is colored and the player is given a point.</para></listitem>
-	<listitem><para>The player who completes the square is given an extra turn which the player can not forfeit.</para></listitem>
+	<listitem><para>The player who completes the square is given an extra turn which the player cannot forfeit.</para></listitem>
     </itemizedlist>
 </sect1>
 <sect1 id="strategies">
@@ -121,7 +121,7 @@
 <chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
 <!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
   <sect1 id="file-game-menu-reference">
-    <title>The Game Menu</title>
+    <title>The <guimenu>Game</guimenu> Menu</title>
     
     <para>
     <variablelist>
@@ -138,13 +138,18 @@
     <listitem><para><action>Start a new game</action></para></listitem>
     </varlistentry>
     <varlistentry>
+    <term><menuchoice><shortcut><keycap>F5</keycap></shortcut>
+    <guimenu>Game</guimenu><guimenuitem>Restart Game</guimenuitem></menuchoice></term>
+    <listitem><para>Starts a new game with the same settings as the current game.</para></listitem>
+    </varlistentry>
+    <varlistentry>
     <term>
     <menuchoice>
     <shortcut>
     <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
     </shortcut>
     <guimenu>File</guimenu>
-    <guimenuitem>Show High scores</guimenuitem>
+    <guimenuitem>Show High Scores...</guimenuitem>
     </menuchoice>
     </term>
     <listitem><para><action>Displays</action> the high score table</para></listitem>
@@ -232,7 +237,7 @@
     </qandaentry>
 <qandaentry>
  <question><para>How do I start a new game? </para></question>
- <answer><para>To start a new game use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice> on the menubar.</para></answer>
+ <answer><para>To start a new game use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>Game</guimenu><guimenuitem>New</guimenuitem></menuchoice> on the menubar.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>How do I pause the game? </para></question>
@@ -248,19 +253,19 @@
 </qandaentry>
 <qandaentry>
  <question><para>Can I use keyboard? </para></question>
- <answer><para>No. &kappname; can not be played using keyboard.</para></answer>
+ <answer><para>No. &kappname; cannot be played using keyboard.</para></answer>
 </qandaentry>
 <qandaentry>
- <question><para>I can't figure out what to do here! Are there hints? </para></question>
+ <question><para>I cannot figure out what to do here! Are there hints? </para></question>
  <answer><para>No hint feature is implemented yet.</para></answer>
 </qandaentry>
 <qandaentry>
- <question><para>I have to quit the game now, but I'm not finished yet. Can I save my progress?</para></question>
+ <question><para>I have to quit the game now, but I am not finished yet. Can I save my progress?</para></question>
   <answer><para>&kappname; doesn't have a saving feature.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>Where are the high scores?</para></question>
- <answer><para>To access the high score board please use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>Show High scores</guimenuitem></menuchoice> on the menubar.</para></answer>
+ <answer><para>To access the high score board please use <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut><guimenu>Game</guimenu><guimenuitem>Show High Scores...</guimenuitem></menuchoice> on the menubar.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I want to change the game configuration. Where do I go? </para></question>
@@ -274,11 +279,11 @@
 <chapter id="configuration"><title>Game Configuration</title> <!-- do not change this! -->
 <sect1 id="newgame-dialog">
 <title>New Game Dialog</title>
-<para>The New Game Dialog dialog consistes of the following groupboxes:</para>
+<para>The <guilabel>New Game</guilabel> dialog consistes of the following groupboxes:</para>
 <variablelist>
   <varlistentry>
     <term><guilabel>Players</guilabel></term>
-    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the <guibutton>check box</guibutton> to specify the player type.</para></listitem>
+    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the check box to specify the player type.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Board</guilabel></term>
@@ -286,17 +291,17 @@
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Settings</guilabel></term>
-    <listitem><para>This part of the configuration dialog regulates the difficulty of the game. If you leave the <guilabel>Quick start</guilabel> checkbox unchecked - the game will begin with the empty grid. Otherwise the game will start with the game board partially filled.</para></listitem>
+    <listitem><para>This part of the configuration dialog regulates the difficulty of the game. If you leave the <guilabel>Quick start</guilabel> check box unchecked - the game will begin with the empty grid. Otherwise the game will start with the game board partially filled.</para></listitem>
   </varlistentry>
 </variablelist>
 </sect1>
 <sect1 id="configuration-dialog">
 <title>Configuration Dialog</title>
-<para>The Configure &kappname; dialog consistes of the following tabs:</para>
+<para>The <guilabel>Configure - &kappname;</guilabel> dialog consists of the following tabs:</para>
 <variablelist>
   <varlistentry>
     <term><guilabel>Display</guilabel></term>
-    <listitem><para>Here you can change &kappname; color settings.</para></listitem>
+    <listitem><para>Here you can change the &kappname; color settings.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Computer Player</guilabel></term>

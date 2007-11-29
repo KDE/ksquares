@@ -300,7 +300,7 @@ void KSquaresWindow::optionsPreferences()
 
 	QWidget *displaySettingsDialog = new QWidget;
 	ui_prefs_display.setupUi(displaySettingsDialog);
-	dialog->addPage(displaySettingsDialog, i18n("Display"), "screen");
+	dialog->addPage(displaySettingsDialog, i18n("Display"), "preferences-desktop-display");
 
 	QWidget *aiSettingsDialog = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDialog);

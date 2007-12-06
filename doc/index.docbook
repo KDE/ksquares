@@ -131,7 +131,7 @@
     <shortcut>
     <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
     </shortcut>
-    <guimenu>File</guimenu>
+    <guimenu>Game</guimenu>
     <guimenuitem>New</guimenuitem>
     </menuchoice>
     </term>
@@ -148,7 +148,7 @@
     <shortcut>
     <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
     </shortcut>
-    <guimenu>File</guimenu>
+    <guimenu>Game</guimenu>
     <guimenuitem>Show High Scores...</guimenuitem>
     </menuchoice>
     </term>
@@ -160,7 +160,7 @@
     <shortcut>
     <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
     </shortcut>
-    <guimenu>File</guimenu>
+    <guimenu>Game</guimenu>
     <guimenuitem>Quit</guimenuitem>
     </menuchoice>
     </term>

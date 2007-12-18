@@ -18,11 +18,11 @@ kde4_add_ui_files(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui pre
 kde4_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
 
 set(ksquares_icons
-	hi16-app-ksquares.png
-	hi32-app-ksquares.png
-	hi48-app-ksquares.png
-	hi64-app-ksquares.png
-	hi128-app-ksquares.png
+	${CMAKE_CURRENT_SOURCE_DIR}/hi16-app-ksquares.png
+	${CMAKE_CURRENT_SOURCE_DIR}/hi32-app-ksquares.png
+	${CMAKE_CURRENT_SOURCE_DIR}/hi48-app-ksquares.png
+	${CMAKE_CURRENT_SOURCE_DIR}/hi64-app-ksquares.png
+	${CMAKE_CURRENT_SOURCE_DIR}/hi128-app-ksquares.png
 )
 kde4_add_win32_app_icon(ksquares_SRCS ${ksquares_icons})
 kde4_add_executable(ksquares ${ksquares_SRCS})

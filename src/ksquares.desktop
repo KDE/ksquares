@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=KSquares
 Name[ne]=केडीई बर्ग
+Name[pl]=Kwadraty
+Name[pt_BR]=KPontinhos
 Name[sv]=Fyrkanter
 Name[wa]=KCwårés
 Name[x-test]=xxKSquaresxx
@@ -26,8 +28,9 @@ GenericName[lv]=Savienojiet punktus, lai izveidotu kvadrātus
 GenericName[nds]=Pünkt verbinnen, so dat Quadraten dor bi rutkaamt
 GenericName[ne]=बर्ग सिर्जना गर्न बिन्दुहरू जोड्नुहोस्
 GenericName[nl]=Verbind de stippen om vierkanten te maken
+GenericName[pl]=Połącz kropki, żeby otrzymać kwadraty
 GenericName[pt]=Ligue os pontos para criar quadrados
-GenericName[pt_BR]=Ligue os pontos para criar quadrados
+GenericName[pt_BR]=Conecte os pontos para criar quadrados
 GenericName[sl]=Povežite pikice da ustvarite kvadrate
 GenericName[sv]=Sammanbind punkterna för att skapa fyrkanter
 GenericName[uk]=З'єднайте точки, щоб створити квадрати

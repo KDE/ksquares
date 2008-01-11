@@ -9,12 +9,15 @@
 
 #include "gameboardscene.h"
 
+#include "dots_client.h"
+
 #include <math.h>
 
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsEllipseItem>
 
 #include <kdebug.h>
+#include <kggzmod/module.h>
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
@@ -228,7 +231,18 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 		if (connectList.size() == 2)
 		{
-			addLineToIndex(connectList);
+			if(KGGZMod::Module::instance())
+			{
+				// get m_proto from KSquaresWindow?
+				sndmoveh move;
+				move.x = 23;
+				move.y = 42;
+				emit signalMoveRequest(move);
+			}
+			else
+			{
+				addLineToIndex(connectList);
+			}
 		}
 	}
 	

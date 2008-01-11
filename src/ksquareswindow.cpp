@@ -27,6 +27,10 @@
 #include <KStandardGameAction>
 #include <KSelectAction>
 
+//libkdegames
+#include <kggzmod/module.h>
+#include <kggzgames/kggzrankingsdialog.h>
+
 //generated
 #include "settings.h"
 
@@ -38,14 +42,22 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
+KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0), m_proto(0)
 {
 	setCentralWidget(m_view);
 	QTimer::singleShot(0, this, SLOT(initObject()));
+
+	if(KGGZMod::Module::isGGZ())
+	{
+		KGGZMod::Module *mod = new KGGZMod::Module("ksquares");
+		connect(mod, SIGNAL(signalNetwork(int)), SLOT(slotNetworkData(int)));
+		connect(mod, SIGNAL(signalError()), SLOT(slotNetworkError()));
+	}
 }
 
 KSquaresWindow::~KSquaresWindow()
 {
+	delete KGGZMod::Module::instance();
 	delete m_view;
 	delete m_scene;
 	delete sGame;
@@ -178,6 +190,7 @@ void KSquaresWindow::gameReset()
 	//start game etc.
 	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
 	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
+	connect(m_scene, SIGNAL(signalMoveRequest(const msg&)), SLOT(slotMoveRequest(const msg&)));
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
 
@@ -229,7 +242,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 
 	if(playerList.at(0).isHuman())
 	{
-		int score = static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size()));
+		int score = (int)(static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth()*Settings::boardHeight()) / static_cast<double>(playerList.size())));
 		
 		KScoreDialog ksdialog(KScoreDialog::Name, this);
 		switch(Settings::difficulty())
@@ -282,10 +295,23 @@ void KSquaresWindow::aiChooseLine()
 void KSquaresWindow::setupActions()
 {
 	// Game
-	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
-	resetGame->setStatusTip(i18n("Start a new game with the current settings"));
-	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
+	if(!KGGZMod::Module::instance())
+	{
+		KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+		KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
+		resetGame->setStatusTip(i18n("Start a new game with the current settings"));
+		KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
+	}
+	else
+	{
+		//KAction *a_rankings = new KAction(this);
+		KAction *a_rankings = new KAction(this);
+		//QAction *a_rankings = actionCollection()->addAction("rankings");
+		a_rankings->setText("Online rankings");
+		actionCollection()->addAction("rankings", a_rankings);
+		connect(a_rankings, SIGNAL(triggered(bool)), SLOT(slotRankingsRequest()));
+	}
+
 	KStandardGameAction::quit(this, SLOT(close()), actionCollection());
 	
 	// Preferences
@@ -308,6 +334,53 @@ void KSquaresWindow::optionsPreferences()
 
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();
+}
+
+void KSquaresWindow::slotNetworkData(int fd)
+{
+	if(!m_proto)
+	{
+		m_proto = new dots();
+		m_proto->ggzcomm_set_fd(fd);
+		connect(m_proto,
+			SIGNAL(signalNotification(dotsOpcodes::Opcode, const msg&)),
+			SLOT(slotNetworkPacket(dotsOpcodes::Opcode, const msg&)));
+		connect(m_proto, SIGNAL(signalError()), SLOT(slotNetworkError()));
+	}
+
+	m_proto->ggzcomm_network_main();
+}
+
+void KSquaresWindow::slotNetworkError()
+{
+	delete m_proto;
+	delete KGGZMod::Module::instance();
+	kError() << "GGZ mode interrupted by kggzmod or kggzraw" << endl;
+	// FIXME: display message box to user, then quit game
+}
+
+void KSquaresWindow::slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& message)
+{
+	kDebug() << "PACKET:" << opcode << endl;
+}
+
+void KSquaresWindow::slotMoveRequest(const msg& request)
+{
+	kDebug() << "SEND MOVE!" << endl;
+	const sndmoveh req; // = (sndmoveh)request;
+	m_proto->ggzcomm_sndmoveh(req);
+	// FIXME: this is totally bogus! :)
+}
+
+void KSquaresWindow::slotRankingsRequest()
+{
+	kDebug() << "REQUEST RANKINGS!" << endl;
+	KGGZMod::RankingsRequest req;
+	KGGZMod::Module::instance()->sendRequest(req);
+
+	KGGZRankingsDialog *rankingsdlg = new KGGZRankingsDialog(this);
+	Q_UNUSED(rankingsdlg);
+	// FIXME: we don't close it although we could
 }
 
 #include "ksquareswindow.moc"

@@ -13,6 +13,7 @@
 #include <QGraphicsScene>
 
 class QGraphicsEllipseItem;
+class msg;
 
 /**
  * @short Scene for displaying the game board
@@ -120,6 +121,8 @@ class GameBoardScene : public QGraphicsScene
 	signals:
 		///Emits the index of the closet (undrawn) line when a click is detected
 		void lineDrawn(int);
+		///Emits a move request in a network game
+		void signalMoveRequest(const msg& request);
 };
 
 #endif // GAMEBOARDSCENE_H

@@ -7,4 +7,11 @@
 		<Action name="game_restart" />
 		<Action name="game_quit" />
 	</ToolBar>
+
+	<MenuBar>
+	<Menu noMerge="1" name="onlinegame">
+		<text>Online game</text>
+		<Action name="rankings" />
+	</Menu>
+	</MenuBar>
 </gui>

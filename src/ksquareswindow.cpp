@@ -103,11 +103,11 @@ void KSquaresWindow::gameNew()
 	humanCheckBoxList.append(dialog.playerFourHuman);
 
 	//get settings from file
-	for(int i=0; i<=3; i++)
+	for(int i=0; i<Settings::playerNames().size(); i++)
 	{
 		nameLineEditList.at(i)->setText(Settings::playerNames().at(i));
 	}
-	for(int i=0; i<=3; i++)
+	for(int i=0; i<Settings::playerNames().size(); i++)
 	{
 		if (Settings::humanList().at(i) == 2)
 			humanCheckBoxList.at(i)->setCheckState(Qt::Checked);

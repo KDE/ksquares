@@ -10,6 +10,7 @@ set(ksquares_SRCS
 	ksquaresdemowindow.cpp
 	themegraphicsitems.cpp
 	dots_client.cpp
+	highlightanimation.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/libkdegames/highscore)

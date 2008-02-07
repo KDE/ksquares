@@ -10,6 +10,7 @@
 #include "gameboardscene.h"
 
 #include "dots_client.h"
+#include "highlightanimation.h"
 
 #include <math.h>
 
@@ -82,13 +83,20 @@ GameBoardScene::~GameBoardScene()
 
 void GameBoardScene::drawLine(int index, const QColor &colour)
 {
-	QGraphicsLineItem* line = lineFromIndex(index);
+	QGraphicsLineItem* line = new QGraphicsLineItem(lineFromIndex(index));
 	line->setZValue(10);
 	line->setPen(QPen(QBrush(colour), 2.5));
 	addItem(line);	//draw new line
 	lineList[index] = true;	//keep this table in sync
 	indicatorLine->hide();
 	update(line->boundingRect());
+}
+
+void GameBoardScene::highlightLine(int index)
+{
+	HighlightAnimation* anim = new HighlightAnimation(lineFromIndex(index));
+	anim->setZValue(9);
+	addItem(anim);
 }
 
 void GameBoardScene::drawSquare(int index, const QColor &colour)
@@ -138,7 +146,7 @@ int GameBoardScene::indexFromPointPair(const QList<QGraphicsEllipseItem*> &point
 	return index;
 }
 
-QGraphicsLineItem* GameBoardScene::lineFromIndex(int index) const
+QLineF GameBoardScene::lineFromIndex(int index) const
 {
 	int index2 = index % ((2*width) + 1);
 	enum{HORIZONTAL, VERTICAL} dir;
@@ -164,7 +172,7 @@ QGraphicsLineItem* GameBoardScene::lineFromIndex(int index) const
 			xCoordEnd = xCoordStart;
 			break;
 	}
-	return new QGraphicsLineItem(QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd));
+	return QLineF(xCoordStart, yCoordStart, xCoordEnd, yCoordEnd);
 }
 
 bool GameBoardScene::isLineAlready(const QList<QGraphicsEllipseItem*> &pointPair) const //TODO does this work?

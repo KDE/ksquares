@@ -52,6 +52,11 @@ class GameBoardScene : public QGraphicsScene
 		 */
 		void drawLine(int index, const QColor &colour);
 		/**
+		  * Draw a temporary halo behind a line.
+		  * @param index the line-index of the line
+		  */
+		void highlightLine(int index);
+		/**
 		 * Fill a box to show it is owned be a particular player.
 		 * @param index the square-index of the square
 		 * @param colour the colour fill of the square
@@ -90,11 +95,11 @@ class GameBoardScene : public QGraphicsScene
 		 */
 		int indexFromPointPair(const QList<QGraphicsEllipseItem*> &pointPair) const;	//given a pointPair, returns the index of the line between them. If not a valid line, returns -1
 		/**
-		 * Takes a line-index and returns a QGraphicsLineItem located at that position
+		 * Takes a line-index and returns a QLineF located at that position
 		 * @param index the line-index
 		 * @return line located at the correct position
 		 */
-		QGraphicsLineItem* lineFromIndex(int index) const;	//all external calls will need to be passed through this to convert to local coords
+		QLineF lineFromIndex(int index) const;	//all external calls will need to be passed through this to convert to local coords
 		
 		///Moves to show where the next line will be drawn
 		QGraphicsLineItem* indicatorLine;

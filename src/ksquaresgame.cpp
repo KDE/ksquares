@@ -102,6 +102,10 @@ void KSquaresGame::tryEndGo()
 	else
 	{
 		kDebug() << "- - - Go ending";
+		if (!currentPlayer()->isHuman())
+		{
+			emit highlightMove(lastLine);
+		}
 		nextPlayer();
 	}
 }
@@ -118,6 +122,7 @@ void KSquaresGame::resetEverything()
 	i_currentPlayerId = -1;
 	anotherGo = false;
 	gameInProgress = false;
+	lastLine = -1;
 }
 
 void KSquaresGame::addLineToIndex(int index)
@@ -129,6 +134,7 @@ void KSquaresGame::addLineToIndex(int index)
 		return;
 	}
 	lineList[index] = true;
+	lastLine = index;
 	
 	emit drawLine(index, Settings::lineColor());
 	

@@ -83,6 +83,7 @@ void KSquaresDemoWindow::gameNew()
 	sGame->createGame(playerList, 15, 10);
 	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
+	connect(sGame, SIGNAL(highlightMove(int)), m_scene, SLOT(highlightLine(int)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
 
 	sGame->start();

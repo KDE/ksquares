@@ -143,7 +143,8 @@ class KSquaresGame : public QObject
 		bool anotherGo;
 		/// is there currently a game in progress
 		bool gameInProgress;
-		
+		/// last line added
+		int lastLine;
 	signals:
 		///A player's turn has started. This allows you to use AI/networking etc.
 		void takeTurnSig(KSquaresPlayer*);	//emit the new curent player
@@ -153,6 +154,8 @@ class KSquaresGame : public QObject
 		void drawLine(int,QColor);	//int == lineList index
 		///Emits the index and colour of the square
 		void drawSquare(int,QColor);	//int == squareOwnerTable index
+		///Emitted when the last move in a series is played by the AI
+		void highlightMove(int);
 };
 
 #endif // KSQUARESGAME_H

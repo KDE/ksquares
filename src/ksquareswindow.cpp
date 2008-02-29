@@ -331,7 +331,7 @@ void KSquaresWindow::optionsPreferences()
 
 	QWidget *aiSettingsDialog = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDialog);
-	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "user");
+	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "games-difficult");
 
 	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
 	dialog->show();

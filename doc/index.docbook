@@ -210,7 +210,7 @@
   </sect1>
 
 <sect1 id="help"><!--This is a standard Help menubar entry. Only change if needed.-->
-<title>The <guimenuitem>Help</guimenuitem> Menu</title>
+<title>The <guimenu>Help</guimenu> Menu</title>
 &help.menu.documentation;
 </sect1>
 </chapter>
@@ -269,7 +269,7 @@
 </qandaentry>
 <qandaentry>
  <question><para>I want to change the game configuration. Where do I go? </para></question>
- <answer><para>There are two configuration dialogs that set the game environment up. Refer to the <link linkend="configuration">Game Configuration</link> section of this docbook for details on the both.</para></answer>
+ <answer><para>There are two configuration dialogs that set the game environment up. Refer to the <link linkend="configuration">Game Configuration</link> section of this handbook for details on the both.</para></answer>
 </qandaentry>
 <!--Please add more Q&As if needed-->
  

@@ -241,10 +241,10 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		{
 			if(KGGZMod::Module::instance())
 			{
-				// get m_proto from KSquaresWindow?
+				// FIXME: get m_proto from KSquaresWindow?
 				sndmoveh move;
-				move.x = 23;
-				move.y = 42;
+				move.x = (qint8)(connectList.at(0)->scenePos().x() / spacing) + 1;
+				move.y = (qint8)(connectList.at(1)->scenePos().y() / spacing) + 1;
 				emit signalMoveRequest(move);
 			}
 			else

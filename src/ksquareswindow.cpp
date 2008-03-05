@@ -363,14 +363,77 @@ void KSquaresWindow::slotNetworkError()
 void KSquaresWindow::slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& message)
 {
 	kDebug() << "PACKET:" << opcode << endl;
+
+	sndoptions msgopt;
+
+	sndmoveh xsndmoveh;
+	rspmove xrspmove;
+
+	switch(opcode)
+	{
+		case dotsOpcodes::message_msgseat:
+			// ignore, deprecate in protocol!
+			break;
+		case dotsOpcodes::message_msgplayers:
+			// ignore, deprecate in protocol!
+			break;
+		case dotsOpcodes::message_msgmoveh:
+			xsndmoveh = *(static_cast<const sndmoveh*>(&message));
+			kDebug() << "move: " << xsndmoveh.x << "," << xsndmoveh.y;
+			// FIXME: etc...
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_msgmovev:
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_msggameover:
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_reqmove:
+			kDebug() << "requested to move now!";
+			// FIXME: etc...
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_rspmove:
+			xrspmove = *(static_cast<const rspmove*>(&message));
+			kDebug() << "status:" << xrspmove.status;
+			if(xrspmove.status == -1)
+				kDebug() << "- state error";
+			else if(xrspmove.status == -2)
+				kDebug() << "- turn error";
+			else if(xrspmove.status == -3)
+				kDebug() << "- bound error";
+			else if(xrspmove.status == -4)
+				kDebug() << "- full error";
+			kDebug() << "score:" << xrspmove.s;
+			for(int i = 0; i < xrspmove.s; i++)
+			{
+				kDebug() << " - x" << xrspmove.x[i] << "," << xrspmove.y[i];
+			}
+			// FIXME: etc...
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_sndsync:
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_msgoptions:
+			kError() << "implementation missing";
+			break;
+		case dotsOpcodes::message_reqoptions:
+			// need to send options to game server
+			msgopt.width = 10;
+			msgopt.height = 7;
+			m_proto->ggzcomm_sndoptions(msgopt);
+			break;
+	}
 }
 
 void KSquaresWindow::slotMoveRequest(const msg& request)
 {
 	kDebug() << "SEND MOVE!" << endl;
-	const sndmoveh req; // = (sndmoveh)request;
+	const sndmoveh req = *(static_cast<const sndmoveh*>(&request));
+	kDebug() << "move: " << req.x << "," << req.y;
 	m_proto->ggzcomm_sndmoveh(req);
-	// FIXME: this is totally bogus! :)
 }
 
 void KSquaresWindow::slotRankingsRequest()

@@ -71,11 +71,14 @@ void KSquaresWindow::initObject()
 	m_view->setRenderHints(QPainter::Antialiasing);
 	m_view->setFrameStyle(QFrame::NoFrame);
 	setupActions();
-	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
+	statusBar()->insertPermanentItem(i18n("Current Player"), statusplayer);
 	statusBar()->show();
 	setAutoSaveSettings();
 
-	gameNew();
+	if(!KGGZMod::Module::isGGZ())
+		gameNew();
+	else
+		statusBar()->insertPermanentItem(QString(), statusnetwork);
 }
 
 //void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
@@ -148,6 +151,14 @@ void KSquaresWindow::gameNew()
 	Settings::setQuickStart(dialog.quickStartCheck->checkState());
 	Settings::self()->writeConfig();
 
+	if(KGGZMod::Module::isGGZ())
+	{
+		sndoptions msgopt;
+		msgopt.width = dialog.spinWidth->value() + 1;
+		msgopt.height = dialog.spinHeight->value() + 1;
+		m_proto->ggzcomm_sndoptions(msgopt);
+	}
+
 	gameReset();
 }
 
@@ -190,7 +201,7 @@ void KSquaresWindow::gameReset()
 	//start game etc.
 	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
 	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
-	connect(m_scene, SIGNAL(signalMoveRequest(const msg&)), SLOT(slotMoveRequest(const msg&)));
+	connect(m_scene, SIGNAL(signalMoveRequest(int,int,int,int)), SLOT(slotMoveRequest(int,int,int,int)));
 	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
 	connect(sGame, SIGNAL(highlightMove(int)), m_scene, SLOT(highlightLine(int)));
 	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
@@ -267,7 +278,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
-	statusBar()->changeItem(currentPlayer->name(), 0); //TODO Add player's colour
+	statusBar()->changeItem(currentPlayer->name(), statusplayer); //TODO Add player's colour
 	if(currentPlayer->isHuman())
 	{
 		//Let the human player interact with the board through the GameBoardView
@@ -364,9 +375,8 @@ void KSquaresWindow::slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& me
 {
 	kDebug() << "PACKET:" << opcode << endl;
 
-	sndoptions msgopt;
-
-	sndmoveh xsndmoveh;
+	msgmoveh xmsgmoveh;
+	msgmovev xmsgmovev;
 	rspmove xrspmove;
 
 	switch(opcode)
@@ -378,62 +388,91 @@ void KSquaresWindow::slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& me
 			// ignore, deprecate in protocol!
 			break;
 		case dotsOpcodes::message_msgmoveh:
-			xsndmoveh = *(static_cast<const sndmoveh*>(&message));
-			kDebug() << "move: " << xsndmoveh.x << "," << xsndmoveh.y;
-			// FIXME: etc...
-			kError() << "implementation missing";
+			xmsgmoveh = *(static_cast<const msgmoveh*>(&message));
+			kDebug() << "move: " << xmsgmoveh.nx << "/" << xmsgmoveh.ny << ", score:" << xmsgmoveh.s;
+			m_scene->acknowledgeMove(xmsgmoveh.nx, xmsgmoveh.ny, xmsgmoveh.nx + 1, xmsgmoveh.ny);
+			sGame->switchPlayer();
+			// FIXME: compare scored squares with local calculation
 			break;
 		case dotsOpcodes::message_msgmovev:
-			kError() << "implementation missing";
+			xmsgmovev = *(static_cast<const msgmovev*>(&message));
+			kDebug() << "move: " << xmsgmovev.nx << "/" << xmsgmovev.ny << ", score:" << xmsgmovev.s;
+			m_scene->acknowledgeMove(xmsgmovev.nx, xmsgmovev.ny, xmsgmovev.nx, xmsgmovev.ny + 1);
+			sGame->switchPlayer();
+			// FIXME: compare scored squares with local calculation
 			break;
 		case dotsOpcodes::message_msggameover:
-			kError() << "implementation missing";
+			kError() << "implementation missing: msggameover";
+			// FIXME: announce the end of the game properly
+			statusBar()->changeItem(i18n("The game has finished"), statusnetwork);
 			break;
 		case dotsOpcodes::message_reqmove:
 			kDebug() << "requested to move now!";
-			// FIXME: etc...
-			kError() << "implementation missing";
+			statusBar()->changeItem(i18n("It's your turn"), statusnetwork);
 			break;
 		case dotsOpcodes::message_rspmove:
 			xrspmove = *(static_cast<const rspmove*>(&message));
 			kDebug() << "status:" << xrspmove.status;
-			if(xrspmove.status == -1)
+			if(xrspmove.status == dotsOpcodes::err_state)
 				kDebug() << "- state error";
-			else if(xrspmove.status == -2)
+			else if(xrspmove.status == dotsOpcodes::err_turn)
 				kDebug() << "- turn error";
-			else if(xrspmove.status == -3)
+			else if(xrspmove.status == dotsOpcodes::err_bound)
 				kDebug() << "- bound error";
-			else if(xrspmove.status == -4)
+			else if(xrspmove.status == dotsOpcodes::err_full)
 				kDebug() << "- full error";
-			kDebug() << "score:" << xrspmove.s;
-			for(int i = 0; i < xrspmove.s; i++)
+			else
 			{
-				kDebug() << " - x" << xrspmove.x[i] << "," << xrspmove.y[i];
+				kDebug() << "- move successful, score:" << xrspmove.s;
+				for(int i = 0; i < xrspmove.s; i++)
+				{
+					kDebug() << " - x" << xrspmove.x[i] << "," << xrspmove.y[i];
+				}
+				// FIXME: compare scored squares with local calculation
+				m_scene->acknowledgeMove(m_lastx1, m_lasty1, m_lastx2, m_lasty2);
+				statusBar()->changeItem(i18n("Waiting for opponent..."), statusnetwork);
+				sGame->switchPlayer();
 			}
-			// FIXME: etc...
-			kError() << "implementation missing";
 			break;
 		case dotsOpcodes::message_sndsync:
-			kError() << "implementation missing";
+			// ignore, as long as we never request to sync!
 			break;
 		case dotsOpcodes::message_msgoptions:
-			kError() << "implementation missing";
+			kError() << "implementation missing: msgoptions";
+			// FIXME: setup new game here but without options dialogue
 			break;
 		case dotsOpcodes::message_reqoptions:
-			// need to send options to game server
-			msgopt.width = 10;
-			msgopt.height = 7;
-			m_proto->ggzcomm_sndoptions(msgopt);
+			kDebug() << "requested to send options!";
+			gameNew();
 			break;
 	}
 }
 
-void KSquaresWindow::slotMoveRequest(const msg& request)
+void KSquaresWindow::slotMoveRequest(int x1, int y1, int x2, int y2)
 {
-	kDebug() << "SEND MOVE!" << endl;
-	const sndmoveh req = *(static_cast<const sndmoveh*>(&request));
-	kDebug() << "move: " << req.x << "," << req.y;
-	m_proto->ggzcomm_sndmoveh(req);
+	m_lastx1 = x1;
+	m_lasty1 = y1;
+	m_lastx2 = x2;
+	m_lasty2 = y2;
+
+	if(x1 == x2)
+	{
+		sndmovev req;
+		req.x = x1;
+		req.y = y1;
+		m_proto->ggzcomm_sndmovev(req);
+		kDebug() << "Send vertical move: " << req.x << "," << req.y;
+	}
+	else if(y1 == y2)
+	{
+		sndmoveh req;
+		req.x = x1;
+		req.y = y1;
+		m_proto->ggzcomm_sndmoveh(req);
+		kDebug() << "Send horizontal move: " << req.x << "," << req.y;
+	}
+
+	statusBar()->changeItem(i18n("Waiting for move result..."), statusnetwork);
 }
 
 void KSquaresWindow::slotRankingsRequest()

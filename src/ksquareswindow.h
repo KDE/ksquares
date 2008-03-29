@@ -55,10 +55,16 @@ class KSquaresWindow : public KXmlGuiWindow
 		void slotNetworkData(int fd);
 		void slotNetworkError();
 		void slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& message);
-		void slotMoveRequest(const msg&);
+		void slotMoveRequest(int x1, int y1, int x2, int y2);
 		void slotRankingsRequest();
 
 	private:
+		enum StatusBarItem
+		{
+			statusplayer,
+			statusnetwork
+		};
+
 		//void setupAccel();
 		void setupActions();
 		Ui::prefs_ai ui_prefs_ai;
@@ -71,6 +77,8 @@ class KSquaresWindow : public KXmlGuiWindow
 		KSquaresGame* sGame;
 		///Network protocol handler
 		dots *m_proto;
+		// Remember last network move
+		int m_lastx1, m_lasty1, m_lastx2, m_lasty2;
 
 		//KToggleAction *m_toolbarAction;
 		//KToggleAction *m_statusbarAction;

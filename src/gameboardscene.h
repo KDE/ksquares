@@ -43,6 +43,8 @@ class GameBoardScene : public QGraphicsScene
 		 * @return the minimum size the view should be
 		 */
 		const QSize minimumSizeHint() const;
+
+		void acknowledgeMove(int x1, int y1, int x2, int y2);
 		
 	public slots:
 		/**
@@ -127,7 +129,7 @@ class GameBoardScene : public QGraphicsScene
 		///Emits the index of the closet (undrawn) line when a click is detected
 		void lineDrawn(int);
 		///Emits a move request in a network game
-		void signalMoveRequest(const msg& request);
+		void signalMoveRequest(int x1, int y1, int x2, int y2);
 };
 
 #endif // GAMEBOARDSCENE_H

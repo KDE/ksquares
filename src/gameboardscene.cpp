@@ -9,7 +9,6 @@
 
 #include "gameboardscene.h"
 
-#include "dots_client.h"
 #include "highlightanimation.h"
 
 #include <math.h>
@@ -241,11 +240,11 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		{
 			if(KGGZMod::Module::instance())
 			{
-				// FIXME: get m_proto from KSquaresWindow?
-				sndmoveh move;
-				move.x = (qint8)(connectList.at(0)->scenePos().x() / spacing) + 1;
-				move.y = (qint8)(connectList.at(1)->scenePos().y() / spacing) + 1;
-				emit signalMoveRequest(move);
+				int x1 = (qint8)(connectList.at(0)->scenePos().x() / spacing);
+				int y1 = (qint8)(connectList.at(0)->scenePos().y() / spacing);
+				int x2 = (qint8)(connectList.at(1)->scenePos().x() / spacing);
+				int y2 = (qint8)(connectList.at(1)->scenePos().y() / spacing);
+				emit signalMoveRequest(x1, y1, x2, y2);
 			}
 			else
 			{
@@ -255,6 +254,13 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	}
 	
 	QGraphicsScene::mouseReleaseEvent(mouseEvent);
+}
+
+void GameBoardScene::acknowledgeMove(int x1, int y1, int x2, int y2)
+{
+	QPoint calculatedpos(((x1 + x2) / 2.0) * spacing, ((y1 + y2) / 2.0) * spacing);
+	QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(calculatedpos);
+	addLineToIndex(connectList);
 }
 
 void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)

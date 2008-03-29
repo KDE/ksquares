@@ -67,6 +67,10 @@ class KSquaresGame : public QObject
 		 */
 		void stop() {gameInProgress = false;}
 		/**
+		 * Externally determined player switch, for network game
+		 */
+		void switchPlayer();
+		/**
 		 * @return the id of the current player. 0 >= id \< number of players
 		 */
 		int currentPlayerId() const {return i_currentPlayerId;}
@@ -92,7 +96,7 @@ class KSquaresGame : public QObject
 		 * @return the height of the game board
 		 */
 		int boardHeight() const {return height;}
-		
+
 	public Q_SLOTS:
 		/**
 		 * @param index the index of the line to add

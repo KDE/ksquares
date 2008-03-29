@@ -11,6 +11,8 @@
 
 #include <kdebug.h>
 
+#include <kggzmod/module.h>
+
 //generated
 #include "settings.h"
 
@@ -52,13 +54,27 @@ void KSquaresGame::createGame(const QVector<KSquaresPlayer> &startPlayers, int s
 	nextPlayer();
 }
 
+void KSquaresGame::switchPlayer()
+{
+	anotherGo = false;
+	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
+}
+
 int KSquaresGame::nextPlayer()
 {
-	anotherGo = false;	//just to reset the variable
-	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
-	kDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
-	kDebug() << "-";
-	emit takeTurnSig(currentPlayer());
+	if(!KGGZMod::Module::isGGZ())
+	{
+		anotherGo = false;	//just to reset the variable
+		currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
+		kDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
+		kDebug() << "-";
+		emit takeTurnSig(currentPlayer());
+	}
+	else
+	{
+		if(currentPlayerId() == -1)
+			i_currentPlayerId = 0;
+	}
 	
 	return currentPlayerId();
 }

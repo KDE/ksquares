@@ -14,11 +14,11 @@ class dotsOpcodes
 	public:
 	enum Opcode
 	{
-		message_reqsync = 3,
-		message_reqnewgame = 5,
+		message_reqsync = 2,
+		message_reqnewgame = 4,
 		message_sndmoveh = 0,
 		message_sndmovev = 1,
-		message_sndoptions = 4,
+		message_sndoptions = 3,
 		message_msgseat = 0,
 		message_msgplayers = 1,
 		message_msgmoveh = 2,
@@ -29,6 +29,15 @@ class dotsOpcodes
 		message_sndsync = 7,
 		message_msgoptions = 8,
 		message_reqoptions = 9
+	};
+
+	enum MoveFailed
+	{
+		err_none = 0,
+		err_state = -1,
+		err_turn = -2,
+		err_bound = -3,
+		err_full = -4
 	};
 };
 

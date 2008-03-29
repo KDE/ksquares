@@ -11,6 +11,7 @@
 #include <KAboutData>
 #include <KCmdLineArgs>
 #include <KLocale>
+#include <KUser>
 
 #include <KDebug>
 
@@ -45,7 +46,7 @@ int main(int argc, char **argv)
 	KConfigGroup cg(KGlobal::config(), "General");
 	if (cg.readEntry<bool>("initializeNames", true)) {
 		QStringList playerNames;
-		playerNames << i18nc("default name of first player", "Player 1");
+		playerNames << KUser().property(KUser::FullName).toString();
 		playerNames << i18nc("default name of second player", "Player 2");
 		playerNames << i18nc("default name of third player", "Player 3");
 		playerNames << i18nc("default name of fourth player", "Player 4");

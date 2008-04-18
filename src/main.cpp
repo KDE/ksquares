@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 {
 	KAboutData about("ksquares", 0, ki18n("KSquares"), version, ki18n(description),
 		KAboutData::License_GPL, ki18n("(C) 2006-2007 Matt Williams"), KLocalizedString(), 
-		"http://milliams.com/content/view/18/42/");
+		"http://games.kde.org/ksquares");
 	about.addAuthor( ki18n("Matt Williams"), ki18n("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
 	about.addCredit(ki18n("Fela Winkelmolen"), ki18n("Many patches and bugfixes"));
 	

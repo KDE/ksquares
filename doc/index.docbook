@@ -12,7 +12,7 @@
  
 <book lang="&language;"> <!-- do not change this! -->
 <bookinfo>
-	<title>The &kappname; Handbook</title> <!-- This is the title of the docbook. Live as is unless change is necessary.-->
+	<title>The ""&kappname;"" Handbook</title> <!-- This is the title of the docbook. Live as is unless change is necessary.-->
 <!-- List of immidiate authors begins here. -->
 <!--INPORTANT! - All other contributors: [to be determined] -->
 <authorgroup>
@@ -42,7 +42,7 @@
  
 <!--Short description of this document. Do not change unless necessary!-->
 <abstract>
-	<para>This documentation describes the game of &kappname; version &kappversion;</para>
+	<para>This documentation describes the game of "&kappname;" version &kappversion;</para>
 </abstract>
  
 <!--List of relevan keywords-->
@@ -69,8 +69,8 @@
 <chapter id="introduction"><title>Introduction</title> <!-- do not change this! -->
 	<note><title>Gametype:</title><para>Board</para></note><!-- Game genre. use as many as necessary.Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
 	<note><title>Number of possible players:</title><para>Four</para></note>
-	<para>&kappname; is a fun and exciting game for &kde; desktop environment. &kappname; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
-<para>The idea behind &kappname; is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
+	<para>"&kappname;" is a fun and exciting game for &kde; desktop environment. "&kappname;" is modeled after the well known pen and paper based game of Dots and Boxes.</para>
+<para>The idea behind "&kappname;" is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
 <para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>
  
@@ -96,7 +96,7 @@
 	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
 <sect1 id="rules">
   <title>Game Rules</title>
-    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Nevertheless, here are the game regulations you, as a player will defiantly face while playing &kappname;:</para>
+    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Nevertheless, here are the game regulations you, as a player will defiantly face while playing "&kappname;":</para>
     <itemizedlist>
 	<listitem><para>You may only connect the dots on the grid if they are not previously connected by you, your opponent, or the computer.</para></listitem>
 	<listitem><para>To gain the points you have to connect the dots to form a square.</para></listitem>
@@ -190,7 +190,7 @@
 					<guimenu>Settings</guimenu>
 					<guimenuitem>Configure Shortcuts...</guimenuitem>
 				</menuchoice></term>
-				<listitem><para><action>Displays a standard &kde; shortcut configuration dialog</action> to change the keyboard shortcuts for &kappname;.</para></listitem>
+				<listitem><para><action>Displays a standard &kde; shortcut configuration dialog</action> to change the keyboard shortcuts for "&kappname;".</para></listitem>
 			</varlistentry>
 			<varlistentry id="settings-menu-toolbars">
 				<term><menuchoice>
@@ -202,9 +202,9 @@
 			<varlistentry id="settings-menu-settings">
 				<term><menuchoice>
 					<guimenu>Settings</guimenu>
-					<guimenuitem>Configure &kappname;...</guimenuitem>
+					<guimenuitem>Configure "&kappname;"...</guimenuitem>
 				</menuchoice></term>
-				<listitem><para><action>Opens a dialog to configure &kappname;.</action>See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
+				<listitem><para><action>Opens a dialog to configure "&kappname;".</action>See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
 			</varlistentry>
     </variablelist>
   </sect1>
@@ -241,19 +241,19 @@
 </qandaentry>
 <qandaentry>
  <question><para>How do I pause the game? </para></question>
- <answer><para>&kappname; does not have a pause feature, as it does not require one.</para></answer>
+ <answer><para>"&kappname;" does not have a pause feature, as it does not require one.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I want to change the way this game looks. Can I? </para></question>
- <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &kappname;...</guimenuitem></menuchoice> on the menubar. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
+ <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure "&kappname;"...</guimenuitem></menuchoice> on the menubar. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I have made a mistake. Can I undo? </para></question>
- <answer><para>No. &kappname; doesn't currently have an undo feature.</para></answer>
+ <answer><para>No. "&kappname;" doesn't currently have an undo feature.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>Can I use keyboard? </para></question>
- <answer><para>No. &kappname; cannot be played using keyboard.</para></answer>
+ <answer><para>No. "&kappname;" cannot be played using keyboard.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I cannot figure out what to do here! Are there hints? </para></question>
@@ -261,7 +261,7 @@
 </qandaentry>
 <qandaentry>
  <question><para>I have to quit the game now, but I am not finished yet. Can I save my progress?</para></question>
-  <answer><para>&kappname; doesn't have a saving feature.</para></answer>
+  <answer><para>"&kappname;" doesn't have a saving feature.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>Where are the high scores?</para></question>
@@ -297,11 +297,11 @@
 </sect1>
 <sect1 id="configuration-dialog">
 <title>Configuration Dialog</title>
-<para>The <guilabel>Configure - &kappname;</guilabel> dialog consists of the following tabs:</para>
+<para>The <guilabel>Configure - "&kappname;"</guilabel> dialog consists of the following tabs:</para>
 <variablelist>
   <varlistentry>
     <term><guilabel>Display</guilabel></term>
-    <listitem><para>Here you can change the &kappname; color settings.</para></listitem>
+    <listitem><para>Here you can change the "&kappname;" color settings.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Computer Player</guilabel></term>
@@ -315,7 +315,7 @@
 <!--This chapter is for credits and licenses.-->
  
 <para>
-&kappname;  <!-- do not change this! -->
+"&kappname;"  <!-- do not change this! -->
 </para>
 
 <para>

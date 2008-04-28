@@ -22,7 +22,7 @@
 static const char description[] =
 	I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
-static const char version[] = "0.3";
+static const char version[] = "0.4";
 
 int main(int argc, char **argv)
 {

@@ -85,6 +85,8 @@ void KSquaresWindow::initObject()
 void KSquaresWindow::showHighscores()
 {
 	KScoreDialog ksdialog(KScoreDialog::Name, this);
+	ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Easy"), i18n("Easy")));
+	ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
 	ksdialog.exec();
 }
 
@@ -260,10 +262,12 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 		switch(Settings::difficulty())
 		{
 			case 0:
-				ksdialog.setConfigGroup(I18N_NOOP("Easy"));
+				ksdialog.setConfigGroup(qMakePair(QByteArray("Easy"), i18n("Easy")));
+				ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
 				break;
 			case 1:
-				ksdialog.setConfigGroup(I18N_NOOP("Medium"));
+				ksdialog.setConfigGroup(qMakePair(QByteArray("Medium"), i18n("Medium")));
+				ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Easy"), i18n("Easy")));
 				break;
 		}
 		KScoreDialog::FieldInfo scoreInfo;

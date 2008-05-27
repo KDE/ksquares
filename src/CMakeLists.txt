@@ -24,7 +24,7 @@ kde4_add_executable(ksquares ${ksquares_SRCS})
 
 target_link_libraries(ksquares ${KDE4_KDEUI_LIBS} kdegames ${KGGZGAMES_LIBS})
 
-install(TARGETS ksquares DESTINATION ${BIN_INSTALL_DIR})
+install(TARGETS ksquares ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 
 ########### install files ###############

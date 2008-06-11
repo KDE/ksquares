@@ -92,6 +92,13 @@ void KSquaresWindow::showHighscores()
 
 void KSquaresWindow::gameNew()
 {
+	if(KGGZMod::Module::instance())
+	{
+		reqnewgame req;
+		m_proto->ggzcomm_reqnewgame(req);
+		return;
+	}
+
 	//load settings
 	NewGameDialog dialog(this);
 
@@ -166,6 +173,14 @@ void KSquaresWindow::gameNew()
 
 void KSquaresWindow::gameReset()
 {
+	if(KGGZMod::Module::instance())
+	{
+		// FIXME: this doesn't really obey to "reset" semantics
+		reqnewgame req;
+		m_proto->ggzcomm_reqnewgame(req);
+		return;
+	}
+
 	//create players
 	QVector<KSquaresPlayer> playerList;
 	for(int i=0; i<Settings::numOfPlayers(); i++)
@@ -310,16 +325,20 @@ void KSquaresWindow::aiChooseLine()
 
 void KSquaresWindow::setupActions()
 {
+	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
+	KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
+
 	// Game
 	if(!KGGZMod::Module::instance())
 	{
-		KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-		KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
 		resetGame->setStatusTip(i18n("Start a new game with the current settings"));
+
 		KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
 	}
 	else
 	{
+		resetGame->setStatusTip(i18n("Request to start a new game with the current settings"));
+
 		//KAction *a_rankings = new KAction(this);
 		KAction *a_rankings = new KAction(this);
 		//QAction *a_rankings = actionCollection()->addAction("rankings");

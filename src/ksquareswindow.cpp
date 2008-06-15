@@ -328,22 +328,23 @@ void KSquaresWindow::setupActions()
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
 	KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
 
+	KAction *a_rankings = new KAction(this);
+	a_rankings->setText(i18n("Online rankings"));
+	actionCollection()->addAction("rankings", a_rankings);
+
 	// Game
 	if(!KGGZMod::Module::instance())
 	{
 		resetGame->setStatusTip(i18n("Start a new game with the current settings"));
 
 		KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
+
+		a_rankings->setEnabled(false);
 	}
 	else
 	{
 		resetGame->setStatusTip(i18n("Request to start a new game with the current settings"));
 
-		//KAction *a_rankings = new KAction(this);
-		KAction *a_rankings = new KAction(this);
-		//QAction *a_rankings = actionCollection()->addAction("rankings");
-		a_rankings->setText("Online rankings");
-		actionCollection()->addAction("rankings", a_rankings);
 		connect(a_rankings, SIGNAL(triggered(bool)), SLOT(slotRankingsRequest()));
 	}
 

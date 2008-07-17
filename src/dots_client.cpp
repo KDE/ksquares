@@ -203,3 +203,5 @@ void dots::ggzcomm_set_socket(KGGZRaw *useraw)
 	raw = useraw;
 }
 
+
+#include "dots_client.moc"

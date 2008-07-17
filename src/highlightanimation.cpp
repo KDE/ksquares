@@ -35,3 +35,5 @@ void HighlightAnimation::setOpacity(int opacity)
 	
 	update();
 }
+
+#include "highlightanimation.moc"

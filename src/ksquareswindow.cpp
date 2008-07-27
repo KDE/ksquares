@@ -30,6 +30,7 @@
 //libkdegames
 #include <kggzmod/module.h>
 #include <kggzgames/kggzrankingsdialog.h>
+#include <kggzgames/kggzseatsdialog.h>
 
 //generated
 #include "settings.h"
@@ -42,7 +43,7 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0), m_proto(0)
+KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0), m_proto(0), m_rankingsdlg(0), m_seatsdlg(0)
 {
 	setCentralWidget(m_view);
 	QTimer::singleShot(0, this, SLOT(initObject()));
@@ -332,6 +333,10 @@ void KSquaresWindow::setupActions()
 	a_rankings->setText(i18n("Online rankings"));
 	actionCollection()->addAction("rankings", a_rankings);
 
+	KAction *a_seats = new KAction(this);
+	a_seats->setText(i18n("List of seats"));
+	actionCollection()->addAction("seats", a_seats);
+
 	// Game
 	if(!KGGZMod::Module::instance())
 	{
@@ -340,12 +345,14 @@ void KSquaresWindow::setupActions()
 		KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
 
 		a_rankings->setEnabled(false);
+		a_seats->setEnabled(false);
 	}
 	else
 	{
 		resetGame->setStatusTip(i18n("Request to start a new game with the current settings"));
 
 		connect(a_rankings, SIGNAL(triggered(bool)), SLOT(slotRankingsRequest()));
+		connect(a_seats, SIGNAL(triggered(bool)), SLOT(slotSeatsRequest()));
 	}
 
 	KStandardGameAction::quit(this, SLOT(close()), actionCollection());
@@ -505,9 +512,15 @@ void KSquaresWindow::slotRankingsRequest()
 	KGGZMod::RankingsRequest req;
 	KGGZMod::Module::instance()->sendRequest(req);
 
-	KGGZRankingsDialog *rankingsdlg = new KGGZRankingsDialog(this);
-	Q_UNUSED(rankingsdlg);
-	// FIXME: we don't close it although we could
+	delete m_rankingsdlg;
+	m_rankingsdlg = new KGGZRankingsDialog(this);
+}
+
+void KSquaresWindow::slotSeatsRequest()
+{
+	if(!m_seatsdlg)
+		m_seatsdlg = new KGGZSeatsDialog();
+	m_seatsdlg->show();
 }
 
 #include "ksquareswindow.moc"

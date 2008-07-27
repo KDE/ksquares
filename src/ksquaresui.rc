@@ -12,6 +12,7 @@
 	<Menu noMerge="1" name="onlinegame">
 		<text>Online game</text>
 		<Action name="rankings" />
+		<Action name="seats" />
 	</Menu>
 	</MenuBar>
 </gui>

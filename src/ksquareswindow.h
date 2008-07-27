@@ -20,6 +20,8 @@
 class KToggleAction;
 class GameBoardView;
 class GameBoardScene;
+class KGGZRankingsDialog;
+class KGGZSeatsDialog;
 
 /**
  * @short Mainwindow class
@@ -57,6 +59,7 @@ class KSquaresWindow : public KXmlGuiWindow
 		void slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& message);
 		void slotMoveRequest(int x1, int y1, int x2, int y2);
 		void slotRankingsRequest();
+		void slotSeatsRequest();
 
 	private:
 		enum StatusBarItem
@@ -79,6 +82,9 @@ class KSquaresWindow : public KXmlGuiWindow
 		dots *m_proto;
 		// Remember last network move
 		int m_lastx1, m_lasty1, m_lastx2, m_lasty2;
+		//Network scores and player list
+		KGGZRankingsDialog *m_rankingsdlg;
+		KGGZSeatsDialog *m_seatsdlg;
 
 		//KToggleAction *m_toolbarAction;
 		//KToggleAction *m_statusbarAction;

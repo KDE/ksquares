@@ -62,6 +62,7 @@ KSquaresWindow::~KSquaresWindow()
 	delete m_view;
 	delete m_scene;
 	delete sGame;
+        delete m_proto;
 }
 
 void KSquaresWindow::initObject()

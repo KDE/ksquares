@@ -110,7 +110,7 @@
   <itemizedlist>
 	<listitem><para>Try not to play at random. Such game practice will most certainly result in loss.</para></listitem>
 	<listitem><para>Construct long chains of lines over the gameboard. Once one such chain is complete start to build another one going parallel to the first.</para></listitem>
-	<listitem><para>Try no to build contraptions where only one line remains undone. Your opponent will almost certainly take an advantage of it.</para></listitem>
+	<listitem><para>Try not to build contraptions where only one line remains undone. Your opponent will almost certainly take an advantage of it.</para></listitem>
 	<listitem><para>If you are to let the opponent get a square or more, try to select the combination resulting in the least damage.</para></listitem>
 	<listitem><para>Try to push your opponent into the situation where he/she(it) will have no choice but to let you get the square.</para></listitem>
 	<listitem><para>If you are to get a chance to start completing a whole chain of squares, remember that by leaving two squares at the end of such chain incomplete you are pushing your opponent into completing them, thus giving you the opportunity to continue onto yet another chain. Such a situation is called the double-cross.</para></listitem>
@@ -283,7 +283,7 @@
 <variablelist>
   <varlistentry>
     <term><guilabel>Players</guilabel></term>
-    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. The for each participant type a name and use the check box to specify the player type.</para></listitem>
+    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. Then type a name for each participant and use the check box to specify the player type.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Board</guilabel></term>

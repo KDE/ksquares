@@ -4,7 +4,7 @@
 
 #include "dots_client.h"
 #include <kggznet/kggzraw.h>
-
+#include <KDebug>
 #define ggz__seat_open 1
 
 dots::dots()
@@ -13,6 +13,11 @@ dots::dots()
 	requirelink = 0;
 	fd = -1;
 	raw = NULL;
+}
+
+dots::~dots()
+{
+    kDebug()<<"dddddddddddddddddddddddd";
 }
 
 void dots::ggzcomm_reqsync(const reqsync& message)

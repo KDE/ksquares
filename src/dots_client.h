@@ -182,7 +182,7 @@ class dots : public QObject
 	Q_OBJECT
 	public:
 	dots();
-
+        ~dots();
 	void ggzcomm_network_main();
 
 	void ggzcomm_reqsync(const reqsync& message);

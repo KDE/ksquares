@@ -22,4 +22,3 @@ void KSquaresSquareItem::paint(QPainter* painter, const QStyleOptionGraphicsItem
 	QGraphicsRectItem::paint(painter, option, widget);
 }
 
-#include "themegraphicsitems.moc"

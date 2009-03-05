@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=KSquares
 Name[fa]=نقطه‌بازی
+Name[hne]=के-स्कवेयर्स
 Name[ne]=केडीई बर्ग
 Name[nn]=Kvadrat
 Name[pl]=Kwadraty
@@ -27,6 +28,7 @@ GenericName[fi]=Yhdistä pisteet muodostaaksesi neliöitä
 GenericName[fr]=Reliez les points pour créer des carrés
 GenericName[ga]=Ceangail na poncanna chun cearnóga a chruthú
 GenericName[gl]=Conecte os pontos criando cadros
+GenericName[hne]=वर्ग बनाए बर बिंदु मन ल जोड़व
 GenericName[hu]=Négyzetet kell rajzolni a pontokkal
 GenericName[it]=Unisci i puntini per creare dei quadrati
 GenericName[ja]=点を結んで正方形を作るゲーム

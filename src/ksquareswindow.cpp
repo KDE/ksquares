@@ -15,17 +15,15 @@
 #include <QtCore/QTimer>
 
 //kde
-#include <KApplication>
 #include <KConfigDialog>
-#include <KStatusBar>
 #include <KActionCollection>
 #include <KDebug>
 #include <KLocale>
-#include <KCursor>
 #include <KScoreDialog>
 #include <KHighscore>
 #include <KStandardGameAction>
-#include <KSelectAction>
+#include <KStatusBar>
+#include <KAction>
 
 //libkdegames
 #include <kggzmod/module.h>

@@ -12,6 +12,7 @@
 #include "settings.h"
 
 #include <QBrush>
+#include <QGraphicsScene>
 #include <QPen>
 #include <QTimer>
 
@@ -21,7 +22,7 @@ HighlightAnimation::HighlightAnimation(const QLineF &line) : QGraphicsLineItem(l
 	timeline.setUpdateInterval(10);
 	timeline.setFrameRange(255, 0);
 	connect(&timeline, SIGNAL(frameChanged(int)), this, SLOT(setOpacity(int)));
-	connect(&timeline, SIGNAL(finished()), this, SLOT(deleteLater()));
+	connect(&timeline, SIGNAL(finished()), this, SLOT(removeMe()));
 	QTimer::singleShot(1000, &timeline, SLOT(start()));
 }
 
@@ -34,6 +35,13 @@ void HighlightAnimation::setOpacity(int opacity)
 	setPen(p);
 	
 	update();
+}
+
+void HighlightAnimation::removeMe()
+{
+	scene()->removeItem(this); // This is needed because otherwise
+	                           // the scene gets a full repaint on removal
+	deleteLater();
 }
 
 #include "highlightanimation.moc"

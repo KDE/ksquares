@@ -78,6 +78,14 @@ class aiController
 		 */
 		int countBorderLines(int squareIndex, const bool *linesList) const;
 		/**
+		 * @param sidesOfSquare output parameter: the indices of the four lines surrounding the square
+		 * @param squareIndex the index of the square (relates to @ref squareOwners )
+		 * @param linesList the linesList you want to work from
+		 *
+		 * @return the number of lines currently drawn around a specific square
+		 */
+		int countBorderLines(int *sidesOfSquare, int squareIndex, const bool *linesList) const;
+		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *
 		 * @return the (one or two) squares abutting a line

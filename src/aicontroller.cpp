@@ -175,12 +175,11 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 		{
 			for(int currentSquare=0; currentSquare<squaresCopy.size(); currentSquare++)	//cycle through the grid (by squares):
 			{
-				if(countBorderLines(currentSquare, linesCopy) == 3)	//if we've found a square with three sides drawn:
+				if(countBorderLines(sidesOfSquare, currentSquare, linesCopy) == 3)	//if we've found a square with three sides drawn:
 				{
 					count++;
 					squareFound = true;	//we found a square so we will look again for the next
 					
-					linesFromSquare(sidesOfSquare, currentSquare);
 					for(int sideOfSquare=0; sideOfSquare<=3; sideOfSquare++)	//make the square complete in linesCopy
 					{
 						linesCopy[sidesOfSquare[sideOfSquare]] = true;	//draw at this squares
@@ -202,24 +201,29 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 	return bestMoves;
 }
 
-int aiController::countBorderLines(int squareIndex, const bool *linesList) const
+int aiController::countBorderLines(int *sidesOfSquare, int squareIndex, const bool *linesList) const
 {
 	int count = 0;
-	int tempLineList[4];
 	
-	linesFromSquare(tempLineList, squareIndex);
+	linesFromSquare(sidesOfSquare, squareIndex);
 	
 	//TODO: replace this with a QList 'count' type function?
-	if(linesList[tempLineList[0]] == true)
+	if(linesList[sidesOfSquare[0]] == true)
 		count++;
-	if(linesList[tempLineList[1]] == true)
+	if(linesList[sidesOfSquare[1]] == true)
 		count++;
-	if(linesList[tempLineList[2]] == true)
+	if(linesList[sidesOfSquare[2]] == true)
 		count++;
-	if(linesList[tempLineList[3]] == true)
+	if(linesList[sidesOfSquare[3]] == true)
 		count++;
 	//kDebug() << "AI: Square" << squareIndex << "is bordered by" << count << "lines";
 	return count;
+}
+
+int aiController::countBorderLines(int squareIndex, const bool *linesList) const
+{
+	int tempLineList[4];
+	return countBorderLines(tempLineList, squareIndex, linesList);
 }
 
 QList<int> aiController::squaresFromLine(int lineIndex) const

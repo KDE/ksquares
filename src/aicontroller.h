@@ -81,9 +81,8 @@ class aiController
 		 */
 		QList<int> squaresFromLine(int lineIndex) const;
 		/**
+		 * @param sidesOfSquare output parameter: the indices of the four lines surrounding the square
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
-		 *
-		 * @return the indices of the four lines surrounding the square
 		 */
 		void linesFromSquare(int *sidesOfSquare, int squareIndex) const;
 		/**

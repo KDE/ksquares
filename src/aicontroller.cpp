@@ -152,6 +152,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 {
 	//kDebug() << "AI: Checking" << choiceList.size() << "possible moves";
 	QMap<int,int> linePointDamage;	//this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line
+	int sidesOfSquare[4];
 	for(int i=0; i<choiceList.size(); i++)	//cycle through all the possible moves
 	{
 		QList<int> squaresCopy = squareOwners;	//make temporary local copies of lists
@@ -170,10 +171,10 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 					count++;
 					squareFound = true;	//we found a square so we will look again for the next
 					
-					QList<int> sidesOfSquare = linesFromSquare(currentSquare);
+					linesFromSquare(sidesOfSquare, currentSquare);
 					for(int sideOfSquare=0; sideOfSquare<=3; sideOfSquare++)	//make the square complete in linesCopy
 					{
-						linesCopy[sidesOfSquare.at(sideOfSquare)] = true;	//draw at this squares
+						linesCopy[sidesOfSquare[sideOfSquare]] = true;	//draw at this squares
 						
 					}	//now this square is completed by the second player.
 					break;	//since we found a square with 3 sides completed (now = 4), we break the 'for(currentSquare)' loop
@@ -194,17 +195,18 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 int aiController::countBorderLines(int squareIndex, const QList<bool> &linesList) const
 {
 	int count = 0;
+	int tempLineList[4];
 	
-	QList<int> tempLineList = linesFromSquare(squareIndex);
+	linesFromSquare(tempLineList, squareIndex);
 	
 	//TODO: replace this with a QList 'count' type function?
-	if(linesList.at(tempLineList.at(0)) == true)
+	if(linesList.at(tempLineList[0]) == true)
 		count++;
-	if(linesList.at(tempLineList.at(1)) == true)
+	if(linesList.at(tempLineList[1]) == true)
 		count++;
-	if(linesList.at(tempLineList.at(2)) == true)
+	if(linesList.at(tempLineList[2]) == true)
 		count++;
-	if(linesList.at(tempLineList.at(3)) == true)
+	if(linesList.at(tempLineList[3]) == true)
 		count++;
 	//kDebug() << "AI: Square" << squareIndex << "is bordered by" << count << "lines";
 	return count;
@@ -238,18 +240,16 @@ QList<int> aiController::squaresFromLine(int lineIndex) const
 	return squareList;
 }
 
-QList<int> aiController::linesFromSquare(int squareIndex) const
+void aiController::linesFromSquare(int *linesFromSquare, int squareIndex) const
 {
-	QList<int> tempLineList;
 	int index1 = (squareIndex/width) * ((2*width) + 1) + (squareIndex%width);
 	int index2 = index1 + width;
 	int index3 = index2 + 1;
 	int index4 = index3 + width;
-	tempLineList.append(index1);
-	tempLineList.append(index2);
-	tempLineList.append(index3);
-	tempLineList.append(index4);
-	return tempLineList;
+	linesFromSquare[0] = index1;
+	linesFromSquare[1] = index2;
+	linesFromSquare[2] = index3;
+	linesFromSquare[3] = index4;
 }
 
 KSquares::Direction aiController::lineDirection(int lineIndex) const

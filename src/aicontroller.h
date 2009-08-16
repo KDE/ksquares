@@ -39,6 +39,9 @@ class aiController
 		 * @param newHeight width of the current gameboard
 		 */
 		aiController(int newPlayerId, const QList<bool> &newLines, const QList<int> &newSquareOwners, int newWidth, int newHeight);
+		
+		~aiController();
+		
 		/**
 		 * Choses where to draw the line:
 		 * Creates a list of all the squares which are surrounded by 3 lines and if the list isn't empty, randomly picks one of them.
@@ -73,7 +76,7 @@ class aiController
 		 *
 		 * @return the number of lines currently drawn around a specific square
 		 */
-		int countBorderLines(int squareIndex, const QList<bool> &linesList) const;
+		int countBorderLines(int squareIndex, const bool *linesList) const;
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *
@@ -81,11 +84,10 @@ class aiController
 		 */
 		QList<int> squaresFromLine(int lineIndex) const;
 		/**
+		 * @param sidesOfSquare output parameter: the indices of the four lines surrounding the square
 		 * @param squareIndex the index of the square (relates to @ref squareOwners )
-		 *
-		 * @return the indices of the four lines surrounding the square
 		 */
-		QList<int> linesFromSquare(int squareIndex) const;
+		void linesFromSquare(int *sidesOfSquare, int squareIndex) const;
 		/**
 		 * @param lineIndex the index of the line (relates to @ref lines )
 		 *
@@ -96,7 +98,8 @@ class aiController
 		/// List of the owners of each square
 		QList<int> squareOwners;
 		/// List of which lines are complete
-		QList<bool> lines;
+		int linesSize;
+		bool *lines;
 		/// The ID of the player this AI belongs to
 		int playerId;
 		/// Width of the game board

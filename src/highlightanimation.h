@@ -32,6 +32,7 @@ class HighlightAnimation : public QObject, public QGraphicsLineItem
 		
 	private slots:
 		void setOpacity(int opacity);
+		void removeMe();
 };
 
 #endif // HIGHLIGHTANIMATION_H

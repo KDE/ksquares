@@ -47,9 +47,9 @@ int main(int argc, char **argv)
 	if (cg.readEntry<bool>("initializeNames", true)) {
 		QStringList playerNames;
 		playerNames << KUser().property(KUser::FullName).toString();
-		playerNames << i18nc("default name of second player", "Player 2");
-		playerNames << i18nc("default name of third player", "Player 3");
-		playerNames << i18nc("default name of fourth player", "Player 4");
+		playerNames << i18nc("default name of player", "Player %1", 2);
+		playerNames << i18nc("default name of player", "Player %1", 3);
+		playerNames << i18nc("default name of player", "Player %1", 4);
 		Settings::setPlayerNames(playerNames);
 		cg.writeEntry("initializeNames", false);
 	}

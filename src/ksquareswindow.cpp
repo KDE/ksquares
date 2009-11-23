@@ -438,7 +438,7 @@ void KSquaresWindow::slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& me
 			break;
 		case dotsOpcodes::message_reqmove:
 			kDebug() << "requested to move now!";
-			statusBar()->changeItem(i18n("It's your turn"), statusnetwork);
+			statusBar()->changeItem(i18n("It is your turn"), statusnetwork);
 			break;
 		case dotsOpcodes::message_rspmove:
 			xrspmove = *(static_cast<const rspmove*>(&message));

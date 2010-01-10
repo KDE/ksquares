@@ -2,6 +2,7 @@
 Name=KSquares
 Name[be]=KSquares
 Name[ca]=KSquares
+Name[ca@valencia]=KSquares
 Name[cs]=KSquares
 Name[da]=KSquares
 Name[de]=KSquares
@@ -49,6 +50,7 @@ Type=Application
 X-DocPath=ksquares/index.html
 GenericName=Connect the dots to create squares
 GenericName[ca]=Connecteu els punts per crear quadrats
+GenericName[ca@valencia]=Connecteu els punts per crear quadrats
 GenericName[cs]=Spojte tečky a vytvořte čtverce
 GenericName[da]=Forbind prikkerne for at danne kvadrater
 GenericName[de]=Käsekästchen-Spiel

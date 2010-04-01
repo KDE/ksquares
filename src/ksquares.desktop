@@ -99,4 +99,4 @@ GenericName[x-test]=xxConnect the dots to create squaresxx
 GenericName[zh_CN]=通过点连接创建方形
 GenericName[zh_TW]=將點連起來組成方塊
 Terminal=false
-Categories=Game;BoardGame;KDE;
+Categories=Game;BoardGame;Qt;KDE;

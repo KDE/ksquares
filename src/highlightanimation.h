@@ -23,16 +23,9 @@
 class HighlightAnimation : public QObject, public QGraphicsLineItem
 {
 	Q_OBJECT
-	
+	Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity)
 	public:
 		HighlightAnimation(const QLineF &line);
-	
-	private:
-		QTimeLine timeline;
-		
-	private slots:
-		void setOpacity(int opacity);
-		void removeMe();
 };
 
 #endif // HIGHLIGHTANIMATION_H

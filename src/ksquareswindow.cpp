@@ -330,11 +330,11 @@ void KSquaresWindow::setupActions()
 
 	KAction *a_rankings = new KAction(this);
 	a_rankings->setText(i18n("Online rankings"));
-	actionCollection()->addAction("rankings", a_rankings);
+	actionCollection()->addAction( QLatin1String( "rankings" ), a_rankings);
 
 	KAction *a_seats = new KAction(this);
 	a_seats->setText(i18n("List of seats"));
-	actionCollection()->addAction("seats", a_seats);
+	actionCollection()->addAction( QLatin1String( "seats" ), a_seats);
 
 	// Game
 	if(!KGGZMod::Module::instance())

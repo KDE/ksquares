@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 	
 	KApplication app;
-	KGlobal::locale()->insertCatalog("libkdegames");
+	KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 	
 	// default names for players
 	KConfigGroup cg(KGlobal::config(), "General");

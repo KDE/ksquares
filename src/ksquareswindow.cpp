@@ -297,7 +297,12 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
-	statusBar()->changeItem(currentPlayer->name(), statusplayer); //TODO Add player's colour
+	statusBar()->changeItem(
+		QString::fromLatin1("<font color=\"%1\">%2</font>")
+			.arg(currentPlayer->colour().name())
+			.arg(currentPlayer->name()),
+		statusplayer
+	);
 	if(currentPlayer->isHuman())
 	{
 		//Let the human player interact with the board through the GameBoardView

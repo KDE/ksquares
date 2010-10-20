@@ -29,7 +29,7 @@ install(TARGETS ksquares ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install( FILES ksquares.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS ksquares.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES ksquares.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES ksquaresui.rc  DESTINATION  ${DATA_INSTALL_DIR}/ksquares )
 kde4_install_icons(${ICON_INSTALL_DIR})

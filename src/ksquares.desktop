@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=KSquares
+Name[ast]=KSquares
 Name[be]=KSquares
 Name[ca]=KSquares
 Name[ca@valencia]=KSquares
@@ -53,6 +54,7 @@ Icon=ksquares
 Type=Application
 X-DocPath=ksquares/index.html
 GenericName=Connect the dots to create squares
+GenericName[ast]=Coneuta los puntos pa criar cuadraos
 GenericName[ca]=Connecteu els punts per crear quadrats
 GenericName[ca@valencia]=Connecteu els punts per crear quadrats
 GenericName[cs]=Spojte tečky a vytvořte čtverce

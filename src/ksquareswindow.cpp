@@ -379,7 +379,7 @@ void KSquaresWindow::optionsPreferences()
 	ui_prefs_ai.setupUi(aiSettingsDialog);
 	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "games-difficult");
 
-	connect(dialog, SIGNAL(settingsChanged(const QString &)), m_view, SLOT(setBoardSize()));
+	connect(dialog, SIGNAL(settingsChanged(QString)), m_view, SLOT(setBoardSize()));
 	dialog->show();
 }
 
@@ -390,8 +390,8 @@ void KSquaresWindow::slotNetworkData(int fd)
 		m_proto = new dots();
 		m_proto->ggzcomm_set_fd(fd);
 		connect(m_proto,
-			SIGNAL(signalNotification(dotsOpcodes::Opcode, const msg&)),
-			SLOT(slotNetworkPacket(dotsOpcodes::Opcode, const msg&)));
+			SIGNAL(signalNotification(dotsOpcodes::Opcode,msg)),
+			SLOT(slotNetworkPacket(dotsOpcodes::Opcode,msg)));
 		connect(m_proto, SIGNAL(signalError()), SLOT(slotNetworkError()));
 	}
 

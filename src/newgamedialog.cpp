@@ -26,7 +26,7 @@ NewGameDialog::NewGameDialog(QWidget* parent) : KDialog(parent)
 	{
 		adjustNetworkUsers();
 		connect(KGGZMod::Module::instance(),
-			SIGNAL(signalEvent(const KGGZMod::Event&)),
+			SIGNAL(signalEvent(KGGZMod::Event)),
 			SLOT(adjustNetworkUsers()));
 	}
 }

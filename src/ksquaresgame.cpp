@@ -11,8 +11,6 @@
 
 #include <kdebug.h>
 
-#include <kggzmod/module.h>
-
 //generated
 #include "settings.h"
 
@@ -62,19 +60,11 @@ void KSquaresGame::switchPlayer()
 
 int KSquaresGame::nextPlayer()
 {
-	if(!KGGZMod::Module::isGGZ())
-	{
-		anotherGo = false;	//just to reset the variable
-		currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
-		kDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
-		kDebug() << "-";
-		emit takeTurnSig(currentPlayer());
-	}
-	else
-	{
-		if(currentPlayerId() == -1)
-			i_currentPlayerId = 0;
-	}
+	anotherGo = false;	//just to reset the variable
+	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
+	kDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
+	kDebug() << "-";
+	emit takeTurnSig(currentPlayer());
 	
 	return currentPlayerId();
 }

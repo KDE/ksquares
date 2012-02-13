@@ -15,13 +15,10 @@
 #include "ksquaresgame.h"
 #include "ui_prefs_ai.h"
 #include "ui_prefs_display.h"
-#include "dots_client.h"
 
 class KToggleAction;
 class GameBoardView;
 class GameBoardScene;
-class KGGZRankingsDialog;
-class KGGZSeatsDialog;
 
 /**
  * @short Mainwindow class
@@ -54,12 +51,6 @@ class KSquaresWindow : public KXmlGuiWindow
 		void optionsPreferences();
 		void playerTakeTurn(KSquaresPlayer* currentPlayer);
 		void gameOver(const QVector<KSquaresPlayer> &_playerList);	//when KSquaresGame says the game is over. Display score board
-		void slotNetworkData(int fd);
-		void slotNetworkError();
-		void slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& message);
-		void slotMoveRequest(int x1, int y1, int x2, int y2);
-		void slotRankingsRequest();
-		void slotSeatsRequest();
 
 	private:
 		enum StatusBarItem
@@ -78,13 +69,8 @@ class KSquaresWindow : public KXmlGuiWindow
 		GameBoardScene *m_scene;
 		///The game controller
 		KSquaresGame* sGame;
-		///Network protocol handler
-		dots *m_proto;
 		// Remember last network move
 		int m_lastx1, m_lasty1, m_lastx2, m_lasty2;
-		//Network scores and player list
-		KGGZRankingsDialog *m_rankingsdlg;
-		KGGZSeatsDialog *m_seatsdlg;
 
 		//KToggleAction *m_toolbarAction;
 		//KToggleAction *m_statusbarAction;

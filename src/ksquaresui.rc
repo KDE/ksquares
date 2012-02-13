@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gui name="KSquares"
-     version="1"
+     version="2"
      xmlns="http://www.kde.org/standards/kxmlgui/1.0"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.kde.org/standards/kxmlgui/1.0
                          http://www.kde.org/standards/kxmlgui/1.0/kxmlgui.xsd">
 
-	<MenuBar>
-	<Menu noMerge="1" name="onlinegame">
-		<text>Online game</text>
-		<Action name="rankings" />
-		<Action name="seats" />
-	</Menu>
-	</MenuBar>
-
-	<ToolBar noMerge="1" name="mainToolBar" >
+	<MenuBar/>
+	<ToolBar name="mainToolBar" >
 		<text>Main Toolbar</text>
 		<Action name="game_new" />
 		<Action name="game_restart" />
 		<Action name="game_quit" />
 	</ToolBar>
-
-
 </gui>

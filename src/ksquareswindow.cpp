@@ -25,11 +25,6 @@
 #include <KStatusBar>
 #include <KAction>
 
-//libkdegames
-#include <kggzmod/module.h>
-#include <kggzgames/kggzrankingsdialog.h>
-#include <kggzgames/kggzseatsdialog.h>
-
 //generated
 #include "settings.h"
 
@@ -41,26 +36,17 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0), m_proto(0), m_rankingsdlg(0), m_seatsdlg(0)
+KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
 	setCentralWidget(m_view);
 	QTimer::singleShot(0, this, SLOT(initObject()));
-
-	if(KGGZMod::Module::isGGZ())
-	{
-		KGGZMod::Module *mod = new KGGZMod::Module("ksquares");
-		connect(mod, SIGNAL(signalNetwork(int)), SLOT(slotNetworkData(int)));
-		connect(mod, SIGNAL(signalError()), SLOT(slotNetworkError()));
-	}
 }
 
 KSquaresWindow::~KSquaresWindow()
 {
-	delete KGGZMod::Module::instance();
 	delete m_view;
 	delete m_scene;
 	delete sGame;
-        delete m_proto;
 }
 
 void KSquaresWindow::initObject()
@@ -75,10 +61,7 @@ void KSquaresWindow::initObject()
 	statusBar()->show();
 	setAutoSaveSettings();
 
-	if(!KGGZMod::Module::isGGZ())
-		gameNew();
-	else
-		statusBar()->insertPermanentItem(QString(), statusnetwork);
+	gameNew();
 }
 
 //void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
@@ -92,13 +75,6 @@ void KSquaresWindow::showHighscores()
 
 void KSquaresWindow::gameNew()
 {
-	if(KGGZMod::Module::instance())
-	{
-		reqnewgame req;
-		m_proto->ggzcomm_reqnewgame(req);
-		return;
-	}
-
 	//load settings
 	NewGameDialog dialog(this);
 
@@ -160,27 +136,11 @@ void KSquaresWindow::gameNew()
 	Settings::setQuickStart(dialog.quickStartCheck->checkState());
 	Settings::self()->writeConfig();
 
-	if(KGGZMod::Module::isGGZ())
-	{
-		sndoptions msgopt;
-		msgopt.width = dialog.spinWidth->value() + 1;
-		msgopt.height = dialog.spinHeight->value() + 1;
-		m_proto->ggzcomm_sndoptions(msgopt);
-	}
-
 	gameReset();
 }
 
 void KSquaresWindow::gameReset()
 {
-	if(KGGZMod::Module::instance())
-	{
-		// FIXME: this doesn't really obey to "reset" semantics
-		reqnewgame req;
-		m_proto->ggzcomm_reqnewgame(req);
-		return;
-	}
-
 	//create players
 	QVector<KSquaresPlayer> playerList;
 	for(int i=0; i<Settings::numOfPlayers(); i++)
@@ -332,33 +292,9 @@ void KSquaresWindow::setupActions()
 {
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
 	KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
+	resetGame->setStatusTip(i18n("Start a new game with the current settings"));
 
-	KAction *a_rankings = new KAction(this);
-	a_rankings->setText(i18n("Online rankings"));
-	actionCollection()->addAction( QLatin1String( "rankings" ), a_rankings);
-
-	KAction *a_seats = new KAction(this);
-	a_seats->setText(i18n("List of seats"));
-	actionCollection()->addAction( QLatin1String( "seats" ), a_seats);
-
-	// Game
-	if(!KGGZMod::Module::instance())
-	{
-		resetGame->setStatusTip(i18n("Start a new game with the current settings"));
-
-		KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
-
-		a_rankings->setEnabled(false);
-		a_seats->setEnabled(false);
-	}
-	else
-	{
-		resetGame->setStatusTip(i18n("Request to start a new game with the current settings"));
-
-		connect(a_rankings, SIGNAL(triggered(bool)), SLOT(slotRankingsRequest()));
-		connect(a_seats, SIGNAL(triggered(bool)), SLOT(slotSeatsRequest()));
-	}
-
+	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
 	KStandardGameAction::quit(this, SLOT(close()), actionCollection());
 	
 	// Preferences
@@ -381,150 +317,6 @@ void KSquaresWindow::optionsPreferences()
 
 	connect(dialog, SIGNAL(settingsChanged(QString)), m_view, SLOT(setBoardSize()));
 	dialog->show();
-}
-
-void KSquaresWindow::slotNetworkData(int fd)
-{
-	if(!m_proto)
-	{
-		m_proto = new dots();
-		m_proto->ggzcomm_set_fd(fd);
-		connect(m_proto,
-			SIGNAL(signalNotification(dotsOpcodes::Opcode,msg)),
-			SLOT(slotNetworkPacket(dotsOpcodes::Opcode,msg)));
-		connect(m_proto, SIGNAL(signalError()), SLOT(slotNetworkError()));
-	}
-
-	m_proto->ggzcomm_network_main();
-}
-
-void KSquaresWindow::slotNetworkError()
-{
-	delete m_proto;
-	delete KGGZMod::Module::instance();
-	kError() << "GGZ mode interrupted by kggzmod or kggzraw" << endl;
-	// FIXME: display message box to user, then quit game
-}
-
-void KSquaresWindow::slotNetworkPacket(dotsOpcodes::Opcode opcode, const msg& message)
-{
-	kDebug() << "PACKET:" << opcode << endl;
-
-	msgmoveh xmsgmoveh;
-	msgmovev xmsgmovev;
-	rspmove xrspmove;
-
-	switch(opcode)
-	{
-		case dotsOpcodes::message_msgseat:
-			// ignore, deprecate in protocol!
-			break;
-		case dotsOpcodes::message_msgplayers:
-			// ignore, deprecate in protocol!
-			break;
-		case dotsOpcodes::message_msgmoveh:
-			xmsgmoveh = *(static_cast<const msgmoveh*>(&message));
-			kDebug() << "move: " << xmsgmoveh.nx << "/" << xmsgmoveh.ny << ", score:" << xmsgmoveh.s;
-			m_scene->acknowledgeMove(xmsgmoveh.nx, xmsgmoveh.ny, xmsgmoveh.nx + 1, xmsgmoveh.ny);
-			sGame->switchPlayer();
-			// FIXME: compare scored squares with local calculation
-			break;
-		case dotsOpcodes::message_msgmovev:
-			xmsgmovev = *(static_cast<const msgmovev*>(&message));
-			kDebug() << "move: " << xmsgmovev.nx << "/" << xmsgmovev.ny << ", score:" << xmsgmovev.s;
-			m_scene->acknowledgeMove(xmsgmovev.nx, xmsgmovev.ny, xmsgmovev.nx, xmsgmovev.ny + 1);
-			sGame->switchPlayer();
-			// FIXME: compare scored squares with local calculation
-			break;
-		case dotsOpcodes::message_msggameover:
-			kError() << "implementation missing: msggameover";
-			// FIXME: announce the end of the game properly
-			statusBar()->changeItem(i18n("The game has finished"), statusnetwork);
-			break;
-		case dotsOpcodes::message_reqmove:
-			kDebug() << "requested to move now!";
-			statusBar()->changeItem(i18n("It is your turn"), statusnetwork);
-			break;
-		case dotsOpcodes::message_rspmove:
-			xrspmove = *(static_cast<const rspmove*>(&message));
-			kDebug() << "status:" << xrspmove.status;
-			if(xrspmove.status == dotsOpcodes::err_state)
-				kDebug() << "- state error";
-			else if(xrspmove.status == dotsOpcodes::err_turn)
-				kDebug() << "- turn error";
-			else if(xrspmove.status == dotsOpcodes::err_bound)
-				kDebug() << "- bound error";
-			else if(xrspmove.status == dotsOpcodes::err_full)
-				kDebug() << "- full error";
-			else
-			{
-				kDebug() << "- move successful, score:" << xrspmove.s;
-				for(int i = 0; i < xrspmove.s; i++)
-				{
-					kDebug() << " - x" << xrspmove.x[i] << "," << xrspmove.y[i];
-				}
-				// FIXME: compare scored squares with local calculation
-				m_scene->acknowledgeMove(m_lastx1, m_lasty1, m_lastx2, m_lasty2);
-				statusBar()->changeItem(i18n("Waiting for opponent..."), statusnetwork);
-				sGame->switchPlayer();
-			}
-			break;
-		case dotsOpcodes::message_sndsync:
-			// ignore, as long as we never request to sync!
-			break;
-		case dotsOpcodes::message_msgoptions:
-			kError() << "implementation missing: msgoptions";
-			// FIXME: setup new game here but without options dialogue
-			break;
-		case dotsOpcodes::message_reqoptions:
-			kDebug() << "requested to send options!";
-			gameNew();
-			break;
-	}
-}
-
-void KSquaresWindow::slotMoveRequest(int x1, int y1, int x2, int y2)
-{
-	m_lastx1 = x1;
-	m_lasty1 = y1;
-	m_lastx2 = x2;
-	m_lasty2 = y2;
-
-	if(x1 == x2)
-	{
-		sndmovev req;
-		req.x = x1;
-		req.y = y1;
-		m_proto->ggzcomm_sndmovev(req);
-		kDebug() << "Send vertical move: " << req.x << "," << req.y;
-	}
-	else if(y1 == y2)
-	{
-		sndmoveh req;
-		req.x = x1;
-		req.y = y1;
-		m_proto->ggzcomm_sndmoveh(req);
-		kDebug() << "Send horizontal move: " << req.x << "," << req.y;
-	}
-
-	statusBar()->changeItem(i18n("Waiting for move result..."), statusnetwork);
-}
-
-void KSquaresWindow::slotRankingsRequest()
-{
-	kDebug() << "REQUEST RANKINGS!" << endl;
-	KGGZMod::RankingsRequest req;
-	KGGZMod::Module::instance()->sendRequest(req);
-
-	delete m_rankingsdlg;
-	m_rankingsdlg = new KGGZRankingsDialog(this);
-}
-
-void KSquaresWindow::slotSeatsRequest()
-{
-	if(!m_seatsdlg)
-		m_seatsdlg = new KGGZSeatsDialog();
-	m_seatsdlg->show();
 }
 
 #include "ksquareswindow.moc"

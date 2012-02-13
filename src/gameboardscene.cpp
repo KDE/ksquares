@@ -17,7 +17,6 @@
 #include <QGraphicsEllipseItem>
 
 #include <kdebug.h>
-#include <kggzmod/module.h>
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
@@ -238,18 +237,7 @@ void GameBoardScene::mouseReleaseEvent (QGraphicsSceneMouseEvent* mouseEvent)
 		QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 		if (connectList.size() == 2)
 		{
-			if(KGGZMod::Module::instance())
-			{
-				int x1 = (qint8)(connectList.at(0)->scenePos().x() / spacing);
-				int y1 = (qint8)(connectList.at(0)->scenePos().y() / spacing);
-				int x2 = (qint8)(connectList.at(1)->scenePos().x() / spacing);
-				int y2 = (qint8)(connectList.at(1)->scenePos().y() / spacing);
-				emit signalMoveRequest(x1, y1, x2, y2);
-			}
-			else
-			{
-				addLineToIndex(connectList);
-			}
+			addLineToIndex(connectList);
 		}
 	}
 	

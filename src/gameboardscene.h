@@ -128,8 +128,6 @@ class GameBoardScene : public QGraphicsScene
 	signals:
 		///Emits the index of the closet (undrawn) line when a click is detected
 		void lineDrawn(int);
-		///Emits a move request in a network game
-		void signalMoveRequest(int x1, int y1, int x2, int y2);
 };
 
 #endif // GAMEBOARDSCENE_H

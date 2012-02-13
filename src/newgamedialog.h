@@ -22,7 +22,6 @@ class NewGameDialog : public KDialog, public Ui::NewGameWidget
 	
 	public slots:
 		void adjustEnabledUsers(int);
-		void adjustNetworkUsers();
 };
 
 #endif // NEWGAMEDIALOG_H

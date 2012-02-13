@@ -9,7 +9,6 @@ set(ksquares_SRCS
 	newgamedialog.cpp
 	ksquaresdemowindow.cpp
 	themegraphicsitems.cpp
-	dots_client.cpp
 	highlightanimation.cpp
 )
 
@@ -22,7 +21,7 @@ kde4_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is 
 kde4_add_app_icon(ksquares_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-ksquares.png")
 kde4_add_executable(ksquares ${ksquares_SRCS})
 
-target_link_libraries(ksquares ${KDE4_KDEUI_LIBS} kdegames ${KGGZGAMES_LIBS})
+target_link_libraries(ksquares ${KDE4_KDEUI_LIBS} kdegames)
 
 install(TARGETS ksquares ${INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -33,5 +32,3 @@ install( PROGRAMS ksquares.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES ksquares.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES ksquaresui.rc  DESTINATION  ${DATA_INSTALL_DIR}/ksquares )
 kde4_install_icons(${ICON_INSTALL_DIR})
-
-register_ggz_module(module.dsc)

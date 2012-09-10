@@ -1,9 +1,13 @@
 [Desktop Entry]
 Name=KSquares
+Name[uk]=KSquares
+Name[x-test]=xxKSquaresxx
 Exec=ksquares %i -caption "%c"
 Icon=ksquares
 Type=Application
 X-DocPath=ksquares/index.html
 GenericName=Connect the dots to create squares
+GenericName[uk]=З'єднайте точки, щоб створити квадрати
+GenericName[x-test]=xxConnect the dots to create squaresxx
 Terminal=false
 Categories=Game;BoardGame;Qt;KDE;

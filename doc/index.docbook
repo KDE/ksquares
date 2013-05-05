@@ -10,7 +10,7 @@
  
 <book id="ksquares" lang="&language;"> <!-- do not change this! -->
 <bookinfo>
-	<title>The &kappname; Handbook</title> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+	<title>The &ksquares; Handbook</title> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
 <!-- List of immidiate authors begins here. -->
 <!--INPORTANT! - All other contributors: [to be determined] -->
 <authorgroup>
@@ -40,7 +40,7 @@
  
 <!--Short description of this document. Do not change unless necessary!-->
 <abstract>
-	<para>This documentation describes the game of &kappname; version &kappversion;</para>
+	<para>This documentation describes the game of &ksquares; version &kappversion;</para>
 </abstract>
  
 <!--List of relevan keywords-->
@@ -67,8 +67,8 @@
 <chapter id="introduction"><title>Introduction</title> <!-- do not change this! -->
 	<note><title>Gametype:</title><para>Board</para></note><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
 	<note><title>Number of possible players:</title><para>Four</para></note>
-	<para>&kappname; is a fun and exciting game for &kde; desktop environment. &kappname; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
-<para>The idea behind &kappname; is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
+	<para>&ksquares; is a fun and exciting game for &kde; desktop environment. &ksquares; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
+<para>The idea behind &ksquares; is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
 <para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>
  
@@ -94,7 +94,7 @@
 	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
 <sect1 id="rules">
   <title>Game Rules</title>
-    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Nevertheless, here are the game regulations you, as a player will defiantly face while playing &kappname;:</para>
+    <para>There is very little to be said when it come to the rules, as the game concept in itself is rather a simple one. Nevertheless, here are the game regulations you, as a player will defiantly face while playing &ksquares;:</para>
     <itemizedlist>
 	<listitem><para>You may only connect the dots on the grid if they are not previously connected by you, your opponent, or the computer.</para></listitem>
 	<listitem><para>To gain the points you have to connect the dots to form a square.</para></listitem>
@@ -116,101 +116,68 @@
 </sect1>
 </chapter>
   
-<chapter id="interface"><title>Interface Overview</title> <!-- do not change this! -->
-<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist> and <varlistentry>. Split the chapter into sections using <sect1(2,3)> for better viewing.-->
-  <sect1 id="file-game-menu-reference">
-    <title>The <guimenu>Game</guimenu> Menu</title>
-    
-    <para>
+<chapter id="menu-items">
+  <title>Menu Items</title>
+  <para>
     <variablelist>
-    <varlistentry>
-    <term>
-    <menuchoice>
-    <shortcut>
-    <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
-    </shortcut>
-    <guimenu>Game</guimenu>
-    <guimenuitem>New</guimenuitem>
-    </menuchoice>
-    </term>
-    <listitem><para><action>Start a new game</action></para></listitem>
-    </varlistentry>
-    <varlistentry>
-    <term><menuchoice><shortcut><keycap>F5</keycap></shortcut>
-    <guimenu>Game</guimenu><guimenuitem>Restart Game</guimenuitem></menuchoice></term>
-    <listitem><para>Starts a new game with the same settings as the current game.</para></listitem>
-    </varlistentry>
-    <varlistentry>
-    <term>
-    <menuchoice>
-    <shortcut>
-    <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
-    </shortcut>
-    <guimenu>Game</guimenu>
-    <guimenuitem>Show High Scores</guimenuitem>
-    </menuchoice>
-    </term>
-    <listitem><para><action>Displays</action> the high score table</para></listitem>
-    </varlistentry>
-    <varlistentry>
-    <term>
-    <menuchoice>
-    <shortcut>
-    <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
-    </shortcut>
-    <guimenu>Game</guimenu>
-    <guimenuitem>Quit</guimenuitem>
-    </menuchoice>
-    </term>
-    <listitem><para><action>Quits</action> &ksquares;</para></listitem>
-    </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice>
+	    <shortcut>
+	      <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
+	    </shortcut>
+	    <guimenu>Game</guimenu>
+	    <guimenuitem>New</guimenuitem>
+	  </menuchoice>
+	</term>
+	<listitem><para><action>Start a new game</action></para></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term><menuchoice><shortcut><keycap>F5</keycap></shortcut>
+	    <guimenu>Game</guimenu><guimenuitem>Restart Game</guimenuitem></menuchoice></term>
+	<listitem><para>Starts a new game with the same settings as the current game.</para></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice>
+	    <shortcut>
+	      <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
+	    </shortcut>
+	    <guimenu>Game</guimenu>
+	    <guimenuitem>Show High Scores</guimenuitem>
+	  </menuchoice>
+	</term>
+	<listitem><para><action>Displays</action> the high score table</para></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice>
+	    <shortcut>
+	      <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
+	    </shortcut>
+	    <guimenu>Game</guimenu>
+	    <guimenuitem>Quit</guimenuitem>
+	  </menuchoice>
+	</term>
+	<listitem><para><action>Quits</action> &ksquares;</para></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+	<term><menuchoice>
+	    <guimenu>Settings</guimenu>
+	    <guimenuitem>Configure &ksquares;...</guimenuitem>
+	    </menuchoice></term>
+	<listitem><para><action>Opens a dialog to configure &ksquares;.</action> See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
+      </varlistentry>
     </variablelist>
-    </para>
-  </sect1>
-
-  <sect1 id="settings-menu-reference">
-    <title>The <guimenu>Settings</guimenu> Menu</title>
- <variablelist>
-  <varlistentry>
-    <term><menuchoice>
-      <guimenu>Settings</guimenu><guimenuitem>Show Toolbar</guimenuitem>
-    </menuchoice></term>
-    <listitem><para><action>Toggle</action> the toolbar on and off.</para></listitem>
-  </varlistentry>
-  <varlistentry>
-    <term><menuchoice>
-      <guimenu>Settings</guimenu><guimenuitem>Show Statusbar</guimenuitem>
-    </menuchoice></term>
-    <listitem><para><action>Toggle</action> the status bar on and off.</para></listitem>
-  </varlistentry>
-			<varlistentry id="settings-menu-shortcuts">
-				<term><menuchoice>
-					<guimenu>Settings</guimenu>
-					<guimenuitem>Configure Shortcuts...</guimenuitem>
-				</menuchoice></term>
-				<listitem><para><action>Displays a standard &kde; shortcut configuration dialog</action> to change the keyboard shortcuts for &kappname;.</para></listitem>
-			</varlistentry>
-			<varlistentry id="settings-menu-toolbars">
-				<term><menuchoice>
-					<guimenu>Settings</guimenu>
-					<guimenuitem>Configure Toolbars...</guimenuitem>
-				</menuchoice></term>
-				<listitem><para><action>Displays a standard &kde; toolbar configuration dialog</action> where you can configure the toolbar icons.</para></listitem>
-			</varlistentry>
-			<varlistentry id="settings-menu-settings">
-				<term><menuchoice>
-					<guimenu>Settings</guimenu>
-					<guimenuitem>Configure &kappname;...</guimenuitem>
-				</menuchoice></term>
-				<listitem><para><action>Opens a dialog to configure &kappname;.</action>See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
-			</varlistentry>
-    </variablelist>
-  </sect1>
-
-<sect1 id="help"><!--This is a standard Help menubar entry. Only change if needed.-->
-<title>The <guimenu>Help</guimenu> Menu</title>
-&help.menu.documentation;
-</sect1>
+  </para>
+  <para>
+    Additionally &ksquares; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+    menu items, for more information read the sections about the
+    <ulink url="help:/fundamentals/ui.html#menus-settings">Settings Menu</ulink> and
+    <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink>
+    of the &kde; Fundamentals.
+  </para>
+  
 </chapter>
   
 <chapter id="faq"><title>Frequently asked questions</title> <!-- do not change this! -->
@@ -219,15 +186,15 @@
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
  <question><para>I want to change the way this game looks. Can I? </para></question>
- <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &kappname;...</guimenuitem></menuchoice> on the menubar. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
+ <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ksquares;...</guimenuitem></menuchoice> on the menubar. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I have made a mistake. Can I undo? </para></question>
- <answer><para>No. &kappname; doesn't currently have an <quote>Undo</quote> feature.</para></answer>
+ <answer><para>No. &ksquares; doesn't currently have an <quote>Undo</quote> feature.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>Can I use the keyboard to play the game? </para></question>
- <answer><para>No. &kappname; cannot be played using keyboard.</para></answer>
+ <answer><para>No. &ksquares; cannot be played using keyboard.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I cannot figure out what to do here! Are there hints? </para></question>
@@ -235,7 +202,7 @@
 </qandaentry>
 <qandaentry>
  <question><para>I have to quit the game now, but I am not finished yet. Can I save my progress?</para></question>
-  <answer><para>&kappname; does not have a saving feature.</para></answer>
+  <answer><para>&ksquares; does not have a saving feature.</para></answer>
 </qandaentry>
 <!--Please add more Q&As if needed-->
  
@@ -263,11 +230,11 @@
 </sect1>
 <sect1 id="configuration-dialog">
 <title>Configuration Dialog</title>
-<para>The <guilabel>Configure - &kappname;</guilabel> dialog consists of the following tabs:</para>
+<para>The <guilabel>Configure - &ksquares;</guilabel> dialog consists of the following tabs:</para>
 <variablelist>
   <varlistentry>
     <term><guilabel>Display</guilabel></term>
-    <listitem><para>Here you can change the &kappname; color settings.</para></listitem>
+    <listitem><para>Here you can change the &ksquares; color settings.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Computer Player</guilabel></term>
@@ -281,7 +248,7 @@
 <!--This chapter is for credits and licenses.-->
  
 <para>
-&kappname;  <!-- do not change this! -->
+&ksquares;  <!-- do not change this! -->
 </para>
 
 <para>

@@ -22,7 +22,7 @@
 static const char description[] =
 	I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
-static const char version[] = "0.4";
+static const char version[] = "0.5";
 
 int main(int argc, char **argv)
 {
@@ -31,6 +31,7 @@ int main(int argc, char **argv)
 		"http://games.kde.org/ksquares");
 	about.addAuthor( ki18n("Matt Williams"), ki18n("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
 	about.addCredit(ki18n("Fela Winkelmolen"), ki18n("Many patches and bugfixes"));
+	about.addCredit(ki18n("Tom Vincent Peters"), ki18n("Hard AI"));
 	
 	KCmdLineArgs::init(argc, argv, &about);
 

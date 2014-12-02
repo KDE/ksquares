@@ -23,7 +23,7 @@
 #include <KHighscore>
 #include <KStandardGameAction>
 #include <KStatusBar>
-#include <KAction>
+#include <QAction>
 
 //generated
 #include "settings.h"
@@ -57,7 +57,7 @@ void KSquaresWindow::initObject()
 	m_view->setRenderHints(QPainter::Antialiasing);
 	m_view->setFrameStyle(QFrame::NoFrame);
 	setupActions();
-	statusBar()->insertPermanentItem(i18n("Current Player"), statusplayer);
+	//QT5 statusBar()->insertPermanentItem(i18n("Current Player"), statusplayer);
 	statusBar()->show();
 	setAutoSaveSettings();
 
@@ -265,12 +265,14 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
+#if 0 //QT5
 	statusBar()->changeItem(
 		QString::fromLatin1("<font color=\"%1\">%2</font>")
 			.arg(currentPlayer->colour().name())
 			.arg(currentPlayer->name()),
 		statusplayer
 	);
+#endif
 	if(currentPlayer->isHuman())
 	{
 		//Let the human player interact with the board through the GameBoardView
@@ -299,7 +301,7 @@ void KSquaresWindow::aiChooseLine()
 void KSquaresWindow::setupActions()
 {
 	KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-	KAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
+	QAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
 	resetGame->setStatusTip(i18n("Start a new game with the current settings"));
 
 	KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());

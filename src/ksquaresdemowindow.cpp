@@ -39,7 +39,7 @@ KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoard
 	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
 	setupGUI();
 
-	statusBar()->insertPermanentItem(i18n("Current Player"), 0);
+	//QT5 statusBar()->insertPermanentItem(i18n("Current Player"), 0);
 	statusBar()->show();
 }
 
@@ -91,7 +91,7 @@ void KSquaresDemoWindow::gameNew()
 
 void KSquaresDemoWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
-	statusBar()->changeItem(currentPlayer->name(), 0);
+	//QT5 statusBar()->changeItem(currentPlayer->name(), 0);
 	QTimer::singleShot(200, this, SLOT(aiChooseLine()));
 }
 

@@ -8,11 +8,11 @@
  ***************************************************************************/
 
 #include <KApplication>
-#include <KAboutData>
+#include <K4AboutData>
 #include <KCmdLineArgs>
 #include <KLocale>
 #include <KUser>
-
+#include <KGlobal>
 #include <KDebug>
 
 #include "ksquareswindow.h"
@@ -26,8 +26,8 @@ static const char version[] = "0.5";
 
 int main(int argc, char **argv)
 {
-	KAboutData about("ksquares", 0, ki18n("KSquares"), version, ki18n(description),
-		KAboutData::License_GPL, ki18n("(C) 2006-2007 Matt Williams"), KLocalizedString(), 
+	K4AboutData about("ksquares", 0, ki18n("KSquares"), version, ki18n(description),
+		K4AboutData::License_GPL, ki18n("(C) 2006-2007 Matt Williams"), KLocalizedString(), 
 		"http://games.kde.org/ksquares");
 	about.addAuthor( ki18n("Matt Williams"), ki18n("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
 	about.addCredit(ki18n("Fela Winkelmolen"), ki18n("Many patches and bugfixes"));
@@ -41,7 +41,6 @@ int main(int argc, char **argv)
 	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
 	
 	KApplication app;
-	KGlobal::locale()->insertCatalog( QLatin1String( "libkdegames" ));
 	
 	// default names for players
 	KConfigGroup cg(KGlobal::config(), "General");

@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	KApplication app;
 	
 	// default names for players
-	KConfigGroup cg(KGlobal::config(), "General");
+	KConfigGroup cg(KSharedConfig::openConfig(), "General");
 	if (cg.readEntry<bool>("initializeNames", true)) {
 		QStringList playerNames;
 		playerNames << KUser().property(KUser::FullName).toString();

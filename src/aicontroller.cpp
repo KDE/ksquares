@@ -10,7 +10,7 @@
 #include "aicontroller.h"
 
 #include <ctime>
-#include <kdebug.h>
+#include <QDebug>
 
 #include <QSet>
 
@@ -22,7 +22,7 @@ aiController::aiController(int newPlayerId, const QList<bool> &newLines, const Q
 	lines = new bool[linesSize];
 	for (int i = 0; i < linesSize; ++i) lines[i] = newLines[i];
 	srand( (unsigned)time( NULL ) );
-	kDebug() << "AI: Starting AI level" << Settings::difficulty();
+	//qDebug() << "AI: Starting AI level" << Settings::difficulty();
 }
 
 aiController::~aiController()
@@ -36,12 +36,12 @@ QList<int> aiController::autoFill(int safeMovesLeft)
 	
 	// add a random safe moves while there are safe moves left
 	QList<int> next;
-	//kDebug() << safeMoves().isEmpty();
+	////qDebug() << safeMoves().isEmpty();
 	while( !( (next = safeMoves()).isEmpty() ) )
 	{
 		int nextLine = next[rand() % next.size()];
 		lines[nextLine] = true;
-		//kDebug() << nextLine;
+		////qDebug() << nextLine;
 		fillLines << nextLine;
 	}
 	
@@ -70,7 +70,7 @@ int aiController::chooseLine() const
 				if(countBorderLines(adjacentSquares.at(j), lines) == 3)	//if 3 lines, draw there to get points!
 				{
 					choiceList.append(i);
-					//kDebug() << "AI: 1. Adding" << i << "to choices";
+					////qDebug() << "AI: 1. Adding" << i << "to choices";
 				}
 			}
 		}
@@ -90,13 +90,13 @@ int aiController::chooseLine() const
 			QList<int> choices=chooseLeastDamaging(openLines); // run extended damage control
 			if(choices.size() > 0)
 			{
-				kDebug() << "AI: 4. Drawing line at index:" << choices.at(0);
+				//qDebug() << "AI: 4. Drawing line at index:" << choices.at(0);
 				return choices.at(0);
 			}
 		}
 		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
 		int randChoice = (short)(randomFloat)/1;
-		kDebug() << "AI: 1. Drawing line at index:" << choiceList.at(randChoice);
+		//qDebug() << "AI: 1. Drawing line at index:" << choiceList.at(randChoice);
 		return choiceList.at(randChoice);
 	}
 	
@@ -106,7 +106,7 @@ int aiController::chooseLine() const
 	{
 		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
 		int randChoice = (short)(randomFloat)/1;
-		kDebug() << "AI: 2. Drawing line at index:" << choiceList.at(randChoice);
+		//qDebug() << "AI: 2. Drawing line at index:" << choiceList.at(randChoice);
 		return choiceList.at(randChoice);
 	}
 	
@@ -122,7 +122,7 @@ int aiController::chooseLine() const
 				if(countBorderLines(adjacentSquares.at(j), lines) == 2)	//if 2 lines (they're all that's left!)
 				{
 					choiceList.append(i);
-					//kDebug() << "AI: 3. Adding" << i << "to choices";
+					////qDebug() << "AI: 3. Adding" << i << "to choices";
 				}
 			}
 		}
@@ -134,7 +134,7 @@ int aiController::chooseLine() const
 		{
 			float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(goodChoiceList.size()-1);
 			int randChoice = (short)(randomFloat)/1;
-			kDebug() << "AI: 3. Drawing line at index:" << goodChoiceList.at(randChoice);
+			//qDebug() << "AI: 3. Drawing line at index:" << goodChoiceList.at(randChoice);
 			return goodChoiceList.at(randChoice);
 		}
 	}
@@ -143,7 +143,7 @@ int aiController::chooseLine() const
 	{
 		float randomFloat = ((float) rand()/(RAND_MAX + 1.0))*(choiceList.size()-1);
 		int randChoice = (short)(randomFloat)/1;
-		kDebug() << "AI: 3. Drawing line at index:" << choiceList.at(randChoice);
+		//qDebug() << "AI: 3. Drawing line at index:" << choiceList.at(randChoice);
 		return choiceList.at(randChoice);
 	}
         return 0;
@@ -168,7 +168,7 @@ QList<int> aiController::safeMoves() const
 			if(badCount == 0)
 			{
 				safeLines.append(i);
-				//kDebug() << "AI: 2. Adding" << i << "to choices";
+				////qDebug() << "AI: 2. Adding" << i << "to choices";
 			}
 		}
 	}
@@ -177,7 +177,7 @@ QList<int> aiController::safeMoves() const
 
 QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 {
-	//kDebug() << "AI: Checking" << choiceList.size() << "possible moves";
+	////qDebug() << "AI: Checking" << choiceList.size() << "possible moves";
 	QMap<int,int> linePointDamage;	//this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line
 	QScopedArrayPointer<bool> linesCopy(new bool[linesSize]); //make temporary local copies of lists
 	int sidesOfSquare[4];
@@ -249,7 +249,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 				}
 			}
 		} while (chainFound);
-		//kDebug() << "ownChains:" << ownChains;
+		////qDebug() << "ownChains:" << ownChains;
 
 		// complete the shortest chain first if there is more than one chain. this is needed to stop alternating between two chains because that works against the hard ai move which takes the next chain by sacrificing 2/4 squares. when alternating between two chains it's possible that there are 3 remaining open lines in both chains combined which triggers the evil move too late because the chains were completed in the wrong order
 		int minChain=-1;
@@ -266,7 +266,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 		{
 			ownMoves=ownChains.at(minChain);
 		}
-		//kDebug() << "ownMoves:" << ownMoves;
+		////qDebug() << "ownMoves:" << ownMoves;
 	}
 	
 	for(int i = 0; i < choiceList.size(); i++)	//cycle through all the possible moves
@@ -326,7 +326,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 		chains.insert(choiceList.at(i), chain);
 	}
 	
-	//kDebug() << "linePointDamage:" << linePointDamage;
+	////qDebug() << "linePointDamage:" << linePointDamage;
 	
 	if(Settings::difficulty() < 2) // middle ai won't analyze the game further
 	{
@@ -334,7 +334,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 		return bestMoves;
 	}
 
-	//kDebug() << chains;
+	////qDebug() << chains;
 	// remove double entries from chains to get chainSet
 	QMapIterator<int, QSet<int> > j(chains);
 	while(j.hasNext()) // walk through chains and add chain to chainSet (if not already contained)
@@ -358,7 +358,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 			chainSet.insert(j.key(), chainCheck);
 		}
 	}
-	//kDebug() << "chainSet:" << chainSet;
+	////qDebug() << "chainSet:" << chainSet;
 
 	// analyze chains
 	// TODO: find loop chains to calculate sacrifices (loopChains are a subset of longChains)
@@ -377,7 +377,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 			longChains++;
 		}
 	}
-	//kDebug() << "short chains:" << shortChains << ", long chains: " << longChains;
+	////qDebug() << "short chains:" << shortChains << ", long chains: " << longChains;
 
 	if(
 		(
@@ -390,7 +390,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 		safeMoves().size() == 0 // only do it in endgames
 	  )
 	{
-		kDebug() << "HAHA, our chance to do the evil thing!";
+		//qDebug() << "HAHA, our chance to do the evil thing!";
 		int magicLine = -1; // line in own moves that is used to get the next chain (draw there to give 2/4 squares to opponent)
 		// formal definition of magicLine: line that when completed will leave at least one other line in own moves that completes two squares at once
 		// the opposite of magic line will be used in the hard hearted handout to make sure that the opponent won't be able to do the evil move
@@ -416,7 +416,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 				}
 			}
 		}
-		kDebug() << "Magic Line index:" << magicLine;
+		//qDebug() << "Magic Line index:" << magicLine;
 		QList<int> bestMoves;
 		if(ownMoves.size() > 1)
 		{
@@ -475,7 +475,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 		}
 		if(handoutLine >= 0)
 		{
-			//kDebug() << "Hard hearted handout at" << opponentChain.at(handoutLine);
+			////qDebug() << "Hard hearted handout at" << opponentChain.at(handoutLine);
 			QList<int> retMove;
 			retMove.append(opponentChain.at(handoutLine));
 			return retMove;
@@ -502,7 +502,7 @@ int aiController::countBorderLines(int *sidesOfSquare, int squareIndex, const bo
 		count++;
 	if(linesList[sidesOfSquare[3]] == true)
 		count++;
-	//kDebug() << "AI: Square" << squareIndex << "is bordered by" << count << "lines";
+	////qDebug() << "AI: Square" << squareIndex << "is bordered by" << count << "lines";
 	return count;
 }
 
@@ -514,7 +514,7 @@ int aiController::countBorderLines(int squareIndex, const bool *linesList) const
 
 QList<int> aiController::squaresFromLine(int lineIndex) const
 {
-	//kDebug() << "Line:" << lineIndex;
+	////qDebug() << "Line:" << lineIndex;
 	QList<int> squareList;
 	if (lineDirection(lineIndex) == KSquares::HORIZONTAL)
 	{
@@ -535,8 +535,8 @@ QList<int> aiController::squaresFromLine(int lineIndex) const
 		if(lineIndex%((2*width)+1) == 2*width)
 			squareList.removeAt(0);
 	}
-	//kDebug() << "Size:" << squareList.size();
-	//kDebug() << "squares:" << squareList.at(0) << " " << squareList.at(1);
+	////qDebug() << "Size:" << squareList.size();
+	////qDebug() << "squares:" << squareList.at(0) << " " << squareList.at(1);
 	return squareList;
 }
 

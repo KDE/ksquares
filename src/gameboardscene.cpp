@@ -16,11 +16,11 @@
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsEllipseItem>
 
-#include <kdebug.h>
+#include <QDebug>
 
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
-	//kDebug() << "GameBoardScene::GameBoardScene()";
+	////qDebug() << "GameBoardScene::GameBoardScene()";
 	
 	for(int i = 0; i < (2*width*height + width + height); i++)
 	{
@@ -75,7 +75,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
 
 GameBoardScene::~GameBoardScene()
 {
-	kDebug() << "GameBoardScene::~GameBoardScene()";
+	//qDebug() << "GameBoardScene::~GameBoardScene()";
 	delete indicatorLine;
 }
 
@@ -256,8 +256,8 @@ void GameBoardScene::mouseMoveEvent (QGraphicsSceneMouseEvent* mouseEvent)
 	if (!acceptEvents) return;
 	//indicatorLine = 0;
 	
-	//kDebug() << "GameBoardScene::mouseMoveEvent";
-	//kDebug() << "mouseEvent->scenePos():" << mouseEvent->scenePos().x() << "," << mouseEvent->scenePos().y();
+	////qDebug() << "GameBoardScene::mouseMoveEvent";
+	////qDebug() << "mouseEvent->scenePos():" << mouseEvent->scenePos().x() << "," << mouseEvent->scenePos().y();
 	
 	QList<QGraphicsEllipseItem*> connectList = getTwoNearestPoints(mouseEvent->scenePos());
 	

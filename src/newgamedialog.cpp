@@ -8,7 +8,7 @@
  ***************************************************************************/
 
 #include "newgamedialog.h"
-#include <kdebug.h>
+#include <QDebug>
 
 NewGameDialog::NewGameDialog(QWidget* parent) : KDialog(parent)
 {
@@ -36,7 +36,7 @@ void NewGameDialog::adjustEnabledUsers(int numOfPlayers)
 		case 4:
 			break;
 		default:
-			kError() << "NewGameDialog::adjustEnabledUsers(): numOfPlayers out of range!!";
+			qCritical() << "NewGameDialog::adjustEnabledUsers(): numOfPlayers out of range!!";
 	}
 	
 	switch(numOfPlayers)

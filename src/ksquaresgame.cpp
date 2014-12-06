@@ -9,27 +9,27 @@
 
 #include "ksquaresgame.h"
 
-#include <kdebug.h>
+#include <QDebug>
 
 //generated
 #include "settings.h"
 
 KSquaresGame::KSquaresGame()
 {
-	kDebug() << "Constructing Game";
+	//qDebug() << "Constructing Game";
 	gameInProgress = false;
 }
 
 KSquaresGame::~KSquaresGame()
 {
-	kDebug() << "Destroying game";
+	//qDebug() << "Destroying game";
 	gameInProgress = false;
 }
 
 void KSquaresGame::createGame(const QVector<KSquaresPlayer> &startPlayers, int startWidth, int startHeight)
 {
 	resetEverything();	//reset everything
-	kDebug() << "Creating Game with" << startPlayers.size() << "player(s)";
+	//qDebug() << "Creating Game with" << startPlayers.size() << "player(s)";
 	
 	//BEGIN Initialisation
 	width = startWidth;
@@ -48,7 +48,7 @@ void KSquaresGame::createGame(const QVector<KSquaresPlayer> &startPlayers, int s
 	}
 	//END Initialisation
 	
-	kDebug() << "Game Starting";
+	//qDebug() << "Game Starting";
 	nextPlayer();
 }
 
@@ -62,8 +62,8 @@ int KSquaresGame::nextPlayer()
 {
 	anotherGo = false;	//just to reset the variable
 	currentPlayerId() >= (players.size()-1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
-	kDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
-	kDebug() << "-";
+	//qDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
+	//qDebug() << "-";
 	emit takeTurnSig(currentPlayer());
 	
 	return currentPlayerId();
@@ -71,7 +71,7 @@ int KSquaresGame::nextPlayer()
 
 void KSquaresGame::playerSquareComplete(int index)
 {
-	kDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square";
+	//qDebug() << "- - " << currentPlayer()->name() << "(" << currentPlayerId() << ") has completed a square";
 	anotherGo = true;
 	
 	squareOwnerTable[index] = currentPlayerId();	//add square to index
@@ -83,10 +83,10 @@ void KSquaresGame::playerSquareComplete(int index)
 	{
 		totalPoints += players.at(i).score();
 	}
-	kDebug() << "- - Square Completed";
+	//qDebug() << "- - Square Completed";
 	if (totalPoints >= width*height)	//if the board is full
 	{
-		kDebug() << "Game Over";
+		//qDebug() << "Game Over";
 		gameInProgress = false;
 		emit gameOver(players);
 	}
@@ -94,20 +94,20 @@ void KSquaresGame::playerSquareComplete(int index)
 
 void KSquaresGame::tryEndGo()
 {
-	kDebug() << "- - Trying to end go";
+	//qDebug() << "- - Trying to end go";
 	if (anotherGo)
 	{
 		if(gameInProgress)
 		{
-			kDebug() << "- - - Having another go";
-			kDebug() << "-";
+			//qDebug() << "- - - Having another go";
+			//qDebug() << "-";
 			anotherGo = false;
 			emit takeTurnSig(currentPlayer());
 		}
 	}
 	else
 	{
-		kDebug() << "- - - Go ending";
+		//qDebug() << "- - - Go ending";
 		if (!currentPlayer()->isHuman())
 		{
 			emit highlightMove(lastLine);
@@ -118,7 +118,7 @@ void KSquaresGame::tryEndGo()
 
 void KSquaresGame::resetEverything()
 {
-	kDebug() << "Game Values Resetting";
+	//qDebug() << "Game Values Resetting";
 	numOfPlayers = 0;
 	players.resize(0);
 	lineList.clear();
@@ -135,7 +135,7 @@ void KSquaresGame::addLineToIndex(int index)
 {
 	if (lineList[index] == true)	//if there is already a line
 	{
-		kWarning() << "KSquaresGame::addLineToIndex():" 
+		qWarning() << "KSquaresGame::addLineToIndex():" 
 				   << "trying to add line already there!";
 		return;
 	}
@@ -162,7 +162,7 @@ void KSquaresGame::checkForNewSquares()
 			//cout << index1 << "," << index2 << "," << index3 << "," << index4 << " - " << lineList.size() << endl;
 			if (lineList.at(index1) && lineList.at(index2) && lineList.at(index3) && lineList.at(index4))
 			{
-				kDebug() << "- - Square" << i << "completed.";
+				//qDebug() << "- - Square" << i << "completed.";
 				playerSquareComplete(i);
 			}
 		}

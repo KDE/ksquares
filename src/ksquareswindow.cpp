@@ -17,7 +17,7 @@
 //kde
 #include <KConfigDialog>
 #include <KActionCollection>
-#include <KDebug>
+#include <QDebug>
 #include <KLocale>
 #include <KScoreDialog>
 #include <KHighscore>
@@ -162,7 +162,7 @@ void KSquaresWindow::gameReset()
 				color = QColor(243,195,0); //or darker: (227,173,0);
 				break;
 			default:
-				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3";
+				qCritical() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3";
 		}
 		playerList.append(KSquaresPlayer(Settings::playerNames().at(i), color, Settings::humanList().at(i)));
 	}
@@ -264,7 +264,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
-	//kDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
+	////qDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
 #if 0 //QT5
 	statusBar()->changeItem(
 		QString::fromLatin1("<font color=\"%1\">%2</font>")

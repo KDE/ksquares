@@ -17,7 +17,7 @@
 #include <KApplication>
 #include <KStatusBar>
 #include <KActionCollection>
-#include <kdebug.h>
+#include <QDebug>
 #include <KLocale>
 #include <kstandardgameaction.h>
 
@@ -65,7 +65,7 @@ void KSquaresDemoWindow::gameNew()
 				color = Qt::yellow;
 				break;
 			default:
-				kError() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3";
+				qCritical() << "KSquaresGame::playerSquareComplete(); currentPlayerId() != 0|1|2|3";
 		}
 		playerList.append(KSquaresPlayer(i18n("Player %1", i+1), color, false));
 	}
@@ -103,7 +103,7 @@ void KSquaresDemoWindow::aiChooseLine()
 
 void KSquaresDemoWindow::gameOver(const QVector<KSquaresPlayer> & /*playerList*/)
 {
-	kDebug() << "Game Over";
+	//qDebug() << "Game Over";
 	QTimer::singleShot(1000, this, SLOT(gameNew()));
 }
 

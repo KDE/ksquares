@@ -13,7 +13,7 @@
 #include <KLocale>
 #include <KUser>
 #include <KGlobal>
-#include <KDebug>
+#include <QDebug>
 
 #include "ksquareswindow.h"
 #include "ksquaresdemowindow.h"

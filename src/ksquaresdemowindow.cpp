@@ -28,8 +28,8 @@
 KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
 	sGame = new KSquaresGame();
-	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
-	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+	connect(sGame, &KSquaresGame::takeTurnSig, this, &KSquaresDemoWindow::playerTakeTurn);
+	connect(sGame, &KSquaresGame::gameOver, this, &KSquaresDemoWindow::gameOver);
 
 	m_view->setRenderHints(QPainter::Antialiasing);
 	m_view->setFrameStyle(QFrame::NoFrame);
@@ -81,10 +81,10 @@ void KSquaresDemoWindow::gameNew()
 
 	//start game etc.
 	sGame->createGame(playerList, 15, 10);
-	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
-	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
-	connect(sGame, SIGNAL(highlightMove(int)), m_scene, SLOT(highlightLine(int)));
-	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
+	connect(m_scene, &GameBoardScene::lineDrawn, sGame, &KSquaresGame::addLineToIndex);
+	connect(sGame, &KSquaresGame::drawLine, m_scene, &GameBoardScene::drawLine);
+	connect(sGame, &KSquaresGame::highlightMove, m_scene, &GameBoardScene::highlightLine);
+	connect(sGame, &KSquaresGame::drawSquare, m_scene, &GameBoardScene::drawSquare);
 
 	sGame->start();
 }

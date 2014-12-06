@@ -28,7 +28,7 @@ HighlightAnimation::HighlightAnimation(const QLineF &line)
 	animGroup->addPause(1000);
 	animGroup->addAnimation(animation);
 	animGroup->start(QAbstractAnimation::DeleteWhenStopped);
-	connect(animGroup, SIGNAL(finished()), this, SLOT(deleteLater()));
+	connect(animGroup, &QSequentialAnimationGroup::finished, this, &HighlightAnimation::deleteLater);
 }
 
 

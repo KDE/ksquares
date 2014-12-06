@@ -15,7 +15,7 @@ NewGameDialog::NewGameDialog(QWidget* parent) : KDialog(parent)
 	setupUi(mainWidget());
 	setButtons(Cancel|Ok);
 	setCaption(i18n("New Game"));
-	connect(spinNumOfPlayers, SIGNAL(valueChanged(int)), SLOT(adjustEnabledUsers(int)));
+	connect(spinNumOfPlayers, static_cast<void (KIntSpinBox::*)(int)>(&KIntSpinBox::valueChanged), this, &NewGameDialog::adjustEnabledUsers);
 	
 	adjustEnabledUsers(spinNumOfPlayers->value());
 }

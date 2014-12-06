@@ -31,4 +31,4 @@ HighlightAnimation::HighlightAnimation(const QLineF &line)
 	connect(animGroup, SIGNAL(finished()), this, SLOT(deleteLater()));
 }
 
-#include "highlightanimation.moc"
+

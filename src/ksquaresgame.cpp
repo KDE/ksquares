@@ -171,4 +171,4 @@ void KSquaresGame::checkForNewSquares()
 	tryEndGo();
 }
 
-#include "ksquaresgame.moc"
+

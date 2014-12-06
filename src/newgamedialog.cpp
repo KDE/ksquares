@@ -55,4 +55,4 @@ void NewGameDialog::adjustEnabledUsers(int numOfPlayers)
 	}	
 }
 
-#include "newgamedialog.moc"
+

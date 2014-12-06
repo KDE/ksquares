@@ -19,4 +19,4 @@ void GameBoardView::setBoardSize()
 		fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);
 }
 
-#include "gameboardview.moc"
+

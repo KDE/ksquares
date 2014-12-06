@@ -329,4 +329,4 @@ void KSquaresWindow::optionsPreferences()
 	dialog->show();
 }
 
-#include "ksquareswindow.moc"
+

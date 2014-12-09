@@ -7,13 +7,18 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-#include <KApplication>
-#include <K4AboutData>
-#include <KCmdLineArgs>
+
+#include <KAboutData>
+
 #include <KLocale>
 #include <KUser>
 #include <KGlobal>
 #include <QDebug>
+#include <QApplication>
+#include <KLocalizedString>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
+#include <kdelibs4configmigrator.h>
 
 #include "ksquareswindow.h"
 #include "ksquaresdemowindow.h"
@@ -26,21 +31,30 @@ static const char version[] = "0.5";
 
 int main(int argc, char **argv)
 {
-	K4AboutData about("ksquares", 0, ki18n("KSquares"), version, ki18n(description),
-		K4AboutData::License_GPL, ki18n("(C) 2006-2007 Matt Williams"), KLocalizedString(), 
-		"http://games.kde.org/ksquares");
-	about.addAuthor( ki18n("Matt Williams"), ki18n("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
-	about.addCredit(ki18n("Fela Winkelmolen"), ki18n("Many patches and bugfixes"));
-	about.addCredit(ki18n("Tom Vincent Peters"), ki18n("Hard AI"));
-	
-	KCmdLineArgs::init(argc, argv, &about);
+    Kdelibs4ConfigMigrator migrate(QLatin1String("ksquares"));
+    migrate.setConfigFiles(QStringList() << QLatin1String("ksquaresrc"));
+    migrate.setUiFiles(QStringList() << QLatin1String("ksquaresui.rc"));
+    migrate.migrate();
 
-	KCmdLineOptions options;
-	options.add("demo", ki18n("Run game in demo (autoplay) mode"));
-	KCmdLineArgs::addCmdLineOptions( options );
-	KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+	KAboutData about("ksquares", i18n("KSquares"), version, i18n(description),
+		KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"), 
+		"http://games.kde.org/ksquares");
+	about.addAuthor( i18n("Matt Williams"), i18n("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
+	about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
+	about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
 	
-	KApplication app;
+    QApplication app(argc, argv);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(about);
+    parser.addVersionOption();
+    parser.addHelpOption();
+        parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("demo"), i18n("Run game in demo (autoplay) mode")));
+
+    //PORTING SCRIPT: adapt aboutdata variable if necessary
+    about.setupCommandLine(&parser);
+    parser.process(app);
+    about.processCommandLine(&parser);
+	
 	
 	// default names for players
 	KConfigGroup cg(KSharedConfig::openConfig(), "General");
@@ -54,7 +68,7 @@ int main(int argc, char **argv)
 		cg.writeEntry("initializeNames", false);
 	}
 	
-	if (args->isSet("demo"))
+	if (parser.isSet("demo"))
 	{
 		KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
 		demoWindow->show();
@@ -65,7 +79,7 @@ int main(int argc, char **argv)
 		KSquaresWindow *mainWindow = new KSquaresWindow;
 		mainWindow->show();
 	}
-	args->clear();
+	
 	
 	return app.exec();
 }

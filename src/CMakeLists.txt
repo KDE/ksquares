@@ -28,7 +28,7 @@ install(TARGETS ksquares ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install( PROGRAMS ksquares.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS org.kde.ksquares.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES ksquares.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES ksquaresui.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/ksquares )
 ecm_install_icons(ICONS hi128-apps-ksquares.png  hi16-apps-ksquares.png  hi22-apps-ksquares.png  hi32-apps-ksquares.png  hi48-apps-ksquares.png  hi64-apps-ksquares.png DESTINATION ${ICON_INSTALL_DIR})

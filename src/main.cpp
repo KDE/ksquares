@@ -10,10 +10,7 @@
 
 #include <KAboutData>
 
-#include <KLocale>
 #include <KUser>
-#include <KGlobal>
-#include <QDebug>
 #include <QApplication>
 #include <KLocalizedString>
 #include <QCommandLineParser>

@@ -18,11 +18,11 @@
 #include <KConfigDialog>
 #include <KActionCollection>
 #include <QDebug>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KScoreDialog>
 #include <KHighscore>
 #include <KStandardGameAction>
-#include <KStatusBar>
+#include <QStatusBar>
 #include <QAction>
 
 //generated

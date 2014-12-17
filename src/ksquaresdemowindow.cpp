@@ -14,11 +14,11 @@
 #include <QTimer>
 
 //kde
-#include <KApplication>
-#include <KStatusBar>
+#include <QApplication>
+#include <QStatusBar>
 #include <KActionCollection>
 #include <QDebug>
-#include <KLocale>
+#include <KLocalizedString>
 #include <kstandardgameaction.h>
 
 //classes
@@ -36,7 +36,7 @@ KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoard
 	m_view->setDisabled(true);
 	setCentralWidget(m_view);
 
-	KStandardGameAction::quit(kapp, SLOT(quit()), actionCollection());
+	KStandardGameAction::quit(qApp, SLOT(quit()), actionCollection());
 	setupGUI();
 
 	//QT5 statusBar()->insertPermanentItem(i18n("Current Player"), 0);

@@ -11,7 +11,6 @@
 #define HIGHLIGHTANIMATION_H
 
 #include <QGraphicsLineItem>
-#include <QTimeLine>
 
 /**
  * @short Highlight animation when new lines appear.

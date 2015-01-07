@@ -12,9 +12,9 @@
 
 #include "ui_newgamewidget.h"
 
-#include <kdialog.h>
+#include <QDialog>
 
-class NewGameDialog : public KDialog, public Ui::NewGameWidget
+class NewGameDialog : public QDialog, public Ui::NewGameWidget
 {
 	Q_OBJECT
 	public:

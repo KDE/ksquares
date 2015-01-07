@@ -9,12 +9,27 @@
 
 #include "newgamedialog.h"
 #include <QDebug>
+#include <KConfigGroup>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
-NewGameDialog::NewGameDialog(QWidget* parent) : KDialog(parent)
+NewGameDialog::NewGameDialog(QWidget* parent) : QDialog(parent)
 {
-	setupUi(mainWidget());
-	setButtons(Cancel|Ok);
-	setCaption(i18n("New Game"));
+	QWidget *mainWidget = new QWidget(this);
+	QVBoxLayout *mainLayout = new QVBoxLayout;
+	setLayout(mainLayout);
+	mainLayout->addWidget(mainWidget);
+	setupUi(mainWidget);
+	QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+	QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+	okButton->setDefault(true);
+	okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+	connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+	connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+	//PORTING SCRIPT: WARNING mainLayout->addWidget(buttonBox) must be last item in layout. Please move it.
+	mainLayout->addWidget(buttonBox);
+	setWindowTitle(i18n("New Game"));
 	connect(spinNumOfPlayers, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &NewGameDialog::adjustEnabledUsers);
 	
 	adjustEnabledUsers(spinNumOfPlayers->value());

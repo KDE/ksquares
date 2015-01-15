@@ -16,6 +16,7 @@
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 #include <kdelibs4configmigrator.h>
+#include <KDBusService>
 
 #include "ksquareswindow.h"
 #include "ksquaresdemowindow.h"
@@ -28,6 +29,8 @@ static const char version[] = "0.5";
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
+
     Kdelibs4ConfigMigrator migrate(QLatin1String("ksquares"));
     migrate.setConfigFiles(QStringList() << QLatin1String("ksquaresrc"));
     migrate.setUiFiles(QStringList() << QLatin1String("ksquaresui.rc"));
@@ -40,7 +43,6 @@ int main(int argc, char **argv)
 	about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
 	about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
 	
-    QApplication app(argc, argv);
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
@@ -51,7 +53,7 @@ int main(int argc, char **argv)
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
-	
+    KDBusService service;
 	
 	// default names for players
 	KConfigGroup cg(KSharedConfig::openConfig(), "General");

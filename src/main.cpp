@@ -25,7 +25,7 @@
 static const char description[] =
 	I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
-static const char version[] = "0.5";
+static const char version[] = "0.6";
 
 int main(int argc, char **argv)
 {
@@ -49,7 +49,6 @@ int main(int argc, char **argv)
     parser.addHelpOption();
         parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("demo"), i18n("Run game in demo (autoplay) mode")));
 
-    //PORTING SCRIPT: adapt aboutdata variable if necessary
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);

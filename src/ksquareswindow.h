@@ -16,10 +16,9 @@
 #include "ui_prefs_ai.h"
 #include "ui_prefs_display.h"
 
-class KToggleAction;
 class GameBoardView;
 class GameBoardScene;
-
+class QLabel;
 /**
  * @short Mainwindow class
  *
@@ -53,11 +52,6 @@ class KSquaresWindow : public KXmlGuiWindow
 		void gameOver(const QVector<KSquaresPlayer> &_playerList);	//when KSquaresGame says the game is over. Display score board
 
 	private:
-		enum StatusBarItem
-		{
-			statusplayer,
-			statusnetwork
-		};
 
 		//void setupAccel();
 		void setupActions();
@@ -71,9 +65,7 @@ class KSquaresWindow : public KXmlGuiWindow
 		KSquaresGame* sGame;
 		// Remember last network move
 		int m_lastx1, m_lasty1, m_lastx2, m_lasty2;
-
-		//KToggleAction *m_toolbarAction;
-		//KToggleAction *m_statusbarAction;
+                QLabel *m_player;
 };
 
 #endif // KSQUARESWINDOW_H

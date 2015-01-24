@@ -24,6 +24,7 @@
 #include <KStandardGameAction>
 #include <QStatusBar>
 #include <QAction>
+#include <QLabel>
 
 //generated
 #include "settings.h"
@@ -57,7 +58,8 @@ void KSquaresWindow::initObject()
 	m_view->setRenderHints(QPainter::Antialiasing);
 	m_view->setFrameStyle(QFrame::NoFrame);
 	setupActions();
-	//QT5 statusBar()->insertPermanentItem(i18n("Current Player"), statusplayer);
+        m_player = new QLabel(i18n("Current Player"));
+        statusBar()->addPermanentWidget(m_player);
 	statusBar()->show();
 	setAutoSaveSettings();
 
@@ -265,14 +267,9 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer* currentPlayer)
 {
 	////qDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
-#if 0 //QT5
-	statusBar()->changeItem(
-		QString::fromLatin1("<font color=\"%1\">%2</font>")
-			.arg(currentPlayer->colour().name())
-			.arg(currentPlayer->name()),
-		statusplayer
-	);
-#endif
+        m_player->setText(QString::fromLatin1("<font color=\"%1\">%2</font>")
+                        .arg(currentPlayer->colour().name())
+                        .arg(currentPlayer->name()));
 	if(currentPlayer->isHuman())
 	{
 		//Let the human player interact with the board through the GameBoardView

@@ -18,7 +18,7 @@ ki18n_wrap_ui(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_d
 
 kconfig_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
 
-kde4_add_app_icon(ksquares_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-ksquares.png")
+#kde4_add_app_icon(ksquares_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-ksquares.png")
 add_executable(ksquares ${ksquares_SRCS})
 
 target_link_libraries(ksquares  KF5KDEGames KF5::KDELibs4Support KF5::DBusAddons)

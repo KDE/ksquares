@@ -53,8 +53,8 @@ KSquaresWindow::~KSquaresWindow()
 void KSquaresWindow::initObject()
 {
 	sGame = new KSquaresGame();
-	connect(sGame, SIGNAL(takeTurnSig(KSquaresPlayer*)), this, SLOT(playerTakeTurn(KSquaresPlayer*)));
-	connect(sGame, SIGNAL(gameOver(QVector<KSquaresPlayer>)), this, SLOT(gameOver(QVector<KSquaresPlayer>)));
+	connect(sGame, &KSquaresGame::takeTurnSig, this, &KSquaresWindow::playerTakeTurn);
+	connect(sGame, &KSquaresGame::gameOver, this, &KSquaresWindow::gameOver);
 	m_view->setRenderHints(QPainter::Antialiasing);
 	m_view->setFrameStyle(QFrame::NoFrame);
 	setupActions();
@@ -180,11 +180,11 @@ void KSquaresWindow::gameReset()
 
 	//start game etc.
 	sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
-	connect(m_scene, SIGNAL(lineDrawn(int)), sGame, SLOT(addLineToIndex(int)));
-	connect(m_scene, SIGNAL(signalMoveRequest(int,int,int,int)), SLOT(slotMoveRequest(int,int,int,int)));
-	connect(sGame, SIGNAL(drawLine(int,QColor)), m_scene, SLOT(drawLine(int,QColor)));
-	connect(sGame, SIGNAL(highlightMove(int)), m_scene, SLOT(highlightLine(int)));
-	connect(sGame, SIGNAL(drawSquare(int,QColor)), m_scene, SLOT(drawSquare(int,QColor)));
+	connect(m_scene, &GameBoardScene::lineDrawn, sGame, &KSquaresGame::addLineToIndex);
+	//QT5: VERIFY SIGNAL DOESNT EXIST connect(m_scene, &GameBoardScene::signalMoveRequest, this, &KSquaresWindow::slotMoveRequest);
+	connect(sGame, &KSquaresGame::drawLine, m_scene, &GameBoardScene::drawLine);
+	connect(sGame, &KSquaresGame::highlightMove, m_scene, &GameBoardScene::highlightLine);
+	connect(sGame, &KSquaresGame::drawSquare, m_scene, &GameBoardScene::drawSquare);
 
 	if (Settings::quickStart() == 2)
 	{
@@ -322,7 +322,7 @@ void KSquaresWindow::optionsPreferences()
 	ui_prefs_ai.setupUi(aiSettingsDialog);
 	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "games-difficult");
 
-	connect(dialog, SIGNAL(settingsChanged(QString)), m_view, SLOT(setBoardSize()));
+	connect(dialog, &KConfigDialog::settingsChanged, m_view, &GameBoardView::setBoardSize);
 	dialog->show();
 }
 

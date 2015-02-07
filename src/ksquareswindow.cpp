@@ -312,15 +312,15 @@ void KSquaresWindow::setupActions()
 
 void KSquaresWindow::optionsPreferences()
 {
-	KConfigDialog *dialog = new KConfigDialog(this, "settings", Settings::self());
+    KConfigDialog *dialog = new KConfigDialog(this, QLatin1Literal("settings"), Settings::self());
 
 	QWidget *displaySettingsDialog = new QWidget;
 	ui_prefs_display.setupUi(displaySettingsDialog);
-	dialog->addPage(displaySettingsDialog, i18n("Display"), "preferences-desktop-display");
+    dialog->addPage(displaySettingsDialog, i18n("Display"), QLatin1Literal("preferences-desktop-display"));
 
 	QWidget *aiSettingsDialog = new QWidget;
 	ui_prefs_ai.setupUi(aiSettingsDialog);
-	dialog->addPage(aiSettingsDialog, i18n("Computer Player"), "games-difficult");
+    dialog->addPage(aiSettingsDialog, i18n("Computer Player"), QLatin1Literal("games-difficult"));
 
 	connect(dialog, &KConfigDialog::settingsChanged, m_view, &GameBoardView::setBoardSize);
 	dialog->show();

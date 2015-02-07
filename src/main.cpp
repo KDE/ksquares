@@ -36,10 +36,10 @@ int main(int argc, char **argv)
     migrate.setUiFiles(QStringList() << QLatin1String("ksquaresui.rc"));
     migrate.migrate();
 
-	KAboutData about("ksquares", i18n("KSquares"), version, i18n(description),
+    KAboutData about(QLatin1Literal("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
 		KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"), 
-		"http://games.kde.org/ksquares");
-	about.addAuthor( i18n("Matt Williams"), i18n("Original creator and maintainer"), "matt@milliams.com", "http://milliams.com" );
+        QLatin1Literal("http://games.kde.org/ksquares"));
+    about.addAuthor( i18n("Matt Williams"), i18n("Original creator and maintainer"), QLatin1Literal("matt@milliams.com"), QLatin1Literal("http://milliams.com") );
 	about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
 	about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
 	
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 		cg.writeEntry("initializeNames", false);
 	}
 	
-	if (parser.isSet("demo"))
+    if (parser.isSet(QLatin1Literal("demo")))
 	{
 		KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
 		demoWindow->show();

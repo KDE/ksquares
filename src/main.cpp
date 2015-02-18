@@ -7,7 +7,6 @@
  *   (at your option) any later version.                                   *
  ***************************************************************************/
 
-
 #include <KAboutData>
 
 #include <KUser>
@@ -23,7 +22,7 @@
 #include "settings.h"
 
 static const char description[] =
-	I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
+    I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
 static const char version[] = "0.6";
 
@@ -37,47 +36,43 @@ int main(int argc, char **argv)
     migrate.migrate();
 
     KAboutData about(QLatin1Literal("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
-		KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"), 
-        QLatin1Literal("http://games.kde.org/ksquares"));
-    about.addAuthor( i18n("Matt Williams"), i18n("Original creator and maintainer"), QLatin1Literal("matt@milliams.com"), QLatin1Literal("http://milliams.com") );
-	about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
-	about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
-	
+                     KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"),
+                     QLatin1Literal("http://games.kde.org/ksquares"));
+    about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QLatin1Literal("matt@milliams.com"), QLatin1Literal("http://milliams.com"));
+    about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
+    about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
+
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
     parser.addHelpOption();
-        parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("demo"), i18n("Run game in demo (autoplay) mode")));
+    parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("demo"), i18n("Run game in demo (autoplay) mode")));
 
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
     KDBusService service;
-	
-	// default names for players
-	KConfigGroup cg(KSharedConfig::openConfig(), "General");
-	if (cg.readEntry<bool>("initializeNames", true)) {
-		QStringList playerNames;
-		playerNames << KUser().property(KUser::FullName).toString();
-		playerNames << i18nc("default name of player", "Player %1", 2);
-		playerNames << i18nc("default name of player", "Player %1", 3);
-		playerNames << i18nc("default name of player", "Player %1", 4);
-		Settings::setPlayerNames(playerNames);
-		cg.writeEntry("initializeNames", false);
-	}
-	
-    if (parser.isSet(QLatin1Literal("demo")))
-	{
-		KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
-		demoWindow->show();
-		demoWindow->gameNew();
-	}
-	else
-	{
-		KSquaresWindow *mainWindow = new KSquaresWindow;
-		mainWindow->show();
-	}
-	
-	
-	return app.exec();
+
+    // default names for players
+    KConfigGroup cg(KSharedConfig::openConfig(), "General");
+    if (cg.readEntry<bool>("initializeNames", true)) {
+        QStringList playerNames;
+        playerNames << KUser().property(KUser::FullName).toString();
+        playerNames << i18nc("default name of player", "Player %1", 2);
+        playerNames << i18nc("default name of player", "Player %1", 3);
+        playerNames << i18nc("default name of player", "Player %1", 4);
+        Settings::setPlayerNames(playerNames);
+        cg.writeEntry("initializeNames", false);
+    }
+
+    if (parser.isSet(QLatin1Literal("demo"))) {
+        KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
+        demoWindow->show();
+        demoWindow->gameNew();
+    } else {
+        KSquaresWindow *mainWindow = new KSquaresWindow;
+        mainWindow->show();
+    }
+
+    return app.exec();
 }

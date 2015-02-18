@@ -10,22 +10,21 @@
 #ifndef THEMEGRAPHICSITEMS_H
 #define THEMEGRAPHICSITEMS_H
 
-
 #include <QGraphicsRectItem>
 
 /**
  * @short Themable QGraphicsItem for completed squares
- * 
+ *
  * @author Matt Williams <matt@milliams.com>
  */
 
 class KSquaresSquareItem : public QGraphicsRectItem
 {
-	public:
-		KSquaresSquareItem(QGraphicsItem* parent=0);
-		~KSquaresSquareItem();
-		
-		void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget=0);
+public:
+    KSquaresSquareItem(QGraphicsItem *parent = 0);
+    ~KSquaresSquareItem();
+
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
 };
 
 #endif // THEMEGRAPHICSITEMS_H

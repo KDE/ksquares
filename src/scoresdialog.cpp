@@ -11,26 +11,25 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 
-
-ScoresDialog::ScoresDialog(QWidget* parent)
- : QDialog(parent)
+ScoresDialog::ScoresDialog(QWidget *parent)
+    : QDialog(parent)
 {
-      QVBoxLayout *topLayout = new QVBoxLayout;
-      setLayout(topLayout);
+    QVBoxLayout *topLayout = new QVBoxLayout;
+    setLayout(topLayout);
 
-      QWidget *w = new QWidget;
-      topLayout->addWidget(w);
+    QWidget *w = new QWidget;
+    topLayout->addWidget(w);
 
-      QVBoxLayout *mainLayout = new QVBoxLayout;
-      w->setLayout(mainLayout);
-      QWidget *mainWidget = new QWidget;
-      setupUi(mainWidget);
-      mainLayout->addWidget(mainWidget); 
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    w->setLayout(mainLayout);
+    QWidget *mainWidget = new QWidget;
+    setupUi(mainWidget);
+    mainLayout->addWidget(mainWidget);
 
-      QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
-      connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-      connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
-      mainLayout->addWidget(buttonBox);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
+    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    mainLayout->addWidget(buttonBox);
 
 }
 

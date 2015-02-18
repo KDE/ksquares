@@ -27,27 +27,27 @@ class GameBoardScene;
 
 class KSquaresDemoWindow : public KXmlGuiWindow
 {
-	Q_OBJECT
+    Q_OBJECT
 
-	public:
-		///Constructor
-		KSquaresDemoWindow();
+public:
+    ///Constructor
+    KSquaresDemoWindow();
 
-	public slots:
-		void gameNew();
+public slots:
+    void gameNew();
 
-	private slots:
-		void aiChooseLine();
-		void playerTakeTurn(KSquaresPlayer* currentPlayer);
-		void gameOver(const QVector<KSquaresPlayer> & /*playerList*/);
+private slots:
+    void aiChooseLine();
+    void playerTakeTurn(KSquaresPlayer *currentPlayer);
+    void gameOver(const QVector<KSquaresPlayer> & /*playerList*/);
 
-	private:
-		///The game board view
-		GameBoardView *m_view;
-		///The game scene
-		GameBoardScene *m_scene;
-		///The game controller
-		KSquaresGame* sGame;
+private:
+    ///The game board view
+    GameBoardView *m_view;
+    ///The game scene
+    GameBoardScene *m_scene;
+    ///The game controller
+    KSquaresGame *sGame;
 };
 
 #endif // KSQUARESDEMOWINDOW_H

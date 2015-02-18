@@ -11,14 +11,14 @@
 
 #include "settings.h"
 
-KSquaresSquareItem::KSquaresSquareItem(QGraphicsItem* parent) : QGraphicsRectItem(parent)
+KSquaresSquareItem::KSquaresSquareItem(QGraphicsItem *parent) : QGraphicsRectItem(parent)
 {
 }
 
-KSquaresSquareItem::~KSquaresSquareItem(){}
+KSquaresSquareItem::~KSquaresSquareItem() {}
 
-void KSquaresSquareItem::paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget)
+void KSquaresSquareItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-	QGraphicsRectItem::paint(painter, option, widget);
+    QGraphicsRectItem::paint(painter, option, widget);
 }
 

@@ -10,6 +10,7 @@ set(ksquares_SRCS
 	ksquaresdemowindow.cpp
 	themegraphicsitems.cpp
 	highlightanimation.cpp
+        scoresdialog.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/libKF5KDEGames/highscore)
@@ -21,7 +22,7 @@ kconfig_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC 
 #kde4_add_app_icon(ksquares_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-ksquares.png")
 add_executable(ksquares ${ksquares_SRCS})
 
-target_link_libraries(ksquares  KF5KDEGames KF5::KDELibs4Support KF5::DBusAddons)
+target_link_libraries(ksquares  KF5KDEGames KF5::I18n KF5::XmlGui KF5::Completion KF5::DBusAddons)
 
 install(TARGETS ksquares ${INSTALL_TARGETS_DEFAULT_ARGS})
 

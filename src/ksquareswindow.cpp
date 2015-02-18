@@ -207,9 +207,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 	//m_scene->displayScoreTable(playerList);
 
 	ScoresDialog scoresDialog(this);
-	scoresDialog.setButtons(KDialog::Close);
-	scoresDialog.setDefaultButton(KDialog::Close);
-	scoresDialog.setCaption(i18n("Scores"));
+	scoresDialog.setWindowTitle(i18n("Scores"));
 
 	QStandardItemModel* scoreTableModel = new QStandardItemModel(&scoresDialog);
 	scoreTableModel->setRowCount(playerList.size());

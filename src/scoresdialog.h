@@ -12,12 +12,12 @@
 
 #include "ui_scoreswidget.h"
 
-#include <kdialog.h>
+#include <QDialog>
 
-class ScoresDialog : public KDialog, public Ui::ScoresWidget
+class ScoresDialog : public QDialog, public Ui::ScoresWidget
 {
 	public:
-		explicit ScoresDialog(QWidget* parent = 0) : KDialog(parent) {setupUi(mainWidget());}
+		explicit ScoresDialog(QWidget* parent = 0);
 };
 
 #endif // SCORESDIALOG_H

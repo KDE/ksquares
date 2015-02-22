@@ -53,6 +53,8 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
     KDBusService service;
 
+    app.setWindowIcon(QIcon::fromTheme(QLatin1String("ksquares")));
+
     // default names for players
     KConfigGroup cg(KSharedConfig::openConfig(), "General");
     if (cg.readEntry<bool>("initializeNames", true)) {

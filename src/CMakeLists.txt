@@ -19,7 +19,7 @@ ki18n_wrap_ui(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_d
 
 kconfig_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
 
-file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-ksquares.png")
+file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ksquares.png")
 ecm_add_app_icon(ksquares_SRCS ICONS ${ICONS_SRCS})
 add_executable(ksquares ${ksquares_SRCS})
 
@@ -33,4 +33,4 @@ install(TARGETS ksquares ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install( PROGRAMS org.kde.ksquares.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 install( FILES ksquares.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR} )
 install( FILES ksquaresui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/ksquares )
-ecm_install_icons(ICONS hi128-apps-ksquares.png  hi16-apps-ksquares.png  hi22-apps-ksquares.png  hi32-apps-ksquares.png  hi48-apps-ksquares.png  hi64-apps-ksquares.png DESTINATION ${KDE_INSTALL_ICONDIR})
+ecm_install_icons(ICONS 128-apps-ksquares.png  16-apps-ksquares.png  22-apps-ksquares.png  32-apps-ksquares.png  48-apps-ksquares.png  64-apps-ksquares.png DESTINATION ${KDE_INSTALL_ICONDIR} THEME hicolor )

@@ -28,12 +28,12 @@ static const char version[] = "0.6";
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
-
     Kdelibs4ConfigMigrator migrate(QLatin1String("ksquares"));
     migrate.setConfigFiles(QStringList() << QLatin1String("ksquaresrc"));
     migrate.setUiFiles(QStringList() << QLatin1String("ksquaresui.rc"));
     migrate.migrate();
+
+    QApplication app(argc, argv);
 
     KAboutData about(QLatin1Literal("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"),

@@ -34,7 +34,7 @@ int main(int argc, char **argv)
     migrate.setConfigFiles(QStringList() << QLatin1String("ksquaresrc"));
     migrate.setUiFiles(QStringList() << QLatin1String("ksquaresui.rc"));
     migrate.migrate();
-
+    KLocalizedString::setApplicationDomain("ksquares");
     KAboutData about(QLatin1Literal("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"),
                      QLatin1Literal("http://games.kde.org/ksquares"));

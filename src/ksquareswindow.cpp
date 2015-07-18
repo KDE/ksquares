@@ -66,7 +66,6 @@ void KSquaresWindow::initObject()
     gameNew();
 }
 
-//void KSquaresWindow::configureHighscores() {KExtHighscore::configure(this);}
 void KSquaresWindow::showHighscores()
 {
     KScoreDialog ksdialog(KScoreDialog::Name, this);

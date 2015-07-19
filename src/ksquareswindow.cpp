@@ -20,7 +20,6 @@
 #include <QDebug>
 #include <KLocalizedString>
 #include <KScoreDialog>
-#include <KHighscore>
 #include <KStandardGameAction>
 #include <QStatusBar>
 #include <QAction>

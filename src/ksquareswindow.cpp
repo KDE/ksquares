@@ -39,7 +39,7 @@
 KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
 {
     setCentralWidget(m_view);
-    QTimer::singleShot(0, this, SLOT(initObject()));
+    QTimer::singleShot(0, this, &KSquaresWindow::initObject);
 }
 
 KSquaresWindow::~KSquaresWindow()
@@ -257,7 +257,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
 void KSquaresWindow::playerTakeTurn(KSquaresPlayer *currentPlayer)
 {
     ////qDebug() << "void KSquares::playerTakeTurn(KSquaresPlayer* currentPlayer)";
-    m_player->setText(QString::fromLatin1("<font color=\"%1\">%2</font>")
+    m_player->setText(QStringLiteral("<font color=\"%1\">%2</font>")
                       .arg(currentPlayer->colour().name())
                       .arg(currentPlayer->name()));
     if (currentPlayer->isHuman()) {
@@ -270,7 +270,7 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer *currentPlayer)
         setCursor(Qt::WaitCursor);
         m_scene->disableEvents();
 
-        QTimer::singleShot(200, this, SLOT(aiChooseLine()));
+        QTimer::singleShot(200, this, &KSquaresWindow::aiChooseLine);
         setCursor(Qt::ArrowCursor);
     }
 }
@@ -299,15 +299,15 @@ void KSquaresWindow::setupActions()
 
 void KSquaresWindow::optionsPreferences()
 {
-    KConfigDialog *dialog = new KConfigDialog(this, QLatin1Literal("settings"), Settings::self());
+    KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("settings"), Settings::self());
 
     QWidget *displaySettingsDialog = new QWidget;
     ui_prefs_display.setupUi(displaySettingsDialog);
-    dialog->addPage(displaySettingsDialog, i18n("Display"), QLatin1Literal("preferences-desktop-display"));
+    dialog->addPage(displaySettingsDialog, i18n("Display"), QStringLiteral("preferences-desktop-display"));
 
     QWidget *aiSettingsDialog = new QWidget;
     ui_prefs_ai.setupUi(aiSettingsDialog);
-    dialog->addPage(aiSettingsDialog, i18n("Computer Player"), QLatin1Literal("games-difficult"));
+    dialog->addPage(aiSettingsDialog, i18n("Computer Player"), QStringLiteral("games-difficult"));
 
     connect(dialog, &KConfigDialog::settingsChanged, m_view, &GameBoardView::setBoardSize);
     dialog->show();

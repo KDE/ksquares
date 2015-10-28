@@ -90,7 +90,7 @@ void KSquaresDemoWindow::gameNew()
 void KSquaresDemoWindow::playerTakeTurn(KSquaresPlayer *currentPlayer)
 {
     //QT5 statusBar()->changeItem(currentPlayer->name(), 0);
-    QTimer::singleShot(200, this, SLOT(aiChooseLine()));
+    QTimer::singleShot(200, this, &KSquaresDemoWindow::aiChooseLine);
 }
 
 void KSquaresDemoWindow::aiChooseLine()
@@ -102,6 +102,6 @@ void KSquaresDemoWindow::aiChooseLine()
 void KSquaresDemoWindow::gameOver(const QVector<KSquaresPlayer> & /*playerList*/)
 {
     //qDebug() << "Game Over";
-    QTimer::singleShot(1000, this, SLOT(gameNew()));
+    QTimer::singleShot(1000, this, &KSquaresDemoWindow::gameNew);
 }
 

@@ -30,15 +30,15 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    Kdelibs4ConfigMigrator migrate(QLatin1String("ksquares"));
-    migrate.setConfigFiles(QStringList() << QLatin1String("ksquaresrc"));
-    migrate.setUiFiles(QStringList() << QLatin1String("ksquaresui.rc"));
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("ksquares"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("ksquaresrc"));
+    migrate.setUiFiles(QStringList() << QStringLiteral("ksquaresui.rc"));
     migrate.migrate();
     KLocalizedString::setApplicationDomain("ksquares");
-    KAboutData about(QLatin1Literal("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
+    KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"),
-                     QLatin1Literal("http://games.kde.org/ksquares"));
-    about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QLatin1Literal("matt@milliams.com"), QLatin1Literal("http://milliams.com"));
+                     QStringLiteral("http://games.kde.org/ksquares"));
+    about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QStringLiteral("matt@milliams.com"), QStringLiteral("http://milliams.com"));
     about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
     about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
 
@@ -46,14 +46,14 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addOption(QCommandLineOption(QStringList() <<  QLatin1String("demo"), i18n("Run game in demo (autoplay) mode")));
+    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("demo"), i18n("Run game in demo (autoplay) mode")));
 
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
     KDBusService service;
 
-    app.setWindowIcon(QIcon::fromTheme(QLatin1String("ksquares")));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("ksquares")));
 
     // default names for players
     KConfigGroup cg(KSharedConfig::openConfig(), "General");
@@ -67,7 +67,7 @@ int main(int argc, char **argv)
         cg.writeEntry("initializeNames", false);
     }
 
-    if (parser.isSet(QLatin1Literal("demo"))) {
+    if (parser.isSet(QStringLiteral("demo"))) {
         KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
         demoWindow->show();
         demoWindow->gameNew();

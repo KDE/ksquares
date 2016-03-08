@@ -24,7 +24,7 @@ class HighlightAnimation : public QObject, public QGraphicsLineItem
     Q_OBJECT
     Q_PROPERTY(qreal opacity READ opacity WRITE setOpacity)
 public:
-    HighlightAnimation(const QLineF &line);
+    explicit HighlightAnimation(const QLineF &line);
 };
 
 #endif // HIGHLIGHTANIMATION_H

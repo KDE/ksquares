@@ -21,7 +21,7 @@
 class KSquaresSquareItem : public QGraphicsRectItem
 {
 public:
-    KSquaresSquareItem(QGraphicsItem *parent = 0);
+    explicit KSquaresSquareItem(QGraphicsItem *parent = 0);
     ~KSquaresSquareItem();
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);

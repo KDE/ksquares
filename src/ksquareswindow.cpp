@@ -177,7 +177,7 @@ void KSquaresWindow::gameReset()
     //start game etc.
     sGame->createGame(playerList, Settings::boardWidth(), Settings::boardHeight());
     connect(m_scene, &GameBoardScene::lineDrawn, sGame, &KSquaresGame::addLineToIndex);
-    //QT5: VERIFY SIGNAL DOESNT EXIST connect(m_scene,&GameBoardScene::signalMoveRequest,this,&KSquaresWindow::slotMoveRequest);
+    //QT5: VERIFY SIGNAL DOESN'T EXIST connect(m_scene,&GameBoardScene::signalMoveRequest,this,&KSquaresWindow::slotMoveRequest);
     connect(sGame, &KSquaresGame::drawLine, m_scene, &GameBoardScene::drawLine);
     connect(sGame, &KSquaresGame::highlightMove, m_scene, &GameBoardScene::highlightLine);
     connect(sGame, &KSquaresGame::drawSquare, m_scene, &GameBoardScene::drawSquare);

@@ -11,19 +11,19 @@
 #include "ksquareswindow.h"
 
 //qt
-#include <QtGui/QStandardItemModel>
-#include <QtCore/QTimer>
+#include <QAction>
+#include <QDebug>
+#include <QLabel>
+#include <QStandardItemModel>
+#include <QStatusBar>
+#include <QTimer>
 
 //kde
 #include <KConfigDialog>
 #include <KActionCollection>
-#include <QDebug>
 #include <KLocalizedString>
 #include <KScoreDialog>
 #include <KStandardGameAction>
-#include <QStatusBar>
-#include <QAction>
-#include <QLabel>
 
 //generated
 #include "settings.h"

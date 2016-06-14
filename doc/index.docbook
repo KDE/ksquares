@@ -64,7 +64,7 @@
 <chapter id="introduction"><title>Introduction</title> <!-- do not change this! -->
 	<note><title>Gametype:</title><para>Board</para></note><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
 	<note><title>Number of possible players:</title><para>Four</para></note>
-	<para>&ksquares; is a fun and exciting game for &kde; desktop environment. &ksquares; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
+	<para>&ksquares; is a fun and exciting game by &kde;. &ksquares; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
 <para>The idea behind &ksquares; is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
 <para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>

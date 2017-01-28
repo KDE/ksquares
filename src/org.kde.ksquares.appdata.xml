@@ -4,9 +4,30 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KSquares</name>
+  <name xml:lang="ca">KSquares</name>
+  <name xml:lang="es">KSquares</name>
+  <name xml:lang="nl">KSquares</name>
+  <name xml:lang="pt">KSquares</name>
+  <name xml:lang="sv">Fyrkanter</name>
+  <name xml:lang="uk">KSquares</name>
+  <name xml:lang="x-test">xxKSquaresxx</name>
   <summary>Connect the dots to create squares</summary>
+  <summary xml:lang="ca">Connecteu els punts per crear quadrats</summary>
+  <summary xml:lang="es">Conecte los puntos para crear cuadrados</summary>
+  <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
+  <summary xml:lang="pt">Ligar os pontos para criar quadrados</summary>
+  <summary xml:lang="sv">Sammanbind punkter för att skapa fyrkanter</summary>
+  <summary xml:lang="uk">З’єднайте крапки, щоб створити квадрати</summary>
+  <summary xml:lang="x-test">xxConnect the dots to create squaresxx</summary>
   <description>
     <p>KSquares is a game modeled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.</p>
+    <p xml:lang="ca">El KSquares és un joc modelat després del conegut Quadrats jugat amb llapis i paper. Per torns, cada jugador dibuixa una línia entre dos punts adjacents del tauler. L'objectiu és completar més quadrats que els adversaris.</p>
+    <p xml:lang="es">KSquares es un juego basado en el conocido juego de papel y lápiz de puntos y cuadrados. Cada jugador dispone de su turno para dibujar una línea entre dos puntos adyacentes del tablero. El objetivo es completar más cuadrados que el oponente.</p>
+    <p xml:lang="nl">KSquares is een spel gemodelleerd naar het welbekende op pen en papier gebaseerde spel met punten en vakjes. Elke speler tekent om de beurt een lijn tussen twee naast elkaar gelegen punten in het werkveld. Het doel is om meer vierkantjes te voltooien dan uw tegenstanders.</p>
+    <p xml:lang="pt">O KSquares é um jogo modelado com base no conhecido jogo de Pontos e Caixas, com papel e caneta. Cada jogador. Joga por turnos para desenhar uma linha entre dois pontos adjacentes no tabuleiro. O objectivo é completar mais quadrados que os seus adversários.</p>
+    <p xml:lang="sv">Fyrkanter är ett spel modellerat efter det välkända penn- och pappersbaserade spelet "Ringar och rutor". Varje spelare ritar i tur och ordning en linje mellan två intilliggande punkter på spelbrädet. Målet är att göra färdigt fler fyrkanter än motspelarna.</p>
+    <p xml:lang="uk">KSquares — гра, яку створено на основі добре відомої гри на папері, яка має назву «Палички» або «Квадрати». Гравці послідовно малюють лінії на папері, з’єднуючи сусідні крапки на дошці. Метою є заволодіння більшою за суперника кількістю квадратів.</p>
+    <p xml:lang="x-test">xxKSquares is a game modeled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.xx</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org</url>

@@ -110,6 +110,7 @@ GenericName[zh_CN]=通过点连接创建方形
 GenericName[zh_TW]=將點連起來組成方塊
 Comment=Connect the dots to create squares
 Comment[ca]=Connecteu els punts per crear quadrats
+Comment[ca@valencia]=Connecteu els punts per crear quadrats
 Comment[en_GB]=Connect the dots to create squares
 Comment[es]=Conecta los puntos para crear cuadrados
 Comment[nl]=Verbind de stippen om vierkanten te maken

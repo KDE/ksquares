@@ -11,6 +11,7 @@
   <name xml:lang="nl">KSquares</name>
   <name xml:lang="pt">KSquares</name>
   <name xml:lang="sk">KSquares</name>
+  <name xml:lang="sl">KSquares</name>
   <name xml:lang="sr">К‑квадрати</name>
   <name xml:lang="sr-Latn">K‑kvadrati</name>
   <name xml:lang="sr-ijekavian">К‑квадрати</name>
@@ -28,6 +29,7 @@
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
   <summary xml:lang="pt">Ligar os pontos para criar quadrados</summary>
   <summary xml:lang="sk">Spojte bodky a vytvorte štvorce</summary>
+  <summary xml:lang="sl">Povežite pikice, da ustvarite kvadrate</summary>
   <summary xml:lang="sr">Повежите тачке у квадрате</summary>
   <summary xml:lang="sr-Latn">Povežite tačke u kvadrate</summary>
   <summary xml:lang="sr-ijekavian">Повежите тачке у квадрате</summary>
@@ -46,6 +48,7 @@
     <p xml:lang="nl">KSquares is een spel gemodelleerd naar het welbekende op pen en papier gebaseerde spel met punten en vakjes. Elke speler tekent om de beurt een lijn tussen twee naast elkaar gelegen punten in het werkveld. Het doel is om meer vierkantjes te voltooien dan uw tegenstanders.</p>
     <p xml:lang="pt">O KSquares é um jogo modelado com base no conhecido jogo de Pontos e Caixas, com papel e caneta. Cada jogador. Joga por turnos para desenhar uma linha entre dois pontos adjacentes no tabuleiro. O objectivo é completar mais quadrados que os seus adversários.</p>
     <p xml:lang="sk">KSquares je hra podľa známej hry Body a štvorce. Každý hráč urobí ťah na nakreslenie čiary medzi dvoma bodmi na ploche. Cieľom je urobiť viac štvorcov ako súper.</p>
+    <p xml:lang="sl">KSquares je igra, ki temelji na znani namizni igri s papirjem in svinčnikom imenovani Dots and Boxes. Igralca izmenično rišeta črte med sosednjimi pikami na igralni površini. Cilj igre je dopolniti več kvadratov kot nasprotnik.</p>
     <p xml:lang="sr">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>
     <p xml:lang="sr-Latn">K‑kvadrati je igra zamišljena prema dobro poznatoj igri na papiru zatvaranje kvadrata. Svaki igrač u svom potezu ucrtava jednu duž između dve susedne tačke na tabli. Cilj je zatvoriti više kvadrata od protivnika.</p>
     <p xml:lang="sr-ijekavian">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>

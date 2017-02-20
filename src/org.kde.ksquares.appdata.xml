@@ -9,6 +9,7 @@
   <name xml:lang="en-GB">KSquares</name>
   <name xml:lang="es">KSquares</name>
   <name xml:lang="nl">KSquares</name>
+  <name xml:lang="pl">Kwadraty</name>
   <name xml:lang="pt">KSquares</name>
   <name xml:lang="sk">KSquares</name>
   <name xml:lang="sl">KSquares</name>
@@ -27,6 +28,7 @@
   <summary xml:lang="en-GB">Connect the dots to create squares</summary>
   <summary xml:lang="es">Conecte los puntos para crear cuadrados</summary>
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
+  <summary xml:lang="pl">Połącz kropki, żeby otrzymać kwadraty</summary>
   <summary xml:lang="pt">Ligar os pontos para criar quadrados</summary>
   <summary xml:lang="sk">Spojte bodky a vytvorte štvorce</summary>
   <summary xml:lang="sl">Povežite pikice, da ustvarite kvadrate</summary>
@@ -46,6 +48,7 @@
     <p xml:lang="en-GB">KSquares is a game modelled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.</p>
     <p xml:lang="es">KSquares es un juego basado en el conocido juego de papel y lápiz de puntos y cuadrados. Cada jugador dispone de su turno para dibujar una línea entre dos puntos adyacentes del tablero. El objetivo es completar más cuadrados que el oponente.</p>
     <p xml:lang="nl">KSquares is een spel gemodelleerd naar het welbekende op pen en papier gebaseerde spel met punten en vakjes. Elke speler tekent om de beurt een lijn tussen twee naast elkaar gelegen punten in het werkveld. Het doel is om meer vierkantjes te voltooien dan uw tegenstanders.</p>
+    <p xml:lang="pl">Kwadraty jest grą wzorującą się na dobrze znanej grze w kropki i pola opartej na ołówku i kartce papieru. Każdy gracz w swojej turze rysuje linię pomiędzy dwoma sąsiednimi kropkami na planszy. Celem jest nakreślenie większej liczby kwadratów niż twój przeciwnik</p>
     <p xml:lang="pt">O KSquares é um jogo modelado com base no conhecido jogo de Pontos e Caixas, com papel e caneta. Cada jogador. Joga por turnos para desenhar uma linha entre dois pontos adjacentes no tabuleiro. O objectivo é completar mais quadrados que os seus adversários.</p>
     <p xml:lang="sk">KSquares je hra podľa známej hry Body a štvorce. Každý hráč urobí ťah na nakreslenie čiary medzi dvoma bodmi na ploche. Cieľom je urobiť viac štvorcov ako súper.</p>
     <p xml:lang="sl">KSquares je igra, ki temelji na znani namizni igri s papirjem in svinčnikom imenovani Dots and Boxes. Igralca izmenično rišeta črte med sosednjimi pikami na igralni površini. Cilj igre je dopolniti več kvadratov kot nasprotnik.</p>

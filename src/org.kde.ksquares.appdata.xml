@@ -7,6 +7,7 @@
   <name xml:lang="ca">KSquares</name>
   <name xml:lang="ca-valencia">KSquares</name>
   <name xml:lang="cs">KSquares</name>
+  <name xml:lang="de">KSquares</name>
   <name xml:lang="en-GB">KSquares</name>
   <name xml:lang="es">KSquares</name>
   <name xml:lang="nl">KSquares</name>
@@ -27,6 +28,7 @@
   <summary xml:lang="ca">Connecteu els punts per crear quadrats</summary>
   <summary xml:lang="ca-valencia">Connecteu els punts per crear quadrats</summary>
   <summary xml:lang="cs">Spojte tečky a vytvořte čtverce</summary>
+  <summary xml:lang="de">Käsekästchen-Spiel</summary>
   <summary xml:lang="en-GB">Connect the dots to create squares</summary>
   <summary xml:lang="es">Conecte los puntos para crear cuadrados</summary>
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>

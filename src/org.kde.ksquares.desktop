@@ -128,6 +128,7 @@ Comment[sr@latin]=Spajajte tačke i osvajajte polja
 Comment[sv]=Sammanbind punkterna för att skapa fyrkanter
 Comment[uk]=З’єднайте точки, щоб створити квадрати
 Comment[x-test]=xxConnect the dots to create squaresxx
+Comment[zh_TW]=將點連起來組成方塊
 Terminal=false
 Categories=Game;BoardGame;Qt;KDE;
 X-DBUS-ServiceName=org.kde.ksquares

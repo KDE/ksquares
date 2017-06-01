@@ -128,8 +128,8 @@ protected:
 
     //event handlers
     //void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent);
-    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent);
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
 
 signals:
     ///Emits the index of the closet (undrawn) line when a click is detected

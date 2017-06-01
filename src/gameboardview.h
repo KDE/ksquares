@@ -36,7 +36,7 @@ public:
     /**
      * Asks the scene through ( qobject_cast<GameBoardScene*>(scene()) ) for the smallest size it should be
      */
-    QSize minimumSizeHint() const
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE
     {
         if (scene() == 0) {
             return QSize();
@@ -49,7 +49,7 @@ public slots:
     void setBoardSize();
 protected:
     ///Overloaded to resize board.
-    void resizeEvent(QResizeEvent *event)
+    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE
     {
         if (scene() != 0) {
             fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);

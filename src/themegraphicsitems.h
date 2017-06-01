@@ -24,7 +24,7 @@ public:
     explicit KSquaresSquareItem(QGraphicsItem *parent = 0);
     ~KSquaresSquareItem();
 
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0);
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0) Q_DECL_OVERRIDE;
 };
 
 #endif // THEMEGRAPHICSITEMS_H

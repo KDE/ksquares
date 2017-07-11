@@ -22,6 +22,7 @@
   <name xml:lang="sr-ijekavian">К‑квадрати</name>
   <name xml:lang="sr-ijekavianlatin">K‑kvadrati</name>
   <name xml:lang="sv">Fyrkanter</name>
+  <name xml:lang="tr">KSquares</name>
   <name xml:lang="uk">KSquares</name>
   <name xml:lang="x-test">xxKSquaresxx</name>
   <name xml:lang="zh-CN">KSquares</name>
@@ -44,6 +45,7 @@
   <summary xml:lang="sr-ijekavian">Повежите тачке у квадрате</summary>
   <summary xml:lang="sr-ijekavianlatin">Povežite tačke u kvadrate</summary>
   <summary xml:lang="sv">Sammanbind punkter för att skapa fyrkanter</summary>
+  <summary xml:lang="tr">Kare oluşturmak için noktaları birbirlerine bağla</summary>
   <summary xml:lang="uk">З’єднайте крапки, щоб створити квадрати</summary>
   <summary xml:lang="x-test">xxConnect the dots to create squaresxx</summary>
   <summary xml:lang="zh-CN">通过点连接创建方形</summary>
@@ -65,6 +67,7 @@
     <p xml:lang="sr-ijekavian">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>
     <p xml:lang="sr-ijekavianlatin">K‑kvadrati je igra zamišljena prema dobro poznatoj igri na papiru zatvaranje kvadrata. Svaki igrač u svom potezu ucrtava jednu duž između dve susedne tačke na tabli. Cilj je zatvoriti više kvadrata od protivnika.</p>
     <p xml:lang="sv">Fyrkanter är ett spel modellerat efter det välkända penn- och pappersbaserade spelet "Ringar och rutor". Varje spelare ritar i tur och ordning en linje mellan två intilliggande punkter på spelbrädet. Målet är att göra färdigt fler fyrkanter än motspelarna.</p>
+    <p xml:lang="tr">KSquares, Nokta ve Kutular adlı tanınmış kalem ve kağıt tabanlı oyun sonrasında modellenmiş bir oyundur. Her oyuncu sırayla, tahtada bitişik iki nokta arasında çizgi çizer. Amaç, rakibinizden daha fazla kareyi tamamlamaktır.</p>
     <p xml:lang="uk">KSquares — гра, яку створено на основі добре відомої гри на папері, яка має назву «Палички» або «Квадрати». Гравці послідовно малюють лінії на папері, з’єднуючи сусідні крапки на дошці. Метою є заволодіння більшою за суперника кількістю квадратів.</p>
     <p xml:lang="x-test">xxKSquares is a game modeled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.xx</p>
     <p xml:lang="zh-TW">KSquare 是一套古老遊戲的翻版。每個玩家輪到自己時可以在兩個相鄰的點間劃一條線。目標是比對手劃出更多的正方形。</p>

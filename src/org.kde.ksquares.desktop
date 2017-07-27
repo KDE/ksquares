@@ -130,6 +130,7 @@ Comment[sv]=Sammanbind punkterna för att skapa fyrkanter
 Comment[tr]=Noktaları birleştirerek kare yap
 Comment[uk]=З’єднайте точки, щоб створити квадрати
 Comment[x-test]=xxConnect the dots to create squaresxx
+Comment[zh_CN]=通过点连接创建方形
 Comment[zh_TW]=將點連起來組成方塊
 Terminal=false
 Categories=Game;BoardGame;Qt;KDE;

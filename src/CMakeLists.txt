@@ -13,7 +13,7 @@ set(ksquares_SRCS
     scoresdialog.cpp
 )
 
-include_directories(${CMAKE_SOURCE_DIR}/libKF5KDEGames/highscore)
+qt5_add_resources(ksquares_SRCS ksquares.qrc)
 
 ki18n_wrap_ui(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_display.ui)
 
@@ -40,7 +40,6 @@ install(TARGETS ksquares ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS org.kde.ksquares.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.ksquares.appdata.xml DESTINATION  ${KDE_INSTALL_METAINFODIR})
 install(FILES ksquares.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR})
-install(FILES ksquaresui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/ksquares)
 
 ecm_install_icons(ICONS
     128-apps-ksquares.png

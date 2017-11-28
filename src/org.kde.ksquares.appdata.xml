@@ -17,6 +17,7 @@
   <name xml:lang="nl">KSquares</name>
   <name xml:lang="pl">Kwadraty</name>
   <name xml:lang="pt">KSquares</name>
+  <name xml:lang="pt-BR">KSquares</name>
   <name xml:lang="ru">KSquares</name>
   <name xml:lang="sk">KSquares</name>
   <name xml:lang="sl">KSquares</name>
@@ -43,6 +44,7 @@
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
   <summary xml:lang="pl">Połącz kropki, żeby otrzymać kwadraty</summary>
   <summary xml:lang="pt">Ligar os pontos para criar quadrados</summary>
+  <summary xml:lang="pt-BR">Conecte os pontos para criar quadrados</summary>
   <summary xml:lang="ru">Соединяйте точки для создания квадрата</summary>
   <summary xml:lang="sk">Spojte bodky a vytvorte štvorce</summary>
   <summary xml:lang="sl">Povežite pikice, da ustvarite kvadrate</summary>

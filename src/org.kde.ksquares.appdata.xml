@@ -11,6 +11,7 @@
   <name xml:lang="de">KSquares</name>
   <name xml:lang="en-GB">KSquares</name>
   <name xml:lang="es">KSquares</name>
+  <name xml:lang="fi">KSquares</name>
   <name xml:lang="fr">KSquares</name>
   <name xml:lang="gl">KSquares</name>
   <name xml:lang="it">KSquares</name>
@@ -37,6 +38,7 @@
   <summary xml:lang="de">Käsekästchen-Spiel</summary>
   <summary xml:lang="en-GB">Connect the dots to create squares</summary>
   <summary xml:lang="es">Conecte los puntos para crear cuadrados</summary>
+  <summary xml:lang="fi">Yhdistä pisteet muodostaaksesi neliöitä</summary>
   <summary xml:lang="fr">Relier les points pour créer des carrés</summary>
   <summary xml:lang="gl">Conecta os puntos creando cadrados</summary>
   <summary xml:lang="it">Unisci i puntini per creare dei quadrati</summary>
@@ -63,6 +65,7 @@
     <p xml:lang="de">KSquares ist ein Spiel, das an das bekannte „Papier und Stift“-Spiel Käsekästchen angelehnt ist. Jeder Spieler muss der Reihe nach einen Strich zwischen zwei benachbarten Punkten zeichnen. Ziel des Spiels ist es, mehr Kästchen als der Gegner zu malen.</p>
     <p xml:lang="en-GB">KSquares is a game modelled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.</p>
     <p xml:lang="es">KSquares es un juego basado en el conocido juego de papel y lápiz de puntos y cuadrados. Cada jugador dispone de su turno para dibujar una línea entre dos puntos adyacentes del tablero. El objetivo es completar más cuadrados que el oponente.</p>
+    <p xml:lang="fi">KSquares muistuttaa tunnettua kynä ja paperi -peliä Pisteet ja laatikot. Kukin pelaaja vuorolla piirtää laudalla kahden vierekkäisen pisteen välille viivan. Tavoitteena on yhdistää useampia neliöitä kuin vastustajasi.</p>
     <p xml:lang="fr">KSquares est un jeu conçu à partir du célèbre jeu de la pipopipette (ou jeu des petits carrés). Chaque joueur dessine à son tour une ligne entre deux points adjacents sur la grille. L'objectif est de fermer davantage de carrés que votre adversaire.</p>
     <p xml:lang="gl">KSquares é un xogo baseado no famoso xogo de puntos e caixas que se xoga con bolígrafo e papel. Por quendas, cada xogador debuxa unha liña entre dous puntos adxacentes no taboleiro. O obxectivo é completar máis cadrados que o contrincante.</p>
     <p xml:lang="it">KSquares è un gioco creato sulla falsa riga del noto gioco di carta e matita Punti e linee. Ciascun giocatore inizia il proprio turno disegnando una linea tra due punti vicini nel tavoliere. L'obbiettivo è completare più quadrati dell'avversario.</p>

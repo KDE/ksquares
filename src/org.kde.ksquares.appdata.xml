@@ -91,19 +91,16 @@
   <url type="donation">https://www.kde.org/community/donations</url>
   <screenshots>
     <screenshot type="default">
-      <image>
-        https://cdn.kde.org/screenshots/ksquares/ksquares-standard.png
-      </image>
+      <caption>The typical board position in KSquares</caption>
+      <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-standard.png</image>
     </screenshot>
     <screenshot>
-      <image>
-        https://cdn.kde.org/screenshots/ksquares/ksquares-filled.png
-      </image>
+      <caption>The completed squares in KSquares</caption>
+      <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-filled.png</image>
     </screenshot>
     <screenshot>
-      <image>
-        https://cdn.kde.org/screenshots/ksquares/ksquares-empty.png
-      </image>
+      <caption>An initial board in KSquares</caption>
+      <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-empty.png</image>
     </screenshot>
   </screenshots>
   <provides>

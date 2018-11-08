@@ -88,7 +88,7 @@
   </description>
   <url type="homepage">https://www.kde.org</url>
   <url type="bugtracker">https://bugs.kde.org</url>
-  <url type="donation">https://www.kde.org/community/donations</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=ksquares&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
       <caption>The typical board position in KSquares</caption>

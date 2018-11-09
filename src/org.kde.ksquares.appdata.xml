@@ -92,14 +92,32 @@
   <screenshots>
     <screenshot type="default">
       <caption>The typical board position in KSquares</caption>
+      <caption xml:lang="ca">La posició típica de tauler al KSquares</caption>
+      <caption xml:lang="nl">De typische positie van het bord in KSquares</caption>
+      <caption xml:lang="pt">A posição típica do tabuleiro no KSquares</caption>
+      <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
+      <caption xml:lang="uk">Типова позиція у KSquares</caption>
+      <caption xml:lang="x-test">xxThe typical board position in KSquaresxx</caption>
       <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-standard.png</image>
     </screenshot>
     <screenshot>
       <caption>The completed squares in KSquares</caption>
+      <caption xml:lang="ca">Els quadrats completats al KSquares</caption>
+      <caption xml:lang="nl">De voltooide vierkanten in KSquares</caption>
+      <caption xml:lang="pt">Os quadrados completos no KSquares</caption>
+      <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
+      <caption xml:lang="uk">Заповнені квадратики у KSquares</caption>
+      <caption xml:lang="x-test">xxThe completed squares in KSquaresxx</caption>
       <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-filled.png</image>
     </screenshot>
     <screenshot>
       <caption>An initial board in KSquares</caption>
+      <caption xml:lang="ca">Un tauler inicial al KSquares</caption>
+      <caption xml:lang="nl">Het initiële bord in KSquares</caption>
+      <caption xml:lang="pt">Um tabuleiro inicial no KSquares</caption>
+      <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>
+      <caption xml:lang="uk">Початкове ігрове поле у KSquares</caption>
+      <caption xml:lang="x-test">xxAn initial board in KSquaresxx</caption>
       <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-empty.png</image>
     </screenshot>
   </screenshots>

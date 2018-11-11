@@ -278,6 +278,11 @@ void KSquaresWindow::playerTakeTurn(KSquaresPlayer *currentPlayer)
 // testing only
 void KSquaresWindow::aiChooseLine()
 {
+    // This can happen when we start a new game and the ai was playing, since we have a
+    // 200 ms singleShot timer just above, the game may have changed since the timer was shot
+    if (sGame->currentPlayer()->isHuman())
+        return;
+
     aiController ai(sGame->currentPlayerId(), sGame->lines(), sGame->squares(), sGame->boardWidth(), sGame->boardHeight());
     sGame->addLineToIndex(ai.chooseLine());
 }

@@ -93,6 +93,7 @@
     <screenshot type="default">
       <caption>The typical board position in KSquares</caption>
       <caption xml:lang="ca">La posició típica de tauler al KSquares</caption>
+      <caption xml:lang="ca-valencia">La posició típica de tauler al KSquares</caption>
       <caption xml:lang="nl">De typische positie van het bord in KSquares</caption>
       <caption xml:lang="pt">A posição típica do tabuleiro no KSquares</caption>
       <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
@@ -103,6 +104,7 @@
     <screenshot>
       <caption>The completed squares in KSquares</caption>
       <caption xml:lang="ca">Els quadrats completats al KSquares</caption>
+      <caption xml:lang="ca-valencia">Els quadrats completats al KSquares</caption>
       <caption xml:lang="nl">De voltooide vierkanten in KSquares</caption>
       <caption xml:lang="pt">Os quadrados completos no KSquares</caption>
       <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
@@ -113,6 +115,7 @@
     <screenshot>
       <caption>An initial board in KSquares</caption>
       <caption xml:lang="ca">Un tauler inicial al KSquares</caption>
+      <caption xml:lang="ca-valencia">Un tauler inicial al KSquares</caption>
       <caption xml:lang="nl">Het initiële bord in KSquares</caption>
       <caption xml:lang="pt">Um tabuleiro inicial no KSquares</caption>
       <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>

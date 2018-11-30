@@ -73,7 +73,7 @@ int aiController::chooseLine() const
             }
         }
     }
-    if (choiceList.size() != 0) {
+    if (!choiceList.isEmpty()) {
         if (Settings::difficulty() == 2) { // to play good ai has to look into the future game
             QList<int> openLines; // list of not yet drawn lines
             for (int i = 0; i < linesSize; i++) {
@@ -82,7 +82,7 @@ int aiController::chooseLine() const
                 }
             }
             QList<int> choices = chooseLeastDamaging(openLines); // run extended damage control
-            if (choices.size() > 0) {
+            if (!choices.isEmpty()) {
                 //qDebug() << "AI: 4. Drawing line at index:" << choices.at(0);
                 return choices.at(0);
             }

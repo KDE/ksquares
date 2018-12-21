@@ -97,6 +97,7 @@
       <caption xml:lang="de">Eine typische Spielposition in KSquares</caption>
       <caption xml:lang="en-GB">The typical board position in KSquares</caption>
       <caption xml:lang="es">La posición de tablero típica de KSquares</caption>
+      <caption xml:lang="fr">Un plateau de jeu de KSquares en cours de partie</caption>
       <caption xml:lang="gl">A posición típica do taboleiro en KSquares</caption>
       <caption xml:lang="nl">De typische positie van het bord in KSquares</caption>
       <caption xml:lang="pl">Zwyczajowe położenie planszy w Kwadratach</caption>
@@ -115,6 +116,7 @@
       <caption xml:lang="de">Die gefüllten Kästchen in KSquares</caption>
       <caption xml:lang="en-GB">The completed squares in KSquares</caption>
       <caption xml:lang="es">Los cuadros completados de KSquares</caption>
+      <caption xml:lang="fr">Les carreaux complétés dans KSquare</caption>
       <caption xml:lang="gl">Os cadrados completados en KSquares</caption>
       <caption xml:lang="nl">De voltooide vierkanten in KSquares</caption>
       <caption xml:lang="pl">Ukończone kwadraty w Kwadratach</caption>
@@ -133,6 +135,7 @@
       <caption xml:lang="de">Spielbeginn in KSquares</caption>
       <caption xml:lang="en-GB">An initial board in KSquares</caption>
       <caption xml:lang="es">Un tablero inicial de KSquares</caption>
+      <caption xml:lang="fr">Un plateau initial de KSquares</caption>
       <caption xml:lang="gl">Un taboleiro inicial en KSquares</caption>
       <caption xml:lang="nl">Het initiële bord in KSquares</caption>
       <caption xml:lang="pl">Początkowa plansza w Kwadratach</caption>

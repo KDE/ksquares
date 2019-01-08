@@ -15,6 +15,7 @@
   <name xml:lang="gl">KSquares</name>
   <name xml:lang="it">KSquares</name>
   <name xml:lang="nl">KSquares</name>
+  <name xml:lang="nn">Kvadrat</name>
   <name xml:lang="pl">Kwadraty</name>
   <name xml:lang="pt">KSquares</name>
   <name xml:lang="pt-BR">KSquares</name>
@@ -43,6 +44,7 @@
   <summary xml:lang="gl">Conecta os puntos creando cadrados</summary>
   <summary xml:lang="it">Unisci i puntini per creare dei quadrati</summary>
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
+  <summary xml:lang="nn">Teikn strekar mellom prikkar for å laga kvadrat</summary>
   <summary xml:lang="pl">Połącz kropki, żeby otrzymać kwadraty</summary>
   <summary xml:lang="pt">Ligar os pontos para criar quadrados</summary>
   <summary xml:lang="pt-BR">Conecte os pontos para criar quadrados</summary>
@@ -100,6 +102,7 @@
       <caption xml:lang="fr">Un plateau de jeu de KSquares en cours de partie</caption>
       <caption xml:lang="gl">A posición típica do taboleiro en KSquares</caption>
       <caption xml:lang="nl">De typische positie van het bord in KSquares</caption>
+      <caption xml:lang="nn">Eit typisk Kvadrat-brett</caption>
       <caption xml:lang="pl">Zwyczajowe położenie planszy w Kwadratach</caption>
       <caption xml:lang="pt">A posição típica do tabuleiro no KSquares</caption>
       <caption xml:lang="pt-BR">A posição típica do tabuleiro no KSquares</caption>
@@ -119,6 +122,7 @@
       <caption xml:lang="fr">Les carreaux complétés dans KSquare</caption>
       <caption xml:lang="gl">Os cadrados completados en KSquares</caption>
       <caption xml:lang="nl">De voltooide vierkanten in KSquares</caption>
+      <caption xml:lang="nn">Fullførte kvadrat</caption>
       <caption xml:lang="pl">Ukończone kwadraty w Kwadratach</caption>
       <caption xml:lang="pt">Os quadrados completos no KSquares</caption>
       <caption xml:lang="pt-BR">Os quadrados completos no KSquares</caption>
@@ -138,6 +142,7 @@
       <caption xml:lang="fr">Un plateau initial de KSquares</caption>
       <caption xml:lang="gl">Un taboleiro inicial en KSquares</caption>
       <caption xml:lang="nl">Het initiële bord in KSquares</caption>
+      <caption xml:lang="nn">Eit nytt Kvadrat-brett</caption>
       <caption xml:lang="pl">Początkowa plansza w Kwadratach</caption>
       <caption xml:lang="pt">Um tabuleiro inicial no KSquares</caption>
       <caption xml:lang="pt-BR">Um tabuleiro inicial no KSquares</caption>

@@ -13,6 +13,7 @@
   <name xml:lang="fi">KSquares</name>
   <name xml:lang="fr">KSquares</name>
   <name xml:lang="gl">KSquares</name>
+  <name xml:lang="id">KSquares</name>
   <name xml:lang="it">KSquares</name>
   <name xml:lang="nl">KSquares</name>
   <name xml:lang="nn">Kvadrat</name>
@@ -42,6 +43,7 @@
   <summary xml:lang="fi">Yhdistä pisteet muodostaaksesi neliöitä</summary>
   <summary xml:lang="fr">Relier les points pour créer des carrés</summary>
   <summary xml:lang="gl">Conecta os puntos creando cadrados</summary>
+  <summary xml:lang="id">Sambungkan titik-titik untuk menciptakan kotak-kotak</summary>
   <summary xml:lang="it">Unisci i puntini per creare dei quadrati</summary>
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
   <summary xml:lang="nn">Teikn strekar mellom prikkar for å laga kvadrat</summary>
@@ -71,6 +73,7 @@
     <p xml:lang="fi">KSquares muistuttaa tunnettua kynä ja paperi -peliä Pisteet ja laatikot. Kukin pelaaja vuorolla piirtää laudalla kahden vierekkäisen pisteen välille viivan. Tavoitteena on yhdistää useampia neliöitä kuin vastustajasi.</p>
     <p xml:lang="fr">KSquares est un jeu conçu à partir du célèbre jeu de la pipopipette (ou jeu des petits carrés). Chaque joueur dessine à son tour une ligne entre deux points adjacents sur la grille. L'objectif est de fermer davantage de carrés que votre adversaire.</p>
     <p xml:lang="gl">KSquares é un xogo baseado no famoso xogo de puntos e caixas que se xoga con bolígrafo e papel. Por quendas, cada xogador debuxa unha liña entre dous puntos adxacentes no taboleiro. O obxectivo é completar máis cadrados que o contrincante.</p>
+    <p xml:lang="id">KSquares adalah sebuah permainan yang dimodel setelah terkenalnya permainan berdasarkan kertas dan pulpen dari Titik-titik dan Kotak-kotak. Setiap pemain terjatah giliran untuk menggambar sebuah garis antara dua titik-titik pada papan. Sasarannya adalah untuk melengkapi selebihnya kotak-kotak lawanmu.</p>
     <p xml:lang="it">KSquares è un gioco creato sulla falsa riga del noto gioco di carta e matita Punti e linee. Ciascun giocatore inizia il proprio turno disegnando una linea tra due punti vicini nel tavoliere. L'obbiettivo è completare più quadrati dell'avversario.</p>
     <p xml:lang="nl">KSquares is een spel gemodelleerd naar het welbekende op pen en papier gebaseerde spel met punten en vakjes. Elke speler tekent om de beurt een lijn tussen twee naast elkaar gelegen punten in het werkveld. Het doel is om meer vierkantjes te voltooien dan uw tegenstanders.</p>
     <p xml:lang="pl">Kwadraty jest grą wzorującą się na dobrze znanej grze w kropki i pola opartej na ołówku i kartce papieru. Każdy gracz w swojej turze rysuje linię pomiędzy dwoma sąsiednimi kropkami na planszy. Celem jest nakreślenie większej liczby kwadratów niż twój przeciwnik</p>
@@ -101,6 +104,7 @@
       <caption xml:lang="es">La posición de tablero típica de KSquares</caption>
       <caption xml:lang="fr">Un plateau de jeu de KSquares en cours de partie</caption>
       <caption xml:lang="gl">A posición típica do taboleiro en KSquares</caption>
+      <caption xml:lang="id">Posisi papan yang khas di KSquares</caption>
       <caption xml:lang="nl">De typische positie van het bord in KSquares</caption>
       <caption xml:lang="nn">Eit typisk Kvadrat-brett</caption>
       <caption xml:lang="pl">Zwyczajowe położenie planszy w Kwadratach</caption>
@@ -121,6 +125,7 @@
       <caption xml:lang="es">Los cuadros completados de KSquares</caption>
       <caption xml:lang="fr">Les carreaux complétés dans KSquare</caption>
       <caption xml:lang="gl">Os cadrados completados en KSquares</caption>
+      <caption xml:lang="id">Kotak-kotak terlengkap di KSquares</caption>
       <caption xml:lang="nl">De voltooide vierkanten in KSquares</caption>
       <caption xml:lang="nn">Fullførte kvadrat</caption>
       <caption xml:lang="pl">Ukończone kwadraty w Kwadratach</caption>
@@ -141,6 +146,7 @@
       <caption xml:lang="es">Un tablero inicial de KSquares</caption>
       <caption xml:lang="fr">Un plateau initial de KSquares</caption>
       <caption xml:lang="gl">Un taboleiro inicial en KSquares</caption>
+      <caption xml:lang="id">Sebuah papan inisial di KSquares</caption>
       <caption xml:lang="nl">Het initiële bord in KSquares</caption>
       <caption xml:lang="nn">Eit nytt Kvadrat-brett</caption>
       <caption xml:lang="pl">Początkowa plansza w Kwadratach</caption>

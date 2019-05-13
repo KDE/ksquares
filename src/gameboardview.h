@@ -44,7 +44,7 @@ public:
             return qobject_cast<GameBoardScene *>(scene())->minimumSizeHint();
         }
     }
-public slots:
+public Q_SLOTS:
     ///Automatically resizes the board according to the users preferences. Deprecated for a bit
     void setBoardSize();
 protected:

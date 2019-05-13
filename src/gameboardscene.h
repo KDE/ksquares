@@ -46,7 +46,7 @@ public:
 
     void acknowledgeMove(int x1, int y1, int x2, int y2);
 
-public slots:
+public Q_SLOTS:
     /**
      * Add the line to the scene so it shows up in the view
      * @param index the line-index of the line
@@ -131,7 +131,7 @@ protected:
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
     void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
 
-signals:
+Q_SIGNALS:
     ///Emits the index of the closet (undrawn) line when a click is detected
     void lineDrawn(int);
 };

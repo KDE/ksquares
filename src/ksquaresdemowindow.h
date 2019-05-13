@@ -33,10 +33,10 @@ public:
     ///Constructor
     KSquaresDemoWindow();
 
-public slots:
+public Q_SLOTS:
     void gameNew();
 
-private slots:
+private Q_SLOTS:
     void aiChooseLine();
     void playerTakeTurn(KSquaresPlayer *currentPlayer);
     void gameOver(const QVector<KSquaresPlayer> & /*playerList*/);

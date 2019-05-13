@@ -20,7 +20,7 @@ class NewGameDialog : public QDialog, public Ui::NewGameWidget
 public:
     explicit NewGameDialog(QWidget *parent = 0);
 
-public slots:
+public Q_SLOTS:
     void adjustEnabledUsers(int);
 };
 

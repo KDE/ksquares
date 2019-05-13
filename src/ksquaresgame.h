@@ -173,7 +173,7 @@ protected:
     bool gameInProgress;
     /// last line added
     int lastLine;
-signals:
+Q_SIGNALS:
     ///A player's turn has started. This allows you to use AI/networking etc.
     void takeTurnSig(KSquaresPlayer *); //emit the new curent player
     ///emitted when the game board is completed. Allows you to construct a scoreboard

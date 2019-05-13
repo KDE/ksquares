@@ -36,7 +36,7 @@ public:
     KSquaresWindow();
     ~KSquaresWindow();
 
-public slots:
+public Q_SLOTS:
     void  showHighscores();
     //void  configureHighscores();
     ///Launch the new game dialog and create a new game
@@ -44,7 +44,7 @@ public slots:
     ///Start a new game with the same settings (read from KConfig Settings)
     void gameReset();
 
-private slots:
+private Q_SLOTS:
     void aiChooseLine(); // testing only
     void initObject();
     void optionsPreferences();

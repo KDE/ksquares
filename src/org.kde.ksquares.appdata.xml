@@ -15,6 +15,7 @@
   <name xml:lang="gl">KSquares</name>
   <name xml:lang="id">KSquares</name>
   <name xml:lang="it">KSquares</name>
+  <name xml:lang="ko">KSquares</name>
   <name xml:lang="nl">KSquares</name>
   <name xml:lang="nn">Kvadrat</name>
   <name xml:lang="pl">Kwadraty</name>
@@ -45,6 +46,7 @@
   <summary xml:lang="gl">Conecta os puntos creando cadrados</summary>
   <summary xml:lang="id">Hubungkan titik-titik untuk menciptakan kotak-kotak</summary>
   <summary xml:lang="it">Unisci i puntini per creare dei quadrati</summary>
+  <summary xml:lang="ko">점을 연결해서 사각형 만들기</summary>
   <summary xml:lang="nl">Verbind de stippen om vierkanten te maken</summary>
   <summary xml:lang="nn">Teikn strekar mellom prikkar for å laga kvadrat</summary>
   <summary xml:lang="pl">Połącz kropki, żeby otrzymać kwadraty</summary>
@@ -75,6 +77,7 @@
     <p xml:lang="gl">KSquares é un xogo baseado no famoso xogo de puntos e caixas que se xoga con bolígrafo e papel. Por quendas, cada xogador debuxa unha liña entre dous puntos adxacentes no taboleiro. O obxectivo é completar máis cadrados que o contrincante.</p>
     <p xml:lang="id">KSquares adalah sebuah permainan yang dimodel setelah terkenalnya permainan berdasarkan kertas dan pulpen dari Titik-titik dan Kotak-kotak. Setiap pemain terjatah giliran untuk menggambar sebuah garis antara dua titik-titik pada papan. Sasarannya adalah untuk melengkapi selebihnya kotak-kotak lawanmu.</p>
     <p xml:lang="it">KSquares è un gioco creato sulla falsa riga del noto gioco di carta e matita Punti e linee. Ciascun giocatore inizia il proprio turno disegnando una linea tra due punti vicini nel tavoliere. L'obbiettivo è completare più quadrati dell'avversario.</p>
+    <p xml:lang="ko">KSquares는 펜과 종이로 점을 이어서 상자를 만드는 게임을 기반으로 합니다. 각각 플레이어는 두 개의 인접한 점을 잇는 선을 그려 나갑니다. 게임의 목표는 상대방보다 더 많은 사각형을 그리는 것입니다.</p>
     <p xml:lang="nl">KSquares is een spel gemodelleerd naar het welbekende op pen en papier gebaseerde spel met punten en vakjes. Elke speler tekent om de beurt een lijn tussen twee naast elkaar gelegen punten in het werkveld. Het doel is om meer vierkantjes te voltooien dan uw tegenstanders.</p>
     <p xml:lang="nn">Kvadrat er basert på penn- og papirutgåva av spelet med same namn. Spelarane teiknar i tur ei linje mellom to prikkar som ligg nær kvarandre på brettet. Målet er å teikna ferdig fleire kvadrat enn motstandaren.</p>
     <p xml:lang="pl">Kwadraty jest grą wzorującą się na dobrze znanej grze w kropki i pola opartej na ołówku i kartce papieru. Każdy gracz w swojej turze rysuje linię pomiędzy dwoma sąsiednimi kropkami na planszy. Celem jest nakreślenie większej liczby kwadratów niż twój przeciwnik</p>
@@ -107,6 +110,7 @@
       <caption xml:lang="gl">A posición típica do taboleiro en KSquares</caption>
       <caption xml:lang="id">Posisi papan yang khas di KSquares</caption>
       <caption xml:lang="it">La posizione tipica del tavoliere in KSquares</caption>
+      <caption xml:lang="ko">KSquares 보드 배치</caption>
       <caption xml:lang="nl">De typische positie van het bord in KSquares</caption>
       <caption xml:lang="nn">Eit typisk Kvadrat-brett</caption>
       <caption xml:lang="pl">Zwyczajowe położenie planszy w Kwadratach</caption>
@@ -129,6 +133,7 @@
       <caption xml:lang="gl">Os cadrados completados en KSquares</caption>
       <caption xml:lang="id">Kotak-kotak terlengkap di KSquares</caption>
       <caption xml:lang="it">I quadrati completati in KSquares</caption>
+      <caption xml:lang="ko">KSquares 다 그린 사각형</caption>
       <caption xml:lang="nl">De voltooide vierkanten in KSquares</caption>
       <caption xml:lang="nn">Fullførte kvadrat</caption>
       <caption xml:lang="pl">Ukończone kwadraty w Kwadratach</caption>
@@ -151,6 +156,7 @@
       <caption xml:lang="gl">Un taboleiro inicial en KSquares</caption>
       <caption xml:lang="id">Sebuah papan inisial di KSquares</caption>
       <caption xml:lang="it">Tavoliere iniziale in KSquares</caption>
+      <caption xml:lang="ko">KSquares 초기 보드</caption>
       <caption xml:lang="nl">Het initiële bord in KSquares</caption>
       <caption xml:lang="nn">Eit nytt Kvadrat-brett</caption>
       <caption xml:lang="pl">Początkowa plansza w Kwadratach</caption>

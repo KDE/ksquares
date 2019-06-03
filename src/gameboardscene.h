@@ -13,7 +13,6 @@
 #include <QGraphicsScene>
 
 class QGraphicsEllipseItem;
-class msg;
 
 /**
  * @short Scene for displaying the game board

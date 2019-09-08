@@ -35,7 +35,7 @@ int main(int argc, char **argv)
     migrate.setUiFiles(QStringList() << QStringLiteral("ksquaresui.rc"));
     migrate.migrate();
     KLocalizedString::setApplicationDomain("ksquares");
-    KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"), QLatin1Literal(version), i18n(description),
+    KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"), QLatin1String(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"));
     about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QStringLiteral("matt@milliams.com"), QStringLiteral("http://milliams.com"));
     about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));

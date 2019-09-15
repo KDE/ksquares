@@ -116,6 +116,10 @@ public:
     {
         return score() < player.score();
     }
+    bool operator>(const KSquaresPlayer &player) const
+    {
+        return score() > player.score();
+    }
 
 protected:
     /// Is the player a human

@@ -37,10 +37,10 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("ksquares");
     KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"), QLatin1String(version), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"));
-    about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QStringLiteral("matt@milliams.com"), QStringLiteral("http://milliams.com"));
+    about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QStringLiteral("matt@milliams.com"), QStringLiteral("https://milliams.com"));
     about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
     about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
-    about.setHomepage(QStringLiteral("http://games.kde.org/ksquares"));
+    about.setHomepage(QStringLiteral("https://games.kde.org/ksquares"));
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);

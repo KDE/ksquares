@@ -13,6 +13,7 @@
 #include <QDebug>
 
 #include <QSet>
+#include <QRandomGenerator>
 
 #include "settings.h"
 
@@ -51,7 +52,7 @@ QList<int> aiController::autoFill(int safeMovesLeft)
         if (fillLines.isEmpty()) {
             break;
         }
-        int index = qrand() % fillLines.size();
+        int index = QRandomGenerator::global()->bounded(fillLines.size());
         fillLines.removeAt(index);
     }
 

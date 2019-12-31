@@ -24,7 +24,6 @@ aiController::aiController(int newPlayerId, const QList<bool> &newLines, const Q
     for (int i = 0; i < linesSize; ++i) {
         lines[i] = newLines[i];
     }
-    qsrand((unsigned)time(NULL));
     //qDebug() << "AI: Starting AI level" << Settings::difficulty();
 }
 

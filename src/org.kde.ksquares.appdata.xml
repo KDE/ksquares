@@ -183,5 +183,5 @@
     <binary>ksquares</binary>
   </provides>
   <project_group>KDE</project_group>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
 </component>

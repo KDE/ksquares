@@ -34,7 +34,7 @@ public:
      * @param newHeight the number of squares tall the board is
      * @param parent passed to QGraphicsScene's constructor
      */
-    GameBoardScene(int newWidth, int newHeight, QObject *parent = 0);
+    GameBoardScene(int newWidth, int newHeight, QObject *parent = nullptr);
     ///Destructor
     ~GameBoardScene();
     /**

@@ -36,7 +36,7 @@
 #include "newgamedialog.h"
 #include "scoresdialog.h"
 
-KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
+KSquaresWindow::KSquaresWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(nullptr)
 {
     setCentralWidget(m_view);
     QTimer::singleShot(0, this, &KSquaresWindow::initObject);

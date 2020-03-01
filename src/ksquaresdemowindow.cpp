@@ -25,7 +25,7 @@
 #include "aicontroller.h"
 #include "gameboardview.h"
 
-KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(0)
+KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoardView(this)), m_scene(nullptr)
 {
     sGame = new KSquaresGame();
     connect(sGame, &KSquaresGame::takeTurnSig, this, &KSquaresDemoWindow::playerTakeTurn);

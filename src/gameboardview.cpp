@@ -15,7 +15,7 @@ GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)
 
 void GameBoardView::setBoardSize()
 {
-    if (scene() != 0) {
+    if (scene() != nullptr) {
         fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);
     }
 }

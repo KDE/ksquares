@@ -21,10 +21,10 @@
 class KSquaresSquareItem : public QGraphicsRectItem
 {
 public:
-    explicit KSquaresSquareItem(QGraphicsItem *parent = 0);
+    explicit KSquaresSquareItem(QGraphicsItem *parent = nullptr);
     ~KSquaresSquareItem();
 
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = 0) Q_DECL_OVERRIDE;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) Q_DECL_OVERRIDE;
 };
 
 #endif // THEMEGRAPHICSITEMS_H

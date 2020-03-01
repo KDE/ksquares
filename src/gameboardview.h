@@ -32,13 +32,13 @@ public:
      *
      * @param parent the parent of the widget
      */
-    explicit GameBoardView(QWidget *parent = 0);
+    explicit GameBoardView(QWidget *parent = nullptr);
     /**
      * Asks the scene through ( qobject_cast<GameBoardScene*>(scene()) ) for the smallest size it should be
      */
     QSize minimumSizeHint() const Q_DECL_OVERRIDE
     {
-        if (scene() == 0) {
+        if (scene() == nullptr) {
             return QSize();
         } else {
             return qobject_cast<GameBoardScene *>(scene())->minimumSizeHint();
@@ -51,7 +51,7 @@ protected:
     ///Overloaded to resize board.
     void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE
     {
-        if (scene() != 0) {
+        if (scene() != nullptr) {
             fitInView(scene()->sceneRect(), Qt::KeepAspectRatio);
         } QGraphicsView::resizeEvent(event);
     }

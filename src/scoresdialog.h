@@ -17,7 +17,7 @@
 class ScoresDialog : public QDialog, public Ui::ScoresWidget
 {
 public:
-    explicit ScoresDialog(QWidget *parent = 0);
+    explicit ScoresDialog(QWidget *parent = nullptr);
 };
 
 #endif // SCORESDIALOG_H

@@ -18,7 +18,7 @@ class NewGameDialog : public QDialog, public Ui::NewGameWidget
 {
     Q_OBJECT
 public:
-    explicit NewGameDialog(QWidget *parent = 0);
+    explicit NewGameDialog(QWidget *parent = nullptr);
 
 public Q_SLOTS:
     void adjustEnabledUsers(int);

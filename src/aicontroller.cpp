@@ -158,7 +158,7 @@ QList<int> aiController::safeMoves() const
 QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 {
     ////qDebug() << "AI: Checking" << choiceList.size() << "possible moves";
-    QMap<int, int> linePointDamage; //this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line
+    QMultiMap<int, int> linePointDamage; //this will be a list of how damaging a certain move will be. Key = damage of move, Value = index of line
     QScopedArrayPointer<bool> linesCopy(new bool[linesSize]); //make temporary local copies of lists
     int sidesOfSquare[4];
 
@@ -282,7 +282,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
                 }
             }
         } while (squareFound == true);  //while we're still finding squares
-        linePointDamage.insertMulti(count, choiceList.at(i));   //insert a pair with Key=count, Value=i
+        linePointDamage.insert(count, choiceList.at(i));   //insert a pair with Key=count, Value=i
         chains.insert(choiceList.at(i), chain);
     }
 

@@ -32,6 +32,7 @@
   <name xml:lang="sv">Fyrkanter</name>
   <name xml:lang="tr">KSquares</name>
   <name xml:lang="uk">KSquares</name>
+  <name xml:lang="x-test">xxKSquaresxx</name>
   <name xml:lang="zh-CN">KSquares</name>
   <name xml:lang="zh-TW">KSquares</name>
   <summary>Connect the dots to create squares</summary>
@@ -63,6 +64,7 @@
   <summary xml:lang="sv">Sammanbind punkter för att skapa fyrkanter</summary>
   <summary xml:lang="tr">Kare oluşturmak için noktaları birbirlerine bağla</summary>
   <summary xml:lang="uk">З’єднайте крапки, щоб створити квадрати</summary>
+  <summary xml:lang="x-test">xxConnect the dots to create squaresxx</summary>
   <summary xml:lang="zh-CN">通过点连接创建方形</summary>
   <summary xml:lang="zh-TW">將點連起來組成方塊</summary>
   <description>
@@ -93,6 +95,7 @@
     <p xml:lang="sv">Fyrkanter är ett spel modellerat efter det välkända penn- och pappersbaserade spelet "Ringar och rutor". Varje spelare ritar i tur och ordning en linje mellan två intilliggande punkter på spelbrädet. Målet är att göra färdigt fler fyrkanter än motspelarna.</p>
     <p xml:lang="tr">KSquares, Nokta ve Kutular adlı tanınmış kalem ve kağıt tabanlı oyun sonrasında modellenmiş bir oyundur. Her oyuncu sırayla, tahtada bitişik iki nokta arasında çizgi çizer. Amaç, rakibinizden daha fazla kareyi tamamlamaktır.</p>
     <p xml:lang="uk">KSquares — гра, яку створено на основі добре відомої гри на папері, яка має назву «Палички» або «Квадрати». Гравці послідовно малюють лінії на папері, з’єднуючи сусідні крапки на дошці. Метою є заволодіння більшою за суперника кількістю квадратів.</p>
+    <p xml:lang="x-test">xxKSquares is a game modeled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.xx</p>
     <p xml:lang="zh-TW">KSquare 是一套古老遊戲的翻版。每個玩家輪到自己時可以在兩個相鄰的點間劃一條線。目標是比對手劃出更多的正方形。</p>
   </description>
   <url type="homepage">https://www.kde.org</url>
@@ -120,6 +123,7 @@
       <caption xml:lang="sk">Typická pozícia dosky v KSquares</caption>
       <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
       <caption xml:lang="uk">Типова позиція у KSquares</caption>
+      <caption xml:lang="x-test">xxThe typical board position in KSquaresxx</caption>
       <caption xml:lang="zh-TW">KSquares 中的典型棋盤位置</caption>
       <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-standard.png</image>
     </screenshot>
@@ -145,6 +149,7 @@
       <caption xml:lang="sk">Vyplnené štvorce v KSquares</caption>
       <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
       <caption xml:lang="uk">Заповнені квадратики у KSquares</caption>
+      <caption xml:lang="x-test">xxThe completed squares in KSquaresxx</caption>
       <caption xml:lang="zh-TW">KSquares 中的完成棋盤</caption>
       <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-filled.png</image>
     </screenshot>
@@ -169,6 +174,7 @@
       <caption xml:lang="sk">Počiatočná doska v KSquares</caption>
       <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>
       <caption xml:lang="uk">Початкове ігрове поле у KSquares</caption>
+      <caption xml:lang="x-test">xxAn initial board in KSquaresxx</caption>
       <caption xml:lang="zh-TW">KSquares 中的初始棋盤</caption>
       <image type="source" width="1024" height="576">https://cdn.kde.org/screenshots/ksquares/ksquares-empty.png</image>
     </screenshot>

@@ -75,7 +75,7 @@
     <p xml:lang="en-GB">KSquares is a game modelled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.</p>
     <p xml:lang="es">KSquares es un juego basado en el conocido juego de papel y lápiz de puntos y cuadrados. Cada jugador dispone de su turno para dibujar una línea entre dos puntos adyacentes del tablero. El objetivo es completar más cuadrados que el oponente.</p>
     <p xml:lang="et">KSquares võttis eeskujuks tuntud paberil mängitava mängu Dots and Boxes (Eestis on analoogne mäng tuntud Maamängu nime all). Mängijad tõmbavad kordamööda jooni kahe kõrvutise punkti vahele. Siht on valmis saada rohkem ruute kui vastane.</p>
-    <p xml:lang="fi">KSquares muistuttaa tunnettua kynä ja paperi -peliä Pisteet ja laatikot. Kukin pelaaja vuorolla piirtää laudalla kahden vierekkäisen pisteen välille viivan. Tavoitteena on yhdistää useampia neliöitä kuin vastustajasi.</p>
+    <p xml:lang="fi">KSquares muistuttaa tunnettua kynällä ja paperilla pelattavaa Pisteet ja laatikot -peliä. Kukin pelaaja vuorolla piirtää laudalla kahden vierekkäisen pisteen välille viivan. Tavoitteena on yhdistää useampia neliöitä kuin vastustajasi.</p>
     <p xml:lang="fr">KSquares est un jeu conçu à partir du célèbre jeu de la pipopipette (ou jeu des petits carrés). Chaque joueur dessine à son tour une ligne entre deux points adjacents sur la grille. L'objectif est de fermer davantage de carrés que votre adversaire.</p>
     <p xml:lang="gl">KSquares é un xogo baseado no famoso xogo de puntos e caixas que se xoga con bolígrafo e papel. Por quendas, cada xogador debuxa unha liña entre dous puntos adxacentes no taboleiro. O obxectivo é completar máis cadrados que o contrincante.</p>
     <p xml:lang="id">KSquares adalah sebuah permainan yang dimodel setelah terkenalnya permainan berdasarkan kertas dan pulpen dari Titik-titik dan Kotak-kotak. Setiap pemain terjatah giliran untuk menggambar sebuah garis antara dua titik-titik pada papan. Sasarannya adalah untuk melengkapi selebihnya kotak-kotak lawanmu.</p>
@@ -110,6 +110,7 @@
       <caption xml:lang="en-GB">The typical board position in KSquares</caption>
       <caption xml:lang="es">La posición de tablero típica de KSquares</caption>
       <caption xml:lang="et">KSquaresi tüüpiline mänguväljak</caption>
+      <caption xml:lang="fi">KSquares-laudan tyypillinen asetelma</caption>
       <caption xml:lang="fr">Un plateau de jeu de KSquares en cours de partie</caption>
       <caption xml:lang="gl">A posición típica do taboleiro en KSquares</caption>
       <caption xml:lang="id">Posisi papan yang khas di KSquares</caption>
@@ -136,6 +137,7 @@
       <caption xml:lang="en-GB">The completed squares in KSquares</caption>
       <caption xml:lang="es">Los cuadros completados de KSquares</caption>
       <caption xml:lang="et">KSquaresi valmisruutudega mänguväljak</caption>
+      <caption xml:lang="fi">KSquares valmiina</caption>
       <caption xml:lang="fr">Les carreaux complétés dans KSquare</caption>
       <caption xml:lang="gl">Os cadrados completados en KSquares</caption>
       <caption xml:lang="id">Kotak-kotak terlengkap di KSquares</caption>
@@ -161,6 +163,7 @@
       <caption xml:lang="en-GB">An initial board in KSquares</caption>
       <caption xml:lang="es">Un tablero inicial de KSquares</caption>
       <caption xml:lang="et">KSquaresi algne mänguväljak</caption>
+      <caption xml:lang="fi">KSquaresin lauta aluksi</caption>
       <caption xml:lang="fr">Un plateau initial de KSquares</caption>
       <caption xml:lang="gl">Un taboleiro inicial en KSquares</caption>
       <caption xml:lang="id">Sebuah papan inisial di KSquares</caption>

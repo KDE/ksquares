@@ -14,7 +14,7 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
-#include <kdelibs4configmigrator.h>
+#include <Kdelibs4ConfigMigrator>
 #include <KDBusService>
 
 #include "ksquareswindow.h"

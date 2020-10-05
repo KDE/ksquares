@@ -9,6 +9,7 @@
   <name xml:lang="cs">KSquares</name>
   <name xml:lang="da">KSquares</name>
   <name xml:lang="de">KSquares</name>
+  <name xml:lang="el">KSquares</name>
   <name xml:lang="en-GB">KSquares</name>
   <name xml:lang="es">KSquares</name>
   <name xml:lang="et">KSquares</name>
@@ -41,6 +42,7 @@
   <summary xml:lang="ca-valencia">Connecteu els punts per a crear quadrats</summary>
   <summary xml:lang="cs">Spojte tečky a vytvořte čtverce</summary>
   <summary xml:lang="de">Käsekästchen-Spiel</summary>
+  <summary xml:lang="el">Συνδέστε τις τελείες για να σχηματίσετε τετράγωνα</summary>
   <summary xml:lang="en-GB">Connect the dots to create squares</summary>
   <summary xml:lang="es">Conecte los puntos para crear cuadrados</summary>
   <summary xml:lang="et">Punktide ühendamine ruutude loomiseks</summary>
@@ -73,6 +75,7 @@
     <p xml:lang="ca">El KSquares és un joc modelat després del conegut Quadrats jugat amb llapis i paper. Per torns, cada jugador dibuixa una línia entre dos punts adjacents del tauler. L'objectiu és completar més quadrats que els adversaris.</p>
     <p xml:lang="ca-valencia">El KSquares és un joc modelat després del conegut Quadrats jugat amb llapis i paper. Per torns, cada jugador dibuixa una línia entre dos punts adjacents del tauler. L'objectiu és completar més quadrats que els adversaris.</p>
     <p xml:lang="de">KSquares ist ein Spiel, das an das bekannte „Papier und Stift“-Spiel Käsekästchen angelehnt ist. Jeder Spieler muss der Reihe nach einen Strich zwischen zwei benachbarten Punkten zeichnen. Ziel des Spiels ist es, mehr Kästchen als der Gegner zu malen.</p>
+    <p xml:lang="el">Το KSquares είναι ένα παιχνίδι με βάση το πολύ γνωστό παιχνίδι Ενώνω τις τελίτσες που παίζεται με στιλό και χαρτί. Ο κάθε παίκτης με τη σειρά του σχηματίζει μια γραμμή ανάμεσα σε δύο γειτονικές κουκίδες στον πίνακα. Ο σκοπός είναι να συμπληρώσετε περισότερα τετράγωνα από τον αντίπαλό σας.</p>
     <p xml:lang="en-GB">KSquares is a game modelled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.</p>
     <p xml:lang="es">KSquares es un juego basado en el conocido juego de papel y lápiz de puntos y cuadrados. Cada jugador dispone de su turno para dibujar una línea entre dos puntos adyacentes del tablero. El objetivo es completar más cuadrados que el oponente.</p>
     <p xml:lang="et">KSquares võttis eeskujuks tuntud paberil mängitava mängu Dots and Boxes (Eestis on analoogne mäng tuntud Maamängu nime all). Mängijad tõmbavad kordamööda jooni kahe kõrvutise punkti vahele. Siht on valmis saada rohkem ruute kui vastane.</p>
@@ -108,6 +111,7 @@
       <caption xml:lang="ca">La posició típica de tauler al KSquares</caption>
       <caption xml:lang="ca-valencia">La posició típica de tauler al KSquares</caption>
       <caption xml:lang="de">Eine typische Spielposition in KSquares</caption>
+      <caption xml:lang="el">Η τυπική θέση του πίνακα στο KSquares</caption>
       <caption xml:lang="en-GB">The typical board position in KSquares</caption>
       <caption xml:lang="es">La posición de tablero típica de KSquares</caption>
       <caption xml:lang="et">KSquaresi tüüpiline mänguväljak</caption>
@@ -136,6 +140,7 @@
       <caption xml:lang="ca-valencia">Els quadrats completats al KSquares</caption>
       <caption xml:lang="cs">Dokončené čtverce v KSquares</caption>
       <caption xml:lang="de">Die gefüllten Kästchen in KSquares</caption>
+      <caption xml:lang="el">Τα συμπληρωμένα τετράγωνα στο KSquares</caption>
       <caption xml:lang="en-GB">The completed squares in KSquares</caption>
       <caption xml:lang="es">Los cuadros completados de KSquares</caption>
       <caption xml:lang="et">KSquaresi valmisruutudega mänguväljak</caption>
@@ -163,6 +168,7 @@
       <caption xml:lang="ca">Un tauler inicial al KSquares</caption>
       <caption xml:lang="ca-valencia">Un tauler inicial al KSquares</caption>
       <caption xml:lang="de">Spielbeginn in KSquares</caption>
+      <caption xml:lang="el">Ο αρχικός πίνακας στο KSquares</caption>
       <caption xml:lang="en-GB">An initial board in KSquares</caption>
       <caption xml:lang="es">Un tablero inicial de KSquares</caption>
       <caption xml:lang="et">KSquaresi algne mänguväljak</caption>

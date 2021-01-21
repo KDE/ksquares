@@ -1,12 +1,9 @@
-/***************************************************************************
- *   Copyright (C) 2006 by Paolo Capriotti    <p.capriotti@gmail.com>      *
- *   Copyright (C) 2010 by Stefan Majewsky    <majewsky@gmx.net>           *
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- ***************************************************************************/
+/*
+    SPDX-FileCopyrightText: 2006 Paolo Capriotti <p.capriotti@gmail.com>
+    SPDX-FileCopyrightText: 2010 Stefan Majewsky <majewsky@gmx.net>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #include "highlightanimation.h"
 

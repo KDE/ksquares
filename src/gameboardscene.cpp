@@ -8,7 +8,7 @@
 
 #include "highlightanimation.h"
 
-#include <math.h>
+#include <cmath>
 
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsEllipseItem>

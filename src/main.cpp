@@ -19,8 +19,6 @@
 #include "settings.h"
 #include "ksquares_version.h"
 
-static const char description[] =
-    I18N_NOOP("Take it in turns to draw lines.\nIf you complete a squares, you get another go.");
 
 int main(int argc, char **argv)
 {
@@ -33,7 +31,9 @@ int main(int argc, char **argv)
     migrate.setUiFiles(QStringList() << QStringLiteral("ksquaresui.rc"));
     migrate.migrate();
     KLocalizedString::setApplicationDomain("ksquares");
-    KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"), QStringLiteral(KSQUARES_VERSION_STRING), i18n(description),
+    KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"),
+                     QStringLiteral(KSQUARES_VERSION_STRING),
+                     i18n("Take it in turns to draw lines.\nIf you complete a squares, you get another go."),
                      KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"));
     about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QStringLiteral("matt@milliams.com"), QStringLiteral("https://milliams.com"));
     about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));

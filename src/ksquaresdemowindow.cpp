@@ -33,7 +33,7 @@ KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoard
     m_view->setDisabled(true);
     setCentralWidget(m_view);
 
-    KStandardGameAction::quit(qApp, SLOT(quit()), actionCollection());
+    KStandardGameAction::quit(qApp, &QApplication::quit, actionCollection());
     setupGUI();
 
     //QT5 statusBar()->insertPermanentItem(i18n("Current Player"), 0);

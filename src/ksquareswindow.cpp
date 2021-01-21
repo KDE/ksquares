@@ -286,15 +286,15 @@ void KSquaresWindow::aiChooseLine()
 
 void KSquaresWindow::setupActions()
 {
-    KStandardGameAction::gameNew(this, SLOT(gameNew()), actionCollection());
-    QAction *resetGame = KStandardGameAction::restart(this, SLOT(gameReset()), actionCollection());
+    KStandardGameAction::gameNew(this, &KSquaresWindow::gameNew, actionCollection());
+    QAction *resetGame = KStandardGameAction::restart(this, &KSquaresWindow::gameReset, actionCollection());
     resetGame->setStatusTip(i18n("Start a new game with the current settings"));
 
-    KStandardGameAction::highscores(this, SLOT(showHighscores()), actionCollection());
-    KStandardGameAction::quit(this, SLOT(close()), actionCollection());
+    KStandardGameAction::highscores(this, &KSquaresWindow::showHighscores, actionCollection());
+    KStandardGameAction::quit(this, &QWidget::close, actionCollection());
 
     // Preferences
-    KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+    KStandardAction::preferences(this, &KSquaresWindow::optionsPreferences, actionCollection());
 
     setupGUI();
 }

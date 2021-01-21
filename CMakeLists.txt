@@ -8,8 +8,8 @@ set (RELEASE_SERVICE_COMPACT_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}${RELEASE_
 
 project(ksquares VERSION "0.6.${RELEASE_SERVICE_COMPACT_VERSION}")
 
-set (QT_MIN_VERSION "5.10.0")
-set (KF5_MIN_VERSION "5.46.0")
+set (QT_MIN_VERSION "5.12.0")
+set (KF_MIN_VERSION "5.68.0")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED CONFIG)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} )
@@ -27,7 +27,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     XmlGui
 )
 
-find_package(KF5KDEGames 4.9.0 REQUIRED)
+find_package(KF5KDEGames 7.3.0 REQUIRED)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -39,11 +39,8 @@ include(ECMInstallIcons)
 include(ECMSetupVersion)
 include(ECMAddTests)
 
-if (${KF5Config_VERSION} STRGREATER "5.56.0")
-        add_definitions(-DQT_NO_FOREACH)
-        MESSAGE(STATUS "compile without foreach")
-endif()
 add_definitions(
+    -DQT_NO_FOREACH
     -DQT_NO_CAST_TO_ASCII
     -DQT_NO_CAST_FROM_ASCII
     -DQT_NO_URL_CAST_FROM_STRING

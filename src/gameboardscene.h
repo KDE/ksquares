@@ -33,7 +33,7 @@ public:
      */
     GameBoardScene(int newWidth, int newHeight, QObject *parent = nullptr);
     ///Destructor
-    ~GameBoardScene();
+    ~GameBoardScene() override;
     /**
      * The smallest the view can be when 'auto-zoom' is off
      * @return the minimum size the view should be
@@ -124,8 +124,8 @@ protected:
 
     //event handlers
     //void mousePressEvent (QGraphicsSceneMouseEvent* mouseEvent);
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
-    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
 
 Q_SIGNALS:
     ///Emits the index of the closet (undrawn) line when a click is detected

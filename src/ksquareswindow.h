@@ -31,7 +31,7 @@ class KSquaresWindow : public KXmlGuiWindow
 public:
     ///Constructor
     KSquaresWindow();
-    ~KSquaresWindow();
+    ~KSquaresWindow() override;
 
 public Q_SLOTS:
     void  showHighscores();

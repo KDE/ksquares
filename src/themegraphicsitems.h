@@ -19,9 +19,9 @@ class KSquaresSquareItem : public QGraphicsRectItem
 {
 public:
     explicit KSquaresSquareItem(QGraphicsItem *parent = nullptr);
-    ~KSquaresSquareItem();
+    ~KSquaresSquareItem() override;
 
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) Q_DECL_OVERRIDE;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
 };
 
 #endif // THEMEGRAPHICSITEMS_H

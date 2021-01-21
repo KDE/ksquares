@@ -45,7 +45,7 @@ class KSquaresGame : public QObject
 public:
     ///Constructor
     KSquaresGame();
-    ~KSquaresGame();
+    ~KSquaresGame() override;
 
     /**
      * Create a new game

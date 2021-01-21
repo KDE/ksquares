@@ -58,7 +58,7 @@ int KSquaresGame::nextPlayer()
     currentPlayerId() >= (players.size() - 1) ? i_currentPlayerId = 0 : i_currentPlayerId++;
     //qDebug()<< "- Moving to next player:" << currentPlayer()->name() << "(" << currentPlayerId() << ")";
     //qDebug() << "-";
-    emit takeTurnSig(currentPlayer());
+    Q_EMIT takeTurnSig(currentPlayer());
 
     return currentPlayerId();
 }
@@ -69,7 +69,7 @@ void KSquaresGame::playerSquareComplete(int index)
     anotherGo = true;
 
     squareOwnerTable[index] = currentPlayerId();    //add square to index
-    emit drawSquare(index, currentPlayer()->colour());
+    Q_EMIT drawSquare(index, currentPlayer()->colour());
     currentPlayer()->incScore();
 
     int totalPoints = 0;
@@ -80,7 +80,7 @@ void KSquaresGame::playerSquareComplete(int index)
     if (totalPoints >= width * height) { //if the board is full
         //qDebug() << "Game Over";
         gameInProgress = false;
-        emit gameOver(players);
+        Q_EMIT gameOver(players);
     }
 }
 
@@ -92,12 +92,12 @@ void KSquaresGame::tryEndGo()
             //qDebug() << "- - - Having another go";
             //qDebug() << "-";
             anotherGo = false;
-            emit takeTurnSig(currentPlayer());
+            Q_EMIT takeTurnSig(currentPlayer());
         }
     } else {
         //qDebug() << "- - - Go ending";
         if (!currentPlayer()->isHuman()) {
-            emit highlightMove(lastLine);
+            Q_EMIT highlightMove(lastLine);
         }
         nextPlayer();
     }
@@ -128,7 +128,7 @@ void KSquaresGame::addLineToIndex(int index)
     lineList[index] = true;
     lastLine = index;
 
-    emit drawLine(index, Settings::lineColor());
+    Q_EMIT drawLine(index, Settings::lineColor());
 
     if (gameInProgress) {
         checkForNewSquares();
@@ -151,7 +151,7 @@ void KSquaresGame::checkForNewSquares()
             }
         }
     }
-    //emit lineDrawnSig();
+    //Q_EMIT lineDrawnSig();
     tryEndGo();
 }
 

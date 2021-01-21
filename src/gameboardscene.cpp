@@ -183,7 +183,7 @@ void GameBoardScene::addLineToIndex(const QList<QGraphicsEllipseItem *> &pointPa
         return;
     }
 
-    emit lineDrawn(index);  //addLineToIndex(index);
+    Q_EMIT lineDrawn(index);  //addLineToIndex(index);
 }
 
 QList<QGraphicsEllipseItem *> GameBoardScene::getTwoNearestPoints(const QPointF &pos) const

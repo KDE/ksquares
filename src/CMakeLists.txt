@@ -11,11 +11,10 @@ set(ksquares_SRCS
     themegraphicsitems.cpp
     highlightanimation.cpp
     scoresdialog.cpp
+    ksquares.qrc
 )
 
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX KSQUARES VERSION_HEADER ksquares_version.h)
-
-qt5_add_resources(ksquares_SRCS ksquares.qrc)
 
 ki18n_wrap_ui(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_display.ui)
 

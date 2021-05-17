@@ -1,5 +1,11 @@
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX KSQUARES
+    VERSION_HEADER ksquares_version.h
+)
 
-set(ksquares_SRCS
+add_executable(ksquares)
+
+target_sources(ksquares PRIVATE
     main.cpp
     ksquareswindow.cpp
     gameboardview.cpp
@@ -11,32 +17,32 @@ set(ksquares_SRCS
     themegraphicsitems.cpp
     highlightanimation.cpp
     scoresdialog.cpp
+
     ksquares.qrc
 )
 
-ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX KSQUARES VERSION_HEADER ksquares_version.h)
+ki18n_wrap_ui(ksquares
+    newgamewidget.ui
+    scoreswidget.ui
+    prefs_ai.ui
+    prefs_display.ui
+)
 
-ki18n_wrap_ui(ksquares_SRCS newgamewidget.ui scoreswidget.ui prefs_ai.ui prefs_display.ui)
-
-kconfig_add_kcfg_files(ksquares_SRCS GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
+kconfig_add_kcfg_files(ksquares GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ksquares.png")
-ecm_add_app_icon(ksquares_SRCS ICONS ${ICONS_SRCS})
-add_executable(ksquares ${ksquares_SRCS})
+ecm_add_app_icon(ksquares ICONS ${ICONS_SRCS})
 
 target_link_libraries(ksquares
+    KF5KDEGames
     KF5::Completion
     KF5::Crash
     KF5::DBusAddons
     KF5::I18n
     KF5::XmlGui
-    KF5KDEGames
 )
 
 install(TARGETS ksquares ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-
-
-########### install files ###############
 
 install(PROGRAMS org.kde.ksquares.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.ksquares.appdata.xml DESTINATION  ${KDE_INSTALL_METAINFODIR})

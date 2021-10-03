@@ -4,42 +4,44 @@
   <!ENTITY % English "INCLUDE" > <!-- change language only here -->
   <!ENTITY % addindex "IGNORE"> <!-- do not change this! -->
 ]>
- 
+
 <book id="ksquares" lang="&language;"> <!-- do not change this! -->
 <bookinfo>
 	<title>The &ksquares; Handbook</title> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
 <!-- List of immidiate authors begins here. -->
 <!--INPORTANT! - All other contributors: [to be determined] -->
 <authorgroup>
-    <author>
+  <author>
+    <personname>
+      <firstname>Matt</firstname>
+      <surname>Williams</surname>
+    </personname>
+    <email>matt@milliams.com</email>
+  </author>
 
-      <personname>
-        <firstname>Matt</firstname>
-        <surname>Williams</surname>
-      </personname>
-      <email>matt@milliams.com</email>
-    </author>
-<othercredit role="reviewer">
-<firstname>Eugene</firstname><surname>Trounev</surname>
-<contrib>Reviewer</contrib>
-<affiliation><address>eugene.trounev@gmail.com</address></affiliation>
-</othercredit>
-    <!-- TRANS:ROLES_OF_TRANSLATORS -->
-  </authorgroup>
+  <othercredit role="reviewer">
+    <firstname>Eugene</firstname>
+    <surname>Trounev</surname>
+    <contrib>Reviewer</contrib>
+    <affiliation><address>eugene.trounev@gmail.com</address></affiliation>
+  </othercredit>
+  <!-- TRANS:ROLES_OF_TRANSLATORS -->
+</authorgroup>
 
-  <copyright>
-    <year>2006</year>
-    <holder>Matt Williams</holder>
-  </copyright>
-<legalnotice>&FDLNotice;</legalnotice> 
-<date>2016-05-10</date>
-<releaseinfo>0.6 (Applications 16.04)</releaseinfo>
- 
+<copyright>
+  <year>2006</year>
+  <holder>Matt Williams</holder>
+</copyright>
+
+<legalnotice>&FDLNotice;</legalnotice>
+<date>2021-10-03</date>
+<releaseinfo>0.6 (KDE Gear 21.08)</releaseinfo>
+
 <!--Short description of this document. Do not change unless necessary!-->
 <abstract>
 	<para>This documentation describes the game of &ksquares; version 0.6</para>
 </abstract>
- 
+
 <!--List of relevan keywords-->
 <keywordset>
 	<keyword>KDE</keyword> <!-- do not change this! -->
@@ -64,11 +66,11 @@
 <chapter id="introduction"><title>Introduction</title> <!-- do not change this! -->
 	<note><title>Gametype:</title><para>Board</para></note><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
 	<note><title>Number of possible players:</title><para>Four</para></note>
-	<para>&ksquares; is a fun and exciting game by &kde;. &ksquares; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
+	<para>&ksquares; is a fun and exciting game. &ksquares; is modeled after the well known pen and paper based game of Dots and Boxes.</para>
 <para>The idea behind &ksquares; is to construct squares by interconnecting the dots on the grid. Up to four players can play this game together, taking turns. The trick is – regardless of who has constructed most of the square, it is the player who completes the square that gets the point for it.</para>
 <para>To win the game round player has to collect the most points by covering the most area with the squares of player's own color.</para>
 </chapter>
- 
+
 <chapter id="howto"><title>How to Play</title> <!-- do not change this! -->
 <!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
 	<note><title>Objective:</title><para>Complete more squares than any of your opponents.</para></note><!--Describe the objective of the game.-->
@@ -94,10 +96,10 @@
   The game will continue until every square on the board is owned by one of the players.
   </para>
   <para>
-  To start a new game with custom settings (number of players, player names, board size) click on the <guibutton>New</guibutton> toolbar button or go to <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut><guimenu>Game</guimenu><guimenuitem>New</guimenuitem></menuchoice>. To start a new game with the same settings as the current game, click on <guibutton>Restart Game</guibutton> on the toolbar.
+  To start a new game with custom settings (number of players, player names, board size) click on the <guibutton>New</guibutton> toolbar button or go to <menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut> <guimenu>Game</guimenu> <guimenuitem>New</guimenuitem></menuchoice> menu item. To start a new game with the same settings as the current game, click on <guibutton>Restart Game</guibutton> button on the toolbar.
   </para>
 </chapter>
- 
+
 <chapter id="rules_and_tips"><title>Game Rules, Strategies and Tips</title> <!-- do not change this! -->
 	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
 <sect1 id="rules">
@@ -123,58 +125,40 @@
     </itemizedlist>
 </sect1>
 </chapter>
-  
+
 <chapter id="menu-items">
   <title>Menu Items</title>
   <para>
     <variablelist>
       <varlistentry>
-	<term>
-	  <menuchoice>
-	    <shortcut>
-	      <keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
-	    </shortcut>
-	    <guimenu>Game</guimenu>
-	    <guimenuitem>New</guimenuitem>
-	  </menuchoice>
-	</term>
-	<listitem><para><action>Start a new game</action></para></listitem>
+        <term><menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo></shortcut>
+        <guimenu>Game</guimenu>
+        <guimenuitem>New</guimenuitem></menuchoice></term>
+        <listitem><para><action>Start a new game.</action></para></listitem>
       </varlistentry>
       <varlistentry>
-	<term><menuchoice><shortcut><keycap>F5</keycap></shortcut>
-	    <guimenu>Game</guimenu><guimenuitem>Restart Game</guimenuitem></menuchoice></term>
-	<listitem><para>Starts a new game with the same settings as the current game.</para></listitem>
+        <term><menuchoice><shortcut><keycap>F5</keycap></shortcut>
+        <guimenu>Game</guimenu>
+        <guimenuitem>Restart Game</guimenuitem></menuchoice></term>
+        <listitem><para>Starts a new game with the same settings as the current game.</para></listitem>
       </varlistentry>
       <varlistentry>
-	<term>
-	  <menuchoice>
-	    <shortcut>
-	      <keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo>
-	    </shortcut>
-	    <guimenu>Game</guimenu>
-	    <guimenuitem>Show High Scores</guimenuitem>
-	  </menuchoice>
-	</term>
-	<listitem><para><action>Displays</action> the high score table</para></listitem>
+        <term><menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut>
+        <guimenu>Game</guimenu>
+        <guimenuitem>Show High Scores...</guimenuitem></menuchoice></term>
+        <listitem><para><action>Displays</action> the high score table.</para></listitem>
       </varlistentry>
       <varlistentry>
-	<term>
-	  <menuchoice>
-	    <shortcut>
-	      <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
-	    </shortcut>
-	    <guimenu>Game</guimenu>
-	    <guimenuitem>Quit</guimenuitem>
-	  </menuchoice>
-	</term>
-	<listitem><para><action>Quits</action> &ksquares;</para></listitem>
+        <term><menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo></shortcut>
+        <guimenu>Game</guimenu>
+        <guimenuitem>Quit</guimenuitem></menuchoice></term>
+        <listitem><para><action>Quits</action> &ksquares;.</para></listitem>
       </varlistentry>
       <varlistentry id="settings-menu-settings">
-	<term><menuchoice>
-	    <guimenu>Settings</guimenu>
-	    <guimenuitem>Configure &ksquares;...</guimenuitem>
-	    </menuchoice></term>
-	<listitem><para><action>Opens a dialog to configure &ksquares;.</action> See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
+        <term><menuchoice>
+        <guimenu>Settings</guimenu>
+        <guimenuitem>Configure &ksquares;...</guimenuitem></menuchoice></term>
+        <listitem><para><action>Opens a dialog to configure &ksquares;.</action> See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
       </varlistentry>
     </variablelist>
   </para>
@@ -185,16 +169,16 @@
     <ulink url="help:/fundamentals/menus.html#menus-help">Help Menu</ulink>
     of the &kde; Fundamentals.
   </para>
-  
+
 </chapter>
-  
+
 <chapter id="faq"><title>Frequently asked questions</title> <!-- do not change this! -->
 <!--This chapter is for frequently asked questions. Please use <qandaset> <qandaentry> only!-->
 <qandaset>
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
  <question><para>I want to change the way this game looks. Can I? </para></question>
- <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &ksquares;...</guimenuitem></menuchoice> on the menubar. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
+ <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &ksquares;...</guimenuitem></menuchoice> menu item. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I have made a mistake. Can I undo? </para></question>
@@ -210,13 +194,13 @@
 </qandaentry>
 <qandaentry>
  <question><para>I have to quit the game now, but I am not finished yet. Can I save my progress?</para></question>
-  <answer><para>&ksquares; does not have a saving feature.</para></answer>
+  <answer><para>&ksquares; does not have a <quote>Save</quote> feature.</para></answer>
 </qandaentry>
 <!--Please add more Q&As if needed-->
- 
+
 </qandaset>
 </chapter>
- 
+
 <chapter id="configuration"><title>Game Configuration</title> <!-- do not change this! -->
 <sect1 id="newgame-dialog">
 <title>New Game Dialog</title>
@@ -234,11 +218,11 @@
 <variablelist>
   <varlistentry>
     <term><guilabel>Players</guilabel></term>
-    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players</guilabel> selection box to specify the number of participants. Then type a name for each participant and use the check box to specify the player type.</para></listitem>
+    <listitem><para>Here you can change the number of participating players, as well as determine who will be played by human and who by the artificial intelligence. Use the <guilabel>Number of players:</guilabel> spin-box to specify the number of participants. Then type a name for each participant and use the <guilabel>Human?</guilabel> check box to specify the player type.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Board</guilabel></term>
-    <listitem><para>Here you can regulate the size of the game board. Use the <guilabel>Width</guilabel> and <guilabel>Height</guilabel> selection boxes to change the width and height of the game board.</para></listitem>
+    <listitem><para>Here you can regulate the size of the game board. Use the <guilabel>Width:</guilabel> and <guilabel>Height:</guilabel> spin-boxes to change the width and height of the game board.</para></listitem>
   </varlistentry>
   <varlistentry>
     <term><guilabel>Game Settings</guilabel></term>
@@ -271,10 +255,10 @@
 </variablelist>
 </sect1>
 </chapter>
- 
+
 <chapter id="credits"><title>Credits and License</title> <!-- do not change this! -->
 <!--This chapter is for credits and licenses.-->
- 
+
 <para>
 &ksquares;  <!-- do not change this! -->
 </para>
@@ -282,7 +266,7 @@
 <para>
   Program copyright 2006 Matt Williams <email>matt@milliams.com</email>
   </para>
- 
+
   <para>Documentation Copyright &copy; 2006 Matt Williams <email>matt@milliams.com</email></para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
@@ -290,10 +274,10 @@
 
 &underFDL;
 &underGPL;
- 
+
 </chapter>
- 
-&documentation.index; 
+
+&documentation.index;
 </book>
 <!--
 Local Variables:

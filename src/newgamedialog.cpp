@@ -25,7 +25,7 @@ NewGameDialog::NewGameDialog(QWidget *parent) : QDialog(parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &NewGameDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &NewGameDialog::reject);
     mainLayout->addWidget(buttonBox);
-    setWindowTitle(i18n("New Game"));
+    setWindowTitle(i18nc("@title:window", "New Game"));
     connect(spinNumOfPlayers, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &NewGameDialog::adjustEnabledUsers);
 
     adjustEnabledUsers(spinNumOfPlayers->value());

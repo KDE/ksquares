@@ -112,7 +112,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>The typical board position in KSquares</caption>
-      <caption xml:lang="ca">La posició típica de tauler al KSquares</caption>
+      <caption xml:lang="ca">La posició típica de tauler en el KSquares</caption>
       <caption xml:lang="ca-valencia">La posició típica de tauler al KSquares</caption>
       <caption xml:lang="de">Eine typische Spielposition in KSquares</caption>
       <caption xml:lang="el">Η τυπική θέση του πίνακα στο KSquares</caption>
@@ -142,7 +142,7 @@
     </screenshot>
     <screenshot>
       <caption>The completed squares in KSquares</caption>
-      <caption xml:lang="ca">Els quadrats completats al KSquares</caption>
+      <caption xml:lang="ca">Els quadrats completats en el KSquares</caption>
       <caption xml:lang="ca-valencia">Els quadrats completats al KSquares</caption>
       <caption xml:lang="cs">Dokončené čtverce v KSquares</caption>
       <caption xml:lang="de">Die gefüllten Kästchen in KSquares</caption>

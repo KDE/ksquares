@@ -6,17 +6,28 @@ ecm_setup_version(${PROJECT_VERSION}
 add_executable(ksquares)
 
 target_sources(ksquares PRIVATE
-    main.cpp
-    ksquareswindow.cpp
-    gameboardview.cpp
-    gameboardscene.cpp
-    ksquaresgame.cpp
     aicontroller.cpp
-    newgamedialog.cpp
-    ksquaresdemowindow.cpp
-    themegraphicsitems.cpp
+    aicontroller.h
+    gameboardscene.cpp
+    gameboardscene.h
+    gameboardview.cpp
+    gameboardview.h
     highlightanimation.cpp
+    highlightanimation.h
+    ksquaresdemowindow.cpp
+    ksquaresdemowindow.h
+    ksquaresgame.cpp
+    ksquaresgame.h
+    ksquaresplayer.h
+    ksquareswindow.cpp
+    ksquareswindow.h
+    main.cpp
+    newgamedialog.cpp
+    newgamedialog.h
     scoresdialog.cpp
+    scoresdialog.h
+    themegraphicsitems.cpp
+    themegraphicsitems.h
 
     ksquares.qrc
 )

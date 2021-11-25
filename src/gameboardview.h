@@ -36,7 +36,7 @@ public:
     QSize minimumSizeHint() const override
     {
         if (scene() == nullptr) {
-            return QSize();
+          return {};
         } else {
             return qobject_cast<GameBoardScene *>(scene())->minimumSizeHint();
         }

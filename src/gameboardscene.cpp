@@ -28,7 +28,7 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
         for (int iHeight = 0; iHeight <= height; iHeight++) {
             int x = iWidth * spacing;
             int y = iHeight * spacing;
-            QGraphicsEllipseItem *dot = new QGraphicsEllipseItem(QRectF(-2, -2, 4, 4));
+            auto dot = new QGraphicsEllipseItem(QRectF(-2, -2, 4, 4));
             dot->moveBy(x, y);
             dot->setBrush(Qt::SolidPattern);
             dot->setZValue(20); // set the elevation, the dot's are on top
@@ -73,20 +73,20 @@ GameBoardScene::~GameBoardScene()
 
 void GameBoardScene::drawLine(int index, const QColor &colour)
 {
-    QGraphicsLineItem *line = new QGraphicsLineItem(lineFromIndex(index));
-    line->setZValue(10);
-    line->setPen(QPen(QBrush(colour), 2.5));
-    addItem(line);  //draw new line
-    lineList[index] = true; //keep this table in sync
-    indicatorLine->hide();
-    update(line->boundingRect());
+  auto line = new QGraphicsLineItem(lineFromIndex(index));
+  line->setZValue(10);
+  line->setPen(QPen(QBrush(colour), 2.5));
+  addItem(line);          // draw new line
+  lineList[index] = true; // keep this table in sync
+  indicatorLine->hide();
+  update(line->boundingRect());
 }
 
 void GameBoardScene::highlightLine(int index)
 {
-    HighlightAnimation *anim = new HighlightAnimation(lineFromIndex(index));
-    anim->setZValue(9);
-    addItem(anim);
+  auto anim = new HighlightAnimation(lineFromIndex(index));
+  anim->setZValue(9);
+  addItem(anim);
 }
 
 void GameBoardScene::drawSquare(int index, const QColor &colour)

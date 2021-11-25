@@ -18,10 +18,10 @@ HighlightAnimation::HighlightAnimation(const QLineF &line)
 {
     setPen(QPen(Settings::highlightColor(), 8.0, Qt::SolidLine, Qt::RoundCap));
 
-    QPropertyAnimation *animation = new QPropertyAnimation(this, "opacity", this);
+    auto animation = new QPropertyAnimation(this, "opacity", this);
     animation->setStartValue(1.0);
     animation->setEndValue(0.0);
-    QSequentialAnimationGroup *animGroup = new QSequentialAnimationGroup(this);
+    auto animGroup = new QSequentialAnimationGroup(this);
     animGroup->addPause(1000);
     animGroup->addAnimation(animation);
     animGroup->start(QAbstractAnimation::DeleteWhenStopped);

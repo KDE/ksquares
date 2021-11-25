@@ -200,7 +200,7 @@ void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
     ScoresDialog scoresDialog(this);
     scoresDialog.setWindowTitle(i18nc("@title:window", "Scores"));
 
-    QStandardItemModel *scoreTableModel = new QStandardItemModel(&scoresDialog);
+    auto scoreTableModel = new QStandardItemModel(&scoresDialog);
     scoreTableModel->setRowCount(playerList.size());
     scoreTableModel->setColumnCount(2);
     scoreTableModel->setHeaderData(0, Qt::Horizontal, i18n("Player Name"));
@@ -301,17 +301,21 @@ void KSquaresWindow::setupActions()
 
 void KSquaresWindow::optionsPreferences()
 {
-    KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("settings"), Settings::self());
+  auto dialog =
+      new KConfigDialog(this, QStringLiteral("settings"), Settings::self());
 
-    QWidget *displaySettingsDialog = new QWidget;
-    ui_prefs_display.setupUi(displaySettingsDialog);
-    dialog->addPage(displaySettingsDialog, i18n("Display"), QStringLiteral("preferences-desktop-display"));
+  auto displaySettingsDialog = new QWidget;
+  ui_prefs_display.setupUi(displaySettingsDialog);
+  dialog->addPage(displaySettingsDialog, i18n("Display"),
+                  QStringLiteral("preferences-desktop-display"));
 
-    QWidget *aiSettingsDialog = new QWidget;
-    ui_prefs_ai.setupUi(aiSettingsDialog);
-    dialog->addPage(aiSettingsDialog, i18n("Computer Player"), QStringLiteral("games-difficult"));
+  auto aiSettingsDialog = new QWidget;
+  ui_prefs_ai.setupUi(aiSettingsDialog);
+  dialog->addPage(aiSettingsDialog, i18n("Computer Player"),
+                  QStringLiteral("games-difficult"));
 
-    connect(dialog, &KConfigDialog::settingsChanged, m_view, &GameBoardView::setBoardSize);
-    dialog->show();
+  connect(dialog, &KConfigDialog::settingsChanged, m_view,
+          &GameBoardView::setBoardSize);
+  dialog->show();
 }
 

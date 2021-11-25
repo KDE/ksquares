@@ -13,22 +13,25 @@
 
 NewGameDialog::NewGameDialog(QWidget *parent) : QDialog(parent)
 {
-    QWidget *mainWidget = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    mainLayout->addWidget(mainWidget);
-    setupUi(mainWidget);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-    okButton->setDefault(true);
-    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &NewGameDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &NewGameDialog::reject);
-    mainLayout->addWidget(buttonBox);
-    setWindowTitle(i18nc("@title:window", "New Game"));
-    connect(spinNumOfPlayers, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this, &NewGameDialog::adjustEnabledUsers);
+  auto mainWidget = new QWidget(this);
+  auto mainLayout = new QVBoxLayout;
+  setLayout(mainLayout);
+  mainLayout->addWidget(mainWidget);
+  setupUi(mainWidget);
+  auto buttonBox =
+      new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+  QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+  okButton->setDefault(true);
+  okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+  connect(buttonBox, &QDialogButtonBox::accepted, this, &NewGameDialog::accept);
+  connect(buttonBox, &QDialogButtonBox::rejected, this, &NewGameDialog::reject);
+  mainLayout->addWidget(buttonBox);
+  setWindowTitle(i18nc("@title:window", "New Game"));
+  connect(spinNumOfPlayers,
+          static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged), this,
+          &NewGameDialog::adjustEnabledUsers);
 
-    adjustEnabledUsers(spinNumOfPlayers->value());
+  adjustEnabledUsers(spinNumOfPlayers->value());
 }
 
 void NewGameDialog::adjustEnabledUsers(int numOfPlayers)

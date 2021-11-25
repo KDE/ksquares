@@ -36,7 +36,9 @@ public:
     }
 
     ///Create a null player
-    KSquaresPlayer() {} //Needed to do QVector<KSquaresPlayer>::operator[int i] since it has to allocate memory i think
+    KSquaresPlayer() =
+        default; // Needed to do QVector<KSquaresPlayer>::operator[int i] since
+                 // it has to allocate memory i think
 
     /**
      * Sets the players name

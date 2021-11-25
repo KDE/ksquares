@@ -65,12 +65,12 @@ int main(int argc, char **argv)
     }
 
     if (parser.isSet(QStringLiteral("demo"))) {
-        KSquaresDemoWindow *demoWindow = new KSquaresDemoWindow;
-        demoWindow->show();
-        demoWindow->gameNew();
+      auto demoWindow = new KSquaresDemoWindow;
+      demoWindow->show();
+      demoWindow->gameNew();
     } else {
-        KSquaresWindow *mainWindow = new KSquaresWindow;
-        mainWindow->show();
+      auto mainWindow = new KSquaresWindow;
+      mainWindow->show();
     }
 
     return app.exec();

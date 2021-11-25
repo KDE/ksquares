@@ -12,7 +12,7 @@ KSquaresSquareItem::KSquaresSquareItem(QGraphicsItem *parent) : QGraphicsRectIte
 {
 }
 
-KSquaresSquareItem::~KSquaresSquareItem() {}
+KSquaresSquareItem::~KSquaresSquareItem() = default;
 
 void KSquaresSquareItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {

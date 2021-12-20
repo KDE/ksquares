@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=KSquares
+Name[ar]=لعبة المربعات (كسكوير)
 Name[be]=KSquares
 Name[bs]=KSquares
 Name[ca]=KSquares
@@ -57,6 +58,7 @@ Icon=ksquares
 Type=Application
 X-DocPath=ksquares/index.html
 GenericName=Connect the dots to create squares
+GenericName[ar]=صل النقاط لتنشئ مربعات
 GenericName[bs]=Poveži tačke da napraviš kvadrat
 GenericName[ca]=Connecteu els punts per a crear quadrats
 GenericName[ca@valencia]=Connecteu els punts per a crear quadrats
@@ -107,6 +109,7 @@ GenericName[x-test]=xxConnect the dots to create squaresxx
 GenericName[zh_CN]=连接点创建方形
 GenericName[zh_TW]=將點連起來組成方塊
 Comment=Connect the dots to create squares
+Comment[ar]=صل النقاط لتنشئ مربعات
 Comment[ca]=Connecteu els punts per a crear quadrats
 Comment[ca@valencia]=Connecteu els punts per a crear quadrats
 Comment[cs]=Spojte tečky a vytvořte čtverce

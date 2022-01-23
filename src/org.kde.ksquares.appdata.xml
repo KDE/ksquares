@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KSquares</name>
+  <name xml:lang="ar">المربعات</name>
   <name xml:lang="ca">KSquares</name>
   <name xml:lang="ca-valencia">KSquares</name>
   <name xml:lang="cs">KSquares</name>
@@ -39,6 +40,7 @@
   <name xml:lang="zh-CN">KSquares</name>
   <name xml:lang="zh-TW">KSquares</name>
   <summary>Connect the dots to create squares</summary>
+  <summary xml:lang="ar">صل النقاط لتنشئ مربعات</summary>
   <summary xml:lang="ca">Connecteu els punts per a crear quadrats</summary>
   <summary xml:lang="ca-valencia">Connecteu els punts per a crear quadrats</summary>
   <summary xml:lang="cs">Spojte tečky a vytvořte čtverce</summary>
@@ -74,6 +76,7 @@
   <summary xml:lang="zh-TW">將點連起來組成方塊</summary>
   <description>
     <p>KSquares is a game modeled after the well known pen and paper based game of Dots and Boxes. Each player takes it in turns to draw a line between two adjacent dots on the board. The objective is to complete more squares than your opponents.</p>
+    <p xml:lang="ar">المربعات هي لعبة على غرار لعبة القلم والورق المعروفة Dots and Boxes. يأخذ كل لاعب دوره لرسم خط بين نقطتين متجاورتين على اللوحة. الهدف هو إكمال مربعات أكثر من خصومك.</p>
     <p xml:lang="ca">El KSquares és un joc modelat després del conegut Quadrats jugat amb llapis i paper. Per torns, cada jugador dibuixa una línia entre dos punts adjacents del tauler. L'objectiu és completar més quadrats que els adversaris.</p>
     <p xml:lang="ca-valencia">El KSquares és un joc modelat després del conegut Quadrats jugat amb llapis i paper. Per torns, cada jugador dibuixa una línia entre dos punts adjacents del tauler. L'objectiu és completar més quadrats que els adversaris.</p>
     <p xml:lang="de">KSquares ist ein Spiel, das an das bekannte „Papier und Stift“-Spiel Käsekästchen angelehnt ist. Jeder Spieler muss der Reihe nach einen Strich zwischen zwei benachbarten Punkten zeichnen. Ziel des Spiels ist es, mehr Kästchen als der Gegner zu malen.</p>
@@ -112,6 +115,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>The typical board position in KSquares</caption>
+      <caption xml:lang="ar">موقع اللوحة النموذجي في لعبة المربعات</caption>
       <caption xml:lang="ca">La posició típica de tauler en el KSquares</caption>
       <caption xml:lang="ca-valencia">La posició típica de tauler en el KSquares</caption>
       <caption xml:lang="de">Eine typische Spielposition in KSquares</caption>
@@ -142,6 +146,7 @@
     </screenshot>
     <screenshot>
       <caption>The completed squares in KSquares</caption>
+      <caption xml:lang="ar">المربعات المكتملة في لعبة المربعات</caption>
       <caption xml:lang="ca">Els quadrats completats en el KSquares</caption>
       <caption xml:lang="ca-valencia">Els quadrats completats en el KSquares</caption>
       <caption xml:lang="cs">Dokončené čtverce v KSquares</caption>
@@ -173,6 +178,7 @@
     </screenshot>
     <screenshot>
       <caption>An initial board in KSquares</caption>
+      <caption xml:lang="ar">اللوحة المبدئية للعبة المربعات</caption>
       <caption xml:lang="ca">Un tauler inicial al KSquares</caption>
       <caption xml:lang="ca-valencia">Un tauler inicial al KSquares</caption>
       <caption xml:lang="de">Spielbeginn in KSquares</caption>

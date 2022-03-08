@@ -46,6 +46,7 @@ ecm_add_app_icon(ksquares ICONS ${ICONS_SRCS})
 
 target_link_libraries(ksquares
     KF5KDEGames
+    KF5::CoreAddons
     KF5::Completion
     KF5::Crash
     KF5::DBusAddons

@@ -138,6 +138,7 @@
       <caption xml:lang="sk">Typická pozícia dosky v KSquares</caption>
       <caption xml:lang="sl">Tipična postavitev v KSquares</caption>
       <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
+      <caption xml:lang="tr">KSquares'teki tipik tahta konumu</caption>
       <caption xml:lang="uk">Типова позиція у KSquares</caption>
       <caption xml:lang="x-test">xxThe typical board position in KSquaresxx</caption>
       <caption xml:lang="zh-CN">KSquares 中的典型棋盘位</caption>
@@ -170,6 +171,7 @@
       <caption xml:lang="sk">Vyplnené štvorce v KSquares</caption>
       <caption xml:lang="sl">Zaključeni kvadrati v KSquares</caption>
       <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
+      <caption xml:lang="tr">KSquares'teki tamamlanmış kareler</caption>
       <caption xml:lang="uk">Заповнені квадратики у KSquares</caption>
       <caption xml:lang="x-test">xxThe completed squares in KSquaresxx</caption>
       <caption xml:lang="zh-CN">KSquares 中画出的完整正方形</caption>
@@ -201,6 +203,7 @@
       <caption xml:lang="sk">Počiatočná doska v KSquares</caption>
       <caption xml:lang="sl">Začetna postavitev v KSquares</caption>
       <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>
+      <caption xml:lang="tr">KSquares başlangıç görünümü</caption>
       <caption xml:lang="uk">Початкове ігрове поле у KSquares</caption>
       <caption xml:lang="x-test">xxAn initial board in KSquaresxx</caption>
       <caption xml:lang="zh-CN">KSquares 中的初始棋盘</caption>

@@ -96,6 +96,7 @@
     <p xml:lang="pl">Kwadraty jest grą wzorującą się na dobrze znanej grze w kropki i pola opartej na ołówku i kartce papieru. Każdy gracz w swojej turze rysuje linię pomiędzy dwoma sąsiednimi kropkami na planszy. Celem jest nakreślenie większej liczby kwadratów niż twój przeciwnik</p>
     <p xml:lang="pt">O KSquares é um jogo modelado com base no conhecido jogo de Pontos e Caixas, com papel e caneta. Cada jogador. Joga por turnos para desenhar uma linha entre dois pontos adjacentes no tabuleiro. O objectivo é completar mais quadrados que os seus adversários.</p>
     <p xml:lang="pt-BR">KSquares é um jogo modelado com base no conhecido jogo dos Pontinhos, que é jogado com papel e caneta. Cada jogador desenha uma linha de forma alternada entre dois pontos adjacentes no tabuleiro. O objetivo é completar mais quadrados que os seus adversários.</p>
+    <p xml:lang="ru">KSquares — приложение вдохновлено популярной игрой в точки и квадраты с помощью ручки и бумаги. Каждый игрок совершает ход, чтобы провести линию между двумя соседними точками на доске. Цель игры заключается в том, чтобы завершить больше квадратов, чем соперники.</p>
     <p xml:lang="sk">KSquares je hra podľa známej hry Body a štvorce. Každý hráč urobí ťah na nakreslenie čiary medzi dvoma bodmi na ploche. Cieľom je urobiť viac štvorcov ako súper.</p>
     <p xml:lang="sl">KSquares je igra, ki temelji na znani namizni igri s papirjem in svinčnikom imenovani Dots and Boxes. Igralca izmenično rišeta črte med sosednjimi pikami na igralni površini. Cilj igre je dopolniti več kvadratov kot nasprotnik.</p>
     <p xml:lang="sr">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>
@@ -135,6 +136,7 @@
       <caption xml:lang="pl">Zwyczajowe położenie planszy w Kwadratach</caption>
       <caption xml:lang="pt">A posição típica do tabuleiro no KSquares</caption>
       <caption xml:lang="pt-BR">A posição típica do tabuleiro no KSquares</caption>
+      <caption xml:lang="ru">Типичное положение игровой доски в KSquares</caption>
       <caption xml:lang="sk">Typická pozícia dosky v KSquares</caption>
       <caption xml:lang="sl">Tipična postavitev v KSquares</caption>
       <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
@@ -168,6 +170,7 @@
       <caption xml:lang="pl">Ukończone kwadraty w Kwadratach</caption>
       <caption xml:lang="pt">Os quadrados completos no KSquares</caption>
       <caption xml:lang="pt-BR">Os quadrados completos no KSquares</caption>
+      <caption xml:lang="ru">Завершённые квадраты в KSquares</caption>
       <caption xml:lang="sk">Vyplnené štvorce v KSquares</caption>
       <caption xml:lang="sl">Zaključeni kvadrati v KSquares</caption>
       <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
@@ -200,6 +203,7 @@
       <caption xml:lang="pl">Początkowa plansza w Kwadratach</caption>
       <caption xml:lang="pt">Um tabuleiro inicial no KSquares</caption>
       <caption xml:lang="pt-BR">Um tabuleiro inicial no KSquares</caption>
+      <caption xml:lang="ru">Начальная игровая доска в KSquares</caption>
       <caption xml:lang="sk">Počiatočná doska v KSquares</caption>
       <caption xml:lang="sl">Začetna postavitev v KSquares</caption>
       <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>

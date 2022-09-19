@@ -110,7 +110,7 @@
     <p xml:lang="zh-CN">KSquares 是一款模仿知名纸笔游戏——点格棋的游戏。每位玩家轮流在棋盘两个相邻点间画线，目标是比对手画出更多正方形。</p>
     <p xml:lang="zh-TW">KSquare 是一套古老遊戲的翻版。每個玩家輪到自己時可以在兩個相鄰的點間劃一條線。目標是比對手劃出更多的正方形。</p>
   </description>
-  <url type="homepage">https://www.kde.org</url>
+  <url type="homepage">https://apps.kde.org/ksquares</url>
   <url type="bugtracker">https://bugs.kde.org</url>
   <url type="donation">https://www.kde.org/community/donations/?app=ksquares&amp;source=appdata</url>
   <screenshots>

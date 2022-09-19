@@ -39,11 +39,13 @@ int main(int argc, char **argv)
     KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"),
                      QStringLiteral(KSQUARES_VERSION_STRING),
                      i18n("Take it in turns to draw lines.\nIf you complete a squares, you get another go."),
-                     KAboutLicense::GPL, i18n("(C) 2006-2007 Matt Williams"));
+                     KAboutLicense::GPL,
+                     i18n("(C) 2006-2007 Matt Williams"),
+                     QString(),
+                     QStringLiteral("https://apps.kde.org/ksquares"));
     about.addAuthor(i18n("Matt Williams"), i18n("Original creator and maintainer"), QStringLiteral("matt@milliams.com"), QStringLiteral("https://milliams.com"));
     about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
     about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
-    about.setHomepage(QStringLiteral("https://games.kde.org/ksquares"));
 
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);

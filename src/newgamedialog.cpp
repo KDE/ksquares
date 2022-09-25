@@ -6,7 +6,6 @@
 
 #include "newgamedialog.h"
 #include <QDebug>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

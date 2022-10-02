@@ -1,0 +1,480 @@
+# Translation of ksquares.po into Serbian.
+# Slobodan Simic <slsimic@gmail.com>, 2007, 2009.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2013.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksquares\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-12 03:24+0200\n"
+"PO-Revision-Date: 2010-09-24 14:33+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Слободан Симић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "slsimic@gmail.com"
+
+#. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
+#: ksquares.kcfg:10
+#, kde-format
+msgid "Number of Players"
+msgstr "Број играча"
+
+#. i18n: ectx: label, entry (PlayerNames), group (Game Settings)
+#: ksquares.kcfg:14
+#, kde-format
+msgid "Player Names"
+msgstr "Имена играча"
+
+#. i18n: ectx: label, entry (HumanList), group (Game Settings)
+#: ksquares.kcfg:17
+#, kde-format
+msgid "Human or AI"
+msgstr "Човек или ВИ"
+
+#. i18n: ectx: label, entry (BoardWidth), group (Game Settings)
+#: ksquares.kcfg:21
+#, kde-format
+msgid "Width of board"
+msgstr "Ширина табле"
+
+#. i18n: ectx: label, entry (BoardHeight), group (Game Settings)
+#: ksquares.kcfg:25
+#, kde-format
+msgid "Height of board"
+msgstr "Висина табле"
+
+#. i18n: ectx: label, entry (QuickStart), group (Game Settings)
+#: ksquares.kcfg:29
+#, kde-format
+msgid "Quick start the game"
+msgstr "Брзи почетак игре"
+
+#. i18n: ectx: label, entry (Difficulty), group (AI)
+#: ksquares.kcfg:35
+#, kde-format
+msgid "Difficulty"
+msgstr "Тежина"
+
+#. i18n: ectx: whatsthis, entry (Difficulty), group (AI)
+#: ksquares.kcfg:36
+#, kde-format
+msgid "How difficult the AI should be"
+msgstr "Колико јака ће бити ВИ"
+
+#. i18n: ectx: label, entry (LineColor), group (Display)
+#: ksquares.kcfg:42
+#, kde-format
+msgid "Line Color"
+msgstr "Боја линије"
+
+#. i18n: ectx: label, entry (IndicatorLineColor), group (Display)
+#: ksquares.kcfg:47
+#, kde-format
+msgid "Indicator Line Color"
+msgstr "Боја линије индикатора"
+
+#. i18n: ectx: label, entry (HighlightColor), group (Display)
+#: ksquares.kcfg:52
+#, kde-format
+msgid "Highlight Color"
+msgstr "Боја истицања"
+
+#: ksquaresdemowindow.cpp:68
+#, kde-format
+msgid "Player %1"
+msgstr "Играч %1"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ksquaresui.rc:11
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Главна трака"
+
+#: ksquareswindow.cpp:60
+#, kde-format
+msgid "Current Player"
+msgstr "Текући играч"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:71 ksquareswindow.cpp:232 ksquareswindow.cpp:238
+#: ksquareswindow.cpp:243 prefs_ai.ui:54
+#, kde-format
+msgid "Easy"
+msgstr "лако"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:72 ksquareswindow.cpp:233 ksquareswindow.cpp:237
+#: ksquareswindow.cpp:244 prefs_ai.ui:59
+#, kde-format
+msgid "Medium"
+msgstr "средње"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:73 ksquareswindow.cpp:234 ksquareswindow.cpp:239
+#: ksquareswindow.cpp:242 prefs_ai.ui:64
+#, kde-format
+msgid "Hard"
+msgstr "тешко"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
+#: ksquareswindow.cpp:204 scoreswidget.ui:13
+#, kde-format
+msgid "Scores"
+msgstr "Резултати"
+
+# >> @title:column
+#: ksquareswindow.cpp:209
+#, kde-format
+msgid "Player Name"
+msgstr "име играча"
+
+# >> @title:column
+#: ksquareswindow.cpp:210
+#, kde-format
+msgid "Completed Squares"
+msgstr "завршена поља"
+
+#: ksquareswindow.cpp:294
+#, kde-format
+msgid "Start a new game with the current settings"
+msgstr "Покрени нову игру са тренутним поставкама"
+
+#: ksquareswindow.cpp:311
+#, kde-format
+msgid "Display"
+msgstr "Приказ"
+
+#: ksquareswindow.cpp:315
+#, kde-format
+msgid "Computer Player"
+msgstr "Рачунарски играч"
+
+#: main.cpp:26
+#, kde-format
+msgid ""
+"Take it in turns to draw lines.\n"
+"If you complete a squares, you get another go."
+msgstr ""
+"На потезе цртате линије.\n"
+"Кад год затворите квадрат, играте још једном."
+
+#: main.cpp:39
+#, kde-format
+msgid "KSquares"
+msgstr "К‑квадрати"
+
+#: main.cpp:40
+#, kde-format
+msgid "(C) 2006-2007 Matt Williams"
+msgstr "© 2006–2007, Мат Вилијамс"
+
+#: main.cpp:41
+#, kde-format
+msgid "Matt Williams"
+msgstr "Мат Вилијамс"
+
+#: main.cpp:41
+#, kde-format
+msgid "Original creator and maintainer"
+msgstr "Првобитни творац и одржавалац"
+
+#: main.cpp:42
+#, kde-format
+msgid "Fela Winkelmolen"
+msgstr "Фела Винкелмолен"
+
+#: main.cpp:42
+#, kde-format
+msgid "Many patches and bugfixes"
+msgstr "Многе закрпе и сређивања грешака"
+
+#: main.cpp:43
+#, kde-format
+msgid "Tom Vincent Peters"
+msgstr "Том Винсент-Петерс"
+
+#: main.cpp:43
+#, kde-format
+msgid "Hard AI"
+msgstr "Тешка ВИ"
+
+#: main.cpp:49
+#, kde-format
+msgid "Run game in demo (autoplay) mode"
+msgstr "Покрени игру у демо режиму"
+
+#: main.cpp:63 main.cpp:64 main.cpp:65
+#, kde-format
+msgctxt "default name of player"
+msgid "Player %1"
+msgstr "Играч %1"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, NewGameWidget)
+#: newgamedialog.cpp:31 newgamewidget.ui:13
+#, kde-format
+msgid "New Game"
+msgstr "Нова игра"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:37
+#, kde-format
+msgid "Settings for the players in the game"
+msgstr "Поставке за учеснике игре."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:40
+#, kde-format
+msgid "Players"
+msgstr "Играчи"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:64
+#, kde-format
+msgid "The name of the fourth player"
+msgstr "Име четвртог играча."
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:67
+#, kde-format
+msgid "Player 4:"
+msgstr "Играч 4:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerFourHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerOneHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:80 newgamewidget.ui:96 newgamewidget.ui:166
+#: newgamewidget.ui:214
+#, kde-format
+msgid "Should this player be controlled by a human"
+msgstr "Да ли овим играчем управља човек."
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
+#: newgamewidget.ui:83
+#, kde-format
+msgid "Hum&an?"
+msgstr "Чо&век"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
+#: newgamewidget.ui:99
+#, kde-format
+msgid "Hu&man?"
+msgstr "Чов&ек"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:109
+#, kde-format
+msgid "The name of the third player"
+msgstr "Име трећег играча."
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:112
+#, kde-format
+msgid "Player 3:"
+msgstr "Играч 3:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:131
+#, kde-format
+msgid "The name of the second player"
+msgstr "Име другог играча."
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:134
+#, kde-format
+msgid "Player 2:"
+msgstr "Играч 2:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
+#: newgamewidget.ui:169
+#, kde-format
+msgid "&Human?"
+msgstr "Ч&овек"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:182
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">How many players will be "
+"in the game</p></body></html>"
+msgstr "<html>Колико ће играча учествовати у игри.</html>"
+
+#. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:185
+#, kde-format
+msgid "Number of players:"
+msgstr "Број играча:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:198
+#, kde-format
+msgid "The name of the first player"
+msgstr "Име првог играча"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:201
+#, kde-format
+msgid "Player 1:"
+msgstr "Играч 1:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:217
+#, kde-format
+msgid "H&uman?"
+msgstr "&Човек"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:230
+#, kde-format
+msgid "Settings for the game board"
+msgstr "Поставке табле за игру."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:233
+#, kde-format
+msgid "Game Board"
+msgstr "Табла за игру"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelWidth)
+#: newgamewidget.ui:257
+#, kde-format
+msgid "The number of squares the area is wide"
+msgstr "Број квадрата по ширини области."
+
+#. i18n: ectx: property (text), widget (QLabel, labelWidth)
+#: newgamewidget.ui:260
+#, kde-format
+msgid "Width:"
+msgstr "Ширина:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelHeight)
+#: newgamewidget.ui:289
+#, kde-format
+msgid "The number of squares the area is high"
+msgstr "Број квадрата по висини области."
+
+#. i18n: ectx: property (text), widget (QLabel, labelHeight)
+#: newgamewidget.ui:292
+#, kde-format
+msgid "Height:"
+msgstr "Висина:"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:324
+#, kde-format
+msgid "Settings for the game"
+msgstr "Поставке игре."
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:327
+#, kde-format
+msgid "Game Settings"
+msgstr "Поставке игре"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:351
+#, kde-format
+msgid "Partially fill in the board automatically before the game starts"
+msgstr "Аутоматско делимично попуњавање табле пре почетка игре."
+
+#. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:354
+#, kde-format
+msgid "Quick start"
+msgstr "Брзи почетак"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_ai)
+#: prefs_ai.ui:13
+#, kde-format
+msgid "AI Settings"
+msgstr "Поставке ВИ"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:75
+#, kde-format
+msgid "How difficult it will be to beat the computer"
+msgstr "Колико је тешко победити рачунар."
+
+#. i18n: ectx: property (text), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:78
+#, kde-format
+msgid "AI difficulty:"
+msgstr "Јачина ВИ:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_display)
+#: prefs_display.ui:13
+#, kde-format
+msgid "Display Settings"
+msgstr "Поставке приказа"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:19
+#, kde-format
+msgid "Settings for colors"
+msgstr "Поставке боја"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:22
+#, kde-format
+msgid "Colors"
+msgstr "Боје"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:28
+#, kde-format
+msgid "Color of the drawn lines"
+msgstr "Боја исцртаних линија."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:31
+#, kde-format
+msgid "Standard line color:"
+msgstr "Боја обичних линија:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#: prefs_display.ui:44 prefs_display.ui:60
+#, kde-format
+msgid "Color of the indicator lines"
+msgstr "Боја линија показатеља."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: prefs_display.ui:47
+#, kde-format
+msgid "Indicator line color:"
+msgstr "Боја линија показатеља:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: prefs_display.ui:63
+#, kde-format
+msgid "Highlight color:"
+msgstr "Боја истицања:"
+
+#. i18n: ectx: property (whatsThis), widget (QTableView, scoreTable)
+#: scoreswidget.ui:19
+#, kde-format
+msgid "Scoreboard"
+msgstr "Резултати."

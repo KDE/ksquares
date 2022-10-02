@@ -1,0 +1,602 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>Підручник з &ksquares;</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+  <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+
+  <othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+> <surname
+>Trounev</surname
+> <contrib
+>Рецензент</contrib>
+    <affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+  </othercredit>
+  <othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+  <year
+>2006</year>
+  <holder
+>Matt Williams</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>3 жовтня 2021 року</date>
+<releaseinfo
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>У цій документації описано гру &ksquares; версії 0.6.</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>гра</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>дошка</keyword>
+	<keyword
+>Крапки і оточення</keyword>
+	<keyword
+>Оточення</keyword>
+	<keyword
+>Квадрати</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>чотири гравці</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Загородки</keyword>
+	<keyword
+>Оточи рисками</keyword>
+	<keyword
+>Крапки і риски</keyword>
+	<keyword
+>Гра у крапки</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Вступ</title
+> <!-- do not change this! -->
+	<note
+><title
+>Тип гри:</title
+><para
+>Дошка</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Можлива кількість гравців:</title
+><para
+>Чотири</para
+></note>
+	<para
+>&ksquares; — це весела і захоплива гра. &ksquares; створено на основі добре відомої гри на папері з назвою «Крапки і загородки».</para>
+<para
+>Ідеєю, що лежить в основі &ksquares; є створення квадратів шляхом з’єднання крапок у вузлах певної сітки. У грі можуть брати участь до чотирьох гравців, які роблять ходи почергово. Родзинка гри полягає у тому, що власником квадрата стає той, гравець, який, незалежно від кількості крапок намальованих іншими гравцями, завершить побудову квадрата власною точкою.</para>
+<para
+>Щоб виграти раунд гри, гравцеві слід зібрати найбільше очок, тобто оточити найбільшу серед гравців площу, пофарбовану у колір гравця, на ігровому полі.</para>
+</chapter>
+
+<chapter id="howto"
+><title
+>Як грати</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Мета:</title
+><para
+>Оточити більше квадратів, ніж будь-який з ваших суперників.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>На початку гри ігрове поле є порожнім. Воно виглядає як проста сітка з крапок, які показують, де згодом можна намалювати риски. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ігрова дошка &ksquares;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>Кожен з гравців по черзі малює риску між двома сусідніми крапками на дошці. Якщо ви водитимете вказівником миші ігровою дошкою, жовта лінія позначатиме місце, де буде розташовано риску у разі клацання лівою кнопкою миші. Після того, як ви визначитеся з місцем, де ви бажаєте намалювати риску, клацніть лівою кнопкою миші, — буде намальовано риску. Якщо після малювання риски буде завершено малювання квадрата, цей квадрат стане вашим, а ви отримаєте очко. Після кожного завершення квадрата, вам слід буде намалювати ще одну риску. Якщо ваша риска не завершить жодного квадрата, хід перейде до наступного гравця. Гра триватиме до того часу, доки всі квадратики на ігровій дошці не належатимуть комусь з гравців. </para>
+  <para
+>Щоб почати нову гру з нетиповими налаштуваннями (кількістю гравців, іменами гравців, розмірами дошки) натисніть кнопку <guibutton
+>Створити</guibutton
+> на панелі інструментів або скористайтесь пунктом меню <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>Гра</guimenu
+><guimenuitem
+>Створити</guimenuitem
+></menuchoice
+>. Щоб розпочати нову гру з параметрами поточної гри, натисніть кнопку <guibutton
+>Перезапустити гру</guibutton
+> на панелі інструментів. </para>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Правила гри, стратегія та поради</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Правила гри</title>
+    <para
+>Про правила гри майже нічого сказати: концепція гри є дуже простою. Але ось все ж приписи гри, з якими ви, як гравець, обов’язково зустрінетеся під час гри у &ksquares;:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Ви можете з’єднувати крапки сітки, лише якщо ці крапки раніше не було з’єднано вами, вашим суперником або комп’ютером.</para
+></listitem>
+	<listitem
+><para
+>Для отримання очок вам слід з’єднати крапки, щоб обгородити квадрат.</para
+></listitem>
+	<listitem
+><para
+>Квадрат може бути не більшим за той, який утворюють чотири сусідні крапки.</para
+></listitem>
+	<listitem
+><para
+>Після завершення квадрата гравець, який намалював останню риску цього квадрата, стає власником квадрата. Квадрат буде пофарбовано у кольори гравця, а гравець отримає на свій рахунок очко.</para
+></listitem>
+	<listitem
+><para
+>Гравцеві, який завершив квадрат, буде надано додатковий хід, від якого він не може відмовитися.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Стратегія та поради</title>
+  <itemizedlist>
+	<listitem
+><para
+>Намагайтесь не грати хаотично. Хаотична гра найпевніше призведе до вашої поразки.</para
+></listitem>
+	<listitem
+><para
+>Будуйте довгі ланцюжки рисок на ігровій дошці. Після завершення такого ланцюжка починайте побудову ще одного, паралельного до першого.</para
+></listitem>
+	<listitem
+><para
+>Намагайтеся не створювати конструкцій, для завершення яких не вистачає лише однієї риски. Якщо ви створите таку конструкцію, ваш суперник майже напевне цим скористається.</para
+></listitem>
+	<listitem
+><para
+>Якщо ви змушені віддати суперникові один або декілька квадратів, спробуйте продумати комбінацію, яка б призвела до найменших втрат.</para
+></listitem>
+	<listitem
+><para
+>Намагайтеся завести вашого суперника (суперницю) у ситуацію, коли він (вона, воно) не матиме вибору, окрім як надати вам змогу завершити квадрат.</para
+></listitem>
+	<listitem
+><para
+>Якщо ви маєте намір зробити так, щоб ланцюжок квадратів став вашим, пам’ятайте про те, що, якщо ви залишите два квадрати у кінці ланцюжка незавершеними, ви зможете змусити ваших суперників до завершення цих квадратів так, щоб ви могли перейти до наступного ланцюжка. Така позиція називається «подвійний хрест».</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+
+<chapter id="menu-items">
+  <title
+>Пункти меню</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Створити</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Почати нову гру.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Перезапустити гру</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+>Починає нову гру з тими самими параметрами, що і поточна гра.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Показати найкращі результати…</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Показує</action
+> таблицю найкращих результатів.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Гра</guimenu
+> <guimenuitem
+>Вийти</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Завершує роботу</action
+> &ksquares;.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+        <term
+><menuchoice
+><guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Налаштувати &ksquares;...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Відкриває діалогове вікно налаштування &ksquares;.</action
+> Докладніше про це можна дізнатися з розділу <link linkend="configuration"
+>Налаштування гри</link
+>.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>Крім того, у &ksquares; передбачено типові для &kde; пункти меню <guimenu
+>Параметри</guimenu
+> і <guimenu
+>Довідка</guimenu
+>. Щоб дізнатися більше, ознайомтеся з розділами щодо <ulink url="help:/fundamentals/menus.html#menus-settings"
+>меню «Параметри»</ulink
+> та <ulink url="help:/fundamentals/menus.html#menus-help"
+>меню «Довідка»</ulink
+> підручника з основ роботи у &kde;. </para>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Часті запитання</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Я хочу змінити вигляд цієї гри. Як це зробити? </para
+></question>
+ <answer
+><para
+>У поточній версії єдиною річчю, яку ви можете змінити у вигляді гри, є колір рисок. Щоб змінити цей колір, скористайтеся пунктом меню <menuchoice
+><guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Налаштувати &ksquares;...</guimenuitem
+></menuchoice
+>. Докладно про вікно, яке відкриється, можна прочитати у розділі <link linkend="configuration"
+>Налаштування гри</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Я помилився (помилилася)? Можна це виправити? </para
+></question>
+ <answer
+><para
+>Ні. У поточній версії &ksquares; немає функції скасування ходів.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Чи можна використовувати для клавіатуру? </para
+></question>
+ <answer
+><para
+>Ні. У &ksquares; не можна грати лише за допомогою клавіатури.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Не можу з’ясувати, що слід робити! Чи є у грі підказки? </para
+></question>
+ <answer
+><para
+>Ні, можливість підказки ще не реалізовано.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Я змушений (змушена) перервати гру, але гру ще не завершено. Чи можу я зберегти поточний стан?</para
+></question>
+  <answer
+><para
+>У поточній версії &ksquares; немає можливості збереження ігор.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"
+><title
+>Налаштування гри</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Діалогове вікно «Нова гра»</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Нова гра</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Діалогове вікно <guilabel
+>Нова гра</guilabel
+> складається з таких наборів параметрів:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Гравці</guilabel
+></term>
+    <listitem
+><para
+>Тут ви можете змінити кількість учасників гри, а також визначити, за яких з гравців гратимуть люди, а за яких — комп’ютер. Для зазначення кількості гравців скористайтеся лічильником <guilabel
+>Кількість гравців</guilabel
+>. Після цього оберіть ім’я для кожного з учасників і поставте позначки <guilabel
+>Людина?</guilabel
+>, які вказуватимуть тип гравця.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Дошка для гри</guilabel
+></term>
+    <listitem
+><para
+>Тут ви можете визначити розмір ігрової дошки. Для визначення ширини і висоти ігрової дошки скористайтеся полями <guilabel
+>Ширина</guilabel
+> і <guilabel
+>Висота</guilabel
+>.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Параметри гри</guilabel
+></term>
+    <listitem
+><para
+>Ця частина діалогового вікна налаштувань відповідає за рівень складності гри. Якщо ви не позначали пункт <guilabel
+>Швидкий початок</guilabel
+>, гру буде почато з порожньою сіткою без рисок. У іншому випадку гру буде розпочато з частково заповненою ігровою дошкою.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Вікно налаштування</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Діалогове вікно налаштовування</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Діалогове вікно <guilabel
+>Налаштування — &ksquares;</guilabel
+> складається з таких вкладок:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Дисплей</guilabel
+></term>
+    <listitem
+><para
+>Тут ви можете змінити параметри кольорів &ksquares;.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Комп'ютерний гравець</guilabel
+></term>
+    <listitem
+><para
+>Скористайтеся цією вкладкою для зміни складності гри.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+
+<chapter id="credits"
+><title
+>Подяки і ліцензія</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+
+<para
+>&ksquares; </para>
+
+<para
+>Авторські права на програму належать Matt Williams <email
+>matt@milliams.com</email
+>, ©2006 </para>
+
+  <para
+>Авторські права на документацію до програми належать &copy; 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

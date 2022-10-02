@@ -1,0 +1,522 @@
+# Translation for ksquares.po to Euskara/Basque (eu).
+# Copyright (C) 2010-2021, This file is copyright:
+# This file is distributed under the same license as the ksquares package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksquares\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:42+0000\n"
+"PO-Revision-Date: 2021-10-10 23:18+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@ni.eus"
+
+#. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
+#: ksquares.kcfg:10
+#, kde-format
+msgid "Number of Players"
+msgstr "Jokalari kopurua"
+
+#. i18n: ectx: label, entry (PlayerNames), group (Game Settings)
+#: ksquares.kcfg:14
+#, kde-format
+msgid "Player Names"
+msgstr "Jokalarien izenak"
+
+#. i18n: ectx: label, entry (HumanList), group (Game Settings)
+#: ksquares.kcfg:17
+#, kde-format
+msgid "Human or AI"
+msgstr "Gizakia edo AA"
+
+#. i18n: ectx: label, entry (BoardWidth), group (Game Settings)
+#: ksquares.kcfg:21
+#, kde-format
+msgid "Width of board"
+msgstr "Taularen zabalera"
+
+#. i18n: ectx: label, entry (BoardHeight), group (Game Settings)
+#: ksquares.kcfg:25
+#, kde-format
+msgid "Height of board"
+msgstr "Taularen altuera"
+
+#. i18n: ectx: label, entry (QuickStart), group (Game Settings)
+#: ksquares.kcfg:29
+#, kde-format
+msgid "Quick start the game"
+msgstr "Jokoaren hasiera azkarra"
+
+#. i18n: ectx: label, entry (Difficulty), group (AI)
+#: ksquares.kcfg:35
+#, kde-format
+msgid "Difficulty"
+msgstr "Zailtasuna"
+
+#. i18n: ectx: whatsthis, entry (Difficulty), group (AI)
+#: ksquares.kcfg:36
+#, kde-format
+msgid "How difficult the AI should be"
+msgstr "Zein izan behar da AAren zailtasuna"
+
+#. i18n: ectx: label, entry (LineColor), group (Display)
+#: ksquares.kcfg:42
+#, kde-format
+msgid "Line Color"
+msgstr "Lerroaren kolorea"
+
+#. i18n: ectx: label, entry (IndicatorLineColor), group (Display)
+#: ksquares.kcfg:47
+#, kde-format
+msgid "Indicator Line Color"
+msgstr "Lerro adierazlearen kolorea"
+
+#. i18n: ectx: label, entry (HighlightColor), group (Display)
+#: ksquares.kcfg:52
+#, kde-format
+msgid "Highlight Color"
+msgstr "Nabarmentzeko kolorea"
+
+#: ksquaresdemowindow.cpp:65
+#, kde-format
+msgid "Player %1"
+msgstr "%1 jokalaria"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ksquaresui.rc:11
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Tresna-barra nagusia"
+
+#: ksquareswindow.cpp:57
+#, kde-format
+msgid "Current Player"
+msgstr "Uneko jokalaria"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
+#: ksquareswindow.cpp:240 prefs_ai.ui:54
+#, kde-format
+msgid "Easy"
+msgstr "Erraza"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
+#: ksquareswindow.cpp:241 prefs_ai.ui:59
+#, kde-format
+msgid "Medium"
+msgstr "Ertaina"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:239 prefs_ai.ui:64
+#, kde-format
+msgid "Hard"
+msgstr "Zaila"
+
+#: ksquareswindow.cpp:201
+#, kde-format
+msgctxt "@title:window"
+msgid "Scores"
+msgstr "Puntuazioak"
+
+#: ksquareswindow.cpp:206
+#, kde-format
+msgid "Player Name"
+msgstr "Jokalariaren izena"
+
+#: ksquareswindow.cpp:207
+#, kde-format
+msgid "Completed Squares"
+msgstr "Osatutako karratuak"
+
+#: ksquareswindow.cpp:291
+#, kde-format
+msgid "Start a new game with the current settings"
+msgstr "Hasi joko berri bat uneko ezarpenekin"
+
+#: ksquareswindow.cpp:309
+#, kde-format
+msgid "Display"
+msgstr "Bistaratu"
+
+#: ksquareswindow.cpp:314
+#, kde-format
+msgid "Computer Player"
+msgstr "Konputagailuaren jokalaria"
+
+#: main.cpp:39
+#, kde-format
+msgid "KSquares"
+msgstr "KSquares"
+
+#: main.cpp:41
+#, kde-format
+msgid ""
+"Take it in turns to draw lines.\n"
+"If you complete a squares, you get another go."
+msgstr ""
+"Txandaka jokatzen da lerroak marraztuz.\n"
+"Karratu bat osatzen baduzu, beste txanda bat daukazu."
+
+#: main.cpp:43
+#, kde-format
+msgid "(C) 2006-2007 Matt Williams"
+msgstr "(C) 2006-2007 Matt Williams"
+
+#: main.cpp:46
+#, kde-format
+msgid "Matt Williams"
+msgstr "Matt Williams"
+
+#: main.cpp:46
+#, kde-format
+msgid "Original creator and maintainer"
+msgstr "Jatorrizko sortzaile eta mantentzailea"
+
+#: main.cpp:47
+#, kde-format
+msgid "Fela Winkelmolen"
+msgstr "Fela Winkelmolen"
+
+#: main.cpp:47
+#, kde-format
+msgid "Many patches and bugfixes"
+msgstr "Adabaki eta akats konponketa asko"
+
+#: main.cpp:48
+#, kde-format
+msgid "Tom Vincent Peters"
+msgstr "Tom Vincent Peters"
+
+#: main.cpp:48
+#, kde-format
+msgid "Hard AI"
+msgstr "Zaila IA"
+
+#: main.cpp:53
+#, kde-format
+msgid "Run game in demo (autoplay) mode"
+msgstr "Exekutatu jokoa demo (jolas automatikoa) moduan"
+
+#: main.cpp:67 main.cpp:68 main.cpp:69
+#, kde-format
+msgctxt "default name of player"
+msgid "Player %1"
+msgstr "%1 jokalaria"
+
+#: newgamedialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "New Game"
+msgstr "Joko berria"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, NewGameWidget)
+#: newgamewidget.ui:13
+#, kde-format
+msgid "New Game"
+msgstr "Joko berria"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:37
+#, kde-format
+msgid "Settings for the players in the game"
+msgstr "Jokoan dauden jokalarientzako ezarpenak"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:40
+#, kde-format
+msgid "Players"
+msgstr "Jokalariak"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:64
+#, kde-format
+msgid "The name of the fourth player"
+msgstr "Laugarren jokalariaren izena"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:67
+#, kde-format
+msgid "Player 4:"
+msgstr "4. jokalaria:"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerFourHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerOneHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:80 newgamewidget.ui:96 newgamewidget.ui:166
+#: newgamewidget.ui:214
+#, kde-format
+msgid "Should this player be controlled by a human"
+msgstr "Jokalari hau gizaki batek kontrolatu beharko luke"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
+#: newgamewidget.ui:83
+#, kde-format
+msgid "Hum&an?"
+msgstr "Giz&akia?"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
+#: newgamewidget.ui:99
+#, kde-format
+msgid "Hu&man?"
+msgstr "Gi&zakia?"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:109
+#, kde-format
+msgid "The name of the third player"
+msgstr "Hirugarren jokalariaren izena"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:112
+#, kde-format
+msgid "Player 3:"
+msgstr "3. jokalaria:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:131
+#, kde-format
+msgid "The name of the second player"
+msgstr "Bigarren jokalariaren izena"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:134
+#, kde-format
+msgid "Player 2:"
+msgstr "2. jokalaria:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
+#: newgamewidget.ui:169
+#, kde-format
+msgid "&Human?"
+msgstr "&Gizakia?"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:182
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">How many players will be "
+"in the game</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Zenbat jokalari izango "
+"dira jokoan</p></body></html>"
+
+#. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:185
+#, kde-format
+msgid "Number of players:"
+msgstr "Jokalari kopurua:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:198
+#, kde-format
+msgid "The name of the first player"
+msgstr "Lehenengo jokalariaren izena"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:201
+#, kde-format
+msgid "Player 1:"
+msgstr "1. jokalaria:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:217
+#, kde-format
+msgid "H&uman?"
+msgstr "G&izakia?"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:230
+#, kde-format
+msgid "Settings for the game board"
+msgstr "Joku taularentzako ezarpenak"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:233
+#, kde-format
+msgid "Game Board"
+msgstr "Joku taula"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelWidth)
+#: newgamewidget.ui:257
+#, kde-format
+msgid "The number of squares the area is wide"
+msgstr "Azaleraren zabalera karratu zenbakitan"
+
+#. i18n: ectx: property (text), widget (QLabel, labelWidth)
+#: newgamewidget.ui:260
+#, kde-format
+msgid "Width:"
+msgstr "Zabalera:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelHeight)
+#: newgamewidget.ui:289
+#, kde-format
+msgid "The number of squares the area is high"
+msgstr "Azaleraren altuera karratu zenbakitan"
+
+#. i18n: ectx: property (text), widget (QLabel, labelHeight)
+#: newgamewidget.ui:292
+#, kde-format
+msgid "Height:"
+msgstr "Altuera:"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:324
+#, kde-format
+msgid "Settings for the game"
+msgstr "Jokuarentzako ezarpenak"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:327
+#, kde-format
+msgid "Game Settings"
+msgstr "Jokuaren ezarpenak"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:351
+#, kde-format
+msgid "Partially fill in the board automatically before the game starts"
+msgstr "Taula partzialki automatikoki bete jokoa hasi baino lehen"
+
+#. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:354
+#, kde-format
+msgid "Quick start"
+msgstr "Hasiera azkarra"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_ai)
+#: prefs_ai.ui:13
+#, kde-format
+msgid "AI Settings"
+msgstr "AA ezarpenak"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:75
+#, kde-format
+msgid "How difficult it will be to beat the computer"
+msgstr "Zein zaila izango den konputagailua garaitzea"
+
+#. i18n: ectx: property (text), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:78
+#, kde-format
+msgid "AI difficulty:"
+msgstr "AA zailtasuna:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_display)
+#: prefs_display.ui:13
+#, kde-format
+msgid "Display Settings"
+msgstr "Bistaratzeko ezarpenak"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:19
+#, kde-format
+msgid "Settings for colors"
+msgstr "Koloreentzako ezarpenak"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:22
+#, kde-format
+msgid "Colors"
+msgstr "Koloreak"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:28
+#, kde-format
+msgid "Color of the drawn lines"
+msgstr "Marraztutako lerroen kolorea"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:31
+#, kde-format
+msgid "Standard line color:"
+msgstr "Lerro estandarraren kolorea:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#: prefs_display.ui:44 prefs_display.ui:60
+#, kde-format
+msgid "Color of the indicator lines"
+msgstr "Lerro adierazleen kolorea"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: prefs_display.ui:47
+#, kde-format
+msgid "Indicator line color:"
+msgstr "Lerro adierazlearen kolorea:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: prefs_display.ui:63
+#, kde-format
+msgid "Highlight color:"
+msgstr "Nabarmentzeko kolorea:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
+#: scoreswidget.ui:13
+#, kde-format
+msgid "Scores"
+msgstr "Puntuazioak"
+
+#. i18n: ectx: property (whatsThis), widget (QTableView, scoreTable)
+#: scoreswidget.ui:19
+#, kde-format
+msgid "Scoreboard"
+msgstr "Markagailua"
+
+#~ msgid "Online rankings"
+#~ msgstr "Lerroko klasifikazioa"
+
+#~ msgid "List of seats"
+#~ msgstr "Eserlekuen zerrenda"
+
+#~ msgid "Request to start a new game with the current settings"
+#~ msgstr "Eskatu joko berri bat hastea uneko ezarpenekin"
+
+#~ msgid "The game has finished"
+#~ msgstr "Jokua amaitu da"
+
+#~ msgid "It is your turn"
+#~ msgstr "Zure txanda da"
+
+#~ msgid "Waiting for opponent..."
+#~ msgstr "Aurkakoaren zain..."
+
+#~ msgid "Waiting for move result..."
+#~ msgstr "Mogimenduaren emaitzaren zain..."
+
+#~ msgid "Online game"
+#~ msgstr "Lerroko jokoa"

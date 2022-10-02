@@ -1,0 +1,595 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&ksquares;">
+  <!ENTITY kappversion "0.4"
+><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY package "kdegames"
+>  <!-- do not change this! -->
+  <!ENTITY % Estonian  "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+ 
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>&ksquares;i käsiraamat</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+    <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+<othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+><surname
+>Trounev</surname
+> <contrib
+>Korrigeerija</contrib>
+<affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+</othercredit>
+    <othercredit role="translator"
+><firstname
+>Marek</firstname
+> <surname
+>Laane</surname
+> <affiliation
+><address
+><email
+>bald@smail.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+  </authorgroup>
+
+  <copyright>
+    <year
+>2006</year>
+    <holder
+>Matt Williams</holder>
+  </copyright>
+<legalnotice
+>&FDLNotice;</legalnotice
+> 
+<date
+>2013-05-05</date
+><!-- Date of (re)writing, or update.-->
+<releaseinfo
+>&kappversion;</releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+ 
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>See käsiraamat kirjeldab mängu &ksquares; versiooni &kappversion;.</para>
+</abstract>
+ 
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>mäng</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>lauamäng</keyword>
+	<keyword
+>Punktid ja kastid</keyword>
+	<keyword
+>Kastid</keyword>
+	<keyword
+>Ruudud</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>neli mängijat</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Paddocks</keyword>
+	<keyword
+>Square-it</keyword>
+	<keyword
+>Punktid ja kriipsud</keyword>
+	<keyword
+>Punktimäng</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Sissejuhatus</title
+> <!-- do not change this! -->
+	<note
+><title
+>Mängu tüüp:</title
+><para
+>lauamäng</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Mängijate arv:</title
+><para
+>Neli</para
+></note>
+	<para
+>&ksquares; on &kde; töökeskkonna lõbus ja vahva mäng, mille eeskujuks on tuntud mäng paberil Dots and Boxes (punktid ja kastid).</para>
+<para
+>&ksquares;i mõtteks on luua punkte ühendades ruute. Korraga võib mängida kuni neli mängijat. Mängu võlu seisab selles, et kes ka ei looks suurema osa ruudust, saab punkti selle eest kirja mängija, kes ruudu lõplikult ühendab.</para>
+<para
+>Mängu võitmiseks tuleb koguda kõige rohkem punkte, kattes enamiku mänguväljast oma värvi ruutudega.</para>
+</chapter>
+ 
+<chapter id="howto"
+><title
+>Kuidas mängida</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Eesmärk:</title
+><para
+>omandada rohkem ruute kui vastased.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>Mängu algul on väli tühi, koosnedes lihtsalt punktivõrgustikust, kuhu saab tõmmata jooni. </para>
+<note
+><title
+>Märkus:</title
+><para
+>Sõltuvalt mängu raskusastmest võib juba alguses olla väljal ka mõningaid jooni.</para
+></note>
+  <para
+>Iga mängija tõmbab oma käigu ajal joone kahe mängulaua kõrvutise punkti vahele. Hiirt mänguvälja kohal hoides näitab kollane joon, kuhu joon klõpsamisel asetatakse. Kui oled otsustanud, et asukoht sobib, klõpsa ja joon asetataksegi paika. Kui mängija saab valmis ruudu, asetades selle ümber neljanda joone, kuulub see talle, ta teenib punkti ja saab ette võtta uue käigu. Kui joon ei sulge ruutu, sooritab käigu järgmine mängija. Mäng kestab seni, kuni kõik mängulaua ruudud on valmis joonistatud. </para>
+  <para
+>Uue mängu alustamiseks kohandatud tingimustega (mängijate arv, nende nimed, mängulaua suurus), klõpsa tööriistariba ikoonile <guibutton
+>Uus</guibutton
+> või vali menüükäsk <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>Mäng</guimenu
+><guimenuitem
+>Uus</guimenuitem
+></menuchoice
+>. Uue mängu alustamiseks lõppenud mängus kehtinud seadistustega klõpsa tööriistariba ikoonile <guibutton
+>Käivita mäng uuesti</guibutton
+>. </para>
+</chapter>
+ 
+<chapter id="rules_and_tips"
+><title
+>Mängureeglid, strateegia ja nõuanded</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Mängureeglid</title>
+    <para
+>Reeglite kohta pole suurt midagi öelda, sest mäng on õigupoolest äärmiselt lihtne. Siiski teatud asjadest tuleb &ksquares;i mängimisel kinni pidada:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Ruudustikus saab ühendada ainult neid punkte, mida ei ole varem ühendanud ei sa ise, sinu vastane või arvuti.</para
+></listitem>
+	<listitem
+><para
+>Punkti saamiseks tuleb ühendada punktid nii, et tekib ruut.</para
+></listitem>
+	<listitem
+><para
+>Ruut ei saa olla suurem, kui seda võimaldavad neli kõrvutist punkti.</para
+></listitem>
+	<listitem
+><para
+>Kui ruut on lõpetatud, läheb see selle mängija valdusse, kes tõmbas viimase joone. Ruut võtab selle mängija värvi ning mängija teenib punkti.</para
+></listitem>
+	<listitem
+><para
+>Mängija, kes lõpetab ruudu, saab lisakäigu, millest ei saa loobuda.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Strateegia ja nõuanded</title>
+  <itemizedlist>
+	<listitem
+><para
+>Püüa mitte mängida suvaliselt jooni tõmmates. See toob peaaegu kindlasti kaasa kaotuse.</para
+></listitem>
+	<listitem
+><para
+>Loo mänguväljal pikki jooneridu. Kui oled sellise valmis saanud, hakka looma teist samasugust, mis kulgeb sellega paralleelselt.</para
+></listitem>
+	<listitem
+><para
+>Proovi mitte luua konstruktsioone, kus ruudu lõpetamisest jääb puudu vaid üks joon. Sinu vastane ei jäta kindlasti head juhust kasutamata.</para
+></listitem>
+	<listitem
+><para
+>Kui oled olukorras, kus pead laskma vastasel lõpetada ühe või rohkemgi ruutu, proovi leida kombinatsioon, mis tooks kõige vähem kahju.</para
+></listitem>
+	<listitem
+><para
+>Püüa seada vastane olukorda, kus tal ei oleks muud võimalust, kui lasta sul ruut lõpetada.</para
+></listitem>
+	<listitem
+><para
+>Kui sul avaneb võimalus alustada terve ruuduahela lõpetamist, arvesta, et ahela lõpus kahe ruudu lõpetamata jätmine sunnib neid lõpetama sinu vastast, mis aga annab sulle võimaluse võtta ette uus ahel. Seda nimetatakse ninapidi vedamiseks.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+  
+<chapter id="menu-items">
+  <title
+>Menüükirjed</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+	<term>
+	  <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Uus</guimenuitem
+> </menuchoice>
+	</term>
+	<listitem
+><para
+><action
+>Alustab uut mängu.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Käivita mäng uuesti</guimenuitem
+></menuchoice
+></term>
+	<listitem
+><para
+>Käivitab uue mängu seni kehtinud seadistustega.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Näita rekordeid</guimenuitem
+> </menuchoice>
+	</term>
+	<listitem
+><para
+><action
+>Näitab</action
+> rekordeid.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Mäng</guimenu
+> <guimenuitem
+>Välju</guimenuitem
+> </menuchoice>
+	</term>
+	<listitem
+><para
+><action
+>Lõpetab</action
+> &ksquares;i töö.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+	<term
+><menuchoice
+><guimenu
+>Seadistused</guimenu
+> <guimenuitem
+>&ksquares;i seadistamine...</guimenuitem
+> </menuchoice
+></term>
+	<listitem
+><para
+><action
+>Avab &ksquares;i seadistustedialoogi.</action
+> Täpsemalt kõneleb sellest osa <link linkend="configuration"
+>Mängu seadistamine</link
+>.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>Lisaks on &ksquares;il tavapärased &kde; <guimenu
+>seadistuste</guimenu
+> ja <guimenu
+>abi</guimenu
+>menüü elemendid, mille kohta leiab rohkem teavet &kde; põhialuste käsiraamatu osadest <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menüü Seadistused</ulink
+> ja <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menüü Abi</ulink
+>. </para>
+  
+</chapter>
+  
+<chapter id="faq"
+><title
+>Korduma kippuvad küsimused</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Ma soovin muuta mängu välimust. On see võimalik? </para
+></question>
+ <answer
+><para
+>Praegu saab muuta ainult joonte värvi. Selleks kasuta menüükäsku <menuchoice
+><guimenu
+>Seadistused</guimenu
+><guimenuitem
+>&ksquares;i seadistamine...</guimenuitem
+></menuchoice
+> Täpsemalt kõneleb sellest osa <link linkend="configuration"
+>Mängu seadistamine</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Tegin vea. Kas selle saab tagasi võtta? </para
+></question>
+ <answer
+><para
+>Ei, &ksquares; ei paku veel <quote
+>tagasivõtmise</quote
+> võimalust.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Kas mängida saab ka klaviatuuri abil? </para
+></question>
+ <answer
+><para
+>Ei, &ksquares;it ei saa mängida klaviatuuri abil.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ma ei saa aru, mida ma peaksin tegema! Kas mingeid vihjeid ei ole? </para
+></question>
+ <answer
+><para
+>Ei, <quote
+>salvestamise</quote
+> võimalus veel puudub.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ma pean mängust väljuma, aga mäng ei ole veel läbi. Kas ma saan oma seisu salvestada?</para
+></question>
+  <answer
+><para
+>Ei, &ksquares; ei paku salvestamise võimalust.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+ 
+</qandaset>
+</chapter>
+ 
+<chapter id="configuration"
+><title
+>Mängu seadistamine</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Uue mängu dialoog</title>
+<para
+>Dialoog <guilabel
+>Uus mäng</guilabel
+> koosneb järgmistest osadest:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Mängijad</guilabel
+></term>
+    <listitem
+><para
+>Siin saab muuta mängijate arvu ning ka määrata, milliseid neist mängivad inimesed ja milliseid tehisaju. Valikukastiga <guilabel
+>Mängijate arv</guilabel
+> saab paika panna mängijate arvu. Seejärel kirjuta kõigi mängijate nimed ja kasuta märkekasti nende tüübi määramiseks.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Mängulaud</guilabel
+></term>
+    <listitem
+><para
+>Siin saab paika panna mängulaua suuruse. Valikukastidega <guilabel
+>Laius</guilabel
+> ja <guilabel
+>Kõrgus</guilabel
+> saab määrata vastavalt mängulaua laiuse ja kõrguse.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Mängu seadistused</guilabel
+></term>
+    <listitem
+><para
+>Siin saab muuta mängu raskusastet. Kui jätta märkimata kastike <guilabel
+>Kiirkäivitus</guilabel
+>. alustatakse mängi tühja võrgustikuga, vastasel juhul on mängulaud juba eelnevalt osaliselt täidetud.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Seadistustedialoog</title>
+<para
+>Dialoog <guilabel
+>Seadistamine - &ksquares;</guilabel
+> koosneb järgmistest kaartidest:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Vaade</guilabel
+></term>
+    <listitem
+><para
+>Siin saab muuta &ksquares;i värviseadistusi.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Arvutimängija</guilabel
+></term>
+    <listitem
+><para
+>Siin saab muuta mängu raskusastet.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+ 
+<chapter id="credits"
+><title
+>Autorid ja litsents</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+ 
+<para
+>&ksquares; </para>
+
+<para
+>Rakenduse autoriõigus 2006: Matt Williams <email
+>matt@milliams.com</email
+> </para>
+ 
+  <para
+>Dokumentatsiooni autoriõigus &copy; 2006: Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@smail.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+  
+<appendix id="installation">
+<title
+>Paigaldamine</title>
+ 
+&install.intro.documentation;
+ 
+ 
+<sect1 id="Compilation">
+<title
+>Kompileerimine ja paigaldamine</title>
+&install.compile.documentation; </sect1>
+</appendix>
+ 
+&documentation.index; 
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

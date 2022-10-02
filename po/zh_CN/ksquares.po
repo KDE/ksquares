@@ -1,0 +1,495 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:42+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/ksquares/ksquares.pot\n"
+"X-Crowdin-File-ID: 5671\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org"
+
+#. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
+#: ksquares.kcfg:10
+#, kde-format
+msgid "Number of Players"
+msgstr "玩家数量"
+
+#. i18n: ectx: label, entry (PlayerNames), group (Game Settings)
+#: ksquares.kcfg:14
+#, kde-format
+msgid "Player Names"
+msgstr "玩家姓名"
+
+#. i18n: ectx: label, entry (HumanList), group (Game Settings)
+#: ksquares.kcfg:17
+#, kde-format
+msgid "Human or AI"
+msgstr "人类或 AI"
+
+#. i18n: ectx: label, entry (BoardWidth), group (Game Settings)
+#: ksquares.kcfg:21
+#, kde-format
+msgid "Width of board"
+msgstr "棋盘宽度"
+
+#. i18n: ectx: label, entry (BoardHeight), group (Game Settings)
+#: ksquares.kcfg:25
+#, kde-format
+msgid "Height of board"
+msgstr "棋盘高度"
+
+#. i18n: ectx: label, entry (QuickStart), group (Game Settings)
+#: ksquares.kcfg:29
+#, kde-format
+msgid "Quick start the game"
+msgstr "快速开始游戏"
+
+#. i18n: ectx: label, entry (Difficulty), group (AI)
+#: ksquares.kcfg:35
+#, kde-format
+msgid "Difficulty"
+msgstr "难度"
+
+#. i18n: ectx: whatsthis, entry (Difficulty), group (AI)
+#: ksquares.kcfg:36
+#, kde-format
+msgid "How difficult the AI should be"
+msgstr "AI 难度"
+
+#. i18n: ectx: label, entry (LineColor), group (Display)
+#: ksquares.kcfg:42
+#, kde-format
+msgid "Line Color"
+msgstr "线条颜色"
+
+#. i18n: ectx: label, entry (IndicatorLineColor), group (Display)
+#: ksquares.kcfg:47
+#, kde-format
+msgid "Indicator Line Color"
+msgstr "指定线条的颜色"
+
+#. i18n: ectx: label, entry (HighlightColor), group (Display)
+#: ksquares.kcfg:52
+#, kde-format
+msgid "Highlight Color"
+msgstr "突出显示颜色"
+
+#: ksquaresdemowindow.cpp:65
+#, kde-format
+msgid "Player %1"
+msgstr "玩家 %1"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ksquaresui.rc:11
+#, kde-format
+msgid "Main Toolbar"
+msgstr "主工具栏"
+
+#: ksquareswindow.cpp:57
+#, kde-format
+msgid "Current Player"
+msgstr "当前玩家"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
+#: ksquareswindow.cpp:240 prefs_ai.ui:54
+#, kde-format
+msgid "Easy"
+msgstr "容易"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
+#: ksquareswindow.cpp:241 prefs_ai.ui:59
+#, kde-format
+msgid "Medium"
+msgstr "中等"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:239 prefs_ai.ui:64
+#, kde-format
+msgid "Hard"
+msgstr "困难"
+
+#: ksquareswindow.cpp:201
+#, kde-format
+msgctxt "@title:window"
+msgid "Scores"
+msgstr "分数"
+
+#: ksquareswindow.cpp:206
+#, kde-format
+msgid "Player Name"
+msgstr "玩家姓名"
+
+#: ksquareswindow.cpp:207
+#, kde-format
+msgid "Completed Squares"
+msgstr "已完成方块"
+
+#: ksquareswindow.cpp:291
+#, kde-format
+msgid "Start a new game with the current settings"
+msgstr "以当前设置开始新游戏"
+
+#: ksquareswindow.cpp:309
+#, kde-format
+msgid "Display"
+msgstr "显示"
+
+#: ksquareswindow.cpp:314
+#, kde-format
+msgid "Computer Player"
+msgstr "电脑玩家"
+
+#: main.cpp:39
+#, kde-format
+msgid "KSquares"
+msgstr "KSquares"
+
+#: main.cpp:41
+#, kde-format
+msgid ""
+"Take it in turns to draw lines.\n"
+"If you complete a squares, you get another go."
+msgstr ""
+"游戏中依次在棋盘上画线。\n"
+"每完成一个方块，就继续下一个。"
+
+#: main.cpp:43
+#, kde-format
+msgid "(C) 2006-2007 Matt Williams"
+msgstr "(C) 2006-2007 Matt Williams"
+
+#: main.cpp:46
+#, kde-format
+msgid "Matt Williams"
+msgstr "Matt Williams"
+
+#: main.cpp:46
+#, kde-format
+msgid "Original creator and maintainer"
+msgstr "原项目创立者和维护者"
+
+#: main.cpp:47
+#, kde-format
+msgid "Fela Winkelmolen"
+msgstr "Fela Winkelmolen"
+
+#: main.cpp:47
+#, kde-format
+msgid "Many patches and bugfixes"
+msgstr "许多补丁和错误修正"
+
+#: main.cpp:48
+#, kde-format
+msgid "Tom Vincent Peters"
+msgstr "Tom Vincent Peters"
+
+#: main.cpp:48
+#, kde-format
+msgid "Hard AI"
+msgstr "困难 AI"
+
+#: main.cpp:53
+#, kde-format
+msgid "Run game in demo (autoplay) mode"
+msgstr "以演示模式(自动游戏)运行游戏"
+
+#: main.cpp:67 main.cpp:68 main.cpp:69
+#, kde-format
+msgctxt "default name of player"
+msgid "Player %1"
+msgstr "玩家 %1"
+
+#: newgamedialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "New Game"
+msgstr "新游戏"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, NewGameWidget)
+#: newgamewidget.ui:13
+#, kde-format
+msgid "New Game"
+msgstr "新游戏"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:37
+#, kde-format
+msgid "Settings for the players in the game"
+msgstr "游戏中玩家的设置"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:40
+#, kde-format
+msgid "Players"
+msgstr "玩家"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:64
+#, kde-format
+msgid "The name of the fourth player"
+msgstr "第四位玩家的姓名"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:67
+#, kde-format
+msgid "Player 4:"
+msgstr "玩家丁："
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerFourHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerOneHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:80 newgamewidget.ui:96 newgamewidget.ui:166
+#: newgamewidget.ui:214
+#, kde-format
+msgid "Should this player be controlled by a human"
+msgstr "玩家是否由人控制"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
+#: newgamewidget.ui:83
+#, kde-format
+msgid "Hum&an?"
+msgstr "人类玩家(&A)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
+#: newgamewidget.ui:99
+#, kde-format
+msgid "Hu&man?"
+msgstr "人类玩家(&M)"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:109
+#, kde-format
+msgid "The name of the third player"
+msgstr "第三位玩家的姓名"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:112
+#, kde-format
+msgid "Player 3:"
+msgstr "玩家丙："
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:131
+#, kde-format
+msgid "The name of the second player"
+msgstr "第二位玩家的姓名"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:134
+#, kde-format
+msgid "Player 2:"
+msgstr "玩家乙"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
+#: newgamewidget.ui:169
+#, kde-format
+msgid "&Human?"
+msgstr "人类玩家(&H)"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:182
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">How many players will be "
+"in the game</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">游戏中要有几名玩家</p></"
+"body></html>"
+
+#. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:185
+#, kde-format
+msgid "Number of players:"
+msgstr "玩家数量："
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:198
+#, kde-format
+msgid "The name of the first player"
+msgstr "第一位玩家的姓名"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:201
+#, kde-format
+msgid "Player 1:"
+msgstr "玩家甲："
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:217
+#, kde-format
+msgid "H&uman?"
+msgstr "人类玩家(&U)"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:230
+#, kde-format
+msgid "Settings for the game board"
+msgstr "棋盘设置"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:233
+#, kde-format
+msgid "Game Board"
+msgstr "游戏棋盘"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelWidth)
+#: newgamewidget.ui:257
+#, kde-format
+msgid "The number of squares the area is wide"
+msgstr "横向上的方块数量"
+
+#. i18n: ectx: property (text), widget (QLabel, labelWidth)
+#: newgamewidget.ui:260
+#, kde-format
+msgid "Width:"
+msgstr "宽度："
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelHeight)
+#: newgamewidget.ui:289
+#, kde-format
+msgid "The number of squares the area is high"
+msgstr "纵向上的方块数量"
+
+#. i18n: ectx: property (text), widget (QLabel, labelHeight)
+#: newgamewidget.ui:292
+#, kde-format
+msgid "Height:"
+msgstr "高度："
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:324
+#, kde-format
+msgid "Settings for the game"
+msgstr "游戏设置"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:327
+#, kde-format
+msgid "Game Settings"
+msgstr "游戏设置"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:351
+#, kde-format
+msgid "Partially fill in the board automatically before the game starts"
+msgstr "游戏开始前自动预填部分棋盘"
+
+#. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:354
+#, kde-format
+msgid "Quick start"
+msgstr "快速开始"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_ai)
+#: prefs_ai.ui:13
+#, kde-format
+msgid "AI Settings"
+msgstr "AI 设置"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:75
+#, kde-format
+msgid "How difficult it will be to beat the computer"
+msgstr "要面对的电脑难度"
+
+#. i18n: ectx: property (text), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:78
+#, kde-format
+msgid "AI difficulty:"
+msgstr "AI 难度："
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_display)
+#: prefs_display.ui:13
+#, kde-format
+msgid "Display Settings"
+msgstr "显示设置"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:19
+#, kde-format
+msgid "Settings for colors"
+msgstr "颜色设置"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:22
+#, kde-format
+msgid "Colors"
+msgstr "颜色"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:28
+#, kde-format
+msgid "Color of the drawn lines"
+msgstr "邻近行的颜色"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:31
+#, kde-format
+msgid "Standard line color:"
+msgstr "标准行颜色："
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#: prefs_display.ui:44 prefs_display.ui:60
+#, kde-format
+msgid "Color of the indicator lines"
+msgstr "提示行的颜色"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: prefs_display.ui:47
+#, kde-format
+msgid "Indicator line color:"
+msgstr "提示行颜色："
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: prefs_display.ui:63
+#, kde-format
+msgid "Highlight color:"
+msgstr "突出显示颜色："
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
+#: scoreswidget.ui:13
+#, kde-format
+msgid "Scores"
+msgstr "分数"
+
+#. i18n: ectx: property (whatsThis), widget (QTableView, scoreTable)
+#: scoreswidget.ui:19
+#, kde-format
+msgid "Scoreboard"
+msgstr "得分榜"

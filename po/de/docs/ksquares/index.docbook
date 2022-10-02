@@ -1,0 +1,601 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+ 
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>Das Handbuch zu &ksquares;</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+    <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+<othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+><surname
+>Trounev</surname
+> <contrib
+>Korrektur</contrib>
+<affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+</othercredit>
+    <othercredit role="translator"
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+><affiliation
+><address
+><email
+>lueck@hube-lueck.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+  </authorgroup>
+
+  <copyright>
+    <year
+>2006</year>
+    <holder
+>Matt Williams</holder>
+  </copyright>
+<legalnotice
+>&FDLNotice;</legalnotice
+> 
+<date
+>2016-05-10</date>
+<releaseinfo
+>0.6 (Anwendungen 16.04)</releaseinfo>
+ 
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>Dieses Handbuch beschreibt das Spiel &ksquares; in der Version 0.6</para>
+</abstract>
+ 
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>Spiel</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>Brettspiel</keyword>
+	<keyword
+>Punkte und Kästchen</keyword>
+	<keyword
+>Kästchen</keyword>
+	<keyword
+>Quadrate</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>vier Spieler</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Karree</keyword>
+	<keyword
+>quadratisch</keyword>
+	<keyword
+>Punkte und Striche</keyword>
+	<keyword
+>Punktspiel</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Einführung</title
+> <!-- do not change this! -->
+	<note
+><title
+>Spieltyp:</title
+><para
+>Brettspiel</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Anzahl der Spieler:</title
+><para
+>vier</para
+></note>
+	<para
+>&ksquares; ist ein lustiges und aufregendes Spiel von &kde;. Es ist an das bekannte <quote
+>Papier und Stift</quote
+>-Spiel Käsekästchen angelehnt.</para>
+<para
+>Die Idee hinter &ksquares; ist, durch Verbinden der Punkte in dem Raster Quadrate zu erzeugen. Bis zu vier Spieler können an einem Spiel teilnehmen.Der Spieler, der ein Quadrat vollendet, bekommt die Punkte; egal, wer die meisten Striche für ein Quadrat gezeichnet hat.</para>
+<para
+>Um das Spiel zu gewinnen, muss der Spieler die meisten Punkte sammeln, indem er den größten Teil des Spielfeldes mit seiner eigenen Farbe ausfüllt.</para>
+</chapter>
+ 
+<chapter id="howto"
+><title
+>Spielanleitung</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Ziel des Spiels:</title
+><para
+>Malen Sie mehr Kästchen als Ihr Gegner.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>Nach dem Start des Programms ist das Spielfeld leer. Es wird nur ein Gitter aus Punkten angezeigt, in dem Sie Linien zeichnen können. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&ksquares;-Spielfeld</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>Jeder Spieler muss der Reihe nach einen Strich zwischen zwei benachbarten Punkten zeichnen. Wenn Sie mit dem Mauszeiger über das Spielfeld fahren, wird eine gelbe Linie angezeigt, wo bei einem Mausklick Ihre Linie gesetzt würde. Entscheiden Sie, wo Sie Ihre Linie zeichnen möchten und klicken Sie mit der &LMBn;. Wenn Sie mit Ihrer Linie ein Quadrat vollendet haben, gehört dieses Quadrat nun Ihnen und Sie bekommen einen Punkt. Nach Vollendung eines Quadrats sind Sie erneut am Zug. Vollendet Ihre Linie kein Quadrat, ist der nächste Spieler an der Reihe. Das Spiel wird fortgesetzt, bis jedes Quadrat auf dem Spielfeld einem der Spieler gehört. </para>
+  <para
+>Um ein Spiel mit geänderten Einstellungen (Anzahl und Namen der Spieler,Größe des Spielfelds) zu starten, klicken Sie auf <guibutton
+>Neu</guibutton
+> in der Werkzeugleiste oder wählen Sie im Menü <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spiel</guimenu
+><guimenuitem
+>Neu</guimenuitem
+></menuchoice
+>. Um noch einmal mit den gleichen Einstellungen zu spielen, klicken Sie in der Werkzeugleiste auf <guibutton
+>Spiel neu starten</guibutton
+>. </para>
+</chapter>
+ 
+<chapter id="rules_and_tips"
+><title
+>Spielregeln, Spielstrategien und Tipps</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Spielregeln</title>
+    <para
+>Zu den Regeln gibt es nicht viel zu sagen, da das Spielkonzept selbst sehr einfach ist. Trotzdem erhalten Sie hier einen kurzen Überblick über die Spielregeln von &ksquares;, an die Sie sich halten müssen:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Sie können Punkte nur dann verbinden, wenn sie noch nicht von Ihnen oder einem der anderen Spieler verbunden wurden.</para
+></listitem>
+	<listitem
+><para
+>Um Punkte zu erhalten, müssen Sie die Punkte so verbinden, dass sie Quadrate bilden.</para
+></listitem>
+	<listitem
+><para
+>Ein Quadrat kann nicht größer sein als die viel benachbarten Punkte auf dem Raster es zulassen.</para
+></listitem>
+	<listitem
+><para
+>Ist ein Quadrat vollendet, geht dieses in den Besitz des Spielers über, der den letzten Strich gesetzt hat. Das Quadrat ist nun farbig und der Spieler erhält einen Punkt.</para
+></listitem>
+	<listitem
+><para
+>Der Spieler erhält bei Vollendung eines Quadrats einen zusätzlichen Zug, den er nicht überspringen kann.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Spielstrategien und Tipps</title>
+  <itemizedlist>
+	<listitem
+><para
+>Setzen Sie Ihre Striche nicht einfach zufällig. So verlieren Sie sehr wahrscheinlich das Spiel.</para
+></listitem>
+	<listitem
+><para
+>Errichten Sie lange Linienketten über das Spielfeld. Malen Sie weitere Linien parallel zu diesen.</para
+></listitem>
+	<listitem
+><para
+>Vermeiden Sie, Striche an Feldern zu setzen, an denen danach nur noch ein Strich fehlt. Ihr Gegner wird davon profitieren.</para
+></listitem>
+	<listitem
+><para
+>Wenn Sie Ihrem Gegner einige Felder überlassen müssen, versuchen Sie diese so zu wählen, dass am wenigsten Schaden entsteht.</para
+></listitem>
+	<listitem
+><para
+>Versuchen Sie Ihren Gegner in die Situation zu bringen, dass er keine Wahl hat, als Ihnen Felder zu überlassen.</para
+></listitem>
+	<listitem
+><para
+>Wenn Sie die Chance haben, eine ganze Reihe von Feldern zu vollenden, können Sie am Ende einer solchen Reihe zwei Felder unvollständig belassen und so Ihren Gegner dazu verleiten, diese zu vollenden. Sie können dann an einer anderen Kette weiter arbeiten. Dieser Spielzug heißt Doppelkreuz.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+  
+<chapter id="menu-items">
+  <title
+>Menüeinträge</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+	<term>
+	  <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spiel</guimenu
+> <guimenuitem
+>Neu</guimenuitem
+> </menuchoice>
+	</term>
+	<listitem
+><para
+><action
+>Startet ein neues Spiel.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Spiel</guimenu
+> <guimenuitem
+>Spiel neu starten</guimenuitem
+></menuchoice
+></term>
+	<listitem
+><para
+>Startet ein neues Spiel mit den aktuellen Einstellungen.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spiel</guimenu
+> <guimenuitem
+>Bestenliste anzeigen</guimenuitem
+> </menuchoice>
+	</term>
+	<listitem
+><para
+><action
+>Zeigt</action
+> die Bestenliste an.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>
+	  <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spiel</guimenu
+> <guimenuitem
+>Beenden</guimenuitem
+> </menuchoice>
+	</term>
+	<listitem
+><para
+><action
+>Beendet</action
+> &ksquares;.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+	<term
+><menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>&ksquares; einrichten ...</guimenuitem
+> </menuchoice
+></term>
+	<listitem
+><para
+><action
+>Öffnet einen Dialog zur Einrichtung von &ksquares;.</action
+> Weitere Einzelheiten finde Sie unter <link linkend="configuration"
+>Spieleinstellungen</link
+>.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>Zusätzlich hat &ksquares; die bekannten &kde;-Einträge im Menü <guimenu
+>Einstellungen</guimenu
+> und <guimenu
+>Hilfe</guimenu
+>, weitere Informationen dazu finden Sie in den Abschnitten über die Menüs <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Einstellungen</ulink
+> und <ulink url="help:/fundamentals/menus.html#menus-help"
+>Hilfe</ulink
+> der &kde;-Grundlagen. </para>
+  
+</chapter>
+  
+<chapter id="faq"
+><title
+>Häufig gestellte Fragen</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Kann ich das Erscheinungsbild des Spiels ändern? </para
+></question>
+ <answer
+><para
+>In dieser Version des Spiels können Sie nur die Farbe der Linien ändern. Wählen Sie dazu in der Menüleiste <menuchoice
+><guimenu
+>Einstellungen</guimenu
+><guimenuitem
+>&ksquares; einrichten ...</guimenuitem
+></menuchoice
+>. Weitere Einzelheiten finden Sie im Kapitel <link linkend="configuration"
+>Spieleinstellungen</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ich habe einen Fehler gemacht. Kann ich einen Spielzug zurücknehmen? </para
+></question>
+ <answer
+><para
+>Nein, in &ksquares; können Sie keine Spielzüge zurücknehmen.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Kann ich mit der Tastatur spielen? </para
+></question>
+ <answer
+><para
+>Nein, &ksquares; kann nicht mit der Tastatur gespielt werden.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ich komme im Spiel nicht weiter, gibt es Tipps? </para
+></question>
+ <answer
+><para
+>Nein, in diesem Spiel gibt es noch keine Tipps.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ich muss das Spiel unterbrechen, kann ich den aktuellen Spielstand speichern?</para
+></question>
+  <answer
+><para
+>Nein, in &ksquares; kann der aktuelle Spielstand nicht gespeichert werden.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+ 
+</qandaset>
+</chapter>
+ 
+<chapter id="configuration"
+><title
+>Einstellungen für das Spiel</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Dialog Neues Spiel</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Neues Spiel</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Im Dialog <guilabel
+>Neues Spiel</guilabel
+> finden Sie folgende Einstellungen:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Spieler</guilabel
+></term>
+    <listitem
+><para
+>Stellen Sie hier die Anzahl der Teilnehmer ein. Wählen Sie auch, ob der Spieler von einem menschlichen Gegner oder dem Computer gespielt wird. Im Auswahlfeld <guilabel
+>Anzahl der Spieler</guilabel
+> stellen Sie die Zahl der Teilnehmer ein. Geben Sie für jeden Teilnehmer einen Namen ein und wählen Sie mit dem Ankreuzfeld den Spieler-Typ.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Spielfeld</guilabel
+></term>
+    <listitem
+><para
+>Hier stellen Sie die Größe des Spielfeldes ein. Verwenden Sie die Auswahlfelder <guilabel
+>Breite</guilabel
+> und <guilabel
+>Höhe</guilabel
+> um die Breite und die Höhe zu verändern.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Spieleinstellungen</guilabel
+></term>
+    <listitem
+><para
+>Dieser Teil des Einrichtungsdialogs steuert den Schwierigkeitsgrad des Spiels. Wenn Sie das Ankreuzfeld <guilabel
+>Schnellstart</guilabel
+> deaktiviert lassen, beginnt das Spiel mit einem leeren Raster. Aktivieren Sie sie, um mit einem teilweise gefüllten Raster zu beginnen.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Einrichtungsdialog</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Einrichtungsdialog</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Der Dialog <guilabel
+>Einrichten - &ksquares;</guilabel
+> enthält folgende Unterfenster:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Anzeige</guilabel
+></term>
+    <listitem
+><para
+>Hier können Sie die Farben für &ksquares; einstellen.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Computerspieler</guilabel
+></term>
+    <listitem
+><para
+>Wählen Sie hier die Spielstärke des Gegners.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+ 
+<chapter id="credits"
+><title
+>Danksagungen und Lizenz</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+ 
+<para
+>&ksquares; </para>
+
+<para
+>Programm Copyright 2006 Matt Williams <email
+>matt@milliams.com</email
+> </para>
+ 
+  <para
+>Dokumentation Copyright &copy; 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>Übersetzung Burkhard Lück<email
+>lueck@hube-lueck.de</email
+></para
+> &underFDL; &underGPL; </chapter>
+ 
+&documentation.index; 
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

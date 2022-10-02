@@ -1,0 +1,590 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>Het handboek van &ksquares;</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+  <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+
+  <othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+> <surname
+>Trounev</surname
+> <contrib
+>Nalezer</contrib>
+    <affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+  </othercredit>
+  &Freek.de.Kruijf;&Ronald.Stroethoff; 
+</authorgroup>
+
+<copyright>
+  <year
+>2006</year>
+  <holder
+>Matt Williams</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>2021-10-03</date>
+<releaseinfo
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>Deze documentatie beschrijft het spel &ksquares; versie 0.6</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>spel</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>bord</keyword>
+	<keyword
+>Stippen en vakjes</keyword>
+	<keyword
+>Vakjes</keyword>
+	<keyword
+>Vierkantjes</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>vier spelers</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Paddocks</keyword>
+	<keyword
+>Square-it</keyword>
+	<keyword
+>Punten en streepjes</keyword>
+	<keyword
+>Stippenspel</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Inleiding</title
+> <!-- do not change this! -->
+	<note
+><title
+>Speltype:</title
+><para
+>Bord</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Aantal mogelijke spelers:</title
+><para
+>Vier</para
+></note>
+	<para
+>&ksquares; is een leuk en opwindend spel. &ksquares; is gemodelleerd naar het bekende op pen en papier gebaseerde spel landveroveraar.</para>
+<para
+>De bedoeling van &ksquares; is het maken van vierkanten door de punten met elkaar te verbinden. Tot vier spelers kunnen aan dit spel deelnemen, om de beurt. De truc is – onafhankelijk van wie het grootste gedeelte van het vierkant heeft geconstrueerd, het de speler is, die het vierkant compleet maakt, de punten krijgt.</para>
+<para
+>Om de speelronde te winnen moet de speler de meeste punten verzamelen door een zo groot mogelijk gebied te bedekken met vlakken in de eigen kleur van de speler.</para>
+</chapter>
+
+<chapter id="howto"
+><title
+>Hoe te spelen</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Doel:</title
+><para
+>Maak meer vakken compleet dan uw tegenstanders.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>Bij de start van een spel is het spelbord leeg. Er is alleen een raster van punten die aangeven waar u de lijnen kunt trekken. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Het spelbord van &ksquares;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>Elke speler plaatst om de beurt tussen twee naast elkaar gelegen punten op het speelbord een lijn. Als uw muis boven het speelbord zweeft dan zal een gele lijn oplichten zodat u kunt zien wat de locatie van uw lijn na plaatsing zal zijn. Als u besloten heeft waar u uw lijn wilt trekken, dan kunt u klikken en de lijn is getrokken. Als u door een lijn te trekken, een vierkant compleet maakt dan is het uw vierkant geworden en verdient u een punt. Elke keer dat u een vierkant completeert, mag u nog een lijn trekken. Als u geen vierkant completeert, dan komt de volgende speler aan de beurt. Het spel gaat door totdat alle vierkanten op het speelbord een eigenaar hebben. </para>
+  <para
+>Om een nieuw spel te starten met aangepaste instellingen (aantal spelers, spelernamen, formaat speelbord) klikt u op de knop <guibutton
+>Nieuw</guibutton
+> in de werkbalk of u gaat naar naar menu-item <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spel</guimenu
+><guimenuitem
+>Nieuw</guimenuitem
+></menuchoice
+>. Voor het starten van een nieuw spel met de dezelfde instellingen als het huidige spel, klikt u in de werkbalk op de knop <guibutton
+>Spel herstarten</guibutton
+>. </para>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Spelregels, strategieën en tips</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Spelregels</title>
+    <para
+>Er valt weinig te vertellen over de spelregels, omdat het spelconcept zelf vrij eenvoudig is. Des niet te min, hier zijn de spelregels die u zult tegenkomen tijdens het spelen van &ksquares;:</para>
+    <itemizedlist>
+	<listitem
+><para
+>U mag alleen de punten met elkaar verbinden als ze nog niet eerder door u, uw tegenstander of de computer zijn verbonden.</para
+></listitem>
+	<listitem
+><para
+>Om punten te krijgen, moet u de punten met elkaar verbinden om een vierkant te vormen.</para
+></listitem>
+	<listitem
+><para
+>Het vierkant kan niet groter zijn dan vier aan elkaar grenzende punten.</para
+></listitem>
+	<listitem
+><para
+>Als een vierkant compleet is dan mag de speler die de laatste lijn van dat vierkant heeft getrokken zich de eigenaar van dat vierkant noemen. Het vierkant krijgt een kleur en de speler krijgt een punt.</para
+></listitem>
+	<listitem
+><para
+>De speler die het vierkant compleet maakt, krijgt een extra beurt die hij niet mag overslaan.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Strategieën en tips</title>
+  <itemizedlist>
+	<listitem
+><para
+>Probeer niet willekeurig lijnen te trekken. Een dergelijke spelmethode zal zeer waarschijnlijk resulteren in verlies.</para
+></listitem>
+	<listitem
+><para
+>Construeer lange kettingen van lijnen over het spelbord. Nadat een dergelijke lijn compleet is, start met een andere die parallel loopt met de eerste.</para
+></listitem>
+	<listitem
+><para
+>Probeer geen constructies te bouwen waar alleen nog één lijn ontbreekt. Uw tegenstander zal daar vrij waarschijnlijk gebruik van maken.</para
+></listitem>
+	<listitem
+><para
+>Als u uw tegenstander de gelegenheid geeft om een of meer vierkanten te voltooien, probeer dan een zodanige combinatie te krijgen dat u er het minste nadeel van heeft.</para
+></listitem>
+	<listitem
+><para
+>Probeer uw tegenstander in die situatie te krijgen waar hij/zij geen andere mogelijkheid heeft dan dat u het vierkant voltooid.</para
+></listitem>
+	<listitem
+><para
+>Als u de kans krijgt om een hele rij van vierkanten compleet te maken, onthoud dan dat door twee vierkanten aan het eind incompleet te laten u uw tegenstander dwingt om deze alsnog compleet te maken, waarna uzelf de gelegenheid weer heeft om nog een rij te creëren. Een dergelijke situatie heeft de naam double-cross.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+
+<chapter id="menu-items">
+  <title
+>Menu-items</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nieuw</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Start een nieuw spel.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Spel herstarten</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+>Start een nieuw spel met dezelfde instellingen als het huidige spel.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Topscores tonen...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Toont</action
+> de tabel met de hoogste scores.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Afsluiten</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Sluit</action
+> &ksquares; af.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+        <term
+><menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>&ksquares; instellen...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Opent een dialoogvenster voor het instellen van &ksquares;.</action
+> Lees de sectie <link linkend="configuration"
+>Spelconfiguratie</link
+> voor de details.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>&ksquares; heeft de standaard &kde;-menu-items <guimenu
+>Instellingen</guimenu
+> en <guimenu
+>Help</guimenu
+>, lees voor meer informatie de secties over het <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu Instellingen</ulink
+> en <ulink url="help:/fundamentals/menus.html#menus-help"
+>Help Menu</ulink
+> van &kde; Fundamentals. </para>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Veel voorkomende vragen</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Ik wil het uiterlijk van dit spel wijzigen. Kan dat? </para
+></question>
+ <answer
+><para
+>Op dit moment is het enige van het uiterlijk van het spel dat u kan wijzigen, de kleur van de lijnen. Om dit te doen gebruikt u menu-item <menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>&ksquares; instellen...</guimenuitem
+></menuchoice
+>. Lees de sectie <link linkend="configuration"
+>Spelconfiguratie</link
+> voor de details.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ik heb een fout begaan. Kan ik deze ongedaan maken? </para
+></question>
+ <answer
+><para
+>Nee. &ksquares; heeft op dit moment geen functie <quote
+>Ongedaan maken</quote
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Kan ik het toetsenbord gebruiken om het spel te spelen? </para
+></question>
+ <answer
+><para
+>Nee. Het spel van &ksquares; kunt u niet met het toetsenbord spelen.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ik kom er niet achter wat hier te doen! Zijn er tips? </para
+></question>
+ <answer
+><para
+>Nee, De functie <quote
+>Hint</quote
+> is nog niet geïmplementeerd.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ik moet het spel nu beëindigen, maar ik ben nog niet klaar. Kan ik mijn spel opslaan?</para
+></question>
+  <answer
+><para
+>&ksquares; heeft geen functie <quote
+>Opslaan</quote
+>.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"
+><title
+>Spelconfiguratie</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Dialoog Nieuw spel</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Nieuw spel</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Het dialoogvenster <guilabel
+>Nieuw spel</guilabel
+> bestaat uit de volgende onderdelen:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Spelers</guilabel
+></term>
+    <listitem
+><para
+>Hier kunt u het aantal deelnemende spelers instellen, met daarbij wie wordt gespeeld door een mens en wie door kunstmatige intelligentie. Gebruik de draaischakelaar <guilabel
+>Aantal spelers</guilabel
+> voor het instellen van het aantal deelnemers. Voer vervolgens de naam van elke deelnemer in en gebruik het selectievakje <guilabel
+>Mens?</guilabel
+> om het type speler te bepalen.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Spelbord</guilabel
+></term>
+    <listitem
+><para
+>Hier kunt u het formaat van het spelbord instellen. Gebruik de draaischakelaars <guilabel
+>Breedte</guilabel
+> en <guilabel
+>Hoogte</guilabel
+> voor het wijzigen van de breedte en hoogte van het spelbord.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Spelinstellingen</guilabel
+></term>
+    <listitem
+><para
+>Dit gedeelte van de instellingendialoog reguleert de moeilijkheidsgraad van het spel. Als u het keuzevakje <guilabel
+>Snelstart</guilabel
+> uitgeschakeld laat - dan zal het spel starten met een leeg raster. In het andere geval zal het spel starten met een gedeeltelijk gevuld spelbord.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Instellingendialoog</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Instellingendialoog</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Het dialoogvenster <guilabel
+>&ksquares; instellen...</guilabel
+> bestaat uit de volgende tabbladen:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Weergave</guilabel
+></term>
+    <listitem
+><para
+>Hier kunt u de kleurinstellingen van &ksquares; wijzigen.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Computerspeler</guilabel
+></term>
+    <listitem
+><para
+>Gebruik dit tabblad om de moeilijkheidsgraad in te stellen.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+
+<chapter id="credits"
+><title
+>Dankbetuiging en licentie</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+
+<para
+>&ksquares; </para>
+
+<para
+>Programma copyright 2006 Matt Williams <email
+>matt@milliams.com</email
+> </para>
+
+  <para
+>Documentatie Copyright &copy; 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+&meld.fouten;&vertaling.freek;&vertaling.ronald;&nagelezen.freek; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

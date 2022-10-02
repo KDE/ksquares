@@ -1,0 +1,592 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>El manual del &ksquares;</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+  <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+
+  <othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+> <surname
+>Trounev</surname
+> <contrib
+>Revisor</contrib>
+    <affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+  </othercredit>
+  &traductor.Antoni.Bella; 
+</authorgroup>
+
+<copyright>
+  <year
+>2006</year>
+  <holder
+>Matt Williams</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>3 d'octubre de 2021</date>
+<releaseinfo
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>Aquesta documentació descriu el joc &ksquares; versió 0.6</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>joc</keyword
+> <!-- do not change this! -->
+	<keyword
+>KSquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>tauler</keyword>
+	<keyword
+>Quadrats</keyword>
+	<keyword
+>Quadres</keyword>
+	<keyword
+>Quadrats</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>quatre jugadors</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Poltrers</keyword>
+	<keyword
+>Quadrat</keyword>
+	<keyword
+>Punts i guions</keyword>
+	<keyword
+>Joc de punts</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Introducció</title
+> <!-- do not change this! -->
+	<note
+><title
+>Tipus de joc:</title
+><para
+>Tauler</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Nombre de possibles jugadors:</title
+><para
+>Quatre</para
+></note>
+	<para
+>El &ksquares; és un joc divertit i emocionant. El &ksquares; està modelat després del conegut Quadrats jugat amb llapis i paper.</para>
+<para
+>La idea darrere del &ksquares; és construir quadrats interconnectant els punts en la quadrícula. A aquest joc poden jugar fins a quatre jugadors junts, per torns. El truc és, independentment de qui hagi construït la major part del quadrat, és el jugador que el completi qui obtindrà el punt.</para>
+<para
+>Per a guanyar el joc, el jugador de la tanda haurà de recollir la majoria dels punts cobrint la majoria de les àrees amb els quadrats del color propi del jugador.</para>
+</chapter>
+
+<chapter id="howto"
+><title
+>Com jugar</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Objectiu:</title
+><para
+>Completar més quadrats que qualsevol dels oponents.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>En començar la partida, el tauler de joc estarà buit. Senzillament hi ha una quadrícula de punts que mostren on es poden dibuixar les línies. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Tauler de joc del &ksquares;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>En el seu torn, cada jugador dibuixarà una línia entre dos punts adjacents en el tauler. En mantenir el ratolí sobre el tauler de joc, una línia indicadora groga mostrarà on es col·locarà la línia quan feu clic. Una vegada hàgiu decidit on la voleu dibuixar, feu-hi clic i es dibuixarà. Si quan es dibuixa una línia, es completa un quadrat, llavors aquest quadrat us pertanyerà i guanyareu un punt. Cada vegada que completeu un quadrat, haureu de dibuixar una altra línia. Si la línia no ha completat un quadrat, llavors continuarà/an el/s jugador/s següent/s. La partida continuarà fins que cada quadrat en el tauler sigui propietat d'un dels jugadors. </para>
+  <para
+>Per a començar una partida nova amb la configuració personalitzada (nombre de jugadors, noms dels jugadors i mida del tauler), feu clic al botó <guibutton
+>Nova</guibutton
+> de la barra d'eines o aneu a l'element de menú <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Nova</guimenuitem
+></menuchoice
+>. Per a començar una partida nova amb la mateixa configuració que la partida actual, feu clic al botó <guibutton
+>Reinicia la partida</guibutton
+> de la barra d'eines. </para>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Les regles del joc, estratègies i consells</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Les regles del joc</title>
+    <para
+>Hi ha molt poc a dir quan a les regles, ja que el concepte del joc en si mateix és molt simple. No obstant això, aquí hi ha les regulacions del joc, quan un jugador s'enfronta al &ksquares;:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Només podreu connectar els punts en la quadrícula si no estan connectats prèviament, així també l'oponent o l'ordinador.</para
+></listitem>
+	<listitem
+><para
+>Per a obtenir els punts, haureu de connectar els punts per a formar un quadrat.</para
+></listitem>
+	<listitem
+><para
+>El quadrat no pot ser més gran del que permeten els quatre punts adjacents a la quadrícula.</para
+></listitem>
+	<listitem
+><para
+>Una vegada es completa un quadrat, el jugador que dibuixi l'última línia d'aquest se li atorgarà el dret de possessió sobre seu. Després, el quadrat tindrà el color del jugador i aquest obtindrà un punt.</para
+></listitem>
+	<listitem
+><para
+>El jugador que completi el quadrat obtindrà un torn addicional que no podrà ometre.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Les estratègies i consells</title>
+  <itemizedlist>
+	<listitem
+><para
+>Intenteu no jugar a l'atzar. Aquesta pràctica de joc sense dubte resultarà en perdre.</para
+></listitem>
+	<listitem
+><para
+>Construïu cadenes llargues de línies sobre el tauler de joc. Una vegada se'n completi una, comenceu a construir una altra paral·lela a la primera.</para
+></listitem>
+	<listitem
+><para
+>Intenteu no construir artefactes on només romangui una línia sense fer. L'oponent gairebé segurament s'aprofitarà d'això.</para
+></listitem>
+	<listitem
+><para
+>Si voleu permetre que l'oponent obtingui un quadrat o més, intenteu seleccionar la combinació que resulti en el mal menor.</para
+></listitem>
+	<listitem
+><para
+>Intenteu empènyer a l'oponent a la situació en què ell/ella no tingui més remei que deixar-vos obtenir el quadrat.</para
+></listitem>
+	<listitem
+><para
+>Si teniu l'oportunitat de començar a completar tota una cadena de quadrats, recordeu que deixar-ne dos al final d'aquesta cadena incompleta, estareu empenyent a l'oponent a completar-los, el qual us oferirà l'oportunitat de continuar amb una altra cadena. Aquesta situació s'anomena la creu doble.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+
+<chapter id="menu-items">
+  <title
+>Elements de menú</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Nova</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Inicia una partida nova.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Reinicia la partida</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+>Comença una partida nova amb les mateixes opcions de configuració que l'actual.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Mostra les puntuacions...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Mostra</action
+> la taula de puntuacions.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Joc</guimenu
+> <guimenuitem
+>Surt</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Surt</action
+> del &ksquares;.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+        <term
+><menuchoice
+><guimenu
+>Arranjament</guimenu
+> <guimenuitem
+>Configura el &ksquares;...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Obre un diàleg per a configurar el &ksquares;.</action
+> Per a més detalls, vegeu la secció <link linkend="configuration"
+>Configurar la partida</link
+>.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>De manera addicional, el &ksquares; té la configuració comuna al &kde; i els elements dels menús <guimenu
+>Arranjament</guimenu
+> i <guimenu
+>Ajuda</guimenu
+>. Per a obtenir més informació, llegiu les seccions sobre <ulink url="help:/fundamentals/menus.html#menus-settings"
+>El menú Arranjament</ulink
+> i <ulink url="help:/fundamentals/menus.html#menus-help"
+>El menú Ajuda</ulink
+> en els Fonaments del &kde;. </para>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Preguntes més freqüents</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Vull canviar l'aparença d'aquest joc. Puc fer-ho? </para
+></question>
+ <answer
+><para
+>Actualment, l'únic que podreu canviar sobre l'aspecte del joc és el color de les línies. Per a fer-ho, utilitzeu l'element de menú <menuchoice
+><guimenu
+>Arranjament</guimenu
+> <guimenuitem
+>Configura el &ksquares;...</guimenuitem
+></menuchoice
+>. Per a més detalls, vegeu <link linkend="configuration"
+>Configurar la partida</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>He comès un error. Puc desfer-lo? </para
+></question>
+ <answer
+><para
+>No. El &ksquares; no té una característica <quote
+>Desfés</quote
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Puc utilitzar el teclat per a jugar a aquest joc? </para
+></question>
+ <answer
+><para
+>No. El &ksquares; no es pot jugar amb el teclat.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>No sé què fer aquí! Hi ha cap consell? </para
+></question>
+ <answer
+><para
+>No. El &ksquares; encara no té una característica <quote
+>Consell</quote
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>He de sortir del joc ara, però encara no he acabat. Puc desar el meu progrés?</para
+></question>
+  <answer
+><para
+>El &ksquares; no té una característica <quote
+>Desa</quote
+>.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"
+><title
+>Configuració del joc</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Diàleg «Partida nova»</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Partida nova</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>El diàleg <guilabel
+>Partida nova</guilabel
+> consta dels grups següents:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Jugadors</guilabel
+></term>
+    <listitem
+><para
+>Aquí podreu canviar el nombre de jugadors participants, així com determinar quin serà jugat per humans i quin per la intel·ligència artificial. Utilitzeu el botó de selecció de valors <guilabel
+>Nombre de jugadors:</guilabel
+> per a especificar el nombre de participants. Després escriviu un nom per a cada participant i utilitzeu feu servir la casella de selecció <guilabel
+>Humà?</guilabel
+> per a especificar el tipus de jugador.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Tauler de joc</guilabel
+></term>
+    <listitem
+><para
+>Aquí podreu regular la mida del tauler de joc. Utilitzeu els botons de selecció de valors <guilabel
+>Amplada:</guilabel
+> i <guilabel
+>Alçada:</guilabel
+> per a canviar l'amplada i l'alçada del tauler de joc.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Opcions de configuració del joc</guilabel
+></term>
+    <listitem
+><para
+>Aquesta part del diàleg de configuració regula la dificultat del joc. Si desmarqueu la casella de selecció <guilabel
+>Inici ràpid</guilabel
+>, la partida començarà amb la quadrícula buida. Altrament, la partida començarà amb el tauler de joc parcialment ple.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Diàleg de configuració</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>El diàleg de configuració</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>El diàleg <guilabel
+>Configuració - &ksquares;</guilabel
+> consisteix en les pestanyes següents:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Pantalla</guilabel
+></term>
+    <listitem
+><para
+>Aquí podreu canviar les opcions de configuració del color en el &ksquares;.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Jugador de l'ordinador</guilabel
+></term>
+    <listitem
+><para
+>Utilitzeu aquesta pestanya per a regular la dificultat de la partida.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+
+<chapter id="credits"
+><title
+>Crèdits i llicència</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+
+<para
+>&ksquares; </para>
+
+<para
+>Copyright del programa 2006 Matt Williams <email
+>matt@milliams.com</email
+> </para>
+
+  <para
+>Copyright de la documentació &copy; 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>Traductor de la documentació: &credits.Antoni.Bella;</para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

@@ -1,0 +1,757 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&ksquares;">
+  <!ENTITY kappversion "0.3"
+><!--Applicaion version. Use this variable everywhere it's needed.-->
+  <!ENTITY docversion "0.2.0"
+><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY docupdate "2007-11-14"
+><!--Document version. Use this variable everywhere it's needed.-->
+  <!ENTITY package "kdegames"
+>  <!-- do not change this! -->
+  <!ENTITY % Japanese "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+ 
+<book lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>&kappname; ハンドブック</title
+> <!-- This is the title of the docbook. Live as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+    <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+<othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+><surname
+>Trounev</surname
+> <contrib
+>校閲</contrib>
+<affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+</othercredit>
+    <othercredit role="translator"
+><firstname
+>Yukiko</firstname
+><surname
+>Bando</surname
+><affiliation
+><address
+><email
+></email
+></address
+></affiliation
+><contrib
+>日本語訳</contrib
+></othercredit
+> 
+  </authorgroup>
+
+  <copyright>
+    <year
+>2006</year>
+    <holder
+>Matt Williams</holder>
+  </copyright>
+ 
+<date
+>&docupdate;</date
+><!-- Date of (re)writing, ro update. Use the variable definitions within header to change this value.-->
+<releaseinfo
+>&docversion;</releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+ 
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>このドキュメントは &kappname; のバージョン &kappversion; に基づいています。</para>
+</abstract>
+ 
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>ゲーム</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. use as many as necessary.Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>ボード</keyword>
+	<keyword
+>ドット＆ボックス</keyword>
+	<keyword
+>ボックス</keyword>
+	<keyword
+>正方形</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>4 人プレイ</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Paddocks</keyword>
+	<keyword
+>Square-it</keyword>
+	<keyword
+>Dots and Dashes</keyword>
+	<keyword
+>Dot Game</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>はじめに</title
+> <!-- do not change this! -->
+	<note
+><title
+>ゲームの種類:</title
+><para
+>ボードゲーム</para
+></note
+><!-- Game genre. use as many as necessary.Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>プレイヤー数:</title
+><para
+>4 人</para
+></note>
+	<para
+>&kappname; は紙とペンを使ってプレイする「ドット＆ボックス」をモデルにした &kde; の楽しいゲームです。</para>
+<para
+>&kappname; はボード上の 2 つの点を線で結んで正方形を完成させていくゲームです。最高 4 人のプレイヤーで遊べます。このゲームで重要なのは、1 つの正方形を構成する 4 つの線を誰が一番多く引いたかということではなく、誰がそれを完成させたかということです。完成された正方形は最後に線を引いたプレイヤーのものになります。</para>
+<para
+>ゲームに勝つためには、他のどのプレイヤーよりも多くの正方形を自分のものにしなければなりません。</para>
+</chapter>
+ 
+<chapter id="howto"
+><title
+>プレイ方法</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>目的:</title
+><para
+>他のどのプレイヤーよりも多くの正方形を完成させてください。</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>ゲーム開始時にはボードには何もありません。線を引く位置を示す点が格子状に並んでいるだけです。 </para>
+<note
+><title
+>注:</title
+><para
+>ゲームの難易度によっては、ゲームの開始時に既に部分的に線が引かれている場合があります。</para
+></note>
+  <para
+>プレイヤーは交代で隣り合った 2 つの点を線で結びます。ボード上でマウスカーソルを移動すると、そこでクリックした場合に引かれる線が黄色のインジケータで示されます。線を引く位置を決めたら、クリックしてください。あなたが引いた線で正方形が完成した場合、その正方形はあなたのものになり、ポイントが与えられます。また、1 つの正方形を完成すると、続けてもう一度線を引くことができます。そうでない場合は、次のプレイヤーに順番が移ります。ボード上のすべての正方形が完成した時点でゲーム終了となります。 </para>
+  <para
+>プレイヤー数、プレイヤーの名前、ボードのサイズを変えて新しいゲームを開始するときは、ツールバーの <guibutton
+>新規</guibutton
+> ボタンをクリックするか、メニューバーの <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>ゲーム</guimenu
+><guimenuitem
+>新規</guimenuitem
+></menuchoice
+> を使います。現在のゲームと同じ設定で新しいゲームを開始するときは、ツールバーの <guibutton
+>ゲームを再スタート</guibutton
+> をクリックします。 </para>
+</chapter>
+ 
+<chapter id="rules_and_tips"
+><title
+>ゲームのルール、戦略、ヒント</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>ルール</title>
+    <para
+>&kappname; は単純なゲームなので、ルールに関して説明すべきことはほとんどありません。以下のルールに従ってプレイしてください。</para>
+    <itemizedlist>
+	<listitem
+><para
+>あなた自身や他のプレイヤーまたはコンピュータによってまだ結ばれていない 2 つの点の間にのみ線を引くことができます。</para
+></listitem>
+	<listitem
+><para
+>ポイントを獲得するには、あなたが正方形を完成させなければなりません。</para
+></listitem>
+	<listitem
+><para
+>正方形は隣り合った 4 つの点を結ぶ線で作成します。それより大きな正方形は作成できません。</para
+></listitem>
+	<listitem
+><para
+>完成された正方形は、その正方形の最後の線を引いたプレイヤーのものになり、そのプレイヤーの色で内部が塗りつぶされます。</para
+></listitem>
+	<listitem
+><para
+>正方形を完成させたプレイヤーは続けてもう一度線を引くことができます。これはパスすることはできません。</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>戦略とヒント</title>
+  <itemizedlist>
+	<listitem
+><para
+>行き当たりばったりに線を引いてはいけません。そのようなやり方では、たいてい負けてしまいます。</para
+></listitem>
+	<listitem
+><para
+>連続する線によってボード上に長い鎖を作ります。1 本できたら次にそれと平行する鎖を作ります。</para
+></listitem>
+	<listitem
+><para
+>もう 1 手で正方形が完成するような位置に線を引かないようにしましょう。そのようなことをすると、必ず敵に取られてしまいます。</para
+></listitem>
+	<listitem
+><para
+>敵に正方形を取られるのがやむを得ない状況でも、被害を最小限にとどめる手を考えてください。</para
+></listitem>
+	<listitem
+><para
+>あなたに正方形を完成させるより他に手がないような状況に敵を追い込むようにしてください。</para
+></listitem>
+	<listitem
+><para
+>あなたが連続する正方形を完成できるような状況になった場合、すべての正方形を完成せずに最後の 2 つを未完成のまま残しておきましょう。それらを敵に完成させることで、他の連続する正方形を完成させるチャンスがあなたに回ってきます。このような状況を「ダブルクロス」といいます。</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+  
+<chapter id="interface"
+><title
+>インターフェースの概要</title
+> <!-- do not change this! -->
+<!-- This section has to do with menubar. Describe every single entry in order. Use <variablelist
+> and <varlistentry
+>. Split the chapter into sections using <sect1(2,3)
+> for better viewing.-->
+  <sect1 id="file-game-menu-reference">
+    <title
+><guimenu
+>ゲーム</guimenu
+> メニュー</title>
+    
+    <para>
+    <variablelist>
+    <varlistentry>
+    <term>
+    <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ゲーム</guimenu
+> <guimenuitem
+>新規</guimenuitem
+> </menuchoice>
+    </term>
+    <listitem
+><para
+><action
+>新しいゲームを開始します。</action
+></para
+></listitem>
+    </varlistentry>
+    <varlistentry>
+    <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>ゲーム</guimenu
+><guimenuitem
+>ゲームを再スタート</guimenuitem
+></menuchoice
+></term>
+    <listitem
+><para
+>現在のゲームと同じ設定で新しいゲームを開始します。</para
+></listitem>
+    </varlistentry>
+    <varlistentry>
+    <term>
+    <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ゲーム</guimenu
+> <guimenuitem
+>ハイスコアを表示</guimenuitem
+> </menuchoice>
+    </term>
+    <listitem
+><para
+>ハイスコアのリストを表示します。</para
+></listitem>
+    </varlistentry>
+    <varlistentry>
+    <term>
+    <menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ゲーム</guimenu
+> <guimenuitem
+>終了</guimenuitem
+> </menuchoice>
+    </term>
+    <listitem
+><para
+>&ksquares; を終了します。</para
+></listitem>
+    </varlistentry>
+    </variablelist>
+    </para>
+  </sect1>
+
+  <sect1 id="settings-menu-reference">
+    <title
+><guimenu
+>設定</guimenu
+> メニュー</title>
+ <variablelist>
+  <varlistentry>
+    <term
+><menuchoice
+><guimenu
+>設定</guimenu
+><guimenuitem
+>ツールバーを表示</guimenuitem
+> </menuchoice
+></term>
+    <listitem
+><para
+>ツールバーの表示/非表示を切り替えます。</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><menuchoice
+><guimenu
+>設定</guimenu
+><guimenuitem
+>ステータスバーを表示</guimenuitem
+> </menuchoice
+></term>
+    <listitem
+><para
+>ステータスバーの表示/非表示を切り替えます。</para
+></listitem>
+  </varlistentry>
+			<varlistentry id="settings-menu-shortcuts">
+				<term
+><menuchoice
+><guimenu
+>設定</guimenu
+> <guimenuitem
+>ショートカットを設定...</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+>&kappname; で使うキーボードショートカットを変更するためのダイアログを開きます。</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="settings-menu-toolbars">
+				<term
+><menuchoice
+><guimenu
+>設定</guimenu
+> <guimenuitem
+>ツールバーを設定...</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+>ツールバーに表示するボタンを設定するためのダイアログを開きます。</para
+></listitem>
+			</varlistentry>
+			<varlistentry id="settings-menu-settings">
+				<term
+><menuchoice
+><guimenu
+>設定</guimenu
+> <guimenuitem
+>&kappname; を設定...</guimenuitem
+> </menuchoice
+></term>
+				<listitem
+><para
+>&kappname; のオプションを設定するためのダイアログを開きます。詳しくは <link linkend="configuration"
+>ゲームの設定</link
+> のセクションを参照してください。</para
+></listitem>
+			</varlistentry>
+    </variablelist>
+  </sect1>
+
+<sect1 id="help"
+><!--This is a standard Help menubar entry. Only change if needed.-->
+<title
+><guimenu
+>ヘルプ</guimenu
+> メニュー</title>
+&help.menu.documentation; </sect1>
+</chapter>
+  
+<chapter id="faq"
+><title
+>よくある質問</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+<question
+><para
+>このゲームは誰が作ったのですか？</para
+></question>
+ <answer
+><para
+>kdegames 開発チームです。<ulink url="http://games.kde.org"
+>ウェブサイト</ulink
+> をご覧ください。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>隠しコマンド (チートコード) はどこで入手できますか？ </para
+></question>
+ <answer
+><para
+>&kde; のゲームには隠しコマンドはありません。</para
+></answer>
+</qandaentry>
+    <qandaentry>
+      <question>
+        <para
+>ゲームに勝つには？</para>
+      </question>
+      <answer>
+        <para
+>他のどのプレイヤーよりも多くの正方形を完成させてください。</para>
+      </answer>
+    </qandaentry>
+<qandaentry>
+ <question
+><para
+>新しいゲームを開始するには？ </para
+></question>
+ <answer
+><para
+>新しいゲームを開始するには、メニューバーの <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>ゲーム</guimenu
+><guimenuitem
+>新規</guimenuitem
+></menuchoice
+> を使います。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>ゲームを一時停止するには？ </para
+></question>
+ <answer
+><para
+>必要がないので &kappname; には「一時停止」する機能はありません。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>ゲームの外観を変えることはできますか？ </para
+></question>
+ <answer
+><para
+>今のところ変更できるのは線の色だけですが、メニューバーの <menuchoice
+><guimenu
+>設定</guimenu
+><guimenuitem
+>&kappname; を設定...</guimenuitem
+></menuchoice
+> を使って変更できます。詳しくは <link linkend="configuration"
+>ゲームの設定</link
+> のセクションを参照してください。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>線を引く場所を間違えてしまいました。元に戻せますか？ </para
+></question>
+ <answer
+><para
+>いいえ。&kappname; には今のところ「元に戻す」機能はありません。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>キーボードを使ってプレイできますか？ </para
+></question>
+ <answer
+><para
+>いいえ。&kappname; はキーボードではプレイできません。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>次の手が思いつきません。ヒントはありますか？ </para
+></question>
+ <answer
+><para
+>いいえ。&kappname; にはまだヒント機能はありません。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>途中でゲームをやめなければならないときにゲームを保存できますか？</para
+></question>
+  <answer
+><para
+>いいえ。&kappname; にはゲームを「保存」する機能はありません。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>ハイスコアはどこで見ることができますか？</para
+></question>
+ <answer
+><para
+>ハイスコアを見るには、メニューバーの <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+><guimenu
+>ゲーム</guimenu
+><guimenuitem
+>ハイスコアを表示</guimenuitem
+></menuchoice
+> を使います。</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>ゲームの設定を変更するには？ </para
+></question>
+ <answer
+><para
+>&kappname; にはゲームのオプションを設定するダイアログが 2 つあります。それぞれの詳細については、このハンドブックの <link linkend="configuration"
+>ゲームの設定</link
+> のセクションを参照してください。</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+ 
+</qandaset>
+</chapter>
+ 
+<chapter id="configuration"
+><title
+>ゲームの設定</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>新規ゲームのダイアログ</title>
+<para
+><guilabel
+>新規ゲーム</guilabel
+> のダイアログでは、以下について設定できます。</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>プレイヤー</guilabel
+></term>
+    <listitem
+><para
+>ここでプレイヤーの数とプレイヤーの種類 (人間かコンピュータか) を設定します。まずプレイヤーの数を <guilabel
+>プレイヤー数</guilabel
+> のボックスで選択します。次にそれぞれのプレイヤーの名前を入力し、チェックボックスを使ってプレイヤーの種類を指定します。</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>ゲームボード</guilabel
+></term>
+    <listitem
+><para
+>ここでゲームボードのサイズを設定します。サイズを変更する場合は <guilabel
+>幅</guilabel
+> と <guilabel
+>高さ</guilabel
+> のボックスで値を選択してください。</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>ゲーム設定</guilabel
+></term>
+    <listitem
+><para
+>ここではゲームの難易度に関する設定を行います。<guilabel
+>クイックスタート</guilabel
+> をチェックしなければ、空のボードでゲームを開始します。チェックした場合は、部分的に線が引かれたボードで開始します。</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>設定ダイアログ</title>
+<para
+><guilabel
+>設定 - &kappname;</guilabel
+> のダイアログには以下のページがあります。</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>表示</guilabel
+></term>
+    <listitem
+><para
+>ここで &kappname; で使う色を変更できます。</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>コンピュータプレイヤー</guilabel
+></term>
+    <listitem
+><para
+>このページでゲームの難易度を調節します。</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+ 
+<chapter id="credits"
+><title
+>クレジットとライセンス</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+ 
+<para
+>&kappname; </para>
+
+<para
+>プログラム Copyright 2006 Matt Williams <email
+>matt@milliams.com</email
+> </para>
+ 
+  <para
+>ドキュメンテーション Copyright 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>日本語訳: Yukiko Bando</para
+> 
+&underFDL; &underGPL; </chapter>
+  
+<appendix id="installation">
+<title
+>インストール</title>
+ 
+&install.intro.documentation;
+ 
+ 
+<sect1 id="Compilation">
+<title
+>コンパイルとインストール</title>
+&install.compile.documentation; </sect1>
+</appendix>
+ 
+&documentation.index; 
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

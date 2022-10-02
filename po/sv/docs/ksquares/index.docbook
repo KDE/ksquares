@@ -1,0 +1,604 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>Handbok Fyrkanter</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+  <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+
+  <othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+> <surname
+>Trounev</surname
+> <contrib
+>Granskare</contrib>
+    <affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+  </othercredit>
+  <othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+  <year
+>2006</year>
+  <holder
+>Matt Williams</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>2021-10-03</date>
+<releaseinfo
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>Denna dokumentation beskriver spelet Fyrkanter, version 0.6</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>spel</keyword
+> <!-- do not change this! -->
+	<keyword
+>Fyrkanter</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>bräde</keyword>
+	<keyword
+>Ringar och rutor</keyword>
+	<keyword
+>Rutor</keyword>
+	<keyword
+>Fyrkanter</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>fyra spelare</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Askar</keyword>
+	<keyword
+>Fyrkanter</keyword>
+	<keyword
+>Punkter och streck</keyword>
+	<keyword
+>Ringspel</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Inledning</title
+> <!-- do not change this! -->
+	<note
+><title
+>Speltyp:</title
+><para
+>Bräde</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Antal möjliga spelare:</title
+><para
+>Fyra</para
+></note>
+	<para
+>Fyrkanter är ett roligt och spännande spel. Fyrkanter har det välkända penn- och pappersbaserade spelet "Ringar och rutor" som förlaga.</para>
+<para
+>Idén bakom Fyrkanter är att skapa rutor genom att förbinda punkter på rutnätet. Upp till fyra spelare kan delta i spelet tillsammans, i tur och ordning. Tricket är att det är spelaren som gör färdigt fyrkanten som får poäng för den, oberoende av vem som har konstruerat största delen av den.</para>
+<para
+>För att vinna spelomgången måste spelaren samla ihop flest poäng genom att täcka störst yta med rutor av spelarens egen färg.</para>
+</chapter>
+
+<chapter id="howto"
+><title
+>Hur man spelar</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Syfte:</title
+><para
+>Skapa fler fyrkanter än någon av dina motståndare.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>När spelet startar är spelplanen tom. Det finns bara ett rutnät med punkter som visar var linjer kan ritas. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Spelbrädet i Fyrkanter</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>Varje spelare ritar i tur och ordning en linje mellan två intilliggande punkter på spelplanen. Genom att hålla musen över spelplanen visar en gul indikeringslinje var din linje kommer att placeras när du klickar. När du väl har bestämt var du vill rita linjen, klicka så ritas den. Om du gjorde färdigt en fyrkant genom att rita linjen, tillhör fyrkanten dig och ger dig en poäng. Varje gång du gör färdigt en fyrkant får du rita en linje till. Om linjen inte gjorde färdigt en fyrkant, går turen till nästa spelare. Spelet fortsätter till varje fyrkant på spelplanen ägs av någon av spelarna. </para>
+  <para
+>Klicka på knappen <guibutton
+>Ny</guibutton
+> i verktygsraden eller använd menyalternativet <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+><guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nytt</guimenuitem
+></menuchoice
+> för att starta ett nytt spel med egna inställningar (antal spelare, spelarnas namn, spelplanens storlek). Klicka på knappen <guibutton
+>Starta om spel</guibutton
+> i verktygsraden för att starta ett nytt spel med samma inställningar som det nuvarande. </para>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Spelets regler, strategi och tips</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Spelregler</title>
+    <para
+>Det finns mycket lite att säga när det gäller reglerna, eftersom spelkonceptet i sig är ganska enkelt. Trots det, här är spelets föreskrifter som du som spelare trotsigt kommer att möta när du spelar Fyrkanter:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Du kan bara sammanbinda punkter på rutnätet om de inte tidigare har sammanbundits av dig, dina motståndare, eller datorn.</para
+></listitem>
+	<listitem
+><para
+>För att få poäng måste du sammanbinda punkter så att en fyrkant formas.</para
+></listitem>
+	<listitem
+><para
+>Fyrkanten kan inte vara större än de fyra punkterna i rutnätet som ligger intill varandra tillåter.</para
+></listitem>
+	<listitem
+><para
+>När en fyrkant görs färdig ges spelaren som ritar den sista linjen rätten till ägarskap över den. Fyrkanten färgas då, och spelaren får en poäng.</para
+></listitem>
+	<listitem
+><para
+>Spelaren som gör färdigt fyrkanten får en extra tur, som inte kan ges upp.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Strategier och tips</title>
+  <itemizedlist>
+	<listitem
+><para
+>Försök att inte spela slumpmässigt. Sådana spelförsök resulterar definitivt i förlust.</para
+></listitem>
+	<listitem
+><para
+>Skapa långa kedjor med linjer över spelplanen. När en sådan kedja är färdig, börja då bygga en ny som går parallellt med den första.</para
+></listitem>
+	<listitem
+><para
+>Försök inte bygga grejor där bara en linje är kvar att göra. Dina motspelare utnyttjar nästan säkert det.</para
+></listitem>
+	<listitem
+><para
+>Om du måste låta en motspelare få en fyrkant eller flera, försök välja kombinationen som gör minst skada.</para
+></listitem>
+	<listitem
+><para
+>Försök driva motspelaren till en situation där han, hon eller den inte kommer att ha något annat val än att låta dig få fyrkanten.</para
+></listitem>
+	<listitem
+><para
+>Om du ska få en chans att börja göra färdigt en hel kedja med fyrkanter, kom ihåg att genom att lämna två fyrkanter i ändarna av en sådan kedja ofullständiga, driver du motspelaren att göra färdigt dem, och på så sätt får du själv möjlighet att fortsätta med ytterligare en kedja. En sådan situation kallas ett dubbelspel.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+
+<chapter id="menu-items">
+  <title
+>Menyalternativ</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Nytt</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Starta ett nytt spel.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Starta om spel</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+>Startar ett nytt spel med samma inställning som det nuvarande spelet.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Visa bästa resultat</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Visar</action
+> tabellen med poängtoppen.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Spel</guimenu
+> <guimenuitem
+>Avsluta</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Avslutar</action
+> Fyrkanter.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+        <term
+><menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guimenuitem
+>Anpassa Fyrkanter...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Visar en dialogruta för att anpassa Fyrkanter.</action
+> Se avsnittet <link linkend="configuration"
+>Spelanpassning</link
+> för detaljinformation.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>Dessutom har Fyrkanter de vanliga menyalternativen <guimenu
+>Inställningar</guimenu
+> och <guimenu
+>Hjälp</guimenu
+> i &kde;. För mer information, läs avsnitten  <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menyn Inställningar</ulink
+> och <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menyn Hjälp</ulink
+> i &kde;:s Grunder. </para>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Vanliga frågor</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Jag vill ändra hur spelet ser ut. Kan man göra det? </para
+></question>
+ <answer
+><para
+>Det enda du för närvarande kan ändra i spelets utseende är linjernas färg. Använd menyalternativet <menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guimenuitem
+>Anpassa Fyrkanter...</guimenuitem
+></menuchoice
+> för att göra det. Se avsnittet <link linkend="configuration"
+>Spelanpassning</link
+> för detaljinformation.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Jag gjorde ett misstag. Kan man ångra sig? </para
+></question>
+ <answer
+><para
+>Nej. Fyrkanter har för närvarande inte någon funktion för att ångra sig.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Kan man använda tangentbordet för att spela? </para
+></question>
+ <answer
+><para
+>Nej. Fyrkanter kan inte spelas genom att använda tangentbordet.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Jag kan inte räkna ut vad man ska göra här. Finns det några tips? </para
+></question>
+ <answer
+><para
+>Nej. Någon tipsfunktion är ännu inte implementerad.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Jag måste avsluta spelet nu, men jag är inte klar än. Kan man spara det man har gjort?</para
+></question>
+  <answer
+><para
+>Fyrkanter har inte någon funktion för att <quote
+>spara</quote
+>.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"
+><title
+>Spelanpassning</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Dialogrutan Nytt spel</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Nytt spel</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Dialogrutan <guilabel
+>Nytt spel</guilabel
+> består av följande rutor:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Spelare</guilabel
+></term>
+    <listitem
+><para
+>Här kan du ändra antal deltagande spelare, samt bestämma vilka som spelas av människor och vilka av den artificiella intelligensen. Använd nummerrutan <guilabel
+>Antal spelare:</guilabel
+> för att ange deltagarantalet. Skriv därefter in ett namn på var och en av deltagarna, och använd kryssrutan <guilabel
+>Människa?</guilabel
+> för att ange typ av spelare.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Spelplan</guilabel
+></term>
+    <listitem
+><para
+>Här kan du reglera spelplanens storlek. Använd nummerrutorna <guilabel
+>Bredd</guilabel
+> och <guilabel
+>Höjd</guilabel
+> för att ändra spelplanens bredd och höjd.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Spelinställningar</guilabel
+></term>
+    <listitem
+><para
+>Den här delen av inställningsdialogrutan reglerar spelets svårighetsgrad. Om du lämnar kryssrutan <guilabel
+>Snabbstart</guilabel
+> utan markering, börjar spelet med ett tomt rutnät. Annars börjar spelet med spelplanen delvis ifylld.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Inställningsdialogrutan</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Inställningsdialogrutan</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Dialogrutan <guilabel
+>Anpassa Fyrkanter</guilabel
+> består av följande flikar:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Skärm</guilabel
+></term>
+    <listitem
+><para
+>Här kan du ändra Fyrkanters färginställningar.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Datorspelare</guilabel
+></term>
+    <listitem
+><para
+>Använd den här fliken för att reglera spelets svårighetsgrad.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+
+<chapter id="credits"
+><title
+>Tack till och licens</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+
+<para
+>Fyrkanter </para>
+
+<para
+>Program copyright 2006 Matt Williams <email
+>matt@milliams.com</email
+> </para>
+
+  <para
+>Dokumentation Copyright &copy; 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

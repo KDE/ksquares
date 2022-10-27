@@ -8,6 +8,7 @@
 
 GameBoardView::GameBoardView(QWidget *parent) : QGraphicsView(parent)
 {
+    setMouseTracking(true);
 }
 
 void GameBoardView::setBoardSize()

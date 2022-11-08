@@ -499,27 +499,3 @@ msgstr "Puntuacions"
 #, kde-format
 msgid "Scoreboard"
 msgstr "Taula de puntuacions"
-
-#~ msgid "Online rankings"
-#~ msgstr "Classificació en línia"
-
-#~ msgid "List of seats"
-#~ msgstr "Llista de llocs"
-
-#~ msgid "Request to start a new game with the current settings"
-#~ msgstr "Sol·licita iniciar una nova partida amb l'arranjament actual"
-
-#~ msgid "The game has finished"
-#~ msgstr "La partida ha acabat"
-
-#~ msgid "It is your turn"
-#~ msgstr "És el vostre torn"
-
-#~ msgid "Waiting for opponent..."
-#~ msgstr "S'està esperant un contrincant..."
-
-#~ msgid "Waiting for move result..."
-#~ msgstr "S'està esperant el resultat de la jugada..."
-
-#~ msgid "Online game"
-#~ msgstr "Joc en línia"

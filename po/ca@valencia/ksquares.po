@@ -443,7 +443,7 @@ msgstr "Dificultat de la IA:"
 #: prefs_display.ui:13
 #, kde-format
 msgid "Display Settings"
-msgstr "Configuració de la pantalla"
+msgstr "Configureu la pantalla"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:19

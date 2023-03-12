@@ -44,8 +44,13 @@ kconfig_add_kcfg_files(ksquares GENERATE_MOC settings.kcfgc) #GENERATE_MOC is no
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ksquares.png")
 ecm_add_app_icon(ksquares ICONS ${ICONS_SRCS})
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(ksquares KDEGames6)
+else()
+    target_link_libraries(ksquares KF5KDEGames)
+endif()
+
 target_link_libraries(ksquares
-    KF5KDEGames
     KF${KF_MAJOR_VERSION}::CoreAddons
     KF${KF_MAJOR_VERSION}::Completion
     KF${KF_MAJOR_VERSION}::Crash

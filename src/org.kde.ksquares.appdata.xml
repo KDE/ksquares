@@ -12,6 +12,7 @@
   <name xml:lang="de">KSquares</name>
   <name xml:lang="el">KSquares</name>
   <name xml:lang="en-GB">KSquares</name>
+  <name xml:lang="eo">KSquares</name>
   <name xml:lang="es">KSquares</name>
   <name xml:lang="et">KSquares</name>
   <name xml:lang="eu">KSquares</name>
@@ -48,6 +49,7 @@
   <summary xml:lang="de">Käsekästchen-Spiel</summary>
   <summary xml:lang="el">Συνδέστε τις τελείες για να σχηματίσετε τετράγωνα</summary>
   <summary xml:lang="en-GB">Connect the dots to create squares</summary>
+  <summary xml:lang="eo">Konektu la punktojn por krei kvadratojn</summary>
   <summary xml:lang="es">Conecte los puntos para crear cuadrados</summary>
   <summary xml:lang="et">Punktide ühendamine ruutude loomiseks</summary>
   <summary xml:lang="eu">Konektatu puntuak karratuak sortzeko</summary>
@@ -126,6 +128,7 @@
       <caption xml:lang="de">Eine typische Spielposition in KSquares</caption>
       <caption xml:lang="el">Η τυπική θέση του πίνακα στο KSquares</caption>
       <caption xml:lang="en-GB">The typical board position in KSquares</caption>
+      <caption xml:lang="eo">La tipa bretpozicio en KSquares</caption>
       <caption xml:lang="es">La posición de tablero típica de KSquares</caption>
       <caption xml:lang="et">KSquaresi tüüpiline mänguväljak</caption>
       <caption xml:lang="eu">KSquares-en taulako joko-egoera tipikoa</caption>
@@ -161,6 +164,7 @@
       <caption xml:lang="de">Die gefüllten Kästchen in KSquares</caption>
       <caption xml:lang="el">Τα συμπληρωμένα τετράγωνα στο KSquares</caption>
       <caption xml:lang="en-GB">The completed squares in KSquares</caption>
+      <caption xml:lang="eo">La kompletigitaj kvadratoj en KSquares</caption>
       <caption xml:lang="es">Los cuadros completados de KSquares</caption>
       <caption xml:lang="et">KSquaresi valmisruutudega mänguväljak</caption>
       <caption xml:lang="eu">KSquares-en osatutako karratuak</caption>
@@ -195,6 +199,7 @@
       <caption xml:lang="de">Spielbeginn in KSquares</caption>
       <caption xml:lang="el">Ο αρχικός πίνακας στο KSquares</caption>
       <caption xml:lang="en-GB">An initial board in KSquares</caption>
+      <caption xml:lang="eo">Komenca breto en KSquares</caption>
       <caption xml:lang="es">Un tablero inicial de KSquares</caption>
       <caption xml:lang="et">KSquaresi algne mänguväljak</caption>
       <caption xml:lang="eu">KSquares-en hasierako taula</caption>

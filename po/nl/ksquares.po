@@ -4,20 +4,20 @@
 #
 # Rinse de Vries <rinsedevries@kde.nl>, 2007.
 # Kristof Bal <kristof.bal@gmail.com>, 2008.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2013, 2021.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2013, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:42+0000\n"
-"PO-Revision-Date: 2021-10-04 18:15+0200\n"
+"PO-Revision-Date: 2023-06-22 10:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -440,7 +440,7 @@ msgstr "Moeilijkheid computerspeler:"
 #: prefs_display.ui:13
 #, kde-format
 msgid "Display Settings"
-msgstr "Weergave-instellingen"
+msgstr "Beeldscherminstellingen"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:19

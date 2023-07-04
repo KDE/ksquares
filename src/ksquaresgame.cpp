@@ -155,3 +155,4 @@ void KSquaresGame::checkForNewSquares()
     tryEndGo();
 }
 
+#include "moc_ksquaresgame.cpp"

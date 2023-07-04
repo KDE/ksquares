@@ -68,3 +68,4 @@ void NewGameDialog::adjustEnabledUsers(int numOfPlayers)
     }
 }
 
+#include "moc_newgamedialog.cpp"

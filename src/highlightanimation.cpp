@@ -28,3 +28,4 @@ HighlightAnimation::HighlightAnimation(const QLineF &line)
     connect(animGroup, &QSequentialAnimationGroup::finished, this, &HighlightAnimation::deleteLater);
 }
 
+#include "moc_highlightanimation.cpp"

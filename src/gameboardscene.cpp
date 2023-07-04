@@ -263,3 +263,4 @@ void GameBoardScene::mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent)
     QGraphicsScene::mouseMoveEvent(mouseEvent);
 }
 
+#include "moc_gameboardscene.cpp"

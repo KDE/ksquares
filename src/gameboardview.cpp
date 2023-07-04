@@ -18,3 +18,4 @@ void GameBoardView::setBoardSize()
     }
 }
 
+#include "moc_gameboardview.cpp"

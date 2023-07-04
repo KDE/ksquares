@@ -319,3 +319,4 @@ void KSquaresWindow::optionsPreferences()
   dialog->show();
 }
 
+#include "moc_ksquareswindow.cpp"

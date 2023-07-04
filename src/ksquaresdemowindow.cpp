@@ -102,3 +102,4 @@ void KSquaresDemoWindow::gameOver(const QVector<KSquaresPlayer> & /*playerList*/
     QTimer::singleShot(1000, this, &KSquaresDemoWindow::gameNew);
 }
 
+#include "moc_ksquaresdemowindow.cpp"

@@ -11,9 +11,6 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#endif
 #include <KDBusService>
 
 #include "ksquareswindow.h"
@@ -24,17 +21,8 @@
 
 int main(int argc, char **argv)
 {
-    // Fixes blurry icons with fractional scaling
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-#endif
     QApplication app(argc, argv);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("ksquares"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("ksquaresrc"));
-    migrate.setUiFiles(QStringList() << QStringLiteral("ksquaresui.rc"));
-    migrate.migrate();
-#endif
+
     KLocalizedString::setApplicationDomain("ksquares");
     KAboutData about(QStringLiteral("ksquares"), i18n("KSquares"),
                      QStringLiteral(KSQUARES_VERSION_STRING),

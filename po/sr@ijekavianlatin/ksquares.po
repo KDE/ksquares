@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-12 03:24+0200\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2010-09-24 14:33+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -96,7 +96,7 @@ msgstr "Boja linije indikatora"
 msgid "Highlight Color"
 msgstr "Boja isticanja"
 
-#: ksquaresdemowindow.cpp:68
+#: ksquaresdemowindow.cpp:65
 #, kde-format
 msgid "Player %1"
 msgstr "Igrač %1"
@@ -107,66 +107,72 @@ msgstr "Igrač %1"
 msgid "Main Toolbar"
 msgstr "Glavna traka"
 
-#: ksquareswindow.cpp:60
+#: ksquareswindow.cpp:57
 #, kde-format
 msgid "Current Player"
 msgstr "Tekući igrač"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:71 ksquareswindow.cpp:232 ksquareswindow.cpp:238
-#: ksquareswindow.cpp:243 prefs_ai.ui:54
+#: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
+#: ksquareswindow.cpp:240 prefs_ai.ui:54
 #, kde-format
 msgid "Easy"
 msgstr "lako"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:72 ksquareswindow.cpp:233 ksquareswindow.cpp:237
-#: ksquareswindow.cpp:244 prefs_ai.ui:59
+#: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
+#: ksquareswindow.cpp:241 prefs_ai.ui:59
 #, kde-format
 msgid "Medium"
 msgstr "srednje"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:73 ksquareswindow.cpp:234 ksquareswindow.cpp:239
-#: ksquareswindow.cpp:242 prefs_ai.ui:64
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:239 prefs_ai.ui:64
 #, kde-format
 msgid "Hard"
 msgstr "teško"
 
-#. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
-#: ksquareswindow.cpp:204 scoreswidget.ui:13
-#, kde-format
+#: ksquareswindow.cpp:201
+#, fuzzy, kde-format
+#| msgid "Scores"
+msgctxt "@title:window"
 msgid "Scores"
 msgstr "Rezultati"
 
 # >> @title:column
-#: ksquareswindow.cpp:209
+#: ksquareswindow.cpp:206
 #, kde-format
 msgid "Player Name"
 msgstr "ime igrača"
 
 # >> @title:column
-#: ksquareswindow.cpp:210
+#: ksquareswindow.cpp:207
 #, kde-format
 msgid "Completed Squares"
 msgstr "završena polja"
 
-#: ksquareswindow.cpp:294
+#: ksquareswindow.cpp:291
 #, kde-format
 msgid "Start a new game with the current settings"
 msgstr "Pokreni novu igru sa trenutnim postavkama"
 
-#: ksquareswindow.cpp:311
+#: ksquareswindow.cpp:309
 #, kde-format
 msgid "Display"
 msgstr "Prikaz"
 
-#: ksquareswindow.cpp:315
+#: ksquareswindow.cpp:314
 #, kde-format
 msgid "Computer Player"
 msgstr "Računarski igrač"
 
-#: main.cpp:26
+#: main.cpp:27
+#, kde-format
+msgid "KSquares"
+msgstr "K‑kvadrati"
+
+#: main.cpp:29
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -175,59 +181,61 @@ msgstr ""
 "Na poteze crtate linije.\n"
 "Kad god zatvorite kvadrat, igrate još jednom."
 
-#: main.cpp:39
-#, kde-format
-msgid "KSquares"
-msgstr "K‑kvadrati"
-
-#: main.cpp:40
+#: main.cpp:31
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "© 2006–2007, Mat Vilijams"
 
-#: main.cpp:41
+#: main.cpp:34
 #, kde-format
 msgid "Matt Williams"
 msgstr "Mat Vilijams"
 
-#: main.cpp:41
+#: main.cpp:34
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Prvobitni tvorac i održavalac"
 
-#: main.cpp:42
+#: main.cpp:35
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Vinkelmolen"
 
-#: main.cpp:42
+#: main.cpp:35
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Mnoge zakrpe i sređivanja grešaka"
 
-#: main.cpp:43
+#: main.cpp:36
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vinsent-Peters"
 
-#: main.cpp:43
+#: main.cpp:36
 #, kde-format
 msgid "Hard AI"
 msgstr "Teška VI"
 
-#: main.cpp:49
+#: main.cpp:41
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Pokreni igru u demo režimu"
 
-#: main.cpp:63 main.cpp:64 main.cpp:65
+#: main.cpp:55 main.cpp:56 main.cpp:57
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"
 msgstr "Igrač %1"
 
+#: newgamedialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "New Game"
+msgctxt "@title:window"
+msgid "New Game"
+msgstr "Nova igra"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, NewGameWidget)
-#: newgamedialog.cpp:31 newgamewidget.ui:13
+#: newgamewidget.ui:13
 #, kde-format
 msgid "New Game"
 msgstr "Nova igra"
@@ -472,6 +480,12 @@ msgstr "Boja linija pokazatelja:"
 #, kde-format
 msgid "Highlight color:"
 msgstr "Boja isticanja:"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
+#: scoreswidget.ui:13
+#, kde-format
+msgid "Scores"
+msgstr "Rezultati"
 
 #. i18n: ectx: property (whatsThis), widget (QTableView, scoreTable)
 #: scoreswidget.ui:19

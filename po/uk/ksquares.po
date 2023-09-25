@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:42+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2021-10-04 08:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -165,12 +165,12 @@ msgstr "Дисплей"
 msgid "Computer Player"
 msgstr "Комп'ютерний гравець"
 
-#: main.cpp:39
+#: main.cpp:27
 #, kde-format
 msgid "KSquares"
 msgstr "KSquares"
 
-#: main.cpp:41
+#: main.cpp:29
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -179,47 +179,47 @@ msgstr ""
 "Використайте це для малювання ліній.\n"
 "Якщо ви заповните квадратики, ви отримаєте інший."
 
-#: main.cpp:43
+#: main.cpp:31
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "© Matt Williams, 2006-2007"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Перший автор та колишній супроводжувач"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Багато латок та виправлення вад"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Hard AI"
 msgstr "Складний рівень для комп’ютерного гравця"
 
-#: main.cpp:53
+#: main.cpp:41
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Запустити гру в демонстраційному режимі"
 
-#: main.cpp:67 main.cpp:68 main.cpp:69
+#: main.cpp:55 main.cpp:56 main.cpp:57
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:42+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2014-01-07 14:23+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -163,12 +163,12 @@ msgstr "Vis"
 msgid "Computer Player"
 msgstr "Datamaskinspiller"
 
-#: main.cpp:39
+#: main.cpp:27
 #, kde-format
 msgid "KSquares"
 msgstr "KSquares"
 
-#: main.cpp:41
+#: main.cpp:29
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -177,47 +177,47 @@ msgstr ""
 "Bytt på å tegne linjer.\n"
 "Hvis du fullfører et kvadrat, er det din tur igjen."
 
-#: main.cpp:43
+#: main.cpp:31
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "© 2006–2007 Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Opprinnelig utvikler og nåværende vedlikeholder"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Mange rettelser og feilfikser"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Hard AI"
 msgstr "Vanskelig AI"
 
-#: main.cpp:53
+#: main.cpp:41
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Kjør spillet i demomodus (automatisk spilling)"
 
-#: main.cpp:67 main.cpp:68 main.cpp:69
+#: main.cpp:55 main.cpp:56 main.cpp:57
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"
@@ -315,8 +315,8 @@ msgstr "Me&nneske?"
 #: newgamewidget.ui:182
 #, kde-format
 msgid ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal; text-decoration:none;\">\n"
@@ -324,8 +324,8 @@ msgid ""
 "right:0px; -qt-block-indent:0; text-indent:0px;\">How many players will be "
 "in the game</p></body></html>"
 msgstr ""
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-"css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal; text-decoration:none;\">\n"

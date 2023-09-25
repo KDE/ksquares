@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:42+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2023-09-16 10:09\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -161,12 +161,12 @@ msgstr "显示"
 msgid "Computer Player"
 msgstr "电脑玩家"
 
-#: main.cpp:39
+#: main.cpp:27
 #, kde-format
 msgid "KSquares"
 msgstr "KSquares"
 
-#: main.cpp:41
+#: main.cpp:29
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -175,47 +175,47 @@ msgstr ""
 "游戏中依次在棋盘上画线。\n"
 "每完成一个方块，就继续下一个。"
 
-#: main.cpp:43
+#: main.cpp:31
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "(C) 2006-2007 Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "原项目创立者和维护者"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "许多补丁和错误修正"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Hard AI"
 msgstr "困难 AI"
 
-#: main.cpp:53
+#: main.cpp:41
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "以演示模式(自动游戏)运行游戏"
 
-#: main.cpp:67 main.cpp:68 main.cpp:69
+#: main.cpp:55 main.cpp:56 main.cpp:57
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

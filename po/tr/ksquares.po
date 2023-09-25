@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:42+0000\n"
+"POT-Creation-Date: 2023-09-25 01:40+0000\n"
 "PO-Revision-Date: 2023-05-08 11:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -165,12 +165,12 @@ msgstr "Ekran"
 msgid "Computer Player"
 msgstr "Bilgisayar Oyuncusu"
 
-#: main.cpp:39
+#: main.cpp:27
 #, kde-format
 msgid "KSquares"
 msgstr "K Kareler"
 
-#: main.cpp:41
+#: main.cpp:29
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -179,47 +179,47 @@ msgstr ""
 "Sıranız geldiğinde çizgi çiziniz.\n"
 "Eğer kareye tamamlayabilirseniz bir tane daha çizebileceksiniz."
 
-#: main.cpp:43
+#: main.cpp:31
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "(C) 2006-2007 Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:46
+#: main.cpp:34
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Özgün yaratıcı ve sürdüren"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:47
+#: main.cpp:35
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Birçok yama ve hata düzeltmesi"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:48
+#: main.cpp:36
 #, kde-format
 msgid "Hard AI"
 msgstr "Zor YZ"
 
-#: main.cpp:53
+#: main.cpp:41
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Oyunu gösteri (otomatik oyun) kipinde çalıştır"
 
-#: main.cpp:67 main.cpp:68 main.cpp:69
+#: main.cpp:55 main.cpp:56 main.cpp:57
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

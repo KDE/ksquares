@@ -7,8 +7,8 @@
 #ifndef KSQUARESGAME_H
 #define KSQUARESGAME_H
 
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 #include "ksquaresplayer.h"
 
@@ -54,7 +54,7 @@ public:
      * @param startWidth the width of the game board
      * @param startHeight the height of the game board
      */
-    void createGame(const QVector<KSquaresPlayer> &startPlayers, int startWidth, int startHeight);
+    void createGame(const QList<KSquaresPlayer> &startPlayers, int startWidth, int startHeight);
     /**
      * Starts the game
      */
@@ -159,7 +159,7 @@ protected:
 
     // Updated as the game progresses
     ///List of all the players in the game
-    QVector<KSquaresPlayer> players;
+    QList<KSquaresPlayer> players;
 
     // Probably changes every go
     ///Id of the current player
@@ -174,7 +174,7 @@ Q_SIGNALS:
     ///A player's turn has started. This allows you to use AI/networking etc.
     void takeTurnSig(KSquaresPlayer *); //emit the new curent player
     ///emitted when the game board is completed. Allows you to construct a scoreboard
-    void gameOver(const QVector<KSquaresPlayer> &); //for scoreboard purposes
+    void gameOver(const QList<KSquaresPlayer> &); //for scoreboard purposes
     ///Emits the index and colour of the line
     void drawLine(int, QColor); //int == lineList index
     ///Emits the index and colour of the square

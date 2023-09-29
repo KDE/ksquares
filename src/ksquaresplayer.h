@@ -37,7 +37,7 @@ public:
 
     ///Create a null player
     KSquaresPlayer() =
-        default; // Needed to do QVector<KSquaresPlayer>::operator[int i] since
+        default; // Needed to do QList<KSquaresPlayer>::operator[int i] since
                  // it has to allocate memory i think
 
     /**

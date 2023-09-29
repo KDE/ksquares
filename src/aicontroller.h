@@ -50,7 +50,7 @@ public:
      * Otherwise, creates a list of all the squares which are surrounded by 1 or 2 lines and if the list isn't empty, randomly chooses one of them.
      * Otherwise, randomly chooses a square which is surrounded by three lines.
      *
-     * @return The index of the line from "QVector<bool> lines"
+     * @return The index of the line from "QList<bool> lines"
      */
     int chooseLine() const;
     /**

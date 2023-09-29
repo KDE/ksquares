@@ -36,7 +36,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void aiChooseLine();
     void playerTakeTurn(KSquaresPlayer *currentPlayer);
-    void gameOver(const QVector<KSquaresPlayer> & /*playerList*/);
+    void gameOver(const QList<KSquaresPlayer> & /*playerList*/);
 
 private:
     ///The game board view

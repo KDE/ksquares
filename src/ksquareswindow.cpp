@@ -140,7 +140,7 @@ void KSquaresWindow::gameNew()
 void KSquaresWindow::gameReset()
 {
     //create players
-    QVector<KSquaresPlayer> playerList;
+    QList<KSquaresPlayer> playerList;
     for (int i = 0; i < Settings::numOfPlayers(); i++) {
         QColor color;
         switch (i) {
@@ -191,9 +191,9 @@ void KSquaresWindow::gameReset()
     sGame->start();
 }
 
-void KSquaresWindow::gameOver(const QVector<KSquaresPlayer> &_playerList)
+void KSquaresWindow::gameOver(const QList<KSquaresPlayer> &_playerList)
 {
-    QVector<KSquaresPlayer> playerList = _playerList;
+    QList<KSquaresPlayer> playerList = _playerList;
     std::sort(playerList.begin(), playerList.end(), std::greater<KSquaresPlayer>());
     //m_scene->displayScoreTable(playerList);
 

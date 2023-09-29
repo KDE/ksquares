@@ -43,7 +43,7 @@ KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoard
 void KSquaresDemoWindow::gameNew()
 {
     //create players
-    QVector<KSquaresPlayer> playerList;
+    QList<KSquaresPlayer> playerList;
     for (int i = 0; i < 4; i++) {
         QColor color;
         switch (i) {
@@ -96,7 +96,7 @@ void KSquaresDemoWindow::aiChooseLine()
     sGame->addLineToIndex(ai.chooseLine());
 }
 
-void KSquaresDemoWindow::gameOver(const QVector<KSquaresPlayer> & /*playerList*/)
+void KSquaresDemoWindow::gameOver(const QList<KSquaresPlayer> & /*playerList*/)
 {
     //qDebug() << "Game Over";
     QTimer::singleShot(1000, this, &KSquaresDemoWindow::gameNew);

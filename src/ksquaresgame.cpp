@@ -23,7 +23,7 @@ KSquaresGame::~KSquaresGame()
     gameInProgress = false;
 }
 
-void KSquaresGame::createGame(const QVector<KSquaresPlayer> &startPlayers, int startWidth, int startHeight)
+void KSquaresGame::createGame(const QList<KSquaresPlayer> &startPlayers, int startWidth, int startHeight)
 {
     resetEverything();  //reset everything
     //qDebug() << "Creating Game with" << startPlayers.size() << "player(s)";
@@ -139,7 +139,7 @@ void KSquaresGame::checkForNewSquares()
 {
     for (int i = 0; i < (width * height); i++) { //cycle through every box..
         if (squareOwnerTable.at(i) == -1) { //..checking it if there is no current owner
-            //indices of the lines surrounding the box; Correlates to "QVector<bool> lineList"
+            //indices of the lines surrounding the box; Correlates to "QList<bool> lineList"
             int index1 = (i / width) * ((2 * width) + 1) + (i % width);
             int index2 = index1 + width;
             int index3 = index2 + 1;

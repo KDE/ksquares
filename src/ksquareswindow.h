@@ -46,7 +46,7 @@ private Q_SLOTS:
     void initObject();
     void optionsPreferences();
     void playerTakeTurn(KSquaresPlayer *currentPlayer);
-    void gameOver(const QVector<KSquaresPlayer> &_playerList);  //when KSquaresGame says the game is over. Display score board
+    void gameOver(const QList<KSquaresPlayer> &_playerList);  //when KSquaresGame says the game is over. Display score board
 
 private:
 

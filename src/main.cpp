@@ -35,14 +35,16 @@ int main(int argc, char **argv)
     about.addCredit(i18n("Fela Winkelmolen"), i18n("Many patches and bugfixes"));
     about.addCredit(i18n("Tom Vincent Peters"), i18n("Hard AI"));
 
-    QCommandLineParser parser;
     KAboutData::setApplicationData(about);
-    KCrash::initialize();
-    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("demo"), i18n("Run game in demo (autoplay) mode")));
 
+    KCrash::initialize();
+
+    QCommandLineParser parser;
+    parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("demo"), i18n("Run game in demo (autoplay) mode")));
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
+
     KDBusService service;
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("ksquares")));

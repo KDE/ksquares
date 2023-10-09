@@ -86,6 +86,7 @@ void KSquaresDemoWindow::gameNew()
 
 void KSquaresDemoWindow::playerTakeTurn(KSquaresPlayer *currentPlayer)
 {
+    Q_UNUSED(currentPlayer);
     //QT5 statusBar()->changeItem(currentPlayer->name(), 0);
     QTimer::singleShot(200, this, &KSquaresDemoWindow::aiChooseLine);
 }

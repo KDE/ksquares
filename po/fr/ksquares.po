@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:45+0000\n"
 "PO-Revision-Date: 2021-10-05 09:31+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -119,21 +119,21 @@ msgstr "Joueur actuel"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
-#: ksquareswindow.cpp:240 prefs_ai.ui:54
+#: ksquareswindow.cpp:240 prefs_ai.ui:36
 #, kde-format
 msgid "Easy"
 msgstr "Facile"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
-#: ksquareswindow.cpp:241 prefs_ai.ui:59
+#: ksquareswindow.cpp:241 prefs_ai.ui:41
 #, kde-format
 msgid "Medium"
 msgstr "Moyen"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
-#: ksquareswindow.cpp:239 prefs_ai.ui:64
+#: ksquareswindow.cpp:239 prefs_ai.ui:46
 #, kde-format
 msgid "Hard"
 msgstr "Difficile"
@@ -218,12 +218,12 @@ msgstr "Tom Vincent Peters"
 msgid "Hard AI"
 msgstr "Intelligence artificielle difficile"
 
-#: main.cpp:41
+#: main.cpp:43
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Exécuter le jeu en mode démonstration (automatiquement)"
 
-#: main.cpp:55 main.cpp:56 main.cpp:57
+#: main.cpp:57 main.cpp:58 main.cpp:59
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"
@@ -242,25 +242,25 @@ msgid "New Game"
 msgstr "Nouvelle partie"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: newgamewidget.ui:37
+#: newgamewidget.ui:22
 #, kde-format
 msgid "Settings for the players in the game"
 msgstr "Paramètres pour les joueurs dans la partie"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: newgamewidget.ui:40
+#: newgamewidget.ui:25
 #, kde-format
 msgid "Players"
 msgstr "Joueurs"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer4Name)
-#: newgamewidget.ui:64
+#: newgamewidget.ui:31
 #, kde-format
 msgid "The name of the fourth player"
 msgstr "Le nom du quatrième joueur"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
-#: newgamewidget.ui:67
+#: newgamewidget.ui:34
 #, kde-format
 msgid "Player 4:"
 msgstr "Joueur 4 :"
@@ -269,56 +269,56 @@ msgstr "Joueur 4 :"
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerOneHuman)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerTwoHuman)
-#: newgamewidget.ui:80 newgamewidget.ui:96 newgamewidget.ui:166
-#: newgamewidget.ui:214
+#: newgamewidget.ui:47 newgamewidget.ui:63 newgamewidget.ui:133
+#: newgamewidget.ui:181
 #, kde-format
 msgid "Should this player be controlled by a human"
 msgstr "Si ce joueur est contrôlé par un humain"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
-#: newgamewidget.ui:83
+#: newgamewidget.ui:50
 #, kde-format
 msgid "Hum&an?"
 msgstr "Hum&ain ?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
-#: newgamewidget.ui:99
+#: newgamewidget.ui:66
 #, kde-format
 msgid "Hu&man?"
 msgstr "Hu&main ?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
-#: newgamewidget.ui:109
+#: newgamewidget.ui:76
 #, kde-format
 msgid "The name of the third player"
 msgstr "Le nom du troisième joueur"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
-#: newgamewidget.ui:112
+#: newgamewidget.ui:79
 #, kde-format
 msgid "Player 3:"
 msgstr "Joueur 3 :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
-#: newgamewidget.ui:131
+#: newgamewidget.ui:98
 #, kde-format
 msgid "The name of the second player"
 msgstr "Le nom du deuxième joueur"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
-#: newgamewidget.ui:134
+#: newgamewidget.ui:101
 #, kde-format
 msgid "Player 2:"
 msgstr "Joueur 2 :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
-#: newgamewidget.ui:169
+#: newgamewidget.ui:136
 #, kde-format
 msgid "&Human?"
 msgstr "&Humain ?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
-#: newgamewidget.ui:182
+#: newgamewidget.ui:149
 #, kde-format
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
@@ -340,79 +340,79 @@ msgstr ""
 "dans la partie</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
-#: newgamewidget.ui:185
+#: newgamewidget.ui:152
 #, kde-format
 msgid "Number of players:"
 msgstr "Nombre de joueurs :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
-#: newgamewidget.ui:198
+#: newgamewidget.ui:165
 #, kde-format
 msgid "The name of the first player"
 msgstr "Le nom du premier joueur"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
-#: newgamewidget.ui:201
+#: newgamewidget.ui:168
 #, kde-format
 msgid "Player 1:"
 msgstr "Joueur 1 :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
-#: newgamewidget.ui:217
+#: newgamewidget.ui:184
 #, kde-format
 msgid "H&uman?"
 msgstr "H&umain ?"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
-#: newgamewidget.ui:230
+#: newgamewidget.ui:197
 #, kde-format
 msgid "Settings for the game board"
 msgstr "Paramètres pour le plateau de jeu"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: newgamewidget.ui:233
+#: newgamewidget.ui:200
 #, kde-format
 msgid "Game Board"
 msgstr "Plateau de jeu"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelWidth)
-#: newgamewidget.ui:257
+#: newgamewidget.ui:206
 #, kde-format
 msgid "The number of squares the area is wide"
 msgstr "Le nombre de carrés dans la zone est important"
 
 #. i18n: ectx: property (text), widget (QLabel, labelWidth)
-#: newgamewidget.ui:260
+#: newgamewidget.ui:209
 #, kde-format
 msgid "Width:"
 msgstr "Largeur :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelHeight)
-#: newgamewidget.ui:289
+#: newgamewidget.ui:238
 #, kde-format
 msgid "The number of squares the area is high"
 msgstr "Le nombre de carrés dans la zone est élevé"
 
 #. i18n: ectx: property (text), widget (QLabel, labelHeight)
-#: newgamewidget.ui:292
+#: newgamewidget.ui:241
 #, kde-format
 msgid "Height:"
 msgstr "Hauteur :"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_3)
-#: newgamewidget.ui:324
+#: newgamewidget.ui:273
 #, kde-format
 msgid "Settings for the game"
 msgstr "Paramètres pour la partie"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: newgamewidget.ui:327
+#: newgamewidget.ui:276
 #, kde-format
 msgid "Game Settings"
 msgstr "Paramètres du jeu"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
-#: newgamewidget.ui:351
+#: newgamewidget.ui:282
 #, kde-format
 msgid "Partially fill in the board automatically before the game starts"
 msgstr ""
@@ -420,7 +420,7 @@ msgstr ""
 "commence"
 
 #. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
-#: newgamewidget.ui:354
+#: newgamewidget.ui:285
 #, kde-format
 msgid "Quick start"
 msgstr "Démarrage rapide"
@@ -432,13 +432,13 @@ msgid "AI Settings"
 msgstr "Configuration de l'ordinateur"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
-#: prefs_ai.ui:75
+#: prefs_ai.ui:57
 #, kde-format
 msgid "How difficult it will be to beat the computer"
 msgstr "Niveau de difficulté pour battre l'ordinateur"
 
 #. i18n: ectx: property (text), widget (QLabel, label_difficulty)
-#: prefs_ai.ui:78
+#: prefs_ai.ui:60
 #, kde-format
 msgid "AI difficulty:"
 msgstr "Difficulté de l'ordinateur :"

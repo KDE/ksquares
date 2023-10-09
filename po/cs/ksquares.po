@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:40+0000\n"
+"POT-Creation-Date: 2023-10-09 01:45+0000\n"
 "PO-Revision-Date: 2021-10-08 14:24+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -112,21 +112,21 @@ msgstr "Aktuální hráč"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
-#: ksquareswindow.cpp:240 prefs_ai.ui:54
+#: ksquareswindow.cpp:240 prefs_ai.ui:36
 #, kde-format
 msgid "Easy"
 msgstr "Jednoduchá"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
-#: ksquareswindow.cpp:241 prefs_ai.ui:59
+#: ksquareswindow.cpp:241 prefs_ai.ui:41
 #, kde-format
 msgid "Medium"
 msgstr "Střední"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
-#: ksquareswindow.cpp:239 prefs_ai.ui:64
+#: ksquareswindow.cpp:239 prefs_ai.ui:46
 #, kde-format
 msgid "Hard"
 msgstr "Těžká"
@@ -211,12 +211,12 @@ msgstr "Tom Vincent Peters"
 msgid "Hard AI"
 msgstr "Těžká UI"
 
-#: main.cpp:41
+#: main.cpp:43
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Spustit hru v demo režimu"
 
-#: main.cpp:55 main.cpp:56 main.cpp:57
+#: main.cpp:57 main.cpp:58 main.cpp:59
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"
@@ -235,25 +235,25 @@ msgid "New Game"
 msgstr "Nová hra"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
-#: newgamewidget.ui:37
+#: newgamewidget.ui:22
 #, kde-format
 msgid "Settings for the players in the game"
 msgstr "Nastavení hráčů ve hře"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: newgamewidget.ui:40
+#: newgamewidget.ui:25
 #, kde-format
 msgid "Players"
 msgstr "Hráči"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer4Name)
-#: newgamewidget.ui:64
+#: newgamewidget.ui:31
 #, kde-format
 msgid "The name of the fourth player"
 msgstr "Jméno čtvrtého hráče"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
-#: newgamewidget.ui:67
+#: newgamewidget.ui:34
 #, kde-format
 msgid "Player 4:"
 msgstr "Hráč 4:"
@@ -262,56 +262,56 @@ msgstr "Hráč 4:"
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerOneHuman)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerTwoHuman)
-#: newgamewidget.ui:80 newgamewidget.ui:96 newgamewidget.ui:166
-#: newgamewidget.ui:214
+#: newgamewidget.ui:47 newgamewidget.ui:63 newgamewidget.ui:133
+#: newgamewidget.ui:181
 #, kde-format
 msgid "Should this player be controlled by a human"
 msgstr "Má být hráč ovládán člověkem"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
-#: newgamewidget.ui:83
+#: newgamewidget.ui:50
 #, kde-format
 msgid "Hum&an?"
 msgstr "Č&lověk?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
-#: newgamewidget.ui:99
+#: newgamewidget.ui:66
 #, kde-format
 msgid "Hu&man?"
 msgstr "Čl&ověk?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
-#: newgamewidget.ui:109
+#: newgamewidget.ui:76
 #, kde-format
 msgid "The name of the third player"
 msgstr "Jméno třetího hráče"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
-#: newgamewidget.ui:112
+#: newgamewidget.ui:79
 #, kde-format
 msgid "Player 3:"
 msgstr "Hráč 3:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
-#: newgamewidget.ui:131
+#: newgamewidget.ui:98
 #, kde-format
 msgid "The name of the second player"
 msgstr "Jméno druhého hráče"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
-#: newgamewidget.ui:134
+#: newgamewidget.ui:101
 #, kde-format
 msgid "Player 2:"
 msgstr "Hráč 2:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
-#: newgamewidget.ui:169
+#: newgamewidget.ui:136
 #, kde-format
 msgid "&Human?"
 msgstr "Č&lověk?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
-#: newgamewidget.ui:182
+#: newgamewidget.ui:149
 #, kde-format
 msgid ""
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
@@ -333,85 +333,85 @@ msgstr ""
 "body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
-#: newgamewidget.ui:185
+#: newgamewidget.ui:152
 #, kde-format
 msgid "Number of players:"
 msgstr "Počet hráčů:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
-#: newgamewidget.ui:198
+#: newgamewidget.ui:165
 #, kde-format
 msgid "The name of the first player"
 msgstr "Jméno prvního hráče"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
-#: newgamewidget.ui:201
+#: newgamewidget.ui:168
 #, kde-format
 msgid "Player 1:"
 msgstr "Hráč 1:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
-#: newgamewidget.ui:217
+#: newgamewidget.ui:184
 #, kde-format
 msgid "H&uman?"
 msgstr "Člo&věk?"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
-#: newgamewidget.ui:230
+#: newgamewidget.ui:197
 #, kde-format
 msgid "Settings for the game board"
 msgstr "Nastavení hrací desky"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: newgamewidget.ui:233
+#: newgamewidget.ui:200
 #, kde-format
 msgid "Game Board"
 msgstr "Hrací deska"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelWidth)
-#: newgamewidget.ui:257
+#: newgamewidget.ui:206
 #, kde-format
 msgid "The number of squares the area is wide"
 msgstr "Počet čtverců na šířku"
 
 #. i18n: ectx: property (text), widget (QLabel, labelWidth)
-#: newgamewidget.ui:260
+#: newgamewidget.ui:209
 #, kde-format
 msgid "Width:"
 msgstr "Šířka:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelHeight)
-#: newgamewidget.ui:289
+#: newgamewidget.ui:238
 #, kde-format
 msgid "The number of squares the area is high"
 msgstr "Počet čtverců na výšku"
 
 #. i18n: ectx: property (text), widget (QLabel, labelHeight)
-#: newgamewidget.ui:292
+#: newgamewidget.ui:241
 #, kde-format
 msgid "Height:"
 msgstr "Výška:"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_3)
-#: newgamewidget.ui:324
+#: newgamewidget.ui:273
 #, kde-format
 msgid "Settings for the game"
 msgstr "Nastavení pro hru"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: newgamewidget.ui:327
+#: newgamewidget.ui:276
 #, kde-format
 msgid "Game Settings"
 msgstr "Nastavení hry"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
-#: newgamewidget.ui:351
+#: newgamewidget.ui:282
 #, kde-format
 msgid "Partially fill in the board automatically before the game starts"
 msgstr "Automaticky částečně zaplnit desku před startem hry"
 
 #. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
-#: newgamewidget.ui:354
+#: newgamewidget.ui:285
 #, kde-format
 msgid "Quick start"
 msgstr "Rychlé spuštění"
@@ -423,13 +423,13 @@ msgid "AI Settings"
 msgstr "Nastavení UI"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
-#: prefs_ai.ui:75
+#: prefs_ai.ui:57
 #, kde-format
 msgid "How difficult it will be to beat the computer"
 msgstr "Jak těžké bude porazit počítač"
 
 #. i18n: ectx: property (text), widget (QLabel, label_difficulty)
-#: prefs_ai.ui:78
+#: prefs_ai.ui:60
 #, kde-format
 msgid "AI difficulty:"
 msgstr "UI obtížnost:"

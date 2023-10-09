@@ -40,12 +40,12 @@ void NewGameDialog::adjustEnabledUsers(int numOfPlayers)
         labelPlayer3Name->setEnabled(false);
         playerThreeName->setEnabled(false);
         playerThreeHuman->setEnabled(false);
-    // no break!
-        Q_FALLTHROUGH();
+        [[fallthrough]];
     case 3:
         labelPlayer4Name->setEnabled(false);
         playerFourName->setEnabled(false);
         playerFourHuman->setEnabled(false);
+        [[fallthrough]];
     case 4:
         break;
     default:
@@ -57,11 +57,12 @@ void NewGameDialog::adjustEnabledUsers(int numOfPlayers)
         labelPlayer4Name->setEnabled(true);
         playerFourName->setEnabled(true);
         playerFourHuman->setEnabled(true);
-        Q_FALLTHROUGH();
+        [[fallthrough]];
     case 3:
         labelPlayer3Name->setEnabled(true);
         playerThreeName->setEnabled(true);
         playerThreeHuman->setEnabled(true);
+        [[fallthrough]];
     case 2:
     default:
         break;

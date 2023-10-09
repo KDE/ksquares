@@ -39,7 +39,7 @@ ki18n_wrap_ui(ksquares
     prefs_display.ui
 )
 
-kconfig_add_kcfg_files(ksquares GENERATE_MOC settings.kcfgc) #GENERATE_MOC is not needed but it doesn't work without it for some reason :S
+kconfig_add_kcfg_files(ksquares settings.kcfgc)
 
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-ksquares.png")
 ecm_add_app_icon(ksquares ICONS ${ICONS_SRCS})

@@ -20,7 +20,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KScoreDialog>
-#include <KStandardGameAction>
+#include <KGameStandardAction>
 
 //generated
 #include "settings.h"
@@ -286,12 +286,12 @@ void KSquaresWindow::aiChooseLine()
 
 void KSquaresWindow::setupActions()
 {
-    KStandardGameAction::gameNew(this, &KSquaresWindow::gameNew, actionCollection());
-    QAction *resetGame = KStandardGameAction::restart(this, &KSquaresWindow::gameReset, actionCollection());
+    KGameStandardAction::gameNew(this, &KSquaresWindow::gameNew, actionCollection());
+    QAction *resetGame = KGameStandardAction::restart(this, &KSquaresWindow::gameReset, actionCollection());
     resetGame->setStatusTip(i18n("Start a new game with the current settings"));
 
-    KStandardGameAction::highscores(this, &KSquaresWindow::showHighscores, actionCollection());
-    KStandardGameAction::quit(this, &QWidget::close, actionCollection());
+    KGameStandardAction::highscores(this, &KSquaresWindow::showHighscores, actionCollection());
+    KGameStandardAction::quit(this, &QWidget::close, actionCollection());
 
     // Preferences
     KStandardAction::preferences(this, &KSquaresWindow::optionsPreferences, actionCollection());

@@ -16,7 +16,7 @@
 #include <KActionCollection>
 #include <QDebug>
 #include <KLocalizedString>
-#include <kstandardgameaction.h>
+#include <KGameStandardAction>
 
 //classes
 #include "aicontroller.h"
@@ -33,7 +33,7 @@ KSquaresDemoWindow::KSquaresDemoWindow() : KXmlGuiWindow(), m_view(new GameBoard
     m_view->setDisabled(true);
     setCentralWidget(m_view);
 
-    KStandardGameAction::quit(qApp, &QApplication::quit, actionCollection());
+    KGameStandardAction::quit(qApp, &QApplication::quit, actionCollection());
     setupGUI();
 
     //QT5 statusBar()->insertPermanentItem(i18n("Current Player"), 0);

@@ -38,6 +38,21 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 		</entry>
 	</group>
 	<group name="Display">
+		<entry name="BackgroundColor" type="Color">
+			<label>Background Color</label>
+			<whatsthis></whatsthis>
+			<default>255,255,255</default>
+		</entry>
+		<entry name="CenterDotColor" type="Color">
+			<label>Center Dot Color</label>
+			<whatsthis></whatsthis>
+			<default>0,0,0</default>
+		</entry>
+		<entry name="FeintLineColor" type="Color">
+			<label>Feint Line Color</label>
+			<whatsthis></whatsthis>
+			<default>192,192,192</default>
+		</entry>
 		<entry name="LineColor" type="Color">
 			<label>Line Color</label>
 			<whatsthis></whatsthis>

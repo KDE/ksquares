@@ -15,6 +15,9 @@
 
 #include <QDebug>
 
+//generated
+#include "settings.h"
+
 GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : QGraphicsScene(parent), width(newWidth), height(newHeight), acceptEvents(true)
 {
     ////qDebug() << "GameBoardScene::GameBoardScene()";
@@ -30,14 +33,14 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
             int y = iHeight * spacing;
             auto dot = new QGraphicsEllipseItem(QRectF(-2, -2, 4, 4));
             dot->moveBy(x, y);
-            dot->setBrush(Qt::SolidPattern);
+            dot->setBrush(QBrush(Settings::centerDotColor(), Qt::SolidPattern));
             dot->setZValue(20); // set the elevation, the dot's are on top
             addItem(dot);
         }
     }
     QPen feintPen(Qt::DotLine); //for the guidelines between dots
     feintPen.setWidth(1);
-    feintPen.setColor(Qt::lightGray);
+    feintPen.setColor(Settings::feintLineColor());
     for (int iWidth = 0; iWidth <= width; iWidth++) {
         addLine(QLineF(spacing * iWidth, 0, spacing * iWidth, spacing * height), feintPen);
     }
@@ -45,11 +48,11 @@ GameBoardScene::GameBoardScene(int newWidth, int newHeight, QObject *parent) : Q
         addLine(QLineF(0, spacing * iHeight, spacing * width, spacing * iHeight), feintPen);
     }
 
-    setBackgroundBrush(QBrush(Qt::white));
+    setBackgroundBrush(QBrush(Settings::backgroundColor()));
 
     indicatorLine = new QGraphicsLineItem(1, 1, 1, 1);
     indicatorLine->setZValue(10);
-    indicatorLine->setPen(QPen(Qt::yellow, 2.5));
+    indicatorLine->setPen(QPen(QBrush(Settings::indicatorLineColor()), 2.5));
     indicatorLine->hide();
     addItem(indicatorLine);
 

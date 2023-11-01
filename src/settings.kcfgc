@@ -2,4 +2,4 @@
 File=ksquares.kcfg
 ClassName=Settings
 Singleton=true
-Mutators=PlayerNames,BoardWidth,BoardHeight,NumOfPlayers, Difficulty, HumanList, LineColor, IndicatorLineColor, QuickStart
+Mutators=PlayerNames,BoardWidth,BoardHeight,NumOfPlayers, Difficulty, HumanList, BackgroundColor, CenterDotColor, FeintLineColor, LineColor, IndicatorLineColor, HighlightColor, QuickStart

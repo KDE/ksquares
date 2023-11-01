@@ -25,6 +25,54 @@
       <item row="0" column="0" >
        <widget class="QLabel" name="label" >
         <property name="whatsThis" >
+         <string>Color of the drawn background</string>
+        </property>
+        <property name="text" >
+         <string>Background color:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_BackgroundColor</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="KColorButton" name="kcfg_BackgroundColor" />
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="label" >
+        <property name="whatsThis" >
+         <string>Color of the drawn center dot</string>
+        </property>
+        <property name="text" >
+         <string>Center dot color:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_CenterDotColor</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="KColorButton" name="kcfg_CenterDotColor" />
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="label" >
+        <property name="whatsThis" >
+         <string>Color of the feintly drawn lines</string>
+        </property>
+        <property name="text" >
+         <string>Feint line color:</string>
+        </property>
+        <property name="buddy" >
+         <cstring>kcfg_FeintLineColor</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="KColorButton" name="kcfg_FeintLineColor" />
+      </item>
+      <item row="3" column="0" >
+       <widget class="QLabel" name="label" >
+        <property name="whatsThis" >
          <string>Color of the drawn lines</string>
         </property>
         <property name="text" >
@@ -35,10 +83,10 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1" >
+      <item row="3" column="1" >
        <widget class="KColorButton" name="kcfg_LineColor" />
       </item>
-      <item row="1" column="0" >
+      <item row="4" column="0" >
        <widget class="QLabel" name="label_2" >
         <property name="whatsThis" >
          <string>Color of the indicator lines</string>
@@ -51,10 +99,10 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1" >
+      <item row="4" column="1" >
        <widget class="KColorButton" name="kcfg_IndicatorLineColor" />
       </item>
-      <item row="2" column="0" >
+      <item row="5" column="0" >
        <widget class="QLabel" name="label_3" >
         <property name="whatsThis" >
          <string>Color of the indicator lines</string>
@@ -63,11 +111,11 @@
          <string>Highlight color:</string>
         </property>
         <property name="buddy" >
-         <cstring>kcfg_IndicatorLineColor</cstring>
+         <cstring>kcfg_HighlightColor</cstring>
         </property>
        </widget>
       </item>
-      <item row="2" column="1" >
+      <item row="5" column="1" >
        <widget class="KColorButton" name="kcfg_HighlightColor" />
       </item>
      </layout>

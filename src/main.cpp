@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("ksquares")));
 
     // default names for players
-    KConfigGroup cg(KSharedConfig::openConfig(), "General");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("General"));
     if (cg.readEntry<bool>("initializeNames", true)) {
         QStringList playerNames;
         playerNames << KUser().property(KUser::FullName).toString();

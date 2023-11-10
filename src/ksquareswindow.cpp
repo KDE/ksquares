@@ -15,11 +15,13 @@
 #include <QStatusBar>
 #include <QTimer>
 
-//kde
+//kf
 #include <KConfigDialog>
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <KScoreDialog>
+
+// kdegames
+#include <KGameHighScoreDialog>
 #include <KGameStandardAction>
 
 //generated
@@ -64,7 +66,7 @@ void KSquaresWindow::initObject()
 
 void KSquaresWindow::showHighscores()
 {
-    KScoreDialog ksdialog(KScoreDialog::Name, this);
+    KGameHighScoreDialog ksdialog(KGameHighScoreDialog::Name, this);
     ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Easy"), i18n("Easy")));
     ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
     ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Hard"), i18n("Hard")));
@@ -223,7 +225,7 @@ void KSquaresWindow::gameOver(const QList<KSquaresPlayer> &_playerList)
     if (playerList.at(0).isHuman()) {
         int score = (int)(static_cast<double>(playerList.at(0).score()) - (static_cast<double>(Settings::boardWidth() * Settings::boardHeight()) / static_cast<double>(playerList.size())));
 
-        KScoreDialog ksdialog(KScoreDialog::Name, this);
+        KGameHighScoreDialog ksdialog(KGameHighScoreDialog::Name, this);
         switch (Settings::difficulty()) {
         case 0:
             ksdialog.setConfigGroup(qMakePair(QByteArray("Easy"), i18n("Easy")));
@@ -241,11 +243,11 @@ void KSquaresWindow::gameOver(const QList<KSquaresPlayer> &_playerList)
             ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
             break;
         }
-        KScoreDialog::FieldInfo scoreInfo;
-        scoreInfo[KScoreDialog::Name] = playerList.at(0).name();
-        scoreInfo[KScoreDialog::Score].setNum(score);
+        KGameHighScoreDialog::FieldInfo scoreInfo;
+        scoreInfo[KGameHighScoreDialog::Name] = playerList.at(0).name();
+        scoreInfo[KGameHighScoreDialog::Score].setNum(score);
 
-        if (ksdialog.addScore(scoreInfo, KScoreDialog::AskName)) {
+        if (ksdialog.addScore(scoreInfo, KGameHighScoreDialog::AskName)) {
             ksdialog.exec();
         }
     }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-09 01:45+0000\n"
+"POT-Creation-Date: 2023-11-10 01:46+0000\n"
 "PO-Revision-Date: 2009-07-29 03:35+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -106,60 +106,60 @@ msgstr "Lojtari %1"
 msgid "Main Toolbar"
 msgstr "Shiriti Kryesor"
 
-#: ksquareswindow.cpp:57
+#: ksquareswindow.cpp:59
 #, kde-format
 msgid "Current Player"
 msgstr ""
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
-#: ksquareswindow.cpp:240 prefs_ai.ui:36
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:237
+#: ksquareswindow.cpp:242 prefs_ai.ui:36
 #, kde-format
 msgid "Easy"
 msgstr "E Lehtë"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
-#: ksquareswindow.cpp:241 prefs_ai.ui:41
+#: ksquareswindow.cpp:71 ksquareswindow.cpp:232 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:243 prefs_ai.ui:41
 #, kde-format
 msgid "Medium"
 msgstr "Mesatare"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
-#: ksquareswindow.cpp:239 prefs_ai.ui:46
+#: ksquareswindow.cpp:72 ksquareswindow.cpp:233 ksquareswindow.cpp:238
+#: ksquareswindow.cpp:241 prefs_ai.ui:46
 #, kde-format
 msgid "Hard"
 msgstr ""
 
-#: ksquareswindow.cpp:201
+#: ksquareswindow.cpp:203
 #, fuzzy, kde-format
 #| msgid "Scores"
 msgctxt "@title:window"
 msgid "Scores"
 msgstr "Pikët"
 
-#: ksquareswindow.cpp:206
+#: ksquareswindow.cpp:208
 #, kde-format
 msgid "Player Name"
 msgstr ""
 
-#: ksquareswindow.cpp:207
+#: ksquareswindow.cpp:209
 #, kde-format
 msgid "Completed Squares"
 msgstr ""
 
-#: ksquareswindow.cpp:291
+#: ksquareswindow.cpp:293
 #, kde-format
 msgid "Start a new game with the current settings"
 msgstr ""
 
-#: ksquareswindow.cpp:309
+#: ksquareswindow.cpp:311
 #, kde-format
 msgid "Display"
 msgstr "Ekrani"
 
-#: ksquareswindow.cpp:314
+#: ksquareswindow.cpp:316
 #, kde-format
 msgid "Computer Player"
 msgstr "Lojtari i Kompjuterit"

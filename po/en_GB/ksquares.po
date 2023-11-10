@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-09 01:45+0000\n"
+"POT-Creation-Date: 2023-11-10 01:46+0000\n"
 "PO-Revision-Date: 2021-10-10 10:57+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -105,59 +105,59 @@ msgstr "Player %1"
 msgid "Main Toolbar"
 msgstr "Main Toolbar"
 
-#: ksquareswindow.cpp:57
+#: ksquareswindow.cpp:59
 #, kde-format
 msgid "Current Player"
 msgstr "Current Player"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:68 ksquareswindow.cpp:229 ksquareswindow.cpp:235
-#: ksquareswindow.cpp:240 prefs_ai.ui:36
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:237
+#: ksquareswindow.cpp:242 prefs_ai.ui:36
 #, kde-format
 msgid "Easy"
 msgstr "Easy"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:69 ksquareswindow.cpp:230 ksquareswindow.cpp:234
-#: ksquareswindow.cpp:241 prefs_ai.ui:41
+#: ksquareswindow.cpp:71 ksquareswindow.cpp:232 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:243 prefs_ai.ui:41
 #, kde-format
 msgid "Medium"
 msgstr "Medium"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:236
-#: ksquareswindow.cpp:239 prefs_ai.ui:46
+#: ksquareswindow.cpp:72 ksquareswindow.cpp:233 ksquareswindow.cpp:238
+#: ksquareswindow.cpp:241 prefs_ai.ui:46
 #, kde-format
 msgid "Hard"
 msgstr "Hard"
 
-#: ksquareswindow.cpp:201
+#: ksquareswindow.cpp:203
 #, kde-format
 msgctxt "@title:window"
 msgid "Scores"
 msgstr "Scores"
 
-#: ksquareswindow.cpp:206
+#: ksquareswindow.cpp:208
 #, kde-format
 msgid "Player Name"
 msgstr "Player Name"
 
-#: ksquareswindow.cpp:207
+#: ksquareswindow.cpp:209
 #, kde-format
 msgid "Completed Squares"
 msgstr "Completed Squares"
 
-#: ksquareswindow.cpp:291
+#: ksquareswindow.cpp:293
 #, kde-format
 msgid "Start a new game with the current settings"
 msgstr "Start a new game with the current settings"
 
-#: ksquareswindow.cpp:309
+#: ksquareswindow.cpp:311
 #, kde-format
 msgid "Display"
 msgstr "Display"
 
-#: ksquareswindow.cpp:314
+#: ksquareswindow.cpp:316
 #, kde-format
 msgid "Computer Player"
 msgstr "Computer Player"

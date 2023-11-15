@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-10 01:46+0000\n"
+"POT-Creation-Date: 2023-11-15 01:38+0000\n"
 "PO-Revision-Date: 2023-05-08 11:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -79,20 +79,40 @@ msgstr "Zorluk"
 msgid "How difficult the AI should be"
 msgstr "Yapay Zekanın ne kadar zor olacağı"
 
-#. i18n: ectx: label, entry (LineColor), group (Display)
+#. i18n: ectx: label, entry (BackgroundColor), group (Display)
 #: ksquares.kcfg:42
+#, kde-format
+msgid "Background Color"
+msgstr ""
+
+#. i18n: ectx: label, entry (CenterDotColor), group (Display)
+#: ksquares.kcfg:47
+#, fuzzy, kde-format
+#| msgid "Line Color"
+msgid "Center Dot Color"
+msgstr "Çizgi Rengi"
+
+#. i18n: ectx: label, entry (FeintLineColor), group (Display)
+#: ksquares.kcfg:52
+#, fuzzy, kde-format
+#| msgid "Line Color"
+msgid "Feint Line Color"
+msgstr "Çizgi Rengi"
+
+#. i18n: ectx: label, entry (LineColor), group (Display)
+#: ksquares.kcfg:57
 #, kde-format
 msgid "Line Color"
 msgstr "Çizgi Rengi"
 
 #. i18n: ectx: label, entry (IndicatorLineColor), group (Display)
-#: ksquares.kcfg:47
+#: ksquares.kcfg:62
 #, kde-format
 msgid "Indicator Line Color"
 msgstr "Gösterge Çizgi Rengi"
 
 #. i18n: ectx: label, entry (HighlightColor), group (Display)
-#: ksquares.kcfg:52
+#: ksquares.kcfg:67
 #, kde-format
 msgid "Highlight Color"
 msgstr "Vurgulama Rengi"
@@ -457,31 +477,71 @@ msgstr "Renkler"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
+#, fuzzy, kde-format
+#| msgid "Color of the drawn lines"
+msgid "Color of the drawn background"
+msgstr "Çizilmiş çizgilerin rengi"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:31
+#, kde-format
+msgid "Background color:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:44
+#, fuzzy, kde-format
+#| msgid "Color of the drawn lines"
+msgid "Color of the drawn center dot"
+msgstr "Çizilmiş çizgilerin rengi"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:47
+#, kde-format
+msgid "Center dot color:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:60
+#, fuzzy, kde-format
+#| msgid "Color of the drawn lines"
+msgid "Color of the feintly drawn lines"
+msgstr "Çizilmiş çizgilerin rengi"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:63
+#, fuzzy, kde-format
+#| msgid "Indicator line color:"
+msgid "Feint line color:"
+msgstr "Gösterge çizgi rengi:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:76
 #, kde-format
 msgid "Color of the drawn lines"
 msgstr "Çizilmiş çizgilerin rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: prefs_display.ui:31
+#: prefs_display.ui:79
 #, kde-format
 msgid "Standard line color:"
 msgstr "Standart çizgi rengi:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
-#: prefs_display.ui:44 prefs_display.ui:60
+#: prefs_display.ui:92 prefs_display.ui:108
 #, kde-format
 msgid "Color of the indicator lines"
 msgstr "Gösterge çizgilerinin rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: prefs_display.ui:47
+#: prefs_display.ui:95
 #, kde-format
 msgid "Indicator line color:"
 msgstr "Gösterge çizgi rengi:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: prefs_display.ui:63
+#: prefs_display.ui:111
 #, kde-format
 msgid "Highlight color:"
 msgstr "Vurgulama rengi:"

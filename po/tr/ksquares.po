@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:42+0000\n"
-"PO-Revision-Date: 2023-05-08 11:34+0300\n"
+"PO-Revision-Date: 2023-11-15 18:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -77,25 +77,25 @@ msgstr "Zorluk"
 #: ksquares.kcfg:36
 #, kde-format
 msgid "How difficult the AI should be"
-msgstr "Yapay Zekanın ne kadar zor olacağı"
+msgstr "Yapay zekanın ne kadar zor olacağı"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Line Color"
-msgstr "Çizgi Rengi"
+msgstr "Çizgi rengi"
 
 #. i18n: ectx: label, entry (IndicatorLineColor), group (Display)
 #: ksquares.kcfg:47
 #, kde-format
 msgid "Indicator Line Color"
-msgstr "Gösterge Çizgi Rengi"
+msgstr "Gösterge çizgi rengi"
 
 #. i18n: ectx: label, entry (HighlightColor), group (Display)
 #: ksquares.kcfg:52
 #, kde-format
 msgid "Highlight Color"
-msgstr "Vurgulama Rengi"
+msgstr "Vurgu rengi"
 
 #: ksquaresdemowindow.cpp:65
 #, kde-format
@@ -259,7 +259,7 @@ msgstr "Dördüncü oyuncunun adı"
 #: newgamewidget.ui:67
 #, kde-format
 msgid "Player 4:"
-msgstr "4. Oyuncu:"
+msgstr "4. oyuncu:"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerFourHuman)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
@@ -275,7 +275,7 @@ msgstr "Bu oyuncu bir insan tarafından yönetilmeli"
 #: newgamewidget.ui:83
 #, kde-format
 msgid "Hum&an?"
-msgstr "&İnsan?"
+msgstr "İ&nsan?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
 #: newgamewidget.ui:99
@@ -293,7 +293,7 @@ msgstr "Üçüncü oyuncunun adı"
 #: newgamewidget.ui:112
 #, kde-format
 msgid "Player 3:"
-msgstr "3. Oyuncu:"
+msgstr "3. oyuncu:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
 #: newgamewidget.ui:131
@@ -305,7 +305,7 @@ msgstr "İkinci oyuncunun adı"
 #: newgamewidget.ui:134
 #, kde-format
 msgid "Player 2:"
-msgstr "2. Oyuncu:"
+msgstr "2. oyuncu:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
 #: newgamewidget.ui:169
@@ -351,7 +351,7 @@ msgstr "Birinci oyuncunun adı"
 #: newgamewidget.ui:201
 #, kde-format
 msgid "Player 1:"
-msgstr "1. Oyuncu:"
+msgstr "1. oyuncu:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
 #: newgamewidget.ui:217
@@ -387,7 +387,7 @@ msgstr "Genişlik:"
 #: newgamewidget.ui:289
 #, kde-format
 msgid "The number of squares the area is high"
-msgstr "Alanın kare cinsinden yüksekliği"
+msgstr "Alanın kare türünden yüksekliği"
 
 #. i18n: ectx: property (text), widget (QLabel, labelHeight)
 #: newgamewidget.ui:292
@@ -399,7 +399,7 @@ msgstr "Yükseklik:"
 #: newgamewidget.ui:324
 #, kde-format
 msgid "Settings for the game"
-msgstr "Oyunun Ayarları"
+msgstr "Oyunun ayarları"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: newgamewidget.ui:327
@@ -447,7 +447,7 @@ msgstr "Görünüm Ayarları"
 #: prefs_display.ui:19
 #, kde-format
 msgid "Settings for colors"
-msgstr "Renk Ayarları"
+msgstr "Renk ayarları"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:22
@@ -459,7 +459,7 @@ msgstr "Renkler"
 #: prefs_display.ui:28
 #, kde-format
 msgid "Color of the drawn lines"
-msgstr "Çizilmiş çizgilerin rengi"
+msgstr "Çizilen çizgilerin rengi"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
@@ -484,7 +484,7 @@ msgstr "Gösterge çizgi rengi:"
 #: prefs_display.ui:63
 #, kde-format
 msgid "Highlight color:"
-msgstr "Vurgulama rengi:"
+msgstr "Vurgu rengi:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
 #: scoreswidget.ui:13
@@ -496,4 +496,4 @@ msgstr "Puanlar"
 #: scoreswidget.ui:19
 #, kde-format
 msgid "Scoreboard"
-msgstr "Puan Tablosu"
+msgstr "Puan tablosu"

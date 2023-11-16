@@ -1,10 +1,10 @@
 # Translation of ksquares.po to Catalan
-# Copyright (C) 2007-2021 This_file_is_part_of_KDE
+# Copyright (C) 2007-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Albert Astals Cid <aacid@kde.org>, 2007, 2008.
-# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2010, 2013, 2017, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2010, 2013, 2017, 2021, 2023.
 # Manuel Tortosa <manutortosa@gmail.com>, 2009.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2020, 2021.
 msgid ""
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:38+0000\n"
-"PO-Revision-Date: 2021-10-10 14:43+0200\n"
+"PO-Revision-Date: 2023-11-15 10:03+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -85,21 +85,19 @@ msgstr "Com ha de ser de difícil la IA"
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Color de fons"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Color de la línia"
+msgstr "Color del punt central"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Color de la línia"
+msgstr "Color de la línia de finta"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -479,43 +477,39 @@ msgstr "Colors"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "Color de les línies dibuixades"
+msgstr "Color del fons dibuixat"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Color de fons:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "Color de les línies dibuixades"
+msgstr "Color del punt central dibuixat"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Color del punt central:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "Color de les línies dibuixades"
+msgstr "Color de les línies de finta dibuixades"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Color de la línia indicadora:"
+msgstr "Color de la línia de finta:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76
@@ -559,27 +553,3 @@ msgstr "Puntuacions"
 #, kde-format
 msgid "Scoreboard"
 msgstr "Taula de puntuacions"
-
-#~ msgid "Online rankings"
-#~ msgstr "Classificació en línia"
-
-#~ msgid "List of seats"
-#~ msgstr "Llista de llocs"
-
-#~ msgid "Request to start a new game with the current settings"
-#~ msgstr "Sol·licita iniciar una nova partida amb l'arranjament actual"
-
-#~ msgid "The game has finished"
-#~ msgstr "La partida ha acabat"
-
-#~ msgid "It is your turn"
-#~ msgstr "És el vostre torn"
-
-#~ msgid "Waiting for opponent..."
-#~ msgstr "S'està esperant un contrincant..."
-
-#~ msgid "Waiting for move result..."
-#~ msgstr "S'està esperant el resultat de la jugada..."
-
-#~ msgid "Online game"
-#~ msgstr "Joc en línia"

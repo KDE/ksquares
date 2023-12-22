@@ -1,22 +1,22 @@
 # Stefan Winter <swinter@kde.org>, 2007.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2010, 2013, 2021.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2009.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2023.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:38+0000\n"
-"PO-Revision-Date: 2021-10-15 12:36+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-12-19 15:30+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,7 +80,7 @@ msgstr "Wie gut sollen Computerspieler spielen können?"
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
@@ -464,7 +464,7 @@ msgstr "Anzeigeeinstellungen"
 #: prefs_display.ui:19
 #, kde-format
 msgid "Settings for colors"
-msgstr "Einstellungen für die Farben"
+msgstr "Farbeinstellungen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:22
@@ -483,7 +483,7 @@ msgstr "Farbe der gezogenen Linien"
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Hintergrundfarbe:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44

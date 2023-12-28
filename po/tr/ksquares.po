@@ -5,13 +5,13 @@
 # Fethican Coşkuner <fethicanc@gmail.com>, 2007-2008.
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:38+0000\n"
-"PO-Revision-Date: 2023-12-09 22:16+0300\n"
+"PO-Revision-Date: 2023-12-27 14:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.01.85\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -65,7 +65,7 @@ msgstr "Tahtanın yüksekliği"
 #: ksquares.kcfg:29
 #, kde-format
 msgid "Quick start the game"
-msgstr "Oyunu hızlı başlat"
+msgstr "Oyunu tez başlat"
 
 #. i18n: ectx: label, entry (Difficulty), group (AI)
 #: ksquares.kcfg:35
@@ -435,7 +435,7 @@ msgstr "Oyun başlamadan tahtayı kısmen doldur"
 #: newgamewidget.ui:285
 #, kde-format
 msgid "Quick start"
-msgstr "Hızlı başlangıç"
+msgstr "Tez başlangıç"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, prefs_ai)
 #: prefs_ai.ui:13

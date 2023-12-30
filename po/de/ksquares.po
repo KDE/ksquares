@@ -1,7 +1,7 @@
 # Stefan Winter <swinter@kde.org>, 2007.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2010, 2013, 2021.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2009.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2023.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009.
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -444,7 +444,7 @@ msgstr "Anzeigeeinstellungen"
 #: prefs_display.ui:19
 #, kde-format
 msgid "Settings for colors"
-msgstr "Einstellungen für die Farben"
+msgstr "Farbeinstellungen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:22

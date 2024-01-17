@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:38+0000\n"
+"POT-Creation-Date: 2024-01-17 00:36+0000\n"
 "PO-Revision-Date: 2007-12-24 13:21+0530\n"
 "Last-Translator: Ravishankar Shrivastava <aviratlami@aol.in>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
@@ -186,12 +186,12 @@ msgstr "प्रदर्शक"
 msgid "Computer Player"
 msgstr "कम्प्यूटर खिलाड़ी"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "KSquares"
 msgstr "केस्क्वेयर्स"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -200,47 +200,47 @@ msgstr ""
 "लाइनें खींचने के लिए बारी अपनाएँ.\n"
 "यदि आप कोई वर्ग बना लेते हैं तो आपको एक मौका और मिलेगा."
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "(C) 2006-2007 मैट विलियम्स"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Matt Williams"
 msgstr "मैट विलियम्स"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "मूल लेखक तथा मेंटेनर"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "फेला विनकेल्मलेन"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "अनेकानेक सुधार तथा बग- फिक्सेस"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Hard AI"
 msgstr ""
 
-#: main.cpp:43
+#: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "खेल को डेमो मोड में (स्वचालित) चलाएँ"
 
-#: main.cpp:57 main.cpp:58 main.cpp:59
+#: main.cpp:58 main.cpp:59 main.cpp:60
 #, fuzzy, kde-format
 #| msgid "Player %1"
 msgctxt "default name of player"

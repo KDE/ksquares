@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:38+0000\n"
+"POT-Creation-Date: 2024-01-17 00:36+0000\n"
 "PO-Revision-Date: 2019-11-11 17:32+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -183,12 +183,12 @@ msgstr "Vaade"
 msgid "Computer Player"
 msgstr "Arvutimängija"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "KSquares"
 msgstr "KSquares"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -197,47 +197,47 @@ msgstr ""
 "Jooni tõmmatakse kordamööda.\n"
 "Kui lõpetad ruudu, saad uue käigu."
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "(C) 2006-2007: Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Algne autor ja hooldaja"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Palju paiku ja veaparandusi"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Hard AI"
 msgstr "Raske AI"
 
-#: main.cpp:43
+#: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Mängu käiitamine demorežiimis"
 
-#: main.cpp:57 main.cpp:58 main.cpp:59
+#: main.cpp:58 main.cpp:59 main.cpp:60
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

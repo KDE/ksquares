@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:38+0000\n"
+"POT-Creation-Date: 2024-01-17 00:36+0000\n"
 "PO-Revision-Date: 2023-12-19 15:30+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -182,12 +182,12 @@ msgstr "Anzeige"
 msgid "Computer Player"
 msgstr "Computerspieler"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "KSquares"
 msgstr "KSquares"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -196,47 +196,47 @@ msgstr ""
 "Abwechselnd Striche zeichnen.\n"
 "Wenn Sie ein Quadrat fertig stellen, erhalten Sie einen weiteren Versuch."
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "© 2006–2007, Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Ursprünglicher Autor und Betreuer"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Viele Verbesserungen und Fehlerbereinigungen"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Hard AI"
 msgstr "Schwierige AI"
 
-#: main.cpp:43
+#: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Spiel im Demomodus (automatisch) laufen lassen"
 
-#: main.cpp:57 main.cpp:58 main.cpp:59
+#: main.cpp:58 main.cpp:59 main.cpp:60
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

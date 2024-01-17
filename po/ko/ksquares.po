@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:38+0000\n"
+"POT-Creation-Date: 2024-01-17 00:36+0000\n"
 "PO-Revision-Date: 2021-11-12 00:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -181,12 +181,12 @@ msgstr "표시"
 msgid "Computer Player"
 msgstr "컴퓨터 플레이어"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "KSquares"
 msgstr "KSquares"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -195,47 +195,47 @@ msgstr ""
 "선을 그릴 때 참여합니다.\n"
 "완성된 사각형을 그리면 선을 하나 더 그릴 수 있습니다."
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "(C) 2006-2007 Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "원 작성자 및 관리자"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "많은 패치와 버그 수정"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr "Tom Vincent Peters"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Hard AI"
 msgstr "어려운 AI"
 
-#: main.cpp:43
+#: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "데모 게임 실행(자동 진행)"
 
-#: main.cpp:57 main.cpp:58 main.cpp:59
+#: main.cpp:58 main.cpp:59 main.cpp:60
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

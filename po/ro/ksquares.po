@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:38+0000\n"
+"POT-Creation-Date: 2024-01-17 00:36+0000\n"
 "PO-Revision-Date: 2012-05-27 23:02+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -184,12 +184,12 @@ msgstr "Afișaj"
 msgid "Computer Player"
 msgstr "Jucătorul calculator"
 
-#: main.cpp:27
+#: main.cpp:28
 #, kde-format
 msgid "KSquares"
 msgstr "KPătrate"
 
-#: main.cpp:29
+#: main.cpp:30
 #, kde-format
 msgid ""
 "Take it in turns to draw lines.\n"
@@ -198,47 +198,47 @@ msgstr ""
 "Luați pe rând și desenați linii.\n"
 "Dacă completați un pătrat, mai primiți o încercare."
 
-#: main.cpp:31
+#: main.cpp:32
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
 msgstr "(C) 2006-2007 Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Matt Williams"
 msgstr "Matt Williams"
 
-#: main.cpp:34
+#: main.cpp:35
 #, kde-format
 msgid "Original creator and maintainer"
 msgstr "Creator original și responsabil"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Fela Winkelmolen"
 msgstr "Fela Winkelmolen"
 
-#: main.cpp:35
+#: main.cpp:36
 #, kde-format
 msgid "Many patches and bugfixes"
 msgstr "Multe petice și corecții"
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Tom Vincent Peters"
 msgstr ""
 
-#: main.cpp:36
+#: main.cpp:37
 #, kde-format
 msgid "Hard AI"
 msgstr ""
 
-#: main.cpp:43
+#: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
 msgstr "Lansează jocul în regim demonstrativ (jucat automat)"
 
-#: main.cpp:57 main.cpp:58 main.cpp:59
+#: main.cpp:58 main.cpp:59 main.cpp:60
 #, kde-format
 msgctxt "default name of player"
 msgid "Player %1"

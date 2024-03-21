@@ -3,30 +3,31 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2009.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:38+0000\n"
-"PO-Revision-Date: 2013-10-23 12:46+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"PO-Revision-Date: 2024-03-20 22:20+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
 #: ksquares.kcfg:10
@@ -80,21 +81,19 @@ msgstr "A gépi játékos erőssége"
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Háttérszín"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Vonalszín"
+msgstr "Középső pont színe"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Vonalszín"
+msgstr "Halvány vonalszín"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -152,11 +151,10 @@ msgid "Hard"
 msgstr "Nehéz"
 
 #: ksquareswindow.cpp:203
-#, fuzzy, kde-format
-#| msgid "Scores"
+#, kde-format
 msgctxt "@title:window"
 msgid "Scores"
-msgstr "Pontszám"
+msgstr "Pontszámok"
 
 #: ksquareswindow.cpp:208
 #, kde-format
@@ -244,8 +242,7 @@ msgid "Player %1"
 msgstr "%1. játékos"
 
 #: newgamedialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Új játék"
@@ -476,43 +473,39 @@ msgstr "Színek"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "Vonalszínek"
+msgstr "Rajzolt háttér színe"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Háttérszín:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "Vonalszínek"
+msgstr "Rajzolt középső pont színe"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Középső pont színe:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "Vonalszínek"
+msgstr "Halvány vonalszín"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Jelzővonalszín:"
+msgstr "Halvány vonalszín:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76

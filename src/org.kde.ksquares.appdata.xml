@@ -20,6 +20,7 @@
   <name xml:lang="fi">KSquares</name>
   <name xml:lang="fr">KSquares</name>
   <name xml:lang="gl">KSquares</name>
+  <name xml:lang="hu">KSquares</name>
   <name xml:lang="ia">KSquares</name>
   <name xml:lang="id">KSquares</name>
   <name xml:lang="it">KSquares</name>
@@ -58,6 +59,7 @@
   <summary xml:lang="fi">Yhdistä pisteet muodostaaksesi neliöitä</summary>
   <summary xml:lang="fr">Relier les points pour créer des carrés</summary>
   <summary xml:lang="gl">Conecta os puntos creando cadrados</summary>
+  <summary xml:lang="hu">Kösse össze a pontokat négyzetek rajzolásához</summary>
   <summary xml:lang="id">Hubungkan titik-titik untuk menciptakan kotak-kotak</summary>
   <summary xml:lang="it">Unisci i puntini per creare dei quadrati</summary>
   <summary xml:lang="ka">მართკუთხედის შესაქმნელად შეაერთეთ წერტილები</summary>
@@ -95,6 +97,7 @@
     <p xml:lang="fi">KSquares muistuttaa tunnettua kynällä ja paperilla pelattavaa Pisteet ja laatikot -peliä. Kukin pelaaja vuorolla piirtää laudalla kahden vierekkäisen pisteen välille viivan. Tavoitteena on yhdistää useampia neliöitä kuin vastustajasi.</p>
     <p xml:lang="fr">KSquares est un jeu conçu à partir du célèbre jeu de la pipopipette (ou jeu des petits carrés). Chaque joueur dessine à son tour une ligne entre deux points adjacents sur la grille. L'objectif est de fermer davantage de carrés que votre adversaire.</p>
     <p xml:lang="gl">KSquares é un xogo baseado no famoso xogo de puntos e caixas que se xoga con bolígrafo e papel. Por quendas, cada xogador debuxa unha liña entre dous puntos adxacentes no taboleiro. O obxectivo é completar máis cadrados que o contrincante.</p>
+    <p xml:lang="hu">A KSquares egy olyan játék, amelyet a jól ismert, tollal és papírral írt Dots and Boxes játék mintájára készítettek. Minden játékos felváltva húz egy vonalat a táblán két szomszédos pont között. A cél az, hogy több négyzetet töltsön ki, mint az ellenfelei.</p>
     <p xml:lang="id">KSquares adalah sebuah permainan yang dimodel setelah terkenalnya permainan berdasarkan kertas dan pulpen dari Titik-titik dan Kotak-kotak. Setiap pemain terjatah giliran untuk menggambar sebuah garis antara dua titik-titik pada papan. Sasarannya adalah untuk melengkapi selebihnya kotak-kotak lawanmu.</p>
     <p xml:lang="it">KSquares è un gioco creato sulla falsa riga del noto gioco di carta e matita Punti e linee. Ciascun giocatore inizia il proprio turno disegnando una linea tra due punti vicini nel tavoliere. L'obbiettivo è completare più quadrati dell'avversario.</p>
     <p xml:lang="ka">თამაში KSquares ცნობილი პასტითა და ფურცლით სათამაშო თამაშის, წერტილების და ყუთების მოდელითაა აგებული. მოთამაშეები სათითაოდ უსვამენ ხაზს ორ მომიჯნავე წერტილს შორის. თამაშის მოსაგებად მეტი მართკუთხედი უნდა დახატოთ, ვიდრე თქვენმა ოპონენტებმა.</p>
@@ -138,6 +141,7 @@
       <caption xml:lang="fi">KSquares-laudan tyypillinen asetelma</caption>
       <caption xml:lang="fr">Un plateau de jeu de KSquares en cours de partie</caption>
       <caption xml:lang="gl">A posición típica do taboleiro en KSquares</caption>
+      <caption xml:lang="hu">A KSquares tipikus táblapozíciója</caption>
       <caption xml:lang="id">Posisi papan yang khas di KSquares</caption>
       <caption xml:lang="it">La posizione tipica del tavoliere in KSquares</caption>
       <caption xml:lang="ka">დაფის ჩვეული მდებარეობა KSquares-ში</caption>
@@ -174,6 +178,7 @@
       <caption xml:lang="fi">KSquares valmiina</caption>
       <caption xml:lang="fr">Les carreaux complétés dans KSquare</caption>
       <caption xml:lang="gl">Os cadrados completados en KSquares</caption>
+      <caption xml:lang="hu">Az elkészült négyzetek a KSquaresben</caption>
       <caption xml:lang="id">Kotak-kotak terlengkap di KSquares</caption>
       <caption xml:lang="it">I quadrati completati in KSquares</caption>
       <caption xml:lang="ka">KSquares-ის დასრულებული მართკუთხედები</caption>
@@ -209,6 +214,7 @@
       <caption xml:lang="fi">KSquaresin lauta aluksi</caption>
       <caption xml:lang="fr">Un plateau initial de KSquares</caption>
       <caption xml:lang="gl">Un taboleiro inicial en KSquares</caption>
+      <caption xml:lang="hu">Egy kiinduló tábla a KSquaresben</caption>
       <caption xml:lang="id">Sebuah papan inisial di KSquares</caption>
       <caption xml:lang="it">Tavoliere iniziale in KSquares</caption>
       <caption xml:lang="ka">KSquares-ის საწყისი დაფა</caption>

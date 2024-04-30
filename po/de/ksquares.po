@@ -1,14 +1,14 @@
+# SPDX-FileCopyrightText: 2009, 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Stefan Winter <swinter@kde.org>, 2007.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2010, 2013, 2021.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2023.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-17 00:36+0000\n"
-"PO-Revision-Date: 2023-12-19 15:30+0100\n"
+"PO-Revision-Date: 2024-04-28 11:40+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -84,17 +84,15 @@ msgstr "Hintergrundfarbe"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Strichfarbe"
+msgstr "Verbindungspunktfarbe"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Strichfarbe"
+msgstr "Verbindungslinienfarbe"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -474,10 +472,9 @@ msgstr "Farben"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "Farbe der gezogenen Linien"
+msgstr "Farbe des angezeigten Hindergrundes"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
@@ -487,30 +484,27 @@ msgstr "Hintergrundfarbe:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "Farbe der gezogenen Linien"
+msgstr "Farbe der Verbindungspunkte des Gitters"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Verbindungspunktfarbe:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "Farbe der gezogenen Linien"
+msgstr "Farbe der gestrichelten Linien des Gitters"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Begrenzungslinienfarbe:"
+msgstr "Verbindungslinienfarbe:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76

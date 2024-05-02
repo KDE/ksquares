@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-17 00:36+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2023-10-31 20:02+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -171,13 +171,16 @@ msgstr ""
 
 #: ksquareswindow.cpp:311
 #, kde-format
+msgctxt "@title:tab"
 msgid "Display"
 msgstr ""
 
 #: ksquareswindow.cpp:316
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Number of Players"
+msgctxt "@title:tab"
 msgid "Computer Player"
-msgstr ""
+msgstr "Númberu de xugadores"
 
 #: main.cpp:28
 #, kde-format

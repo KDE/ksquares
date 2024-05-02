@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-17 00:36+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2009-02-26 12:52+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -175,12 +175,16 @@ msgid "Start a new game with the current settings"
 msgstr "अभी हाल के सेटिंग से नवा खेल चालू करव"
 
 #: ksquareswindow.cpp:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display"
+msgctxt "@title:tab"
 msgid "Display"
 msgstr "प्रदर्सक"
 
 #: ksquareswindow.cpp:316
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Computer Player"
+msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "कम्प्यूटर खिलाड़ी"
 

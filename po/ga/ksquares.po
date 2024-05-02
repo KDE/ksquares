@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-17 00:36+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2007-04-15 19:05-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -173,12 +173,16 @@ msgid "Start a new game with the current settings"
 msgstr "Tosaigh cluiche nua leis na socruithe reatha"
 
 #: ksquareswindow.cpp:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display"
+msgctxt "@title:tab"
 msgid "Display"
 msgstr "Taispeáint"
 
 #: ksquareswindow.cpp:316
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Computer Player"
+msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Imreoir Ríomhaire"
 

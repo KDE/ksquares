@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-17 00:36+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2013-10-20 04:06+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -173,12 +173,16 @@ msgid "Start a new game with the current settings"
 msgstr "Қазіргі параметрлерімен жаңа ойынды бастау"
 
 #: ksquareswindow.cpp:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display"
+msgctxt "@title:tab"
 msgid "Display"
 msgstr "Дисплей"
 
 #: ksquareswindow.cpp:316
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Computer Player"
+msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Компьютер - ойыншы"
 

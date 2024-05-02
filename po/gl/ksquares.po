@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-17 00:36+0000\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
 "PO-Revision-Date: 2023-11-15 18:50+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -174,12 +174,16 @@ msgid "Start a new game with the current settings"
 msgstr "Comezar unha partida nova coa configuración actual"
 
 #: ksquareswindow.cpp:311
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Display"
+msgctxt "@title:tab"
 msgid "Display"
 msgstr "Aspecto"
 
 #: ksquareswindow.cpp:316
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Computer Player"
+msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Intelixencia artificial"
 

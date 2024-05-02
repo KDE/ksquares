@@ -145,7 +145,7 @@
       <varlistentry>
         <term><menuchoice><shortcut><keycombo action="simul">&Ctrl;<keycap>H</keycap></keycombo></shortcut>
         <guimenu>Game</guimenu>
-        <guimenuitem>Show High Scores...</guimenuitem></menuchoice></term>
+        <guimenuitem>Show High Scores…</guimenuitem></menuchoice></term>
         <listitem><para><action>Displays</action> the high score table.</para></listitem>
       </varlistentry>
       <varlistentry>
@@ -157,7 +157,7 @@
       <varlistentry id="settings-menu-settings">
         <term><menuchoice>
         <guimenu>Settings</guimenu>
-        <guimenuitem>Configure &ksquares;...</guimenuitem></menuchoice></term>
+        <guimenuitem>Configure &ksquares;…</guimenuitem></menuchoice></term>
         <listitem><para><action>Opens a dialog to configure &ksquares;.</action> See <link linkend="configuration">Game Configuration</link> section for details.</para></listitem>
       </varlistentry>
     </variablelist>
@@ -178,7 +178,7 @@
 <!--Following is a standard list of FAQ questions.-->
 <qandaentry>
  <question><para>I want to change the way this game looks. Can I? </para></question>
- <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &ksquares;...</guimenuitem></menuchoice> menu item. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
+ <answer><para>Currently the only thing you can change about the game look is the color of the lines. To do so use the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &ksquares;…</guimenuitem></menuchoice> menu item. See <link linkend="configuration">Game Configuration</link> section for details.</para></answer>
 </qandaentry>
 <qandaentry>
  <question><para>I have made a mistake. Can I undo? </para></question>

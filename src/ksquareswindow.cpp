@@ -308,12 +308,12 @@ void KSquaresWindow::optionsPreferences()
 
   auto displaySettingsDialog = new QWidget;
   ui_prefs_display.setupUi(displaySettingsDialog);
-  dialog->addPage(displaySettingsDialog, i18n("Display"),
+  dialog->addPage(displaySettingsDialog, i18nc("@title:tab", "Display"),
                   QStringLiteral("preferences-desktop-display"));
 
   auto aiSettingsDialog = new QWidget;
   ui_prefs_ai.setupUi(aiSettingsDialog);
-  dialog->addPage(aiSettingsDialog, i18n("Computer Player"),
+  dialog->addPage(aiSettingsDialog, i18nc("@title:tab", "Computer Player"),
                   QStringLiteral("games-difficult"));
 
   connect(dialog, &KConfigDialog::settingsChanged, m_view,

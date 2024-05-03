@@ -297,7 +297,7 @@
 > <guimenu
 >Spel</guimenu
 > <guimenuitem
->Topscores tonen...</guimenuitem
+>Topscores tonen…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -335,7 +335,7 @@
 ><guimenu
 >Instellingen</guimenu
 ><guimenuitem
->&ksquares; instellen...</guimenuitem
+>&ksquares; instellen…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -382,7 +382,7 @@
 ><guimenu
 >Instellingen</guimenu
 ><guimenuitem
->&ksquares; instellen...</guimenuitem
+>&ksquares; instellen…</guimenuitem
 ></menuchoice
 >. Lees de sectie <link linkend="configuration"
 >Spelconfiguratie</link
@@ -521,7 +521,7 @@
 </screenshot>
 <para
 >Het dialoogvenster <guilabel
->&ksquares; instellen...</guilabel
+>&ksquares; instellen…</guilabel
 > bestaat uit de volgende tabbladen:</para>
 <variablelist>
   <varlistentry>

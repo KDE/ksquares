@@ -4,26 +4,26 @@
 #
 # Rinse de Vries <rinsedevries@kde.nl>, 2007.
 # Kristof Bal <kristof.bal@gmail.com>, 2008.
-# SPDX-FileCopyrightText: 2009, 2010, 2013, 2021, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2009, 2010, 2013, 2021, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2023-11-15 10:51+0100\n"
+"PO-Revision-Date: 2024-05-02 10:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Rinse de Vries - 2007,Freek de Kruijf - 2013;2023"
+msgstr "Rinse de Vries - 2007,Freek de Kruijf - 2013;2023-2024"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -173,15 +173,13 @@ msgid "Start a new game with the current settings"
 msgstr "Start een nieuw spel met de huidige instellingen"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Weergave"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Computerspeler"

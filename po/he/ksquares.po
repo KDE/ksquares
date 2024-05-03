@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2024-04-15 07:11+0300\n"
+"PO-Revision-Date: 2024-05-02 21:51+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -171,15 +171,13 @@ msgid "Start a new game with the current settings"
 msgstr "התחלת משחק חדש עם ההגדרות הנוכחיות"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "תצוגה"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "שחקן המחשב"

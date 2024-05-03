@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2023-11-16 07:39+0100\n"
+"PO-Revision-Date: 2024-05-02 23:45+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -171,23 +171,21 @@ msgid "Start a new game with the current settings"
 msgstr "Komenci novan ludon kun la nunaj agordoj"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Montri"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
-msgstr "Komputila ludanto"
+msgstr "Komputila Ludanto"
 
 #: main.cpp:28
 #, kde-format
 msgid "KSquares"
-msgstr "KSkvadratoj"
+msgstr "KSquares"
 
 #: main.cpp:30
 #, kde-format

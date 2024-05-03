@@ -297,7 +297,7 @@
 > <guimenu
 >Joc</guimenu
 > <guimenuitem
->Mostra les puntuacions...</guimenuitem
+>Mostra les puntuacions…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -335,7 +335,7 @@
 ><guimenu
 >Arranjament</guimenu
 > <guimenuitem
->Configura el &ksquares;...</guimenuitem
+>Configura el &ksquares;…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -382,7 +382,7 @@
 ><guimenu
 >Arranjament</guimenu
 > <guimenuitem
->Configura el &ksquares;...</guimenuitem
+>Configura el &ksquares;…</guimenuitem
 ></menuchoice
 >. Per a més detalls, vegeu <link linkend="configuration"
 >Configurar la partida</link
@@ -521,7 +521,7 @@
   <varlistentry>
     <term
 ><guilabel
->Pantalla</guilabel
+>Visualització</guilabel
 ></term>
     <listitem
 ><para

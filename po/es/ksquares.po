@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Santiago Fernández Sancho <santi@kde-es.org>, 2007, 2008.
-# SPDX-FileCopyrightText: 2009, 2013, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2009, 2013, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Huever, 2009.
 # Kira J. Fernandez <kirajfdez@gmail.com>, 2010.
 # Sofía Priego <spriego@darksylvania.net>, %Y.
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-17 00:36+0000\n"
-"PO-Revision-Date: 2023-11-20 02:02+0100\n"
+"PO-Revision-Date: 2024-05-02 17:56+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -172,7 +172,7 @@ msgstr "Cuadrados completados"
 #: ksquareswindow.cpp:293
 #, kde-format
 msgid "Start a new game with the current settings"
-msgstr "Iniciar una nueva partida con las preferencias actuales"
+msgstr "Empezar una nueva partida con las preferencias actuales"
 
 #: ksquareswindow.cpp:311
 #, kde-format
@@ -260,7 +260,7 @@ msgstr "Nueva partida"
 #: newgamewidget.ui:22
 #, kde-format
 msgid "Settings for the players in the game"
-msgstr "Preferencias para los jugadores de la partida"
+msgstr "Preferencias de los jugadores de la partida"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: newgamewidget.ui:25
@@ -272,7 +272,7 @@ msgstr "Jugadores"
 #: newgamewidget.ui:31
 #, kde-format
 msgid "The name of the fourth player"
-msgstr "El nombre del cuarto jugador"
+msgstr "Nombre del cuarto jugador"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
 #: newgamewidget.ui:34
@@ -306,7 +306,7 @@ msgstr "¿Hu&mano?"
 #: newgamewidget.ui:76
 #, kde-format
 msgid "The name of the third player"
-msgstr "El nombre del tercer jugador"
+msgstr "Nombre del tercer jugador"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
 #: newgamewidget.ui:79
@@ -318,7 +318,7 @@ msgstr "Jugador 3:"
 #: newgamewidget.ui:98
 #, kde-format
 msgid "The name of the second player"
-msgstr "El nombre del segundo jugador"
+msgstr "Nombre del segundo jugador"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
 #: newgamewidget.ui:101
@@ -364,7 +364,7 @@ msgstr "Número de jugadores:"
 #: newgamewidget.ui:165
 #, kde-format
 msgid "The name of the first player"
-msgstr "El nombre del primer jugador"
+msgstr "Nombre del primer jugador"
 
 #. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
 #: newgamewidget.ui:168
@@ -382,7 +382,7 @@ msgstr "¿H&umano?"
 #: newgamewidget.ui:197
 #, kde-format
 msgid "Settings for the game board"
-msgstr "Preferencias para el tablero de juego"
+msgstr "Preferencias del tablero de juego"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: newgamewidget.ui:200
@@ -394,7 +394,7 @@ msgstr "Tablero de juego"
 #: newgamewidget.ui:206
 #, kde-format
 msgid "The number of squares the area is wide"
-msgstr "Anchura en número de cuadrados"
+msgstr "Anchura del área en número de cuadrados"
 
 #. i18n: ectx: property (text), widget (QLabel, labelWidth)
 #: newgamewidget.ui:209
@@ -406,7 +406,7 @@ msgstr "Anchura:"
 #: newgamewidget.ui:238
 #, kde-format
 msgid "The number of squares the area is high"
-msgstr "Altura en número de cuadrados del área"
+msgstr "Altura del área en número de cuadrados"
 
 #. i18n: ectx: property (text), widget (QLabel, labelHeight)
 #: newgamewidget.ui:241
@@ -468,7 +468,7 @@ msgstr "Preferencias de la pantalla"
 #: prefs_display.ui:19
 #, kde-format
 msgid "Settings for colors"
-msgstr "Preferencias para los colores"
+msgstr "Preferencias de los colores"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:22
@@ -535,7 +535,7 @@ msgstr "Color de las líneas del indicador"
 #: prefs_display.ui:95
 #, kde-format
 msgid "Indicator line color:"
-msgstr "Indicador del color de línea:"
+msgstr "Color de línea del indicador:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: prefs_display.ui:111
@@ -553,4 +553,4 @@ msgstr "Puntuaciones"
 #: scoreswidget.ui:19
 #, kde-format
 msgid "Scoreboard"
-msgstr "Tablero de puntuaciones"
+msgstr "Tabla de puntuaciones"

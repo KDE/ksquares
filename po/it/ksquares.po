@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Marcello Anni <marcello.anni@alice.it>, 2007, 2008, 2010, 2013.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2021, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2021, 2023, 2024.
 #
 msgid ""
 msgstr ""

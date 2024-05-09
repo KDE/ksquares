@@ -297,7 +297,7 @@
 > <guimenu
 >Jeu</guimenu
 > <guimenuitem
->Afficher les meilleurs scores...</guimenuitem
+>Afficher les meilleurs scores</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -378,7 +378,7 @@
 ></question>
  <answer
 ><para
->Actuellement, la seule chose que vous pouvez modifier à propos de l'apparence du jeu est la couleur des lignes. Veuillez utiliser l'élément de menu <menuchoice
+>Actuellement, la seule chose que vous pouvez modifier à propos de l'apparence du jeu est la couleur des lignes. Pour cela, veuillez utiliser l'élément de menu <menuchoice
 ><guimenu
 >Configuration</guimenu
 ><guimenuitem

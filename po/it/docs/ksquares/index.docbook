@@ -309,11 +309,11 @@
 >&Ctrl;<keycap
 >H</keycap
 ></keycombo
-> </shortcut
+></shortcut
 > <guimenu
 >Partita</guimenu
 > <guimenuitem
->Mostra la classifica...</guimenuitem
+>Mostra la classifica…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -351,7 +351,7 @@
 ><guimenu
 >Impostazioni</guimenu
 > <guimenuitem
->Configura &ksquares;</guimenuitem
+>Configura &ksquares;…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -396,7 +396,7 @@
 ><guimenu
 >Impostazioni</guimenu
 > <guimenuitem
->Configura &ksquares;...</guimenuitem
+>Configura &ksquares;…</guimenuitem
 ></menuchoice
 >. Consulta la sezione <link linkend="configuration"
 >Configurazione del gioco</link

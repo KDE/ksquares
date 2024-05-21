@@ -81,6 +81,20 @@
 ><contrib
 >Traductora</contrib
 ></othercredit
+> <othercredit role="translator"
+><firstname
+>Eloy</firstname
+> <surname
+>Cuadra</surname
+> <affiliation
+><address
+><email
+>ecuadra@eloihr.net</email
+></address
+></affiliation
+> <contrib
+>Corrección de la traducción</contrib
+></othercredit
 > 
 </authorgroup>
 
@@ -138,7 +152,7 @@
 	<keyword
 >Puntos y rayas</keyword>
 	<keyword
->Juego de punto</keyword>
+>Juego de puntos</keyword>
 </keywordset>
 </bookinfo>
 <!--Content begins here: -->
@@ -164,7 +178,7 @@
 <para
 >La idea de &ksquares; es construir cuadrados interconectando los puntos en una rejilla. Pueden jugar hasta cuatro jugadores por turnos. El truco consiste en que, con independencia de quién haya construido más parte del cuadrado, es el jugador que lo completa el que consigue el punto para él.</para>
 <para
->Para ganar la partida el jugador debe conseguir obtener la mayor cantidad de puntos cubriendo la mayor cantidad del área con cuadrados de su propio color.</para>
+>Para ganar la partida, el jugador debe conseguir obtener la mayor cantidad de puntos cubriendo la mayor cantidad del área con cuadrados de su propio color.</para>
 </chapter>
 
 <chapter id="howto"
@@ -176,7 +190,7 @@
 ><title
 >Objetivo:</title
 ><para
->Completar más cuadrados que cualquiera de sus adversarios.</para
+>Completar más cuadrados que cualquiera de tus adversarios.</para
 ></note
 ><!--Describe the objective of the game.-->
 <!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
@@ -196,11 +210,11 @@
 </screenshot>
 
   <para
->Cada jugador tiene su turno para dibujar una línea entre dos puntos adyacentes en el tablero. El indicador de línea amarilla muestra dónde se colocará su línea cuando pulse. Una vez que haya decidido dónde dibujar su línea, pulse el botón del ratón, y la línea se dibujará. Si un jugador completa un cuadrado colocando las cuatro líneas alrededor del cuadrado, este le pertenecerá y podrá jugar de nuevo. Si la línea que se dibuje no completa un cuadrado el turno pasará al siguiente jugador. La partida continúa hasta que se completan todos los cuadrados del tablero. </para>
+>Cada jugador tiene su turno para dibujar una línea entre dos puntos adyacentes en el tablero. El indicador de línea amarilla muestra dónde se colocará tu línea cuando pulses. Una vez que hayas decidido dónde dibujar la línea, pulsa el botón del ratón para que la línea se dibuje. Si un jugador completa un cuadrado colocando las cuatro líneas alrededor del cuadrado, este le pertenecerá y podrá jugar de nuevo. Si la línea que se dibuja no completa un cuadrado, el turno pasará al siguiente jugador. La partida continúa hasta que se completan todos los cuadrados del tablero. </para>
   <para
->Para iniciar una partida nueva con un configuración personalizada (número de jugadores, nombres de los jugadores, tamaño del tablero) pulse sobre el botón <guibutton
+>Para iniciar una partida nueva con un configuración personalizada (número de jugadores, nombres de los jugadores, tamaño del tablero), pulsa el botón <guibutton
 >Nuevo</guibutton
-> de la barra de herramientas o use la opción del menú <menuchoice
+> de la barra de herramientas o usa la opción del menú <menuchoice
 ><shortcut
 ><keycombo action="simul"
 >&Ctrl;<keycap
@@ -212,9 +226,9 @@
 > <guimenuitem
 >Nuevo</guimenuitem
 ></menuchoice
->. Para iniciar una partida nueva con la misma configuración que la actual, pulse el botón <guibutton
+>. Para iniciar una partida nueva con la misma configuración que la actual, pulsa el botón <guibutton
 >Reiniciar partida</guibutton
-> en la barra de herramientas. </para>
+> de la barra de herramientas. </para>
 </chapter>
 
 <chapter id="rules_and_tips"
@@ -226,15 +240,15 @@
   <title
 >Reglas del juego</title>
     <para
->No hace falta decir mucho respecto a cómo jugar, ya que el concepto del juego es muy sencillo en sí mismo. No obstante, veamos las reglas que como jugador debe seguir para jugar a &ksquares;:</para>
+>No hace falta decir mucho respecto a cómo jugar, ya que el concepto del juego es muy sencillo en sí mismo. No obstante, veamos las reglas que, como jugador, debes seguir para jugar a &ksquares;:</para>
     <itemizedlist>
 	<listitem
 ><para
->Solo puede conectar los puntos en la rejilla que no haya conectado con anterioridad usted, su adversario o la máquina.</para
+>Solo puedes conectar los puntos de la rejilla que no se hayan conectado con anterioridad (tú, tu adversario o la máquina).</para
 ></listitem>
 	<listitem
 ><para
->Para ganar puntos debe conectar los puntos para que formen un cuadrado.</para
+>Para ganar puntos debes conectar los puntos para que formen un cuadrado.</para
 ></listitem>
 	<listitem
 ><para
@@ -242,11 +256,11 @@
 ></listitem>
 	<listitem
 ><para
->Una vez que se haya completado un cuadrado el jugador que dibujó la última línea del cuadrado se garantizará su posesión. El cuadrado se coloreará entonces y el jugador obtendrá un punto.</para
+>Una vez que se haya completado un cuadrado, el jugador que haya dibujado la última línea del cuadrado asegurará su posesión. El cuadrado se coloreará entonces y el jugador obtendrá un punto.</para
 ></listitem>
 	<listitem
 ><para
->El jugador que complete el cuadrado tendrá un turno adicional que el jugador no podrá rechazar.</para
+>El jugador que complete el cuadrado tendrá un turno adicional que no podrá rechazar.</para
 ></listitem>
     </itemizedlist>
 </sect1>
@@ -256,27 +270,27 @@
   <itemizedlist>
 	<listitem
 ><para
->No intente jugar de forma aleatoria. Un juego de este tipo se perderá con casi total seguridad.</para
+>No intentes jugar de forma aleatoria. Si juegas así, perderás con casi total seguridad.</para
 ></listitem>
 	<listitem
 ><para
->Construya largas cadenas de líneas sobre el tablero de juego. Una vez que se haya completado la cadena comience a construir otra paralela a la primera.</para
+>Construye largas cadenas de líneas sobre el tablero de juego. Una vez que se haya completado la cadena, empieza a construir otra paralela a la primera.</para
 ></listitem>
 	<listitem
 ><para
->Intente no construir donde solo quede una línea sin hacer. Su adversario se aprovechará de ello.</para
+>Intenta no construir donde solo quede una línea sin hacer. Tu adversario se aprovechará de ello.</para
 ></listitem>
 	<listitem
 ><para
->Si tiene que dejar que su adversario consiga uno o más cuadrados, intente seleccionar la combinación que haga menos daño.</para
+>Si tienes que dejar que tu adversario consiga uno o más cuadrados, intenta seleccionar la combinación que haga menos daño.</para
 ></listitem>
 	<listitem
 ><para
->Intente empujar a su oponente hacia una situación en la que no tenga elección pero le deje obtener un cuadrado.</para
+>Intenta empujar a tu oponente hacia una situación en la que no tenga más opción que dejarte obtener un cuadrado.</para
 ></listitem>
 	<listitem
 ><para
->Si ha tenido la suerte de completar una cadena completa de cuadrados, recordando que debe dejar dos cuadrados al final de la cadena incompleta para empujar a su adversario a completarla, y dándole la oportunidad de continuar con otra cadena. Esta situación se conoce como doble cruz.</para
+>Si vas a tener la oportunidad de empezar a completar una cadena entera de cuadrados, recuerda que si dejas dos cuadrados incompletos al final de dicha cadena estás empujando a tu oponente a completarlos, dándote así la oportunidad de continuar con otra cadena más. Esta situación se llama traición.</para
 ></listitem>
     </itemizedlist>
 </sect1>
@@ -284,7 +298,7 @@
 
 <chapter id="menu-items">
   <title
->Opciones de menú</title>
+>Opciones del menú</title>
   <para>
     <variablelist>
       <varlistentry>
@@ -305,7 +319,7 @@
         <listitem
 ><para
 ><action
->Iniciar un juego nuevo.</action
+>Empezar una partida nueva.</action
 ></para
 ></listitem>
       </varlistentry>
@@ -384,7 +398,7 @@
 ><para
 ><action
 >Abre un diálogo para configurar &ksquares;.</action
-> Consulte la sección <link linkend="configuration"
+> Consulta la sección <link linkend="configuration"
 >Configuración del juego</link
 > para obtener más detalles.</para
 ></listitem>
@@ -392,15 +406,15 @@
     </variablelist>
   </para>
   <para
->Además &ksquares; tiene las opciones de menú <guimenu
+>Además, &ksquares; tiene las opciones de los menús <guimenu
 >Preferencias</guimenu
 > y <guimenu
 >Ayuda</guimenu
-> comunes de &kde;. Para obtener más información, consulte las secciones sobre el <ulink url="help:/fundamentals/menus.html#menus-settings"
+> comunes de &kde;. Para obtener más información, consulta las secciones sobre el <ulink url="help:/fundamentals/menus.html#menus-settings"
 >Menú «Preferencias»</ulink
-> y <ulink url="help:/fundamentals/menus.html#menus-help"
+> y el <ulink url="help:/fundamentals/menus.html#menus-help"
 >Menú «Ayuda» </ulink
-> de «Aspectos básicos de &kde;». </para>
+> de los «Aspectos básicos de &kde;». </para>
 
 </chapter>
 
@@ -416,17 +430,17 @@
 <qandaentry>
  <question
 ><para
->Quiero cambiar el aspecto del juego ¿Puedo? </para
+>Quiero cambiar el aspecto del juego. ¿Puedo hacerlo? </para
 ></question>
  <answer
 ><para
->En estos momentos lo único que puede cambiar en el aspecto del juego es el color de las líneas. Para ello, use la opción del menú <menuchoice
+>En estos momentos, lo único que puedes cambiar del aspecto del juego es el color de las líneas. Para ello, usa la opción del menú <menuchoice
 ><guimenu
 >Preferencias</guimenu
 > <guimenuitem
 >Configurar &ksquares;...</guimenuitem
 ></menuchoice
->. Consulte la sección <link linkend="configuration"
+>. Consulta la sección <link linkend="configuration"
 >Configuración del juego</link
 > para más detalles.</para
 ></answer>
@@ -434,7 +448,7 @@
 <qandaentry>
  <question
 ><para
->He cometido un error ¿Puedo deshacerlo? </para
+>He cometido un error. ¿Puedo deshacerlo? </para
 ></question>
  <answer
 ><para
@@ -444,27 +458,27 @@
 <qandaentry>
  <question
 ><para
->¿Puedo utilizar el teclado para jugar a este juego? </para
+>¿Puedo usar el teclado para jugar a este juego? </para
 ></question>
  <answer
 ><para
->No. &ksquares; no puede jugarse utilizando el teclado.</para
+>No. &ksquares; no se puede jugar con el teclado.</para
 ></answer>
 </qandaentry>
 <qandaentry>
  <question
 ><para
->No se por dónde puedo seguir ¿Hay pistas? </para
+>No sé por dónde puedo seguir. ¿Hay pistas? </para
 ></question>
  <answer
 ><para
->No, la funcionalidad de pistas no está todavía implementada.</para
+>No. La funcionalidad de pistas no está todavía implementada.</para
 ></answer>
 </qandaentry>
 <qandaentry>
  <question
 ><para
->Debo abandonar la partida, pero todavía no he terminado ¿puedo guardar mi progreso?</para
+>Debo abandonar la partida, pero todavía no he terminado. ¿Puedo guardar el estado actual?</para
 ></question>
   <answer
 ><para
@@ -497,7 +511,7 @@
 <para
 >El diálogo <guilabel
 >Nueva partida</guilabel
-> está formado por los siguiente grupos:</para>
+> está formado por las siguientes secciones:</para>
 <variablelist>
   <varlistentry>
     <term
@@ -506,11 +520,11 @@
 ></term>
     <listitem
 ><para
->Aquí puede cambiar el número de participantes y determinar cuál lo jugará un humano y cuál la inteligencia artificial. Use el control numérico <guilabel
+>Aquí puedes cambiar el número de participantes y determinar si jugará un humano o una inteligencia artificial. Usa el control numérico <guilabel
 >Número de jugadores:</guilabel
-> para indicar el número de participantes. Escriba un nombre para cada participante y marque la casilla <guilabel
+> para indicar el número de participantes. Escribe un nombre para cada participante y marque la casilla <guilabel
 >¿Humano?</guilabel
-> para especificar el tipo de jugador.</para
+> para indicar el tipo de jugador.</para
 ></listitem>
   </varlistentry>
   <varlistentry>
@@ -520,7 +534,7 @@
 ></term>
     <listitem
 ><para
->Aquí puede regular el tamaño del tablero de juego. Use los controles numéricos <guilabel
+>Aquí puedes regular el tamaño del tablero de juego. Usa los controles numéricos <guilabel
 >Anchura</guilabel
 > y <guilabel
 >Altura</guilabel
@@ -534,9 +548,9 @@
 ></term>
     <listitem
 ><para
->Esta parte del diálogo de configuración regula la dificultad del juego. Si deja sin marcar la casilla <guilabel
+>Esta parte del diálogo de configuración regula la dificultad del juego. Si dejas sin marcar la casilla <guilabel
 >Inicio rápido</guilabel
-> la partida comenzará con la rejilla vacío. Si no, la partida se iniciará con el tablero de juego parcialmente rellenado.</para
+>, la partida empezará con la rejilla vacía. Si no, la partida empezará con el tablero de juego parcialmente relleno.</para
 ></listitem>
   </varlistentry>
 </variablelist>
@@ -558,7 +572,7 @@
 <para
 >El diálogo <guilabel
 >Configurar &ksquares;</guilabel
-> está formada por las siguientes pestañas:</para>
+> está formado por las siguientes pestañas:</para>
 <variablelist>
   <varlistentry>
     <term
@@ -567,7 +581,7 @@
 ></term>
     <listitem
 ><para
->Aquí puede cambiar las preferencias de color de &ksquares;.</para
+>Aquí puedes cambiar las preferencias de color de &ksquares;.</para
 ></listitem>
   </varlistentry>
   <varlistentry>
@@ -577,7 +591,7 @@
 ></term>
     <listitem
 ><para
->Utilice esta pestaña para regular la dificultad de la partida.</para
+>Usa esta pestaña para regular la dificultad de la partida.</para
 ></listitem>
   </varlistentry>
 </variablelist>
@@ -594,22 +608,26 @@
 >&ksquares; </para>
 
 <para
->Derechos de autor del programa. 2006 Matt Williams <email
+>Copyright del programa 2006 Matt Williams <email
 >matt@milliams.com</email
 >. </para>
 
   <para
->Derechos de autor de la documentación. &copy; 2006 Matt Williams <email
+>Copyright de la documentación &copy; 2006 Matt Williams <email
 >matt@milliams.com</email
 >.</para>
 
 <para
->Traducido por Rocío Gallego <email
+>Documentación traducida por Rocío Gallego <email
 >traducciones@rociogallego.com</email
 >, Santiago Fernández Sancho<email
 >santi@kde-es.org</email
 > y Kira J. Fernández <email
 >kirajfdez@gmail.com</email
+>.</para
+><para
+>Corregida por Eloy Cuadra <email
+>ecuadra@eloihr.net</email
 >.</para
 > &underFDL; &underGPL; </chapter>
 

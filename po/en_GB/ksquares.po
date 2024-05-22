@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2009.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2021.
+# SPDX-FileCopyrightText: 2014, 2021, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2021-10-10 10:57+0100\n"
+"PO-Revision-Date: 2024-05-21 19:23+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,21 +80,19 @@ msgstr "How difficult the AI should be"
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Background Colour"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Line Colour"
+msgstr "Centre Dot Colour"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Line Colour"
+msgstr "Faint Line Colour"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -173,15 +171,13 @@ msgid "Start a new game with the current settings"
 msgstr "Start a new game with the current settings"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Display"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Computer Player"
@@ -478,43 +474,39 @@ msgstr "Colours"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "Colour of the drawn lines"
+msgstr "Colour of the drawn background"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Background colour:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "Colour of the drawn lines"
+msgstr "Colour of the drawn centre dot"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Centre dot colour:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "Colour of the drawn lines"
+msgstr "Colour of the faintly drawn lines"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Indicator line colour:"
+msgstr "Faint line colour:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76

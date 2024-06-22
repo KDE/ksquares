@@ -2,20 +2,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2007, 2008, 2009, 2013, 2021.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2013, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2021-10-04 18:18+0200\n"
+"PO-Revision-Date: 2024-06-21 10:47+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -80,21 +80,19 @@ msgstr "Hur svår AI ska vara"
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Bakgrundsfärg"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Linjefärg"
+msgstr "Mittpunktsfärg"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Linjefärg"
+msgstr "Svag linjefärg"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -173,15 +171,13 @@ msgid "Start a new game with the current settings"
 msgstr "Starta ett nytt spel med nuvarande inställningar"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Skärm"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Datorspelare"
@@ -478,43 +474,39 @@ msgstr "Färger"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "De ritade linjernas färg"
+msgstr "Den uppritade bakgrundens färg"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Bakgrundsfärg:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "De ritade linjernas färg"
+msgstr "Den uppritade mittpunktens färg"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Mittpunktsfärg:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "De ritade linjernas färg"
+msgstr "De uppritade svaga linjernas färg"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Indikeringslinjefärg:"
+msgstr "Svag linjefärg:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76

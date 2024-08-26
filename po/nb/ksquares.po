@@ -86,14 +86,12 @@ msgstr ""
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
 #, fuzzy, kde-format
-#| msgid "Line Color"
 msgid "Center Dot Color"
 msgstr "Linjefarge"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
 #, fuzzy, kde-format
-#| msgid "Line Color"
 msgid "Feint Line Color"
 msgstr "Linjefarge"
 
@@ -175,14 +173,12 @@ msgstr "Start et nytt spill med gjeldende innstillinger"
 
 #: ksquareswindow.cpp:311
 #, fuzzy, kde-format
-#| msgid "Display"
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Vis"
 
 #: ksquareswindow.cpp:316
 #, fuzzy, kde-format
-#| msgid "Computer Player"
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Datamaskinspiller"
@@ -480,7 +476,6 @@ msgstr "Farger"
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
 #, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
 msgid "Color of the drawn background"
 msgstr "Farge på tegnelinjene"
 
@@ -493,7 +488,6 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
 #, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
 msgid "Color of the drawn center dot"
 msgstr "Farge på tegnelinjene"
 
@@ -506,14 +500,12 @@ msgstr ""
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
 #, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
 msgid "Color of the feintly drawn lines"
 msgstr "Farge på tegnelinjene"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
 #, fuzzy, kde-format
-#| msgid "Indicator line color:"
 msgid "Feint line color:"
 msgstr "Indikatorlinjefarge:"
 

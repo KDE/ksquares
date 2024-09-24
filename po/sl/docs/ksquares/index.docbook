@@ -1,0 +1,608 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>&ksquares; Priročnik</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+  <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+
+  <othercredit role="reviewer"
+><firstname
+>Eugene</firstname
+> <surname
+>Trounev</surname
+> <contrib
+>Recenzent</contrib>
+    <affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+  </othercredit>
+  <othercredit role="translator"
+><firstname
+>Matjaž</firstname
+><surname
+>Jeran</surname
+><affiliation
+><address
+><email
+>matjaz.jeran@amis.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+  <year
+>2006</year>
+  <holder
+>Matt Williams</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>03.10.2021</date>
+<releaseinfo
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>Ta dokumentacija opisuje igro &ksquares; različica 0.6</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>igra</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>tabla</keyword>
+	<keyword
+>Pike in škatle</keyword>
+	<keyword
+>Škatle</keyword>
+	<keyword
+>Kvadrati</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>štirje igralci</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Maneže</keyword>
+	<keyword
+>Kvadriraj to</keyword>
+	<keyword
+>Pike in črtice</keyword>
+	<keyword
+>Igra s pikami</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Uvod</title
+> <!-- do not change this! -->
+	<note
+><title
+>Vrsta igre:</title
+><para
+>Deska</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Število možnih igralcev:</title
+><para
+>Štiri</para
+></note>
+	<para
+>&ksquares; je zabavna in razburljiva igra. &ksquares; je oblikovana po dobro znani igri Dots and Boxes, ki temelji na pisalu in papirju.</para>
+<para
+>Ideja za &ksquares; je sestavljanje kvadratov s povezovanjem pik na mreži. To igro lahko igrajo do štirje igralci, ki se izmenjujejo. Trik je v tem, da ne glede na to, kdo je zgradil večino polja, igralec, ki dokonča polje, dobi točko.</para>
+<para
+>Za zmago v krogu igre mora igralec zbrati največ točk tako, da pokrije največje območje s kvadratki igralčeve barve.</para>
+</chapter>
+
+<chapter id="howto"
+><title
+>Kako igrati</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Cilj:</title
+><para
+>Izpolnite več polj kot katerikoli vaš nasprotnik.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>Na začetku igre je igralna plošča prazna. Obstaja preprosto mreža pik, ki prikazuje, kje je mogoče narisati črte. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&ksquares; Igralna plošča</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>Vsak igralec po vrsti nariše črto med dvema sosednjima točkama na plošči. Če z miško premaknete nad igralno ploščo, vam bo rumena indikatorska črta pokazala, kje bo postavljena vaša linija, ko kliknete. Ko se odločite, kje želite narisati črto, kliknite - in črta bo narisana. Če ste z risanjem črte dokončali kvadrat, potem ta kvadrat zdaj pripada vam in vam prinese točko. Vsakič, ko dokončate kvadrat, morate narisati novo črto. Če vaša črta ni dokončala polja, pridejo na vrsto naslednji igralci. Igra se bo nadaljevala, dokler ni vsako polje na plošči v lasti enega od igralcev. </para>
+  <para
+>Če želite začeti novo igro z nastavitvami po meri (število igralcev, imena igralcev, velikost plošče), kliknite gumb <guibutton
+>Nova</guibutton
+> orodne vrstice ali pojdite na element menija <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Igra</guimenu
+> <guimenuitem
+>Nova</guimenuitem
+></menuchoice
+>. Če želite začeti novo igro z enakimi nastavitvami kot trenutna igra, kliknite gumb <guibutton
+>Znova zaženi igro</guibutton
+> v orodni vrstici. </para>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Pravila igre, strategije in nasveti</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Pravila igre</title>
+    <para
+>O pravilih je zelo malo za povedati, saj je koncept igre sam po sebi precej preprost. Kljub temu so tukaj pravila igre, s katerimi se boste kot igralec kljubovalno soočili med igranjem &ksquares;:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Pike na mreži lahko povežete le, če jih predhodno niste povezali vi, vaš nasprotnik ali računalnik.</para
+></listitem>
+	<listitem
+><para
+>Če želite pridobiti točke, morate povezati pike v kvadrat.</para
+></listitem>
+	<listitem
+><para
+>Kvadrat ne sme biti večji od dovoljenih štirih sosednjih pik na mreži.</para
+></listitem>
+	<listitem
+><para
+>Ko je polje dokončano, igralec, ki nariše zadnjo črto tega polja, dobi pravico do posesti nad njim. Kvadrat je nato obarvan in igralec dobi točko.</para
+></listitem>
+	<listitem
+><para
+>Igralec, ki dokonča polje, dobi dodatno potezo, ki jo igralec ne more izgubiti.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Strategije in nasveti</title>
+  <itemizedlist>
+	<listitem
+><para
+>Poskusite ne igrati naključno. Takšna igralna praksa bo gotovo povzročila izgubo.</para
+></listitem>
+	<listitem
+><para
+>Zgradite dolge verige črt nad igralno ploščo. Ko je ena takšna veriga končana, začnite graditi drugo, ki bo vzporedna s prvo.</para
+></listitem>
+	<listitem
+><para
+>Poskusite, da ne graditi čudnih izumov, kjer ostane samo ena črta nepovezana. Vaš nasprotnik bo to skoraj zagotovo izkoristil.</para
+></listitem>
+	<listitem
+><para
+>Če dovolite nasprotniku, da dobi polje ali več, poskusite izbrati kombinacijo, ki povzroči najmanj škode.</para
+></listitem>
+	<listitem
+><para
+>Poskusite svojega nasprotnika spraviti v situacijo, ko ne bo imel druge izbire, kot da vam dovoli, da dobite polje.</para
+></listitem>
+	<listitem
+><para
+>Če želite dobiti priložnost, da začnete izpolnjevati celotno verigo polj, ne pozabite, da s tem, ko pustite dve polji na koncu takšne verige nedokončani, prisilite svojega nasprotnika, da ju izpolni, kar vam daje možnost, da nadaljujete na drugo verigo. Takšna situacija se imenuje dvojni križ.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+
+<chapter id="menu-items">
+  <title
+>Elementi menija</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Igra</guimenu
+> <guimenuitem
+>Nova</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Začni novo igro.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Igra</guimenu
+> <guimenuitem
+>Znova zaženi igro</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+>Začne novo igro z enakimi nastavitvami kot trenutna igra.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Igra</guimenu
+> <guimenuitem
+>Prikaži najboljše rezultate...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Prikaže</action
+> tabelo najboljših rezultatov.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Igra</guimenu
+> <guimenuitem
+>Zapusti</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Zapusti</action
+> &ksquares;.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+        <term
+><menuchoice
+><guimenu
+>Nastavitve</guimenu
+> <guimenuitem
+>Konfiguriraj &ksquares;...</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Odpre pogovorno okno za konfiguracijo &ksquares;.</action
+> Za podrobnosti glejte razdelek <link linkend="configuration"
+>Konfiguracija igre</link
+>.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>Poleg tega &ksquares; ima skupno &kde; Elemente menija <guimenu
+>Nastavitve</guimenu
+> in <guimenu
+>Pomoč</guimenu
+>, za več informacij preberite razdelke o <ulink url="help:/fundamentals/menus.html#menus-settings"
+>meniju z nastavitvami</ulink
+> in <ulink url="help:/fundamentals/menus.html#menus-help"
+>meni Pomoč</ulink
+> v &kde; Osnove. </para>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Pogosto zastavljena vprašanja</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Želim spremeniti videz te igre. Ali lahko? </para
+></question>
+ <answer
+><para
+>Trenutno je edina stvar, ki jo lahko spremenite glede videza igre, barva črt. To naredite z menijsko postavko <menuchoice
+><guimenu
+>Nastavitve</guimenu
+> <guimenuitem
+>Konfiguriraj &ksquares;...</guimenuitem
+></menuchoice
+>. Za podrobnosti glejte razdelek <link linkend="configuration"
+>Konfiguracija igre</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Naredil sem napako. Ali lahko razveljavim? </para
+></question>
+ <answer
+><para
+>Ne. &ksquares; trenutno nima funkcije <quote
+>Razveljavi</quote
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ali lahko uporabljam tipkovnico za igranje igre? </para
+></question>
+ <answer
+><para
+>Ne. &ksquares; ni mogoče igrati s tipkovnico.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Ne morem ugotoviti, kaj naj naredim tukaj! Ali obstajajo namigi? </para
+></question>
+ <answer
+><para
+>Ne. Izvedena še ni nobena funkcija <quote
+>Namig</quote
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Zdaj moram zapustiti igro, vendar še nisem končal. Ali lahko shranim svoj napredek?</para
+></question>
+  <answer
+><para
+>&ksquares; nima funkcije <quote
+>Shrani</quote
+>.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"
+><title
+>Konfiguracija igre</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Pogovorno okno za novo igro</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Nova igra</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Pogovorno okno <guilabel
+>Nova igra</guilabel
+> je sestavljeno iz naslednjih skupinskih polj:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Igralci</guilabel
+></term>
+    <listitem
+><para
+>Tukaj lahko spremenite število sodelujočih igralcev, pa tudi določite, koga bo igral človek in koga umetna inteligenca. Uporabite vrtilno polje <guilabel
+>Število igralcev:</guilabel
+>, da določite število udeležencev. Nato vnesite ime za vsakega udeleženca in uporabite potrditveno polje <guilabel
+>Človek?</guilabel
+>, da določite vrsto igralca.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Igralna plošča</guilabel
+></term>
+    <listitem
+><para
+>Tukaj lahko regulirate velikost igralne plošče. Uporabite vrtilni polji <guilabel
+>Širina:</guilabel
+> in <guilabel
+>Višina:</guilabel
+>, da spremenite širino in višino igralne plošče.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Nastavitve igre</guilabel
+></term>
+    <listitem
+><para
+>Ta del konfiguracijskega pogovornega okna ureja težavnost igre. Če pustite potrditveno polje <guilabel
+>Hitri začetek</guilabel
+> nepotrjeno - se bo igra začela s prazno mrežo. V nasprotnem primeru se bo igra začela z delno zapolnjeno igralno ploščo.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Pogovorno okno za konfiguracijo</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Konfiguracijsko pogovorno okno</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Pogovorno okno <guilabel
+>Konfiguriraj - &ksquares;</guilabel
+> je sestavljeno iz naslednjih zavihkov:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Zaslon</guilabel
+></term>
+    <listitem
+><para
+>Tukaj lahko spremenite &ksquares; nastavitve barv.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Računalniški igralec</guilabel
+></term>
+    <listitem
+><para
+>Uporabite ta zavihek za uravnavanje težavnosti igre.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+
+<chapter id="credits"
+><title
+>Zasluge in licenca</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+
+<para
+>&ksquares; </para>
+
+<para
+>Avtorske pravice za program 2006 Matt Williams <email
+>matt@milliams.com</email
+> </para>
+
+  <para
+>Dokumentacija Copyright &copy; 2006 Matt Williams <email
+>matt@milliams.com</email
+></para>
+
+<para
+>Prevod: Matjaž Jeran<email
+>matjaz.jeran@amis.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

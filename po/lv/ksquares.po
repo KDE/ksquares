@@ -3,31 +3,32 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2008-12-27 20:28+0200\n"
-"Last-Translator: \n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-10-20 11:45+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Viesturs Zariņš"
+msgstr "Viesturs Zariņš, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "viesturs.zarins@mi.lu.lv"
+msgstr "viesturs.zarins@mi.lu.lv, toms.trasuns@posteo.net"
 
 #. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
 #: ksquares.kcfg:10
@@ -45,7 +46,7 @@ msgstr "Spēlētāju vārdi"
 #: ksquares.kcfg:17
 #, kde-format
 msgid "Human or AI"
-msgstr "Cilvēks vai AI"
+msgstr "Cilvēks vai MI"
 
 #. i18n: ectx: label, entry (BoardWidth), group (Game Settings)
 #: ksquares.kcfg:21
@@ -69,33 +70,31 @@ msgstr "Ātrā spēle"
 #: ksquares.kcfg:35
 #, kde-format
 msgid "Difficulty"
-msgstr "Grūtība"
+msgstr "Grūtības pakāpe"
 
 #. i18n: ectx: whatsthis, entry (Difficulty), group (AI)
 #: ksquares.kcfg:36
 #, kde-format
 msgid "How difficult the AI should be"
-msgstr "Cik nopietni AI strādāt"
+msgstr "Cik grūti būs spēlēt pret MI"
 
 #. i18n: ectx: label, entry (BackgroundColor), group (Display)
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Fona krāsa"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Līniju krāsa"
+msgstr "Mezglu punktu krāsa"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Līniju krāsa"
+msgstr "Raustīto līniju krāsa"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -118,18 +117,18 @@ msgstr "Izcelšanas krāsa"
 #: ksquaresdemowindow.cpp:65
 #, kde-format
 msgid "Player %1"
-msgstr "Spēlētājs %1"
+msgstr "%1. spēlētājs"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: ksquaresui.rc:11
 #, kde-format
 msgid "Main Toolbar"
-msgstr "Galvenā rīkjosla "
+msgstr "Galvenā rīkjosla"
 
 #: ksquareswindow.cpp:59
 #, kde-format
 msgid "Current Player"
-msgstr "Aktīvais spēlētājs"
+msgstr "Pašreizējais spēlētājs"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
 #: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:237
@@ -150,11 +149,10 @@ msgstr "Vidēji"
 #: ksquareswindow.cpp:241 prefs_ai.ui:46
 #, kde-format
 msgid "Hard"
-msgstr ""
+msgstr "Grūti"
 
 #: ksquareswindow.cpp:203
-#, fuzzy, kde-format
-#| msgid "Scores"
+#, kde-format
 msgctxt "@title:window"
 msgid "Scores"
 msgstr "Punkti"
@@ -167,7 +165,7 @@ msgstr "Spēlētāja vārds"
 #: ksquareswindow.cpp:209
 #, kde-format
 msgid "Completed Squares"
-msgstr "Aizpildītas rūtis"
+msgstr "Aizpildītās rūtis"
 
 #: ksquareswindow.cpp:293
 #, kde-format
@@ -175,15 +173,13 @@ msgid "Start a new game with the current settings"
 msgstr "Sākt jaunu spēli ar pašreizējiem iestatījumiem"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Izskats"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Datora spēlētājs"
@@ -200,12 +196,12 @@ msgid ""
 "If you complete a squares, you get another go."
 msgstr ""
 "Zīmē vienu līniju katrā gājienā.\n"
-"Ja aizpilda rūtiņu, iegūst papildus gājienu."
+"Iegūsti papildu gājienu, ja pabeidz zīmēt rūtiņu."
 
 #: main.cpp:32
 #, kde-format
 msgid "(C) 2006-2007 Matt Williams"
-msgstr "(C) 2006-2007 Matt Williams"
+msgstr "(C) 2006—2007 Matt Williams"
 
 #: main.cpp:35
 #, kde-format
@@ -215,7 +211,7 @@ msgstr "Matt Williams"
 #: main.cpp:35
 #, kde-format
 msgid "Original creator and maintainer"
-msgstr "Sākotnējais veidotājs un uzturētājs."
+msgstr "Sākotnējās versijas veidotājs un uzturētājs."
 
 #: main.cpp:36
 #, kde-format
@@ -230,28 +226,26 @@ msgstr "Daudzi ielāpi un kļūdu labojumi"
 #: main.cpp:37
 #, kde-format
 msgid "Tom Vincent Peters"
-msgstr ""
+msgstr "Tom Vincent Peters"
 
 #: main.cpp:37
 #, kde-format
 msgid "Hard AI"
-msgstr ""
+msgstr "Grūtais MI"
 
 #: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
-msgstr "Palaist spēli demonstrācijas (automātiskā) režīmā"
+msgstr "Palaist spēli demonstrācijas (automātiskas izspēles) režīmā"
 
 #: main.cpp:58 main.cpp:59 main.cpp:60
-#, fuzzy, kde-format
-#| msgid "Player %1"
+#, kde-format
 msgctxt "default name of player"
 msgid "Player %1"
-msgstr "Spēlētājs %1"
+msgstr "%1. spēlētājs"
 
 #: newgamedialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Jauna spēle"
@@ -294,19 +288,19 @@ msgstr "4. spēlētājs:"
 #: newgamewidget.ui:181
 #, kde-format
 msgid "Should this player be controlled by a human"
-msgstr "Vai šis spēlētājs ir cilvēka kontrolēts"
+msgstr "Vai šo spēlētāju kontrolēs cilvēks?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
 #: newgamewidget.ui:50
 #, kde-format
 msgid "Hum&an?"
-msgstr "c&ilvēks?"
+msgstr "Cilvē&ks?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
 #: newgamewidget.ui:66
 #, kde-format
 msgid "Hu&man?"
-msgstr "cil&vēks?"
+msgstr "Cil&vēks?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
 #: newgamewidget.ui:76
@@ -336,7 +330,7 @@ msgstr "2. spēlētājs:"
 #: newgamewidget.ui:136
 #, kde-format
 msgid "&Human?"
-msgstr "&cilvēks?"
+msgstr "&Cilvēks?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
 #: newgamewidget.ui:149
@@ -357,7 +351,7 @@ msgstr ""
 "</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
 "weight:400; font-style:normal; text-decoration:none;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-"right:0px; -qt-block-indent:0; text-indent:0px;\">Cik spēlētāju būs</p></"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Cik spēlētāju spēlēs</p></"
 "body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
@@ -382,7 +376,7 @@ msgstr "1. spēlētājs:"
 #: newgamewidget.ui:184
 #, kde-format
 msgid "H&uman?"
-msgstr "cilvē&ks?"
+msgstr "Ci&lvēks?"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
 #: newgamewidget.ui:197
@@ -448,7 +442,7 @@ msgstr "Ātrais starts"
 #: prefs_ai.ui:13
 #, kde-format
 msgid "AI Settings"
-msgstr "AI iestatījumi"
+msgstr "MI iestatījumi"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
 #: prefs_ai.ui:57
@@ -460,13 +454,13 @@ msgstr "Cik grūti ir uzveikt datoru"
 #: prefs_ai.ui:60
 #, kde-format
 msgid "AI difficulty:"
-msgstr "AI spēcīgums:"
+msgstr "MI spēcīgums:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, prefs_display)
 #: prefs_display.ui:13
 #, kde-format
 msgid "Display Settings"
-msgstr "Zīmēšanas iestatījumi"
+msgstr "Izskata iestatījumi"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
 #: prefs_display.ui:19
@@ -482,43 +476,39 @@ msgstr "Krāsas"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "Uzzīmēto līniju krāsa"
+msgstr "Izkrāsot uzzīmēto fonu"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Fona krāsa:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "Uzzīmēto līniju krāsa"
+msgstr "Uzzīmētā centra punkta krāsa"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Centra punkta krāsa:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "Uzzīmēto līniju krāsa"
+msgstr "Raustīto līniju krāsa"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Indikatora līnijas krāsa:"
+msgstr "Raustītājs līnijas krāsa:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76
@@ -530,14 +520,14 @@ msgstr "Uzzīmēto līniju krāsa"
 #: prefs_display.ui:79
 #, kde-format
 msgid "Standard line color:"
-msgstr "Normālu līniju krāsa:"
+msgstr "Standarta līniju krāsa:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
 #: prefs_display.ui:92 prefs_display.ui:108
 #, kde-format
 msgid "Color of the indicator lines"
-msgstr "Indikatora līnijas krāsa"
+msgstr "Indikatora līniju krāsa"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: prefs_display.ui:95
@@ -561,7 +551,7 @@ msgstr "Punkti"
 #: scoreswidget.ui:19
 #, kde-format
 msgid "Scoreboard"
-msgstr "Rezultātu dēlis"
+msgstr "Labākie rezultāti"
 
 #~ msgid "Online rankings"
 #~ msgstr "Tiešsaistes vērtējumi"

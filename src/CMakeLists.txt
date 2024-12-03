@@ -32,6 +32,19 @@ target_sources(ksquares PRIVATE
     ksquares.qrc
 )
 
+if(APPLE)
+    set_target_properties(ksquares PROPERTIES
+	    MACOSX_BUNDLE_DISPLAY_NAME "KSquares"
+        MACOSX_BUNDLE_BUNDLE_NAME "KSquares"
+       MACOSX_BUNDLE_LONG_VERSION_STRING "KSquares ${RELEASE_SERVICE_VERSION}"
+        MACOSX_BUNDLE_SHORT_VERSION_STRING "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}"
+        MACOSX_BUNDLE_BUNDLE_VERSION "${RELEASE_SERVICE_VERSION}"
+        MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.ksquares"
+        MACOSX_BUNDLE_COPYRIGHT "2024 The KSquares Developers")
+endif()
+
+
+
 ki18n_wrap_ui(ksquares
     newgamewidget.ui
     scoreswidget.ui

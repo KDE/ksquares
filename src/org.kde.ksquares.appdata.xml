@@ -37,6 +37,7 @@
   <name xml:lang="pt">KSquares</name>
   <name xml:lang="pt-BR">KSquares</name>
   <name xml:lang="ru">KSquares</name>
+  <name xml:lang="sa">केस्क्वारेस्</name>
   <name xml:lang="sk">KSquares</name>
   <name xml:lang="sl">KSquares</name>
   <name xml:lang="sr">К‑квадрати</name>
@@ -77,6 +78,7 @@
   <summary xml:lang="pt">Ligar os pontos para criar quadrados</summary>
   <summary xml:lang="pt-BR">Conecte os pontos para criar quadrados</summary>
   <summary xml:lang="ru">Соединяйте точки для создания квадрата</summary>
+  <summary xml:lang="sa">वर्गान् निर्मातुं बिन्दून् संयोजयन्तु</summary>
   <summary xml:lang="sk">Spojte bodky a vytvorte štvorce</summary>
   <summary xml:lang="sl">Povežite pikice, da ustvarite kvadrate</summary>
   <summary xml:lang="sr">Повежите тачке у квадрате</summary>
@@ -117,6 +119,7 @@
     <p xml:lang="pt">O KSquares é um jogo modelado com base no conhecido jogo de Pontos e Caixas, com papel e caneta. Cada jogador. Joga por turnos para desenhar uma linha entre dois pontos adjacentes no tabuleiro. O objectivo é completar mais quadrados que os seus adversários.</p>
     <p xml:lang="pt-BR">KSquares é um jogo modelado com base no conhecido jogo dos Pontinhos, que é jogado com papel e caneta. Cada jogador desenha uma linha de forma alternada entre dois pontos adjacentes no tabuleiro. O objetivo é completar mais quadrados que os seus adversários.</p>
     <p xml:lang="ru">KSquares — приложение вдохновлено популярной игрой в точки и квадраты с помощью ручки и бумаги. Каждый игрок совершает ход, чтобы провести линию между двумя соседними точками на доске. Цель игры заключается в том, чтобы завершить больше квадратов, чем соперники.</p>
+    <p xml:lang="sa">केस्क्वेर्स् इति सुप्रसिद्धस्य पेन-कागज-आधारितस्य डॉट्स् एण्ड् बक्स्स् इति क्रीडायाः आदर्शरूपेण निर्मितः क्रीडा । प्रत्येकं क्रीडकः क्रमेण तत् गृहीत्वा फलकस्य समीपस्थयोः बिन्दुयोः मध्ये रेखां आकर्षयति । उद्देश्यं भवतः प्रतिद्वन्द्वीनां अपेक्षया अधिकान् वर्गान् पूर्णं कर्तुं भवति।</p>
     <p xml:lang="sk">KSquares je hra podľa známej hry Body a štvorce. Každý hráč urobí ťah na nakreslenie čiary medzi dvoma bodmi na ploche. Cieľom je urobiť viac štvorcov ako súper.</p>
     <p xml:lang="sl">KSquares je igra, ki temelji na znani namizni igri s papirjem in svinčnikom imenovani Dots and Boxes. Igralca izmenično rišeta črte med sosednjimi pikami na igralni površini. Cilj igre je dopolniti več kvadratov kot nasprotnik.</p>
     <p xml:lang="sr">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>
@@ -163,6 +166,7 @@
       <caption xml:lang="pt">A posição típica do tabuleiro no KSquares</caption>
       <caption xml:lang="pt-BR">A posição típica do tabuleiro no KSquares</caption>
       <caption xml:lang="ru">Типичное положение игровой доски в KSquares</caption>
+      <caption xml:lang="sa">केस्क्वायर्स् इत्यस्मिन् विशिष्टं बोर्डस्थानं</caption>
       <caption xml:lang="sk">Typická pozícia dosky v KSquares</caption>
       <caption xml:lang="sl">Tipična postavitev v KSquares</caption>
       <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
@@ -202,6 +206,7 @@
       <caption xml:lang="pt">Os quadrados completos no KSquares</caption>
       <caption xml:lang="pt-BR">Os quadrados completos no KSquares</caption>
       <caption xml:lang="ru">Завершённые квадраты в KSquares</caption>
+      <caption xml:lang="sa">केस्क्वारेस् इत्यत्र सम्पन्नाः वर्गाः</caption>
       <caption xml:lang="sk">Vyplnené štvorce v KSquares</caption>
       <caption xml:lang="sl">Zaključeni kvadrati v KSquares</caption>
       <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
@@ -240,6 +245,7 @@
       <caption xml:lang="pt">Um tabuleiro inicial no KSquares</caption>
       <caption xml:lang="pt-BR">Um tabuleiro inicial no KSquares</caption>
       <caption xml:lang="ru">Начальная игровая доска в KSquares</caption>
+      <caption xml:lang="sa">केस्क्वेर्स् इत्यत्र एकः प्रारम्भिकः बोर्डः</caption>
       <caption xml:lang="sk">Počiatočná doska v KSquares</caption>
       <caption xml:lang="sl">Začetna postavitev v KSquares</caption>
       <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>

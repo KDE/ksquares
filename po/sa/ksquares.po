@@ -1,0 +1,549 @@
+# Sanskrit translations for ksquares package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the ksquares package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ksquares\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-05-02 00:37+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
+#: ksquares.kcfg:10
+#, kde-format
+msgid "Number of Players"
+msgstr "खिलाडयः संख्या"
+
+#. i18n: ectx: label, entry (PlayerNames), group (Game Settings)
+#: ksquares.kcfg:14
+#, kde-format
+msgid "Player Names"
+msgstr "खिलाडी नाम"
+
+#. i18n: ectx: label, entry (HumanList), group (Game Settings)
+#: ksquares.kcfg:17
+#, kde-format
+msgid "Human or AI"
+msgstr "मानवः वा ए.आइ"
+
+#. i18n: ectx: label, entry (BoardWidth), group (Game Settings)
+#: ksquares.kcfg:21
+#, kde-format
+msgid "Width of board"
+msgstr "फलकस्य विस्तारः"
+
+#. i18n: ectx: label, entry (BoardHeight), group (Game Settings)
+#: ksquares.kcfg:25
+#, kde-format
+msgid "Height of board"
+msgstr "फलकस्य ऊर्ध्वता"
+
+#. i18n: ectx: label, entry (QuickStart), group (Game Settings)
+#: ksquares.kcfg:29
+#, kde-format
+msgid "Quick start the game"
+msgstr "शीघ्रं क्रीडां आरभत"
+
+#. i18n: ectx: label, entry (Difficulty), group (AI)
+#: ksquares.kcfg:35
+#, kde-format
+msgid "Difficulty"
+msgstr "कष्टम्"
+
+#. i18n: ectx: whatsthis, entry (Difficulty), group (AI)
+#: ksquares.kcfg:36
+#, kde-format
+msgid "How difficult the AI should be"
+msgstr "एआइ कियत् कठिनं भवेत्"
+
+#. i18n: ectx: label, entry (BackgroundColor), group (Display)
+#: ksquares.kcfg:42
+#, kde-format
+msgid "Background Color"
+msgstr "पृष्ठभूमि रंग"
+
+#. i18n: ectx: label, entry (CenterDotColor), group (Display)
+#: ksquares.kcfg:47
+#, kde-format
+msgid "Center Dot Color"
+msgstr "केन्द्र बिन्दु रंग"
+
+#. i18n: ectx: label, entry (FeintLineColor), group (Display)
+#: ksquares.kcfg:52
+#, kde-format
+msgid "Feint Line Color"
+msgstr "Feint रेखा रंग"
+
+#. i18n: ectx: label, entry (LineColor), group (Display)
+#: ksquares.kcfg:57
+#, kde-format
+msgid "Line Color"
+msgstr "रेखावर्णः"
+
+#. i18n: ectx: label, entry (IndicatorLineColor), group (Display)
+#: ksquares.kcfg:62
+#, kde-format
+msgid "Indicator Line Color"
+msgstr "सूचक रेखा वर्ण"
+
+#. i18n: ectx: label, entry (HighlightColor), group (Display)
+#: ksquares.kcfg:67
+#, kde-format
+msgid "Highlight Color"
+msgstr "रङ्गं प्रकाशयन्तु"
+
+#: ksquaresdemowindow.cpp:65
+#, kde-format
+msgid "Player %1"
+msgstr "खिलाडी %1"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: ksquaresui.rc:11
+#, kde-format
+msgid "Main Toolbar"
+msgstr "मुख्य साधनपट्टी"
+
+#: ksquareswindow.cpp:59
+#, kde-format
+msgid "Current Player"
+msgstr "वर्तमान खिलाडी"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:237
+#: ksquareswindow.cpp:242 prefs_ai.ui:36
+#, kde-format
+msgid "Easy"
+msgstr "सरलम्‌"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:71 ksquareswindow.cpp:232 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:243 prefs_ai.ui:41
+#, kde-format
+msgid "Medium"
+msgstr "मध्यम"
+
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
+#: ksquareswindow.cpp:72 ksquareswindow.cpp:233 ksquareswindow.cpp:238
+#: ksquareswindow.cpp:241 prefs_ai.ui:46
+#, kde-format
+msgid "Hard"
+msgstr "रूक्षः"
+
+#: ksquareswindow.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Scores"
+msgstr "स्कोर"
+
+#: ksquareswindow.cpp:208
+#, kde-format
+msgid "Player Name"
+msgstr "खिलाडी नाम"
+
+#: ksquareswindow.cpp:209
+#, kde-format
+msgid "Completed Squares"
+msgstr "सम्पन्न वर्ग"
+
+#: ksquareswindow.cpp:293
+#, kde-format
+msgid "Start a new game with the current settings"
+msgstr "वर्तमानसेटिंग्स् सह नूतनं क्रीडां आरभत"
+
+#: ksquareswindow.cpp:311
+#, kde-format
+msgctxt "@title:tab"
+msgid "Display"
+msgstr ""
+
+#: ksquareswindow.cpp:316
+#, kde-format
+msgctxt "@title:tab"
+msgid "Computer Player"
+msgstr ""
+
+#: main.cpp:28
+#, kde-format
+msgid "KSquares"
+msgstr "केस्क्वारेस्"
+
+#: main.cpp:30
+#, kde-format
+msgid ""
+"Take it in turns to draw lines.\n"
+"If you complete a squares, you get another go."
+msgstr ""
+"रेखाः आकर्षयितुं क्रमेण गृह्यताम्।\n"
+"यदि भवन्तः एकं वर्गं सम्पन्नं कुर्वन्ति तर्हि भवन्तः अन्यं गन्तुं प्राप्नुवन्ति।"
+
+#: main.cpp:32
+#, kde-format
+msgid "(C) 2006-2007 Matt Williams"
+msgstr "(C) 2006-2007 मैट विलियम्स"
+
+#: main.cpp:35
+#, kde-format
+msgid "Matt Williams"
+msgstr "मैट् विलियम्स"
+
+#: main.cpp:35
+#, kde-format
+msgid "Original creator and maintainer"
+msgstr "मूल रचनाकार एवं परिपालक"
+
+#: main.cpp:36
+#, kde-format
+msgid "Fela Winkelmolen"
+msgstr "फेला शॉपिंग मिल"
+
+#: main.cpp:36
+#, kde-format
+msgid "Many patches and bugfixes"
+msgstr "अनेकाः पट्टिकाः दोषनिवारणाः च"
+
+#: main.cpp:37
+#, kde-format
+msgid "Tom Vincent Peters"
+msgstr "टॉम विन्सेन्ट् पीटर्स्"
+
+#: main.cpp:37
+#, kde-format
+msgid "Hard AI"
+msgstr "हार्ड ए.आइ"
+
+#: main.cpp:44
+#, kde-format
+msgid "Run game in demo (autoplay) mode"
+msgstr "डेमो (स्वचालन) मोड् मध्ये क्रीडां चालयन्तु"
+
+#: main.cpp:58 main.cpp:59 main.cpp:60
+#, kde-format
+msgctxt "default name of player"
+msgid "Player %1"
+msgstr "खिलाडी %1"
+
+#: newgamedialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "New Game"
+msgstr "नवीन खेल"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, NewGameWidget)
+#: newgamewidget.ui:13
+#, kde-format
+msgid "New Game"
+msgstr "नवीन खेल"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:22
+#, kde-format
+msgid "Settings for the players in the game"
+msgstr "क्रीडायां क्रीडकानां कृते सेटिंग्स्"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: newgamewidget.ui:25
+#, kde-format
+msgid "Players"
+msgstr "क्रीडकाः"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:31
+#, kde-format
+msgid "The name of the fourth player"
+msgstr "चतुर्थक्रीडकस्य नाम"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer4Name)
+#: newgamewidget.ui:34
+#, kde-format
+msgid "Player 4:"
+msgstr "खिलाडी ४ : १."
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerFourHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerOneHuman)
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:47 newgamewidget.ui:63 newgamewidget.ui:133
+#: newgamewidget.ui:181
+#, kde-format
+msgid "Should this player be controlled by a human"
+msgstr "किं अयं क्रीडकः मानवेन नियन्त्रितः भवेत्"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerFourHuman)
+#: newgamewidget.ui:50
+#, kde-format
+msgid "Hum&an?"
+msgstr "मानव?"
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
+#: newgamewidget.ui:66
+#, kde-format
+msgid "Hu&man?"
+msgstr "मानव?"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:76
+#, kde-format
+msgid "The name of the third player"
+msgstr "तृतीयक्रीडकस्य नाम"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer3Name)
+#: newgamewidget.ui:79
+#, kde-format
+msgid "Player 3:"
+msgstr "खिलाडी ३ : १."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:98
+#, kde-format
+msgid "The name of the second player"
+msgstr "द्वितीयस्य क्रीडकस्य नाम"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer2Name)
+#: newgamewidget.ui:101
+#, kde-format
+msgid "Player 2:"
+msgstr "खिलाडी २ : १."
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
+#: newgamewidget.ui:136
+#, kde-format
+msgid "&Human?"
+msgstr "&मानव?"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:149
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">How many players will be "
+"in the game</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\"> क्रीडायां कति क्रीडकाः भविष्यन्ति</p></body></html>"
+
+#. i18n: ectx: property (text), widget (QLabel, numOfPlayersLabel)
+#: newgamewidget.ui:152
+#, kde-format
+msgid "Number of players:"
+msgstr "क्रीडकानां संख्या : १."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:165
+#, kde-format
+msgid "The name of the first player"
+msgstr "प्रथमक्रीडकस्य नाम"
+
+#. i18n: ectx: property (text), widget (QLabel, labelPlayer1Name)
+#: newgamewidget.ui:168
+#, kde-format
+msgid "Player 1:"
+msgstr "खिलाडी १ : १."
+
+#. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
+#: newgamewidget.ui:184
+#, kde-format
+msgid "H&uman?"
+msgstr "मानव?"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:197
+#, kde-format
+msgid "Settings for the game board"
+msgstr "क्रीडाफलकस्य सेटिंग्स्"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: newgamewidget.ui:200
+#, kde-format
+msgid "Game Board"
+msgstr "गेम बोर्ड"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelWidth)
+#: newgamewidget.ui:206
+#, kde-format
+msgid "The number of squares the area is wide"
+msgstr "क्षेत्रफलस्य वर्गसङ्ख्या विस्तृता भवति"
+
+#. i18n: ectx: property (text), widget (QLabel, labelWidth)
+#: newgamewidget.ui:209
+#, kde-format
+msgid "Width:"
+msgstr "विस्तार:"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, labelHeight)
+#: newgamewidget.ui:238
+#, kde-format
+msgid "The number of squares the area is high"
+msgstr "क्षेत्रफलस्य वर्गसङ्ख्या अधिका अस्ति"
+
+#. i18n: ectx: property (text), widget (QLabel, labelHeight)
+#: newgamewidget.ui:241
+#, kde-format
+msgid "Height:"
+msgstr "औनत्यम्‌:"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:273
+#, kde-format
+msgid "Settings for the game"
+msgstr "क्रीडायाः सेटिंग्स्"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: newgamewidget.ui:276
+#, kde-format
+msgid "Game Settings"
+msgstr "गेम सेटिंग्स्"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:282
+#, kde-format
+msgid "Partially fill in the board automatically before the game starts"
+msgstr "क्रीडायाः आरम्भात् पूर्वं स्वयमेव फलकं आंशिकरूपेण पूरयन्तु"
+
+#. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
+#: newgamewidget.ui:285
+#, kde-format
+msgid "Quick start"
+msgstr "शीघ्र आरम्भ"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_ai)
+#: prefs_ai.ui:13
+#, kde-format
+msgid "AI Settings"
+msgstr "एआइ सेटिंग्स्"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:57
+#, kde-format
+msgid "How difficult it will be to beat the computer"
+msgstr "सङ्गणकं ताडयितुं कियत् कठिनं भविष्यति"
+
+#. i18n: ectx: property (text), widget (QLabel, label_difficulty)
+#: prefs_ai.ui:60
+#, kde-format
+msgid "AI difficulty:"
+msgstr "एआइ कठिनता : १."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, prefs_display)
+#: prefs_display.ui:13
+#, kde-format
+msgid "Display Settings"
+msgstr "सेटिंग्स् प्रदर्शयन्तु"
+
+#. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:19
+#, kde-format
+msgid "Settings for colors"
+msgstr "वर्णानाम् सेटिंग्स्"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: prefs_display.ui:22
+#, kde-format
+msgid "Colors"
+msgstr "वर्णाः"
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:28
+#, kde-format
+msgid "Color of the drawn background"
+msgstr "आकृष्टपृष्ठभूमिः वर्णः"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:31
+#, kde-format
+msgid "Background color:"
+msgstr "पृष्ठभूमिवर्णः : १."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:44
+#, kde-format
+msgid "Color of the drawn center dot"
+msgstr "आकृष्टस्य केन्द्रबिन्दुस्य वर्णः"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:47
+#, kde-format
+msgid "Center dot color:"
+msgstr "केन्द्रबिन्दुवर्णः : १."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:60
+#, kde-format
+msgid "Color of the feintly drawn lines"
+msgstr "नकली आकृष्टरेखानां वर्णः"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:63
+#, kde-format
+msgid "Feint line color:"
+msgstr "नकली रेखा वर्णः : १."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label)
+#: prefs_display.ui:76
+#, kde-format
+msgid "Color of the drawn lines"
+msgstr "आकृष्टरेखानां वर्णः"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: prefs_display.ui:79
+#, kde-format
+msgid "Standard line color:"
+msgstr "मानकरेखावर्णः : १."
+
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
+#. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
+#: prefs_display.ui:92 prefs_display.ui:108
+#, kde-format
+msgid "Color of the indicator lines"
+msgstr "सूचकरेखानां वर्णः"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: prefs_display.ui:95
+#, kde-format
+msgid "Indicator line color:"
+msgstr "सूचकरेखावर्णः : १."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: prefs_display.ui:111
+#, kde-format
+msgid "Highlight color:"
+msgstr "वर्णः प्रकाशयन्तु : १."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
+#: scoreswidget.ui:13
+#, kde-format
+msgid "Scores"
+msgstr "स्कोर"
+
+#. i18n: ectx: property (whatsThis), widget (QTableView, scoreTable)
+#: scoreswidget.ui:19
+#, kde-format
+msgid "Scoreboard"
+msgstr "स्कोरबोर्ड"

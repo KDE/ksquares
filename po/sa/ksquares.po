@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
 #: ksquares.kcfg:10
@@ -172,13 +172,13 @@ msgstr "वर्तमानसेटिंग्स् सह नूतनं 
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "प्रदर्शन"
 
 #: ksquareswindow.cpp:316
 #, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
-msgstr ""
+msgstr "कम्प्यूटर प्लेयर"
 
 #: main.cpp:28
 #, kde-format

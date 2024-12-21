@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the ksquares package.
 #
-# giovanni <g.sora@tiscali.it>, 2023, 2024.
+# SPDX-FileCopyrightText: 2023, 2024 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2024-05-02 12:28+0200\n"
+"PO-Revision-Date: 2024-12-20 14:51+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -157,7 +157,7 @@ msgstr ""
 #: ksquareswindow.cpp:208
 #, kde-format
 msgid "Player Name"
-msgstr ""
+msgstr "Nomine de Jocator"
 
 #: ksquareswindow.cpp:209
 #, kde-format
@@ -289,13 +289,13 @@ msgstr ""
 #: newgamewidget.ui:50
 #, kde-format
 msgid "Hum&an?"
-msgstr ""
+msgstr "Hum&ano?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
 #: newgamewidget.ui:66
 #, kde-format
 msgid "Hu&man?"
-msgstr ""
+msgstr "Hu&mano?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
 #: newgamewidget.ui:76
@@ -325,7 +325,7 @@ msgstr "Jocator 2:"
 #: newgamewidget.ui:136
 #, kde-format
 msgid "&Human?"
-msgstr ""
+msgstr "&Humano?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
 #: newgamewidget.ui:149
@@ -363,7 +363,7 @@ msgstr "Jocator 1:"
 #: newgamewidget.ui:184
 #, kde-format
 msgid "H&uman?"
-msgstr ""
+msgstr "H&umano?"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
 #: newgamewidget.ui:197

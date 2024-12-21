@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the ksquares package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -275,7 +277,7 @@ msgstr "चतुर्थक्रीडकस्य नाम"
 #: newgamewidget.ui:34
 #, kde-format
 msgid "Player 4:"
-msgstr "खिलाडी ४ : १."
+msgstr "खिलाडी ४ :"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerFourHuman)
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, playerThreeHuman)
@@ -309,7 +311,7 @@ msgstr "तृतीयक्रीडकस्य नाम"
 #: newgamewidget.ui:79
 #, kde-format
 msgid "Player 3:"
-msgstr "खिलाडी ३ : १."
+msgstr "खिलाडी ३ :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer2Name)
 #: newgamewidget.ui:98
@@ -321,7 +323,7 @@ msgstr "द्वितीयस्य क्रीडकस्य नाम"
 #: newgamewidget.ui:101
 #, kde-format
 msgid "Player 2:"
-msgstr "खिलाडी २ : १."
+msgstr "खिलाडी २ :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerOneHuman)
 #: newgamewidget.ui:136
@@ -354,7 +356,7 @@ msgstr ""
 #: newgamewidget.ui:152
 #, kde-format
 msgid "Number of players:"
-msgstr "क्रीडकानां संख्या : १."
+msgstr "क्रीडकानां संख्या :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer1Name)
 #: newgamewidget.ui:165
@@ -366,7 +368,7 @@ msgstr "प्रथमक्रीडकस्य नाम"
 #: newgamewidget.ui:168
 #, kde-format
 msgid "Player 1:"
-msgstr "खिलाडी १ : १."
+msgstr "खिलाडी १ :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerTwoHuman)
 #: newgamewidget.ui:184
@@ -450,7 +452,7 @@ msgstr "सङ्गणकं ताडयितुं कियत् कठि
 #: prefs_ai.ui:60
 #, kde-format
 msgid "AI difficulty:"
-msgstr "एआइ कठिनता : १."
+msgstr "एआइ कठिनता :"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, prefs_display)
 #: prefs_display.ui:13
@@ -480,7 +482,7 @@ msgstr "आकृष्टपृष्ठभूमिः वर्णः"
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr "पृष्ठभूमिवर्णः : १."
+msgstr "पृष्ठभूमिवर्णः :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
@@ -492,7 +494,7 @@ msgstr "आकृष्टस्य केन्द्रबिन्दुस�
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr "केन्द्रबिन्दुवर्णः : १."
+msgstr "केन्द्रबिन्दुवर्णः :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
@@ -504,7 +506,7 @@ msgstr "नकली आकृष्टरेखानां वर्णः"
 #: prefs_display.ui:63
 #, kde-format
 msgid "Feint line color:"
-msgstr "नकली रेखा वर्णः : १."
+msgstr "नकली रेखा वर्णः :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76
@@ -516,7 +518,7 @@ msgstr "आकृष्टरेखानां वर्णः"
 #: prefs_display.ui:79
 #, kde-format
 msgid "Standard line color:"
-msgstr "मानकरेखावर्णः : १."
+msgstr "मानकरेखावर्णः :"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_2)
 #. i18n: ectx: property (whatsThis), widget (QLabel, label_3)
@@ -529,13 +531,13 @@ msgstr "सूचकरेखानां वर्णः"
 #: prefs_display.ui:95
 #, kde-format
 msgid "Indicator line color:"
-msgstr "सूचकरेखावर्णः : १."
+msgstr "सूचकरेखावर्णः :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: prefs_display.ui:111
 #, kde-format
 msgid "Highlight color:"
-msgstr "वर्णः प्रकाशयन्तु : १."
+msgstr "वर्णः प्रकाशयन्तु :"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, ScoresWidget)
 #: scoreswidget.ui:13

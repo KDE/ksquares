@@ -507,7 +507,7 @@
 </sect1>
 <sect1 id="configuration-dialog">
 <title
->Instellingendialoog</title>
+>Configuratiedialoog</title>
 <screenshot>
 <mediaobject>
 <imageobject>
@@ -515,7 +515,7 @@
 </imageobject>
 <textobject>
 <phrase
->Instellingendialoog</phrase>
+>Configuratiedialoog</phrase>
 </textobject>
 </mediaobject>
 </screenshot>

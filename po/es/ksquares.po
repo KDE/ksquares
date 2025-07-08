@@ -1,5 +1,5 @@
 # Spanish translations for ksquares.po package.
-# Copyright (C) 2007-2025 This_file_is_part_of_KDE
+# Copyright (C) 2007-2025 This file is copyright:
 # This file is distributed under the same license as the ksquares package.
 #
 # SPDX-FileCopyrightText: 2007, 2008 Santiago Fernández Sancho <santi@kde-es.org>
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:37+0000\n"
-"PO-Revision-Date: 2025-04-20 11:25+0100\n"
+"PO-Revision-Date: 2025-07-07 18:17+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"

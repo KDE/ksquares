@@ -264,6 +264,7 @@
   <project_group>KDE</project_group>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="0.6.25080" date="2025-08-14"/>
     <release version="0.6.25043" date="2025-07-03"/>
     <release version="0.6.25042" date="2025-06-05"/>
     <release version="0.6.25041" date="2025-05-08"/>

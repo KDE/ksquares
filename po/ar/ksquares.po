@@ -235,7 +235,7 @@ msgstr "ذكاء اصطناعي"
 #: main.cpp:44
 #, kde-format
 msgid "Run game in demo (autoplay) mode"
-msgstr "شغل اللعبة في النمط الاستعراضي (لعب تلقائي)"
+msgstr "شغل اللعبة في النمط الاستعراضي (لعب آليّ)"
 
 #: main.cpp:58 main.cpp:59 main.cpp:60
 #, kde-format
@@ -429,7 +429,7 @@ msgstr "إعدادات اللعبة"
 #: newgamewidget.ui:282
 #, kde-format
 msgid "Partially fill in the board automatically before the game starts"
-msgstr "املأ اللوحة جزئيًا تلقائيًا قبل بدء اللعبة"
+msgstr "املأ اللوحة جزئيًا آليًّا قبل بدء اللعبة"
 
 #. i18n: ectx: property (text), widget (QCheckBox, quickStartCheck)
 #: newgamewidget.ui:285

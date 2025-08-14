@@ -195,7 +195,7 @@ msgid ""
 "If you complete a squares, you get another go."
 msgstr ""
 "قم بالتناوب لرسم خطوط. \n"
-"إذا أكملت المربعات ، فستحصل على خطوة أخرى."
+"إذا أكملت المربعات، فستحصل على خطوة أخرى."
 
 #: main.cpp:32
 #, kde-format

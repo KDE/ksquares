@@ -353,7 +353,7 @@
 > <guimenu
 >Juego</guimenu
 > <guimenuitem
->Mostrar las mejores puntuaciones...</guimenuitem
+>Mostrar las mejores puntuaciones…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -391,7 +391,7 @@
 ><guimenu
 >Preferencias</guimenu
 > <guimenuitem
->Configurar &ksquares;...</guimenuitem
+>Configurar &ksquares;…</guimenuitem
 ></menuchoice
 ></term>
         <listitem
@@ -438,7 +438,7 @@
 ><guimenu
 >Preferencias</guimenu
 > <guimenuitem
->Configurar &ksquares;...</guimenuitem
+>Configurar &ksquares;…</guimenuitem
 ></menuchoice
 >. Consulta la sección <link linkend="configuration"
 >Configuración del juego</link

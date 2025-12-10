@@ -6,7 +6,7 @@
   <!ENTITY % addindex "IGNORE"
 > <!-- do not change this! -->
 ]>
- 
+
 <book id="ksquares" lang="&language;"
 > <!-- do not change this! -->
 <bookinfo>
@@ -16,7 +16,7 @@
 <!-- List of immidiate authors begins here. -->
 <!--INPORTANT! - All other contributors: [to be determined] -->
 <authorgroup>
-    <author
+  <author
 ><personname
 > <firstname
 >Matt</firstname
@@ -26,19 +26,20 @@
 > <email
 >matt@milliams.com</email
 > </author>
-<othercredit role="reviewer"
+
+  <othercredit role="reviewer"
 ><firstname
 >Eugene</firstname
-><surname
+> <surname
 >Trounev</surname
 > <contrib
 >Revisor</contrib>
-<affiliation
+    <affiliation
 ><address
 >eugene.trounev@gmail.com</address
 ></affiliation>
-</othercredit>
-    <othercredit role="translator"
+  </othercredit>
+  <othercredit role="translator"
 ><firstname
 >Luiz Fernando</firstname
 ><surname
@@ -67,28 +68,28 @@
 >Tradução</contrib
 ></othercredit
 > 
-  </authorgroup>
+</authorgroup>
 
-  <copyright>
-    <year
+<copyright>
+  <year
 >2006</year>
-    <holder
+  <holder
 >Matt Williams</holder>
-  </copyright>
+</copyright>
+
 <legalnotice
->&FDLNotice;</legalnotice
-> 
+>&FDLNotice;</legalnotice>
 <date
->10/05/2016</date>
+>03/10/2021</date>
 <releaseinfo
->0.6 (Applications 16.04)</releaseinfo>
- 
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
 <!--Short description of this document. Do not change unless necessary!-->
 <abstract>
 	<para
 >Esta documentação descreve o jogo &ksquares; versão 0.6</para>
 </abstract>
- 
+
 <!--List of relevan keywords-->
 <keywordset>
 	<keyword
@@ -145,13 +146,13 @@
 >Quatro</para
 ></note>
 	<para
->O &ksquares; é um jogo divertido e excitante do &kde;. O &ksquares; é baseado no conhecido jogo de papel e caneta que é o Pontos e Caixas.</para>
+>O &ksquares; é um jogo divertido e excitante. O &ksquares; é baseado no conhecido jogo de papel e caneta que é o Pontos e Caixas.</para>
 <para
 >A ideia por trás do &ksquares; é construir quadrados através da interligação dos pontos na grade. Poderão jogar até quatro jogadores neste jogo usando turnos. O truque é - independentemente de quem construiu a maior parte do quadrado, é o jogador que terminar o quadrado que recebe pontos por ele.</para>
 <para
 >Para ganhar a jogada, o jogador terá de colher a maior pontuação, cobrindo a maior área com os quadrados da própria cor do jogador.</para>
 </chapter>
- 
+
 <chapter id="howto"
 ><title
 >Como jogar</title
@@ -185,7 +186,7 @@
   <para
 >Para começar um jogo novo com uma configuração personalizada (número de jogadores, nomes de jogadores, tamanho do tabuleiro), clique no item da barra de ferramentas <guibutton
 >Novo</guibutton
-> ou vá a <menuchoice
+> ou vá para o menu <menuchoice
 ><shortcut
 ><keycombo action="simul"
 >&Ctrl;<keycap
@@ -193,15 +194,15 @@
 ></keycombo
 ></shortcut
 ><guimenu
->Arquivo</guimenu
+>Jogo</guimenu
 ><guimenuitem
 >Novo</guimenuitem
 ></menuchoice
 >. Para iniciar um jogo novo com a mesma configuração que o atual, clique em <guibutton
->Reiniciar o Jogo</guibutton
+>Reiniciar jogo</guibutton
 > na barra de ferramentas. </para>
 </chapter>
- 
+
 <chapter id="rules_and_tips"
 ><title
 >Regras do jogo, estratégias e dicas</title
@@ -266,36 +267,36 @@
     </itemizedlist>
 </sect1>
 </chapter>
-  
+
 <chapter id="menu-items">
   <title
 >Itens dos menus</title>
   <para>
     <variablelist>
       <varlistentry>
-	<term>
-	  <menuchoice
+        <term
+><menuchoice
 ><shortcut
-> <keycombo action="simul"
+><keycombo action="simul"
 >&Ctrl;<keycap
 >N</keycap
 ></keycombo
-> </shortcut
+></shortcut
 > <guimenu
 >Jogo</guimenu
 > <guimenuitem
 >Novo</guimenuitem
-> </menuchoice>
-	</term>
-	<listitem
+></menuchoice
+></term>
+        <listitem
 ><para
 ><action
->Inicia um novo jogo</action
+>Inicia um novo jogo.</action
 ></para
 ></listitem>
       </varlistentry>
       <varlistentry>
-	<term
+        <term
 ><menuchoice
 ><shortcut
 ><keycap
@@ -307,14 +308,14 @@
 >Reiniciar jogo</guimenuitem
 ></menuchoice
 ></term>
-	<listitem
+        <listitem
 ><para
 >Começa um jogo novo com a mesma configuração que o atual.</para
 ></listitem>
       </varlistentry>
       <varlistentry>
-	<term>
-	  <menuchoice
+        <term
+><menuchoice
 ><shortcut
 > <keycombo action="simul"
 >&Ctrl;<keycap
@@ -324,19 +325,19 @@
 > <guimenu
 >Jogo</guimenu
 > <guimenuitem
->Mostrar recordes</guimenuitem
-> </menuchoice>
-	</term>
-	<listitem
+>Mostrar recordes...</guimenuitem
+></menuchoice
+></term>
+        <listitem
 ><para
 ><action
 >Mostra</action
-> a tabela de recordes</para
+> a tabela de recordes.</para
 ></listitem>
       </varlistentry>
       <varlistentry>
-	<term>
-	  <menuchoice
+        <term
+><menuchoice
 ><shortcut
 > <keycombo action="simul"
 >&Ctrl;<keycap
@@ -347,25 +348,25 @@
 >Jogo</guimenu
 > <guimenuitem
 >Sair</guimenuitem
-> </menuchoice>
-	</term>
-	<listitem
+></menuchoice
+></term>
+        <listitem
 ><para
 ><action
 >Sai</action
-> do &ksquares;</para
+> do &ksquares;.</para
 ></listitem>
       </varlistentry>
       <varlistentry id="settings-menu-settings">
-	<term
+        <term
 ><menuchoice
 ><guimenu
 >Configurações</guimenu
 > <guimenuitem
->Configurar o &ksquares;...</guimenuitem
-> </menuchoice
+>Configurar o &ksquares;…</guimenuitem
+></menuchoice
 ></term>
-	<listitem
+        <listitem
 ><para
 ><action
 >Abre uma janela para configurar o &ksquares;.</action
@@ -386,9 +387,9 @@
 > e o <ulink url="help:/fundamentals/menus.html#menus-help"
 >Menu Ajuda</ulink
 > dos Fundamentos do &kde;. </para>
-  
+
 </chapter>
-  
+
 <chapter id="faq"
 ><title
 >Perguntas frequentes</title
@@ -405,11 +406,11 @@
 ></question>
  <answer
 ><para
->No momento, a única alteração possível na aparência do jogo é a cor das linhas. Para fazer isso, use a opção <menuchoice
+>No momento, a única alteração possível na aparência do jogo é a cor das linhas. Para fazer isso, use o menu <menuchoice
 ><guimenu
 >Configurações</guimenu
 ><guimenuitem
->Configurar o &ksquares;...</guimenuitem
+>Configurar o &ksquares;…</guimenuitem
 ></menuchoice
 > do menu. Veja a seção de <link linkend="configuration"
 >Configuração do Jogo</link
@@ -457,14 +458,16 @@
 ></question>
   <answer
 ><para
->O &ksquares; não possui o recurso salvar.</para
+>O &ksquares; não tem uma funcionalidade para <quote
+>Salvar</quote
+>.</para
 ></answer>
 </qandaentry>
 <!--Please add more Q&As if needed-->
- 
+
 </qandaset>
 </chapter>
- 
+
 <chapter id="configuration"
 ><title
 >Configuração do jogo</title
@@ -496,8 +499,10 @@
     <listitem
 ><para
 >Aqui você poderá alterar o número de jogadores participantes, assim como determinar quem irá jogar como humano ou como inteligência artificial. Use o campo de seleção <guilabel
->Número de jogadores</guilabel
-> para definir o número de participantes. Para cada participante, escreva um nome e use a opção de marcação para indicar o tipo de jogador.</para
+>Número de jogadores:</guilabel
+> para definir o número de participantes. Para cada participante, escreva um nome e use a opção <guilabel
+>Humano?</guilabel
+> para indicar o tipo de jogador.</para
 ></listitem>
   </varlistentry>
   <varlistentry>
@@ -508,9 +513,9 @@
     <listitem
 ><para
 >Aqui você poderá regular o tamanho do tabuleiro de jogo. Use os campos de seleção <guilabel
->Largura</guilabel
+>Largura:</guilabel
 > e <guilabel
->Altura</guilabel
+>Altura:</guilabel
 > para mudar a largura e a altura do campo de jogo.</para
 ></listitem>
   </varlistentry>
@@ -570,13 +575,13 @@
 </variablelist>
 </sect1>
 </chapter>
- 
+
 <chapter id="credits"
 ><title
 >Créditos e licença</title
 > <!-- do not change this! -->
 <!--This chapter is for credits and licenses.-->
- 
+
 <para
 >&ksquares; </para>
 
@@ -584,7 +589,7 @@
 >Direitos autorais do programa 2006 Matt Williams <email
 >matt@milliams.com</email
 > </para>
- 
+
   <para
 >Direitos autorais da documentação &copy; 2006 Matt Williams <email
 >matt@milliams.com</email
@@ -595,8 +600,8 @@
 >elchevive@opensuse.org</email
 ></para
 > &underFDL; &underGPL; </chapter>
- 
-&documentation.index; 
+
+&documentation.index;
 </book>
 <!--
 Local Variables:

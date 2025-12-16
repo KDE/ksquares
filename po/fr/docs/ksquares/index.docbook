@@ -218,7 +218,7 @@
 ></listitem>
 	<listitem
 ><para
->Construire de longues chaînes de lignes à travers le plateau. Une fois qu'une chaîne est terminée, démarrez en une autre en parallèle à la première.</para
+>Construire de longues chaines de lignes à travers le plateau. Une fois qu'une chaine est terminée, démarrez en une autre en parallèle à la première.</para
 ></listitem>
 	<listitem
 ><para
@@ -234,7 +234,7 @@
 ></listitem>
 	<listitem
 ><para
->Si vous avez la chance de démarrer l'achèvement d'une chaîne de carrés, souvenez vous qu'en laissant deux carrés incomplets à la fin de la chaîne, laisse l'opportunité à votre adversaire de continuer une autre chaîne. Ce type de situation est appelée double-chaîne.</para
+>Si vous avez la chance de démarrer l'achèvement d'une chaine de carrés, souvenez vous qu'en laissant deux carrés incomplets à la fin de la chaine, laisse l'opportunité à votre adversaire de continuer une autre chaine. Ce type de situation est appelée double-chaine.</para
 ></listitem>
     </itemizedlist>
 </sect1>
@@ -341,7 +341,7 @@
         <listitem
 ><para
 ><action
->Affiche une boîte de dialogue pour configurer &ksquares;.</action
+>Affiche une boite de dialogue pour configurer &ksquares;.</action
 > Veuillez consulter la section <link linkend="configuration"
 >Configuration du jeu</link
 > pour plus de détails.</para
@@ -459,7 +459,7 @@
 </mediaobject>
 </screenshot>
 <para
->La boîte de dialogue <guilabel
+>La boite de dialogue <guilabel
 >Nouveau jeu</guilabel
 > affichent plusieurs possibilités : </para>
 <variablelist>
@@ -470,9 +470,9 @@
 ></term>
     <listitem
 ><para
->Vous pouvez modifier ici le nombre de joueurs et aussi déterminer qui sera le joueur humain et qui sera l'ordinateur. Utilisez la boîte de sélection <guilabel
+>Vous pouvez modifier ici le nombre de joueurs et aussi déterminer qui sera le joueur humain et qui sera l'ordinateur. Utilisez la boite de sélection <guilabel
 >Nombre de joueurs :</guilabel
-> pour définir le nombres de participants. Ensuite, saisissez un nom à chaque participant et utiliser la boîte à cocher <guilabel
+> pour définir le nombres de participants. Ensuite, saisissez un nom à chaque participant et utiliser la boite à cocher <guilabel
 >Humain ?</guilabel
 > pour définir le type de joueur.</para
 ></listitem>
@@ -484,7 +484,7 @@
 ></term>
     <listitem
 ><para
->Vous pouvez adapter ici la taille du plateau de jeu. Utilisez les boîtes de sélection <guilabel
+>Vous pouvez adapter ici la taille du plateau de jeu. Utilisez les boites de sélection <guilabel
 >Largeur :</guilabel
 > et <guilabel
 >Hauteur :</guilabel
@@ -498,7 +498,7 @@
 ></term>
     <listitem
 ><para
->Cette boîte de configuration règle la difficulté du jeu. Si vous laissez la case <guilabel
+>Cette boite de configuration règle la difficulté du jeu. Si vous laissez la case <guilabel
 >Démarrage rapide</guilabel
 > non cochée, le jeu commencera avec une grille vide. Sinon je jeu commencera avec le plateau partiellement rempli.</para
 ></listitem>
@@ -520,7 +520,7 @@
 </mediaobject>
 </screenshot>
 <para
->La boîte de dialogue <guilabel
+>La boite de dialogue <guilabel
 >Configuration - &ksquares;</guilabel
 > affiche les onglets suivants : </para>
 <variablelist>

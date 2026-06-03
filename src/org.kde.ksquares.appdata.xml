@@ -46,6 +46,7 @@
   <name xml:lang="sr-ijekavianlatin">K‑kvadrati</name>
   <name xml:lang="sv">Fyrkanter</name>
   <name xml:lang="tr">K Kareler</name>
+  <name xml:lang="ug">KSquares</name>
   <name xml:lang="uk">KSquares</name>
   <name xml:lang="zh-CN">KSquares</name>
   <name xml:lang="zh-TW">KSquares</name>
@@ -86,6 +87,7 @@
   <summary xml:lang="sr-ijekavianlatin">Povežite tačke u kvadrate</summary>
   <summary xml:lang="sv">Sammanbind punkter för att skapa fyrkanter</summary>
   <summary xml:lang="tr">Kare oluşturmak için noktaları birbirlerine bağla</summary>
+  <summary xml:lang="ug">چېكىتلەرنى تۇتاشتۇرۇپ كىۋادرات ياساش</summary>
   <summary xml:lang="uk">З’єднайте крапки, щоб створити квадрати</summary>
   <summary xml:lang="zh-CN">通过点连接创建方形</summary>
   <summary xml:lang="zh-TW">將點連起來組成方塊</summary>

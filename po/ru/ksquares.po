@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:50+0000\n"
-"PO-Revision-Date: 2024-10-08 15:33+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"PO-Revision-Date: 2026-09-26 10:15+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -114,7 +114,7 @@ msgstr "Цвет линии"
 #: ksquares.kcfg:62
 #, kde-format
 msgid "Indicator Line Color"
-msgstr "Цвет линии индикатора:"
+msgstr "Цвет линии индикатора"
 
 #. i18n: ectx: label, entry (HighlightColor), group (Display)
 #: ksquares.kcfg:67
@@ -302,13 +302,13 @@ msgstr "Должен ли этот игрок контролироваться �
 #: newgamewidget.ui:50
 #, kde-format
 msgid "Hum&an?"
-msgstr "Пар&тнёр?"
+msgstr "Чел&овек?"
 
 #. i18n: ectx: property (text), widget (QCheckBox, playerThreeHuman)
 #: newgamewidget.ui:66
 #, kde-format
 msgid "Hu&man?"
-msgstr "Па&ртнёр?"
+msgstr "Че&ловек?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, labelPlayer3Name)
 #: newgamewidget.ui:76
@@ -338,7 +338,7 @@ msgstr "Игрок 2:"
 #: newgamewidget.ui:136
 #, kde-format
 msgid "&Human?"
-msgstr "&Партнёр?"
+msgstr "&Человек?"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, numOfPlayersLabel)
 #: newgamewidget.ui:149
@@ -384,7 +384,7 @@ msgstr "Игрок 1:"
 #: newgamewidget.ui:184
 #, kde-format
 msgid "H&uman?"
-msgstr "Па&ртнёр?"
+msgstr "Ч&еловек?"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox_2)
 #: newgamewidget.ui:197
@@ -432,7 +432,7 @@ msgstr "Параметры для игры"
 #: newgamewidget.ui:276
 #, kde-format
 msgid "Game Settings"
-msgstr "Настройки игры"
+msgstr "Параметры игры"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, quickStartCheck)
 #: newgamewidget.ui:282

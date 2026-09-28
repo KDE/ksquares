@@ -1,0 +1,606 @@
+<?xml version="1.0" ?>
+<!--IMPORTANT: please note that'do not change this!' notice does not apply to translators -->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+  <!ENTITY % addindex "IGNORE"
+> <!-- do not change this! -->
+]>
+
+<book id="ksquares" lang="&language;"
+> <!-- do not change this! -->
+<bookinfo>
+	<title
+>Руководство пользователя &ksquares;</title
+> <!-- This is the title of the docbook. Leave as is unless change is necessary.-->
+<!-- List of immidiate authors begins here. -->
+<!--INPORTANT! - All other contributors: [to be determined] -->
+<authorgroup>
+  <author
+><personname
+> <firstname
+>Matt</firstname
+> <surname
+>Williams</surname
+> </personname
+> <email
+>matt@milliams.com</email
+> </author>
+
+  <othercredit role="reviewer"
+><firstname
+>Евгений</firstname
+> <surname
+>Трунев</surname
+> <contrib
+>Рецензент</contrib>
+    <affiliation
+><address
+>eugene.trounev@gmail.com</address
+></affiliation>
+  </othercredit>
+  <othercredit role="translator"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><affiliation
+><address
+><email
+>kekcuha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+  <year
+>2006</year>
+  <holder
+>Matt Williams</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+<date
+>3 октября 2021 г.</date>
+<releaseinfo
+>0.6 (KDE Gear 21.08)</releaseinfo>
+
+<!--Short description of this document. Do not change unless necessary!-->
+<abstract>
+	<para
+>В этом руководстве описывается игра &ksquares; версии 0.6</para>
+</abstract>
+
+<!--List of relevan keywords-->
+<keywordset>
+	<keyword
+>KDE</keyword
+> <!-- do not change this! -->
+	<keyword
+>kdegames</keyword
+> <!-- do not change this! -->
+	<keyword
+>игра</keyword
+> <!-- do not change this! -->
+	<keyword
+>Ksquares</keyword
+><!--Application name goes here-->
+<!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<keyword
+>настольная</keyword>
+	<keyword
+>Точки и квадраты</keyword>
+	<keyword
+>Квадраты</keyword>
+	<keyword
+>Квадраты</keyword>
+<!--Number of possible players. It can be: One, Two,..., Multiplayer-->
+	<keyword
+>четыре игрока</keyword>
+<!--All other relevant keywords-->
+	<keyword
+>Загоны</keyword>
+	<keyword
+>Square-it</keyword>
+	<keyword
+>Точки и чёрточки</keyword>
+	<keyword
+>Игра в точки</keyword>
+</keywordset>
+</bookinfo>
+<!--Content begins here: -->
+<chapter id="introduction"
+><title
+>Введение</title
+> <!-- do not change this! -->
+	<note
+><title
+>Тип игры:</title
+><para
+>Настольная</para
+></note
+><!-- Game genre. Use as many as necessary. Available game types are: Arcade, Board, Card, Dice, Toys, Logic, Strategy.-->
+	<note
+><title
+>Количество игроков:</title
+><para
+>Четыре</para
+></note>
+	<para
+>&ksquares; — весёлая и увлекательная игра по мотивам известной игры на бумаге «Точки и квадраты».</para>
+<para
+>Смысл &ksquares; — строить квадраты, соединяя точки на сетке. Играть могут до четырёх человек, по очереди. Хитрость в том, что очко за квадрат получает не тот, кто построил большую его часть, а тот, кто его замкнул.</para>
+<para
+>Чтобы выиграть партию, нужно набрать больше всех очков, заняв квадратами своего цвета наибольшую площадь.</para>
+</chapter>
+
+<chapter id="howto"
+><title
+>Как играть</title
+> <!-- do not change this! -->
+<!--IMPORTANT: If the game has no defined objective, please remove the below line.-->
+	<note
+><title
+>Цель:</title
+><para
+>Замкнуть больше квадратов, чем любой из соперников.</para
+></note
+><!--Describe the objective of the game.-->
+<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+	<para
+>В начале игры поле пустое: на нём только сетка из точек, между которыми можно проводить линии. </para>
+
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="gameboard.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Игровое поле &ksquares;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+  <para
+>Игроки по очереди проводят линию между двумя соседними точками. Если навести указатель мыши на поле, жёлтая линия покажет, где появится линия после щелчка. Выбрав место, щёлкните — линия будет проведена. Если ваша линия замкнула квадрат, он становится вашим и приносит вам очко, а вы проводите ещё одну линию. Если квадрат не замкнулся, ход переходит к следующему игроку. Игра продолжается, пока все квадраты на поле не будут разобраны. </para>
+  <para
+>Чтобы начать новую игру с другими параметрами (число игроков, их имена, размер поля), нажмите кнопку <guibutton
+>Начать игру</guibutton
+> на панели инструментов или выберите пункт меню <menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Начать игру</guimenuitem
+></menuchoice
+>. Чтобы начать новую игру с теми же параметрами, нажмите кнопку <guibutton
+>Начать заново</guibutton
+> на панели инструментов. </para>
+</chapter>
+
+<chapter id="rules_and_tips"
+><title
+>Правила игры, стратегия и советы</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+<sect1 id="rules">
+  <title
+>Правила игры</title>
+    <para
+>О правилах сказать почти нечего: сама идея игры проста. И всё же вот правила, с которыми вы непременно столкнётесь в &ksquares;:</para>
+    <itemizedlist>
+	<listitem
+><para
+>Соединять можно только те точки, которые ещё не соединены — ни вами, ни соперником, ни компьютером.</para
+></listitem>
+	<listitem
+><para
+>Чтобы получить очко, нужно соединить точки так, чтобы получился квадрат.</para
+></listitem>
+	<listitem
+><para
+>Квадрат не может быть больше, чем позволяют четыре соседние точки сетки.</para
+></listitem>
+	<listitem
+><para
+>Замкнутый квадрат достаётся игроку, который провёл его последнюю сторону: квадрат окрашивается, а игрок получает очко.</para
+></listitem>
+	<listitem
+><para
+>Замкнувший квадрат игрок получает дополнительный ход, от которого нельзя отказаться.</para
+></listitem>
+    </itemizedlist>
+</sect1>
+<sect1 id="strategies">
+  <title
+>Стратегия и советы</title>
+  <itemizedlist>
+	<listitem
+><para
+>Не играйте наугад: так почти наверняка проиграете.</para
+></listitem>
+	<listitem
+><para
+>Стройте на поле длинные цепочки линий. Закончив одну, начинайте следующую параллельно первой.</para
+></listitem>
+	<listitem
+><para
+>Не оставляйте фигур, в которых не хватает всего одной линии: соперник почти наверняка этим воспользуется.</para
+></listitem>
+	<listitem
+><para
+>Если уж приходится отдать сопернику один или несколько квадратов, выбирайте вариант с наименьшими потерями.</para
+></listitem>
+	<listitem
+><para
+>Старайтесь поставить соперника в положение, когда ему ничего не останется, кроме как отдать вам квадрат.</para
+></listitem>
+	<listitem
+><para
+>Если вам представилась возможность замкнуть целую цепочку квадратов, помните: оставив два последних квадрата цепочки незамкнутыми, вы вынудите соперника замкнуть их и сами получите возможность перейти к следующей цепочке. Такой приём называется «двойной крест».</para
+></listitem>
+    </itemizedlist>
+</sect1>
+</chapter>
+
+<chapter id="menu-items">
+  <title
+>Пункты меню</title>
+  <para>
+    <variablelist>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Начать игру</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Начать новую игру.</action
+></para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Начать заново</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+>Начать новую игру с теми же параметрами, что и текущая.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>H</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Показать лучшие результаты…</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Показать</action
+> таблицу лучших результатов.</para
+></listitem>
+      </varlistentry>
+      <varlistentry>
+        <term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Игра</guimenu
+> <guimenuitem
+>Выход</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Выйти</action
+> из &ksquares;.</para
+></listitem>
+      </varlistentry>
+      <varlistentry id="settings-menu-settings">
+        <term
+><menuchoice
+><guimenu
+>Настройка</guimenu
+> <guimenuitem
+>Настроить &ksquares;…</guimenuitem
+></menuchoice
+></term>
+        <listitem
+><para
+><action
+>Открыть диалог настройки &ksquares;.</action
+> Подробнее — в разделе <link linkend="configuration"
+>Параметры игры</link
+>.</para
+></listitem>
+      </varlistentry>
+    </variablelist>
+  </para>
+  <para
+>Кроме того, в &ksquares; есть стандартные для &kde; меню <guimenu
+>Настройка</guimenu
+> и <guimenu
+>Справка</guimenu
+>, описанные в разделах <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Меню «Настройка»</ulink
+> и <ulink url="help:/fundamentals/menus.html#menus-help"
+>Меню «Справка»</ulink
+> руководства «Основы &kde;». </para>
+
+</chapter>
+
+<chapter id="faq"
+><title
+>Вопросы и ответы</title
+> <!-- do not change this! -->
+<!--This chapter is for frequently asked questions. Please use <qandaset
+> <qandaentry
+> only!-->
+<qandaset>
+<!--Following is a standard list of FAQ questions.-->
+<qandaentry>
+ <question
+><para
+>Можно ли изменить внешний вид игры? </para
+></question>
+ <answer
+><para
+>Пока можно менять только цвета линий. Для этого выберите пункт меню <menuchoice
+><guimenu
+>Настройка</guimenu
+> <guimenuitem
+>Настроить &ksquares;…</guimenuitem
+></menuchoice
+>. Подробнее — в разделе <link linkend="configuration"
+>Параметры игры</link
+>.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Я ошибся. Можно ли отменить ход? </para
+></question>
+ <answer
+><para
+>Нет. Функции <quote
+>Отмена</quote
+> в &ksquares; пока нет.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Можно ли играть с помощью клавиатуры? </para
+></question>
+ <answer
+><para
+>Нет. В &ksquares; нельзя играть с клавиатуры.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Не понимаю, что тут делать! Есть ли подсказки? </para
+></question>
+ <answer
+><para
+>Нет. Функции <quote
+>Подсказка</quote
+> пока нет.</para
+></answer>
+</qandaentry>
+<qandaentry>
+ <question
+><para
+>Мне нужно выйти из игры, но я ещё не закончил. Можно ли сохранить игру?</para
+></question>
+  <answer
+><para
+>В &ksquares; сохранить игру нельзя.</para
+></answer>
+</qandaentry>
+<!--Please add more Q&As if needed-->
+
+</qandaset>
+</chapter>
+
+<chapter id="configuration"
+><title
+>Параметры игры</title
+> <!-- do not change this! -->
+<sect1 id="newgame-dialog">
+<title
+>Диалог «Новая игра»</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="newgame.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Новая игра</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Диалог <guilabel
+>Новая игра</guilabel
+> состоит из следующих групп:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Игроки</guilabel
+></term>
+    <listitem
+><para
+>Здесь задаётся число игроков и то, кем управляет человек, а кем — компьютер. Число участников задаётся счётчиком <guilabel
+>Количество игроков:</guilabel
+>. Затем введите имя каждого участника и укажите тип игрока флажком <guilabel
+>Человек?</guilabel
+>.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Игровая доска</guilabel
+></term>
+    <listitem
+><para
+>Здесь задаётся размер игрового поля: ширина и высота меняются счётчиками <guilabel
+>Ширина:</guilabel
+> и <guilabel
+>Высота:</guilabel
+>.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Параметры игры</guilabel
+></term>
+    <listitem
+><para
+>Эта часть диалога влияет на сложность игры. Если флажок <guilabel
+>Быстрый запуск</guilabel
+> не установлен, игра начнётся с пустой сетки, иначе поле будет частично заполнено.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+<sect1 id="configuration-dialog">
+<title
+>Диалог настройки</title>
+<screenshot>
+<mediaobject>
+<imageobject>
+<imagedata fileref="configure-display.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Диалог настройки</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+<para
+>Диалог <guilabel
+>Настройка — &ksquares;</guilabel
+> состоит из следующих вкладок:</para>
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Отображение</guilabel
+></term>
+    <listitem
+><para
+>Здесь настраиваются цвета &ksquares;.</para
+></listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Компьютерный игрок</guilabel
+></term>
+    <listitem
+><para
+>На этой вкладке задаётся сложность игры.</para
+></listitem>
+  </varlistentry>
+</variablelist>
+</sect1>
+</chapter>
+
+<chapter id="credits"
+><title
+>Авторские права и лицензия</title
+> <!-- do not change this! -->
+<!--This chapter is for credits and licenses.-->
+
+<para
+>&ksquares; </para>
+
+<para
+>© Matt Williams <email
+>matt@milliams.com</email
+>, 2006 (программа) </para>
+
+  <para
+>© Matt Williams <email
+>matt@milliams.com</email
+>, 2006 (документация)</para>
+
+<para
+>Перевод на русский — Александр Яворский<email
+>kekcuha@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-omittag:t
+sgml-shorttag:t
+sgml-namecase-general:t
+sgml-always-quote-attributes:t
+sgml-indent-step:0
+sgml-indent-data:nil
+sgml-parent-document:nil
+sgml-exposed-tags:nil
+sgml-local-catalogs:nil
+sgml-local-ecat-files:nil
+End:
+-->

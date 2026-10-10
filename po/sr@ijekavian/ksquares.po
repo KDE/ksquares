@@ -2,13 +2,14 @@
 # Slobodan Simic <slsimic@gmail.com>, 2007, 2009.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2013.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksquares\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:50+0000\n"
-"PO-Revision-Date: 2010-09-24 14:33+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-09 22:30+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -23,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Слободан Симић"
+msgstr "Слободан Симић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "slsimic@gmail.com"
+msgstr "slsimic@gmail.com,nemhirsl@gmail.com"
 
 #. i18n: ectx: label, entry (NumOfPlayers), group (Game Settings)
 #: ksquares.kcfg:10
@@ -82,21 +83,19 @@ msgstr "Колико јака ће бити ВИ"
 #: ksquares.kcfg:42
 #, kde-format
 msgid "Background Color"
-msgstr ""
+msgstr "Боја позадине"
 
 #. i18n: ectx: label, entry (CenterDotColor), group (Display)
 #: ksquares.kcfg:47
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Center Dot Color"
-msgstr "Боја линије"
+msgstr "Боја средишње тачке"
 
 #. i18n: ectx: label, entry (FeintLineColor), group (Display)
 #: ksquares.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Line Color"
+#, kde-format
 msgid "Feint Line Color"
-msgstr "Боја линије"
+msgstr "Боја блиједих линија"
 
 #. i18n: ectx: label, entry (LineColor), group (Display)
 #: ksquares.kcfg:57
@@ -154,8 +153,7 @@ msgid "Hard"
 msgstr "тешко"
 
 #: ksquareswindow.cpp:203
-#, fuzzy, kde-format
-#| msgid "Scores"
+#, kde-format
 msgctxt "@title:window"
 msgid "Scores"
 msgstr "Резултати"
@@ -178,15 +176,13 @@ msgid "Start a new game with the current settings"
 msgstr "Покрени нову игру са тренутним поставкама"
 
 #: ksquareswindow.cpp:311
-#, fuzzy, kde-format
-#| msgid "Display"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Приказ"
 
 #: ksquareswindow.cpp:316
-#, fuzzy, kde-format
-#| msgid "Computer Player"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
 msgstr "Рачунарски играч"
@@ -252,8 +248,7 @@ msgid "Player %1"
 msgstr "Играч %1"
 
 #: newgamedialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "New Game"
+#, kde-format
 msgctxt "@title:window"
 msgid "New Game"
 msgstr "Нова игра"
@@ -476,43 +471,39 @@ msgstr "Боје"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:28
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn background"
-msgstr "Боја исцртаних линија."
+msgstr "Боја исцртане позадине"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:31
 #, kde-format
 msgid "Background color:"
-msgstr ""
+msgstr "Боја позадине:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:44
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the drawn center dot"
-msgstr "Боја исцртаних линија."
+msgstr "Боја исцртане средишње тачке"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:47
 #, kde-format
 msgid "Center dot color:"
-msgstr ""
+msgstr "Боја средишње тачке:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:60
-#, fuzzy, kde-format
-#| msgid "Color of the drawn lines"
+#, kde-format
 msgid "Color of the feintly drawn lines"
-msgstr "Боја исцртаних линија."
+msgstr "Боја блиједо исцртаних линија"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: prefs_display.ui:63
-#, fuzzy, kde-format
-#| msgid "Indicator line color:"
+#, kde-format
 msgid "Feint line color:"
-msgstr "Боја линија показатеља:"
+msgstr "Боја блиједих линија:"
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, label)
 #: prefs_display.ui:76

@@ -125,8 +125,8 @@
     <p xml:lang="sl">KSquares je igra, ki temelji na znani namizni igri s papirjem in svinčnikom imenovani Dots and Boxes. Igralca izmenično rišeta črte med sosednjimi pikami na igralni površini. Cilj igre je dopolniti več kvadratov kot nasprotnik.</p>
     <p xml:lang="sr">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>
     <p xml:lang="sr-Latn">K‑kvadrati je igra zamišljena prema dobro poznatoj igri na papiru zatvaranje kvadrata. Svaki igrač u svom potezu ucrtava jednu duž između dve susedne tačke na tabli. Cilj je zatvoriti više kvadrata od protivnika.</p>
-    <p xml:lang="sr-ijekavian">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између две суседне тачке на табли. Циљ је затворити више квадрата од противника.</p>
-    <p xml:lang="sr-ijekavianlatin">K‑kvadrati je igra zamišljena prema dobro poznatoj igri na papiru zatvaranje kvadrata. Svaki igrač u svom potezu ucrtava jednu duž između dve susedne tačke na tabli. Cilj je zatvoriti više kvadrata od protivnika.</p>
+    <p xml:lang="sr-ijekavian">К‑квадрати је игра замишљена према добро познатој игри на папиру затварање квадрата. Сваки играч у свом потезу уцртава једну дуж између двије сусједне тачке на табли. Циљ је затворити више квадрата од противника.</p>
+    <p xml:lang="sr-ijekavianlatin">K‑kvadrati je igra zamišljena prema dobro poznatoj igri na papiru zatvaranje kvadrata. Svaki igrač u svom potezu ucrtava jednu duž između dvije susjedne tačke na tabli. Cilj je zatvoriti više kvadrata od protivnika.</p>
     <p xml:lang="sv">Fyrkanter är ett spel modellerat efter det välkända penn- och pappersbaserade spelet "Ringar och rutor". Varje spelare ritar i tur och ordning en linje mellan två intilliggande punkter på spelbrädet. Målet är att göra färdigt fler fyrkanter än motspelarna.</p>
     <p xml:lang="tr">K Kareler, Nokta ve Kutular adlı tanınmış kalem ve kâğıt tabanlı oyun sonrasında modellenmiş bir oyundur. Her oyuncu sırayla, tahtada bitişik iki nokta arasında çizgi çizer. Amaç, rakibinizden daha fazla kareyi tamamlamaktır.</p>
     <p xml:lang="uk">KSquares — гра, яку створено на основі добре відомої гри на папері, яка має назву «Палички» або «Квадрати». Гравці послідовно малюють лінії на папері, з’єднуючи сусідні крапки на дошці. Метою є заволодіння більшою за суперника кількістю квадратів.</p>
@@ -170,6 +170,10 @@
       <caption xml:lang="sa">केस्क्वायर्स् इत्यस्मिन् विशिष्टं बोर्डस्थानं</caption>
       <caption xml:lang="sk">Typická pozícia dosky v KSquares</caption>
       <caption xml:lang="sl">Tipična postavitev v KSquares</caption>
+      <caption xml:lang="sr">Уобичајен положај на табли у игри К‑квадрати</caption>
+      <caption xml:lang="sr-Latn">Uobičajen položaj na tabli u igri K‑kvadrati</caption>
+      <caption xml:lang="sr-ijekavian">Уобичајен положај на табли у игри К‑квадрати</caption>
+      <caption xml:lang="sr-ijekavianlatin">Uobičajen položaj na tabli u igri K‑kvadrati</caption>
       <caption xml:lang="sv">Den typiska brädpositionen i Fyrkanter</caption>
       <caption xml:lang="tr">K Kareler'deki tipik tahta konumu</caption>
       <caption xml:lang="uk">Типова позиція у KSquares</caption>
@@ -209,6 +213,10 @@
       <caption xml:lang="sa">केस्क्वारेस् इत्यत्र सम्पन्नाः वर्गाः</caption>
       <caption xml:lang="sk">Vyplnené štvorce v KSquares</caption>
       <caption xml:lang="sl">Zaključeni kvadrati v KSquares</caption>
+      <caption xml:lang="sr">Затворени квадрати у игри К‑квадрати</caption>
+      <caption xml:lang="sr-Latn">Zatvoreni kvadrati u igri K‑kvadrati</caption>
+      <caption xml:lang="sr-ijekavian">Затворени квадрати у игри К‑квадрати</caption>
+      <caption xml:lang="sr-ijekavianlatin">Zatvoreni kvadrati u igri K‑kvadrati</caption>
       <caption xml:lang="sv">De färdiga fyrkanterna i Fyrkanter</caption>
       <caption xml:lang="tr">K Kareler'deki tamamlanmış kareler</caption>
       <caption xml:lang="uk">Заповнені квадратики у KSquares</caption>
@@ -248,6 +256,10 @@
       <caption xml:lang="sa">केस्क्वेर्स् इत्यत्र एकः प्रारम्भिकः बोर्डः</caption>
       <caption xml:lang="sk">Počiatočná doska v KSquares</caption>
       <caption xml:lang="sl">Začetna postavitev v KSquares</caption>
+      <caption xml:lang="sr">Почетна табла у игри К‑квадрати</caption>
+      <caption xml:lang="sr-Latn">Početna tabla u igri K‑kvadrati</caption>
+      <caption xml:lang="sr-ijekavian">Почетна табла у игри К‑квадрати</caption>
+      <caption xml:lang="sr-ijekavianlatin">Početna tabla u igri K‑kvadrati</caption>
       <caption xml:lang="sv">Ett inledande bräde i Fyrkanter</caption>
       <caption xml:lang="tr">K Kareler başlangıç görünümü</caption>
       <caption xml:lang="uk">Початкове ігрове поле у KSquares</caption>

@@ -67,9 +67,9 @@ void KSquaresWindow::initObject()
 void KSquaresWindow::showHighscores()
 {
     KGameHighScoreDialog ksdialog(KGameHighScoreDialog::Name, this);
-    ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Easy"), i18n("Easy")));
-    ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
-    ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Hard"), i18n("Hard")));
+    ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Easy"), i18n("Easy")));
+    ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Medium"), i18n("Medium")));
+    ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Hard"), i18n("Hard")));
     ksdialog.exec();
 }
 
@@ -228,19 +228,19 @@ void KSquaresWindow::gameOver(const QList<KSquaresPlayer> &_playerList)
         KGameHighScoreDialog ksdialog(KGameHighScoreDialog::Name, this);
         switch (Settings::difficulty()) {
         case 0:
-            ksdialog.setConfigGroup(qMakePair(QByteArray("Easy"), i18n("Easy")));
-            ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
-            ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Hard"), i18n("Hard")));
+            ksdialog.setConfigGroup(std::make_pair(QByteArray("Easy"), i18n("Easy")));
+            ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Medium"), i18n("Medium")));
+            ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Hard"), i18n("Hard")));
             break;
         case 1:
-            ksdialog.setConfigGroup(qMakePair(QByteArray("Medium"), i18n("Medium")));
-            ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Easy"), i18n("Easy")));
-            ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Hard"), i18n("Hard")));
+            ksdialog.setConfigGroup(std::make_pair(QByteArray("Medium"), i18n("Medium")));
+            ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Easy"), i18n("Easy")));
+            ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Hard"), i18n("Hard")));
             break;
         case 2:
-            ksdialog.setConfigGroup(qMakePair(QByteArray("Hard"), i18n("Hard")));
-            ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Easy"), i18n("Easy")));
-            ksdialog.addLocalizedConfigGroupName(qMakePair(QByteArray("Medium"), i18n("Medium")));
+            ksdialog.setConfigGroup(std::make_pair(QByteArray("Hard"), i18n("Hard")));
+            ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Easy"), i18n("Easy")));
+            ksdialog.addLocalizedConfigGroupName(std::make_pair(QByteArray("Medium"), i18n("Medium")));
             break;
         }
         KGameHighScoreDialog::FieldInfo scoreInfo;

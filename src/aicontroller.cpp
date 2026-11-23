@@ -8,6 +8,7 @@
 
 #include <ctime>
 #include <QDebug>
+#include <QMap>
 
 #include <QSet>
 #include <QRandomGenerator>

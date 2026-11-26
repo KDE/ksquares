@@ -293,15 +293,10 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
 
     ////qDebug() << chains;
     // remove double entries from chains to get chainSet
-    QMapIterator<int, QSet<int> > j(chains);
-    while (j.hasNext()) { // walk through chains and add chain to chainSet (if not already contained)
-        j.next();
+    for (auto j = chains.cbegin(), jEnd = chains.cend(); j != jEnd; ++j) { // walk through chains and add chain to chainSet (if not already contained)
         bool newChain = true;
-        QSet<int> chainCheck = j.value(); // this is the chain we might add
-        QMapIterator<int, QSet<int> > chainSetIt(chainSet);
-        while (chainSetIt.hasNext()) { // walk through chainSet and look for chainCheck
-            chainSetIt.next();
-            QSet<int> chainSetI = chainSetIt.value();
+        const QSet<int> &chainCheck = j.value(); // this is the chain we might add
+        for (const QSet<int> &chainSetI : std::as_const(chainSet)) { // walk through chainSet and look for chainCheck
             if (chainSetI == chainCheck) { // found chainCheck in chainSet, don't add
                 newChain = false;
                 break;
@@ -317,10 +312,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
     // TODO: find loop chains to calculate sacrifices (loopChains are a subset of longChains)
     int shortChains = 0; // chains <= 2 lines
     int longChains = 0; // exploitable chains
-    QMapIterator<int, QSet<int> > chainSetIt(chainSet);
-    while (chainSetIt.hasNext()) {
-        chainSetIt.next();
-        QSet<int> chainSetI = chainSetIt.value();
+    for (const QSet<int> &chainSetI : std::as_const(chainSet)) {
         if (chainSetI.size() <= 3) {
             shortChains++;
         } else {
@@ -383,10 +375,7 @@ QList<int> aiController::chooseLeastDamaging(const QList<int> &choiceList) const
     if (linePointDamage.begin().key() == 2) { // opponent will get 2 squares
         int handoutLine = -1;
         QList<int> opponentChain;
-        QMapIterator<int, QSet<int> > chainSetIt(chainSet);
-        while (chainSetIt.hasNext()) {
-            chainSetIt.next();
-            QSet<int> chainSetI = chainSetIt.value();
+        for (const QSet<int> &chainSetI : std::as_const(chainSet)) {
             if (chainSetI.contains(linePointDamage.begin().value())) {
                 opponentChain = chainSetI.values();
             }

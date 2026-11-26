@@ -184,10 +184,9 @@ void KSquaresWindow::gameReset()
     if (Settings::quickStart() == 2) {
         //This is being done before sGame->start(); to avoid the players cycling
         aiController ai(-1, sGame->lines(), QList<int>(), sGame->boardWidth(), sGame->boardHeight());
-        QList<int> lines = ai.autoFill(8);  //There will be 8 possible safe move for the players
-        QListIterator<int> i(lines);
-        while (i.hasNext()) {
-            sGame->addLineToIndex(i.next());
+        const QList<int> lines = ai.autoFill(8);  //There will be 8 possible safe move for the players
+        for (int line : lines) {
+            sGame->addLineToIndex(line);
         }
     }
     sGame->start();

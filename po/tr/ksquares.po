@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdegames-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 02:54+0000\n"
+"POT-Creation-Date: 2026-11-27 01:01+0000\n"
 "PO-Revision-Date: 2025-03-07 23:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -132,54 +132,54 @@ msgid "Current Player"
 msgstr "Geçerli Oyuncu"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:70 ksquareswindow.cpp:231 ksquareswindow.cpp:237
-#: ksquareswindow.cpp:242 prefs_ai.ui:36
+#: ksquareswindow.cpp:70 ksquareswindow.cpp:230 ksquareswindow.cpp:236
+#: ksquareswindow.cpp:241 prefs_ai.ui:36
 #, kde-format
 msgid "Easy"
 msgstr "Kolay"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:71 ksquareswindow.cpp:232 ksquareswindow.cpp:236
-#: ksquareswindow.cpp:243 prefs_ai.ui:41
+#: ksquareswindow.cpp:71 ksquareswindow.cpp:231 ksquareswindow.cpp:235
+#: ksquareswindow.cpp:242 prefs_ai.ui:41
 #, kde-format
 msgid "Medium"
 msgstr "Orta"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_Difficulty)
-#: ksquareswindow.cpp:72 ksquareswindow.cpp:233 ksquareswindow.cpp:238
-#: ksquareswindow.cpp:241 prefs_ai.ui:46
+#: ksquareswindow.cpp:72 ksquareswindow.cpp:232 ksquareswindow.cpp:237
+#: ksquareswindow.cpp:240 prefs_ai.ui:46
 #, kde-format
 msgid "Hard"
 msgstr "Zor"
 
-#: ksquareswindow.cpp:203
+#: ksquareswindow.cpp:202
 #, kde-format
 msgctxt "@title:window"
 msgid "Scores"
 msgstr "Puanlar"
 
-#: ksquareswindow.cpp:208
+#: ksquareswindow.cpp:207
 #, kde-format
 msgid "Player Name"
 msgstr "Oyuncu adı"
 
-#: ksquareswindow.cpp:209
+#: ksquareswindow.cpp:208
 #, kde-format
 msgid "Completed Squares"
 msgstr "Tamamlanmış kareler"
 
-#: ksquareswindow.cpp:293
+#: ksquareswindow.cpp:292
 #, kde-format
 msgid "Start a new game with the current settings"
 msgstr "Mevcut ayarlarla yeni oyuna başla"
 
-#: ksquareswindow.cpp:311
+#: ksquareswindow.cpp:310
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Görüntü"
 
-#: ksquareswindow.cpp:316
+#: ksquareswindow.cpp:315
 #, kde-format
 msgctxt "@title:tab"
 msgid "Computer Player"
